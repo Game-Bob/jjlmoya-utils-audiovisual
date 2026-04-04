@@ -1,0 +1,87 @@
+---
+import { Icon } from 'astro-icon/components';
+import type { ExifCleanerUI } from './index';
+import './style.css';
+
+interface Props {
+  ui: ExifCleanerUI;
+}
+
+const { ui } = Astro.props;
+---
+
+<section class="tool-section" id="exif-cleaner-root" data-ui={JSON.stringify(ui)}>
+    <div
+        class="exif-cleaner-card"
+        id="drop-zone"
+    >
+        <div class="glow-circle glow-top"></div>
+        <div class="glow-circle glow-bottom"></div>
+
+        <div id="initial-state" class="state-container">
+            <div class="icon-wrapper">
+                <Icon name="mdi:file-image-outline" style="width: 4rem; height: 4rem; color: var(--accent)" />
+            </div>
+
+            <h2 class="tool-title">
+                {ui.dropTitle}
+            </h2>
+            <p class="tool-description">
+                {ui.dropSubtitle}
+                <span class="local-info">
+                    {ui.dropLocalInfo}
+                </span>
+            </p>
+
+            <label for="file-upload" class="btn-primary">
+                <Icon name="mdi:upload" style="width: 1.25rem; height: 1.25rem" />
+                {ui.selectButton}
+            </label>
+            <input id="file-upload" type="file" accept="image/*" class="hidden" />
+        </div>
+
+        <div id="processing-state" class="hidden processing-overlay">
+            <div class="spinner"></div>
+            <p class="tool-title" style="font-size: 1.25rem">
+                {ui.processingText}
+            </p>
+        </div>
+
+        <div id="result-state" class="hidden result-container opacity-0">
+            <div class="preview-column">
+                <img id="result-preview" class="image-preview" alt={ui.previewLabel} />
+            </div>
+
+            <div class="info-column">
+                <div class="status-header">
+                    <div class="status-indicator"></div>
+                    <h3 class="status-title">
+                        {ui.analysisCompleted}
+                    </h3>
+                </div>
+
+                <div 
+                    id="metadata-list" 
+                    class="metadata-log" 
+                    data-privacy-title={ui.privacyRiskTitle}
+                ></div>
+
+                <button id="download-btn" class="btn-base btn-download">
+                    <Icon name="mdi:download" style="width: 1.5rem; height: 1.5rem" />
+                    <span>{ui.downloadButton}</span>
+                </button>
+
+                <button id="reset-button" class="reset-button">
+                    <Icon name="mdi:refresh" style="width: 1rem; height: 1rem" />
+                    {ui.resetButton}
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    import { initExifCleaner } from './ui';
+    initExifCleaner();
+    document.addEventListener('astro:page-load', initExifCleaner);
+</script>

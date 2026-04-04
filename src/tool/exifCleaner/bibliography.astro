@@ -1,0 +1,18 @@
+---
+import { Bibliography as SharedBibliography } from '@jjlmoya/utils-shared';
+import { exifCleaner, type ExifCleanerLocaleContent } from './index';
+import type { KnownLocale } from '../../types';
+
+interface Props {
+  locale?: KnownLocale;
+}
+
+const { locale = 'es' } = Astro.props;
+const localeContentLoader = (exifCleaner.i18n as Record<string, () => Promise<ExifCleanerLocaleContent>>)[locale];
+const content = localeContentLoader ? await localeContentLoader() : null;
+if (!content) return null;
+
+const { bibliography } = content;
+---
+
+<SharedBibliography links={bibliography} />

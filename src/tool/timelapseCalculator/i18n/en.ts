@@ -1,0 +1,167 @@
+import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
+import type { TimelapseUI, TimelapseLocaleContent } from '../index';
+
+const slug = 'timelapse-calculator';
+const title = 'Timelapse & Hyperlapse Calculator: Perfect Intervals';
+const description = 'Calculate the exact interval between photos, total duration, and storage needs for your timelapses. Essential tool for photographers.';
+
+const ui: TimelapseUI = {
+    title: "Timelapse Calculator",
+    paramsTitle: "Parameters",
+    eventDuration: "Real event duration?",
+    hours: "Hours",
+    minutes: "Minutes",
+    videoDuration: "Target video settings?",
+    seconds: "Duration (sec)",
+    fps: "FPS",
+    resultsTitle: "Results",
+    intervalLabel: "Set your intervalometer to:",
+    secondsUnit: "seconds",
+    totalPhotos: "Total Photos",
+    speed: "Speed",
+    shutterSpeed: "Shutter Speed",
+    storage: "Weight (RAW)",
+    rule180Info: "The 180° rule suggests a shutter speed of half the interval for smooth motion.",
+};
+
+const faq: TimelapseLocaleContent['faq'] = [
+    {
+        question: "How do I choose the correct interval for my timelapse?",
+        answer: "It depends on the speed of the motion you're capturing. For fast clouds, use 2-3 seconds. For sun or star movement, 15-30 seconds. For growing plants or construction, 5-15 minutes.",
+    },
+    {
+        question: "How many photos do I need for a one-minute video?",
+        answer: "A standard video has 24 or 30 frames per second (fps). For a one-minute video at 24fps, you need exactly 1440 photographs (60 seconds * 24 photos/second).",
+    },
+    {
+        question: "What is 'Flicker' and how can I avoid it?",
+        answer: "It's an annoying flickering caused by small exposure variations between photos. To avoid it, always use manual mode (M), fixed white balance, and prioritize manual aperture ring lenses or 'lens twist' techniques.",
+    },
+    {
+        question: "Why is shutter speed important?",
+        answer: "For smooth motion (180° rule), shutter speed should be approximately half the interval. For example, if the interval is 2 seconds, try shooting at 1 second to create natural motion blur.",
+    },
+];
+
+const howTo: TimelapseLocaleContent['howTo'] = [
+    {
+        name: "Define the target video duration",
+        text: "Indicate how many seconds or minutes you want the resulting video to last (e.g., 10 seconds for Instagram).",
+    },
+    {
+        name: "Select the output FPS",
+        text: "Choose the smoothness of the video: 24 (cinema), 30 (web), or 60 (smooth slow motion).",
+    },
+    {
+        name: "Adjust the capture interval",
+        text: "Set every how many seconds your camera will fire according to the speed of the scene.",
+    },
+    {
+        name: "Check storage space",
+        text: "The calculator will tell you how many Gigabytes the session will take. Ensure your SD card has enough space before starting.",
+    },
+];
+
+const bibliography: TimelapseLocaleContent['bibliography'] = [
+    {
+        name: "Timescapes Forum - Digital Timelapse Acquisition & Processing",
+        url: "https://timescapes.org/phpBB3/viewforum.php?f=4",
+    },
+    {
+        name: "Magic Lantern - Auto ETTR & Bulb Ramping Algorithms",
+        url: "https://wiki.magiclantern.fm/ettr",
+    },
+    {
+        name: "LRTimelapse - Visual Deflicker & Holy Grail Workflow",
+        url: "https://lrtimelapse.com/tutorial/advanced/",
+    },
+    {
+        name: "PhotoPills - Advanced Timelapse Calculator & NPF Rule",
+        url: "https://www.photopills.com/calculators/timelapse",
+    },
+];
+
+const seo: TimelapseLocaleContent['seo'] = [
+    { type: 'title', text: 'The Ultimate Guide to Timelapse & Hyperlapse Intervals', level: 2 },
+    { type: 'paragraph', html: 'The difference between an amateur accelerated video and a <strong>cinematic timelapse</strong> mathematically lies in one factor: <strong>the interval</strong>. This calculator removes the guesswork, allowing you to precisely plan your intervalometer shot to capture sunrises, city traffic, or the Milky Way with perfect fluidity.' },
+    
+    { type: 'title', text: 'Recommended Intervals Table (Cheat Sheet)', level: 3 },
+    { type: 'paragraph', html: 'Use this quick reference table to configure your intervalometer based on the subject. The goal is to capture enough motion for it to be perceptible but fluid.' },
+    { type: 'table', headers: ['Subject / Scene', 'Suggested Interval', 'Event Duration (Min)'], rows: [
+        ['Fast clouds / Storms', '1 - 2 seconds', '20 - 30 min'],
+        ['Urban Traffic / People (Blur)', '0.5 - 2 seconds', '15 - 20 min'],
+        ['Sunset / Sunrise (Holy Grail)', '5 - 10 seconds', '1.5 - 2.5 hours'],
+        ['Slow Clouds / Shadows', '10 - 15 seconds', '2 - 3 hours'],
+        ['Stars / Milky Way (Astro)', '15 - 30 seconds*', '3 - 5 hours'],
+        ['Construction / Fast Plants', '5 - 15 minutes', 'Days / Weeks']
+    ]},
+    { type: 'tip', title: 'Astro Note', html: 'The interval is usually dictated by the exposure time needed to capture light (500 rule) + 1 or 2 seconds buffer for card writing.' },
+
+    { type: 'title', text: 'The 180° Rule (Motion Blur)', level: 3 },
+    { type: 'paragraph', html: 'A common mistake in timelapse is getting a "jittery" or staccato (strobing) video. For that smooth cinematic look, you need <strong>motion blur</strong>.' },
+    { type: 'card', title: 'The Rule', icon: 'mdi:information', html: 'Your shutter speed should be half of your interval. <br /><br /> <em>Example:</em> If you shoot every <strong>4 seconds</strong>, your exposure should be <strong>2 seconds</strong>. This fills the "temporal gap" between photos, creating light trails on cars and smooth water.' },
+
+    { type: 'title', text: 'Flicker and Manual Aperture', level: 3 },
+    { type: 'paragraph', html: 'Flicker is the annoying blinking caused by micro-variations in the aperture diaphragm between shots.' },
+    { type: 'list', items: [
+        '<strong>Lens Twist:</strong> Slightly unlock the lens on DSLRs to break the electronic connection and fix the aperture mechanically.',
+        '<strong>All Manual:</strong> ISO, White Balance, and Focus must be fixed. Never use automatic modes.',
+        '<strong>Shoot in RAW:</strong> Essential for correcting exposure and color in post-production without destroying the image.'
+    ]},
+
+    { type: 'diagnostic', variant: 'success', title: 'Advanced Technique: The "Holy Grail"', icon: 'mdi:crown', badge: 'Pro Teknik', html: 'The transition from day to night (or vice-versa) is called the "Holy Grail." It is the most difficult technical challenge because the light changes drastically (up to 15 exposure stops).' },
+    
+    { type: 'stats', columns: 3, items: [
+        { label: 'Bulb Ramping', value: 'Gradual Exposure', icon: 'mdi:brightness-6' },
+        { label: 'Post-Pro', value: 'LRTimelapse', icon: 'mdi:television-guide' },
+        { label: 'Strategy', value: 'Night Interval', icon: 'mdi:weather-night' }
+    ]},
+
+    { type: 'title', text: 'Conclusion: The Zen of Simple Mechanics', level: 3 },
+    { type: 'paragraph', html: 'Mastering your timelapse starts with understanding the mathematics of your intervalometer. Don\'t let a poorly chosen interval ruin your session.' }
+];
+
+const faqSchema: WithContext<FAQPage> = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faq.map((item) => ({
+        '@type': 'Question',
+        name: item.question,
+        acceptedAnswer: { '@type': 'Answer', text: item.answer },
+    })),
+};
+
+const howToSchema: WithContext<HowTo> = {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: title,
+    description,
+    step: howTo.map((step) => ({
+        '@type': 'HowToStep',
+        name: step.name,
+        text: step.text,
+    })),
+};
+
+const appSchema: WithContext<SoftwareApplication> = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: title,
+    description,
+    applicationCategory: 'UtilitiesApplication',
+    operatingSystem: 'Web',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    inLanguage: 'en',
+};
+
+export const content: TimelapseLocaleContent = {
+    slug,
+    title,
+    description,
+    ui,
+    seo,
+    faq,
+    bibliography,
+    howTo,
+    schemas: [faqSchema as any, howToSchema as any, appSchema],
+};

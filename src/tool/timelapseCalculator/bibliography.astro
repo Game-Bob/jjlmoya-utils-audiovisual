@@ -1,0 +1,15 @@
+---
+import { Bibliography as SharedBibliography } from '@jjlmoya/utils-shared';
+import { TIMELAPSE_CALCULATOR_TOOL } from './index';
+import type { KnownLocale } from '../../types';
+
+interface Props {
+  locale?: KnownLocale;
+}
+
+const { locale = 'es' } = Astro.props;
+const content = await TIMELAPSE_CALCULATOR_TOOL.entry.i18n[locale]?.();
+const { bibliography } = content || {};
+---
+
+{bibliography && <SharedBibliography links={bibliography} />}
