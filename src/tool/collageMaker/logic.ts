@@ -75,14 +75,19 @@ export const COLLAGE_LAYOUTS: CollageLayout[] = [
     }
 ];
 
+interface CollageOptions {
+    borderWidth: number;
+    borderColor: string;
+    bgColor: string;
+}
+
 export async function drawCollage(
     canvas: HTMLCanvasElement,
     images: CollageImageData[],
     layoutId: string,
-    borderWidth: number,
-    borderColor: string,
-    bgColor: string
+    options: CollageOptions
 ): Promise<void> {
+    const { borderWidth, borderColor, bgColor } = options;
     const layout = COLLAGE_LAYOUTS.find(l => l.id === layoutId);
     if (!layout) throw new Error("Layout not found");
 
@@ -101,7 +106,7 @@ export async function drawCollage(
         const pos = positions[i];
         if (!pos) continue;
         const [x, y, w, h] = pos;
-        await drawImageOnCanvas(ctx, imagesToUse[i].src, x, y, w, h);
+        await drawImageOnCanvas(ctx, imagesToUse[i].src, { x, y, w, h });
 
         if (borderWidth > 0) {
             ctx.strokeStyle = borderColor;
@@ -114,11 +119,9 @@ export async function drawCollage(
 async function drawImageOnCanvas(
     ctx: CanvasRenderingContext2D,
     src: string,
-    x: number,
-    y: number,
-    w: number,
-    h: number
+    rect: DrawRect
 ): Promise<void> {
+    const { x, y, w, h } = rect;
     return new Promise((resolve, reject) => {
         const img = new Image();
         img.onload = () => {

@@ -228,7 +228,9 @@ export const content: PrivacyBlurLocaleContent = {
     ui,
     seo,
     faq,
+    faqTitle: 'Preguntas frecuentes sobre desenfoque de fotos',
     bibliography,
+    bibliographyTitle: 'Recursos técnicos sobre privacidad visual',
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],
 };

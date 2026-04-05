@@ -227,7 +227,9 @@ export const content: VideoFrameExtractorLocaleContent = {
     ui,
     seo,
     faq,
+    faqTitle: 'Foire Aux Questions sur l\'Extraction de Fotogrammes Vidéo',
     bibliography,
+    bibliographyTitle: 'Normes Techniques pour la Capture Vidéo',
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],
 };

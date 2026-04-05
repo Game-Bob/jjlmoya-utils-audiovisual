@@ -185,7 +185,7 @@ const { ui } = Astro.props;
         });
 
         dropZone.addEventListener("drop", function(e) {
-            var files = e.dataTransfer && e.dataTransfer.files;
+            const files = e.dataTransfer && e.dataTransfer.files;
             if (files && files.length > 0) processFile(files[0]);
         });
 
@@ -204,16 +204,16 @@ const { ui } = Astro.props;
 
         dpiPresets.forEach(function(btn) {
             btn.addEventListener("click", function() {
-                var val = btn.dataset.val;
+                const val = btn.dataset.val;
                 if (val) updateDPI(val);
             });
         });
 
         function processFile(file) {
             if (!file.type.startsWith("image/")) { alert("Por favor selecciona una imagen válida"); return; }
-            var reader = new FileReader();
+            const reader = new FileReader();
             reader.onload = function(e) {
-                var img = new Image();
+                const img = new Image();
                 img.onload = function() {
                     currentWidth = img.naturalWidth;
                     currentHeight = img.naturalHeight;
@@ -249,18 +249,20 @@ const { ui } = Astro.props;
             calculateSizes();
         }
 
-        function calculateSizes() {
-            if (!currentWidth || !currentHeight || !dpiInput) return;
-            var dpi = parseInt(dpiInput.value);
-            if (isNaN(dpi) || dpi <= 0) return;
-            var inW = currentWidth / dpi;
-            var inH = currentHeight / dpi;
-            var cmW = inW * 2.54;
-            var cmH = inH * 2.54;
+        function updatePrintSizes(inW, inH, cmW, cmH) {
             if (printCmW) printCmW.textContent = cmW.toFixed(1);
             if (printCmH) printCmH.textContent = cmH.toFixed(1);
             if (printInW) printInW.textContent = inW.toFixed(1);
             if (printInH) printInH.textContent = inH.toFixed(1);
+        }
+
+        function calculateSizes() {
+            if (!currentWidth || !currentHeight || !dpiInput) return;
+            const dpi = parseInt(dpiInput.value);
+            if (isNaN(dpi) || dpi <= 0) return;
+            const inW = currentWidth / dpi, inH = currentHeight / dpi;
+            const cmW = inW * 2.54, cmH = inH * 2.54;
+            updatePrintSizes(inW, inH, cmW, cmH);
             updateQualityBadge(dpi);
             updateFormatsTable(cmW, cmH);
         }
@@ -289,16 +291,16 @@ const { ui } = Astro.props;
         function updateFormatsTable(cmW, cmH) {
             if (!formatsTableBody) return;
             formatsTableBody.innerHTML = "";
-            var imgMin = Math.min(cmW, cmH);
-            var imgMax = Math.max(cmW, cmH);
+            const imgMin = Math.min(cmW, cmH);
+            const imgMax = Math.max(cmW, cmH);
             PAPER_FORMATS.forEach(function(paper) {
-                var paperMin = Math.min(paper.w, paper.h);
-                var paperMax = Math.max(paper.w, paper.h);
-                var covers = imgMin >= paperMin - 0.1 && imgMax >= paperMax - 0.1;
-                var coverage = Math.min(imgMin / paperMin, imgMax / paperMax) * 100;
-                var row = document.createElement("tr");
+                const paperMin = Math.min(paper.w, paper.h);
+                const paperMax = Math.max(paper.w, paper.h);
+                const covers = imgMin >= paperMin - 0.1 && imgMax >= paperMax - 0.1;
+                const coverage = Math.min(imgMin / paperMin, imgMax / paperMax) * 100;
+                const row = document.createElement("tr");
                 row.className = "pq-formats-row";
-                var statusHtml = covers
+                const statusHtml = covers
                     ? '<span class="pq-status pq-status-ok"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"/></svg> Sí (Cubierto)</span>'
                     : '<span class="pq-status pq-status-no"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12,2L1,21H23M12,6L19.53,19H4.47M11,10V14H13V10M11,16V18H13V16"/></svg> No (' + coverage.toFixed(0) + '%)</span>';
                 row.innerHTML = '<td class="pq-td pq-td-name">' + paper.name + '</td><td class="pq-td pq-td-dim">' + paper.w + ' x ' + paper.h + '</td><td class="pq-td">' + statusHtml + '</td>';

@@ -223,7 +223,9 @@ export const content: CollageMakerLocaleContent = {
     ui,
     seo,
     faq,
+    faqTitle: 'Preguntas frecuentes sobre creación de collages',
     bibliography,
+    bibliographyTitle: 'Recursos técnicos sobre composición visual',
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],
 };

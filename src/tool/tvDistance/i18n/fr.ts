@@ -156,8 +156,8 @@ const seo: TvDistanceLocaleContent['seo'] = [
             definition: 'Certification qualité créée par Lucasfilm. 40° est sa recommandation principale.'
         },
         {
-            term: 'SMPTE',
-            definition: 'Organisation de normes techniques. Recommande 30° comme distance conservatrice.'
+            term: 'SMPTE (Society of Motion Picture Technical Engineers)',
+            definition: 'Organisation de normes techniques pour le cinéma et la vidéo. Recommande 30° comme distance professionnelle conservatrice.'
         },
         {
             term: 'Acuité Visuelle Humaine',
@@ -215,7 +215,9 @@ export const content: TvDistanceLocaleContent = {
     ui,
     seo,
     faq,
+    faqTitle: 'Foire Aux Questions sur la Distance de Visionnage TV',
     bibliography,
+    bibliographyTitle: 'Normes Professionnelles pour la Configuration de Téléviseur',
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],
 };

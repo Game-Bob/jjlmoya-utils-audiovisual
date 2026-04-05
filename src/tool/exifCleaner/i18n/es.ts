@@ -163,7 +163,7 @@ const seo: ExifCleanerLocaleContent['seo'] = [
         '<strong>5. Sin residuos:</strong> La imagen limpia conserva toda su calidad visual original.'
     ], icon: 'mdi:check' },
 
-    { type: 'card', title: 'Tecnología de Privacidad', icon: 'mdi:shield-check', html: 'Esta herramienta utiliza la <strong>API de Canvas del navegador</strong> para crear una copia limpia de la imagen píxel a píxel, asegurando que:<br><br>✓ Ningún dato se envía a servidores<br>✓ Tu imagen nunca abandona tu dispositivo<br>✓ Procesamiento 100% anónimo y seguro<br>✓ Puedes usarla incluso sin conexión a internet (tras la carga inicial)' },
+    { type: 'card', title: 'Tecnología de Privacidad', icon: 'mdi:shield-check', html: 'Esta herramienta utiliza la <strong>API de Canvas del navegador</strong> para crear una copia limpia de la imagen píxel a píxel, asegurando que:<br><br>- Ningún dato se envía a servidores<br>- Tu imagen nunca abandona tu dispositivo<br>- Procesamiento 100% anónimo y seguro<br>- Puedes usarla incluso sin conexión a internet (tras la carga inicial)' },
 
     { type: 'title', text: '¿Qué Datos Elimina Específicamente?', level: 3 },
     { type: 'table', headers: ['Tipo de Metadatos', 'Ejemplos', 'Riesgo'], rows: [
@@ -269,7 +269,9 @@ export const content: ExifCleanerLocaleContent = {
     ui,
     seo,
     faq,
+    faqTitle: ui.faqTitle,
     bibliography,
+    bibliographyTitle: ui.bibliographyTitle,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],
 };

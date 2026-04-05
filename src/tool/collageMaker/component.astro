@@ -258,9 +258,10 @@ const dropSub = (ui.dropSub ?? '').replace('{link}', `<span class="cm-drop-link"
     downloadBtn.disabled = false;
   }
 
-  function drawImage(ctx: CanvasRenderingContext2D, src: string, x: number, y: number, w: number, h: number): Promise<void> {
+  function drawImage(ctx: CanvasRenderingContext2D, src: string, rect: { x: number; y: number; w: number; h: number }): Promise<void> {
     return new Promise(resolve => {
       const img = new Image();
+      const { x, y, w, h } = rect;
       img.onload = () => {
         const ratio = Math.max(w / img.width, h / img.height);
         const sw = w / ratio, sh = h / ratio;

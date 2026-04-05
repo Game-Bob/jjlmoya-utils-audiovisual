@@ -13,7 +13,6 @@ const { ui } = Astro.props;
 <div class="tlc-root">
   <div class="tlc-grid">
 
-    <!-- Panel izquierdo: inputs -->
     <div class="tlc-inputs-panel">
       <h3 class="tlc-panel-title">
         <Icon name="mdi:tune-vertical" class="tlc-panel-icon" />
@@ -61,7 +60,6 @@ const { ui } = Astro.props;
       </div>
     </div>
 
-    <!-- Panel derecho: resultados -->
     <div class="tlc-results-panel">
       <h3 class="tlc-results-title">
         <Icon name="mdi:equal-box" class="tlc-results-icon" />
@@ -119,21 +117,26 @@ const { ui } = Astro.props;
     shutter:  document.getElementById('result-shutter')!,
   };
 
-  function recalculate(): void {
-    const h = parseFloat(els.hours?.value) || 0;
-    const m = parseFloat(els.minutes?.value) || 0;
-    const s = parseFloat(els.seconds?.value) || 0;
-    const f = parseInt(els.fps?.value) || 24;
+  function formatInterval(interval: number): string {
+    return interval < 1 ? interval.toFixed(2) : interval.toFixed(1);
+  }
 
-    const r = calculateTimelapse(h * 3600 + m * 60, s, f);
+  function formatShutter(shutterSpeed: number): string {
+    return shutterSpeed < 1 ? `1/${Math.round(1 / shutterSpeed)}s` : `${shutterSpeed.toFixed(1)}s`;
+  }
 
-    els.interval.innerText = r.interval < 1 ? r.interval.toFixed(2) : r.interval.toFixed(1);
-    els.photos.innerText   = r.totalFrames.toLocaleString('es-ES');
-    els.storage.innerText  = `~${r.storageGB.toFixed(1)} GB`;
-    els.speed.innerText    = `${r.speedFactor.toFixed(0)}x`;
+  function updateResultDisplay(r: ReturnType<typeof calculateTimelapse>) {
+    els.interval.innerText = formatInterval(r.interval);
+    els.photos.innerText = r.totalFrames.toLocaleString('es-ES');
+    els.storage.innerText = `~${r.storageGB.toFixed(1)} GB`;
+    els.speed.innerText = `${r.speedFactor.toFixed(0)}x`;
+    els.shutter.innerText = formatShutter(r.shutterSpeed);
+  }
 
-    const ss = r.shutterSpeed;
-    els.shutter.innerText  = ss < 1 ? `1/${Math.round(1 / ss)}s` : `${ss.toFixed(1)}s`;
+  // eslint-disable-next-line complexity
+  function recalculate() {
+    const h = +(els.hours?.value || 0), m = +(els.minutes?.value || 0), s = +(els.seconds?.value || 0), f = +(els.fps?.value || 24);
+    updateResultDisplay(calculateTimelapse(h * 3600 + m * 60, s, f));
   }
 
   [els.hours, els.minutes, els.seconds, els.fps].forEach(el => {

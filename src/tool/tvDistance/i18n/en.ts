@@ -157,7 +157,7 @@ const seo: TvDistanceLocaleContent['seo'] = [
         },
         {
             term: 'SMPTE (Society of Motion Picture Technical Engineers)',
-            definition: 'Technical standards organization for cinema and video. Recommends 30° as a conservative professional distance.'
+            definition: 'Technical standards organization for film and video. Recommends 30° as a conservative professional distance.'
         },
         {
             term: 'Human Visual Acuity',
@@ -215,7 +215,9 @@ export const content: TvDistanceLocaleContent = {
     ui,
     seo,
     faq,
+    faqTitle: 'Frequently Asked Questions about TV Viewing Distance',
     bibliography,
+    bibliographyTitle: 'Professional Standards for Television Setup',
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],
 };

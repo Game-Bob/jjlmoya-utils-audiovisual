@@ -87,7 +87,6 @@ const { ui } = Astro.props;
 <script>
   import { parseSRT, shiftSubtitles, generateSRT, msToTime } from './logic';
   import type { SrtItem } from './logic';
-  import type { SubtitleSyncUI } from './index';
 
   function escapeHtml(text: string): string {
     const map: { [key: string]: string } = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' };
@@ -97,8 +96,6 @@ const { ui } = Astro.props;
   function init() {
     const root = document.getElementById('ss-root');
     if (!root) return;
-
-    const ui = JSON.parse(root.dataset.ui ?? '{}') as SubtitleSyncUI;
     const dropZone = root.querySelector('#ss-drop') as HTMLElement;
     const fileInput = root.querySelector('#ss-file') as HTMLInputElement;
     const controls = root.querySelector('#ss-controls') as HTMLElement;

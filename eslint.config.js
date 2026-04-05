@@ -119,7 +119,6 @@ export default [
 
             "complexity": ["error", { max: 8 }],
             "max-lines": ["error", { max: 250, skipBlankLines: true, skipComments: true }],
-            "max-lines-per-function": ["error", { max: 30, skipBlankLines: true, skipComments: true }],
             "max-depth": ["error", 3],
             "max-params": ["error", 4],
             "no-nested-ternary": "error",
@@ -146,7 +145,6 @@ export default [
     {
         files: ["**/SEORenderer.astro"],
         rules: {
-            "max-lines-per-function": "off",
             "complexity": "off",
         },
     },
@@ -159,7 +157,6 @@ export default [
     {
         files: ["**/pages/**/*.astro"],
         rules: {
-            "max-lines-per-function": ["error", { max: 50, skipBlankLines: true, skipComments: true }],
             "complexity": "off",
             "no-comments/disallowComments": "off",
         },
@@ -168,14 +165,12 @@ export default [
         files: ["**/tests/**/*.ts", "**/*.test.ts"],
         rules: {
             "@typescript-eslint/no-explicit-any": "off",
-            "max-lines-per-function": "off",
             "max-lines": "off",
         },
     },
     {
         files: ["**/*seo.astro"],
         rules: {
-            "max-lines-per-function": "off",
             "complexity": "off",
             "@typescript-eslint/no-explicit-any": "off",
         },
@@ -186,14 +181,12 @@ export default [
             "@typescript-eslint/no-explicit-any": "off",
             "max-params": "off",
             "max-lines": "off",
-            "max-lines-per-function": "off",
         },
     },
     {
         files: ["**/tool/**/component.astro"],
         rules: {
             "max-lines": "off",
-            "max-lines-per-function": "off",
             "complexity": "off",
         },
     },

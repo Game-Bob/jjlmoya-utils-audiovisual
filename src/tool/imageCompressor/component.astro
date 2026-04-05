@@ -4,7 +4,6 @@ import './style.css';
 
 <div class="ic-dashboard" id="image-compressor-root">
 
-  <!-- Global Settings -->
   <div class="ic-global-settings">
     <div class="ic-toggle-group">
       <label class="ic-webp-switch">
@@ -19,7 +18,6 @@ import './style.css';
     </div>
   </div>
 
-  <!-- Drop Zone -->
   <div id="drop-zone" class="ic-drop-zone">
     <label for="image-input" class="ic-file-label">
       <span class="ic-upload-icon">
@@ -34,7 +32,6 @@ import './style.css';
     <input type="file" id="image-input" accept="image/jpeg,image/png,image/webp" multiple />
   </div>
 
-  <!-- File List -->
   <div id="file-list-container" class="ic-file-list-container" style="display:none">
     <div class="ic-list-header">
       <h3>Archivos Procesados</h3>
@@ -48,7 +45,6 @@ import './style.css';
 
 </div>
 
-<!-- Template for file items -->
 <template id="file-item-template">
   <li class="ic-file-item">
     <div class="ic-preview-col">
@@ -240,7 +236,6 @@ import './style.css';
     }
   }
 
-  // Drag & drop
   dropZone.addEventListener('dragover', (e) => { e.preventDefault(); dropZone.classList.add('ic-dragover'); });
   dropZone.addEventListener('dragleave', () => { dropZone.classList.remove('ic-dragover'); });
   dropZone.addEventListener('drop', (e) => {
@@ -252,7 +247,6 @@ import './style.css';
     if (fileInput.files?.length) handleFiles(fileInput.files);
   });
 
-  // Download all
   downloadAllBtn.addEventListener('click', () => {
     queue.forEach((item) => {
       if (!item.dataUrl) return;

@@ -236,7 +236,9 @@ export const content: ChromaticLensLocaleContent = {
     ui,
     seo,
     faq,
+    faqTitle: 'Preguntas frecuentes sobre paletas de color',
     bibliography,
+    bibliographyTitle: 'Recursos técnicos sobre teoría del color',
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],
 };

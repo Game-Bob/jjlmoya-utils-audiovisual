@@ -10,7 +10,15 @@ export interface Layer {
 
 export type ToolType = "pixel" | "blur" | "solid";
 
-declare const faceapi: any;
+interface FaceDetection {
+    box: { x: number; y: number; width: number; height: number };
+}
+
+declare const faceapi: {
+    loadTinyFaceDetectorModel: (path: string) => Promise<void>;
+    TinyFaceDetectorOptions: (opts: { inputSize: number; scoreThreshold: number }) => object;
+    detectAllFaces: (img: HTMLImageElement, detector: object) => Promise<FaceDetection[]>;
+};
 
 export class PrivacyBlurEngine {
     private canvas: HTMLCanvasElement;
@@ -106,7 +114,7 @@ export class PrivacyBlurEngine {
             if (detections.length === 0) {
                 return false;
             } else {
-                detections.forEach((d: any) => {
+                detections.forEach((d: FaceDetection) => {
                     const { x, y, width, height } = d.box;
                     const pad = width * 0.15;
                     this.layers.push({

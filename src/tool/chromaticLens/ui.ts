@@ -28,8 +28,7 @@ export function initChromaticLens() {
         paletteGrid.classList.add('hidden');
 
         const colorCount = parseInt(colorCountSelect.value);
-        
-        // Use requestAnimationFrame to avoid UI freeze
+
         requestAnimationFrame(() => {
             setTimeout(() => {
                 const palette = extractPalette(currentImageData!, colorCount);
@@ -100,7 +99,6 @@ export function initChromaticLens() {
 
     colorCountSelect.onchange = processPalette;
 
-    // Drag & Drop
     root.ondragover = (e) => { e.preventDefault(); dropArea.classList.add('drop-area-active'); };
     root.ondragleave = () => { dropArea.classList.remove('drop-area-active'); };
     root.ondrop = (e: DragEvent) => {

@@ -16,7 +16,7 @@ export function initPrintQualityCalculator() {
     const fileNameEl = root.querySelector('#file-name') as HTMLElement;
     const pixelDimsEl = root.querySelector('#pixel-dims') as HTMLElement;
     const fileSizeEl = root.querySelector('#file-size') as HTMLElement;
-    
+
     const dpiSlider = root.querySelector('#dpi-slider') as HTMLInputElement;
     const dpiInput = root.querySelector('#dpi-input') as HTMLInputElement;
     const presets = root.querySelectorAll('.preset-btn') as NodeListOf<HTMLButtonElement>;
@@ -32,13 +32,13 @@ export function initPrintQualityCalculator() {
     const updateUI = () => {
         const dpi = parseInt(dpiInput.value) || 300;
         const size = calculatePrintSize(currentPixels.w, currentPixels.h, dpi);
-        
+
         outputCm.textContent = `${size.cmW.toFixed(1)} x ${size.cmH.toFixed(1)} ${labels.unitCm}`;
         outputIn.textContent = `${size.inW.toFixed(1)} x ${size.inH.toFixed(1)} ${labels.unitInches}`;
 
         const level = getQualityLevel(dpi);
         const levelKey = level.charAt(0).toUpperCase() + level.slice(1);
-        
+
         qualityLevel.textContent = labels[`quality${levelKey}`] || '';
         qualityDesc.textContent = labels[`quality${levelKey}Desc`] || '';
 
@@ -55,7 +55,6 @@ export function initPrintQualityCalculator() {
                 <td class="format-measure">${paper.w} x ${paper.h} cm</td>
                 <td>
                     <div class="support-status ${supported ? 'status-yes' : 'status-no'}">
-                        ${supported ? '✓' : '×'}
                         <span>${supported ? 'YES' : `${percentage.toFixed(0)}%`}</span>
                     </div>
                 </td>
@@ -113,7 +112,6 @@ export function initPrintQualityCalculator() {
         };
     });
 
-    // Drag & Drop
     root.ondragover = (e) => { e.preventDefault(); dropZone.classList.add('drop-zone-active'); };
     root.ondragleave = () => { dropZone.classList.remove('drop-zone-active'); };
     root.ondrop = (e: DragEvent) => {

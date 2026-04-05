@@ -47,7 +47,6 @@ export function initPrivacyBlur() {
 
     emptyState.onclick = () => fileInput.click();
 
-    // Drag and Drop
     root.ondragover = (e) => {
         e.preventDefault();
         root.classList.add('dragging');
@@ -101,14 +100,12 @@ export function initPrivacyBlur() {
         }
     };
 
-    // Canvas Events
     canvas.onmousedown = (e) => engine.startDragging(e.clientX, e.clientY);
     window.onmousemove = (e) => engine.updateDragging(e.clientX, e.clientY);
     window.onmouseup = () => {
         if (engine.endDragging()) updateControls();
     };
 
-    // Touch support
     canvas.addEventListener('touchstart', (e) => {
         e.preventDefault();
         engine.startDragging(e.touches[0].clientX, e.touches[0].clientY);
