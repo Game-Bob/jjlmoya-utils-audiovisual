@@ -1,0 +1,316 @@
+---
+import { Icon } from 'astro-icon/components';
+import type { PrintQualityCalculatorUI } from './index';
+import './style.css';
+
+interface Props {
+  ui: PrintQualityCalculatorUI;
+}
+
+const { ui } = Astro.props;
+---
+
+<div class="pq-wrapper">
+    <div
+        id="drop-zone"
+        class="pq-drop-zone pq-group"
+    >
+        <input type="file" id="file-input" class="pq-hidden" accept="image/webp, image/jpeg, image/png, image/tiff" />
+
+        <div class="pq-drop-inner">
+            <div class="pq-upload-icon-wrap pq-group-icon">
+                <Icon name="mdi:cloud-upload" style="width:2.5rem;height:2.5rem" />
+            </div>
+            <div>
+                <h3 class="pq-drop-title">{ui.dropTitle}</h3>
+                <p class="pq-drop-sub">{ui.dropSubtitle}</p>
+            </div>
+        </div>
+
+        <div class="pq-drop-overlay"></div>
+    </div>
+
+    <div id="results-area" class="pq-results pq-hidden">
+        <div class="pq-file-card">
+            <div class="pq-file-left">
+                <div class="pq-preview-wrap">
+                    <img id="preview-img" class="pq-preview-img" src="#" alt="Preview" />
+                </div>
+                <div class="pq-file-info">
+                    <h3 id="file-name" class="pq-file-name">nombre_archivo.jpg</h3>
+                    <div class="pq-file-meta">
+                        <span class="pq-meta-item">
+                            <Icon name="mdi:arrow-expand" style="width:1rem;height:1rem" />
+                            <span id="pixel-dims">0 x 0 px</span>
+                        </span>
+                        <span class="pq-meta-item">
+                            <Icon name="mdi:harddisk" style="width:1rem;height:1rem" />
+                            <span id="file-size">0 MB</span>
+                        </span>
+                        <span class="pq-meta-item">
+                            <Icon name="mdi:image-filter-hdr" style="width:1rem;height:1rem" />
+                            <span id="megapixels">0 MP</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pq-main-grid">
+            <div class="pq-config-panel">
+                <label class="pq-config-label">{ui.dpiDensityLabel}</label>
+
+                <input
+                    type="range"
+                    id="dpi-slider"
+                    min="72"
+                    max="600"
+                    value="300"
+                    step="1"
+                    class="pq-slider"
+                />
+
+                <div class="pq-dpi-row">
+                    <input
+                        type="number"
+                        id="dpi-input"
+                        value="300"
+                        class="pq-dpi-number"
+                    />
+                    <span class="pq-dpi-label">{ui.dpiPointsLabel}</span>
+                </div>
+
+                <div class="pq-presets">
+                    <button class="pq-preset-btn" data-val="72">Pantalla (72)</button>
+                    <button class="pq-preset-btn" data-val="150">Periódico (150)</button>
+                    <button class="pq-preset-btn pq-preset-active" data-val="300">Imprenta (300)</button>
+                    <button class="pq-preset-btn" data-val="600">Fine Art (600)</button>
+                </div>
+            </div>
+
+            <div class="pq-output-panel">
+                <div class="pq-output-gradient">
+                    <div class="pq-output-blur-bg"></div>
+                    <h3 class="pq-output-subtitle">{ui.maxPrintTitle}</h3>
+
+                    <div class="pq-output-size">
+                        <span id="print-cm-w">0</span>
+                        <span class="pq-size-sep">x</span>
+                        <span id="print-cm-h">0</span>
+                        <span class="pq-size-unit">cm</span>
+                    </div>
+
+                    <div class="pq-output-inches">
+                        <span id="print-in-w">0</span>" x <span id="print-in-h">0</span>"
+                    </div>
+
+                    <div class="pq-quality-section">
+                        <span id="quality-badge" class="pq-quality-badge">
+                            <Icon name="mdi:check-decagram" style="width:1rem;height:1rem" />
+                            <span id="quality-text">{ui.qualityExcellent}</span>
+                        </span>
+                        <p id="quality-desc" class="pq-quality-desc">{ui.qualityExcellentDesc}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pq-formats-card">
+            <h4 class="pq-formats-title">
+                <Icon name="mdi:ruler-square" style="width:1.2rem;height:1.2rem;color:#6366f1" />
+                {ui.standardFormatsTitle}
+            </h4>
+            <div class="pq-formats-scroll">
+                <table class="pq-formats-table">
+                    <thead>
+                        <tr>
+                            <th>{ui.formatColumn}</th>
+                            <th>{ui.measureColumn} (cm)</th>
+                            <th>{ui.supportColumn}</th>
+                        </tr>
+                    </thead>
+                    <tbody id="formats-table-body"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script is:inline>
+    const PAPER_FORMATS = [
+        { name: "A6 (Postal)", w: 10.5, h: 14.8 },
+        { name: "A5 (Cuartilla)", w: 14.8, h: 21.0 },
+        { name: "A4 (Folio)", w: 21.0, h: 29.7 },
+        { name: "A3 (Doble Folio)", w: 29.7, h: 42.0 },
+        { name: "A2 (Poster Pequeño)", w: 42.0, h: 59.4 },
+        { name: "A1 (Poster Grande)", w: 59.4, h: 84.1 },
+        { name: "A0 (Plano)", w: 84.1, h: 118.9 },
+    ];
+
+    function initPQCalc() {
+        const dropZone = document.getElementById("drop-zone");
+        const fileInput = document.getElementById("file-input");
+        const resultsArea = document.getElementById("results-area");
+        if (!dropZone || !fileInput || !resultsArea) return;
+
+        const previewImg = document.getElementById("preview-img");
+        const fileNameEl = document.getElementById("file-name");
+        const pixelDimsEl = document.getElementById("pixel-dims");
+        const fileSizeEl = document.getElementById("file-size");
+        const megapixelsEl = document.getElementById("megapixels");
+        const dpiSlider = document.getElementById("dpi-slider");
+        const dpiInput = document.getElementById("dpi-input");
+        const dpiPresets = document.querySelectorAll(".pq-preset-btn");
+        const printCmW = document.getElementById("print-cm-w");
+        const printCmH = document.getElementById("print-cm-h");
+        const printInW = document.getElementById("print-in-w");
+        const printInH = document.getElementById("print-in-h");
+        const qualityBadge = document.getElementById("quality-badge");
+        const qualityText = document.getElementById("quality-text");
+        const qualityDesc = document.getElementById("quality-desc");
+        const formatsTableBody = document.getElementById("formats-table-body");
+
+        let currentWidth = 0;
+        let currentHeight = 0;
+
+        ["dragenter", "dragover", "dragleave", "drop"].forEach(function(ev) {
+            dropZone.addEventListener(ev, function(e) { e.preventDefault(); e.stopPropagation(); });
+        });
+
+        ["dragenter", "dragover"].forEach(function(ev) {
+            dropZone.addEventListener(ev, function() { dropZone.classList.add("pq-drop-active"); });
+        });
+        ["dragleave", "drop"].forEach(function(ev) {
+            dropZone.addEventListener(ev, function() { dropZone.classList.remove("pq-drop-active"); });
+        });
+
+        dropZone.addEventListener("drop", function(e) {
+            var files = e.dataTransfer && e.dataTransfer.files;
+            if (files && files.length > 0) processFile(files[0]);
+        });
+
+        dropZone.addEventListener("click", function() { fileInput.click(); });
+
+        fileInput.addEventListener("change", function() {
+            if (fileInput.files && fileInput.files.length > 0) processFile(fileInput.files[0]);
+        });
+
+        if (dpiSlider) {
+            dpiSlider.addEventListener("input", function() { updateDPI(dpiSlider.value); });
+        }
+        if (dpiInput) {
+            dpiInput.addEventListener("input", function() { updateDPI(dpiInput.value); });
+        }
+
+        dpiPresets.forEach(function(btn) {
+            btn.addEventListener("click", function() {
+                var val = btn.dataset.val;
+                if (val) updateDPI(val);
+            });
+        });
+
+        function processFile(file) {
+            if (!file.type.startsWith("image/")) { alert("Por favor selecciona una imagen válida"); return; }
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                var img = new Image();
+                img.onload = function() {
+                    currentWidth = img.naturalWidth;
+                    currentHeight = img.naturalHeight;
+                    if (e.target && e.target.result) showResults(file, e.target.result);
+                    calculateSizes();
+                };
+                if (e.target && e.target.result) img.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function showResults(file, src) {
+            resultsArea.classList.remove("pq-hidden");
+            dropZone.classList.add("pq-hidden");
+            if (previewImg) previewImg.src = src;
+            if (fileNameEl) fileNameEl.textContent = file.name;
+            if (pixelDimsEl) pixelDimsEl.textContent = currentWidth + " x " + currentHeight + " px";
+            if (fileSizeEl) fileSizeEl.textContent = (file.size / (1024 * 1024)).toFixed(2) + " MB";
+            if (megapixelsEl) megapixelsEl.textContent = ((currentWidth * currentHeight) / 1000000).toFixed(1) + " MP";
+            setTimeout(function() { resultsArea.scrollIntoView({ behavior: "smooth", block: "start" }); }, 100);
+        }
+
+        function updateDPI(val) {
+            if (dpiSlider) dpiSlider.value = val;
+            if (dpiInput) dpiInput.value = val;
+            dpiPresets.forEach(function(btn) {
+                if (btn.dataset.val === String(val)) {
+                    btn.classList.add("pq-preset-active");
+                } else {
+                    btn.classList.remove("pq-preset-active");
+                }
+            });
+            calculateSizes();
+        }
+
+        function calculateSizes() {
+            if (!currentWidth || !currentHeight || !dpiInput) return;
+            var dpi = parseInt(dpiInput.value);
+            if (isNaN(dpi) || dpi <= 0) return;
+            var inW = currentWidth / dpi;
+            var inH = currentHeight / dpi;
+            var cmW = inW * 2.54;
+            var cmH = inH * 2.54;
+            if (printCmW) printCmW.textContent = cmW.toFixed(1);
+            if (printCmH) printCmH.textContent = cmH.toFixed(1);
+            if (printInW) printInW.textContent = inW.toFixed(1);
+            if (printInH) printInH.textContent = inH.toFixed(1);
+            updateQualityBadge(dpi);
+            updateFormatsTable(cmW, cmH);
+        }
+
+        function updateQualityBadge(dpi) {
+            if (!qualityText || !qualityDesc || !qualityBadge) return;
+            if (dpi >= 300) {
+                qualityText.textContent = "Calidad Excelente";
+                qualityDesc.textContent = "Ideal para revistas de arte, libros de fotografía y visualización a menos de 30cm.";
+                qualityBadge.className = "pq-quality-badge pq-badge-green";
+            } else if (dpi >= 150) {
+                qualityText.textContent = "Calidad Buena";
+                qualityDesc.textContent = "Suficiente para pósters, periódicos y visualización a más de 50cm de distancia.";
+                qualityBadge.className = "pq-quality-badge pq-badge-yellow";
+            } else if (dpi >= 72) {
+                qualityText.textContent = "Calidad Pantalla/Baja";
+                qualityDesc.textContent = "Adecuado solo para visualización digital o vallas publicitarias lejanas (>2 metros).";
+                qualityBadge.className = "pq-quality-badge pq-badge-red";
+            } else {
+                qualityText.textContent = "No Apto para impresión";
+                qualityDesc.textContent = "La imagen se verá pixelada. Usar solo para iconos pequeños o vistas muy lejanas.";
+                qualityBadge.className = "pq-quality-badge pq-badge-slate";
+            }
+        }
+
+        function updateFormatsTable(cmW, cmH) {
+            if (!formatsTableBody) return;
+            formatsTableBody.innerHTML = "";
+            var imgMin = Math.min(cmW, cmH);
+            var imgMax = Math.max(cmW, cmH);
+            PAPER_FORMATS.forEach(function(paper) {
+                var paperMin = Math.min(paper.w, paper.h);
+                var paperMax = Math.max(paper.w, paper.h);
+                var covers = imgMin >= paperMin - 0.1 && imgMax >= paperMax - 0.1;
+                var coverage = Math.min(imgMin / paperMin, imgMax / paperMax) * 100;
+                var row = document.createElement("tr");
+                row.className = "pq-formats-row";
+                var statusHtml = covers
+                    ? '<span class="pq-status pq-status-ok"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"/></svg> Sí (Cubierto)</span>'
+                    : '<span class="pq-status pq-status-no"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12,2L1,21H23M12,6L19.53,19H4.47M11,10V14H13V10M11,16V18H13V16"/></svg> No (' + coverage.toFixed(0) + '%)</span>';
+                row.innerHTML = '<td class="pq-td pq-td-name">' + paper.name + '</td><td class="pq-td pq-td-dim">' + paper.w + ' x ' + paper.h + '</td><td class="pq-td">' + statusHtml + '</td>';
+                formatsTableBody.appendChild(row);
+            });
+        }
+    }
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initPQCalc);
+    } else {
+        initPQCalc();
+    }
+    document.addEventListener("astro:page-load", initPQCalc);
+</script>

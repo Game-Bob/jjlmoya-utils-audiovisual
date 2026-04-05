@@ -1,0 +1,285 @@
+---
+import type { VideoFrameExtractorUI } from './index';
+import './style.css';
+
+interface Props {
+  ui: VideoFrameExtractorUI;
+}
+
+const { ui } = Astro.props;
+---
+
+<div class="vfe-root" id="vfe-root" data-ui={JSON.stringify(ui)}>
+  <div class="vfe-premium-card">
+
+    <div id="vfe-upload-box" class="vfe-uploader-box">
+      <input type="file" id="vfe-file-input" accept="video/*" class="vfe-hidden" />
+      <div class="vfe-uploader-icon">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M17 10.5V7a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-3.5l4 4v-11zM14 13h-3v3H9v-3H6v-2h3V8h2v3h3z"/>
+        </svg>
+      </div>
+      <div class="vfe-uploader-text">
+        <h3>{ui.uploadTitle}</h3>
+        <p>{ui.uploadFormats}</p>
+      </div>
+      <span class="vfe-privacy-note">{ui.privacyNote}</span>
+    </div>
+
+    <div id="vfe-player-area" class="vfe-player-container vfe-hidden">
+      <div class="vfe-video-wrapper">
+        <video id="vfe-video" preload="metadata"></video>
+      </div>
+
+      <div class="vfe-controls-glass">
+        <div class="vfe-time-row">
+          <span id="vfe-current-time">00:00.000</span>
+          <span id="vfe-duration">00:00.000</span>
+        </div>
+        <input type="range" id="vfe-scrubber" class="vfe-scrubber" min="0" step="0.001" value="0" />
+
+        <div class="vfe-actions-row">
+          <button id="vfe-prev" class="vfe-btn-main vfe-btn-control" title={ui.prevFrame}>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M15.41 16.58L10.83 12l4.58-4.59L14 6l-6 6 6 6z"/></svg>
+            <span>-1F</span>
+          </button>
+          <button id="vfe-play" class="vfe-btn-main vfe-btn-control">
+            <svg id="vfe-play-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.14v14l11-7z"/></svg>
+            <svg id="vfe-pause-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="vfe-hidden"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+            <span id="vfe-play-text">{ui.playLabel}</span>
+          </button>
+          <button id="vfe-next" class="vfe-btn-main vfe-btn-control" title={ui.nextFrame}>
+            <span>+1F</span>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+          </button>
+        </div>
+
+        <div class="vfe-actions-row">
+          <button id="vfe-capture" class="vfe-btn-main vfe-btn-capture">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 5h-3.17L15 3H9L7.17 5H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm-8 13c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            <span>{ui.captureBtn}</span>
+          </button>
+          <button id="vfe-reset" class="vfe-btn-main vfe-btn-control vfe-btn-icon-only" title={ui.resetBtn}>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.65 6.35A7.96 7.96 0 0 0 12 4a8 8 0 0 0-8 8 8 8 0 0 0 8 8c3.73 0 6.84-2.55 7.73-6h-2.08A5.99 5.99 0 0 1 12 18a6 6 0 0 1-6-6 6 6 0 0 1 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4z"/></svg>
+          </button>
+        </div>
+
+        <div class="vfe-batch-panel">
+          <div class="vfe-batch-header">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.5 5.6L5 7l1.4-2.5L5 2l2.5 1.4L10 2L8.6 4.5L10 7zm12 9.8L22 14l-1.4 2.5L22 19l-2.5-1.4L17 19l1.4-2.5L17 14zM22 2l-1.4 2.5L22 7l-2.5-1.4L17 7l1.4-2.5L17 2l2.5 1.4zm-8.66 10.78l2.44-2.44-2.12-2.12-2.44 2.44zm1.03-5.49l2.34 2.34c.39.37.39 1.02 0 1.41L5.04 22.71c-.39.39-1.04.39-1.41 0l-2.34-2.34c-.39-.37-.39-1.02 0-1.41L12.96 7.29c.39-.39 1.04-.39 1.41 0"/></svg>
+            <span>{ui.batchTitle}</span>
+          </div>
+          <div class="vfe-batch-controls">
+            <div class="vfe-batch-input-group">
+              <label>{ui.batchEvery}</label>
+              <input type="number" id="vfe-batch-interval" value="1" min="0.1" step="0.1" />
+              <label>s</label>
+            </div>
+            <button id="vfe-batch-start" class="vfe-btn-main vfe-btn-capture vfe-btn-batch">
+              <span id="vfe-batch-label">{ui.batchStart}</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="vfe-gallery-minimal">
+        <div class="vfe-gallery-header">
+          <h4>{ui.galleryTitle}</h4>
+          <button id="vfe-download-all" class="vfe-btn-main vfe-btn-control vfe-btn-sm vfe-hidden">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 1v6H5l7 7 7-7h-4V1zM5 16v2h14v-2zm0 4v2h14v-2z"/></svg>
+            <span>{ui.downloadAll}</span>
+          </button>
+        </div>
+        <div id="vfe-frames-gallery" class="vfe-frames-scroll">
+          <p id="vfe-gallery-empty" class="vfe-gallery-empty-text">{ui.galleryEmpty}</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div id="vfe-lightbox" class="vfe-lightbox">
+  <div class="vfe-lightbox-content">
+    <span id="vfe-lightbox-close" class="vfe-lightbox-close">×</span>
+    <img id="vfe-lightbox-img" src="" alt="" class="vfe-lightbox-img" />
+    <div class="vfe-actions-row" style="width:100%;justify-content:center">
+      <a id="vfe-lightbox-down" href="" download="frame.webp" class="vfe-btn-main vfe-btn-capture">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7z"/></svg>
+        <span>{ui.downloadHD}</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+  import { captureFrameFromVideo, captureFrameAtTime, formatTime } from './logic';
+  import type { CapturedFrame } from './logic';
+  import type { VideoFrameExtractorUI } from './index';
+
+  function init() {
+    const root = document.getElementById('vfe-root');
+    if (!root) return;
+
+    const labels = JSON.parse(root.dataset.ui ?? '{}') as VideoFrameExtractorUI;
+
+    const fileInput = root.querySelector('#vfe-file-input') as HTMLInputElement;
+    const uploadBox = root.querySelector('#vfe-upload-box') as HTMLElement;
+    const playerArea = root.querySelector('#vfe-player-area') as HTMLElement;
+    const video = root.querySelector('#vfe-video') as HTMLVideoElement;
+    const playBtn = root.querySelector('#vfe-play') as HTMLButtonElement;
+    const playIcon = root.querySelector('#vfe-play-icon') as HTMLElement;
+    const pauseIcon = root.querySelector('#vfe-pause-icon') as HTMLElement;
+    const playText = root.querySelector('#vfe-play-text') as HTMLElement;
+    const prevBtn = root.querySelector('#vfe-prev') as HTMLButtonElement;
+    const nextBtn = root.querySelector('#vfe-next') as HTMLButtonElement;
+    const captureBtn = root.querySelector('#vfe-capture') as HTMLButtonElement;
+    const resetBtn = root.querySelector('#vfe-reset') as HTMLButtonElement;
+    const scrubber = root.querySelector('#vfe-scrubber') as HTMLInputElement;
+    const currentTimeEl = root.querySelector('#vfe-current-time') as HTMLElement;
+    const durationEl = root.querySelector('#vfe-duration') as HTMLElement;
+    const batchInterval = root.querySelector('#vfe-batch-interval') as HTMLInputElement;
+    const batchStartBtn = root.querySelector('#vfe-batch-start') as HTMLButtonElement;
+    const batchLabelEl = root.querySelector('#vfe-batch-label') as HTMLElement;
+    const framesGallery = root.querySelector('#vfe-frames-gallery') as HTMLElement;
+    const galleryEmpty = root.querySelector('#vfe-gallery-empty') as HTMLElement;
+    const downloadAllBtn = root.querySelector('#vfe-download-all') as HTMLElement;
+    const lightbox = document.getElementById('vfe-lightbox') as HTMLElement;
+    const lightboxImg = document.getElementById('vfe-lightbox-img') as HTMLImageElement;
+    const lightboxDown = document.getElementById('vfe-lightbox-down') as HTMLAnchorElement;
+
+    let captured: CapturedFrame[] = [];
+    const FRAME_STEP = 1 / 30;
+
+    function handleFile(file: File) {
+      video.src = URL.createObjectURL(file);
+      uploadBox.classList.add('vfe-hidden');
+      playerArea.classList.remove('vfe-hidden');
+      video.load();
+    }
+
+    function addFrame(frame: CapturedFrame) {
+      captured.push(frame);
+      galleryEmpty.classList.add('vfe-hidden');
+      downloadAllBtn.classList.remove('vfe-hidden');
+
+      const card = document.createElement('div');
+      card.className = 'vfe-frame-card';
+      card.innerHTML = `
+        <img src="${frame.url}" class="vfe-frame-thumb" alt="" />
+        <div class="vfe-frame-footer">
+          <span class="vfe-frame-time">${formatTime(frame.timestamp)}</span>
+          <a href="${frame.url}" download="frame_${frame.timestamp.toFixed(3)}.webp" class="vfe-btn-main vfe-btn-control vfe-btn-sm">
+            <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7z"/></svg>
+          </a>
+        </div>
+      `;
+
+      (card.querySelector('.vfe-frame-thumb') as HTMLElement).addEventListener('click', () => {
+        lightboxImg.src = frame.url;
+        lightboxDown.href = frame.url;
+        lightbox.classList.add('vfe-lightbox--open');
+      });
+
+      framesGallery.prepend(card);
+    }
+
+    uploadBox.addEventListener('click', () => fileInput.click());
+    fileInput.addEventListener('change', () => {
+      if (fileInput.files?.[0]) handleFile(fileInput.files[0]);
+    });
+
+    root.addEventListener('dragover', (e) => { e.preventDefault(); uploadBox.classList.add('vfe-dragover'); });
+    root.addEventListener('dragleave', () => uploadBox.classList.remove('vfe-dragover'));
+    root.addEventListener('drop', (e) => {
+      e.preventDefault();
+      uploadBox.classList.remove('vfe-dragover');
+      if (e.dataTransfer?.files[0]) handleFile(e.dataTransfer.files[0]);
+    });
+
+    video.addEventListener('loadedmetadata', () => {
+      durationEl.textContent = formatTime(video.duration);
+      scrubber.max = video.duration.toString();
+    });
+
+    video.addEventListener('timeupdate', () => {
+      currentTimeEl.textContent = formatTime(video.currentTime);
+      scrubber.value = video.currentTime.toString();
+    });
+
+    video.addEventListener('ended', () => {
+      playIcon.classList.remove('vfe-hidden');
+      pauseIcon.classList.add('vfe-hidden');
+      playText.textContent = labels.playLabel;
+    });
+
+    scrubber.addEventListener('input', () => { video.currentTime = parseFloat(scrubber.value); });
+
+    playBtn.addEventListener('click', () => {
+      if (video.paused) {
+        video.play();
+        playIcon.classList.add('vfe-hidden');
+        pauseIcon.classList.remove('vfe-hidden');
+        playText.textContent = labels.pauseLabel;
+      } else {
+        video.pause();
+        playIcon.classList.remove('vfe-hidden');
+        pauseIcon.classList.add('vfe-hidden');
+        playText.textContent = labels.playLabel;
+      }
+    });
+
+    prevBtn.addEventListener('click', () => { video.pause(); video.currentTime = Math.max(0, video.currentTime - FRAME_STEP); });
+    nextBtn.addEventListener('click', () => { video.pause(); video.currentTime = Math.min(video.duration, video.currentTime + FRAME_STEP); });
+
+    captureBtn.addEventListener('click', () => {
+      const frame = captureFrameFromVideo(video);
+      if (frame) addFrame(frame);
+    });
+
+    batchStartBtn.addEventListener('click', async () => {
+      const interval = parseFloat(batchInterval.value);
+      if (isNaN(interval) || interval <= 0) return;
+      batchStartBtn.disabled = true;
+      batchLabelEl.textContent = labels.batchProcessing;
+      for (let t = 0; t <= video.duration; t += interval) {
+        const frame = await captureFrameAtTime(video, t);
+        if (frame) addFrame(frame);
+      }
+      batchStartBtn.disabled = false;
+      batchLabelEl.textContent = labels.batchStart;
+    });
+
+    downloadAllBtn.addEventListener('click', () => {
+      captured.forEach((frame, i) => {
+        setTimeout(() => {
+          const a = document.createElement('a');
+          a.href = frame.url;
+          a.download = `frame_${i}.webp`;
+          a.click();
+        }, i * 200);
+      });
+    });
+
+    resetBtn.addEventListener('click', () => {
+      video.pause();
+      video.src = '';
+      playerArea.classList.add('vfe-hidden');
+      uploadBox.classList.remove('vfe-hidden');
+      captured = [];
+      framesGallery.innerHTML = '';
+      framesGallery.appendChild(galleryEmpty);
+      galleryEmpty.classList.remove('vfe-hidden');
+      downloadAllBtn.classList.add('vfe-hidden');
+      playIcon.classList.remove('vfe-hidden');
+      pauseIcon.classList.add('vfe-hidden');
+      playText.textContent = labels.playLabel;
+    });
+
+    document.getElementById('vfe-lightbox-close')!.addEventListener('click', () => lightbox.classList.remove('vfe-lightbox--open'));
+    lightbox.addEventListener('click', (e) => { if (e.target === lightbox) lightbox.classList.remove('vfe-lightbox--open'); });
+  }
+
+  init();
+  document.addEventListener('astro:page-load', init);
+</script>

@@ -1,0 +1,301 @@
+---
+import type { CollageMakerUI } from './index';
+import './style.css';
+
+interface Props {
+  ui: CollageMakerUI;
+}
+
+const { ui } = Astro.props;
+const dropSub = (ui.dropSub ?? '').replace('{link}', `<span class="cm-drop-link">${ui.dropLink ?? ''}</span>`);
+---
+
+<div class="cm-root" id="collage-maker-root" data-ui={JSON.stringify(ui)}>
+  <div class="cm-card">
+
+    <div class="cm-top-row">
+      <div class="cm-left-col">
+
+        <div id="cm-drop-zone" class="cm-drop-zone">
+          <input type="file" id="cm-file-input" accept="image/*" multiple />
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="2"/>
+            <circle cx="8.5" cy="8.5" r="1.5"/>
+            <path d="M21 15l-5-5L5 21"/>
+          </svg>
+          <p class="cm-drop-title">{ui.dropTitle}</p>
+          <p class="cm-drop-sub" set:html={dropSub} />
+        </div>
+
+        <div id="cm-images-section" style="display:none">
+          <div class="cm-section-header">
+            <span class="cm-section-label">{ui.imgsLoaded}</span>
+            <span id="cm-counter" class="cm-badge">0/9</span>
+          </div>
+          <div id="cm-thumbs" class="cm-thumbs"></div>
+        </div>
+
+      </div>
+
+      <div class="cm-preview-col">
+        <div class="cm-preview-placeholder" id="cm-placeholder">
+          <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" opacity="0.25">
+            <rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/>
+            <rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/>
+          </svg>
+          <p>{ui.previewTitle}</p>
+        </div>
+        <canvas id="cm-canvas" class="cm-canvas" style="display:none"></canvas>
+        <div id="cm-preview-footer" style="display:none">
+          <span id="cm-canvas-dims" class="cm-dims-badge"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cm-section-divider" id="cm-layout-section" style="display:none">
+      <span class="cm-section-label">{ui.layoutLabel}</span>
+      <div id="cm-layouts" class="cm-layouts"></div>
+    </div>
+
+    <div class="cm-section-divider cm-settings-row" id="cm-settings-section" style="display:none">
+      <span class="cm-section-label">{ui.settingsLabel}</span>
+      <div class="cm-settings-inline">
+        <div class="cm-setting">
+          <label class="cm-setting-label" for="cm-border-width">{ui.borderLabel} <span id="cm-bw-val">0</span>px</label>
+          <input type="range" id="cm-border-width" min="0" max="30" value="0" class="cm-slider" />
+        </div>
+        <div class="cm-setting">
+          <label class="cm-setting-label">{ui.borderColorLabel}</label>
+          <div class="cm-color-row">
+            <input type="color" id="cm-border-color" value="#ffffff" class="cm-color-swatch" />
+            <span id="cm-bc-val" class="cm-color-code">#FFFFFF</span>
+          </div>
+        </div>
+        <div class="cm-setting">
+          <label class="cm-setting-label">{ui.bgColorLabel}</label>
+          <div class="cm-color-row">
+            <input type="color" id="cm-bg-color" value="#1a1a1a" class="cm-color-swatch" />
+            <span id="cm-bg-val" class="cm-color-code">#1A1A1A</span>
+          </div>
+        </div>
+        <button id="cm-download-btn" class="cm-download-btn" disabled>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1M12 4v12M8 12l4 4 4-4"/></svg>
+          {ui.downloadBtn}
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  interface ImgEntry { src: string; w: number; h: number; name: string; }
+  type Pos = [number, number, number, number];
+
+  interface Layout {
+    id: string;
+    label: string;
+    images: number;
+    svgPath: string;
+    build: (gap: number) => { W: number; H: number; pos: Pos[] };
+  }
+
+  const LAYOUTS: Layout[] = [
+    {
+      id: '2x1', label: '2 cols', images: 2,
+      svgPath: 'M1,1h10v10h-10z M13,1h10v10h-10z',
+      build: g => { const W=800,H=400,cw=(W-g*3)/2,ch=H-g*2; return {W,H,pos:[[g,g,cw,ch],[g*2+cw,g,cw,ch]]}; }
+    },
+    {
+      id: '1x2', label: '2 filas', images: 2,
+      svgPath: 'M1,1h22v10h-22z M1,13h22v10h-22z',
+      build: g => { const W=400,H=800,cw=W-g*2,ch=(H-g*3)/2; return {W,H,pos:[[g,g,cw,ch],[g,g*2+ch,cw,ch]]}; }
+    },
+    {
+      id: '3-split', label: '3 cols', images: 3,
+      svgPath: 'M1,1h6v22h-6z M9,1h6v22h-6z M17,1h6v22h-6z',
+      build: g => { const W=900,H=300,cw=(W-g*4)/3,ch=H-g*2; return {W,H,pos:[[g,g,cw,ch],[g*2+cw,g,cw,ch],[g*3+cw*2,g,cw,ch]]}; }
+    },
+    {
+      id: '2+2', label: '2×2', images: 4,
+      svgPath: 'M1,1h10v10h-10z M13,1h10v10h-10z M1,13h10v10h-10z M13,13h10v10h-10z',
+      build: g => { const W=800,H=800,cs=(W-g*3)/2; return {W,H,pos:[[g,g,cs,cs],[g*2+cs,g,cs,cs],[g,g*2+cs,cs,cs],[g*2+cs,g*2+cs,cs,cs]]}; }
+    },
+    {
+      id: 'big-left', label: 'Grande izq', images: 4,
+      svgPath: 'M1,1h13v22h-13z M16,1h7v6h-7z M16,9h7v6h-7z M16,17h7v6h-7z',
+      build: g => { const W=800,H=600,bs=400-g,ss=(W-bs-g*4)/3; return {W,H,pos:[[g,g,bs,bs],[bs+g*2,g,ss,ss],[bs+g*2,g*2+ss,ss,ss],[bs+g*2,g*3+ss*2,ss,ss]]}; }
+    },
+    {
+      id: 'big-right', label: 'Grande der', images: 4,
+      svgPath: 'M1,1h7v6h-7z M1,9h7v6h-7z M1,17h7v6h-7z M10,1h13v22h-13z',
+      build: g => { const W=800,H=600,bs=400-g,ss=(W-bs-g*4)/3; return {W,H,pos:[[g,g,ss,ss],[g,g*2+ss,ss,ss],[g,g*3+ss*2,ss,ss],[ss+g*2,g,bs,bs]]}; }
+    },
+    {
+      id: '5-grid', label: '5 asim.', images: 5,
+      svgPath: 'M1,1h10v22h-10z M13,1h10v10h-10z M13,13h10v10h-10z',
+      build: g => { const W=900,H=750,c1=(W-g*3)/2,c2=(W-g*4)/3,r2=(H-g*3)/2; return {W,H,pos:[[g,g,c1,H-g*2],[c1+g*2,g,c2,r2],[c1+g*2+c2+g,g,c2,r2],[c1+g*2,g*2+r2,c2,r2],[c1+g*2+c2+g,g*2+r2,c2,r2]]}; }
+    },
+    {
+      id: '2x3', label: '2×3', images: 6,
+      svgPath: 'M1,1h10v6h-10z M13,1h10v6h-10z M1,9h10v6h-10z M13,9h10v6h-10z M1,17h10v6h-10z M13,17h10v6h-10z',
+      build: g => { const W=800,H=1200,cw=(W-g*3)/2,ch=(H-g*4)/3; const pos:Pos[]=[]; for(let r=0;r<3;r++)for(let c=0;c<2;c++)pos.push([g*(c+1)+cw*c,g*(r+1)+ch*r,cw,ch]); return {W,H,pos}; }
+    },
+    {
+      id: '2x4', label: '2×4', images: 8,
+      svgPath: 'M1,1h10v4h-10z M13,1h10v4h-10z M1,7h10v4h-10z M13,7h10v4h-10z M1,13h10v4h-10z M13,13h10v4h-10z M1,19h10v4h-10z M13,19h10v4h-10z',
+      build: g => { const W=800,H=1600,cw=(W-g*3)/2,ch=(H-g*5)/4; const pos:Pos[]=[]; for(let r=0;r<4;r++)for(let c=0;c<2;c++)pos.push([g*(c+1)+cw*c,g*(r+1)+ch*r,cw,ch]); return {W,H,pos}; }
+    },
+    {
+      id: '3x3', label: '3×3', images: 9,
+      svgPath: 'M1,1h6v6h-6z M9,1h6v6h-6z M17,1h6v6h-6z M1,9h6v6h-6z M9,9h6v6h-6z M17,9h6v6h-6z M1,17h6v6h-6z M9,17h6v6h-6z M17,17h6v6h-6z',
+      build: g => { const W=900,H=900,cs=(W-g*4)/3; const pos:Pos[]=[]; for(let r=0;r<3;r++)for(let c=0;c<3;c++)pos.push([g*(c+1)+cs*c,g*(r+1)+cs*r,cs,cs]); return {W,H,pos}; }
+    },
+  ];
+
+  const root          = document.getElementById('collage-maker-root') as HTMLElement;
+  const labels        = JSON.parse(root.dataset.ui ?? '{}') as Record<string,string>;
+  const dropZone      = document.getElementById('cm-drop-zone') as HTMLElement;
+  const fileInput     = document.getElementById('cm-file-input') as HTMLInputElement;
+  const imagesSection = document.getElementById('cm-images-section') as HTMLElement;
+  const thumbsEl      = document.getElementById('cm-thumbs') as HTMLElement;
+  const counterEl     = document.getElementById('cm-counter') as HTMLElement;
+  const layoutSection = document.getElementById('cm-layout-section') as HTMLElement;
+  const layoutsEl     = document.getElementById('cm-layouts') as HTMLElement;
+  const settingsSection = document.getElementById('cm-settings-section') as HTMLElement;
+  const downloadBtn   = document.getElementById('cm-download-btn') as HTMLButtonElement;
+  const canvas        = document.getElementById('cm-canvas') as HTMLCanvasElement;
+  const placeholder   = document.getElementById('cm-placeholder') as HTMLElement;
+  const previewFooter = document.getElementById('cm-preview-footer') as HTMLElement;
+  const canvasDims    = document.getElementById('cm-canvas-dims') as HTMLElement;
+  const bwInput       = document.getElementById('cm-border-width') as HTMLInputElement;
+  const bwVal         = document.getElementById('cm-bw-val') as HTMLElement;
+  const bcInput       = document.getElementById('cm-border-color') as HTMLInputElement;
+  const bcVal         = document.getElementById('cm-bc-val') as HTMLElement;
+  const bgInput       = document.getElementById('cm-bg-color') as HTMLInputElement;
+  const bgVal         = document.getElementById('cm-bg-val') as HTMLElement;
+
+  let images: ImgEntry[] = [];
+  let selectedLayout: Layout | null = null;
+  let collageReady = false;
+
+  function buildLayoutPicker(): void {
+    layoutsEl.innerHTML = '';
+    LAYOUTS.forEach(layout => {
+      const enabled = images.length >= layout.images;
+      const needsText = (labels.needsImgs ?? 'Necesitas {n} imágenes').replace('{n}', String(layout.images));
+      const btn = document.createElement('button');
+      btn.className = ['cm-layout-btn', selectedLayout?.id === layout.id ? 'cm-layout-btn--active' : '', !enabled ? 'cm-layout-btn--disabled' : ''].filter(Boolean).join(' ');
+      btn.disabled = !enabled;
+      btn.title = enabled ? layout.label : needsText;
+      btn.innerHTML = `<svg viewBox="0 0 24 24" width="36" height="36" fill="currentColor" aria-hidden="true"><path d="${layout.svgPath}"/></svg><span>${layout.label}</span>${!enabled ? `<span class="cm-layout-need">${layout.images}</span>` : ''}`;
+      if (enabled) {
+        btn.addEventListener('click', () => { selectedLayout = layout; buildLayoutPicker(); renderCanvas(); });
+      }
+      layoutsEl.appendChild(btn);
+    });
+    if (!selectedLayout || images.length < selectedLayout.images) {
+      selectedLayout = LAYOUTS.find(l => images.length >= l.images) ?? null;
+      if (selectedLayout) buildLayoutPicker();
+    }
+  }
+
+  function renderThumbs(): void {
+    thumbsEl.innerHTML = '';
+    images.forEach((img, idx) => {
+      const div = document.createElement('div');
+      div.className = 'cm-thumb';
+      div.innerHTML = `<img src="${img.src}" alt="" /><button class="cm-thumb-del" data-idx="${idx}"><svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor" aria-hidden="true"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"/></svg></button><span class="cm-thumb-num">${idx+1}</span>`;
+      thumbsEl.appendChild(div);
+    });
+    thumbsEl.querySelectorAll('.cm-thumb-del').forEach(btn => {
+      btn.addEventListener('click', e => {
+        e.stopPropagation();
+        const idx = parseInt((btn as HTMLElement).dataset.idx ?? '0');
+        images.splice(idx, 1);
+        afterImagesChange();
+      });
+    });
+  }
+
+  function afterImagesChange(): void {
+    counterEl.textContent = `${images.length}/9`;
+    imagesSection.style.display = images.length > 0 ? '' : 'none';
+    layoutSection.style.display = images.length >= 2 ? '' : 'none';
+    settingsSection.style.display = images.length >= 2 ? '' : 'none';
+    renderThumbs();
+    if (images.length >= 2) {
+      buildLayoutPicker();
+      renderCanvas();
+    } else {
+      canvas.style.display = 'none';
+      placeholder.style.display = '';
+      previewFooter.style.display = 'none';
+      collageReady = false;
+      downloadBtn.disabled = true;
+    }
+  }
+
+  async function renderCanvas(): Promise<void> {
+    if (!selectedLayout || images.length < 2) return;
+    const gap = parseInt(bwInput.value);
+    const { W, H, pos } = selectedLayout.build(gap);
+    canvas.width = W;
+    canvas.height = H;
+    const ctx = canvas.getContext('2d')!;
+    ctx.fillStyle = bgInput.value;
+    ctx.fillRect(0, 0, W, H);
+    for (let i = 0; i < Math.min(images.length, pos.length); i++) {
+      const p = pos[i]!;
+      await drawImage(ctx, images[i]!.src, p[0], p[1], p[2], p[3]);
+      if (gap > 0) { ctx.strokeStyle = bcInput.value; ctx.lineWidth = gap; ctx.strokeRect(p[0]-gap/2, p[1]-gap/2, p[2]+gap, p[3]+gap); }
+    }
+    canvas.style.display = '';
+    placeholder.style.display = 'none';
+    previewFooter.style.display = '';
+    canvasDims.textContent = `${W} × ${H} px`;
+    collageReady = true;
+    downloadBtn.disabled = false;
+  }
+
+  function drawImage(ctx: CanvasRenderingContext2D, src: string, x: number, y: number, w: number, h: number): Promise<void> {
+    return new Promise(resolve => {
+      const img = new Image();
+      img.onload = () => {
+        const ratio = Math.max(w / img.width, h / img.height);
+        const sw = w / ratio, sh = h / ratio;
+        ctx.drawImage(img, (img.width-sw)/2, (img.height-sh)/2, sw, sh, x, y, w, h);
+        resolve();
+      };
+      img.src = src;
+    });
+  }
+
+  async function loadFiles(files: FileList | File[]): Promise<void> {
+    const arr = Array.from(files).filter(f => f.type.startsWith('image/')).slice(0, 9 - images.length);
+    const loaded = await Promise.all(arr.map(f => new Promise<ImgEntry>((resolve, reject) => {
+      const r = new FileReader();
+      r.onload = e => { const img = new Image(); img.onload = () => resolve({ src: e.target!.result as string, w: img.width, h: img.height, name: f.name }); img.onerror = reject; img.src = e.target!.result as string; };
+      r.readAsDataURL(f);
+    })));
+    images = [...images, ...loaded];
+    afterImagesChange();
+  }
+
+  dropZone.addEventListener('dragover', e => { e.preventDefault(); dropZone.classList.add('cm-drop-zone--over'); });
+  dropZone.addEventListener('dragleave', () => dropZone.classList.remove('cm-drop-zone--over'));
+  dropZone.addEventListener('drop', e => { e.preventDefault(); dropZone.classList.remove('cm-drop-zone--over'); if (e.dataTransfer?.files.length) loadFiles(e.dataTransfer.files); });
+  fileInput.addEventListener('change', () => { if (fileInput.files?.length) loadFiles(fileInput.files); fileInput.value = ''; });
+
+  bwInput.addEventListener('input', () => { bwVal.textContent = bwInput.value; renderCanvas(); });
+  bcInput.addEventListener('input', () => { bcVal.textContent = bcInput.value.toUpperCase(); renderCanvas(); });
+  bgInput.addEventListener('input', () => { bgVal.textContent = bgInput.value.toUpperCase(); renderCanvas(); });
+
+  downloadBtn.addEventListener('click', () => {
+    if (!collageReady) return;
+    const a = document.createElement('a');
+    a.href = canvas.toDataURL('image/webp', 0.92);
+    a.download = 'collage.webp';
+    a.click();
+  });
+</script>

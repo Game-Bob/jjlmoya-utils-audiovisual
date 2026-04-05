@@ -1,0 +1,230 @@
+---
+import type { PrivacyBlurUI } from './index';
+import './style.css';
+
+interface Props {
+  ui: PrivacyBlurUI;
+}
+
+const { ui } = Astro.props;
+---
+
+<div class="pb-root" id="privacy-blur-root" data-ui={JSON.stringify(ui)}>
+
+  <div class="pb-toolbar">
+    <div class="pb-tool-selector">
+      <button class="pb-tool-btn pb-tool-btn--active" data-tool="pixel" title={ui.toolPixel}>
+        <svg viewBox="0 0 24 24" class="pb-icon" aria-hidden="true" fill="currentColor">
+          <path d="M3 3h8v8H3zm0 10h8v8H3zm10-10h8v8h-8zm0 10h8v8h-8z"/>
+        </svg>
+        <span>{ui.toolPixel}</span>
+      </button>
+      <button class="pb-tool-btn" data-tool="blur" title={ui.toolBlur}>
+        <svg viewBox="0 0 24 24" class="pb-icon" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="12" cy="12" r="2" fill="currentColor" stroke="none"/>
+          <circle cx="12" cy="12" r="5"/>
+          <circle cx="12" cy="12" r="9"/>
+        </svg>
+        <span>{ui.toolBlur}</span>
+      </button>
+      <button class="pb-tool-btn" data-tool="solid" title={ui.toolSolid}>
+        <svg viewBox="0 0 24 24" class="pb-icon" aria-hidden="true" fill="currentColor">
+          <rect x="4" y="4" width="16" height="16" rx="2"/>
+        </svg>
+        <span>{ui.toolSolid}</span>
+      </button>
+    </div>
+
+    <div class="pb-settings-row">
+      <div class="pb-intensity-wrap">
+        <svg viewBox="0 0 24 24" class="pb-icon" aria-hidden="true" fill="currentColor">
+          <path d="M3 6h18v2H3zm3-4v4M12 4v4M21 6h-3M9 11v4M15 11v4M3 12h6m6 0h6M3 18h18v2H3zm3-4v4m6-4v4m6-4v4"/>
+        </svg>
+        <input type="range" id="pb-intensity" min="1" max="50" value="10" class="pb-slider" />
+      </div>
+      <button id="pb-auto-face" class="pb-auto-btn">
+        <svg viewBox="0 0 24 24" class="pb-icon" aria-hidden="true" fill="currentColor">
+          <path d="M9 11.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm9 0a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zM12 18c-2 0-3.5-1-4-2.5h8c-.5 1.5-2 2.5-4 2.5zM1 1v6h2V3h4V1H1zm18 0v2h4v4h2V1h-6zM1 17v6h6v-2H3v-4H1zm20 4v-4h2v6h-6v-2h4z"/>
+        </svg>
+        <span>{ui.autoDetectFaces}</span>
+      </button>
+    </div>
+
+    <div class="pb-action-group">
+      <button id="pb-undo" class="pb-undo-btn" disabled title={ui.undoButton}>
+        <svg viewBox="0 0 24 24" class="pb-icon" aria-hidden="true" fill="currentColor">
+          <path d="M12.5 8c-2.65 0-5.05.99-6.9 2.6L2 7v9h9l-3.62-3.62A6.89 6.89 0 0 1 12.5 10c3.54 0 6.55 2.31 7.6 5.5l2.37-.78C21.08 11.03 17.15 8 12.5 8z"/>
+        </svg>
+      </button>
+      <button id="pb-download" class="pb-download-btn" disabled>
+        <svg viewBox="0 0 24 24" class="pb-icon" aria-hidden="true" fill="currentColor">
+          <path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"/>
+        </svg>
+        <span>{ui.downloadButton}</span>
+      </button>
+    </div>
+  </div>
+
+  <div id="pb-workspace" class="pb-workspace">
+    <input type="file" id="pb-file-input" accept="image/*" class="pb-hidden" />
+
+    <div id="pb-empty" class="pb-empty">
+      <div class="pb-upload-icon">
+        <svg viewBox="0 0 24 24" class="pb-icon-lg" aria-hidden="true" fill="currentColor">
+          <path d="M19.35 10.04A7.49 7.49 0 0 0 12 4C9.11 4 6.6 5.64 5.35 8.04A5.994 5.994 0 0 0 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/>
+        </svg>
+      </div>
+      <h2 class="pb-empty-title">{ui.dropTitle}</h2>
+      <p class="pb-empty-sub">{ui.dropSubtitle}</p>
+      <div class="pb-badges">
+        <div class="pb-badge">
+          <svg viewBox="0 0 24 24" class="pb-badge-icon" aria-hidden="true" fill="currentColor">
+            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
+          </svg>
+          <span>{ui.privacySecureLabel}</span>
+        </div>
+        <div class="pb-badge">
+          <svg viewBox="0 0 24 24" class="pb-badge-icon" aria-hidden="true" fill="currentColor">
+            <path d="M7 2v11h3v9l7-12h-4l4-8z"/>
+          </svg>
+          <span>{ui.offlineLabel}</span>
+        </div>
+      </div>
+    </div>
+
+    <div id="pb-loader" class="pb-loader pb-hidden">
+      <div class="pb-spinner"></div>
+      <p id="pb-loader-text" class="pb-loader-text"></p>
+    </div>
+
+    <div id="pb-canvas-wrap" class="pb-canvas-wrap pb-hidden">
+      <canvas id="pb-canvas"></canvas>
+    </div>
+  </div>
+
+</div>
+
+<script is:inline src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
+
+<script>
+  import { PrivacyBlurEngine } from './logic';
+  import type { ToolType } from './logic';
+  import type { PrivacyBlurUI } from './index';
+
+  function init() {
+    const root = document.getElementById('privacy-blur-root');
+    if (!root) return;
+
+    const labels = JSON.parse(root.dataset.ui ?? '{}') as PrivacyBlurUI;
+    const canvas = root.querySelector('#pb-canvas') as HTMLCanvasElement;
+    const engine = new PrivacyBlurEngine(canvas);
+
+    const fileInput = root.querySelector('#pb-file-input') as HTMLInputElement;
+    const emptyState = root.querySelector('#pb-empty') as HTMLElement;
+    const canvasWrap = root.querySelector('#pb-canvas-wrap') as HTMLElement;
+    const undoBtn = root.querySelector('#pb-undo') as HTMLButtonElement;
+    const downloadBtn = root.querySelector('#pb-download') as HTMLButtonElement;
+    const intensityRange = root.querySelector('#pb-intensity') as HTMLInputElement;
+    const autoFaceBtn = root.querySelector('#pb-auto-face') as HTMLButtonElement;
+    const loader = root.querySelector('#pb-loader') as HTMLElement;
+    const loaderText = root.querySelector('#pb-loader-text') as HTMLElement;
+    const toolBtns = root.querySelectorAll('.pb-tool-btn') as NodeListOf<HTMLButtonElement>;
+
+    function updateControls() {
+      undoBtn.disabled = !engine.hasLayers();
+      downloadBtn.disabled = !engine.hasLayers();
+    }
+
+    function handleFile(file: File) {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        const img = new Image();
+        img.onload = () => {
+          engine.setImage(img);
+          emptyState.classList.add('pb-hidden');
+          canvasWrap.classList.remove('pb-hidden');
+          updateControls();
+        };
+        img.src = e.target?.result as string;
+      };
+      reader.readAsDataURL(file);
+    }
+
+    fileInput.addEventListener('change', () => {
+      if (fileInput.files?.[0]) handleFile(fileInput.files[0]);
+    });
+
+    emptyState.addEventListener('click', () => fileInput.click());
+
+    root.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      root.classList.add('pb-dragging');
+    });
+    root.addEventListener('dragleave', () => root.classList.remove('pb-dragging'));
+    root.addEventListener('drop', (e) => {
+      e.preventDefault();
+      root.classList.remove('pb-dragging');
+      if (e.dataTransfer?.files[0]) handleFile(e.dataTransfer.files[0]);
+    });
+
+    toolBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        toolBtns.forEach(b => b.classList.remove('pb-tool-btn--active'));
+        btn.classList.add('pb-tool-btn--active');
+        engine.updateLastLayerTool(btn.dataset.tool as ToolType);
+      });
+    });
+
+    intensityRange.addEventListener('input', () => {
+      engine.setIntensity(parseInt(intensityRange.value));
+    });
+
+    undoBtn.addEventListener('click', () => {
+      engine.undo();
+      updateControls();
+    });
+
+    downloadBtn.addEventListener('click', () => {
+      const a = document.createElement('a');
+      a.download = `privacy_protected_${Date.now()}.webp`;
+      a.href = engine.getCanvasData();
+      a.click();
+    });
+
+    autoFaceBtn.addEventListener('click', async () => {
+      loader.classList.remove('pb-hidden');
+      try {
+        const found = await engine.detectFaces((text) => {
+          loaderText.textContent = text;
+        });
+        if (!found) alert(labels.noFacesDetected);
+        updateControls();
+      } finally {
+        loader.classList.add('pb-hidden');
+      }
+    });
+
+    canvas.addEventListener('mousedown', (e) => engine.startDragging(e.clientX, e.clientY));
+    window.addEventListener('mousemove', (e) => engine.updateDragging(e.clientX, e.clientY));
+    window.addEventListener('mouseup', () => {
+      if (engine.endDragging()) updateControls();
+    });
+
+    canvas.addEventListener('touchstart', (e) => {
+      e.preventDefault();
+      engine.startDragging(e.touches[0]!.clientX, e.touches[0]!.clientY);
+    }, { passive: false });
+    canvas.addEventListener('touchmove', (e) => {
+      e.preventDefault();
+      engine.updateDragging(e.touches[0]!.clientX, e.touches[0]!.clientY);
+    }, { passive: false });
+    canvas.addEventListener('touchend', () => {
+      if (engine.endDragging()) updateControls();
+    });
+
+    updateControls();
+  }
+
+  init();
+  document.addEventListener('astro:page-load', init);
+</script>

@@ -1,0 +1,17 @@
+---
+import { Bibliography as SharedBibliography } from '@jjlmoya/utils-shared';
+import { imageCompressor } from './index';
+import type { KnownLocale } from '../../types';
+
+interface Props {
+  locale?: KnownLocale;
+}
+
+const { locale = 'es' } = Astro.props;
+const content = await imageCompressor.i18n[locale]?.();
+if (!content || !content.bibliography || content.bibliography.length === 0) return null;
+
+const { bibliography, bibliographyTitle = 'Bibliografía' } = content;
+---
+
+<SharedBibliography title={bibliographyTitle} links={bibliography} />

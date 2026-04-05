@@ -1,0 +1,178 @@
+---
+import type { ChromaticLensUI } from './index';
+import './style.css';
+
+interface Props {
+  ui: ChromaticLensUI;
+}
+
+const { ui } = Astro.props;
+---
+
+<div class="cl-root" id="cl-root" data-ui={JSON.stringify(ui)}>
+  <div class="cl-card">
+
+    <div id="cl-empty" class="cl-drop">
+      <input type="file" id="cl-file" accept="image/*" class="cl-hidden" />
+      <div class="cl-drop-icon">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9c.83 0 1.5-.67 1.5-1.5 0-.39-.15-.74-.39-1.01-.23-.26-.38-.61-.38-.99 0-.83.67-1.5 1.5-1.5H16c2.76 0 5-2.24 5-5 0-4.42-4.03-8-9-8zm-5.5 9c-.83 0-1.5-.67-1.5-1.5S5.67 9 6.5 9 8 9.67 8 10.5 7.33 12 6.5 12zm3-4C8.67 8 8 7.33 8 6.5S8.67 5 9.5 5s1.5.67 1.5 1.5S10.33 8 9.5 8zm5 0c-.83 0-1.5-.67-1.5-1.5S13.67 5 14.5 5s1.5.67 1.5 1.5S15.33 8 14.5 8zm3 4c-.83 0-1.5-.67-1.5-1.5S16.67 9 17.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+        </svg>
+      </div>
+      <h3 class="cl-drop-title">{ui.dropTitle}</h3>
+      <p class="cl-drop-sub">{ui.dropSubtitle}</p>
+    </div>
+
+    <div id="cl-workspace" class="cl-workspace cl-hidden">
+      <div id="cl-mini-drop" class="cl-mini-drop">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M19.35 10.04A7.49 7.49 0 0 0 12 4C9.11 4 6.6 5.64 5.35 8.04A5.994 5.994 0 0 0 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/>
+        </svg>
+        <span>{ui.changeImage}</span>
+      </div>
+
+      <div class="cl-config-bar">
+        <div class="cl-config-item">
+          <span class="cl-config-label">{ui.colorCountLabel}</span>
+          <select id="cl-count" class="cl-count-select">
+            <option value="5">5</option>
+            <option value="8" selected>8</option>
+            <option value="12">12</option>
+            <option value="16">16</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="cl-result-layout">
+        <div class="cl-preview-col">
+          <img id="cl-preview" class="cl-preview-img" src="#" alt="" />
+        </div>
+
+        <div class="cl-palette-col">
+          <div class="cl-palette-header">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M3 3h4v4H3zm0 7h4v4H3zm0 7h4v4H3zm7-14h11v2H10zm0 7h11v2H10zm0 7h11v2H10z"/>
+            </svg>
+            <h4>{ui.paletteTitle}</h4>
+          </div>
+          <div id="cl-loader" class="cl-loader cl-hidden">
+            <div class="cl-spinner"></div>
+            <p class="cl-loader-text">{ui.processingLabel}</p>
+          </div>
+          <div id="cl-swatches" class="cl-swatches"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  import { extractPalette } from './logic';
+  import type { ColorSwatch } from './logic';
+  import type { ChromaticLensUI } from './index';
+
+  function init() {
+    const root = document.getElementById('cl-root');
+    if (!root) return;
+
+    const labels = JSON.parse(root.dataset.ui ?? '{}') as ChromaticLensUI;
+    const canvas = document.createElement('canvas');
+    const ctxRaw = canvas.getContext('2d', { willReadFrequently: true });
+    if (!ctxRaw) return;
+    const ctx = ctxRaw;
+
+    const fileInput = root.querySelector('#cl-file') as HTMLInputElement;
+    const emptyState = root.querySelector('#cl-empty') as HTMLElement;
+    const workspace = root.querySelector('#cl-workspace') as HTMLElement;
+    const miniDrop = root.querySelector('#cl-mini-drop') as HTMLElement;
+    const preview = root.querySelector('#cl-preview') as HTMLImageElement;
+    const countSelect = root.querySelector('#cl-count') as HTMLSelectElement;
+    const loader = root.querySelector('#cl-loader') as HTMLElement;
+    const swatches = root.querySelector('#cl-swatches') as HTMLElement;
+
+    let currentImageData: Uint8ClampedArray | null = null;
+    let isProcessing = false;
+
+    function renderPalette(palette: ColorSwatch[]) {
+      swatches.innerHTML = '';
+      palette.forEach((item) => {
+        const el = document.createElement('div');
+        el.className = 'cl-swatch';
+        el.innerHTML = `
+          <div class="cl-swatch-color" style="background-color:${item.hex}"></div>
+          <div class="cl-swatch-info">
+            <span class="cl-swatch-hex">${item.hex}</span>
+            <span class="cl-swatch-action">${labels.copyLabel}</span>
+          </div>
+        `;
+        el.addEventListener('click', () => {
+          navigator.clipboard.writeText(item.hex);
+          const action = el.querySelector('.cl-swatch-action') as HTMLElement;
+          const prev = action.textContent;
+          action.textContent = labels.copiedLabel;
+          el.classList.add('cl-swatch--copied');
+          setTimeout(() => {
+            action.textContent = prev;
+            el.classList.remove('cl-swatch--copied');
+          }, 2000);
+        });
+        swatches.appendChild(el);
+      });
+    }
+
+    function processPalette() {
+      if (!currentImageData || isProcessing) return;
+      isProcessing = true;
+      loader.classList.remove('cl-hidden');
+      swatches.classList.add('cl-hidden');
+      const count = parseInt(countSelect.value);
+      requestAnimationFrame(() => {
+        setTimeout(() => {
+          const palette = extractPalette(currentImageData!, count);
+          renderPalette(palette);
+          loader.classList.add('cl-hidden');
+          swatches.classList.remove('cl-hidden');
+          isProcessing = false;
+        }, 50);
+      });
+    }
+
+    function handleFile(file: File) {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        const img = new Image();
+        img.onload = () => {
+          canvas.width = img.naturalWidth;
+          canvas.height = img.naturalHeight;
+          ctx.drawImage(img, 0, 0);
+          currentImageData = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+          preview.src = img.src;
+          emptyState.classList.add('cl-hidden');
+          workspace.classList.remove('cl-hidden');
+          processPalette();
+        };
+        img.src = e.target?.result as string;
+      };
+      reader.readAsDataURL(file);
+    }
+
+    emptyState.addEventListener('click', () => fileInput.click());
+    miniDrop.addEventListener('click', () => fileInput.click());
+    fileInput.addEventListener('change', () => {
+      if (fileInput.files?.[0]) handleFile(fileInput.files[0]);
+    });
+    countSelect.addEventListener('change', processPalette);
+
+    root.addEventListener('dragover', (e) => { e.preventDefault(); emptyState.classList.add('cl-drop--active'); });
+    root.addEventListener('dragleave', () => emptyState.classList.remove('cl-drop--active'));
+    root.addEventListener('drop', (e) => {
+      e.preventDefault();
+      emptyState.classList.remove('cl-drop--active');
+      if (e.dataTransfer?.files[0]) handleFile(e.dataTransfer.files[0]);
+    });
+  }
+
+  init();
+  document.addEventListener('astro:page-load', init);
+</script>

@@ -1,0 +1,190 @@
+---
+import type { SubtitleSyncUI } from './index';
+import './style.css';
+
+interface Props {
+  ui: SubtitleSyncUI;
+}
+
+const { ui } = Astro.props;
+---
+
+<div class="ss-root" id="ss-root" data-ui={JSON.stringify(ui)}>
+  <div class="ss-card">
+
+    <div id="ss-drop" class="ss-drop">
+      <input type="file" id="ss-file" accept=".srt,.vtt" class="ss-hidden" />
+      <div class="ss-drop-icon">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M17 6h-1V3H8v3H7c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-5 2c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm5 12H7V8h10v12zm-1-8h-2v4h2v-4zm-4 0H8v4h2v-4z"/>
+        </svg>
+      </div>
+      <h3 class="ss-drop-title">{ui.dropTitle}</h3>
+      <p class="ss-drop-sub">{ui.dropSubtitle}</p>
+    </div>
+
+    <div id="ss-controls" class="ss-controls ss-hidden">
+      <div class="ss-control-group">
+        <span class="ss-control-label">{ui.offsetLabel}</span>
+        <div class="ss-offset-wrap">
+          <button id="ss-dec" class="ss-offset-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M19 13H5v-2h14v2z"/>
+            </svg>
+          </button>
+          <input type="number" id="ss-offset" value="0.0" step="0.1" class="ss-offset-input" />
+          <button id="ss-inc" class="ss-offset-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+            </svg>
+          </button>
+        </div>
+
+        <div class="ss-stats">
+          <div class="ss-stat">
+            <span class="ss-stat-value" id="ss-count">0</span>
+            <span class="ss-stat-label">{ui.linesStat}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ss-status-card">
+        <div class="ss-file-row">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="ss-file-icon">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zM16 18H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L19.5 9H13z"/>
+          </svg>
+          <div class="ss-file-info">
+            <span class="ss-file-name" id="ss-name">subtítulos.srt</span>
+            <div class="ss-file-times">
+              <span id="ss-first">00:00:00</span> — <span id="ss-last">00:00:00</span>
+            </div>
+          </div>
+        </div>
+
+        <button id="ss-download" class="ss-btn-primary">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zM14 20H6v-2h8v2zm0-4H6v-2h8v2zm0-4H6V8h8v4z"/>
+          </svg>
+          <span>{ui.downloadButton}</span>
+        </button>
+      </div>
+
+      <div class="ss-previews">
+        <div class="ss-preview-box">
+          <h5 class="ss-preview-label">{ui.originalLabel}</h5>
+          <div id="ss-preview-orig" class="ss-preview-scroll"></div>
+        </div>
+        <div class="ss-preview-box">
+          <h5 class="ss-preview-label ss-preview-label--modified">{ui.resultLabel}</h5>
+          <div id="ss-preview-mod" class="ss-preview-scroll"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  import { parseSRT, shiftSubtitles, generateSRT, msToTime } from './logic';
+  import type { SrtItem } from './logic';
+  import type { SubtitleSyncUI } from './index';
+
+  function escapeHtml(text: string): string {
+    const map: { [key: string]: string } = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' };
+    return text.replace(/[&<>"']/g, (m) => map[m]);
+  }
+
+  function init() {
+    const root = document.getElementById('ss-root');
+    if (!root) return;
+
+    const ui = JSON.parse(root.dataset.ui ?? '{}') as SubtitleSyncUI;
+    const dropZone = root.querySelector('#ss-drop') as HTMLElement;
+    const fileInput = root.querySelector('#ss-file') as HTMLInputElement;
+    const controls = root.querySelector('#ss-controls') as HTMLElement;
+    const offsetInput = root.querySelector('#ss-offset') as HTMLInputElement;
+    const decBtn = root.querySelector('#ss-dec') as HTMLButtonElement;
+    const incBtn = root.querySelector('#ss-inc') as HTMLButtonElement;
+    const countEl = root.querySelector('#ss-count') as HTMLElement;
+    const fileName = root.querySelector('#ss-name') as HTMLElement;
+    const firstTime = root.querySelector('#ss-first') as HTMLElement;
+    const lastTime = root.querySelector('#ss-last') as HTMLElement;
+    const downloadBtn = root.querySelector('#ss-download') as HTMLButtonElement;
+    const previewOrig = root.querySelector('#ss-preview-orig') as HTMLElement;
+    const previewMod = root.querySelector('#ss-preview-mod') as HTMLElement;
+
+    let originalItems: SrtItem[] = [];
+    let currentFileName = 'subtitles.srt';
+
+    function renderPreview(container: HTMLElement, items: SrtItem[]) {
+      container.innerHTML = '';
+      items.slice(0, 5).forEach((item) => {
+        const div = document.createElement('div');
+        div.className = 'ss-preview-item';
+        div.innerHTML = `
+          <p class="ss-preview-time">${msToTime(item.start)} → ${msToTime(item.end)}</p>
+          <p class="ss-preview-text">${escapeHtml(item.text)}</p>
+        `;
+        container.appendChild(div);
+      });
+    }
+
+    function updateUI() {
+      const offset = (parseFloat(offsetInput.value) || 0) * 1000;
+      const modified = shiftSubtitles(originalItems, offset);
+      countEl.textContent = modified.length.toString();
+      if (modified.length > 0) {
+        firstTime.textContent = msToTime(modified[0].start);
+        lastTime.textContent = msToTime(modified[modified.length - 1].end);
+      }
+      renderPreview(previewOrig, originalItems);
+      renderPreview(previewMod, modified);
+      downloadBtn.onclick = () => {
+        const content = generateSRT(modified);
+        const blob = new Blob([content], { type: 'text/srt' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        const parts = currentFileName.split('.');
+        a.download = parts.length > 1 ? `${parts.slice(0, -1).join('.')}_fixed.${parts[parts.length - 1]}` : `${currentFileName}_fixed.srt`;
+        a.click();
+        URL.revokeObjectURL(url);
+      };
+    }
+
+    function handleFile(file: File) {
+      currentFileName = file.name;
+      fileName.textContent = file.name;
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        const text = e.target?.result;
+        if (typeof text === 'string') {
+          originalItems = parseSRT(text);
+          if (originalItems.length > 0) {
+            controls.classList.remove('ss-hidden');
+            dropZone.classList.add('ss-hidden');
+            updateUI();
+          }
+        }
+      };
+      reader.readAsText(file);
+    }
+
+    dropZone.addEventListener('click', () => fileInput.click());
+    fileInput.addEventListener('change', () => { if (fileInput.files?.[0]) handleFile(fileInput.files[0]); });
+    decBtn.addEventListener('click', () => { offsetInput.value = (parseFloat(offsetInput.value) - 0.1).toFixed(1); updateUI(); });
+    incBtn.addEventListener('click', () => { offsetInput.value = (parseFloat(offsetInput.value) + 0.1).toFixed(1); updateUI(); });
+    offsetInput.addEventListener('input', updateUI);
+
+    dropZone.addEventListener('dragover', (e) => { e.preventDefault(); dropZone.classList.add('ss-drop--active'); });
+    dropZone.addEventListener('dragleave', () => dropZone.classList.remove('ss-drop--active'));
+    dropZone.addEventListener('drop', (e) => {
+      e.preventDefault();
+      dropZone.classList.remove('ss-drop--active');
+      if (e.dataTransfer?.files[0]) handleFile(e.dataTransfer.files[0]);
+    });
+  }
+
+  init();
+  document.addEventListener('astro:page-load', init);
+</script>

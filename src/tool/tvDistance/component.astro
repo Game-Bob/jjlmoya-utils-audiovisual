@@ -1,0 +1,178 @@
+---
+import type { TvDistanceUI } from './index';
+import './style.css';
+
+interface Props {
+  ui: TvDistanceUI;
+}
+
+const { ui } = Astro.props;
+---
+
+<div class="tvd-root" id="tv-distance-root" data-ui={JSON.stringify(ui)}>
+  <div class="tvd-card">
+
+    <div class="tvd-body">
+
+      <div class="tvd-left">
+
+        <div class="tvd-specs-block">
+          <h3 class="tvd-specs-title">
+            <svg viewBox="0 0 24 24" class="tvd-tv-icon" aria-hidden="true">
+              <path d="M8.16 3L6.75 4.41L9.34 7H4c-1.11 0-2 .89-2 2v10c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V9c0-1.11-.89-2-2-2h-5.34l2.59-2.59L15.84 3L12 6.84zM4 9h13v10H4zm15.5 0a1 1 0 0 1 1 1a1 1 0 0 1-1 1a1 1 0 0 1-1-1a1 1 0 0 1 1-1m0 3a1 1 0 0 1 1 1a1 1 0 0 1-1 1a1 1 0 0 1-1-1a1 1 0 0 1 1-1"/>
+            </svg>
+            {ui.specTitle}
+          </h3>
+
+          <div class="tvd-field">
+            <div class="tvd-field-row">
+              <span class="tvd-label">{ui.diagonalLabel}</span>
+              <span id="tvd-diagonal-display" class="tvd-diagonal-val">55"</span>
+            </div>
+            <input type="range" id="tvd-diagonal" min="32" max="100" value="55" class="tvd-slider" />
+          </div>
+
+          <div class="tvd-field">
+            <span class="tvd-label">{ui.resolutionLabel}</span>
+            <div class="tvd-res-grid">
+              <button class="tvd-res-btn" data-res="1080p">1080p</button>
+              <button class="tvd-res-btn tvd-res-btn--active" data-res="4k">4K</button>
+              <button class="tvd-res-btn" data-res="8k">8K</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="tvd-thx-block">
+          <div class="tvd-thx-header">
+            <svg viewBox="0 0 24 24" class="tvd-thx-icon" aria-hidden="true">
+              <path d="M11 9h2V7h-2m1 13c-4.41 0-8-3.59-8-8s3.59-8 8-8s8 3.59 8 8s-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2m-1 15h2v-6h-2z"/>
+            </svg>
+            <span class="tvd-thx-title">{ui.thxRecommendation}</span>
+          </div>
+          <p class="tvd-thx-desc">{ui.thxDescription}</p>
+        </div>
+
+      </div>
+
+      <div class="tvd-right">
+
+        <div class="tvd-sim-badge">
+          <span class="tvd-sim-dot"></span>
+          <span class="tvd-sim-badge-text">{ui.simulationBadge}</span>
+        </div>
+
+        <div class="tvd-sim-area">
+
+          <div id="tvd-tv-visual" class="tvd-tv-visual">
+            <div class="tvd-tv-screen">
+              <div class="tvd-screen-gradient"></div>
+              <svg viewBox="0 0 24 24" class="tvd-screen-ghost" aria-hidden="true">
+                <path d="M21 3H3c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h5v2h8v-2h5a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2m0 14H3V5h18m-5 6l-7 4V7"/>
+              </svg>
+              <div class="tvd-screen-inset"></div>
+            </div>
+            <div class="tvd-stand-neck"></div>
+            <div class="tvd-stand-base"></div>
+            <div class="tvd-tv-tooltip">
+              <span id="tvd-width-display">—</span> {ui.tvWidthLabel}
+            </div>
+          </div>
+
+          <div id="tvd-line" class="tvd-distance-line">
+            <div class="tvd-line-dashed"></div>
+          </div>
+
+          <div class="tvd-person">
+            <div class="tvd-person-inner">
+              <div class="tvd-person-head"></div>
+              <div class="tvd-person-body"></div>
+            </div>
+            <div class="tvd-location-card">
+              <span class="tvd-location-label">{ui.userLocationLabel}</span>
+              <span id="tvd-distance-display" class="tvd-location-val">—</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="tvd-stats">
+          <div class="tvd-stat">
+            <span class="tvd-stat-label">{ui.minLimitLabel}</span>
+            <span id="tvd-min" class="tvd-stat-val">—</span>
+          </div>
+          <div class="tvd-stat tvd-stat--opt">
+            <span class="tvd-stat-label">{ui.optimalLimitLabel}</span>
+            <span id="tvd-opt" class="tvd-stat-val">—</span>
+          </div>
+          <div class="tvd-stat">
+            <span class="tvd-stat-label">{ui.maxLimitLabel}</span>
+            <span id="tvd-max" class="tvd-stat-val">—</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<script>
+  import { calculateViewingDistance, getDimensionsFromDiagonal } from './logic';
+  import type { TVSpecs } from './logic';
+  import type { TvDistanceUI } from './index';
+
+  function init() {
+    const root = document.getElementById('tv-distance-root');
+    if (!root) return;
+
+    const labels = JSON.parse(root.dataset.ui ?? '{}') as TvDistanceUI;
+
+    const diagonalInput = root.querySelector('#tvd-diagonal') as HTMLInputElement;
+    const diagonalDisplay = root.querySelector('#tvd-diagonal-display') as HTMLElement;
+    const resBtns = root.querySelectorAll('.tvd-res-btn') as NodeListOf<HTMLButtonElement>;
+    const tvVisual = root.querySelector('#tvd-tv-visual') as HTMLElement;
+    const widthDisplay = root.querySelector('#tvd-width-display') as HTMLElement;
+    const lineEl = root.querySelector('#tvd-line') as HTMLElement;
+    const distanceDisplay = root.querySelector('#tvd-distance-display') as HTMLElement;
+    const minEl = root.querySelector('#tvd-min') as HTMLElement;
+    const optEl = root.querySelector('#tvd-opt') as HTMLElement;
+    const maxEl = root.querySelector('#tvd-max') as HTMLElement;
+
+    let currentRes: TVSpecs['resolution'] = '4k';
+
+    function update() {
+      const diagonal = parseInt(diagonalInput.value);
+      diagonalDisplay.textContent = `${diagonal}"`;
+
+      const specs: TVSpecs = { diagonalInches: diagonal, resolution: currentRes, aspectRatio: 16 / 9 };
+      const dist = calculateViewingDistance(specs);
+      const dims = getDimensionsFromDiagonal(diagonal);
+
+      minEl.textContent = `${dist.min.toFixed(2)}${labels.unitMeters}`;
+      optEl.textContent = `${dist.optimal.toFixed(2)}${labels.unitMeters}`;
+      maxEl.textContent = `${dist.max.toFixed(2)}${labels.unitMeters}`;
+      distanceDisplay.textContent = `${dist.optimal.toFixed(2)}${labels.unitMeters}`;
+      widthDisplay.textContent = String(Math.round(dims.width));
+
+      const scale = 1.8;
+      tvVisual.style.width = `${Math.round(dims.width * scale)}px`;
+
+      const lineH = Math.max(60, dist.optimal * 80);
+      lineEl.style.height = `${lineH}px`;
+
+      resBtns.forEach(b => b.classList.toggle('tvd-res-btn--active', b.dataset.res === currentRes));
+    }
+
+    diagonalInput.addEventListener('input', update);
+    resBtns.forEach(b => b.addEventListener('click', () => {
+      currentRes = b.dataset.res as TVSpecs['resolution'];
+      update();
+    }));
+
+    update();
+  }
+
+  init();
+  document.addEventListener('astro:page-load', init);
+</script>

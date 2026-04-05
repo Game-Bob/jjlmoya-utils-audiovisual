@@ -1,5 +1,4 @@
 ---
-import { Icon } from 'astro-icon/components';
 import type { ExifCleanerUI } from './index';
 import './style.css';
 
@@ -10,78 +9,154 @@ interface Props {
 const { ui } = Astro.props;
 ---
 
-<section class="tool-section" id="exif-cleaner-root" data-ui={JSON.stringify(ui)}>
-    <div
-        class="exif-cleaner-card"
-        id="drop-zone"
-    >
-        <div class="glow-circle glow-top"></div>
-        <div class="glow-circle glow-bottom"></div>
+<div class="ec-root" id="ec-root" data-ui={JSON.stringify(ui)}>
+  <div class="ec-card">
 
-        <div id="initial-state" class="state-container">
-            <div class="icon-wrapper">
-                <Icon name="mdi:file-image-outline" style="width: 4rem; height: 4rem; color: var(--accent)" />
-            </div>
+    <div id="ec-initial" class="ec-drop">
+      <input type="file" id="ec-file" accept="image/jpeg,image/png,image/webp" class="ec-hidden" />
+      <div class="ec-drop-icon">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M19.35 10.04A7.49 7.49 0 0 0 12 4C9.11 4 6.6 5.64 5.35 8.04A5.994 5.994 0 0 0 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zm-4.35 3.96h-3v3H9v-3H6v-2h3V8h2v3h3v2z"/>
+        </svg>
+      </div>
+      <h3 class="ec-title">{ui.dropTitle}</h3>
+      <p class="ec-subtitle">{ui.dropSubtitle}</p>
 
-            <h2 class="tool-title">
-                {ui.dropTitle}
-            </h2>
-            <p class="tool-description">
-                {ui.dropSubtitle}
-                <span class="local-info">
-                    {ui.dropLocalInfo}
-                </span>
-            </p>
-
-            <label for="file-upload" class="btn-primary">
-                <Icon name="mdi:upload" style="width: 1.25rem; height: 1.25rem" />
-                {ui.selectButton}
-            </label>
-            <input id="file-upload" type="file" accept="image/*" class="hidden" />
+      <div class="ec-badges">
+        <div class="ec-badge">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="color:#10b981">
+            <path d="M12 1C6.48 1 2 5.48 2 11s4.48 10 10 10 10-4.48 10-10S17.52 1 12 1zm-2 15l-5-5 1.41-1.41L10 13.17l7.59-7.59L19 7l-9 9z"/>
+          </svg>
+          <span>{ui.privacySecureLabel}</span>
         </div>
-
-        <div id="processing-state" class="hidden processing-overlay">
-            <div class="spinner"></div>
-            <p class="tool-title" style="font-size: 1.25rem">
-                {ui.processingText}
-            </p>
+        <div class="ec-badge">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="color:#f59e0b">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/>
+          </svg>
+          <span>{ui.offlineLabel}</span>
         </div>
-
-        <div id="result-state" class="hidden result-container opacity-0">
-            <div class="preview-column">
-                <img id="result-preview" class="image-preview" alt={ui.previewLabel} />
-            </div>
-
-            <div class="info-column">
-                <div class="status-header">
-                    <div class="status-indicator"></div>
-                    <h3 class="status-title">
-                        {ui.analysisCompleted}
-                    </h3>
-                </div>
-
-                <div 
-                    id="metadata-list" 
-                    class="metadata-log" 
-                    data-privacy-title={ui.privacyRiskTitle}
-                ></div>
-
-                <button id="download-btn" class="btn-base btn-download">
-                    <Icon name="mdi:download" style="width: 1.5rem; height: 1.5rem" />
-                    <span>{ui.downloadButton}</span>
-                </button>
-
-                <button id="reset-button" class="reset-button">
-                    <Icon name="mdi:refresh" style="width: 1rem; height: 1rem" />
-                    {ui.resetButton}
-                </button>
-            </div>
-        </div>
+      </div>
     </div>
-</section>
+
+    <div id="ec-processing" class="ec-processing ec-hidden">
+      <div class="ec-spinner"></div>
+      <p class="ec-processing-text">{ui.processingText}</p>
+    </div>
+
+    <div id="ec-result" class="ec-result ec-hidden">
+      <div class="ec-result-layout">
+        <div class="ec-preview-col">
+          <img id="ec-preview" class="ec-preview-img" src="#" alt="" />
+          <div id="ec-metadata" class="ec-metadata"></div>
+        </div>
+
+        <div class="ec-actions-col">
+          <button id="ec-download" class="ec-btn ec-btn--primary">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+            </svg>
+            <span>{ui.downloadButton}</span>
+          </button>
+          <button id="ec-reset" class="ec-btn ec-btn--secondary">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M7 7h10v3l4-4-4-4v3H5v6h2V7zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2v4z"/>
+            </svg>
+            <span>{ui.resetButton}</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
 
 <script>
-    import { initExifCleaner } from './ui';
-    initExifCleaner();
-    document.addEventListener('astro:page-load', initExifCleaner);
+  import { extractExif, createCleanImage } from './logic';
+  import type { ExifCleanerUI } from './index';
+
+  function renderMetadata(tags: Record<string, string | number | boolean | undefined>, container: HTMLElement, riskTitle: string) {
+    const keys = Object.keys(tags);
+    if (keys.length === 0) {
+      container.innerHTML = '<div class="ec-no-metadata">No se encontraron metadatos.</div>';
+      return;
+    }
+    let html = `<div class="ec-metadata-title">${riskTitle}</div><ul class="ec-metadata-list">`;
+    if (tags.GPSLocation) html += `<li><span>GPS:</span> <span>${tags.GPSLocation}</span></li>`;
+    if (tags.Model) html += `<li><span>CÁMARA:</span> <span>${tags.Model}</span></li>`;
+    if (tags.DateTimeOriginal) html += `<li><span>FECHA:</span> <span>${tags.DateTimeOriginal}</span></li>`;
+    container.innerHTML = html + '</ul>';
+  }
+
+  function init() {
+    const root = document.getElementById('ec-root');
+    if (!root) return;
+
+    const ui = JSON.parse(root.dataset.ui ?? '{}') as ExifCleanerUI;
+    const initial = root.querySelector('#ec-initial') as HTMLElement;
+    const processing = root.querySelector('#ec-processing') as HTMLElement;
+    const result = root.querySelector('#ec-result') as HTMLElement;
+    const fileInput = root.querySelector('#ec-file') as HTMLInputElement;
+    const preview = root.querySelector('#ec-preview') as HTMLImageElement;
+    const metadata = root.querySelector('#ec-metadata') as HTMLElement;
+    const downloadBtn = root.querySelector('#ec-download') as HTMLButtonElement;
+    const resetBtn = root.querySelector('#ec-reset') as HTMLButtonElement;
+
+    async function processFile(file: File) {
+      processing.classList.remove('ec-hidden');
+      initial.classList.add('ec-hidden');
+
+      const reader = new FileReader();
+      reader.onload = async (e) => {
+        const exifData = await extractExif(file);
+        const img = new Image();
+        img.onload = async () => {
+          preview.src = img.src;
+          renderMetadata(exifData, metadata, ui.privacyRiskTitle);
+          const blob = await createCleanImage(img);
+
+          downloadBtn.onclick = () => {
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `CLEAN_${file.name.split('.')[0]}.webp`;
+            a.click();
+            setTimeout(() => URL.revokeObjectURL(url), 100);
+          };
+
+          processing.classList.add('ec-hidden');
+          result.classList.remove('ec-hidden');
+        };
+        img.src = e.target?.result as string;
+      };
+      reader.readAsDataURL(file);
+    }
+
+    root.addEventListener('click', (e) => {
+      const target = e.target as HTMLElement;
+      if (!target.closest('button') && result.classList.contains('ec-hidden')) {
+        fileInput.click();
+      }
+    });
+
+    root.addEventListener('dragover', (e) => { e.preventDefault(); root.classList.add('ec-drop--active'); });
+    root.addEventListener('dragleave', () => root.classList.remove('ec-drop--active'));
+    root.addEventListener('drop', (e) => {
+      e.preventDefault();
+      root.classList.remove('ec-drop--active');
+      if (e.dataTransfer?.files[0]) processFile(e.dataTransfer.files[0]);
+    });
+
+    fileInput.addEventListener('change', () => {
+      if (fileInput.files?.[0]) processFile(fileInput.files[0]);
+    });
+
+    resetBtn.addEventListener('click', () => {
+      result.classList.add('ec-hidden');
+      initial.classList.remove('ec-hidden');
+      fileInput.value = '';
+    });
+  }
+
+  init();
+  document.addEventListener('astro:page-load', init);
 </script>

@@ -1,0 +1,268 @@
+---
+import './style.css';
+---
+
+<div class="ic-dashboard" id="image-compressor-root">
+
+  <!-- Global Settings -->
+  <div class="ic-global-settings">
+    <div class="ic-toggle-group">
+      <label class="ic-webp-switch">
+        <input type="checkbox" id="global-webp-toggle" checked />
+        <span class="ic-webp-slider"></span>
+      </label>
+      <span class="ic-toggle-label">Convertir a WebP</span>
+    </div>
+    <div class="ic-settings-group">
+      <label for="global-quality">Compresión: <span id="global-q-val">80</span>%</label>
+      <input type="range" id="global-quality" min="10" max="100" value="80" class="ic-mini-slider" />
+    </div>
+  </div>
+
+  <!-- Drop Zone -->
+  <div id="drop-zone" class="ic-drop-zone">
+    <label for="image-input" class="ic-file-label">
+      <span class="ic-upload-icon">
+        <svg viewBox="0 0 24 24" fill="none" width="48" height="48" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1M16 8l-4-4-4 4M12 4v12" />
+        </svg>
+      </span>
+      <span class="ic-upload-text">Suelta tus imágenes aquí</span>
+      <span class="ic-upload-subtext">Soporta múltiples archivos a la vez</span>
+      <span class="ic-upload-btn">Explorar archivos</span>
+    </label>
+    <input type="file" id="image-input" accept="image/jpeg,image/png,image/webp" multiple />
+  </div>
+
+  <!-- File List -->
+  <div id="file-list-container" class="ic-file-list-container" style="display:none">
+    <div class="ic-list-header">
+      <h3>Archivos Procesados</h3>
+      <span id="total-savings" class="ic-total-savings"></span>
+    </div>
+    <ul id="file-list" class="ic-file-list"></ul>
+    <div class="ic-global-actions">
+      <button id="download-all" class="ic-primary-btn">Descargar Todas</button>
+    </div>
+  </div>
+
+</div>
+
+<!-- Template for file items -->
+<template id="file-item-template">
+  <li class="ic-file-item">
+    <div class="ic-preview-col">
+      <div class="ic-preview-wrapper">
+        <img class="ic-preview-img" alt="Preview" />
+      </div>
+      <div class="ic-file-info">
+        <span class="ic-filename"></span>
+        <span class="ic-orig-size"></span>
+      </div>
+    </div>
+
+    <div class="ic-arrow-col">
+      <div class="ic-arrow-circle">
+        <svg viewBox="0 0 24 24" fill="none" width="20" height="20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M14 5l7 7-7 7M3 12h18" />
+        </svg>
+      </div>
+    </div>
+
+    <div class="ic-result-col">
+      <div class="ic-savings-pill">
+        <span class="ic-new-size"></span>
+        <span class="ic-savings-pct"></span>
+      </div>
+      <div class="ic-item-actions">
+        <button class="ic-icon-btn ic-edit-btn" title="Ajustar esta imagen">
+          <svg viewBox="0 0 24 24" fill="none" width="18" height="18" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.6 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.6a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+        </button>
+        <a class="ic-icon-btn ic-download-btn" title="Descargar" download>
+          <svg viewBox="0 0 24 24" fill="none" width="18" height="18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1M12 4v12M8 12l4 4 4-4"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="ic-inline-editor" style="display:none">
+      <div class="ic-editor-controls">
+        <div class="ic-editor-group">
+          <label>Calidad: <span class="ic-local-q-val">80</span>%</label>
+          <input type="range" class="ic-local-quality" min="10" max="100" value="80" />
+        </div>
+        <div class="ic-editor-group">
+          <label>Ancho máx. (px):</label>
+          <input type="number" class="ic-local-width" placeholder="Original" />
+        </div>
+      </div>
+      <button class="ic-editor-close">Cerrar</button>
+    </div>
+  </li>
+</template>
+
+<script>
+  import { compressImage, formatBytes, generateId, type CompressorSettings } from './logic';
+
+  interface QueueItem {
+    id: string;
+    file: File;
+    originalSize: number;
+    settings: CompressorSettings;
+    dataUrl: string;
+    newSize: number;
+    ext: string;
+  }
+
+  const queue = new Map<string, QueueItem>();
+  let totalOriginalSize = 0;
+  let totalCompressedSize = 0;
+
+  const dropZone       = document.getElementById('drop-zone') as HTMLElement;
+  const fileInput      = document.getElementById('image-input') as HTMLInputElement;
+  const container      = document.getElementById('file-list-container') as HTMLElement;
+  const fileList       = document.getElementById('file-list') as HTMLUListElement;
+  const totalSavingsTxt= document.getElementById('total-savings') as HTMLElement;
+  const downloadAllBtn = document.getElementById('download-all') as HTMLButtonElement;
+  const template       = document.getElementById('file-item-template') as HTMLTemplateElement;
+  const globalQuality  = document.getElementById('global-quality') as HTMLInputElement;
+  const globalQVal     = document.getElementById('global-q-val') as HTMLElement;
+  const globalWebp     = document.getElementById('global-webp-toggle') as HTMLInputElement;
+
+  globalQuality?.addEventListener('input', () => {
+    globalQVal.textContent = globalQuality.value;
+  });
+
+  async function handleFiles(files: FileList | File[]) {
+    if (!files.length) return;
+    container.style.display = '';
+
+    for (let i = 0; i < files.length; i++) {
+      const file = files[i];
+      if (!file || !file.type.startsWith('image/')) continue;
+
+      const id = generateId();
+      const settings: CompressorSettings = {
+        quality: parseInt(globalQuality.value),
+        width: null,
+        convertToWebp: globalWebp?.checked ?? true,
+      };
+      const item: QueueItem = { id, file, originalSize: file.size, settings, dataUrl: '', newSize: 0, ext: 'webp' };
+      queue.set(id, item);
+      totalOriginalSize += file.size;
+
+      appendItem(item);
+      await processItem(item);
+      updateTotals();
+    }
+  }
+
+  function appendItem(item: QueueItem) {
+    const clone = template.content.cloneNode(true) as DocumentFragment;
+    const li = clone.querySelector('li') as HTMLLIElement;
+    li.dataset.id = item.id;
+
+    (li.querySelector('.ic-filename') as HTMLElement).textContent = item.file.name;
+    (li.querySelector('.ic-orig-size') as HTMLElement).textContent = formatBytes(item.originalSize);
+
+    const localQ    = li.querySelector('.ic-local-quality') as HTMLInputElement;
+    const localQVal = li.querySelector('.ic-local-q-val') as HTMLElement;
+    const localW    = li.querySelector('.ic-local-width') as HTMLInputElement;
+    const editor    = li.querySelector('.ic-inline-editor') as HTMLElement;
+    const editBtn   = li.querySelector('.ic-edit-btn') as HTMLButtonElement;
+    const closeBtn  = li.querySelector('.ic-editor-close') as HTMLButtonElement;
+
+    localQ.value = item.settings.quality.toString();
+    localQVal.textContent = item.settings.quality.toString();
+
+    editBtn.addEventListener('click', () => {
+      editor.style.display = editor.style.display === 'none' ? '' : 'none';
+    });
+    closeBtn.addEventListener('click', () => { editor.style.display = 'none'; });
+
+    localQ.addEventListener('input', () => { localQVal.textContent = localQ.value; });
+    localQ.addEventListener('change', () => {
+      item.settings.quality = parseInt(localQ.value);
+      processItem(item).then(() => updateTotals());
+    });
+    localW.addEventListener('change', () => {
+      item.settings.width = localW.value ? parseInt(localW.value) : null;
+      processItem(item).then(() => updateTotals());
+    });
+
+    fileList.appendChild(li);
+  }
+
+  async function processItem(item: QueueItem): Promise<void> {
+    const li = fileList.querySelector(`li[data-id="${item.id}"]`) as HTMLLIElement;
+    const result = await compressImage(item.file, item.settings);
+
+    item.dataUrl = result.dataUrl;
+    item.newSize = result.newSize;
+
+    const format = item.settings.convertToWebp ? 'image/webp' : item.file.type;
+    item.ext = format.split('/')[1] ?? 'jpeg';
+
+    if (!li) return;
+
+    const previewImg  = li.querySelector('.ic-preview-img') as HTMLImageElement;
+    const newSizeTxt  = li.querySelector('.ic-new-size') as HTMLElement;
+    const savingsPct  = li.querySelector('.ic-savings-pct') as HTMLElement;
+    const pill        = li.querySelector('.ic-savings-pill') as HTMLElement;
+    const downloadBtn = li.querySelector('.ic-download-btn') as HTMLAnchorElement;
+
+    previewImg.src = result.dataUrl;
+
+    newSizeTxt.textContent = formatBytes(result.newSize);
+    const savings = ((item.originalSize - result.newSize) / item.originalSize) * 100;
+
+    if (savings < 0) {
+      savingsPct.textContent = `+${Math.abs(savings).toFixed(1)}%`;
+      pill.classList.add('ic-savings-pill--negative');
+    } else {
+      savingsPct.textContent = `-${savings.toFixed(1)}%`;
+      pill.classList.remove('ic-savings-pill--negative');
+    }
+
+    const baseName = item.file.name.replace(/\.[^/.]+$/, '');
+    downloadBtn.href = result.dataUrl;
+    downloadBtn.download = `${baseName}.${item.ext}`;
+  }
+
+  function updateTotals() {
+    totalCompressedSize = Array.from(queue.values()).reduce((sum, i) => sum + i.newSize, 0);
+    const saved = totalOriginalSize - totalCompressedSize;
+    if (saved > 0) {
+      totalSavingsTxt.textContent = `Ahorro total: ${formatBytes(saved)}`;
+      totalSavingsTxt.style.color = '#10b981';
+    } else {
+      totalSavingsTxt.textContent = 'Sin ahorro neto';
+      totalSavingsTxt.style.color = '#ef4444';
+    }
+  }
+
+  // Drag & drop
+  dropZone.addEventListener('dragover', (e) => { e.preventDefault(); dropZone.classList.add('ic-dragover'); });
+  dropZone.addEventListener('dragleave', () => { dropZone.classList.remove('ic-dragover'); });
+  dropZone.addEventListener('drop', (e) => {
+    e.preventDefault();
+    dropZone.classList.remove('ic-dragover');
+    if (e.dataTransfer?.files.length) handleFiles(e.dataTransfer.files);
+  });
+  fileInput.addEventListener('change', () => {
+    if (fileInput.files?.length) handleFiles(fileInput.files);
+  });
+
+  // Download all
+  downloadAllBtn.addEventListener('click', () => {
+    queue.forEach((item) => {
+      if (!item.dataUrl) return;
+      const a = document.createElement('a');
+      a.href = item.dataUrl;
+      const baseName = item.file.name.replace(/\.[^/.]+$/, '');
+      a.download = `${baseName}.${item.ext}`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    });
+  });
+</script>
