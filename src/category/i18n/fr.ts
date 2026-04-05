@@ -30,17 +30,17 @@ export const content: CategoryLocaleContent = {
         {
           value: '12+',
           label: 'Outils spécialisés',
-          icon: 'cog'
+          icon: 'mdi:cog'
         },
         {
           value: '100%',
           label: 'Calculs précis',
-          icon: 'chart'
+          icon: 'mdi:chart-line'
         },
         {
           value: '0%',
           label: 'Données stockées sur serveur',
-          icon: 'shield'
+          icon: 'mdi:shield-check'
         }
       ],
       columns: 3
@@ -56,7 +56,7 @@ export const content: CategoryLocaleContent = {
         {
           title: 'Timelapse et Cinématographie',
           description: 'Calculez les intervalles, la durée totale et les fréquences d\'images pour vos prises de vue cinématographiques.',
-          icon: 'film',
+          icon: 'mdi:film',
           points: [
             'Calcul des images nécessaires',
             'Durée en secondes/minutes',
@@ -66,7 +66,7 @@ export const content: CategoryLocaleContent = {
         {
           title: 'Confidentialité et Métadonnées',
           description: 'Protégez votre vie privée en supprimant les données EXIF et les métadonnées sensibles de vos fichiers.',
-          icon: 'lock',
+          icon: 'mdi:lock',
           points: [
             'Analyse des données EXIF',
             'Nettoyage des métadonnées de localisation',
@@ -76,7 +76,7 @@ export const content: CategoryLocaleContent = {
         {
           title: 'Édition de Sous-titres',
           description: 'Synchronisez, ajustez et éditez les sous-titres avec une précision à la milliseconde.',
-          icon: 'text',
+          icon: 'mdi:text',
           points: [
             'Synchronisation en temps réel',
             'Édition des temps d\'entrée/sortie',
@@ -179,7 +179,7 @@ export const content: CategoryLocaleContent = {
       type: 'diagnostic',
       variant: 'info',
       title: 'Comment Choisir le Bon Outil',
-      icon: 'help',
+      icon: 'mdi:help-circle',
       badge: 'Guide de Sélection',
       html: '<strong>Créer un timelapse ?</strong> -> Utilisez la calculatrice de timelapse.<br><strong>Besoin de protéger votre confidentialité ?</strong> -> Outil de nettoyage des métadonnées.<br><strong>Travailler avec des sous-titres ?</strong> -> Synchroniseur et éditeur de sous-titres.<br><strong>Besoin d\'optimiser l\'image ?</strong> -> Calculatrice de résolution et de distance de visionnage.'
     },

@@ -30,17 +30,17 @@ export const content: CategoryLocaleContent = {
         {
           value: '12+',
           label: 'Herramientas especializadas',
-          icon: 'cog'
+          icon: 'mdi:cog'
         },
         {
           value: '100%',
           label: 'Cálculos precisos',
-          icon: 'chart'
+          icon: 'mdi:chart-line'
         },
         {
           value: '0%',
           label: 'Datos almacenados en servidor',
-          icon: 'shield'
+          icon: 'mdi:shield-check'
         }
       ],
       columns: 3
@@ -56,7 +56,7 @@ export const content: CategoryLocaleContent = {
         {
           title: 'Timelapse y Cinemática',
           description: 'Calcula intervalos, duración total y velocidad de fotogramas para tus tomas cinematográficas.',
-          icon: 'film',
+          icon: 'mdi:film',
           points: [
             'Cálculo de fotogramas necesarios',
             'Duración en segundos/minutos',
@@ -66,7 +66,7 @@ export const content: CategoryLocaleContent = {
         {
           title: 'Privacidad y Metadatos',
           description: 'Protege tu privacidad eliminando datos EXIF y metadatos sensibles de tus archivos.',
-          icon: 'lock',
+          icon: 'mdi:lock',
           points: [
             'Análisis de datos EXIF',
             'Limpieza de metadatos de ubicación',
@@ -76,7 +76,7 @@ export const content: CategoryLocaleContent = {
         {
           title: 'Edición de Subtítulos',
           description: 'Sincroniza, ajusta y edita subtítulos con precisión de milisegundos.',
-          icon: 'text',
+          icon: 'mdi:text',
           points: [
             'Sincronización en tiempo real',
             'Edición de tiempos de entrada/salida',
@@ -179,7 +179,7 @@ export const content: CategoryLocaleContent = {
       type: 'diagnostic',
       variant: 'info',
       title: 'Cómo Elegir la Herramienta Correcta',
-      icon: 'help',
+      icon: 'mdi:help-circle',
       badge: 'Guía de Selección',
       html: '<strong>¿Estás creando un timelapse?</strong> → Usa la calculadora de timelapse.<br><strong>¿Necesitas proteger tu privacidad?</strong> → Herramienta de limpieza de metadatos.<br><strong>¿Trabajas con subtítulos?</strong> → Sincronizador y editor de subtítulos.<br><strong>¿Necesitas optimizar imagen?</strong> → Calculadora de resolución y distancia de visionado.'
     },

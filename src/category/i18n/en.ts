@@ -30,17 +30,17 @@ export const content: CategoryLocaleContent = {
         {
           value: '12+',
           label: 'Specialized tools',
-          icon: 'cog'
+          icon: 'mdi:cog'
         },
         {
           value: '100%',
           label: 'Precise calculations',
-          icon: 'chart'
+          icon: 'mdi:chart-line'
         },
         {
           value: '0%',
           label: 'Data stored on server',
-          icon: 'shield'
+          icon: 'mdi:shield-check'
         }
       ],
       columns: 3
@@ -56,7 +56,7 @@ export const content: CategoryLocaleContent = {
         {
           title: 'Timelapse and Cinematic',
           description: 'Calculate intervals, total duration, and frame rates for your cinematic shots.',
-          icon: 'film',
+          icon: 'mdi:film',
           points: [
             'Required frame calculation',
             'Duration in seconds/minutes',
@@ -66,7 +66,7 @@ export const content: CategoryLocaleContent = {
         {
           title: 'Privacy and Metadata',
           description: 'Protect your privacy by removing EXIF data and sensitive metadata from your files.',
-          icon: 'lock',
+          icon: 'mdi:lock',
           points: [
             'EXIF data analysis',
             'Location metadata cleaning',
@@ -76,7 +76,7 @@ export const content: CategoryLocaleContent = {
         {
           title: 'Subtitle Editing',
           description: 'Synchronize, adjust, and edit subtitles with millisecond precision.',
-          icon: 'text',
+          icon: 'mdi:text',
           points: [
             'Real-time synchronization',
             'In/out time editing',
@@ -179,7 +179,7 @@ export const content: CategoryLocaleContent = {
       type: 'diagnostic',
       variant: 'info',
       title: 'How to Choose the Right Tool',
-      icon: 'help',
+      icon: 'mdi:help-circle',
       badge: 'Selection Guide',
       html: '<strong>Creating a timelapse?</strong> -> Use the timelapse calculator.<br><strong>Need to protect privacy?</strong> -> Metadata cleaning tool.<br><strong>Working with subtitles?</strong> -> Subtitle sync and editor.<br><strong>Need to optimize image?</strong> -> Resolution and viewing distance calculator.'
     },

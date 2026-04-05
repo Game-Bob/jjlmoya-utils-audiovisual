@@ -93,9 +93,9 @@ const seo: ExifCleanerLocaleContent['seo'] = [
     { type: 'paragraph', html: 'Vous êtes-vous déjà demandé combien d\'informations personnelles vous partagez en publiant une photo sur les réseaux sociaux ? Les métadonnées EXIF sont comme une <strong>empreinte digitale invisible</strong> qui peut révéler tout, de l\'emplacement exact de votre domicile au prix de votre matériel photographique. Ce guide explique comment protéger votre vie privée efficacement.' },
 
     { type: 'stats', items: [
-        { value: '100%', label: 'Vie Privée - Traitement Local', icon: 'shield' },
-        { value: '0%', label: 'Données Stockées sur Serveur', icon: 'database' },
-        { value: 'Instantané', label: 'Suppression des Métadonnées', icon: 'lightning' }
+        { value: '100%', label: 'Vie Privée - Traitement Local', icon: 'mdi:shield-check' },
+        { value: '0%', label: 'Données Stockées sur Serveur', icon: 'mdi:database' },
+        { value: 'Instantané', label: 'Suppression des Métadonnées', icon: 'mdi:lightning-bolt' }
     ], columns: 3 },
 
     { type: 'title', text: 'Quelles Informations se Cachent dans vos Photos ?', level: 3 },

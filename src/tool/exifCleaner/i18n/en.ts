@@ -93,9 +93,9 @@ const seo: ExifCleanerLocaleContent['seo'] = [
     { type: 'paragraph', html: 'Have you ever wondered how much personal information you share when uploading a photo to social media? EXIF metadata is like an <strong>invisible fingerprint</strong> that can reveal everything from your exact home location to the price of your photography gear. This guide explains how to protect your privacy effectively.' },
 
     { type: 'stats', items: [
-        { value: '100%', label: 'Privacy - Local Processing', icon: 'shield' },
-        { value: '0%', label: 'Data Stored on Servers', icon: 'database' },
-        { value: 'Instant', label: 'Metadata Removal', icon: 'lightning' }
+        { value: '100%', label: 'Privacy - Local Processing', icon: 'mdi:shield-check' },
+        { value: '0%', label: 'Data Stored on Servers', icon: 'mdi:database' },
+        { value: 'Instant', label: 'Metadata Removal', icon: 'mdi:lightning-bolt' }
     ], columns: 3 },
 
     { type: 'title', text: 'What Information Is Hidden in Your Photos?', level: 3 },
