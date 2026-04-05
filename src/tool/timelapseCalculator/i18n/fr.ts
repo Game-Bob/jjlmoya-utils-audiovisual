@@ -1,17 +1,17 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { TimelapseUI, TimelapseLocaleContent } from '../index';
 
-const slug = 'calculateur-timelapse';
-const title = 'Calculateur de Timelapse & Hyperlapse : Intervalles Parfaits';
-const description = 'Calculez l\'intervalle exact entre les photos, la durée totale et l\'espace de stockage pour vos timelapses. Outil essentiel pour les photographes.';
+const slug = 'calculatrice-timelapse-hyperlapse-intervalles-parfaits';
+const title = 'Calculatrice de Timelapse et Hyperlapse : Intervalles Parfaits';
+const description = 'Calculez l\'intervalle exact entre les photos, la durée totale et le stockage pour vos timelapses. Outil essentiel pour les photographes.';
 
 const ui: TimelapseUI = {
-    title: "Calculateur Timelapse",
+    title: "Calculatrice Timelapse",
     paramsTitle: "Paramètres",
-    eventDuration: "Durée réelle de l'événement ?",
+    eventDuration: "Quelle est la durée de l'événement réel ?",
     hours: "Heures",
     minutes: "Minutes",
-    videoDuration: "Paramètres vidéo cible ?",
+    videoDuration: "Quelle vidéo finale voulez-vous ?",
     seconds: "Durée (sec)",
     fps: "FPS",
     resultsTitle: "Résultats",
@@ -19,46 +19,46 @@ const ui: TimelapseUI = {
     secondsUnit: "secondes",
     totalPhotos: "Total Photos",
     speed: "Vitesse",
-    shutterSpeed: "Vitesse d'obturation",
-    storage: "Poids (RAW)",
-    rule180Info: "La règle des 180° suggère une vitesse d'obturation égale à la moitié de l'intervalle pour un mouvement fluide.",
+    shutterSpeed: "Durée d'exposition",
+    storage: "Taille (RAW)",
+    rule180Info: "La règle des 180° suggère une vitesse d'obturation de la moitié de l'intervalle pour un flou de mouvement fluide.",
 };
 
 const faq: TimelapseLocaleContent['faq'] = [
     {
-        question: "Comment choisir le bon intervalle pour mon timelapse ?",
-        answer: "Cela dépend de la vitesse du mouvement capturé. Pour les nuages rapides, utilisez 2-3 secondes. Pour le soleil ou les étoiles, 15-30 secondes. Pour la croissance des plantes ou la construction, 5-15 minutes.",
+        question: "Comment choisir l'intervalle correct pour mon timelapse ?",
+        answer: "Cela dépend de la vitesse du mouvement que vous capturez. Pour des nuages rapides, utilisez 2-3 secondes. Pour le mouvement du soleil ou des étoiles, 15-30 secondes. Pour la croissance des plantes ou la construction de bâtiments, 5-15 minutes.",
     },
     {
-        question: "De combien de photos ai-je besoin pour une vidéo d'une minute ?",
-        answer: "Une vidéo standard a 24 ou 30 images par seconde (ips). Pour une minute de vidéo à 24ips, vous avez besoin exactement de 1440 photos (60 secondes * 24 photos/seconde).",
+        question: "Combien de photos ai-je besoin pour une vidéo d'une minute ?",
+        answer: "Une vidéo standard a 24 ou 30 images par seconde (fps). Pour une minute de vidéo à 24fps, vous avez besoin exactement de 1440 photographies (60 secondes * 24 photos/seconde).",
     },
     {
         question: "Qu'est-ce que le 'Flicker' et comment l'éviter ?",
-        answer: "C'est un scintillement gênant causé par de mini variations d'exposition. Pour l'éviter, utilisez toujours le mode manuel (M), une balance des blancs fixe et privilégiez les objectifs à bague de diaphragme manuelle.",
+        answer: "C'est un clignotement gênant causé par de petites variations d'exposition entre les photos. Pour l'éviter, utilisez toujours le mode manuel (M), une balance des blancs fixe et privilégiez l'utilisation d'objectifs avec une bague de diaphragme manuelle.",
     },
     {
-        question: "Pourquoi la vitesse d'obturation est-elle importante ?",
-        answer: "Pour un mouvement fluide (règle des 180°), la vitesse d'obturation doit être environ la moitié de l'intervalle. Par exemple, si l'intervalle est de 2 secondes, essayez d'exposer à 1 seconde.",
+        question: "Pourquoi le temps d'obturation est-il important ?",
+        answer: "Pour que le mouvement paraisse fluide (règle des 180°), le temps d'obturation devrait être environ la moitié de l'intervalle. Par exemple, si l'intervalle est de 2 secondes, essayez de photographier à 1 seconde.",
     },
 ];
 
 const howTo: TimelapseLocaleContent['howTo'] = [
     {
-        name: "Définir la durée vidéo cible",
-        text: "Indiquez combien de secondes ou minutes vous souhaitez que dure la vidéo finale (ex. 10 secondes pour Instagram).",
+        name: "Définir la durée de la vidéo finale",
+        text: "Indiquez combien de secondes ou de minutes vous souhaitez que la vidéo résultante dure (ex : 10 secondes pour Instagram).",
     },
     {
         name: "Sélectionner les FPS de sortie",
-        text: "Choisissez la fluidité : 24 (cinéma), 30 (web) ou 60 (ralenti fluide).",
+        text: "Choisissez la fluidité de la vidéo : 24 (cinéma), 30 (web) ou 60 (ralenti fluide).",
     },
     {
         name: "Ajuster l'intervalle de capture",
-        text: "Réglez l'intervalle de déclenchement selon la vitesse de la scène à capturer.",
+        text: "Configurez chaque combien de secondes votre appareil déclenchera selon la vitesse de la scène.",
     },
     {
         name: "Vérifier l'espace de stockage",
-        text: "Le calculateur vous dira combien de Gigaoctets la session occupera. Vérifiez votre carte SD.",
+        text: "La calculatrice vous dira combien de Gigaoctets la session occupera. Assurez-vous que votre carte SD a assez d'espace.",
     },
 ];
 
@@ -82,29 +82,43 @@ const bibliography: TimelapseLocaleContent['bibliography'] = [
 ];
 
 const seo: TimelapseLocaleContent['seo'] = [
-    { type: 'title', text: 'Le Guide Ultime des Intervalles Timelapse et Hyperlapse', level: 2 },
-    { type: 'paragraph', html: 'La différence entre une vidéo accélérée amateur et un <strong>timelapse cinématographique</strong> réside mathématiquement dans un seul facteur : <strong>l\'intervalle</strong>. Ce calculateur élimine les approximations, vous permettant de planifier avec précision chaque déclenchement.' },
+    { type: 'title', text: 'Guide Ultime des Intervalles Timelapse et Hyperlapse', level: 2 },
+    { type: 'paragraph', html: 'La différence entre une vidéo accélérée amateur et un <strong>timelapse cinématographique</strong> réside mathématiquement dans un seul facteur : <strong>l\'intervalle</strong>. Cette calculatrice élimine les devinettes, vous permettant de planifier avec précision la capture de levers de soleil, du trafic urbain ou de la Voie lactée.' },
     
-    { type: 'title', text: 'Tableau des Intervalles Recommandés', level: 3 },
-    { type: 'paragraph', html: 'Utilisez ce tableau de référence pour configurer votre intervallomètre. Le but est de capturer assez de mouvement pour qu\'il soit fluide mais perceptible.' },
-    { type: 'table', headers: ['Sujet / Scène', 'Intervalle Suggéré', 'Durée Min Événement'], rows: [
+    { type: 'title', text: 'Tableau des Intervalles Recommandés (Aide-mémoire)', level: 3 },
+    { type: 'paragraph', html: 'Utilisez ce tableau de référence rapide pour régler votre intervallomètre en fonction du sujet.' },
+    { type: 'table', headers: ['Sujet / Scène', 'Intervalle Suggeré', 'Durée de l\'Événement (Minimum)'], rows: [
         ['Nuages rapides / Orages', '1 - 2 secondes', '20 - 30 min'],
-        ['Trafic Urbain / Foule', '0.5 - 2 secondes', '15 - 20 min'],
-        ['Coucher de soleil (Holy Grail)', '5 - 10 secondes', '1.5 - 2.5 heures'],
-        ['Nuages Lents / Ombres', '10 - 15 secondes', '2 - 3 heures'],
-        ['Étoiles / Voie Lactée (Astro)', '15 - 30 secondes*', '3 - 5 heures'],
-        ['Construction / Plantes', '5 - 15 minutes', 'Jours / Semaines']
+        ['Trafic urbain / Personnes (Flou)', '0,5 - 2 secondes', '15 - 20 min'],
+        ['Coucher / Lever de soleil (Holy Grail)', '5 - 10 secondes', '1,5 - 2,5 heures'],
+        ['Nuages lents / Ombres', '10 - 15 secondes', '2 - 3 heures'],
+        ['Étoiles / Voie lactée (Astro)', '15 - 30 secondes*', '3 - 5 heures'],
+        ['Construction / Croissance rapide', '5 - 15 minutes', 'Jours / Semaines']
     ]},
-    { type: 'tip', title: 'Note pour l\'Astro', html: 'L\'intervalle est dicté par le temps d\'exposition nécessaire (règle 500) + un buffer pour l\'écriture sur carte.' },
+    { type: 'tip', title: 'Note pour l\'Astro', html: 'L\'intervalle est généralement dicté par le temps d\'exposition nécessaire pour capter la lumière + 1 ou 2 secondes de tampon.' },
 
     { type: 'title', text: 'La Règle des 180° (Motion Blur)', level: 3 },
-    { type: 'paragraph', html: 'Une erreur commune est d\'obtenir une vidéo saccadée. Pour un look cinéma fluide, vous avez besoin de <strong>motion blur</strong>.' },
-    { type: 'card', title: 'La Règle', icon: 'mdi:information', html: 'Votre vitesse d\'obturation doit être la moitié de votre intervalle. <br /><br /> <em>Exemple :</em> Si vous déclenchez toutes les <strong>4 secondes</strong>, votre exposition doit être de <strong>2 secondes</strong>.' },
+    { type: 'paragraph', html: 'Une erreur courante est d\'obtenir une vidéo "saccadée". Pour obtenir ce look cinématographique fluide, vous avez besoin de <strong>flou de mouvement</strong>.' },
+    { type: 'card', title: 'La Règle', icon: 'mdi:information', html: 'Votre vitesse d\'obturation doit être la moitié de votre intervalle. <br /><br /> <em>Exemple :</em> Si vous photographiez toutes les <strong>4 secondes</strong>, votre exposition devrait être de <strong>2 secondes</strong>.' },
 
-    { type: 'diagnostic', variant: 'success', title: 'Technique Avancée : Le "Saint Graal"', icon: 'mdi:crown', badge: 'Pro Teknik', html: 'La transition fluide du jour à la nuit est appelée le "Saint Graal". C\'est le défi technique le plus difficile car la lumière change radicalement.' },
+    { type: 'title', text: 'Flicker et Ouverture Manuelle', level: 3 },
+    { type: 'paragraph', html: 'Le "Flicker" est le clignotement gênant causé par des micro-variations de l\'ouverture du diaphragme entre les prises.' },
+    { type: 'list', items: [
+        '<strong>Lens Twist :</strong> Déverrouillez légèrement l\'objectif sur les reflex pour rompre la connexion électronique et fixer l\'ouverture mécaniquement.',
+        '<strong>Tout Manuel :</strong> ISO, Balance des Blancs et Mise au point doivent être fixes. N\'utilisez jamais de modes automatiques.',
+        '<strong>Photographiez en RAW :</strong> Essentiel pour corriger l\'exposition en post-production sans détruire l\'image.'
+    ]},
+
+    { type: 'diagnostic', variant: 'success', title: 'Technique Avancée : Le "Saint Graal"', icon: 'mdi:crown', badge: 'Technique Pro', html: 'On appelle "Saint Graal" la transition fluide du jour à la nuit (ou vice-versa). C\'est le défi technique le plus difficile car la lumière change radicalement.' },
+    
+    { type: 'stats', columns: 3, items: [
+        { label: 'Bulb Ramping', value: 'Exposition Graduelle', icon: 'mdi:brightness-6' },
+        { label: 'Post-Pro', value: 'LRTimelapse', icon: 'mdi:television-guide' },
+        { label: 'Stratégie', value: 'Intervalle Nocturne', icon: 'mdi:weather-night' }
+    ]},
 
     { type: 'title', text: 'Conclusion : Le Zen de la Mécanique Simple', level: 3 },
-    { type: 'paragraph', html: 'Maîtriser votre timelapse commence par comprendre les mathématiques de votre intervallomètre. Ne laissez pas un intervalle mal choisi gâcher votre séance.' }
+    { type: 'paragraph', html: 'Maîtriser votre timelapse commence par comprendre les mathématiques de votre intervallomètre. Ne laissez pas un intervalle mal choisi gâcher votre session.' }
 ];
 
 const faqSchema: WithContext<FAQPage> = {

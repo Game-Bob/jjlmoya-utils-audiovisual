@@ -156,7 +156,7 @@ const seo: VideoFrameExtractorLocaleContent['seo'] = [
         }
     ], proTitle: 'Ventajas', conTitle: 'Limitaciones' },
 
-    { type: 'diagnostic', variant: 'info', title: 'Resolución y Frame Rate', icon: 'info', badge: 'Técnico', html: 'La resolución final del fotograma depende del vídeo original. Si el vídeo es 4K (3840x2160), extraerás fotogramas 4K. Si es 720p, obtendrás 720p. Sin upscaling inteligente: preservamos la información nativa del vídeo.' },
+    { type: 'diagnostic', variant: 'info', title: 'Resolución y Frame Rate', icon: 'mdi:information', badge: 'Técnico', html: 'La resolución final del fotograma depende del vídeo original. Si el vídeo es 4K (3840x2160), extraerás fotogramas 4K. Si es 720p, obtendrás 720p. Sin upscaling inteligente: preservamos la información nativa del vídeo.' },
 
     { type: 'glossary', items: [
         {

@@ -89,7 +89,7 @@ const seo: PrintQualityCalculatorLocaleContent['seo'] = [
 
     { type: 'stats', items: [
         { value: '300', label: 'DPI Estándar Profesional', icon: 'mdi:target' },
-        { value: '100%', label: 'Cálculos Precisos', icon: 'mdi:check-circle' },
+        { value: '100%', label: 'Cálculos Precisos', icon: 'mdi:check' },
         { value: 'ISO 216', label: 'Formatos Soportados', icon: 'mdi:file-document' }
     ], columns: 3 },
 
@@ -99,7 +99,7 @@ const seo: PrintQualityCalculatorLocaleContent['seo'] = [
         '<strong>DPI (Dots Per Inch):</strong> Cuántos puntos de tinta la impresora coloca en una pulgada lineal (2.54 cm).',
         '<strong>Píxeles:</strong> Pequeños cuadrados de datos en tu archivo digital. Una foto de 3000x2000 píxeles tiene información constante, independientemente de DPI.',
         '<strong>La Fórmula:</strong> Tamaño impresión (pulgadas) = Píxeles / DPI. Ejemplo: 3000 píxeles ÷ 300 DPI = 10 pulgadas (25.4 cm)'
-    ], icon: 'checkmark' },
+    ], icon: 'mdi:check' },
 
     { type: 'title', text: 'Niveles de Calidad DPI Explicados', level: 3 },
     { type: 'table', headers: ['DPI', 'Calidad Visual', 'Casos de Uso', 'Distancia de Visionado'], rows: [
@@ -116,7 +116,7 @@ const seo: PrintQualityCalculatorLocaleContent['seo'] = [
         {
             title: 'Fotografía de Mano (Fotos 10x15)',
             description: '300 DPI obligatorio - se ve de cerca',
-            icon: 'image',
+            icon: 'mdi:image',
             points: [
                 'A 3000x2000 píxeles = 10x6.7 pulgadas máximo',
                 'Calidad Excelente garantizada',
@@ -126,7 +126,7 @@ const seo: PrintQualityCalculatorLocaleContent['seo'] = [
         {
             title: 'Póster de Pared (A3 - 30x42 cm)',
             description: '150 DPI suficiente - se ve a distancia',
-            icon: 'poster',
+            icon: 'mdi:wall-fire',
             points: [
                 'Se visualiza desde 1-2 metros',
                 'Menos píxeles necesarios',
@@ -137,7 +137,7 @@ const seo: PrintQualityCalculatorLocaleContent['seo'] = [
         {
             title: 'Valla Publicitaria (200x300 cm)',
             description: '15-30 DPI - se ve a muchos metros',
-            icon: 'billboard',
+            icon: 'mdi:sign',
             points: [
                 'Se observa a 20+ metros de distancia',
                 'Incluso baja resolución se ve bien',
@@ -166,7 +166,7 @@ const seo: PrintQualityCalculatorLocaleContent['seo'] = [
         }
     ], proTitle: 'Recomendaciones', conTitle: 'Contraindicaciones' },
 
-    { type: 'diagnostic', variant: 'warning', title: 'Error Común: El Mito del Upscaling', icon: 'alert', badge: 'Crítico', html: '<strong>NO aumentes DPI en Photoshop sin cambiar píxeles.</strong> Aumentar de 72 DPI a 300 DPI simplemente reduce el tamaño físico de impresión. Si "añades píxeles" mediante interpolación (upscaling), la imagen se verá suavizada o borrosa. Necesitas píxeles REALES desde el origen.' },
+    { type: 'diagnostic', variant: 'warning', title: 'Error Común: El Mito del Upscaling', icon: 'mdi:alert', badge: 'Crítico', html: '<strong>NO aumentes DPI en Photoshop sin cambiar píxeles.</strong> Aumentar de 72 DPI a 300 DPI simplemente reduce el tamaño físico de impresión. Si "añades píxeles" mediante interpolación (upscaling), la imagen se verá suavizada o borrosa. Necesitas píxeles REALES desde el origen.' },
 
     { type: 'glossary', items: [
         {

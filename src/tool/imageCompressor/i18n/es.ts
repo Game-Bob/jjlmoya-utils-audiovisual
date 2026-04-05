@@ -102,7 +102,7 @@ const seo: ImageCompressorLocaleContent['seo'] = [
         {
             title: 'Compresión Con Pérdida (Lossy)',
             description: 'JPG, WebP - Reduce información visual imperceptible',
-            icon: 'compress',
+            icon: 'mdi:compress',
             points: [
                 'Reduce 70-90% del peso original',
                 'Imperceptible al ojo humano si se mantiene >75% calidad',
@@ -114,7 +114,7 @@ const seo: ImageCompressorLocaleContent['seo'] = [
         {
             title: 'Compresión Sin Pérdida (Lossless)',
             description: 'PNG, WebP lossless - Mantiene 100% de datos visuales',
-            icon: 'shield',
+            icon: 'mdi:shield',
             points: [
                 'Reduce 20-50% del peso',
                 'Calidad perfecta, sin degradación',
@@ -130,7 +130,7 @@ const seo: ImageCompressorLocaleContent['seo'] = [
         '<strong>Tasa de Rebote:</strong> Cada segundo de retraso = 7% más rebote. Imágenes más rápidas = menos usuarios que se van.',
         '<strong>Ranking de Búsqueda:</strong> Velocidad es factor de ranking. Optimizar imágenes impulsa posicionamiento.',
         '<strong>Conversión:</strong> Tiempos de carga más rápidos = más conversiones. Estudios muestran +10% conversión con optimización.'
-    ], icon: 'checkmark' },
+    ], icon: 'mdi:check' },
 
     { type: 'proscons', items: [
         {
@@ -151,7 +151,7 @@ const seo: ImageCompressorLocaleContent['seo'] = [
         }
     ], proTitle: 'Ventajas', conTitle: 'Limitaciones' },
 
-    { type: 'diagnostic', variant: 'warning', title: 'Cuidado: Compresión Excesiva Degrada', icon: 'alert', badge: 'Calidad', html: 'Mantén calidad >75% para fotografía y >85% para contenido editorial. Por debajo, los artefactos de compresión (motas, bandas) se hacen visibles. Una imagen que se ve bien en thumbnail puede verse mal en grande.' },
+    { type: 'diagnostic', variant: 'warning', title: 'Cuidado: Compresión Excesiva Degrada', icon: 'mdi:alert', badge: 'Calidad', html: 'Mantén calidad >75% para fotografía y >85% para contenido editorial. Por debajo, los artefactos de compresión (motas, bandas) se hacen visibles. Una imagen que se ve bien en thumbnail puede verse mal en grande.' },
 
     { type: 'glossary', items: [
         {

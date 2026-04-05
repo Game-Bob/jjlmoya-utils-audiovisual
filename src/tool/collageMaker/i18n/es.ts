@@ -87,7 +87,7 @@ const seo: CollageMakerLocaleContent['seo'] = [
         '<strong>Flujo Visual:</strong> El ojo debe recorrer la composición de forma natural, sin puntos muertos.',
         '<strong>Contraste:</strong> Variaciones en color, tamaño y forma que atrapan la atención.',
         '<strong>Unidad:</strong> Coherencia temática - las imágenes deben "hablar juntas" sobre la misma historia.'
-    ], icon: 'checkmark' },
+    ], icon: 'mdi:check' },
 
     { type: 'card', title: 'Diseños Inteligentes y Adaptativos', html: 'Nuestro sistema calcula automáticamente la distribución óptima de espacio según el número de fotos. 2 imágenes = cuadrícula simétrica; 5 imágenes = distribución asimétrica equilibrada. Cada cuadrícula está diseñada para maximizar impacto visual.' },
 
@@ -152,7 +152,7 @@ const seo: CollageMakerLocaleContent['seo'] = [
         }
     ], proTitle: 'Ventajas', conTitle: 'Limitaciones' },
 
-    { type: 'diagnostic', variant: 'success', title: 'Listo para Redes Sociales', icon: 'check-circle', badge: 'Optimizado', html: '1200x1200px es la resolución ideal para Instagram. Soporta cualquier relación de aspecto, pero la salida cuadrada maximiza el impacto en feed, elimina recortes automáticos y se ve igual de bien en desktop, tablet y móvil.' },
+    { type: 'diagnostic', variant: 'success', title: 'Listo para Redes Sociales', icon: 'mdi:check-circle-outline', badge: 'Optimizado', html: '1200x1200px es la resolución ideal para Instagram. Soporta cualquier relación de aspecto, pero la salida cuadrada maximiza el impacto en feed, elimina recortes automáticos y se ve igual de bien en desktop, tablet y móvil.' },
 
     { type: 'glossary', items: [
         {

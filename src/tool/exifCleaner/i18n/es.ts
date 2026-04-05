@@ -93,9 +93,9 @@ const seo: ExifCleanerLocaleContent['seo'] = [
     { type: 'paragraph', html: '¿Alguna vez te has preguntado cuánta información personal compartes al subir una foto a redes sociales? Los metadatos EXIF son como una <strong>huella dactilar invisible</strong> que puede revelar desde la ubicación exacta de tu casa hasta el precio de tu equipo fotográfico. Esta guía te explica cómo proteger tu privacidad de forma efectiva.' },
 
     { type: 'stats', items: [
-        { value: '100%', label: 'Privacidad - Procesamiento Local', icon: 'shield' },
-        { value: '0%', label: 'Datos Almacenados en Servidores', icon: 'database' },
-        { value: 'Instantáneo', label: 'Eliminación de Metadatos', icon: 'lightning' }
+        { value: '100%', label: 'Privacidad - Procesamiento Local', icon: 'mdi:shield' },
+        { value: '0%', label: 'Datos Almacenados en Servidores', icon: 'mdi:database' },
+        { value: 'Instantáneo', label: 'Eliminación de Metadatos', icon: 'mdi:lightning-bolt' }
     ], columns: 3 },
 
     { type: 'title', text: '¿Qué Información Se Esconde en Tus Fotos?', level: 3 },
@@ -114,7 +114,7 @@ const seo: ExifCleanerLocaleContent['seo'] = [
         {
             title: 'Fotógrafos Profesionales',
             description: 'Riesgo de robo de equipo costoso identificado por número de serie',
-            icon: 'camera',
+            icon: 'mdi:camera',
             points: [
                 'Ladrones buscan fotógrafos con equipo de valor',
                 'GPS identifica domicilio del propietario',
@@ -124,7 +124,7 @@ const seo: ExifCleanerLocaleContent['seo'] = [
         {
             title: 'Padres e Influencers',
             description: 'Peligro extremo: ubicación de niños en tiempo real',
-            icon: 'alert',
+            icon: 'mdi:alert',
             points: [
                 'Pedófilos rastrean ubicaciones mediante OSINT',
                 'Predadores pueden identificar rutinas diarias',
@@ -135,7 +135,7 @@ const seo: ExifCleanerLocaleContent['seo'] = [
         {
             title: 'Usuarios de Redes Sociales',
             description: 'Exposición de privacidad personal y laboral',
-            icon: 'social',
+            icon: 'mdi:share-variant',
             points: [
                 'Publicar desde la oficina revela ubicación de trabajo',
                 'Geolocalización permite inferir salario aproximado',
@@ -145,7 +145,7 @@ const seo: ExifCleanerLocaleContent['seo'] = [
         {
             title: 'Viajeros y Nómadas',
             description: 'Peligro de robo en domicilios desocupados',
-            icon: 'map',
+            icon: 'mdi:map',
             points: [
                 'GPS publicado indica casa vacía durante viaje',
                 'Datos de equipo atraen a delincuentes',
@@ -161,9 +161,9 @@ const seo: ExifCleanerLocaleContent['seo'] = [
         '<strong>3. Limpieza instantánea:</strong> Con un clic, elimina el 100% de los metadatos dañinos.',
         '<strong>4. Descarga segura:</strong> Recibe imágenes anonimizadas listas para compartir en redes sin riesgos.',
         '<strong>5. Sin residuos:</strong> La imagen limpia conserva toda su calidad visual original.'
-    ], icon: 'checkmark' },
+    ], icon: 'mdi:check' },
 
-    { type: 'card', title: 'Tecnología de Privacidad', icon: 'shield-check', html: 'Esta herramienta utiliza la <strong>API de Canvas del navegador</strong> para crear una copia limpia de la imagen píxel a píxel, asegurando que:<br><br>✓ Ningún dato se envía a servidores<br>✓ Tu imagen nunca abandona tu dispositivo<br>✓ Procesamiento 100% anónimo y seguro<br>✓ Puedes usarla incluso sin conexión a internet (tras la carga inicial)' },
+    { type: 'card', title: 'Tecnología de Privacidad', icon: 'mdi:shield-check', html: 'Esta herramienta utiliza la <strong>API de Canvas del navegador</strong> para crear una copia limpia de la imagen píxel a píxel, asegurando que:<br><br>✓ Ningún dato se envía a servidores<br>✓ Tu imagen nunca abandona tu dispositivo<br>✓ Procesamiento 100% anónimo y seguro<br>✓ Puedes usarla incluso sin conexión a internet (tras la carga inicial)' },
 
     { type: 'title', text: '¿Qué Datos Elimina Específicamente?', level: 3 },
     { type: 'table', headers: ['Tipo de Metadatos', 'Ejemplos', 'Riesgo'], rows: [
@@ -194,7 +194,7 @@ const seo: ExifCleanerLocaleContent['seo'] = [
 
     { type: 'tip', title: 'Consejo de Seguridad Digital', html: '<strong>Limpia tus fotos ANTES de publicar</strong> en cualquier red social. Incluso si eliminas una publicación, los metadatos pueden haber sido indexados por buscadores o archivos. Es mejor prevenir que lamentar. Establece como hábito: <br><br><em>Foto → Limpiar EXIF → Publicar</em>' },
 
-    { type: 'diagnostic', variant: 'warning', title: 'Riesgos Reales de No Limpiar', icon: 'alert', badge: 'Seguridad Crítica', html: '<strong>Casos documentados:</strong><br>• Padres que publicaban fotos de hijos - predadores rastreaban GPS<br>• Fotógrafos viajeros - casas robadas mientras estaban ausentes<br>• Influencers - ubicaciones de residencias identificadas por fans obsesivos<br><br>No es paranoia: es higiene digital básica en 2026.' },
+    { type: 'diagnostic', variant: 'warning', title: 'Riesgos Reales de No Limpiar', icon: 'mdi:alert-circle', badge: 'Seguridad Crítica', html: '<strong>Casos documentados:</strong><br>• Padres que publicaban fotos de hijos - predadores rastreaban GPS<br>• Fotógrafos viajeros - casas robadas mientras estaban ausentes<br>• Influencers - ubicaciones de residencias identificadas por fans obsesivos<br><br>No es paranoia: es higiene digital básica en 2026.' },
 
     { type: 'glossary', items: [
         {

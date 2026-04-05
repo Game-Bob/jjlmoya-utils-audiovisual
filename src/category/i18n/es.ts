@@ -86,7 +86,7 @@ export const content: CategoryLocaleContent = {
         {
           title: 'Análisis de Imagen',
           description: 'Calcula parámetros técnicos de resolución, impresión y distancia de visionado.',
-          icon: 'image',
+          icon: 'mdi:image',
           points: [
             'Cálculo de DPI y resolución',
             'Distancia de visionado recomendada',
@@ -139,7 +139,7 @@ export const content: CategoryLocaleContent = {
         'Exporta o aplica los resultados a tu flujo de trabajo',
         'Repite el proceso para múltiples proyectos sin límites'
       ],
-      icon: 'arrow'
+      icon: 'mdi:arrow-right'
     },
     {
       type: 'tip',

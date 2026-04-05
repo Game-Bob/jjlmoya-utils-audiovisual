@@ -125,7 +125,7 @@ const seo: TvDistanceLocaleContent['seo'] = [
 
     { type: 'card', title: 'El Límite de la Agudeza Visual Humana', html: 'El ojo humano tiene una capacidad límite de resolución (agudeza visual). A partir de cierta distancia, no puedes distinguir más detalles aunque la pantalla tenga 8K. Nuestros cálculos te posicionan exactamente en la "zona óptima" donde aprovechas el 100% de los píxeles sin gastar energía ocular innecesaria.' },
 
-    { type: 'diagnostic', variant: 'info', title: 'Fatiga Ocular y Distancia', icon: 'info', badge: 'Salud Visual', html: 'Estar demasiado cerca causa fatiga porque tus ojos necesitan acomodarse constantemente a ángulos extremos. Estar demasiado lejos causa esfuerzo para distinguir detalles. Nuestra calculadora te posiciona en el "sweet spot" donde la pantalla llena tu visión natural (40° para THX) sin causar estrés ocular.' },
+    { type: 'diagnostic', variant: 'info', title: 'Fatiga Ocular y Distancia', icon: 'mdi:information', badge: 'Salud Visual', html: 'Estar demasiado cerca causa fatiga porque tus ojos necesitan acomodarse constantemente a ángulos extremos. Estar demasiado lejos causa esfuerzo para distinguir detalles. Nuestra calculadora te posiciona en el "sweet spot" donde la pantalla llena tu visión natural (40° para THX) sin causar estrés ocular.' },
 
     { type: 'proscons', items: [
         {

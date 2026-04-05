@@ -1,5 +1,7 @@
-export { audiovisualCategory } from './category';
+import { audiovisualCategory } from './category';
+export { audiovisualCategory };
 export { default as audiovisualCategorySEO } from './category/seo.astro';
+export const templateCategory = audiovisualCategory;
 
 export * from './tool/timelapseCalculator';
 export * from './tool/exifCleaner';

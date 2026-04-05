@@ -123,7 +123,7 @@ const seo: PrivacyBlurLocaleContent['seo'] = [
         '<strong>Sin Internet:</strong> Después de la descarga inicial, funciona completamente offline.',
         '<strong>Privacidad Garantizada:</strong> Nadie ve los rostros: ni Google, ni OpenAI, ni nosotros.',
         '<strong>Un Clic Automático:</strong> Detecta rostros y te deja elegir ocultar con un clic.'
-    ], icon: 'mdi:check-circle' },
+    ], icon: 'mdi:check' },
 
     { type: 'card', title: 'Seguridad por Diseño (Privacy by Design)', html: 'Al procesar las imágenes mediante la GPU y CPU local de tu navegador, garantizamos que las fotos originales nunca abandonan tu dispositivo. Incluso si cambias de idea, nada fue transmitido. Este es el estándar máximo de privacidad digital.' },
 

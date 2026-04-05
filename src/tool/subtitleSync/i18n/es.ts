@@ -85,9 +85,9 @@ const seo: SubtitleSyncLocaleContent['seo'] = [
     { type: 'paragraph', html: 'No hay nada más frustrante para un espectador que ver diálogos que no coinciden con las voces. El desfase de subtítulos suele ocurrir por diferencias entre versiones de vídeo: variaciones en framerate, cortes de publicidad, intros de productoras o cambios en la compresión. Con esta herramienta, corriges el problema en segundos.' },
 
     { type: 'stats', items: [
-        { value: '100%', label: 'Procesamiento Local', icon: 'shield' },
-        { value: 'Milisegundos', label: 'Precisión', icon: 'clock' },
-        { value: 'Cualquier Tamaño', label: 'SIN Límite de Archivo', icon: 'file' }
+        { value: '100%', label: 'Procesamiento Local', icon: 'mdi:shield' },
+        { value: 'Milisegundos', label: 'Precisión', icon: 'mdi:clock-outline' },
+        { value: 'Cualquier Tamaño', label: 'SIN Límite de Archivo', icon: 'mdi:file-document' }
     ], columns: 3 },
 
     { type: 'title', text: 'Adelantar vs Retrasar: Guía Práctica', level: 3 },
@@ -96,7 +96,7 @@ const seo: SubtitleSyncLocaleContent['seo'] = [
         '<strong>Retrasar (Valor Positivo):</strong> Cuando ves el texto aparecer ANTES que el sonido. Los subtítulos van adelantados. Ejemplo: +2.0 segundos.',
         '<strong>Adelantar (Valor Negativo):</strong> Cuando ves el texto aparecer DESPUÉS que el sonido. Los subtítulos van retrasados. Ejemplo: -2.0 segundos.',
         '<strong>Prueba y Ajusta:</strong> Comienza con incrementos pequeños (0.5s) y usa la vista previa para validar.'
-    ], icon: 'arrow' },
+    ], icon: 'mdi:arrow-right' },
 
     { type: 'card', title: 'Privacidad de Nivel Profesional', html: 'Al procesar el archivo mediante JavaScript en el lado del cliente, garantizamos que el contenido de tus subtítulos nunca abandona tu ordenador. Esencial para traductores y profesionales que manejan material confidencial o bajo contrato de confidencialidad.' },
 
@@ -105,7 +105,7 @@ const seo: SubtitleSyncLocaleContent['seo'] = [
         {
             title: 'Traductores y Subtituladores',
             description: 'Sincronizar traducciones después de trabajar con múltiples versiones de vídeo',
-            icon: 'translate',
+            icon: 'mdi:translate',
             points: [
                 'Archivos SRT de diferentes fuentes',
                 'Versionado de contenido (theatrical vs streaming)',
@@ -115,7 +115,7 @@ const seo: SubtitleSyncLocaleContent['seo'] = [
         {
             title: 'Creadores de Contenido',
             description: 'Recuperar subtítulos cuando el vídeo se procesó con diferente framerate',
-            icon: 'video',
+            icon: 'mdi:video',
             points: [
                 'Reutilizar subtítulos existentes',
                 'Cambios de formato (720p a 1080p)',
@@ -126,7 +126,7 @@ const seo: SubtitleSyncLocaleContent['seo'] = [
         {
             title: 'Usuarios Casuales',
             description: 'Corregir subtítulos descargados que no encajan perfectamente',
-            icon: 'user',
+            icon: 'mdi:account',
             points: [
                 'Subtítulos genéricos desincronizados',
                 'Películas en diferente región (PAL vs NTSC)',
@@ -143,7 +143,7 @@ const seo: SubtitleSyncLocaleContent['seo'] = [
         ['Cambio de Resolución', 'Reencoding con diferente velocidad de procesamiento', 'Recálculo del archivo original']
     ] },
 
-    { type: 'diagnostic', variant: 'info', title: 'Limitaciones Técnicas a Considerar', icon: 'info', badge: 'Importante', html: 'Esta herramienta aplica un desplazamiento <strong>constante</strong> a todo el archivo. Si el desfase es <strong>progresivo</strong> (empieza bien pero se va desincronizando), significa una diferencia de framerate persistente. En ese caso, el archivo original necesita re-procesamiento en software de edición profesional.' },
+    { type: 'diagnostic', variant: 'info', title: 'Limitaciones Técnicas a Considerar', icon: 'mdi:information', badge: 'Importante', html: 'Esta herramienta aplica un desplazamiento <strong>constante</strong> a todo el archivo. Si el desfase es <strong>progresivo</strong> (empieza bien pero se va desincronizando), significa una diferencia de framerate persistente. En ese caso, el archivo original necesita re-procesamiento en software de edición profesional.' },
 
     { type: 'proscons', items: [
         {

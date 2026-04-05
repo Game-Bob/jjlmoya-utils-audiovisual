@@ -88,7 +88,7 @@ const seo: ChromaticLensLocaleContent['seo'] = [
         '<strong>Equilibrio de Volumen:</strong> Cada partición busca agrupar píxeles del mismo espacio de color con volúmenes similares.',
         '<strong>Promedio Ponderado:</strong> El color resultante de cada caja es el promedio de todos los píxeles que contiene.',
         '<strong>Representación Fiel:</strong> Los colores dominantes reflejan la atmósfera visual real de la imagen, no un simple muestreo.'
-    ], icon: 'checkmark' },
+    ], icon: 'mdi:check' },
 
     { type: 'card', title: 'Flujo de Trabajo Creativo', html: 'Ideal para desarrolladores web, diseñadores UX/UI, artistas digitales y creativos que buscan capturar instantáneamente la esencia visual de una fotografía, película o referencia visual para aplicarla en sus interfaces, ilustraciones o paletas de marca.' },
 
@@ -165,7 +165,7 @@ const seo: ChromaticLensLocaleContent['seo'] = [
         }
     ], proTitle: 'Ventajas', conTitle: 'Limitaciones' },
 
-    { type: 'diagnostic', variant: 'success', title: 'Representación Realista de Color', icon: 'check-circle', badge: 'Algoritmo Avanzado', html: 'A diferencia de herramientas que simplemente samplen píxeles aleatorios, nuestro sistema utiliza el algoritmo Median Cut que pondera toda la cantidad de píxeles de cada tono, asegurando que la paleta resultante sea un reflejo fiel de la atmósfera visual y psicología del color de la imagen original.' },
+    { type: 'diagnostic', variant: 'success', title: 'Representación Realista de Color', icon: 'mdi:check-circle-outline', badge: 'Algoritmo Avanzado', html: 'A diferencia de herramientas que simplemente samplen píxeles aleatorios, nuestro sistema utiliza el algoritmo Median Cut que pondera toda la cantidad de píxeles de cada tono, asegurando que la paleta resultante sea un reflejo fiel de la atmósfera visual y psicología del color de la imagen original.' },
 
     { type: 'glossary', items: [
         {
