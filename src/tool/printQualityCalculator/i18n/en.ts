@@ -25,7 +25,9 @@ const ui: PrintQualityCalculatorUI = {
     qualityFairDesc: "Suitable for digital viewing or distant billboards.",
     qualityPoorDesc: "The image will look pixelated. Printing is not recommended.",
     unitCm: "cm",
-    unitInches: "in"
+    unitInches: "in",
+    faqTitle: "Frequently Asked Questions",
+    bibliographyTitle: "References"
 };
 
 const faq: PrintQualityCalculatorLocaleContent['faq'] = [
@@ -236,7 +238,9 @@ export const content: PrintQualityCalculatorLocaleContent = {
     description,
     ui,
     seo,
+    faqTitle: "Frequently Asked Questions",
     faq,
+    bibliographyTitle: "References",
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

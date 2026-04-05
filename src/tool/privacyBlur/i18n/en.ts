@@ -18,7 +18,9 @@ const ui: PrivacyBlurUI = {
     offlineLabel: "Offline",
     autoDetectFaces: "Auto Detect",
     loadingModels: "Loading models...",
-    noFacesDetected: "No faces automatically detected."
+    noFacesDetected: "No faces automatically detected.",
+    faqTitle: "Frequently Asked Questions",
+    bibliographyTitle: "References"
 };
 
 const faq: PrivacyBlurLocaleContent['faq'] = [
@@ -227,7 +229,9 @@ export const content: PrivacyBlurLocaleContent = {
     description,
     ui,
     seo,
+    faqTitle: "Frequently Asked Questions",
     faq,
+    bibliographyTitle: "References",
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

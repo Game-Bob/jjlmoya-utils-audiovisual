@@ -19,7 +19,9 @@ const ui: ImageCompressorUI = {
     newSizeLabel: "New Size",
     reductionLabel: "Savings",
     downloadBtn: "Download",
-    addMoreBtn: "Add more"
+    addMoreBtn: "Add more",
+    faqTitle: "Frequently Asked Questions",
+    bibliographyTitle: "References"
 };
 
 const faq: ImageCompressorLocaleContent['faq'] = [
@@ -221,7 +223,9 @@ export const content: ImageCompressorLocaleContent = {
     description,
     ui,
     seo,
+    faqTitle: "Frequently Asked Questions",
     faq,
+    bibliographyTitle: "References",
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

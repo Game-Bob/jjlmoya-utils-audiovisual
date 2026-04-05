@@ -236,8 +236,10 @@ export const content: PrintQualityCalculatorLocaleContent = {
     description,
     ui,
     seo,
+    faqTitle: "Frequently Asked Questions",
     faq,
     bibliography,
+    bibliographyTitle: "References",
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],
 };
