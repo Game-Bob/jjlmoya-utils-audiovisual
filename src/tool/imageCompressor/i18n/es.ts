@@ -68,18 +68,118 @@ const bibliography: ImageCompressorLocaleContent['bibliography'] = [
 ];
 
 const seo: ImageCompressorLocaleContent['seo'] = [
-    { type: 'title', text: 'Optimización de Imágenes: Velocidad y Rendimiento', level: 2 },
-    { type: 'paragraph', html: 'En la era de la inmediatez, una web lenta es una web que pierde usuarios. Las imágenes suelen ser el elemento más pesado de un sitio; optimizarlas es el primer paso para mejorar tu posicionamiento en Google (Core Web Vitals).' },
-    
-    { type: 'title', text: 'Compresión con vs sin pérdida', level: 3 },
-    { type: 'paragraph', html: 'Esta herramienta te permite ajustar el nivel de compresión. La compresión con pérdida (Lossy) reduce drásticamente el peso a cambio de una degradación imperceptible al ojo humano si se mantiene por encima del 70%.' },
+    {
+        type: 'summary',
+        title: 'Optimización Profesional de Imágenes Web',
+        items: [
+            'Compresión inteligente JPG, PNG y WebP',
+            'Reduce peso 50-80% manteniendo calidad visual',
+            'Procesamiento 100% local - privacidad garantizada',
+            'Mejora Core Web Vitals y posicionamiento SEO'
+        ]
+    },
+    { type: 'title', text: 'Optimización de Imágenes: Velocidad Web y Core Web Vitals', level: 2 },
+    { type: 'paragraph', html: 'En la era de la inmediatez digital, una web lenta pierde usuarios. Las imágenes sin optimizar representan el 60-70% del peso total de una página web. Optimizarlas es el primer paso para mejorar tus métricas Google (LCP, CLS) y tu posicionamiento en resultados de búsqueda.' },
 
-    { type: 'card', title: 'Privacidad Total', icon: 'mdi:shield-check', html: 'A diferencia de otros servicios online, no subimos tus fotos a la nube. El procesamiento local es más rápido, seguro y no consume tus datos de red.' },
+    { type: 'stats', items: [
+        { value: '50-80%', label: 'Reducción Típica de Peso', icon: 'mdi:trending-down' },
+        { value: '100%', label: 'Privacidad Local', icon: 'mdi:lock' },
+        { value: '+30%', label: 'Más Rápido que JPG', icon: 'mdi:speedometer' }
+    ], columns: 3 },
 
-    { type: 'diagnostic', variant: 'success', title: 'Ahorro Real', icon: 'mdi:trending-down', badge: 'Métrica', html: 'Nuestros usuarios suelen reducir el tamaño de sus imágenes entre un 50% y un 80% sin una pérdida de calidad apreciable en pantallas estándar.' },
-    
-    { type: 'title', text: 'Conclusión: Preparado para la Web', level: 3 },
-    { type: 'paragraph', html: 'Utiliza el formato WebP y ajustes de calidad inteligentes para que tu presencia online vuele. Calidad profesional, peso mínimo.' }
+    { type: 'title', text: 'Formatos de Compresión Explicados', level: 3 },
+    { type: 'table', headers: ['Formato', 'Compresión', 'Casos de Uso', 'Compatibilidad'], rows: [
+        ['JPEG', 'Lossy 50-90%', 'Fotos de cámara, contenido editorial', 'Universal (100%)'],
+        ['PNG', 'Lossless 30-50%', 'Gráficos, logos, transparencias', 'Universal (100%)'],
+        ['WebP', 'Lossy/Lossless 25-35% más', 'Web moderna, redes sociales', '95% navegadores modernos'],
+        ['AVIF', 'Lossy/Lossless mejora 20%', 'Siguiente generación web', 'Navegadores nuevos solo']
+    ] },
+
+    { type: 'card', title: 'Por qué WebP es el Futuro', html: 'Google desarrolló WebP específicamente para la web. Ofrece compresión superior a JPEG y PNG, manteniendo o mejorando la calidad visual. Es 25-35% más pequeño que equivalentes en JPEG. Los navegadores modernos lo soportan al 95%.' },
+
+    { type: 'title', text: 'Compresión Con Pérdida vs Sin Pérdida', level: 3 },
+    { type: 'comparative', items: [
+        {
+            title: 'Compresión Con Pérdida (Lossy)',
+            description: 'JPG, WebP - Reduce información visual imperceptible',
+            icon: 'compress',
+            points: [
+                'Reduce 70-90% del peso original',
+                'Imperceptible al ojo humano si se mantiene >75% calidad',
+                'Ideal para fotografía realista',
+                'No recomendado para logos o texto nítido'
+            ],
+            highlight: true
+        },
+        {
+            title: 'Compresión Sin Pérdida (Lossless)',
+            description: 'PNG, WebP lossless - Mantiene 100% de datos visuales',
+            icon: 'shield',
+            points: [
+                'Reduce 20-50% del peso',
+                'Calidad perfecta, sin degradación',
+                'Ideal para gráficos, logos, transparencias',
+                'Archivos más pesados que Lossy'
+            ]
+        }
+    ], columns: 2 },
+
+    { type: 'title', text: 'Impacto en SEO y Conversión', level: 3 },
+    { type: 'list', items: [
+        '<strong>Core Web Vitals:</strong> Google penaliza sitios lentos. Imágenes optimizadas mejoran LCP (Largest Contentful Paint) directamente.',
+        '<strong>Tasa de Rebote:</strong> Cada segundo de retraso = 7% más rebote. Imágenes más rápidas = menos usuarios que se van.',
+        '<strong>Ranking de Búsqueda:</strong> Velocidad es factor de ranking. Optimizar imágenes impulsa posicionamiento.',
+        '<strong>Conversión:</strong> Tiempos de carga más rápidos = más conversiones. Estudios muestran +10% conversión con optimización.'
+    ], icon: 'checkmark' },
+
+    { type: 'proscons', items: [
+        {
+            pro: 'Privacidad total: procesamiento 100% local, sin servidores en la nube',
+            con: 'Requiere navegador con soporte Canvas API (es universal)'
+        },
+        {
+            pro: 'WebP es 25-35% más pequeño que JPEG con igual calidad',
+            con: 'Safari e IE viejos no soportan WebP (fallback disponible)'
+        },
+        {
+            pro: 'Procesamiento instantáneo de múltiples imágenes',
+            con: 'Imágenes muy grandes (>50MB) pueden requerir espera'
+        },
+        {
+            pro: 'Redimensionamiento opcional: reduce resolución además de compresión',
+            con: 'Redimensionar pierde información - mejor optimizar resolución en origen'
+        }
+    ], proTitle: 'Ventajas', conTitle: 'Limitaciones' },
+
+    { type: 'diagnostic', variant: 'warning', title: 'Cuidado: Compresión Excesiva Degrada', icon: 'alert', badge: 'Calidad', html: 'Mantén calidad >75% para fotografía y >85% para contenido editorial. Por debajo, los artefactos de compresión (motas, bandas) se hacen visibles. Una imagen que se ve bien en thumbnail puede verse mal en grande.' },
+
+    { type: 'glossary', items: [
+        {
+            term: 'Compresión Lossy',
+            definition: 'Elimina datos visuales que el ojo humano percibe como "ruido". Ideal para fotografía. JPEG, WebP lossy, HEIC son lossy.'
+        },
+        {
+            term: 'Compresión Lossless',
+            definition: 'Reduce tamaño sin perder información visual. PNG y WebP lossless. Ideal para gráficos, logos, transparencias.'
+        },
+        {
+            term: 'Core Web Vitals (Google)',
+            definition: 'Métricas de experiencia de usuario: LCP (velocidad carga), FID (latencia interacción), CLS (estabilidad visual). Afectan ranking SEO.'
+        },
+        {
+            term: 'WebP',
+            definition: 'Formato desarrollado por Google. 25-35% más pequeño que JPEG. Soportado por 95% navegadores modernos (todos excepto IE).'
+        },
+        {
+            term: 'Artefactos de Compresión',
+            definition: 'Defectos visuales causados por compresión excesiva: motas, bandas de color, bordes borrosos. Imperceptibles <75% calidad.'
+        }
+    ] },
+
+    { type: 'message', title: 'Optimización Web Profesional', ariaLabel: 'Información sobre optimización de imágenes para SEO', html: 'No es vanidad técnica: comprimir imágenes es una inversión directa en experiencia de usuario y ranking en Google. Cada kilobyte cuenta en móviles. Nuestra herramienta convierte lo que antes requería software profesional ($$$) en un proceso gratuito de 3 clics.' },
+
+    { type: 'title', text: 'Preparado para la Web Moderna', level: 3 },
+    { type: 'paragraph', html: 'Utiliza compresión inteligente y formato WebP para que tu presencia online sea rápida, responsiva y competitiva en búsqueda. Calidad profesional, peso mínimo, carga instantánea.' }
 ];
 
 const faqSchema: WithContext<FAQPage> = {

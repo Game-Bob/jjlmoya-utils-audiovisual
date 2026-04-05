@@ -74,23 +74,127 @@ const bibliography: PrintQualityCalculatorLocaleContent['bibliography'] = [
 ];
 
 const seo: PrintQualityCalculatorLocaleContent['seo'] = [
-    { type: 'title', text: 'Guía Definitiva de Calidad de Impresión', level: 2 },
-    { type: 'paragraph', html: '¿Alguna vez has impreso una foto y ha salido borrosa o pixelada? El secreto está en la relación entre los <strong>Píxeles</strong> y los <strong>DPI</strong> (Puntos por Pulgada). Esta herramienta te ayuda a calcular el tamaño máximo exacto al que puedes imprimir tus imágenes digitales sin perder calidad.' },
+    {
+        type: 'summary',
+        title: 'Cálculo Profesional de Resolución para Impresión',
+        items: [
+            'Convierte píxeles a centímetros y pulgadas con precisión',
+            'Calcula tamaño máximo según DPI deseado',
+            'Compatibilidad con formatos estándar (A4, A3, etc.)',
+            'Guía de 4 niveles de calidad: Excelente a No Apto'
+        ]
+    },
+    { type: 'title', text: 'Guía Definitiva de Calidad de Impresión y DPI', level: 2 },
+    { type: 'paragraph', html: '¿Alguna vez has impreso una foto y ha salido borrosa o pixelada? El secreto está en la relación matemática entre <strong>Píxeles</strong> y <strong>DPI</strong> (Dots Per Inch). Esta herramienta calcula el tamaño máximo exacto al que puedes imprimir tus imágenes sin perder calidad profesional.' },
 
-    { type: 'card', icon: 'mdi:printer', title: 'La Regla de Oro: 300 DPI', html: 'Para impresión de alta calidad (revistas, libros, fotos de mano), el estándar de la industria es <strong>300 DPI</strong>. Esto significa que necesitas 300 píxeles por cada pulgada de papel. Si bajas de esta cifra, el ojo humano empieza a notar los "cuadraditos".' },
-    { type: 'card', icon: 'mdi:eye-check', title: 'Distancia de Visionado', html: 'No todo necesita 300 DPI. Una valla publicitaria que se ve a 50 metros puede imprimirse a <strong>10 o 20 DPI</strong> y verse perfecta. Un póster de pared suele imprimirse a <strong>150 DPI</strong>. Ahorrar en resolución (si la distancia lo permite) agiliza el trabajo.' },
-    { type: 'card', icon: 'mdi:aspect-ratio', title: 'Megapixeles Reales', html: 'Cuidado con el "upscaling". Si aumentas el tamaño de una imagen en Photoshop, aumentas los píxeles pero no la información. Esta calculadora te dice la verdad basada en los <strong>píxeles nativos</strong> del archivo. Si la calidad original es mala, imprimir grande solo magnifica el defecto.' },
+    { type: 'stats', items: [
+        { value: '300', label: 'DPI Estándar Profesional', icon: 'mdi:target' },
+        { value: '100%', label: 'Cálculos Precisos', icon: 'mdi:check-circle' },
+        { value: 'ISO 216', label: 'Formatos Soportados', icon: 'mdi:file-document' }
+    ], columns: 3 },
 
-    { type: 'title', text: '¿Cómo preparar tus archivos para imprenta?', level: 3 },
+    { type: 'title', text: 'Entendiendo DPI: Píxeles vs Puntos', level: 3 },
+    { type: 'paragraph', html: 'La confusión común es pensar que DPI y píxeles son lo mismo. No lo son. Los píxeles están EN tu archivo digital. Los DPI son cómo la impresora los convierte en tinta sobre papel.' },
+    { type: 'list', items: [
+        '<strong>DPI (Dots Per Inch):</strong> Cuántos puntos de tinta la impresora coloca en una pulgada lineal (2.54 cm).',
+        '<strong>Píxeles:</strong> Pequeños cuadrados de datos en tu archivo digital. Una foto de 3000x2000 píxeles tiene información constante, independientemente de DPI.',
+        '<strong>La Fórmula:</strong> Tamaño impresión (pulgadas) = Píxeles / DPI. Ejemplo: 3000 píxeles ÷ 300 DPI = 10 pulgadas (25.4 cm)'
+    ], icon: 'checkmark' },
 
-    { type: 'card', icon: 'mdi:palette', title: 'Usa Espacio de Color CMYK', html: 'Las pantallas usan luz (RGB), pero las impresoras usan tinta (CMYK). Antes de enviar a imprenta, convierte tu perfil de color. Los colores azules y verdes eléctricos brillantes en pantalla suelen apagarse al imprimir. Previsualizar en CMYK te evitará sorpresas desagradables.' },
-    { type: 'card', icon: 'mdi:scissors-cutting', title: 'Sangrado (Bleed)', html: 'Si quieres que tu imagen llegue al borde del papel, debes añadir <strong>3mm de sangrado</strong> extra por cada lado. Las guillotinas de corte en imprenta tienen un margen de error; sin sangrado, podrías acabar con bordes blancos finos no deseados.' },
-    { type: 'card', icon: 'mdi:vector-bezier', title: 'Formatos Vectoriales vs Rasterizados', html: 'Para logotipos y texto, usa siempre formatos vectoriales (AI, SVG, EPS). Para fotografías, usa formatos sin compresión como <strong>TIFF</strong> o con compresión mínima como <strong>High Quality JPEG</strong>. Evita PNG para impresión offset si puedes (no soporta CMYK nativo).' },
+    { type: 'title', text: 'Niveles de Calidad DPI Explicados', level: 3 },
+    { type: 'table', headers: ['DPI', 'Calidad Visual', 'Casos de Uso', 'Distancia de Visionado'], rows: [
+        ['600+ DPI', 'Excelente (Perfecto)', 'Libros de arte, revistas de lujo, fotografía fina', 'Menos de 10 cm'],
+        ['300-400 DPI', 'Excelente (Profesional)', 'Fotografía, libros, catálogos de empresa', '20-30 cm (mano)'],
+        ['150-200 DPI', 'Buena (Web Print)', 'Pósters, calendarios, visualización media', '1-2 metros'],
+        ['72-100 DPI', 'Pantalla (Fair)', 'Vallas publicitarias, carteles lejanos', '5+ metros'],
+        ['10-30 DPI', 'Baja (No Apta)', 'Vallas gigantes, visualización extremadamente lejana', '50+ metros']
+    ] },
 
-    { type: 'diagnostic', variant: 'info', title: 'La Regla de la Distancia', icon: 'mdi:eye-check', badge: 'Pro Tip', html: 'Cuanto más lejos se vaya a ver la imagen (poster en pared), menos DPI necesitas. Una valla publicitaria puede imprimirse a solo 15-30 DPI porque se observa a metros de distancia.' },
+    { type: 'card', title: 'La Regla de Oro del 300 DPI', html: 'Para impresión fotográfica y editorial profesional, el estándar de la industria es <strong>300 DPI</strong>. Esto garantiza que el ojo humano a distancia normal (20-30 cm) no perciba los puntos individuales de tinta. Menos de 300 DPI y la rejilla de píxeles se vuelve visible.' },
 
-    { type: 'title', text: 'Conclusión: Resultados Profesionales', level: 3 },
-    { type: 'paragraph', html: 'Usa nuestra calculadora para evitar sorpresas desagradables en la copistería. Asegura que tus recuerdos y trabajos luzcan nítidos sobre el papel.' },
+    { type: 'comparative', items: [
+        {
+            title: 'Fotografía de Mano (Fotos 10x15)',
+            description: '300 DPI obligatorio - se ve de cerca',
+            icon: 'image',
+            points: [
+                'A 3000x2000 píxeles = 10x6.7 pulgadas máximo',
+                'Calidad Excelente garantizada',
+                'Estándar para álbumes y regalos'
+            ]
+        },
+        {
+            title: 'Póster de Pared (A3 - 30x42 cm)',
+            description: '150 DPI suficiente - se ve a distancia',
+            icon: 'poster',
+            points: [
+                'Se visualiza desde 1-2 metros',
+                'Menos píxeles necesarios',
+                'Ahorras en calidad de cámara'
+            ],
+            highlight: true
+        },
+        {
+            title: 'Valla Publicitaria (200x300 cm)',
+            description: '15-30 DPI - se ve a muchos metros',
+            icon: 'billboard',
+            points: [
+                'Se observa a 20+ metros de distancia',
+                'Incluso baja resolución se ve bien',
+                'Optimiza archivos de gran tamaño'
+            ]
+        }
+    ], columns: 3 },
+
+    { type: 'title', text: 'Preparar Archivos para Imprenta Profesional', level: 3 },
+    { type: 'proscons', items: [
+        {
+            pro: 'CMYK vs RGB: Impresoras usan tinta (CMYK), pantallas usan luz (RGB). Convierte para evitar sorpresas de color.',
+            con: 'Los colores pueden cambiar al convertir - previsualiza antes'
+        },
+        {
+            pro: 'Sangrado (Bleed): Añade 3mm extra por lado si la imagen debe llegar al borde del papel',
+            con: 'Sin sangrado, los bordes cortados pueden quedar blancos'
+        },
+        {
+            pro: 'Upscaling NO funciona: Aumentar píxeles en Photoshop agrega información falsa (suavizado)',
+            con: 'Si necesitas imprimir grande, necesitas foto original de alta resolución'
+        },
+        {
+            pro: 'Formatos: TIFF sin compresión o JPEG alta calidad para fotos; vectorial (AI, EPS) para logos',
+            con: 'PNG no soporta CMYK nativo en la mayoría de imprentas'
+        }
+    ], proTitle: 'Recomendaciones', conTitle: 'Contraindicaciones' },
+
+    { type: 'diagnostic', variant: 'warning', title: 'Error Común: El Mito del Upscaling', icon: 'alert', badge: 'Crítico', html: '<strong>NO aumentes DPI en Photoshop sin cambiar píxeles.</strong> Aumentar de 72 DPI a 300 DPI simplemente reduce el tamaño físico de impresión. Si "añades píxeles" mediante interpolación (upscaling), la imagen se verá suavizada o borrosa. Necesitas píxeles REALES desde el origen.' },
+
+    { type: 'glossary', items: [
+        {
+            term: 'DPI (Dots Per Inch)',
+            definition: 'Medida de resolución en impresión: cuántos puntos de tinta por pulgada lineal (2.54 cm). 300 DPI = 300x300 = 90,000 puntos por pulgada cuadrada.'
+        },
+        {
+            term: 'CMYK',
+            definition: 'Espacio de color de impresión: Cyan, Magenta, Yellow, blacK. Basado en tinta sustractiva. Diferente de RGB (luz aditiva de pantallas).'
+        },
+        {
+            term: 'Sangrado (Bleed)',
+            definition: 'Área extra (típicamente 3mm) que se imprime y luego se corta. Asegura que la imagen llegue hasta el borde sin dejar márgenes blancos.'
+        },
+        {
+            term: 'Resolución Nativa',
+            definition: 'Píxeles REALES capturados por la cámara, sin manipulación. Aumentar DPI sin cambiar píxeles no genera "resolución nativa".'
+        },
+        {
+            term: 'Interpolación (Upscaling)',
+            definition: 'Algoritmo que inventa píxeles nuevos basándose en los existentes. Útil para pequeños aumentos, pero pierde nitidez en ampliaciones grandes.'
+        }
+    ] },
+
+    { type: 'message', title: 'Precisión Técnica para Resultados Profesionales', ariaLabel: 'Información sobre cálculos de impresión', html: 'Nuestra calculadora convierte píxeles a centímetros considerando estándares internacionales (ISO 216 para papel). No es solo un calculador: es tu validador de si esa foto cabe en ese tamaño de impresión manteniendo calidad profesional.' },
+
+    { type: 'title', text: 'Conclusión: Imprime Sin Sorpresas', level: 3 },
+    { type: 'paragraph', html: 'La diferencia entre una impresión hermosa y una decepcionante está en conocer la relación entre píxeles y DPI. Usa esta calculadora para validar tus archivos ANTES de ir a la imprenta. Así evitas gastos innecesarios y resultados frustantes.' }
 ];
 
 const faqSchema: WithContext<FAQPage> = {

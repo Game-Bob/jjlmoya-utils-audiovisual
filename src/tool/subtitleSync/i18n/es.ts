@@ -71,22 +71,126 @@ const bibliography: SubtitleSyncLocaleContent['bibliography'] = [
 ];
 
 const seo: SubtitleSyncLocaleContent['seo'] = [
-    { type: 'title', text: 'Domina la Sincronización de Subtítulos Digitiales', level: 2 },
-    { type: 'paragraph', html: 'No hay nada más frustrante para un espectador que un diálogo que no coincide con las voces. El desfase de subtítulos suele ocurrir por diferencias entre las versiones de vídeo (framerate, cortes de publicidad o intros de productoras).' },
-    
-    { type: 'title', text: 'Adelantar vs Retrasar (El Gran Dilema)', level: 3 },
-    { type: 'paragraph', html: 'Entender qué valor introducir es la clave para usar esta herramienta con éxito:' },
+    {
+        type: 'summary',
+        title: 'Sincronización de Subtítulos Profesional',
+        items: [
+            'Corrección instantánea de desfases de audio-subtítulos',
+            'Soporta archivos SRT (SubRip) estándar',
+            'Procesamiento 100% local - máxima privacidad',
+            'Sin instalación, sin suscripción, completamente gratuito'
+        ]
+    },
+    { type: 'title', text: 'Sincronización Perfecta de Subtítulos SRT', level: 2 },
+    { type: 'paragraph', html: 'No hay nada más frustrante para un espectador que ver diálogos que no coinciden con las voces. El desfase de subtítulos suele ocurrir por diferencias entre versiones de vídeo: variaciones en framerate, cortes de publicidad, intros de productoras o cambios en la compresión. Con esta herramienta, corriges el problema en segundos.' },
+
+    { type: 'stats', items: [
+        { value: '100%', label: 'Procesamiento Local', icon: 'shield' },
+        { value: 'Milisegundos', label: 'Precisión', icon: 'clock' },
+        { value: 'Cualquier Tamaño', label: 'SIN Límite de Archivo', icon: 'file' }
+    ], columns: 3 },
+
+    { type: 'title', text: 'Adelantar vs Retrasar: Guía Práctica', level: 3 },
+    { type: 'paragraph', html: 'El primer paso es identificar correctamente el tipo de desfase. Aquí está la lógica:' },
     { type: 'list', items: [
-        '<strong>Retrasar (Delay):</strong> Si ves el texto ANTES que el audio. Usa números positivos (ej: 1.5).',
-        '<strong>Adelantar (Advance):</strong> Si ves el texto DESPUÉS que el audio. Usa números negativos (ej: -1.5).',
-    ]},
+        '<strong>Retrasar (Valor Positivo):</strong> Cuando ves el texto aparecer ANTES que el sonido. Los subtítulos van adelantados. Ejemplo: +2.0 segundos.',
+        '<strong>Adelantar (Valor Negativo):</strong> Cuando ves el texto aparecer DESPUÉS que el sonido. Los subtítulos van retrasados. Ejemplo: -2.0 segundos.',
+        '<strong>Prueba y Ajusta:</strong> Comienza con incrementos pequeños (0.5s) y usa la vista previa para validar.'
+    ], icon: 'arrow' },
 
-    { type: 'card', title: 'Privacidad Garantizada', icon: 'mdi:shield-lock', html: 'Al procesar el archivo mediante JavaScript en el lado del cliente, garantizamos que el contenido de tus subtítulos nunca sale de tu ordenador. Ideal para traductores y profesionales que manejan material sensible.' },
+    { type: 'card', title: 'Privacidad de Nivel Profesional', html: 'Al procesar el archivo mediante JavaScript en el lado del cliente, garantizamos que el contenido de tus subtítulos nunca abandona tu ordenador. Esencial para traductores y profesionales que manejan material confidencial o bajo contrato de confidencialidad.' },
 
-    { type: 'diagnostic', variant: 'info', title: 'Consejo para FPS', icon: 'mdi:video-input-component', badge: 'Técnico', html: 'Si los subtítulos empiezan bien pero se van desincronizando poco a poco, es probable que se deba a una diferencia de framerate (ej. 23.976 vs 25 fps). Esta herramienta soluciona desfases fijos, no progresivos.' },
-    
-    { type: 'title', text: 'Conclusión: Cine sin Interrupciones', level: 3 },
-    { type: 'paragraph', html: 'Con unos pocos clics, puedes transformar una experiencia de visionado frustrante en una noche de cine perfecta. Nuestra herramienta gratuita de sincronización SRT es rápida, segura y siempre disponible.' }
+    { type: 'title', text: 'Casos de Uso Comunes', level: 3 },
+    { type: 'comparative', items: [
+        {
+            title: 'Traductores y Subtituladores',
+            description: 'Sincronizar traducciones después de trabajar con múltiples versiones de vídeo',
+            icon: 'translate',
+            points: [
+                'Archivos SRT de diferentes fuentes',
+                'Versionado de contenido (theatrical vs streaming)',
+                'Entrega rápida sin cambiar herramientas'
+            ]
+        },
+        {
+            title: 'Creadores de Contenido',
+            description: 'Recuperar subtítulos cuando el vídeo se procesó con diferente framerate',
+            icon: 'video',
+            points: [
+                'Reutilizar subtítulos existentes',
+                'Cambios de formato (720p a 1080p)',
+                'Evitar retiming manual de 1000+ líneas'
+            ],
+            highlight: true
+        },
+        {
+            title: 'Usuarios Casuales',
+            description: 'Corregir subtítulos descargados que no encajan perfectamente',
+            icon: 'user',
+            points: [
+                'Subtítulos genéricos desincronizados',
+                'Películas en diferente región (PAL vs NTSC)',
+                'Streaming con versiones editadas'
+            ]
+        }
+    ], columns: 3 },
+
+    { type: 'title', text: 'Por Qué los Subtítulos Se Desincroniza', level: 3 },
+    { type: 'table', headers: ['Causa Común', 'Descripción Técnica', 'Solución'], rows: [
+        ['Diferencia de Framerate', '23.976 fps vs 25 fps - acumulación de diferencia', 'Ajuste de offset único (esta herramienta)'],
+        ['Editorialización', 'Cortes de publicidad o contenido adicional removido', 'Cálculo manual + sincronización'],
+        ['Versión Regional', 'PAL (25 fps Europa) vs NTSC (29.97 fps USA)', 'Offset matemático simple'],
+        ['Cambio de Resolución', 'Reencoding con diferente velocidad de procesamiento', 'Recálculo del archivo original']
+    ] },
+
+    { type: 'diagnostic', variant: 'info', title: 'Limitaciones Técnicas a Considerar', icon: 'info', badge: 'Importante', html: 'Esta herramienta aplica un desplazamiento <strong>constante</strong> a todo el archivo. Si el desfase es <strong>progresivo</strong> (empieza bien pero se va desincronizando), significa una diferencia de framerate persistente. En ese caso, el archivo original necesita re-procesamiento en software de edición profesional.' },
+
+    { type: 'proscons', items: [
+        {
+            pro: 'Velocidad extrema - procesa archivos grandes en milisegundos',
+            con: 'Solo ajusta offset fijo, no desfases progresivos'
+        },
+        {
+            pro: 'Privacidad total - el contenido nunca abandona tu navegador',
+            con: 'Requiere navegador moderno con JavaScript habilitado'
+        },
+        {
+            pro: 'Formato universal - funciona con cualquier SRT estándar',
+            con: 'No soporta otros formatos (ASS, VTT, SCC, etc.)'
+        },
+        {
+            pro: 'Completamente gratuito, sin publicidad, sin tracking',
+            con: 'Sin historial de cambios o versioning'
+        }
+    ], proTitle: 'Ventajas', conTitle: 'Limitaciones' },
+
+    { type: 'glossary', items: [
+        {
+            term: 'SRT (SubRip)',
+            definition: 'Formato de subtítulos más universal: archivo de texto con números de secuencia, tiempos (hh:mm:ss,mmm) y texto. Estándar de facto en reproductores y plataformas.'
+        },
+        {
+            term: 'Offset (Desplazamiento)',
+            definition: 'Cantidad fija de tiempo que se suma o resta a todos los tiempos del archivo. Pueden ser segundos positivos (retrasar) o negativos (adelantar).'
+        },
+        {
+            term: 'Framerate (fps)',
+            definition: 'Fotogramas por segundo. 24p (cine), 25p (PAL/Europa), 29.97p (NTSC/USA), 60p (video fluido). Diferencias causan desfases acumulativos.'
+        },
+        {
+            term: 'NTSC vs PAL',
+            definition: 'Estándares de televisión regional: PAL (25 fps, 50 Hz) en Europa/Australia; NTSC (29.97 fps, 60 Hz) en USA/Japón. Diferencias de ~4% en velocidad total.'
+        },
+        {
+            term: 'Desfase Progresivo',
+            definition: 'Cuando la sincronización empieza correcta pero se va desincronizando gradualmente. Indica diferencia de framerate persistente, requiere re-procesamiento.'
+        }
+    ] },
+
+    { type: 'message', title: 'Edición Profesional con Control Total', ariaLabel: 'Información técnica sobre sincronización', html: 'Nuestro enfoque es simple pero poderoso: un desplazamiento único, aplicado instantáneamente, procesado 100% en tu navegador. Sin cloud, sin almacenamiento, sin seguimiento. Simplemente carga, ajusta, descarga. Control total sobre tu contenido.' },
+
+    { type: 'title', text: 'Conclusión: Cine Sin Interrupciones', level: 3 },
+    { type: 'paragraph', html: 'La sincronización perfecta de subtítulos es fundamental para una experiencia audiovisual de calidad. Con esta herramienta, transformas una experiencia frustrante en una noche de cine perfecta, sin necesidad de software costoso o complicado.' }
 ];
 
 const faqSchema: WithContext<FAQPage> = {
