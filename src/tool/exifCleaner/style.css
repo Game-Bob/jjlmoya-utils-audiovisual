@@ -1,5 +1,5 @@
 .ec-root {
-  --ec-bg: #ffffff;
+  --ec-bg: #fff;
   --ec-bg-elevated: #f8fafc;
   --ec-border: #e2e8f0;
   --ec-text: #0f172a;
@@ -50,7 +50,7 @@
 }
 
 .ec-drop:hover,
-.ec-drop--active {
+.ec-drop-active {
   border-color: var(--ec-accent);
   background: var(--ec-accent-alpha-hover);
 }
@@ -245,37 +245,45 @@
   height: 1.25rem;
 }
 
-.ec-btn--primary {
+.ec-btn-primary {
   background: var(--ec-accent);
-  color: #ffffff;
+  color: #fff;
   box-shadow: 0 15px 35px -10px var(--ec-accent);
 }
 
-.ec-btn--primary:hover {
+.ec-btn-primary:hover {
   transform: translateY(-2px);
   box-shadow: 0 20px 45px -10px var(--ec-accent);
 }
 
-.ec-btn--secondary {
+.ec-btn-secondary {
   background: var(--ec-bg-elevated);
   border: 1px solid var(--ec-border);
   color: var(--ec-text);
 }
 
-.ec-btn--secondary:hover {
+.ec-btn-secondary:hover {
   border-color: var(--ec-accent);
   color: var(--ec-accent);
 }
 
 .ec-hidden {
-  display: none !important;
+  display: none;
 }
 
 @keyframes ec-spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes ec-slide-up {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

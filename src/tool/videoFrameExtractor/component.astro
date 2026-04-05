@@ -178,7 +178,7 @@ const { ui } = Astro.props;
       (card.querySelector('.vfe-frame-thumb') as HTMLElement).addEventListener('click', () => {
         lightboxImg.src = frame.url;
         lightboxDown.href = frame.url;
-        lightbox.classList.add('vfe-lightbox--open');
+        lightbox.classList.add('vfe-lightbox-open');
       });
 
       framesGallery.prepend(card);
@@ -276,8 +276,8 @@ const { ui } = Astro.props;
       playText.textContent = labels.playLabel;
     });
 
-    document.getElementById('vfe-lightbox-close')!.addEventListener('click', () => lightbox.classList.remove('vfe-lightbox--open'));
-    lightbox.addEventListener('click', (e) => { if (e.target === lightbox) lightbox.classList.remove('vfe-lightbox--open'); });
+    document.getElementById('vfe-lightbox-close')!.addEventListener('click', () => lightbox.classList.remove('vfe-lightbox-open'));
+    lightbox.addEventListener('click', (e) => { if (e.target === lightbox) lightbox.classList.remove('vfe-lightbox-open'); });
   }
 
   init();

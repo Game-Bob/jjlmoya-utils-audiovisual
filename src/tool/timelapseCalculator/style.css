@@ -103,7 +103,7 @@
 
 .tlc-input {
   width: 100%;
-  background: #ffffff;
+  background: #fff;
   border: 2px solid #e2e8f0;
   border-radius: 0.75rem;
   padding: 0.75rem 1rem;
@@ -121,21 +121,21 @@
   color: #f8fafc;
 }
 
-.tlc-input--indigo:focus {
+.tlc-input-indigo:focus {
   border-color: #6366f1;
   box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
 }
 
-.theme-dark .tlc-input--indigo:focus {
+.theme-dark .tlc-input-indigo:focus {
   box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
 }
 
-.tlc-input--pink:focus {
+.tlc-input-pink:focus {
   border-color: #ec4899;
   box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.15);
 }
 
-.theme-dark .tlc-input--pink:focus {
+.theme-dark .tlc-input-pink:focus {
   box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.25);
 }
 
@@ -164,7 +164,7 @@
 .tlc-results-panel {
   padding: 2rem 3rem;
   background: linear-gradient(135deg, #4f46e5, #7c3aed);
-  color: #ffffff;
+  color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -256,7 +256,7 @@
   line-height: 1.1;
 }
 
-.tlc-stat-value--sm {
+.tlc-stat-value-sm {
   font-size: 1.25rem;
   color: #e0e7ff;
 }

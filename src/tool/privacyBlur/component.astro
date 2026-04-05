@@ -13,7 +13,7 @@ const { ui } = Astro.props;
 
   <div class="pb-toolbar">
     <div class="pb-tool-selector">
-      <button class="pb-tool-btn pb-tool-btn--active" data-tool="pixel" title={ui.toolPixel}>
+      <button class="pb-tool-btn pb-tool-btn-active" data-tool="pixel" title={ui.toolPixel}>
         <svg viewBox="0 0 24 24" class="pb-icon" aria-hidden="true" fill="currentColor">
           <path d="M3 3h8v8H3zm0 10h8v8H3zm10-10h8v8h-8zm0 10h8v8h-8z"/>
         </svg>
@@ -169,8 +169,8 @@ const { ui } = Astro.props;
 
     toolBtns.forEach(btn => {
       btn.addEventListener('click', () => {
-        toolBtns.forEach(b => b.classList.remove('pb-tool-btn--active'));
-        btn.classList.add('pb-tool-btn--active');
+        toolBtns.forEach(b => b.classList.remove('pb-tool-btn-active'));
+        btn.classList.add('pb-tool-btn-active');
         engine.updateLastLayerTool(btn.dataset.tool as ToolType);
       });
     });

@@ -213,10 +213,10 @@ import './style.css';
 
     if (savings < 0) {
       savingsPct.textContent = `+${Math.abs(savings).toFixed(1)}%`;
-      pill.classList.add('ic-savings-pill--negative');
+      pill.classList.add('ic-savings-pill-negative');
     } else {
       savingsPct.textContent = `-${savings.toFixed(1)}%`;
-      pill.classList.remove('ic-savings-pill--negative');
+      pill.classList.remove('ic-savings-pill-negative');
     }
 
     const baseName = item.file.name.replace(/\.[^/.]+$/, '');

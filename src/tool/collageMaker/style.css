@@ -1,5 +1,5 @@
 .cm-root {
-  --cm-bg: #ffffff;
+  --cm-bg: #fff;
   --cm-bg-muted: #f8fafc;
   --cm-border: #e2e8f0;
   --cm-text: #0f172a;
@@ -86,7 +86,7 @@
 }
 
 .cm-drop-zone:hover,
-.cm-drop-zone--over {
+.cm-drop-zone-over {
   border-color: var(--cm-primary);
   background: var(--cm-primary-light);
 }
@@ -167,7 +167,7 @@
   left: 3px;
   font-size: 0.55rem;
   font-weight: 800;
-  color: #fff;
+  color: var(--cm-bg);
   text-shadow: 0 1px 2px rgba(0,0,0,0.8);
   line-height: 1;
 }
@@ -179,7 +179,7 @@
   width: 16px;
   height: 16px;
   background: rgba(239,68,68,0.9);
-  color: #fff;
+  color: var(--cm-bg);
   border: none;
   border-radius: 50%;
   cursor: pointer;
@@ -284,13 +284,13 @@
   background: var(--cm-primary-light);
 }
 
-.cm-layout-btn--active {
+.cm-layout-btn-active {
   border-color: var(--cm-primary);
   background: var(--cm-primary-light);
   color: var(--cm-primary);
 }
 
-.cm-layout-btn--disabled {
+.cm-layout-btn-disabled {
   opacity: 0.45;
   cursor: not-allowed;
 }
@@ -362,7 +362,7 @@
   gap: 0.4rem;
   padding: 0.6rem 1.25rem;
   background: linear-gradient(135deg, var(--cm-primary), #8b5cf6);
-  color: #fff;
+  color: var(--cm-bg);
   border: none;
   border-radius: 0.625rem;
   font-size: 0.875rem;

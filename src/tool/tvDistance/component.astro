@@ -36,7 +36,7 @@ const { ui } = Astro.props;
             <span class="tvd-label">{ui.resolutionLabel}</span>
             <div class="tvd-res-grid">
               <button class="tvd-res-btn" data-res="1080p">1080p</button>
-              <button class="tvd-res-btn tvd-res-btn--active" data-res="4k">4K</button>
+              <button class="tvd-res-btn tvd-res-btn-active" data-res="4k">4K</button>
               <button class="tvd-res-btn" data-res="8k">8K</button>
             </div>
           </div>
@@ -100,7 +100,7 @@ const { ui } = Astro.props;
             <span class="tvd-stat-label">{ui.minLimitLabel}</span>
             <span id="tvd-min" class="tvd-stat-val">—</span>
           </div>
-          <div class="tvd-stat tvd-stat--opt">
+          <div class="tvd-stat tvd-stat-opt">
             <span class="tvd-stat-label">{ui.optimalLimitLabel}</span>
             <span id="tvd-opt" class="tvd-stat-val">—</span>
           </div>
@@ -161,7 +161,7 @@ const { ui } = Astro.props;
       const lineH = Math.max(60, dist.optimal * 80);
       lineEl.style.height = `${lineH}px`;
 
-      resBtns.forEach(b => b.classList.toggle('tvd-res-btn--active', b.dataset.res === currentRes));
+      resBtns.forEach(b => b.classList.toggle('tvd-res-btn-active', b.dataset.res === currentRes));
     }
 
     diagonalInput.addEventListener('input', update);

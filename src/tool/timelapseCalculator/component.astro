@@ -26,11 +26,11 @@ const { ui } = Astro.props;
           <div class="tlc-row">
             <div class="tlc-field">
               <label class="tlc-sub-label" for="event-hours">{ui.hours}</label>
-              <input type="number" id="event-hours" value="1" min="0" class="tlc-input tlc-input--indigo" />
+              <input type="number" id="event-hours" value="1" min="0" class="tlc-input tlc-input-indigo" />
             </div>
             <div class="tlc-field">
               <label class="tlc-sub-label" for="event-minutes">{ui.minutes}</label>
-              <input type="number" id="event-minutes" value="0" min="0" max="59" class="tlc-input tlc-input--indigo" />
+              <input type="number" id="event-minutes" value="0" min="0" max="59" class="tlc-input tlc-input-indigo" />
             </div>
           </div>
         </div>
@@ -40,12 +40,12 @@ const { ui } = Astro.props;
           <div class="tlc-row">
             <div class="tlc-field">
               <label class="tlc-sub-label" for="video-seconds">{ui.seconds}</label>
-              <input type="number" id="video-seconds" value="10" min="1" class="tlc-input tlc-input--pink" />
+              <input type="number" id="video-seconds" value="10" min="1" class="tlc-input tlc-input-pink" />
             </div>
             <div class="tlc-field">
               <label class="tlc-sub-label" for="fps-select">{ui.fps}</label>
               <div class="tlc-select-wrapper">
-                <select id="fps-select" class="tlc-input tlc-input--pink tlc-select">
+                <select id="fps-select" class="tlc-input tlc-input-pink tlc-select">
                   <option value="24">24</option>
                   <option value="25">25</option>
                   <option value="30">30</option>
@@ -85,11 +85,11 @@ const { ui } = Astro.props;
         </div>
         <div class="tlc-stat">
           <p class="tlc-stat-label">{ui.shutterSpeed}</p>
-          <p id="result-shutter" class="tlc-stat-value tlc-stat-value--sm">~7.5s (180°)</p>
+          <p id="result-shutter" class="tlc-stat-value tlc-stat-value-sm">~7.5s (180°)</p>
         </div>
         <div class="tlc-stat">
           <p class="tlc-stat-label">{ui.storage}</p>
-          <p id="result-storage" class="tlc-stat-value tlc-stat-value--sm">~6 GB</p>
+          <p id="result-storage" class="tlc-stat-value tlc-stat-value-sm">~6 GB</p>
         </div>
       </div>
 

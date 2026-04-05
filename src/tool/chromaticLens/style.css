@@ -1,5 +1,5 @@
 .cl-root {
-  --cl-bg: #ffffff;
+  --cl-bg: #fff;
   --cl-bg-elevated: #f8fafc;
   --cl-border: #e2e8f0;
   --cl-text: #0f172a;
@@ -54,7 +54,7 @@
 }
 
 .cl-drop:hover,
-.cl-drop--active {
+.cl-drop-active {
   background: var(--cl-accent-alpha-hover);
   border-color: var(--cl-accent);
 }
@@ -253,7 +253,7 @@
   border-color: var(--cl-accent);
 }
 
-.cl-swatch--copied {
+.cl-swatch-copied {
   background: var(--cl-emerald-alpha);
   border-color: var(--cl-emerald);
 }
@@ -273,7 +273,6 @@
 }
 
 .cl-swatch-hex {
-  font-family: monospace;
   font-weight: 950;
   color: var(--cl-text);
   font-size: 1.25rem;
@@ -288,14 +287,22 @@
 }
 
 .cl-hidden {
-  display: none !important;
+  display: none;
 }
 
 @keyframes cl-spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes cl-fade-up {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

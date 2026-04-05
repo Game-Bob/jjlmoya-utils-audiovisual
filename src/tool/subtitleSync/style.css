@@ -1,5 +1,5 @@
 .ss-root {
-  --ss-bg: #ffffff;
+  --ss-bg: #fff;
   --ss-bg-elevated: #f8fafc;
   --ss-border: #e2e8f0;
   --ss-text: #0f172a;
@@ -52,7 +52,7 @@
 }
 
 .ss-drop:hover,
-.ss-drop--active {
+.ss-drop-active {
   border-color: var(--ss-accent);
   background: var(--ss-accent-alpha);
 }
@@ -228,14 +228,13 @@
   font-size: 0.8rem;
   font-weight: 700;
   color: var(--ss-text-muted);
-  font-family: monospace;
 }
 
 .ss-btn-primary {
   width: 100%;
   padding: 1.25rem;
   background: var(--ss-accent);
-  color: #ffffff;
+  color: #fff;
   border-radius: 1.5rem;
   font-weight: 950;
   font-size: 1.15rem;
@@ -291,7 +290,7 @@
   letter-spacing: 0.05em;
 }
 
-.ss-preview-label--modified {
+.ss-preview-label-modified {
   color: var(--ss-accent);
 }
 
@@ -310,7 +309,6 @@
 
 .ss-preview-time {
   font-weight: 950;
-  font-family: monospace;
   color: var(--ss-accent);
   font-size: 0.75rem;
   margin: 0 0 0.25rem;
@@ -323,5 +321,5 @@
 }
 
 .ss-hidden {
-  display: none !important;
+  display: none;
 }

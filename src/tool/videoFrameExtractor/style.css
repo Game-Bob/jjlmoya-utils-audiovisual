@@ -1,7 +1,7 @@
 .vfe-root {
-  --vfe-bg: #ffffff;
+  --vfe-bg: #fff;
   --vfe-bg-muted: #f8fafc;
-  --vfe-bg-glass: #ffffff;
+  --vfe-bg-glass: #fff;
   --vfe-glass-border: #e2e8f0;
   --vfe-glass-text: #6366f1;
   --vfe-glass-muted: #94a3b8;
@@ -124,7 +124,7 @@
   border: 1px solid var(--vfe-glass-border);
   border-radius: 1rem;
   margin: 0.75rem;
-  padding: 1.25rem 1.25rem;
+  padding: 1.25rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -367,7 +367,6 @@
 }
 
 .vfe-frame-time {
-  font-family: monospace;
   font-size: 0.7rem;
   font-weight: 800;
   color: var(--vfe-primary);
@@ -384,7 +383,7 @@
   justify-content: center;
 }
 
-.vfe-lightbox--open {
+.vfe-lightbox-open {
   display: flex;
 }
 
@@ -424,5 +423,5 @@
 }
 
 .vfe-hidden {
-  display: none !important;
+  display: none;
 }

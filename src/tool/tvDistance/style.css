@@ -1,5 +1,5 @@
 .tvd-root {
-  --tvd-bg: #ffffff;
+  --tvd-bg: #fff;
   --tvd-bg-muted: #f8fafc;
   --tvd-bg-sim: #f1f5f9;
   --tvd-border: #e2e8f0;
@@ -110,7 +110,6 @@
 .tvd-diagonal-val {
   font-size: 0.85rem;
   font-weight: 800;
-  font-family: monospace;
   color: var(--tvd-primary);
 }
 
@@ -140,16 +139,16 @@
   transition: all 0.2s;
 }
 
-.tvd-res-btn:hover:not(.tvd-res-btn--active) {
+.tvd-res-btn:hover:not(.tvd-res-btn-active) {
   border-color: var(--tvd-primary);
   opacity: 0.7;
 }
 
-.tvd-res-btn--active {
+.tvd-res-btn-active {
   background: var(--tvd-primary);
   color: #fff;
   border-color: var(--tvd-primary);
-  box-shadow: 0 4px 12px rgba(37,99,235,0.25);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
 }
 
 .tvd-thx-block {
@@ -379,7 +378,6 @@
 .tvd-location-val {
   font-size: 1.25rem;
   font-weight: 900;
-  font-family: monospace;
   color: var(--tvd-primary);
   line-height: 1;
 }
@@ -407,7 +405,7 @@
   background: var(--tvd-bg);
 }
 
-.tvd-stat--opt {
+.tvd-stat-opt {
   background: var(--tvd-bg);
   border: 1px solid var(--tvd-border);
   box-shadow: 0 2px 8px var(--tvd-shadow);
@@ -421,7 +419,7 @@
   color: var(--tvd-text-muted);
 }
 
-.tvd-stat--opt .tvd-stat-label {
+.tvd-stat-opt .tvd-stat-label {
   color: var(--tvd-primary);
 }
 
@@ -431,7 +429,7 @@
   color: var(--tvd-text);
 }
 
-.tvd-stat--opt .tvd-stat-val {
+.tvd-stat-opt .tvd-stat-val {
   font-size: 1.75rem;
   color: var(--tvd-primary);
 }

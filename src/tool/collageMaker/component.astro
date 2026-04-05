@@ -185,7 +185,7 @@ const dropSub = (ui.dropSub ?? '').replace('{link}', `<span class="cm-drop-link"
       const enabled = images.length >= layout.images;
       const needsText = (labels.needsImgs ?? 'Necesitas {n} imágenes').replace('{n}', String(layout.images));
       const btn = document.createElement('button');
-      btn.className = ['cm-layout-btn', selectedLayout?.id === layout.id ? 'cm-layout-btn--active' : '', !enabled ? 'cm-layout-btn--disabled' : ''].filter(Boolean).join(' ');
+      btn.className = ['cm-layout-btn', selectedLayout?.id === layout.id ? 'cm-layout-btn-active' : '', !enabled ? 'cm-layout-btn-disabled' : ''].filter(Boolean).join(' ');
       btn.disabled = !enabled;
       btn.title = enabled ? layout.label : needsText;
       btn.innerHTML = `<svg viewBox="0 0 24 24" width="36" height="36" fill="currentColor" aria-hidden="true"><path d="${layout.svgPath}"/></svg><span>${layout.label}</span>${!enabled ? `<span class="cm-layout-need">${layout.images}</span>` : ''}`;
@@ -283,9 +283,9 @@ const dropSub = (ui.dropSub ?? '').replace('{link}', `<span class="cm-drop-link"
     afterImagesChange();
   }
 
-  dropZone.addEventListener('dragover', e => { e.preventDefault(); dropZone.classList.add('cm-drop-zone--over'); });
-  dropZone.addEventListener('dragleave', () => dropZone.classList.remove('cm-drop-zone--over'));
-  dropZone.addEventListener('drop', e => { e.preventDefault(); dropZone.classList.remove('cm-drop-zone--over'); if (e.dataTransfer?.files.length) loadFiles(e.dataTransfer.files); });
+  dropZone.addEventListener('dragover', e => { e.preventDefault(); dropZone.classList.add('cm-drop-zone-over'); });
+  dropZone.addEventListener('dragleave', () => dropZone.classList.remove('cm-drop-zone-over'));
+  dropZone.addEventListener('drop', e => { e.preventDefault(); dropZone.classList.remove('cm-drop-zone-over'); if (e.dataTransfer?.files.length) loadFiles(e.dataTransfer.files); });
   fileInput.addEventListener('change', () => { if (fileInput.files?.length) loadFiles(fileInput.files); fileInput.value = ''; });
 
   bwInput.addEventListener('input', () => { bwVal.textContent = bwInput.value; renderCanvas(); });

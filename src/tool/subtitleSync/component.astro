@@ -75,7 +75,7 @@ const { ui } = Astro.props;
           <div id="ss-preview-orig" class="ss-preview-scroll"></div>
         </div>
         <div class="ss-preview-box">
-          <h5 class="ss-preview-label ss-preview-label--modified">{ui.resultLabel}</h5>
+          <h5 class="ss-preview-label ss-preview-label-modified">{ui.resultLabel}</h5>
           <div id="ss-preview-mod" class="ss-preview-scroll"></div>
         </div>
       </div>
@@ -173,11 +173,11 @@ const { ui } = Astro.props;
     incBtn.addEventListener('click', () => { offsetInput.value = (parseFloat(offsetInput.value) + 0.1).toFixed(1); updateUI(); });
     offsetInput.addEventListener('input', updateUI);
 
-    dropZone.addEventListener('dragover', (e) => { e.preventDefault(); dropZone.classList.add('ss-drop--active'); });
-    dropZone.addEventListener('dragleave', () => dropZone.classList.remove('ss-drop--active'));
+    dropZone.addEventListener('dragover', (e) => { e.preventDefault(); dropZone.classList.add('ss-drop-active'); });
+    dropZone.addEventListener('dragleave', () => dropZone.classList.remove('ss-drop-active'));
     dropZone.addEventListener('drop', (e) => {
       e.preventDefault();
-      dropZone.classList.remove('ss-drop--active');
+      dropZone.classList.remove('ss-drop-active');
       if (e.dataTransfer?.files[0]) handleFile(e.dataTransfer.files[0]);
     });
   }

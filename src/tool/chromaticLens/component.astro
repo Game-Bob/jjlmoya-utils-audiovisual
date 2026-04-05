@@ -111,10 +111,10 @@ const { ui } = Astro.props;
           const action = el.querySelector('.cl-swatch-action') as HTMLElement;
           const prev = action.textContent;
           action.textContent = labels.copiedLabel;
-          el.classList.add('cl-swatch--copied');
+          el.classList.add('cl-swatch-copied');
           setTimeout(() => {
             action.textContent = prev;
-            el.classList.remove('cl-swatch--copied');
+            el.classList.remove('cl-swatch-copied');
           }, 2000);
         });
         swatches.appendChild(el);
@@ -164,11 +164,11 @@ const { ui } = Astro.props;
     });
     countSelect.addEventListener('change', processPalette);
 
-    root.addEventListener('dragover', (e) => { e.preventDefault(); emptyState.classList.add('cl-drop--active'); });
-    root.addEventListener('dragleave', () => emptyState.classList.remove('cl-drop--active'));
+    root.addEventListener('dragover', (e) => { e.preventDefault(); emptyState.classList.add('cl-drop-active'); });
+    root.addEventListener('dragleave', () => emptyState.classList.remove('cl-drop-active'));
     root.addEventListener('drop', (e) => {
       e.preventDefault();
-      emptyState.classList.remove('cl-drop--active');
+      emptyState.classList.remove('cl-drop-active');
       if (e.dataTransfer?.files[0]) handleFile(e.dataTransfer.files[0]);
     });
   }
