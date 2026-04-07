@@ -132,7 +132,6 @@ const { ui } = Astro.props;
     els.shutter.innerText = formatShutter(r.shutterSpeed);
   }
 
-  // eslint-disable-next-line complexity
   function recalculate() {
     const h = +(els.hours?.value || 0), m = +(els.minutes?.value || 0), s = +(els.seconds?.value || 0), f = +(els.fps?.value || 24);
     updateResultDisplay(calculateTimelapse(h * 3600 + m * 60, s, f));
