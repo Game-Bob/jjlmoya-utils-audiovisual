@@ -14,7 +14,7 @@ const ui: PrintQualityCalculatorUI = {
     maxPrintTitle: "Taille d'Impression Maximale",
     standardFormatsTitle: "Formats Standards Supportés",
     formatColumn: "Format",
-    measureColumn: "Mesures (cm)",
+    measureColumn: "Mesures",
     supportColumn: "Supporté ?",
     qualityExcellent: "Qualité Excellente",
     qualityGood: "Bonne Qualité",
@@ -25,7 +25,21 @@ const ui: PrintQualityCalculatorUI = {
     qualityFairDesc: "Adapté pour la visualisation numérique ou les panneaux lointains.",
     qualityPoorDesc: "L'image aura l'air pixelisée. L'impression n'est pas recommandée.",
     unitCm: "cm",
-    unitInches: "po"
+    unitInches: "po",
+    dpiScreenLabel: "Écran",
+    dpiNewspaperLabel: "Journal",
+    dpiPrintLabel: "Impression",
+    dpiFineArtLabel: "Fine Art",
+    formatPostal: "Carte Postale",
+    formatQuartilla: "Quille",
+    formatFolio: "Folio",
+    formatDoubleFolio: "Double Folio",
+    formatSmallPoster: "Petit Poster",
+    formatLargePoster: "Grand Poster",
+    formatPlane: "Plane",
+    supportedText: "Oui (Couvert)",
+    notSupportedPrefix: "Non (",
+    invalidImageError: "Veuillez sélectionner une image valide"
 };
 
 const faq: PrintQualityCalculatorLocaleContent['faq'] = [

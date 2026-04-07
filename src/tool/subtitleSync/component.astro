@@ -186,7 +186,7 @@ const { ui } = Astro.props;
 </script>
 
 <style>
-.ss-root {
+:global(.ss-root) {
   --ss-bg: #fff;
   --ss-bg-elevated: #f8fafc;
   --ss-border: #e2e8f0;
@@ -202,7 +202,7 @@ const { ui } = Astro.props;
   margin: 0 auto;
 }
 
-:global(.theme-dark) .ss-root {
+:global(.theme-dark .ss-root) {
   --ss-bg: #18181b;
   --ss-bg-elevated: #27272a;
   --ss-border: #3f3f46;
@@ -214,7 +214,7 @@ const { ui } = Astro.props;
   --ss-shadow: rgba(0, 0, 0, 0.3);
 }
 
-.ss-card {
+:global(.ss-card) {
   background: var(--ss-bg);
   border: 1px solid var(--ss-border);
   border-radius: 2.5rem;
@@ -225,7 +225,7 @@ const { ui } = Astro.props;
   gap: 3rem;
 }
 
-.ss-drop {
+:global(.ss-drop) {
   border: 3px dashed var(--ss-border);
   padding: 3.5rem 2.5rem;
   border-radius: 2.25rem;
@@ -239,13 +239,13 @@ const { ui } = Astro.props;
   text-align: center;
 }
 
-.ss-drop:hover,
-.ss-drop-active {
+:global(.ss-drop:hover),
+:global(.ss-drop-active) {
   border-color: var(--ss-accent);
   background: var(--ss-accent-alpha);
 }
 
-.ss-drop-icon {
+:global(.ss-drop-icon) {
   width: 4.5rem;
   height: 4.5rem;
   background: var(--ss-accent-alpha);
@@ -256,19 +256,19 @@ const { ui } = Astro.props;
   color: var(--ss-accent);
 }
 
-.ss-drop-icon svg {
+:global(.ss-drop-icon svg) {
   width: 2.25rem;
   height: 2.25rem;
 }
 
-.ss-drop-title {
+:global(.ss-drop-title) {
   font-size: 1.75rem;
   font-weight: 950;
   color: var(--ss-text);
   margin: 0;
 }
 
-.ss-drop-sub {
+:global(.ss-drop-sub) {
   font-size: 1rem;
   color: var(--ss-text-muted);
   max-width: 320px;
@@ -276,7 +276,7 @@ const { ui } = Astro.props;
   font-weight: 700;
 }
 
-.ss-controls {
+:global(.ss-controls) {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
@@ -284,18 +284,18 @@ const { ui } = Astro.props;
 }
 
 @media (max-width: 800px) {
-  .ss-controls {
+  :global(.ss-controls) {
     grid-template-columns: 1fr;
   }
 }
 
-.ss-control-group {
+:global(.ss-control-group) {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
 
-.ss-control-label {
+:global(.ss-control-label) {
   font-size: 0.8rem;
   font-weight: 900;
   text-transform: uppercase;
@@ -303,7 +303,7 @@ const { ui } = Astro.props;
   letter-spacing: 0.1em;
 }
 
-.ss-offset-wrap {
+:global(.ss-offset-wrap) {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -313,7 +313,7 @@ const { ui } = Astro.props;
   padding: 0.75rem 1.25rem;
 }
 
-.ss-offset-btn {
+:global(.ss-offset-btn) {
   width: 2.5rem;
   height: 2.5rem;
   background: none;
@@ -327,16 +327,16 @@ const { ui } = Astro.props;
   flex-shrink: 0;
 }
 
-.ss-offset-btn:hover {
+:global(.ss-offset-btn:hover) {
   color: var(--ss-accent);
 }
 
-.ss-offset-btn svg {
+:global(.ss-offset-btn svg) {
   width: 1.5rem;
   height: 1.5rem;
 }
 
-.ss-offset-input {
+:global(.ss-offset-input) {
   flex: 1;
   background: transparent;
   border: none;
@@ -348,28 +348,28 @@ const { ui } = Astro.props;
   text-align: center;
 }
 
-.ss-stats {
+:global(.ss-stats) {
   display: flex;
   gap: 2rem;
   justify-content: center;
   margin-top: 1rem;
 }
 
-.ss-stat {
+:global(.ss-stat) {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.25rem;
 }
 
-.ss-stat-value {
+:global(.ss-stat-value) {
   display: block;
   font-weight: 900;
   color: var(--ss-accent);
   font-size: 1.25rem;
 }
 
-.ss-stat-label {
+:global(.ss-stat-label) {
   font-size: 0.7rem;
   font-weight: 800;
   text-transform: uppercase;
@@ -377,33 +377,33 @@ const { ui } = Astro.props;
   letter-spacing: 0.05em;
 }
 
-.ss-status-card {
+:global(.ss-status-card) {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
 
-.ss-file-row {
+:global(.ss-file-row) {
   display: flex;
   align-items: center;
   gap: 1.5rem;
 }
 
-.ss-file-icon {
+:global(.ss-file-icon) {
   width: 3rem;
   height: 3rem;
   color: var(--ss-accent);
   flex-shrink: 0;
 }
 
-.ss-file-info {
+:global(.ss-file-info) {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
   min-width: 0;
 }
 
-.ss-file-name {
+:global(.ss-file-name) {
   font-weight: 950;
   color: var(--ss-text);
   font-size: 0.95rem;
@@ -412,13 +412,13 @@ const { ui } = Astro.props;
   text-overflow: ellipsis;
 }
 
-.ss-file-times {
+:global(.ss-file-times) {
   font-size: 0.8rem;
   font-weight: 700;
   color: var(--ss-text-muted);
 }
 
-.ss-btn-primary {
+:global(.ss-btn-primary) {
   width: 100%;
   padding: 1.25rem;
   background: var(--ss-accent);
@@ -435,17 +435,17 @@ const { ui } = Astro.props;
   transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s;
 }
 
-.ss-btn-primary:hover {
+:global(.ss-btn-primary:hover) {
   transform: translateY(-4px) scale(1.02);
   box-shadow: 0 15px 35px -10px var(--ss-accent);
 }
 
-.ss-btn-primary svg {
+:global(.ss-btn-primary svg) {
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.ss-previews {
+:global(.ss-previews) {
   grid-column: 1 / -1;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -453,13 +453,13 @@ const { ui } = Astro.props;
 }
 
 @media (max-width: 800px) {
-  .ss-previews {
+  :global(.ss-previews) {
     grid-column: auto;
     grid-template-columns: 1fr;
   }
 }
 
-.ss-preview-box {
+:global(.ss-preview-box) {
   background: var(--ss-bg-elevated);
   padding: 1.5rem;
   border-radius: 1.75rem;
@@ -469,7 +469,7 @@ const { ui } = Astro.props;
   gap: 1rem;
 }
 
-.ss-preview-label {
+:global(.ss-preview-label) {
   font-size: 0.75rem;
   font-weight: 950;
   text-transform: uppercase;
@@ -478,11 +478,11 @@ const { ui } = Astro.props;
   letter-spacing: 0.05em;
 }
 
-.ss-preview-label-modified {
+:global(.ss-preview-label-modified) {
   color: var(--ss-accent);
 }
 
-.ss-preview-scroll {
+:global(.ss-preview-scroll) {
   max-height: 250px;
   overflow-y: auto;
   display: flex;
@@ -490,25 +490,25 @@ const { ui } = Astro.props;
   gap: 1rem;
 }
 
-.ss-preview-item {
+:global(.ss-preview-item) {
   font-size: 0.85rem;
   line-height: 1.5;
 }
 
-.ss-preview-time {
+:global(.ss-preview-time) {
   font-weight: 950;
   color: var(--ss-accent);
   font-size: 0.75rem;
   margin: 0 0 0.25rem;
 }
 
-.ss-preview-text {
+:global(.ss-preview-text) {
   font-weight: 700;
   color: var(--ss-text);
   margin: 0;
 }
 
-.ss-hidden {
+:global(.ss-hidden) {
   display: none;
 }
 </style>

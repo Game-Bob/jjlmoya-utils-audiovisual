@@ -246,7 +246,7 @@ const dropSub = (ui.dropSub ?? '').replace('{link}', `<span class="cm-drop-link"
     ctx.fillRect(0, 0, W, H);
     for (let i = 0; i < Math.min(images.length, pos.length); i++) {
       const p = pos[i]!;
-      await drawImage(ctx, images[i]!.src, p[0], p[1], p[2], p[3]);
+      await drawImage(ctx, images[i]!.src, { x: p[0], y: p[1], w: p[2], h: p[3] });
       if (gap > 0) { ctx.strokeStyle = bcInput.value; ctx.lineWidth = gap; ctx.strokeRect(p[0]-gap/2, p[1]-gap/2, p[2]+gap, p[3]+gap); }
     }
     canvas.style.display = '';
@@ -301,7 +301,7 @@ const dropSub = (ui.dropSub ?? '').replace('{link}', `<span class="cm-drop-link"
 </script>
 
 <style>
-.cm-root {
+:global(.cm-root) {
   --cm-bg: #fff;
   --cm-bg-muted: #f8fafc;
   --cm-border: #e2e8f0;
@@ -317,7 +317,7 @@ const dropSub = (ui.dropSub ?? '').replace('{link}', `<span class="cm-drop-link"
   padding: 1rem;
 }
 
-:global(.theme-dark) .cm-root {
+:global(.theme-dark .cm-root) {
   --cm-bg: #1e293b;
   --cm-bg-muted: #0f172a;
   --cm-border: #334155;
@@ -328,7 +328,7 @@ const dropSub = (ui.dropSub ?? '').replace('{link}', `<span class="cm-drop-link"
   --cm-shadow: rgba(0,0,0,0.4);
 }
 
-.cm-card {
+:global(.cm-card) {
   background: var(--cm-bg);
   border: 1px solid var(--cm-border);
   border-radius: var(--cm-radius);
@@ -336,7 +336,7 @@ const dropSub = (ui.dropSub ?? '').replace('{link}', `<span class="cm-drop-link"
   overflow: hidden;
 }
 
-.cm-top-row {
+:global(.cm-top-row) {
   display: grid;
   grid-template-columns: 300px 1fr;
   gap: 0;
@@ -348,7 +348,7 @@ const dropSub = (ui.dropSub ?? '').replace('{link}', `<span class="cm-drop-link"
   }
 }
 
-.cm-left-col {
+:global(.cm-left-col) {
   padding: 1.25rem;
   border-right: 1px solid var(--cm-border);
   display: flex;
@@ -363,7 +363,7 @@ const dropSub = (ui.dropSub ?? '').replace('{link}', `<span class="cm-drop-link"
   }
 }
 
-.cm-drop-zone {
+:global(.cm-drop-zone) {
   position: relative;
   background: var(--cm-bg-muted);
   border: 2px dashed var(--cm-border);
@@ -379,7 +379,7 @@ const dropSub = (ui.dropSub ?? '').replace('{link}', `<span class="cm-drop-link"
   color: var(--cm-primary);
 }
 
-.cm-drop-zone input[type="file"] {
+:global(.cm-drop-zone input[type="file"]) {
   position: absolute;
   inset: 0;
   opacity: 0;
@@ -388,32 +388,32 @@ const dropSub = (ui.dropSub ?? '').replace('{link}', `<span class="cm-drop-link"
   height: 100%;
 }
 
-.cm-drop-zone:hover,
-.cm-drop-zone-over {
+:global(.cm-drop-zone:hover),
+:global(.cm-drop-zone-over) {
   border-color: var(--cm-primary);
   background: var(--cm-primary-light);
 }
 
-.cm-drop-title {
+:global(.cm-drop-title) {
   font-size: 0.9rem;
   font-weight: 700;
   color: var(--cm-text);
   margin: 0;
 }
 
-.cm-drop-sub {
+:global(.cm-drop-sub) {
   font-size: 0.75rem;
   color: var(--cm-text-muted);
   margin: 0;
 }
 
-.cm-drop-link {
+:global(.cm-drop-link) {
   color: var(--cm-primary);
   font-weight: 600;
   cursor: pointer;
 }
 
-.cm-section-label {
+:global(.cm-section-label) {
   display: block;
   font-size: 0.65rem;
   font-weight: 700;
@@ -422,13 +422,13 @@ const dropSub = (ui.dropSub ?? '').replace('{link}', `<span class="cm-drop-link"
   color: var(--cm-text-muted);
 }
 
-.cm-section-header {
+:global(.cm-section-header) {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.cm-badge {
+:global(.cm-badge) {
   background: var(--cm-primary-light);
   color: var(--cm-primary);
   font-size: 0.65rem;
@@ -437,14 +437,14 @@ const dropSub = (ui.dropSub ?? '').replace('{link}', `<span class="cm-drop-link"
   border-radius: 9999px;
 }
 
-.cm-thumbs {
+:global(.cm-thumbs) {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(48px, 1fr));
   gap: 0.35rem;
   margin-top: 0.5rem;
 }
 
-.cm-thumb {
+:global(.cm-thumb) {
   position: relative;
   aspect-ratio: 1;
   border-radius: 0.4rem;
@@ -453,18 +453,18 @@ const dropSub = (ui.dropSub ?? '').replace('{link}', `<span class="cm-drop-link"
   transition: border-color 0.15s;
 }
 
-.cm-thumb:hover {
+:global(.cm-thumb:hover) {
   border-color: var(--cm-primary);
 }
 
-.cm-thumb img {
+:global(.cm-thumb img) {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-.cm-thumb-num {
+:global(.cm-thumb-num) {
   position: absolute;
   bottom: 2px;
   left: 3px;
@@ -475,7 +475,7 @@ const dropSub = (ui.dropSub ?? '').replace('{link}', `<span class="cm-drop-link"
   line-height: 1;
 }
 
-.cm-thumb-del {
+:global(.cm-thumb-del) {
   position: absolute;
   top: 2px;
   right: 2px;
@@ -493,15 +493,15 @@ const dropSub = (ui.dropSub ?? '').replace('{link}', `<span class="cm-drop-link"
   transition: background 0.15s;
 }
 
-.cm-thumb:hover .cm-thumb-del {
+:global(.cm-thumb:hover .cm-thumb-del) {
   display: flex;
 }
 
-.cm-thumb-del:hover {
+:global(.cm-thumb-del:hover) {
   background: #dc2626;
 }
 
-.cm-preview-col {
+:global(.cm-preview-col) {
   padding: 1.25rem;
   display: flex;
   flex-direction: column;
@@ -509,7 +509,7 @@ const dropSub = (ui.dropSub ?? '').replace('{link}', `<span class="cm-drop-link"
   min-height: 260px;
 }
 
-.cm-preview-placeholder {
+:global(.cm-preview-placeholder) {
   flex: 1;
   background: var(--cm-bg-muted);
   border: 2px dashed var(--cm-border);
@@ -522,12 +522,12 @@ const dropSub = (ui.dropSub ?? '').replace('{link}', `<span class="cm-drop-link"
   color: var(--cm-text-muted);
 }
 
-.cm-preview-placeholder p {
+:global(.cm-preview-placeholder p) {
   font-size: 0.8rem;
   margin: 0;
 }
 
-.cm-canvas {
+:global(.cm-canvas) {
   width: 100%;
   height: auto;
   border-radius: 0.75rem;
@@ -535,7 +535,7 @@ const dropSub = (ui.dropSub ?? '').replace('{link}', `<span class="cm-drop-link"
   display: block;
 }
 
-.cm-dims-badge {
+:global(.cm-dims-badge) {
   font-size: 0.65rem;
   font-weight: 600;
   color: var(--cm-text-muted);
@@ -545,7 +545,7 @@ const dropSub = (ui.dropSub ?? '').replace('{link}', `<span class="cm-drop-link"
   padding: 0.15rem 0.5rem;
 }
 
-.cm-section-divider {
+:global(.cm-section-divider) {
   border-top: 1px solid var(--cm-border);
   padding: 1rem 1.25rem;
   display: flex;
@@ -553,13 +553,13 @@ const dropSub = (ui.dropSub ?? '').replace('{link}', `<span class="cm-drop-link"
   gap: 0.75rem;
 }
 
-.cm-layouts {
+:global(.cm-layouts) {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(64px, 1fr));
   gap: 0.4rem;
 }
 
-.cm-layout-btn {
+:global(.cm-layout-btn) {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -574,31 +574,31 @@ const dropSub = (ui.dropSub ?? '').replace('{link}', `<span class="cm-drop-link"
   position: relative;
 }
 
-.cm-layout-btn span {
+:global(.cm-layout-btn span) {
   font-size: 0.55rem;
   font-weight: 600;
   text-align: center;
   line-height: 1.2;
 }
 
-.cm-layout-btn:hover:not(:disabled) {
+:global(.cm-layout-btn:hover:not(:disabled)) {
   border-color: var(--cm-primary);
   color: var(--cm-primary);
   background: var(--cm-primary-light);
 }
 
-.cm-layout-btn-active {
+:global(.cm-layout-btn-active) {
   border-color: var(--cm-primary);
   background: var(--cm-primary-light);
   color: var(--cm-primary);
 }
 
-.cm-layout-btn-disabled {
+:global(.cm-layout-btn-disabled) {
   opacity: 0.45;
   cursor: not-allowed;
 }
 
-.cm-layout-need {
+:global(.cm-layout-need) {
   position: absolute;
   top: 2px;
   right: 4px;
@@ -612,37 +612,37 @@ const dropSub = (ui.dropSub ?? '').replace('{link}', `<span class="cm-drop-link"
   line-height: 1.4;
 }
 
-.cm-settings-inline {
+:global(.cm-settings-inline) {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
   gap: 1rem;
 }
 
-.cm-setting {
+:global(.cm-setting) {
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
 }
 
-.cm-setting-label {
+:global(.cm-setting-label) {
   font-size: 0.7rem;
   font-weight: 600;
   color: var(--cm-text-muted);
 }
 
-.cm-slider {
+:global(.cm-slider) {
   accent-color: var(--cm-primary);
   width: 120px;
 }
 
-.cm-color-row {
+:global(.cm-color-row) {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
-.cm-color-swatch {
+:global(.cm-color-swatch) {
   width: 32px;
   height: 32px;
   border: 2px solid var(--cm-border);
@@ -652,14 +652,14 @@ const dropSub = (ui.dropSub ?? '').replace('{link}', `<span class="cm-drop-link"
   background: transparent;
 }
 
-.cm-color-code {
+:global(.cm-color-code) {
   font-size: 0.7rem;
   font-weight: 600;
   color: var(--cm-text-muted);
   font-variant-numeric: tabular-nums;
 }
 
-.cm-download-btn {
+:global(.cm-download-btn) {
   display: flex;
   align-items: center;
   gap: 0.4rem;
@@ -677,13 +677,13 @@ const dropSub = (ui.dropSub ?? '').replace('{link}', `<span class="cm-drop-link"
   margin-left: auto;
 }
 
-.cm-download-btn:disabled {
+:global(.cm-download-btn:disabled) {
   opacity: 0.4;
   cursor: not-allowed;
   box-shadow: none;
 }
 
-.cm-download-btn:not(:disabled):hover {
+:global(.cm-download-btn:not(:disabled):hover) {
   transform: translateY(-1px);
   box-shadow: 0 6px 18px rgba(99,102,241,0.4);
 }

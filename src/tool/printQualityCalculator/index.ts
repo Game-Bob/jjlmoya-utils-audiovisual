@@ -24,6 +24,20 @@ export interface PrintQualityCalculatorUI {
     qualityPoorDesc: string;
     unitCm: string;
     unitInches: string;
+    dpiScreenLabel: string;
+    dpiNewspaperLabel: string;
+    dpiPrintLabel: string;
+    dpiFineArtLabel: string;
+    formatPostal: string;
+    formatQuartilla: string;
+    formatFolio: string;
+    formatDoubleFolio: string;
+    formatSmallPoster: string;
+    formatLargePoster: string;
+    formatPlane: string;
+    supportedText: string;
+    notSupportedPrefix: string;
+    invalidImageError: string;
     [key: string]: string;
 }
 

@@ -11,7 +11,8 @@ const ui: ImageCompressorUI = {
     settingsTitle: "Paramètres de Compression",
     qualityLabel: "Qualité Visuelle",
     widthLabel: "Largeur Maximale (Pixels)",
-    convertToWebpLabel: "Convertir en WebP (Recommandé)",
+    convertToWebpLabel: "Convertir en WebP",
+    compressionLabel: "Compression",
     compressBtn: "Compresser l'Image",
     processingLabel: "Traitement...",
     resultsTitle: "Images Optimisées",
@@ -19,7 +20,16 @@ const ui: ImageCompressorUI = {
     newSizeLabel: "Nouvelle Taille",
     reductionLabel: "Économie",
     downloadBtn: "Télécharger",
-    addMoreBtn: "Ajouter"
+    addMoreBtn: "Ajouter",
+    browseFilesBtn: "Parcourir les fichiers",
+    processedFilesTitle: "Fichiers Traités",
+    downloadAllBtn: "Tout Télécharger",
+    adjustThisImage: "Ajuster cette image",
+    downloadTitle: "Télécharger",
+    maxWidthLabel: "Larg. max (px)",
+    closeBtn: "Fermer",
+    totalSavingsLabel: "Économies totales",
+    noSavings: "Pas d'économies nettes"
 };
 
 const faq: ImageCompressorLocaleContent['faq'] = [

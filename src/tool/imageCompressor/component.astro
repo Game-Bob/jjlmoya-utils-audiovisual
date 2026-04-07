@@ -1,7 +1,14 @@
 ---
+import type { ImageCompressorUI } from './index';
+
+interface Props {
+  ui: ImageCompressorUI;
+}
+
+const { ui } = Astro.props;
 ---
 
-<div class="ic-dashboard" id="image-compressor-root">
+<div class="ic-dashboard" id="image-compressor-root" data-ui={JSON.stringify(ui)}>
 
   <div class="ic-global-settings">
     <div class="ic-toggle-group">
@@ -9,10 +16,10 @@
         <input type="checkbox" id="global-webp-toggle" checked />
         <span class="ic-webp-slider"></span>
       </label>
-      <span class="ic-toggle-label">Convertir a WebP</span>
+      <span class="ic-toggle-label">{ui.convertToWebpLabel}</span>
     </div>
     <div class="ic-settings-group">
-      <label for="global-quality">Compresión: <span id="global-q-val">80</span>%</label>
+      <label for="global-quality">{ui.compressionLabel}: <span id="global-q-val">80</span>%</label>
       <input type="range" id="global-quality" min="10" max="100" value="80" class="ic-mini-slider" />
     </div>
   </div>
@@ -24,21 +31,21 @@
           <path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1M16 8l-4-4-4 4M12 4v12" />
         </svg>
       </span>
-      <span class="ic-upload-text">Suelta tus imágenes aquí</span>
-      <span class="ic-upload-subtext">Soporta múltiples archivos a la vez</span>
-      <span class="ic-upload-btn">Explorar archivos</span>
+      <span class="ic-upload-text">{ui.dropTitle}</span>
+      <span class="ic-upload-subtext">{ui.dropSubtitle}</span>
+      <span class="ic-upload-btn">{ui.browseFilesBtn}</span>
     </label>
     <input type="file" id="image-input" accept="image/jpeg,image/png,image/webp" multiple />
   </div>
 
   <div id="file-list-container" class="ic-file-list-container" style="display:none">
     <div class="ic-list-header">
-      <h3>Archivos Procesados</h3>
+      <h3>{ui.processedFilesTitle}</h3>
       <span id="total-savings" class="ic-total-savings"></span>
     </div>
     <ul id="file-list" class="ic-file-list"></ul>
     <div class="ic-global-actions">
-      <button id="download-all" class="ic-primary-btn">Descargar Todas</button>
+      <button id="download-all" class="ic-primary-btn">{ui.downloadAllBtn}</button>
     </div>
   </div>
 
@@ -70,10 +77,10 @@
         <span class="ic-savings-pct"></span>
       </div>
       <div class="ic-item-actions">
-        <button class="ic-icon-btn ic-edit-btn" title="Ajustar esta imagen">
+        <button class="ic-icon-btn ic-edit-btn" title={ui.adjustThisImage}>
           <svg viewBox="0 0 24 24" fill="none" width="18" height="18" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.6 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.6a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
         </button>
-        <a class="ic-icon-btn ic-download-btn" title="Descargar" download>
+        <a class="ic-icon-btn ic-download-btn" title={ui.downloadTitle} download>
           <svg viewBox="0 0 24 24" fill="none" width="18" height="18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1M12 4v12M8 12l4 4 4-4"/></svg>
         </a>
       </div>
@@ -82,21 +89,24 @@
     <div class="ic-inline-editor" style="display:none">
       <div class="ic-editor-controls">
         <div class="ic-editor-group">
-          <label>Calidad: <span class="ic-local-q-val">80</span>%</label>
+          <label>{ui.qualityLabel}: <span class="ic-local-q-val">80</span>%</label>
           <input type="range" class="ic-local-quality" min="10" max="100" value="80" />
         </div>
         <div class="ic-editor-group">
-          <label>Ancho máx. (px):</label>
+          <label>{ui.maxWidthLabel}:</label>
           <input type="number" class="ic-local-width" placeholder="Original" />
         </div>
       </div>
-      <button class="ic-editor-close">Cerrar</button>
+      <button class="ic-editor-close">{ui.closeBtn}</button>
     </div>
   </li>
 </template>
 
 <script>
   import { compressImage, formatBytes, generateId, type CompressorSettings } from './logic';
+
+  const root = document.getElementById('image-compressor-root');
+  const ui = root ? JSON.parse(root.dataset.ui || '{}') : {};
 
   interface QueueItem {
     id: string;
@@ -124,12 +134,12 @@
   const globalWebp     = document.getElementById('global-webp-toggle') as HTMLInputElement;
 
   globalQuality?.addEventListener('input', () => {
-    globalQVal.textContent = globalQuality.value;
+    if (globalQVal) globalQVal.textContent = globalQuality.value;
   });
 
   async function handleFiles(files: FileList | File[]) {
     if (!files.length) return;
-    container.style.display = '';
+    if (container) container.style.display = '';
 
     for (let i = 0; i < files.length; i++) {
       const file = files[i];
@@ -137,7 +147,7 @@
 
       const id = generateId();
       const settings: CompressorSettings = {
-        quality: parseInt(globalQuality.value),
+        quality: parseInt(globalQuality?.value || '80'),
         width: null,
         convertToWebp: globalWebp?.checked ?? true,
       };
@@ -152,12 +162,15 @@
   }
 
   function appendItem(item: QueueItem) {
+    if (!template || !fileList) return;
     const clone = template.content.cloneNode(true) as DocumentFragment;
     const li = clone.querySelector('li') as HTMLLIElement;
     li.dataset.id = item.id;
 
-    (li.querySelector('.ic-filename') as HTMLElement).textContent = item.file.name;
-    (li.querySelector('.ic-orig-size') as HTMLElement).textContent = formatBytes(item.originalSize);
+    const filenameElem = li.querySelector('.ic-filename') as HTMLElement;
+    const origSizeElem = li.querySelector('.ic-orig-size') as HTMLElement;
+    if (filenameElem) filenameElem.textContent = item.file.name;
+    if (origSizeElem) origSizeElem.textContent = formatBytes(item.originalSize);
 
     const localQ    = li.querySelector('.ic-local-quality') as HTMLInputElement;
     const localQVal = li.querySelector('.ic-local-q-val') as HTMLElement;
@@ -166,20 +179,31 @@
     const editBtn   = li.querySelector('.ic-edit-btn') as HTMLButtonElement;
     const closeBtn  = li.querySelector('.ic-editor-close') as HTMLButtonElement;
 
-    localQ.value = item.settings.quality.toString();
-    localQVal.textContent = item.settings.quality.toString();
+    if (localQ) {
+      localQ.value = item.settings.quality.toString();
+      if (localQVal) localQVal.textContent = item.settings.quality.toString();
+    }
 
-    editBtn.addEventListener('click', () => {
-      editor.style.display = editor.style.display === 'none' ? '' : 'none';
+    editBtn?.addEventListener('click', () => {
+      if (editor) {
+        editor.style.display = editor.style.display === 'none' ? '' : 'none';
+      }
     });
-    closeBtn.addEventListener('click', () => { editor.style.display = 'none'; });
+    
+    closeBtn?.addEventListener('click', () => { 
+      if (editor) editor.style.display = 'none'; 
+    });
 
-    localQ.addEventListener('input', () => { localQVal.textContent = localQ.value; });
-    localQ.addEventListener('change', () => {
+    localQ?.addEventListener('input', () => { 
+      if (localQVal) localQVal.textContent = localQ.value; 
+    });
+    
+    localQ?.addEventListener('change', () => {
       item.settings.quality = parseInt(localQ.value);
       processItem(item).then(() => updateTotals());
     });
-    localW.addEventListener('change', () => {
+    
+    localW?.addEventListener('change', () => {
       item.settings.width = localW.value ? parseInt(localW.value) : null;
       processItem(item).then(() => updateTotals());
     });
@@ -188,6 +212,7 @@
   }
 
   async function processItem(item: QueueItem): Promise<void> {
+    if (!fileList) return;
     const li = fileList.querySelector(`li[data-id="${item.id}"]`) as HTMLLIElement;
     const result = await compressImage(item.file, item.settings);
 
@@ -205,48 +230,61 @@
     const pill        = li.querySelector('.ic-savings-pill') as HTMLElement;
     const downloadBtn = li.querySelector('.ic-download-btn') as HTMLAnchorElement;
 
-    previewImg.src = result.dataUrl;
+    if (previewImg) previewImg.src = result.dataUrl;
 
-    newSizeTxt.textContent = formatBytes(result.newSize);
+    if (newSizeTxt) newSizeTxt.textContent = formatBytes(result.newSize);
     const savings = ((item.originalSize - result.newSize) / item.originalSize) * 100;
 
-    if (savings < 0) {
-      savingsPct.textContent = `+${Math.abs(savings).toFixed(1)}%`;
-      pill.classList.add('ic-savings-pill-negative');
-    } else {
-      savingsPct.textContent = `-${savings.toFixed(1)}%`;
-      pill.classList.remove('ic-savings-pill-negative');
+    if (savingsPct && pill) {
+      if (savings < 0) {
+        savingsPct.textContent = `+${Math.abs(savings).toFixed(1)}%`;
+        pill.classList.add('ic-savings-pill-negative');
+      } else {
+        savingsPct.textContent = `-${savings.toFixed(1)}%`;
+        pill.classList.remove('ic-savings-pill-negative');
+      }
     }
 
     const baseName = item.file.name.replace(/\.[^/.]+$/, '');
-    downloadBtn.href = result.dataUrl;
-    downloadBtn.download = `${baseName}.${item.ext}`;
+    if (downloadBtn) {
+      downloadBtn.href = result.dataUrl;
+      downloadBtn.download = `${baseName}.${item.ext}`;
+    }
   }
 
   function updateTotals() {
+    if (!totalSavingsTxt) return;
     totalCompressedSize = Array.from(queue.values()).reduce((sum, i) => sum + i.newSize, 0);
     const saved = totalOriginalSize - totalCompressedSize;
     if (saved > 0) {
-      totalSavingsTxt.textContent = `Ahorro total: ${formatBytes(saved)}`;
+      totalSavingsTxt.textContent = `${ui.totalSavingsLabel}: ${formatBytes(saved)}`;
       totalSavingsTxt.style.color = '#10b981';
     } else {
-      totalSavingsTxt.textContent = 'Sin ahorro neto';
+      totalSavingsTxt.textContent = ui.noSavings || '';
       totalSavingsTxt.style.color = '#ef4444';
     }
   }
 
-  dropZone.addEventListener('dragover', (e) => { e.preventDefault(); dropZone.classList.add('ic-dragover'); });
-  dropZone.addEventListener('dragleave', () => { dropZone.classList.remove('ic-dragover'); });
-  dropZone.addEventListener('drop', (e) => {
+  dropZone?.addEventListener('dragover', (e) => { 
+    e.preventDefault(); 
+    dropZone.classList.add('ic-dragover'); 
+  });
+  
+  dropZone?.addEventListener('dragleave', () => { 
+    dropZone.classList.remove('ic-dragover'); 
+  });
+  
+  dropZone?.addEventListener('drop', (e) => {
     e.preventDefault();
     dropZone.classList.remove('ic-dragover');
     if (e.dataTransfer?.files.length) handleFiles(e.dataTransfer.files);
   });
-  fileInput.addEventListener('change', () => {
+  
+  fileInput?.addEventListener('change', () => {
     if (fileInput.files?.length) handleFiles(fileInput.files);
   });
 
-  downloadAllBtn.addEventListener('click', () => {
+  downloadAllBtn?.addEventListener('click', () => {
     queue.forEach((item) => {
       if (!item.dataUrl) return;
       const a = document.createElement('a');
@@ -261,7 +299,7 @@
 </script>
 
 <style>
-.ic-dashboard {
+:global(.ic-dashboard) {
   max-width: 900px;
   margin: 0 auto;
   display: flex;
@@ -283,7 +321,7 @@
   --ic-shadow: rgba(0, 0, 0, 0.03);
 }
 
-:global(.theme-dark) .ic-dashboard {
+:global(.theme-dark .ic-dashboard) {
   --ic-bg: #0f172a;
   --ic-bg-muted: #1e293b;
   --ic-border: #334155;
@@ -295,7 +333,7 @@
   --ic-shadow: rgba(0, 0, 0, 0.4);
 }
 
-.ic-global-settings {
+:global(.ic-global-settings) {
   display: flex;
   justify-content: flex-end;
   gap: 1.5rem;
@@ -308,32 +346,32 @@
   flex-wrap: wrap;
 }
 
-:global(.theme-dark) .ic-global-settings {
+:global(.theme-dark .ic-global-settings) {
   background: rgba(30, 41, 59, 0.6);
   border-color: rgba(71, 85, 105, 0.5);
   color: var(--ic-text-muted);
 }
 
-.ic-toggle-group {
+:global(.ic-toggle-group) {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
-.ic-webp-switch {
+:global(.ic-webp-switch) {
   position: relative;
   display: inline-block;
   width: 44px;
   height: 24px;
 }
 
-.ic-webp-switch input {
+:global(.ic-webp-switch input) {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-.ic-webp-slider {
+:global(.ic-webp-slider) {
   position: absolute;
   cursor: pointer;
   inset: 0;
@@ -342,7 +380,7 @@
   transition: 0.3s;
 }
 
-.ic-webp-slider::before {
+:global(.ic-webp-slider::before) {
   content: '';
   position: absolute;
   width: 18px;
@@ -355,20 +393,20 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.ic-webp-switch input:checked + .ic-webp-slider {
+:global(.ic-webp-switch input:checked + .ic-webp-slider) {
   background: var(--ic-accent);
 }
 
-.ic-webp-switch input:checked + .ic-webp-slider::before {
+:global(.ic-webp-switch input:checked + .ic-webp-slider::before) {
   transform: translateX(20px);
 }
 
-.ic-toggle-label {
+:global(.ic-toggle-label) {
   font-size: 0.9rem;
   font-weight: 600;
 }
 
-.ic-settings-group {
+:global(.ic-settings-group) {
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -376,12 +414,12 @@
   font-weight: 600;
 }
 
-.ic-mini-slider {
+:global(.ic-mini-slider) {
   width: 100px;
   accent-color: var(--ic-accent);
 }
 
-.ic-drop-zone {
+:global(.ic-drop-zone) {
   position: relative;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.45) 100%);
   border: 3px dashed var(--ic-accent);
@@ -394,23 +432,23 @@
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
 }
 
-:global(.theme-dark) .ic-drop-zone {
+:global(.theme-dark .ic-drop-zone) {
   background: linear-gradient(180deg, rgba(30, 41, 59, 0.85) 0%, rgba(15, 23, 42, 0.6) 100%);
 }
 
-.ic-drop-zone.ic-dragover,
-.ic-drop-zone:hover {
+:global(.ic-drop-zone.ic-dragover),
+:global(.ic-drop-zone:hover) {
   transform: scale(1.01);
   border-color: var(--ic-accent-dark);
   background: linear-gradient(180deg, var(--ic-accent-light) 0%, rgba(255, 255, 255, 0.6) 100%);
 }
 
-:global(.theme-dark) .ic-drop-zone.ic-dragover,
-:global(.theme-dark) .ic-drop-zone:hover {
+:global(.theme-dark .ic-drop-zone.ic-dragover),
+:global(.theme-dark .ic-drop-zone:hover) {
   background: linear-gradient(180deg, rgba(6, 78, 59, 0.4) 0%, rgba(15, 23, 42, 0.6) 100%);
 }
 
-.ic-file-label {
+:global(.ic-file-label) {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -419,24 +457,24 @@
   pointer-events: none;
 }
 
-.ic-upload-icon {
+:global(.ic-upload-icon) {
   color: var(--ic-accent);
   margin-bottom: 0.5rem;
 }
 
-.ic-upload-text {
+:global(.ic-upload-text) {
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--ic-text);
 }
 
-.ic-upload-subtext {
+:global(.ic-upload-subtext) {
   color: var(--ic-text-muted);
   font-size: 1rem;
   margin-bottom: 1rem;
 }
 
-.ic-upload-btn {
+:global(.ic-upload-btn) {
   background: var(--ic-text);
   color: var(--ic-bg);
   padding: 0.75rem 2rem;
@@ -447,11 +485,11 @@
   transition: background 0.2s;
 }
 
-.ic-upload-btn:hover {
+:global(.ic-upload-btn:hover) {
   background: var(--ic-text-muted);
 }
 
-.ic-drop-zone input[type="file"] {
+:global(.ic-drop-zone input[type="file"]) {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -460,11 +498,11 @@
   cursor: pointer;
 }
 
-.ic-file-list-container {
+:global(.ic-file-list-container) {
   margin-top: 1.5rem;
 }
 
-.ic-list-header {
+:global(.ic-list-header) {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -472,19 +510,19 @@
   padding: 0 0.5rem;
 }
 
-.ic-list-header h3 {
+:global(.ic-list-header h3) {
   font-size: 1.25rem;
   font-weight: 700;
   color: var(--ic-text);
   margin: 0;
 }
 
-.ic-total-savings {
+:global(.ic-total-savings) {
   font-weight: 700;
   font-size: 1rem;
 }
 
-.ic-file-list {
+:global(.ic-file-list) {
   list-style: none;
   padding: 1rem;
   margin: 0;
@@ -496,7 +534,7 @@
   border: 1px solid var(--ic-border);
 }
 
-.ic-file-item {
+:global(.ic-file-item) {
   background: var(--ic-bg);
   border-radius: 0.75rem;
   padding: 0.75rem 1.25rem;
@@ -508,18 +546,18 @@
   transition: box-shadow 0.2s;
 }
 
-.ic-file-item:hover {
+:global(.ic-file-item:hover) {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
-.ic-preview-col {
+:global(.ic-preview-col) {
   display: flex;
   align-items: center;
   gap: 1rem;
   overflow: hidden;
 }
 
-.ic-preview-wrapper {
+:global(.ic-preview-wrapper) {
   width: 48px;
   height: 48px;
   border-radius: 0.5rem;
@@ -528,19 +566,19 @@
   flex-shrink: 0;
 }
 
-.ic-preview-img {
+:global(.ic-preview-img) {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.ic-file-info {
+:global(.ic-file-info) {
   display: flex;
   flex-direction: column;
   overflow: hidden;
 }
 
-.ic-filename {
+:global(.ic-filename) {
   font-weight: 600;
   color: var(--ic-text);
   white-space: nowrap;
@@ -549,17 +587,17 @@
   font-size: 0.9rem;
 }
 
-.ic-orig-size {
+:global(.ic-orig-size) {
   color: var(--ic-text-muted);
   font-size: 0.8rem;
 }
 
-.ic-arrow-col {
+:global(.ic-arrow-col) {
   display: flex;
   justify-content: center;
 }
 
-.ic-arrow-circle {
+:global(.ic-arrow-circle) {
   background: var(--ic-accent-light);
   color: var(--ic-accent);
   width: 36px;
@@ -571,41 +609,41 @@
   flex-shrink: 0;
 }
 
-.ic-result-col {
+:global(.ic-result-col) {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   gap: 1.25rem;
 }
 
-.ic-savings-pill {
+:global(.ic-savings-pill) {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.ic-new-size {
+:global(.ic-new-size) {
   font-weight: 700;
   color: var(--ic-text);
   font-size: 0.95rem;
 }
 
-.ic-savings-pct {
+:global(.ic-savings-pct) {
   color: var(--ic-accent);
   font-weight: 800;
   font-size: 0.85rem;
 }
 
-.ic-savings-pill-negative .ic-savings-pct {
+:global(.ic-savings-pill-negative .ic-savings-pct) {
   color: var(--ic-error);
 }
 
-.ic-item-actions {
+:global(.ic-item-actions) {
   display: flex;
   gap: 0.4rem;
 }
 
-.ic-icon-btn {
+:global(.ic-icon-btn) {
   background: var(--ic-bg-muted);
   border: none;
   color: var(--ic-text-muted);
@@ -621,22 +659,22 @@
   flex-shrink: 0;
 }
 
-.ic-icon-btn:hover {
+:global(.ic-icon-btn:hover) {
   background: var(--ic-border);
   color: var(--ic-text);
 }
 
-.ic-download-btn {
+:global(.ic-download-btn) {
   background: var(--ic-accent);
   color: var(--ic-bg);
 }
 
-.ic-download-btn:hover {
+:global(.ic-download-btn:hover) {
   background: var(--ic-accent-dark);
   color: var(--ic-bg);
 }
 
-.ic-inline-editor {
+:global(.ic-inline-editor) {
   grid-column: 1 / -1;
   background: var(--ic-bg-muted);
   border-radius: 0.75rem;
@@ -661,13 +699,13 @@
   }
 }
 
-.ic-editor-controls {
+:global(.ic-editor-controls) {
   display: flex;
   gap: 1.5rem;
   flex-wrap: wrap;
 }
 
-.ic-editor-group {
+:global(.ic-editor-group) {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
@@ -676,11 +714,11 @@
   color: var(--ic-text-muted);
 }
 
-.ic-editor-group input[type="range"] {
+:global(.ic-editor-group input[type="range"]) {
   accent-color: var(--ic-accent);
 }
 
-.ic-editor-group input[type="number"] {
+:global(.ic-editor-group input[type="number"]) {
   padding: 0.25rem 0.5rem;
   border: 1px solid var(--ic-border);
   border-radius: 0.375rem;
@@ -689,7 +727,7 @@
   color: var(--ic-text);
 }
 
-.ic-editor-close {
+:global(.ic-editor-close) {
   background: var(--ic-border);
   border: none;
   padding: 0.4rem 0.875rem;
@@ -702,17 +740,17 @@
   white-space: nowrap;
 }
 
-.ic-editor-close:hover {
+:global(.ic-editor-close:hover) {
   background: var(--ic-border);
 }
 
-.ic-global-actions {
+:global(.ic-global-actions) {
   margin-top: 1.5rem;
   display: flex;
   justify-content: center;
 }
 
-.ic-primary-btn {
+:global(.ic-primary-btn) {
   background: var(--ic-text);
   color: var(--ic-bg);
   border: none;
@@ -724,11 +762,11 @@
   transition: background 0.2s, transform 0.1s;
 }
 
-.ic-primary-btn:hover {
+:global(.ic-primary-btn:hover) {
   background: var(--ic-text-muted);
 }
 
-.ic-primary-btn:active {
+:global(.ic-primary-btn:active) {
   transform: scale(0.98);
 }
 

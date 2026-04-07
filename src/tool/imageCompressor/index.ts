@@ -10,6 +10,7 @@ export interface ImageCompressorUI {
     qualityLabel: string;
     widthLabel: string;
     convertToWebpLabel: string;
+    compressionLabel: string;
     compressBtn: string;
     processingLabel: string;
     resultsTitle: string;
@@ -18,6 +19,15 @@ export interface ImageCompressorUI {
     reductionLabel: string;
     downloadBtn: string;
     addMoreBtn: string;
+    browseFilesBtn: string;
+    processedFilesTitle: string;
+    downloadAllBtn: string;
+    adjustThisImage: string;
+    downloadTitle: string;
+    maxWidthLabel: string;
+    closeBtn: string;
+    totalSavingsLabel: string;
+    noSavings: string;
     [key: string]: string;
 }
 

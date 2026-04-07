@@ -9,7 +9,7 @@ interface Props {
 const { ui } = Astro.props;
 ---
 
-<div class="pq-wrapper">
+<div class="pq-wrapper" id="pq-root" data-ui={JSON.stringify(ui)}>
     <div
         id="drop-zone"
         class="pq-drop-zone pq-group"
@@ -80,10 +80,10 @@ const { ui } = Astro.props;
                 </div>
 
                 <div class="pq-presets">
-                    <button class="pq-preset-btn" data-val="72">Pantalla (72)</button>
-                    <button class="pq-preset-btn" data-val="150">Periódico (150)</button>
-                    <button class="pq-preset-btn pq-preset-active" data-val="300">Imprenta (300)</button>
-                    <button class="pq-preset-btn" data-val="600">Fine Art (600)</button>
+                    <button class="pq-preset-btn" data-val="72">{ui.dpiScreenLabel} (72)</button>
+                    <button class="pq-preset-btn" data-val="150">{ui.dpiNewspaperLabel} (150)</button>
+                    <button class="pq-preset-btn pq-preset-active" data-val="300">{ui.dpiPrintLabel} (300)</button>
+                    <button class="pq-preset-btn" data-val="600">{ui.dpiFineArtLabel} (600)</button>
                 </div>
             </div>
 
@@ -135,18 +135,41 @@ const { ui } = Astro.props;
     </div>
 </div>
 
-<script is:inline>
+<script>
+    const root = document.currentScript?.closest('[data-ui]') || document.getElementById('pq-root');
+    const ui = root ? JSON.parse(root.dataset.ui || '{}') : {};
+
     const PAPER_FORMATS = [
-        { name: "A6 (Postal)", w: 10.5, h: 14.8 },
-        { name: "A5 (Cuartilla)", w: 14.8, h: 21.0 },
-        { name: "A4 (Folio)", w: 21.0, h: 29.7 },
-        { name: "A3 (Doble Folio)", w: 29.7, h: 42.0 },
-        { name: "A2 (Poster Pequeño)", w: 42.0, h: 59.4 },
-        { name: "A1 (Poster Grande)", w: 59.4, h: 84.1 },
-        { name: "A0 (Plano)", w: 84.1, h: 118.9 },
+        { key: "postal", label: "A6", w: 10.5, h: 14.8 },
+        { key: "quartilla", label: "A5", w: 14.8, h: 21.0 },
+        { key: "folio", label: "A4", w: 21.0, h: 29.7 },
+        { key: "doubleFolio", label: "A3", w: 29.7, h: 42.0 },
+        { key: "smallPoster", label: "A2", w: 42.0, h: 59.4 },
+        { key: "largePoster", label: "A1", w: 59.4, h: 84.1 },
+        { key: "plane", label: "A0", w: 84.1, h: 118.9 },
     ];
 
     function initPQCalc() {
+        console.log('DEBUG: initPQCalc called');
+        console.log('DEBUG: ui object:', ui);
+        console.log('DEBUG: ui.formatPostal:', ui.formatPostal);
+
+        function getFormatName(format) {
+            const keyMap = {
+                postal: 'formatPostal',
+                quartilla: 'formatQuartilla',
+                folio: 'formatFolio',
+                doubleFolio: 'formatDoubleFolio',
+                smallPoster: 'formatSmallPoster',
+                largePoster: 'formatLargePoster',
+                plane: 'formatPlane'
+            };
+            const uiKey = keyMap[format.key];
+            const result = format.label + ' (' + (ui[uiKey] || format.key) + ')';
+            console.log('DEBUG: getFormatName for', format.key, '=', result, '(uiKey:', uiKey, ', ui[uiKey]:', ui[uiKey], ')');
+            return result;
+        }
+
         const dropZone = document.getElementById("drop-zone");
         const fileInput = document.getElementById("file-input");
         const resultsArea = document.getElementById("results-area");
@@ -209,7 +232,7 @@ const { ui } = Astro.props;
         });
 
         function processFile(file) {
-            if (!file.type.startsWith("image/")) { alert("Por favor selecciona una imagen válida"); return; }
+            if (!file.type.startsWith("image/")) { alert(ui.invalidImageError); return; }
             const reader = new FileReader();
             reader.onload = function(e) {
                 const img = new Image();
@@ -269,30 +292,32 @@ const { ui } = Astro.props;
         function updateQualityBadge(dpi) {
             if (!qualityText || !qualityDesc || !qualityBadge) return;
             if (dpi >= 300) {
-                qualityText.textContent = "Calidad Excelente";
-                qualityDesc.textContent = "Ideal para revistas de arte, libros de fotografía y visualización a menos de 30cm.";
+                qualityText.textContent = ui.qualityExcellent;
+                qualityDesc.textContent = ui.qualityExcellentDesc;
                 qualityBadge.className = "pq-quality-badge pq-badge-green";
             } else if (dpi >= 150) {
-                qualityText.textContent = "Calidad Buena";
-                qualityDesc.textContent = "Suficiente para pósters, periódicos y visualización a más de 50cm de distancia.";
+                qualityText.textContent = ui.qualityGood;
+                qualityDesc.textContent = ui.qualityGoodDesc;
                 qualityBadge.className = "pq-quality-badge pq-badge-yellow";
             } else if (dpi >= 72) {
-                qualityText.textContent = "Calidad Pantalla/Baja";
-                qualityDesc.textContent = "Adecuado solo para visualización digital o vallas publicitarias lejanas (>2 metros).";
+                qualityText.textContent = ui.qualityFair;
+                qualityDesc.textContent = ui.qualityFairDesc;
                 qualityBadge.className = "pq-quality-badge pq-badge-red";
             } else {
-                qualityText.textContent = "No Apto para impresión";
-                qualityDesc.textContent = "La imagen se verá pixelada. Usar solo para iconos pequeños o vistas muy lejanas.";
+                qualityText.textContent = ui.qualityPoor;
+                qualityDesc.textContent = ui.qualityPoorDesc;
                 qualityBadge.className = "pq-quality-badge pq-badge-slate";
             }
         }
 
         function updateFormatsTable(cmW, cmH) {
+            console.log('DEBUG: updateFormatsTable called, ui.supportedText:', ui.supportedText);
             if (!formatsTableBody) return;
             formatsTableBody.innerHTML = "";
             const imgMin = Math.min(cmW, cmH);
             const imgMax = Math.max(cmW, cmH);
             PAPER_FORMATS.forEach(function(paper) {
+                console.log('DEBUG: Processing paper format:', paper.key);
                 const paperMin = Math.min(paper.w, paper.h);
                 const paperMax = Math.max(paper.w, paper.h);
                 const covers = imgMin >= paperMin - 0.1 && imgMax >= paperMax - 0.1;
@@ -300,9 +325,9 @@ const { ui } = Astro.props;
                 const row = document.createElement("tr");
                 row.className = "pq-formats-row";
                 const statusHtml = covers
-                    ? '<span class="pq-status pq-status-ok"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"/></svg> Sí (Cubierto)</span>'
-                    : '<span class="pq-status pq-status-no"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12,2L1,21H23M12,6L19.53,19H4.47M11,10V14H13V10M11,16V18H13V16"/></svg> No (' + coverage.toFixed(0) + '%)</span>';
-                row.innerHTML = '<td class="pq-td pq-td-name">' + paper.name + '</td><td class="pq-td pq-td-dim">' + paper.w + ' x ' + paper.h + '</td><td class="pq-td">' + statusHtml + '</td>';
+                    ? '<span class="pq-status pq-status-ok"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"/></svg> ' + ui.supportedText + '</span>'
+                    : '<span class="pq-status pq-status-no"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12,2L1,21H23M12,6L19.53,19H4.47M11,10V14H13V10M11,16V18H13V16"/></svg> ' + ui.notSupportedPrefix + coverage.toFixed(0) + '%)</span>';
+                row.innerHTML = '<td class="pq-td pq-td-name">' + getFormatName(paper) + '</td><td class="pq-td pq-td-dim">' + paper.w + ' x ' + paper.h + '</td><td class="pq-td">' + statusHtml + '</td>';
                 formatsTableBody.appendChild(row);
             });
         }
@@ -333,7 +358,7 @@ const { ui } = Astro.props;
     --pq-accent: #818cf8;
 }
 
-.pq-wrapper {
+:global(.pq-wrapper) {
     width: 100%;
     max-width: 56rem;
     margin: 0 auto;
@@ -347,7 +372,7 @@ const { ui } = Astro.props;
   display: none;
 }
 
-.pq-drop-zone {
+:global(.pq-drop-zone) {
     position: relative;
     cursor: pointer;
     border: 2px dashed var(--pq-border);
@@ -356,15 +381,15 @@ const { ui } = Astro.props;
     transition: border-color 0.3s, background 0.3s;
 }
 
-:global(.theme-dark) .pq-drop-zone {
+:global(.theme-dark .pq-drop-zone) {
     border-color: var(--pq-border);
 }
-.pq-drop-zone:hover,
-.pq-drop-zone.pq-drop-active {
+:global(.pq-drop-zone:hover),
+:global(.pq-drop-zone.pq-drop-active) {
     border-color: var(--pq-primary);
     background: rgba(99, 102, 241, 0.04);
 }
-.pq-drop-inner {
+:global(.pq-drop-inner) {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -372,7 +397,7 @@ const { ui } = Astro.props;
     text-align: center;
     gap: 1rem;
 }
-.pq-upload-icon-wrap {
+:global(.pq-upload-icon-wrap) {
     width: 5rem;
     height: 5rem;
     background: var(--pq-primary-light);
@@ -384,29 +409,29 @@ const { ui } = Astro.props;
     transition: transform 0.3s;
 }
 
-:global(.theme-dark) .pq-upload-icon-wrap {
+:global(.theme-dark .pq-upload-icon-wrap) {
     background: rgba(99, 102, 241, 0.2);
     color: #818cf8;
 }
-.pq-drop-zone:hover .pq-upload-icon-wrap {
+:global(.pq-drop-zone:hover .pq-upload-icon-wrap) {
     transform: scale(1.1);
 }
-.pq-drop-title {
+:global(.pq-drop-title) {
     font-size: 1.25rem;
     font-weight: 700;
     color: #0f172a;
     margin: 0;
 }
 
-:global(.theme-dark) .pq-drop-title {
+:global(.theme-dark .pq-drop-title) {
     color: #f1f5f9;
 }
-.pq-drop-sub {
+:global(.pq-drop-sub) {
     color: #64748b;
     margin: 0.25rem 0 0;
     font-size: 0.95rem;
 }
-.pq-drop-overlay {
+:global(.pq-drop-overlay) {
     position: absolute;
     inset: 0;
     background: linear-gradient(135deg, rgba(99,102,241,0.04), rgba(168,85,247,0.04));
@@ -415,9 +440,9 @@ const { ui } = Astro.props;
     pointer-events: none;
     transition: opacity 0.3s;
 }
-.pq-drop-zone:hover .pq-drop-overlay { opacity: 1; }
+:global(.pq-drop-zone:hover .pq-drop-overlay) { opacity: 1; }
 
-.pq-results {
+:global(.pq-results) {
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -435,7 +460,7 @@ const { ui } = Astro.props;
     }
 }
 
-.pq-file-card {
+:global(.pq-file-card) {
     background: #fff;
     border: 1px solid #e2e8f0;
     border-radius: 0.75rem;
@@ -443,29 +468,29 @@ const { ui } = Astro.props;
     padding: 1.5rem;
 }
 
-:global(.theme-dark) .pq-file-card {
+:global(.theme-dark .pq-file-card) {
     background: #0f172a;
     border-color: #1e293b;
 }
-.pq-file-left {
+:global(.pq-file-left) {
     display: flex;
     align-items: center;
     gap: 1.5rem;
 }
-.pq-preview-wrap {
+:global(.pq-preview-wrap) {
     position: relative;
     width: 8rem;
     height: 8rem;
     flex-shrink: 0;
 }
-.pq-preview-img {
+:global(.pq-preview-img) {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 0.5rem;
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
-.pq-file-name {
+:global(.pq-file-name) {
     font-weight: 700;
     color: #0f172a;
     font-size: 1rem;
@@ -476,15 +501,15 @@ const { ui } = Astro.props;
     max-width: 20rem;
 }
 
-:global(.theme-dark) .pq-file-name {
+:global(.theme-dark .pq-file-name) {
     color: #f1f5f9;
 }
-.pq-file-meta {
+:global(.pq-file-meta) {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
 }
-.pq-meta-item {
+:global(.pq-meta-item) {
     display: flex;
     align-items: center;
     gap: 0.25rem;
@@ -492,7 +517,7 @@ const { ui } = Astro.props;
     color: #64748b;
 }
 
-.pq-main-grid {
+:global(.pq-main-grid) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
@@ -502,18 +527,18 @@ const { ui } = Astro.props;
     .pq-main-grid { grid-template-columns: 1fr; }
 }
 
-.pq-config-panel {
+:global(.pq-config-panel) {
     background: #f8fafc;
     border: 1px solid #e2e8f0;
     border-radius: 0.75rem;
     padding: 1.5rem;
 }
 
-:global(.theme-dark) .pq-config-panel {
+:global(.theme-dark .pq-config-panel) {
     background: rgba(30, 41, 59, 0.5);
     border-color: var(--pq-border);
 }
-.pq-config-label {
+:global(.pq-config-label) {
     display: block;
     font-size: 0.875rem;
     font-weight: 500;
@@ -521,10 +546,10 @@ const { ui } = Astro.props;
     margin-bottom: 1rem;
 }
 
-:global(.theme-dark) .pq-config-label {
+:global(.theme-dark .pq-config-label) {
     color: #94a3b8;
 }
-.pq-slider {
+:global(.pq-slider) {
     width: 100%;
     height: 0.5rem;
     background: #e2e8f0;
@@ -535,16 +560,16 @@ const { ui } = Astro.props;
     margin-bottom: 1rem;
 }
 
-:global(.theme-dark) .pq-slider {
+:global(.theme-dark .pq-slider) {
     background: #334155;
 }
-.pq-dpi-row {
+:global(.pq-dpi-row) {
     display: flex;
     align-items: center;
     gap: 1rem;
     margin-bottom: 1.5rem;
 }
-.pq-dpi-number {
+:global(.pq-dpi-number) {
     width: 6rem;
     border: 1px solid #e2e8f0;
     border-radius: 0.5rem;
@@ -556,23 +581,23 @@ const { ui } = Astro.props;
     padding: 0.4rem 0.5rem;
     outline: none;
 }
-.pq-dpi-number:focus { border-color: var(--pq-primary); }
+:global(.pq-dpi-number:focus) { border-color: var(--pq-primary); }
 
-:global(.theme-dark) .pq-dpi-number {
+:global(.theme-dark .pq-dpi-number) {
     background: #0f172a;
     border-color: var(--pq-border);
     color: #f1f5f9;
 }
-.pq-dpi-label {
+:global(.pq-dpi-label) {
     font-size: 0.875rem;
     color: #64748b;
 }
-.pq-presets {
+:global(.pq-presets) {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
 }
-.pq-preset-btn {
+:global(.pq-preset-btn) {
     padding: 0.25rem 0.75rem;
     font-size: 0.75rem;
     font-weight: 500;
@@ -583,31 +608,31 @@ const { ui } = Astro.props;
     cursor: pointer;
     transition: background 0.15s, color 0.15s;
 }
-.pq-preset-btn:hover { background: #cbd5e1; }
+:global(.pq-preset-btn:hover) { background: #cbd5e1; }
 
-:global(.theme-dark) .pq-preset-btn {
+:global(.theme-dark .pq-preset-btn) {
     background: #334155;
     color: #94a3b8;
 }
 
-:global(.theme-dark) .pq-preset-btn:hover {
+:global(.theme-dark .pq-preset-btn:hover) {
     background: #475569;
 }
-.pq-preset-active {
+:global(.pq-preset-active) {
     background: var(--pq-primary-light);
     color: #4338ca;
     box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.2);
 }
 
-:global(.theme-dark) .pq-preset-active {
+:global(.theme-dark .pq-preset-active) {
     background: rgba(99, 102, 241, 0.3);
     color: #a5b4fc;
 }
 
-.pq-output-panel {
+:global(.pq-output-panel) {
     display: flex;
 }
-.pq-output-gradient {
+:global(.pq-output-gradient) {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -620,7 +645,7 @@ const { ui } = Astro.props;
     position: relative;
     overflow: hidden;
 }
-.pq-output-blur-bg {
+:global(.pq-output-blur-bg) {
     position: absolute;
     top: 0; right: 0;
     width: 8rem; height: 8rem;
@@ -630,7 +655,7 @@ const { ui } = Astro.props;
     transform: translate(2rem, -2rem);
     pointer-events: none;
 }
-.pq-output-subtitle {
+:global(.pq-output-subtitle) {
     font-size: 0.75rem;
     font-weight: 500;
     text-transform: uppercase;
@@ -639,7 +664,7 @@ const { ui } = Astro.props;
     margin: 0 0 0.5rem;
     position: relative;
 }
-.pq-output-size {
+:global(.pq-output-size) {
     display: flex;
     align-items: baseline;
     gap: 0.5rem;
@@ -648,25 +673,25 @@ const { ui } = Astro.props;
     margin-bottom: 0.25rem;
     position: relative;
 }
-.pq-size-sep {
+:global(.pq-size-sep) {
     font-size: 1.5rem;
     opacity: 0.5;
 }
-.pq-size-unit {
+:global(.pq-size-unit) {
     font-size: 1.5rem;
 }
-.pq-output-inches {
+:global(.pq-output-inches) {
     color: rgba(199, 210, 254, 0.8);
     font-size: 0.875rem;
     margin-bottom: 1.5rem;
     position: relative;
 }
-.pq-quality-section {
+:global(.pq-quality-section) {
     padding-top: 1rem;
     border-top: 1px solid rgba(255,255,255,0.2);
     position: relative;
 }
-.pq-quality-badge {
+:global(.pq-quality-badge) {
     display: inline-flex;
     align-items: center;
     gap: 0.375rem;
@@ -678,44 +703,44 @@ const { ui } = Astro.props;
     backdrop-filter: blur(4px);
     margin-bottom: 0.5rem;
 }
-.pq-badge-green {
+:global(.pq-badge-green) {
     background: rgba(16, 185, 129, 0.25);
     box-shadow: 0 0 0 1px rgba(52, 211, 153, 0.3);
 }
 
-.pq-badge-yellow {
+:global(.pq-badge-yellow) {
     background: rgba(234, 179, 8, 0.25);
     box-shadow: 0 0 0 1px rgba(253, 224, 71, 0.3);
 }
 
-.pq-badge-red {
+:global(.pq-badge-red) {
     background: rgba(239, 68, 68, 0.25);
     box-shadow: 0 0 0 1px rgba(252, 165, 165, 0.3);
 }
 
-.pq-badge-slate {
+:global(.pq-badge-slate) {
     background: rgba(100, 116, 139, 0.25);
     box-shadow: 0 0 0 1px rgba(148, 163, 184, 0.3);
 }
-.pq-quality-desc {
+:global(.pq-quality-desc) {
     font-size: 0.875rem;
     color: rgba(199,210,254,0.9);
     line-height: 1.4;
     margin: 0;
 }
 
-.pq-formats-card {
+:global(.pq-formats-card) {
     background: #fff;
     border: 1px solid #e2e8f0;
     border-radius: 0.75rem;
     padding: 1.5rem;
 }
 
-:global(.theme-dark) .pq-formats-card {
+:global(.theme-dark .pq-formats-card) {
     background: #0f172a;
     border-color: #1e293b;
 }
-.pq-formats-title {
+:global(.pq-formats-title) {
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -725,18 +750,18 @@ const { ui } = Astro.props;
     margin: 0 0 1rem;
 }
 
-:global(.theme-dark) .pq-formats-title {
+:global(.theme-dark .pq-formats-title) {
     color: #f1f5f9;
 }
-.pq-formats-scroll {
+:global(.pq-formats-scroll) {
     overflow-x: auto;
 }
-.pq-formats-table {
+:global(.pq-formats-table) {
     width: 100%;
     border-collapse: collapse;
     font-size: 0.875rem;
 }
-.pq-formats-table th {
+:global(.pq-formats-table th) {
     text-align: left;
     padding: 0.75rem 1rem;
     font-size: 0.75rem;
@@ -747,57 +772,57 @@ const { ui } = Astro.props;
     background: #f8fafc;
 }
 
-:global(.theme-dark) .pq-formats-table th {
+:global(.theme-dark .pq-formats-table th) {
     background: #1e293b;
     color: #94a3b8;
 }
-.pq-formats-row {
+:global(.pq-formats-row) {
     border-bottom: 1px solid #f1f5f9;
     transition: background 0.15s;
 }
 
-.pq-formats-row:hover {
+:global(.pq-formats-row:hover) {
     background: #f8fafc;
 }
 
-:global(.theme-dark) .pq-formats-row {
+:global(.theme-dark .pq-formats-row) {
     border-color: #1e293b;
 }
 
-:global(.theme-dark) .pq-formats-row:hover {
+:global(.theme-dark .pq-formats-row:hover) {
     background: #1e293b;
 }
-.pq-td {
+:global(.pq-td) {
     padding: 0.75rem 1rem;
     color: #475569;
 }
 
-:global(.theme-dark) .pq-td {
+:global(.theme-dark .pq-td) {
     color: #94a3b8;
 }
-.pq-td-name {
+:global(.pq-td-name) {
     font-weight: 600;
     color: #0f172a;
 }
 
-:global(.theme-dark) .pq-td-name {
+:global(.theme-dark .pq-td-name) {
     color: #f1f5f9;
 }
-.pq-status {
+:global(.pq-status) {
     display: inline-flex;
     align-items: center;
     gap: 0.35rem;
     font-weight: 600;
     font-size: 0.8rem;
 }
-.pq-status-ok  { color: #16a34a; }
-.pq-status-no  { color: #d97706; }
+:global(.pq-status-ok) { color: #16a34a; }
+:global(.pq-status-no) { color: #d97706; }
 
-:global(.theme-dark) .pq-status-ok {
+:global(.theme-dark .pq-status-ok) {
     color: #4ade80;
 }
 
-:global(.theme-dark) .pq-status-no {
+:global(.theme-dark .pq-status-no) {
     color: #fbbf24;
 }
 </style>
