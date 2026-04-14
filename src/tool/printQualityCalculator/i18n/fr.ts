@@ -72,7 +72,7 @@ const howTo: PrintQualityCalculatorLocaleContent['howTo'] = [
     },
     {
         name: "Confirmez la qualité",
-        text: "Assurez-vous que l'indicateur marque 'Qualité Excellente' avant d'envoyer à l'impression.",
+        text: "Assurez vous que l'indicateur marque 'Qualité Excellente' avant d'envoyer à l'impression.",
     },
 ];
 

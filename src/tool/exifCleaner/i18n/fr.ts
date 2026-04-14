@@ -51,7 +51,7 @@ const faq: ExifCleanerLocaleContent['faq'] = [
 const howTo: ExifCleanerLocaleContent['howTo'] = [
     {
         name: "Sélectionner les images",
-        text: "Faites glisser vos photos ou sélectionnez-les depuis votre explorateur de fichiers. Vous pouvez en traiter plusieurs à la fois.",
+        text: "Faites glisser vos photos ou sélectionnez les depuis votre explorateur de fichiers. Vous pouvez en traiter plusieurs à la fois.",
     },
     {
         name: "Analyser les données actuelles",

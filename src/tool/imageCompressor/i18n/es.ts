@@ -54,7 +54,7 @@ const howTo: ImageCompressorLocaleContent['howTo'] = [
     },
     {
         name: "Ajusta la calidad",
-        text: "Usa el deslizador para encontrar el equilibrio perfecto entre peso de archivo y calidad visual (recomendado: 75-85%).",
+        text: "Usa el deslizador para encontrar el equilibrio perfecto entre peso de archivo y calidad visual (recomendado: 75 85%).",
     },
     {
         name: "Redimensiona (opcional)",

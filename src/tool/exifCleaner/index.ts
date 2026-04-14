@@ -30,20 +30,28 @@ export interface ExifCleanerUI {
 
 export type ExifCleanerLocaleContent = ToolLocaleContent<ExifCleanerUI>;
 
-import { content as es } from './i18n/es';
-import { content as en } from './i18n/en';
-import { content as fr } from './i18n/fr';
-
 export const exifCleaner: AudiovisualToolEntry<ExifCleanerUI> = {
-    id: 'exif-cleaner',
+    id: 'limpiador-exif',
     icons: {
         bg: 'mdi:camera-off',
         fg: 'mdi:shield-check',
     },
     i18n: {
-        es: async () => es as unknown as ExifCleanerLocaleContent,
-        en: async () => en as unknown as ExifCleanerLocaleContent,
-        fr: async () => fr as unknown as ExifCleanerLocaleContent,
+        es: async () => (await import('./i18n/es')).content as unknown as ExifCleanerLocaleContent,
+        en: async () => (await import('./i18n/en')).content as unknown as ExifCleanerLocaleContent,
+        fr: async () => (await import('./i18n/fr')).content as unknown as ExifCleanerLocaleContent,
+        de: async () => (await import('./i18n/de')).content as unknown as ExifCleanerLocaleContent,
+        it: async () => (await import('./i18n/it')).content as unknown as ExifCleanerLocaleContent,
+        pt: async () => (await import('./i18n/pt')).content as unknown as ExifCleanerLocaleContent,
+        id: async () => (await import('./i18n/id')).content as unknown as ExifCleanerLocaleContent,
+        ja: async () => (await import('./i18n/ja')).content as unknown as ExifCleanerLocaleContent,
+        ko: async () => (await import('./i18n/ko')).content as unknown as ExifCleanerLocaleContent,
+        nl: async () => (await import('./i18n/nl')).content as unknown as ExifCleanerLocaleContent,
+        pl: async () => (await import('./i18n/pl')).content as unknown as ExifCleanerLocaleContent,
+        ru: async () => (await import('./i18n/ru')).content as unknown as ExifCleanerLocaleContent,
+        sv: async () => (await import('./i18n/sv')).content as unknown as ExifCleanerLocaleContent,
+        tr: async () => (await import('./i18n/tr')).content as unknown as ExifCleanerLocaleContent,
+        zh: async () => (await import('./i18n/zh')).content as unknown as ExifCleanerLocaleContent,
     },
 };
 

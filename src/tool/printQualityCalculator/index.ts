@@ -43,10 +43,6 @@ export interface PrintQualityCalculatorUI {
 
 export type PrintQualityCalculatorLocaleContent = ToolLocaleContent<PrintQualityCalculatorUI>;
 
-import { content as es } from './i18n/es';
-import { content as en } from './i18n/en';
-import { content as fr } from './i18n/fr';
-
 export const printQualityCalculator: AudiovisualToolEntry<PrintQualityCalculatorUI> = {
     id: 'calidad-impresion',
     icons: {
@@ -54,9 +50,21 @@ export const printQualityCalculator: AudiovisualToolEntry<PrintQualityCalculator
         fg: 'mdi:ruler-square',
     },
     i18n: {
-        es: async () => es as unknown as PrintQualityCalculatorLocaleContent,
-        en: async () => en as unknown as PrintQualityCalculatorLocaleContent,
-        fr: async () => fr as unknown as PrintQualityCalculatorLocaleContent,
+        es: async () => (await import('./i18n/es')).content as unknown as PrintQualityCalculatorLocaleContent,
+        en: async () => (await import('./i18n/en')).content as unknown as PrintQualityCalculatorLocaleContent,
+        fr: async () => (await import('./i18n/fr')).content as unknown as PrintQualityCalculatorLocaleContent,
+        de: async () => (await import('./i18n/de')).content as unknown as PrintQualityCalculatorLocaleContent,
+        it: async () => (await import('./i18n/it')).content as unknown as PrintQualityCalculatorLocaleContent,
+        pt: async () => (await import('./i18n/pt')).content as unknown as PrintQualityCalculatorLocaleContent,
+        id: async () => (await import('./i18n/id')).content as unknown as PrintQualityCalculatorLocaleContent,
+        ja: async () => (await import('./i18n/ja')).content as unknown as PrintQualityCalculatorLocaleContent,
+        ko: async () => (await import('./i18n/ko')).content as unknown as PrintQualityCalculatorLocaleContent,
+        nl: async () => (await import('./i18n/nl')).content as unknown as PrintQualityCalculatorLocaleContent,
+        pl: async () => (await import('./i18n/pl')).content as unknown as PrintQualityCalculatorLocaleContent,
+        ru: async () => (await import('./i18n/ru')).content as unknown as PrintQualityCalculatorLocaleContent,
+        sv: async () => (await import('./i18n/sv')).content as unknown as PrintQualityCalculatorLocaleContent,
+        tr: async () => (await import('./i18n/tr')).content as unknown as PrintQualityCalculatorLocaleContent,
+        zh: async () => (await import('./i18n/zh')).content as unknown as PrintQualityCalculatorLocaleContent,
     },
 };
 

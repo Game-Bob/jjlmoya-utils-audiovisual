@@ -56,7 +56,7 @@ const howTo: ImageCompressorLocaleContent['howTo'] = [
     },
     {
         name: "Adjust quality",
-        text: "Use the slider to find the perfect balance between file size and visual quality (recommended: 75-85%).",
+        text: "Use the slider to find the perfect balance between file size and visual quality (recommended: 75 85%).",
     },
     {
         name: "Resize (optional)",

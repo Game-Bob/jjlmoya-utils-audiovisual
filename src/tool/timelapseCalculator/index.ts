@@ -25,20 +25,28 @@ export interface TimelapseUI {
 
 export type TimelapseLocaleContent = ToolLocaleContent<TimelapseUI>;
 
-import { content as es } from './i18n/es';
-import { content as en } from './i18n/en';
-import { content as fr } from './i18n/fr';
-
 export const timelapseCalculator: AudiovisualToolEntry<TimelapseUI> = {
-    id: 'timelapse-calculator',
+    id: 'calculadora-timelapse',
     icons: {
         bg: 'mdi:camera-timer',
         fg: 'mdi:clock-fast',
     },
     i18n: {
-        es: async () => es as unknown as TimelapseLocaleContent,
-        en: async () => en as unknown as TimelapseLocaleContent,
-        fr: async () => fr as unknown as TimelapseLocaleContent,
+        es: async () => (await import('./i18n/es')).content as unknown as TimelapseLocaleContent,
+        en: async () => (await import('./i18n/en')).content as unknown as TimelapseLocaleContent,
+        fr: async () => (await import('./i18n/fr')).content as unknown as TimelapseLocaleContent,
+        de: async () => (await import('./i18n/de')).content as unknown as TimelapseLocaleContent,
+        it: async () => (await import('./i18n/it')).content as unknown as TimelapseLocaleContent,
+        pt: async () => (await import('./i18n/pt')).content as unknown as TimelapseLocaleContent,
+        id: async () => (await import('./i18n/id')).content as unknown as TimelapseLocaleContent,
+        ja: async () => (await import('./i18n/ja')).content as unknown as TimelapseLocaleContent,
+        ko: async () => (await import('./i18n/ko')).content as unknown as TimelapseLocaleContent,
+        nl: async () => (await import('./i18n/nl')).content as unknown as TimelapseLocaleContent,
+        pl: async () => (await import('./i18n/pl')).content as unknown as TimelapseLocaleContent,
+        ru: async () => (await import('./i18n/ru')).content as unknown as TimelapseLocaleContent,
+        sv: async () => (await import('./i18n/sv')).content as unknown as TimelapseLocaleContent,
+        tr: async () => (await import('./i18n/tr')).content as unknown as TimelapseLocaleContent,
+        zh: async () => (await import('./i18n/zh')).content as unknown as TimelapseLocaleContent,
     },
 };
 

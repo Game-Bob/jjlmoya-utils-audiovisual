@@ -58,7 +58,7 @@ const howTo: TimelapseLocaleContent['howTo'] = [
     },
     {
         name: "Vérifier l'espace de stockage",
-        text: "La calculatrice vous dira combien de Gigaoctets la session occupera. Assurez-vous que votre carte SD a assez d'espace.",
+        text: "La calculatrice vous dira combien de Gigaoctets la session occupera. Assurez vous que votre carte SD a assez d'espace.",
     },
 ];
 
@@ -85,7 +85,7 @@ const seo: TimelapseLocaleContent['seo'] = [
     { type: 'title', text: 'Guide Ultime des Intervalles Timelapse et Hyperlapse', level: 2 },
     { type: 'paragraph', html: 'La différence entre une vidéo accélérée amateur et un <strong>timelapse cinématographique</strong> réside mathématiquement dans un seul facteur : <strong>l\'intervalle</strong>. Cette calculatrice élimine les devinettes, vous permettant de planifier avec précision la capture de levers de soleil, du trafic urbain ou de la Voie lactée.' },
     
-    { type: 'title', text: 'Tableau des Intervalles Recommandés (Aide-mémoire)', level: 3 },
+    { type: 'title', text: 'Tableau des Intervalles Recommandés (Aide mémoire)', level: 3 },
     { type: 'paragraph', html: 'Utilisez ce tableau de référence rapide pour régler votre intervallomètre en fonction du sujet.' },
     { type: 'table', headers: ['Sujet / Scène', 'Intervalle Suggeré', 'Durée de l\'Événement (Minimum)'], rows: [
         ['Nuages rapides / Orages', '1 - 2 secondes', '20 - 30 min'],

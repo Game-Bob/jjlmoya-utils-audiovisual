@@ -22,10 +22,6 @@ export interface PrivacyBlurUI {
 
 export type PrivacyBlurLocaleContent = ToolLocaleContent<PrivacyBlurUI>;
 
-import { content as es } from './i18n/es';
-import { content as en } from './i18n/en';
-import { content as fr } from './i18n/fr';
-
 export const privacyBlur: AudiovisualToolEntry<PrivacyBlurUI> = {
     id: 'editor-privacidad',
     icons: {
@@ -33,9 +29,21 @@ export const privacyBlur: AudiovisualToolEntry<PrivacyBlurUI> = {
         fg: 'mdi:blur',
     },
     i18n: {
-        es: async () => es as unknown as PrivacyBlurLocaleContent,
-        en: async () => en as unknown as PrivacyBlurLocaleContent,
-        fr: async () => fr as unknown as PrivacyBlurLocaleContent,
+        es: async () => (await import('./i18n/es')).content as unknown as PrivacyBlurLocaleContent,
+        en: async () => (await import('./i18n/en')).content as unknown as PrivacyBlurLocaleContent,
+        fr: async () => (await import('./i18n/fr')).content as unknown as PrivacyBlurLocaleContent,
+        de: async () => (await import('./i18n/de')).content as unknown as PrivacyBlurLocaleContent,
+        it: async () => (await import('./i18n/it')).content as unknown as PrivacyBlurLocaleContent,
+        pt: async () => (await import('./i18n/pt')).content as unknown as PrivacyBlurLocaleContent,
+        id: async () => (await import('./i18n/id')).content as unknown as PrivacyBlurLocaleContent,
+        ja: async () => (await import('./i18n/ja')).content as unknown as PrivacyBlurLocaleContent,
+        ko: async () => (await import('./i18n/ko')).content as unknown as PrivacyBlurLocaleContent,
+        nl: async () => (await import('./i18n/nl')).content as unknown as PrivacyBlurLocaleContent,
+        pl: async () => (await import('./i18n/pl')).content as unknown as PrivacyBlurLocaleContent,
+        ru: async () => (await import('./i18n/ru')).content as unknown as PrivacyBlurLocaleContent,
+        sv: async () => (await import('./i18n/sv')).content as unknown as PrivacyBlurLocaleContent,
+        tr: async () => (await import('./i18n/tr')).content as unknown as PrivacyBlurLocaleContent,
+        zh: async () => (await import('./i18n/zh')).content as unknown as PrivacyBlurLocaleContent,
     },
 };
 

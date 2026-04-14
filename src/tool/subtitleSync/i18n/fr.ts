@@ -43,7 +43,7 @@ const faq: SubtitleSyncLocaleContent['faq'] = [
 const howTo: SubtitleSyncLocaleContent['howTo'] = [
     {
         name: "Importez votre fichier SRT",
-        text: "Faites glisser le fichier de sous-titres que vous souhaitez corriger dans la zone de téléchargement.",
+        text: "Faites glisser le fichier de sous titres que vous souhaitez corriger dans la zone de téléchargement.",
     },
     {
         name: "Identifiez le décalage",
@@ -81,7 +81,7 @@ const seo: SubtitleSyncLocaleContent['seo'] = [
             'Sans installation, sans abonnement, complètement gratuit'
         ]
     },
-    { type: 'title', text: 'Synchronisation Parfaite de Sous-titres SRT', level: 2 },
+    { type: 'title', text: 'Synchronisation Parfaite de Sous titres SRT', level: 2 },
     { type: 'paragraph', html: 'Il n\'y a rien de plus frustrant que de voir des dialogues qui ne correspondent pas aux voix. Le décalage des sous-titres survient souvent à cause de différences entre les versions vidéo : variations de fréquence d\'images, coupures publicitaires, intros de production ou changements de compression. Avec cet outil, vous réglez le problème en quelques secondes.' },
 
     { type: 'stats', items: [
@@ -135,7 +135,7 @@ const seo: SubtitleSyncLocaleContent['seo'] = [
         }
     ], columns: 3 },
 
-    { type: 'title', text: 'Pourquoi les Sous-titres se Désynchronisent', level: 3 },
+    { type: 'title', text: 'Pourquoi les Sous titres se Désynchronisent', level: 3 },
     { type: 'table', headers: ['Cause Commune', 'Description Technique', 'Solution'], rows: [
         ['Différence de Framerate', '23,976 fps vs 25 fps - accumulation de différence', 'Ajustement du décalage unique (cet outil)'],
         ['Éditorialisation', 'Coupures publicitaires ou contenu supprimé', 'Calcul manuel + synchronisation'],
@@ -233,9 +233,9 @@ export const content: SubtitleSyncLocaleContent = {
     ui,
     seo,
     faq,
-    faqTitle: 'Foire Aux Questions sur la Synchronisation des Sous-titres',
+    faqTitle: 'Foire Aux Questions sur la Synchronisation des Sous titres',
     bibliography,
-    bibliographyTitle: 'Ressources Techniques sur les Formats de Sous-titres',
+    bibliographyTitle: 'Ressources Techniques sur les Formats de Sous titres',
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],
 };
