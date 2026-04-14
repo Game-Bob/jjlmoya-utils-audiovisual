@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dt
 import type { ImageCompressorUI, ImageCompressorLocaleContent } from '../index';
 
 const slug = 'compresor-imagenes';
-const title = 'Compresor de Imágenes Online - Reduce el peso sin perder calidad';
+const title = 'Compresor de Imágenes Online: Reduce el peso sin perder calidad';
 const description = 'Optimiza y comprime tus fotos JPG, PNG y WebP de forma gratuita. Reduce el tamaño de archivo para mejorar la velocidad de carga de tu web de forma local.';
 
 const ui: ImageCompressorUI = {

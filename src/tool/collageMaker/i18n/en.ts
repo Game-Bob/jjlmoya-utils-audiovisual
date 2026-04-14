@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dt
 import type { CollageMakerUI, CollageMakerLocaleContent } from '../index';
 
 const slug = 'free-online-photo-collage-maker-professional-compositions';
-const title = 'Online Collage Maker - Design professional compositions';
+const title = 'Online Collage Maker: Design professional compositions';
 const description = 'Create photo collages for free in seconds. Choose from multiple layouts, adjust borders, and download in high quality without watermarks.';
 
 const ui: CollageMakerUI = {

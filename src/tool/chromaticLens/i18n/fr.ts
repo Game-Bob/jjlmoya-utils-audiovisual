@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dt
 import type { ChromaticLensUI, ChromaticLensLocaleContent } from '../index';
 
 const slug = 'lentille-chromatique-extraction-palette-couleurs-ligne';
-const title = 'Lentille Chromatique - Extraction de Palette de Couleurs en Ligne';
+const title = 'Lentille Chromatique: Extraction de Palette de Couleurs en Ligne';
 const description = 'Extrayez gratuitement des palettes de couleurs professionnelles à partir de n\'importe quelle image. Identifiez les couleurs dominantes à l\'aide d\'algorithmes mathématiques.';
 
 const ui: ChromaticLensUI = {

@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dt
 import type { PrintQualityCalculatorUI, PrintQualityCalculatorLocaleContent } from '../index';
 
 const slug = 'calculatrice-qualite-impression-pixels-cm-dpi';
-const title = 'Calculatrice de Qualité d\'Impression - Pixels en CM et DPI';
+const title = 'Calculatrice de Qualité d\'Impression: Pixels en CM et DPI';
 const description = 'Calculez la taille d\'impression maximale de vos photos en fonction de leur résolution. Convertissez les pixels en centimètres et en pouces pour une impression professionnelle.';
 
 const ui: PrintQualityCalculatorUI = {
@@ -138,7 +138,7 @@ const seo: PrintQualityCalculatorLocaleContent['seo'] = [
             ]
         },
         {
-            title: 'Poster Mural (A3 - 30x42 cm)',
+            title: 'Poster Mural A3 (30x42 cm)',
             description: '150 DPI suffisant - se voit à distance',
             icon: 'mdi:wall-fire',
             points: [

@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dt
 import type { VideoFrameExtractorUI, VideoFrameExtractorLocaleContent } from '../index';
 
 const slug = 'online-video-frame-extractor-capture-hd-stills';
-const title = 'Video Frame Extractor - Capture high-resolution stills';
+const title = 'Video Frame Extractor: Capture HD stills';
 const description = 'Extract individual images from your videos with frame-perfect precision. Capture perfect moments in HD locally and for free.';
 
 const ui: VideoFrameExtractorUI = {

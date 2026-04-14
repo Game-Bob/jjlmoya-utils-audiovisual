@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dt
 import type { PrivacyBlurUI, PrivacyBlurLocaleContent } from '../index';
 
 const slug = 'online-privacy-editor-pixelate-blur-faces-photos';
-const title = 'Online Privacy Editor - Pixelate and hide faces in photos';
+const title = 'Online Privacy Editor: Pixelate and hide faces in photos';
 const description = 'Protect your identity by censoring sensitive areas of your photos. Pixelate faces, blur documents, or cover private information 100% locally.';
 
 const ui: PrivacyBlurUI = {

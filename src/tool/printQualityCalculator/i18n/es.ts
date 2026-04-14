@@ -1,8 +1,8 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { PrintQualityCalculatorUI, PrintQualityCalculatorLocaleContent } from '../index';
 
-const slug = 'calidad-impresion';
-const title = 'Calculadora de Calidad de Impresión - Píxeles a CM y DPI';
+const slug = 'calculadora-calidad-impresion';
+const title = 'Calculadora de Calidad de Impresión: Píxeles a CM y DPI';
 const description = 'Calcula el tamaño máximo de impresión de tus fotos según su resolución. Convierte píxeles a centímetros y pulgadas para asegurar una impresión profesional.';
 
 const ui: PrintQualityCalculatorUI = {
@@ -138,7 +138,7 @@ const seo: PrintQualityCalculatorLocaleContent['seo'] = [
             ]
         },
         {
-            title: 'Póster de Pared (A3 - 30x42 cm)',
+            title: 'Póster de Pared A3 (30x42 cm)',
             description: '150 DPI suficiente - se ve a distancia',
             icon: 'mdi:wall-fire',
             points: [

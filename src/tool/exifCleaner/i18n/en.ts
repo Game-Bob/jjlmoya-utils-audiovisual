@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dt
 import type { ExifCleanerUI, ExifCleanerLocaleContent } from '../index';
 
 const slug = 'exif-metadata-cleaner-remove-gps-photo-privacy';
-const title = 'EXIF Metadata Cleaner - Remove GPS and Hidden Data from Photos';
+const title = 'EXIF Metadata Cleaner: Remove GPS and Hidden Data from Photos';
 const description = 'Free online tool to erase EXIF metadata, GPS coordinates, and camera specs from your images before sharing. 100% private: works without uploading photos to the internet.';
 
 const ui: ExifCleanerUI = {
@@ -81,7 +81,7 @@ const bibliography: ExifCleanerLocaleContent['bibliography'] = [
 const seo: ExifCleanerLocaleContent['seo'] = [
     {
         type: 'summary',
-        title: 'EXIF Metadata Cleaner - Protect Your Privacy',
+        title: 'EXIF Metadata Cleaner: Protect Your Privacy',
         items: [
             'Remove GPS coordinates and location from your photos instantly',
             'Erase camera model, serial number, and technical information',

@@ -74,7 +74,7 @@ export const content: CategoryLocaleContent = {
           ]
         },
         {
-          title: 'Édition de Sous-titres',
+          title: 'Synchronisation SRT',
           description: 'Synchronisez, ajustez et éditez les sous-titres avec une précision à la milliseconde.',
           icon: 'mdi:text',
           points: [

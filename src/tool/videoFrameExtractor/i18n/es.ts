@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dt
 import type { VideoFrameExtractorUI, VideoFrameExtractorLocaleContent } from '../index';
 
 const slug = 'extractor-frames-video';
-const title = 'Extractor de Frames de Vídeo - Captura fotogramas en alta resolución';
+const title = 'Extractor de Frames de Vídeo: Captura fotogramas en alta resolución';
 const description = 'Extrae imágenes individuales de tus vídeos con precisión de frame. Captura momentos perfectos en HD de forma local y gratuita.';
 
 const ui: VideoFrameExtractorUI = {

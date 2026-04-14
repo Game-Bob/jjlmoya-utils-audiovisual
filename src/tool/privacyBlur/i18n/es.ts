@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dt
 import type { PrivacyBlurUI, PrivacyBlurLocaleContent } from '../index';
 
 const slug = 'editor-privacidad';
-const title = 'Editor de Privacidad Online - Pixela y oculta rostros en fotos';
+const title = 'Editor de Privacidad Online: Pixela y oculta rostros en fotos';
 const description = 'Protege tu identidad censurando áreas sensibles de tus fotos. Pixela rostros, desenfoca documentos o tapa información privada de forma 100% local.';
 
 const ui: PrivacyBlurUI = {

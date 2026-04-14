@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dt
 import type { TvDistanceUI, TvDistanceLocaleContent } from '../index';
 
 const slug = 'distancia-tv';
-const title = 'Calculadora de Distancia TV - Pantalla Óptima THX y 4K';
+const title = 'Calculadora de Distancia TV: Pantalla Óptima THX y 4K';
 const description = 'Calcula la distancia ideal para ver tu televisor según su tamaño y resolución. Optimiza tu Home Cinema con los estándares THX y SMPTE.';
 
 const ui: TvDistanceUI = {

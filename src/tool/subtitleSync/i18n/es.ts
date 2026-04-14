@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dt
 import type { SubtitleSyncUI, SubtitleSyncLocaleContent } from '../index';
 
 const slug = 'sincronizar-subtitulos';
-const title = 'Sincronizar Subtítulos SRT Online - Ajusta el Tiempo Gratis';
+const title = 'Sincronizar Subtítulos SRT Online: Ajusta el Tiempo Gratis';
 const description = 'Herramienta online para adelantar o retrasar subtítulos SRT. Corrige el desfase de tiempo de forma sencilla y descarga el archivo sincronizado al instante.';
 
 const ui: SubtitleSyncUI = {

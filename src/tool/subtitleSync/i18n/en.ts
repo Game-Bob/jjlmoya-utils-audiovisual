@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dt
 import type { SubtitleSyncUI, SubtitleSyncLocaleContent } from '../index';
 
 const slug = 'synchronize-srt-subtitles-online-adjust-timing-free';
-const title = 'Synchronize SRT Subtitles Online - Adjust Timing for Free';
+const title = 'Synchronize SRT Subtitles Online: Adjust Timing for Free';
 const description = 'Online tool to advance or delay SRT subtitles. Correct timing offset easily and download the synchronized file instantly.';
 
 const ui: SubtitleSyncUI = {

@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dt
 import type { CollageMakerUI, CollageMakerLocaleContent } from '../index';
 
 const slug = 'createur-collage-photos-gratuit-compositions-professionnelles';
-const title = 'Créateur de Collages en Ligne - Concevez des compositions professionnelles';
+const title = 'Créateur de Collages en Ligne: Concevez des compositions professionnelles';
 const description = 'Créez des collages de photos gratuitement en quelques secondes. Choisissez parmi plusieurs mises en page, ajustez les bordures et téléchargez en haute qualité sans filigrane.';
 
 const ui: CollageMakerUI = {

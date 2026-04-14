@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dt
 import type { ExifCleanerUI, ExifCleanerLocaleContent } from '../index';
 
 const slug = 'nettoyeur-metadonnees-exif-supprimer-gps-confidentialite-photo';
-const title = 'Nettoyeur de Métadonnées EXIF - Supprimez le GPS et les Données Cachées';
+const title = 'Nettoyeur de Métadonnées EXIF: Supprimez le GPS et les Données Cachées';
 const description = 'Outil en ligne gratuit pour effacer les métadonnées EXIF, les coordonnées GPS et les caractéristiques de l\'appareil de vos images avant de les partager. 100 % confidentiel : fonctionne sans téléversement.';
 
 const ui: ExifCleanerUI = {
@@ -81,7 +81,7 @@ const bibliography: ExifCleanerLocaleContent['bibliography'] = [
 const seo: ExifCleanerLocaleContent['seo'] = [
     {
         type: 'summary',
-        title: 'Nettoyeur de Métadonnées EXIF - Protégez votre Vie Privée',
+        title: 'Nettoyeur de Métadonnées EXIF: Protégez votre Vie Privée',
         items: [
             'Supprimez instantanément les coordonnées GPS et la localisation de vos photos',
             'Effacez le modèle de l\'appareil, le numéro de série et les informations techniques',
@@ -194,7 +194,7 @@ const seo: ExifCleanerLocaleContent['seo'] = [
 
     { type: 'tip', title: 'Conseil de Sécurité Numérique', html: '<strong>Nettoyez vos photos AVANT de les publier</strong> sur n\'importe quel réseau social. Même si vous supprimez une publication, les métadonnées ont pu être indexées par des moteurs de recherche ou des archives. Mieux vaut prévenir que guérir. Prenez l\'habitude : <br><br><em>Photo → Nettoyer EXIF → Publier</em>' },
 
-    { type: 'diagnostic', variant: 'warning', title: 'Risques Réels du Non-Nettoyage', icon: 'mdi:alert-circle', badge: 'Sécurité Critique', html: '<strong>Cas documentés :</strong><br>- Parents publiant des photos d\'enfants - les prédateurs ont suivi le GPS<br>- Photographes voyageurs - maisons cambriolées pendant leur absence<br>- Influenceurs - lieux de résidence identifiés par des fans obsessifs<br><br>Ce n\'est pas de la paranoïa : c\'est une hygiène numérique de base en 2026.' },
+    { type: 'diagnostic', variant: 'warning', title: 'Risques Réels sans Nettoyage', icon: 'mdi:alert-circle', badge: 'Sécurité Critique', html: '<strong>Cas documentés :</strong><br>- Parents publiant des photos d\'enfants - les prédateurs ont suivi le GPS<br>- Photographes voyageurs - maisons cambriolées pendant leur absence<br>- Influenceurs - lieux de résidence identifiés par des fans obsessifs<br><br>Ce n\'est pas de la paranoïa : c\'est une hygiène numérique de base en 2026.' },
 
     { type: 'glossary', items: [
         {

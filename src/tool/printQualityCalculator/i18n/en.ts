@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dt
 import type { PrintQualityCalculatorUI, PrintQualityCalculatorLocaleContent } from '../index';
 
 const slug = 'print-quality-calculator-pixels-to-cm-dpi';
-const title = 'Print Quality Calculator - Pixels to CM and DPI';
+const title = 'Print Quality Calculator: Pixels to CM and DPI';
 const description = 'Calculate the maximum print size of your photos based on their resolution. Convert pixels to centimeters and inches to ensure professional printing.';
 
 const ui: PrintQualityCalculatorUI = {
@@ -140,7 +140,7 @@ const seo: PrintQualityCalculatorLocaleContent['seo'] = [
             ]
         },
         {
-            title: 'Wall Poster (A3 - 30x42 cm)',
+            title: 'Wall Poster A3 (30x42 cm)',
             description: '150 DPI enough - viewed at a distance',
             icon: 'mdi:wall-fire',
             points: [

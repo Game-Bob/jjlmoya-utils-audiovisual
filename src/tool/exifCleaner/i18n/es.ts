@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dt
 import type { ExifCleanerUI, ExifCleanerLocaleContent } from '../index';
 
 const slug = 'limpiador-exif';
-const title = 'Limpiador de Metadatos EXIF - Elimina GPS y Datos Ocultos de Fotos';
+const title = 'Limpiador de Metadatos EXIF: Elimina GPS y Datos Ocultos de Fotos';
 const description = 'Herramienta online gratuita para borrar metadatos EXIF, coordenadas GPS y datos de cámara de tus imágenes antes de compartirlas. Privacidad total: funciona sin subir fotos a internet.';
 
 const ui: ExifCleanerUI = {
@@ -81,7 +81,7 @@ const bibliography: ExifCleanerLocaleContent['bibliography'] = [
 const seo: ExifCleanerLocaleContent['seo'] = [
     {
         type: 'summary',
-        title: 'Limpiador de Metadatos EXIF - Protege tu Privacidad',
+        title: 'Limpiador de Metadatos EXIF: Protege tu Privacidad',
         items: [
             'Elimina coordenadas GPS y ubicación de tus fotos al instante',
             'Borra datos de modelo de cámara, número de serie e información técnica',

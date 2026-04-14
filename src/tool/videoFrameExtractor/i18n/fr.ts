@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dt
 import type { VideoFrameExtractorUI, VideoFrameExtractorLocaleContent } from '../index';
 
 const slug = 'extracteur-frames-video-en-ligne-capturer-images-hd';
-const title = 'Extracteur de Frames de Vidéo - Capturez des images haute résolution';
+const title = 'Extracteur de Frames de Vidéo: Capturez des images haute résolution';
 const description = 'Extrayez des images individuelles de vos vidéos avec une précision à l\'image près. Capturez des moments parfaits en HD localement et gratuitement.';
 
 const ui: VideoFrameExtractorUI = {

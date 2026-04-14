@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dt
 import type { PrivacyBlurUI, PrivacyBlurLocaleContent } from '../index';
 
 const slug = 'editeur-confidentialite-en-ligne-pixeliser-flouter-visages';
-const title = 'Éditeur de Confidentialité en Ligne - Pixélisez et masquez les visages';
+const title = 'Éditeur de Confidentialité en Ligne: Pixélisez et masquez les visages';
 const description = 'Protégez votre identité en censurant les zones sensibles de vos photos. Pixélisez les visages, floutez les documents ou masquez les informations privées 100 % localement.';
 
 const ui: PrivacyBlurUI = {

@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dt
 import type { ChromaticLensUI, ChromaticLensLocaleContent } from '../index';
 
 const slug = 'lente-cromatica';
-const title = 'Lente Cromática - Extracción de Paletas de Color Online';
+const title = 'Lente Cromática: Extracción de Paletas de Color Online';
 const description = 'Extrae paletas de colores profesionales de cualquier imagen de forma gratuita. Identifica los colores dominantes de tus fotos mediante algoritmos matemáticos.';
 
 const ui: ChromaticLensUI = {

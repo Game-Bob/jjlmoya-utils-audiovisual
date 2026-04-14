@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dt
 import type { SubtitleSyncUI, SubtitleSyncLocaleContent } from '../index';
 
 const slug = 'synchroniser-sous-titres-srt-en-ligne-ajuster-temps-gratuit';
-const title = 'Synchroniser les Sous-titres SRT en Ligne - Ajustez le Temps Gratuitement';
+const title = 'Synchronisation SRT en Ligne: Ajustez le Temps Gratuitement';
 const description = 'Outil en ligne pour avancer ou retarder les sous-titres SRT. Corrigez le décalage de temps simplement et téléchargez le fichier synchronisé instantanément.';
 
 const ui: SubtitleSyncUI = {
@@ -73,7 +73,7 @@ const bibliography: SubtitleSyncLocaleContent['bibliography'] = [
 const seo: SubtitleSyncLocaleContent['seo'] = [
     {
         type: 'summary',
-        title: 'Synchronisation de Sous-titres Professionnelle',
+        title: 'Synchronisation SRT Professionnelle',
         items: [
             'Correction instantanée des décalages audio-sous-titres',
             'Supporte les fichiers SRT (SubRip) standards',
@@ -103,7 +103,7 @@ const seo: SubtitleSyncLocaleContent['seo'] = [
     { type: 'title', text: 'Cas d\'Utilisation Courants', level: 3 },
     { type: 'comparative', items: [
         {
-            title: 'Traducteurs et Sous-titreurs',
+            title: 'Traducteurs et Professionnels SRT',
             description: 'Synchroniser des traductions après avoir travaillé avec plusieurs versions vidéo',
             icon: 'mdi:translate',
             points: [
