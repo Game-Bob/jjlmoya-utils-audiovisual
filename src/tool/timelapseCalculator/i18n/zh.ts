@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { TimelapseUI, TimelapseLocaleContent } from '../index';
 
-const slug = 'timelapse-hyperlapse-calculator-intervals-china';
+const slug = 'timelapse-hyperlapse-calculator-perfect-intervals';
 const title = '延时摄影与大范围延时摄影计算器：寻找完美拍摄间隔';
 const description = '精确计算照片拍摄间隔、总时长以及拍摄所需的存储空间。摄影师必备的延时摄影工具。';
 

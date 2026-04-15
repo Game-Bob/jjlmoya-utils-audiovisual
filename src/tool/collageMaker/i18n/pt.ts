@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { CollageMakerUI, CollageMakerLocaleContent } from '../index';
 
-const slug = 'criar-collage-fotos-online-grátis-composições-profissionais';
+const slug = 'criar-collage-fotos-online-gratis-composicoes-profissionais';
 const title = 'Criador de Collage Online: Desenhe composições profissionais';
 const description = 'Crie colagens de fotos gratuitamente em segundos. Escolha entre vários layouts, ajuste as bordas e descarregue em alta qualidade sem marcas de água.';
 

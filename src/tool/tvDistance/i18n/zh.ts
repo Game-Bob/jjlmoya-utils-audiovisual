@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { TvDistanceUI, TvDistanceLocaleContent } from '../index';
 
-const slug = 'tv-viewing-distance-calculator-china-thx-4k-optimal-screen';
+const slug = 'tv-viewing-distance-calculator-thx-4k-optimal-screen';
 const title = '电视观看距离计算器：THX 与 4K 最佳屏幕设置';
 const description = '根据电视尺寸和分辨率计算理想的观看距离。利用 THX 和 SMPTE 标准优化您的家庭影院体验。';
 

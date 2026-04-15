@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { VideoFrameExtractorUI, VideoFrameExtractorLocaleContent } from '../index';
 
-const slug = 'online-video-frame-extractor-japan-hd';
+const slug = 'online-video-frame-extractor-capture-hd-stills';
 const title = 'ビデオフレーム抽出：HD静止画キャプチャ';
 const description = 'ビデオから特定の瞬間をフレーム単位で正確に抽出。HD品質の画像をブラウザ上で安全かつ無料でキャプチャできます。';
 

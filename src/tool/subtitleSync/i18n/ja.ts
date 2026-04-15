@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { SubtitleSyncUI, SubtitleSyncLocaleContent } from '../index';
 
-const slug = 'srt-subtitle-synchronize-online-adjust-timing-free';
+const slug = 'synchronize-srt-subtitles-online-adjust-timing-free';
 const title = 'SRT字幕オンライン同期：無料でタイミング調整';
 const description = 'SRT字幕を早めたり遅らせたりするためのオンラインツール。時間のズレを簡単に修正し、同期されたファイルをすぐにダウンロードできます。';
 

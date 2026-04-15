@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { PrivacyBlurUI, PrivacyBlurLocaleContent } from '../index';
 
-const slug = 'online-privacy-editor-pixelate-blur-faces-photos';
+const slug = 'online-privacyeditor-pixelate-blur-faces-fotos';
 const title = 'Online Privacy Editor: Gezichten in foto\'s verpixelen en verbergen';
 const description = 'Bescherm je identiteit door gevoelige delen van je foto\'s te censureren. Verpixel gezichten, vervaag documenten of dek privé-informatie 100% lokaal af.';
 

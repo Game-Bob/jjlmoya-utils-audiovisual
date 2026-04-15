@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { VideoFrameExtractorUI, VideoFrameExtractorLocaleContent } from '../index';
 
-const slug = 'online-video-frame-extractor-korea-hd';
+const slug = 'online-video-frame-extractor-capture-hd-stills';
 const title = '비디오 프레임 추출기: HD 스틸 이미지 캡처';
 const description = '비디오에서 개별 이미지를 프레임 단위의 정밀도로 추출하세요. 완벽한 순간을 HD 화질로 로컬에서 무료로 안전하게 캡처합니다.';
 

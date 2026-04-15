@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { TimelapseUI, TimelapseLocaleContent } from '../index';
 
-const slug = 'timelapse-hyperlapse-calculator-perfect-intervals-korea';
+const slug = 'timelapse-hyperlapse-calculator-perfect-intervals';
 const title = '타임랩스 및 하이퍼랩스 계산기: 완벽한 촬영 간격 설정';
 const description = '사진 촬영 간격, 총 소요 시간, 데이터 저장 용량을 정확하게 계산하세요. 사진작가를 위한 타임랩스 필수 도구입니다.';
 

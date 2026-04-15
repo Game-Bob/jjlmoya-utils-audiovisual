@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { PrivacyBlurUI, PrivacyBlurLocaleContent } from '../index';
 
-const slug = 'online-privacy-editor-pixelate-blur-faces-photos';
+const slug = 'edytor-prywatnosci-online-pikseluj-rozmyj-twarze-zdjecia';
 const title = 'Edytor Prywatności Online: Pikselowanie i ukrywanie twarzy na zdjęciach';
 const description = 'Chroń swoją tożsamość, cenzurując wrażliwe obszary swoich zdjęć. Pikseluj twarze, rozmywaj dokumenty lub zakrywaj prywatne informacje w 100% lokalnie.';
 

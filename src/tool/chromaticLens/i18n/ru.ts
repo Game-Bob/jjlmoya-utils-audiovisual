@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { ChromaticLensUI, ChromaticLensLocaleContent } from '../index';
 
-const slug = 'chromatic-lens-color-palette-extraction-online';
+const slug = 'hromatic-linza-cvetovaya-palitra-online';
 const title = 'Chromatic Lens: онлайн извлечение цветовой палитры';
 const description = 'Извлекайте профессиональные цветовые палитры из любого изображения бесплатно. Определяйте доминирующие цвета на ваших фотографиях с помощью математических алгоритмов.';
 

@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { ImageCompressorUI, ImageCompressorLocaleContent } from '../index';
 
-const slug = 'online-bildkomprimierer-dateigroeße-ohne-qualitaetsverlust-reduzieren';
+const slug = 'online-bildkomprimierer-dateigroesse-ohne-qualitaetsverlust-reduzieren';
 const title = 'Online Bildkomprimierer: Gewicht reduzieren ohne Qualitätsverlust';
 const description = 'Optimieren und komprimieren Sie Ihre JPG-, PNG- und WebP-Fotos kostenlos. Reduzieren Sie die Dateigröße, um die Ladegeschwindigkeit Ihrer Website lokal zu verbessern.';
 

@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { TvDistanceUI, TvDistanceLocaleContent } from '../index';
 
-const slug = 'tv-viewing-distance-calculator-japan-thx-4k';
+const slug = 'tv-viewing-distance-calculator-thx-4k-optimal-screen';
 const title = 'テレビ視聴距離計算機：THX/4K最適画面設定';
 const description = 'テレビのサイズと解像度に基づいて、理想的な視聴距離を計算。THXやSMPTE規格に準拠したホームシアター構築の最適化ツール。';
 

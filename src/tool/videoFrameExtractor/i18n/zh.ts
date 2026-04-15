@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { VideoFrameExtractorUI, VideoFrameExtractorLocaleContent } from '../index';
 
-const slug = 'online-video-frame-extractor-china-hd-stills';
+const slug = 'online-video-frame-extractor-capture-hd-stills';
 const title = '视频帧提取器：高清静态图像捕获';
 const description = '以单帧精度从视频中提取个人图像。在本地免费捕捉高清的完美瞬间。';
 

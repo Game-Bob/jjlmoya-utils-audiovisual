@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { TimelapseUI, TimelapseLocaleContent } from '../index';
 
-const slug = 'timelapse-hyperlapse-calculator-intervals-japan';
+const slug = 'timelapse-hyperlapse-calculator-perfect-intervals';
 const title = 'タイムラプス・ハイパーラプス計算機：最適なインターバル設定';
 const description = '写真撮影の間隔、動画の長さ、必要なストレージ容量を正確に計算。タイムラプス撮影に欠かせないフォトグラファー用ツール。';
 

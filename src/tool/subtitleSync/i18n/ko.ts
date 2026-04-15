@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { SubtitleSyncUI, SubtitleSyncLocaleContent } from '../index';
 
-const slug = 'srt-subtitle-synchronize-online-韓国語-adjust-timing-free';
+const slug = 'synchronize-srt-subtitles-online-adjust-timing-free';
 const title = 'SRT 자막 온라인 동기화: 간편한 타이밍 조정';
 const description = 'SRT 자막의 시간을 앞당기거나 늦출 수 있는 온라인 도구입니다. 자막 싱크 오차를 쉽게 수정하고 즉시 다운로드하세요.';
 
