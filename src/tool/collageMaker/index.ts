@@ -1,7 +1,4 @@
 import type { AudiovisualToolEntry, ToolLocaleContent, ToolDefinition } from '../../types';
-import CollageMaker from './component.astro';
-import CollageMakerSEO from './seo.astro';
-import CollageMakerBibliography from './bibliography.astro';
 
 export interface CollageMakerUI {
     dropTitle: string;
@@ -50,11 +47,10 @@ export const collageMaker: AudiovisualToolEntry<CollageMakerUI> = {
     },
 };
 
-export { CollageMaker, CollageMakerSEO, CollageMakerBibliography };
 
 export const COLLAGE_MAKER_TOOL: ToolDefinition = {
     entry: collageMaker as unknown as AudiovisualToolEntry,
-    Component: CollageMaker,
-    SEOComponent: CollageMakerSEO,
-    BibliographyComponent: CollageMakerBibliography,
+    Component: () => import('./component.astro'),
+    SEOComponent: () => import('./seo.astro'),
+    BibliographyComponent: () => import('./bibliography.astro'),
 };

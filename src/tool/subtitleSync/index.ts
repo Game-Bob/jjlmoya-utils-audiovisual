@@ -1,7 +1,4 @@
 import type { AudiovisualToolEntry, ToolLocaleContent, ToolDefinition } from '../../types';
-import SubtitleSync from './component.astro';
-import SubtitleSyncSEO from './seo.astro';
-import SubtitleSyncBibliography from './bibliography.astro';
 
 export interface SubtitleSyncUI {
     dropTitle: string;
@@ -47,11 +44,10 @@ export const subtitleSync: AudiovisualToolEntry<SubtitleSyncUI> = {
     },
 };
 
-export { SubtitleSync, SubtitleSyncSEO, SubtitleSyncBibliography };
 
 export const SUBTITLE_SYNC_TOOL: ToolDefinition = {
     entry: subtitleSync as unknown as AudiovisualToolEntry,
-    Component: SubtitleSync,
-    SEOComponent: SubtitleSyncSEO,
-    BibliographyComponent: SubtitleSyncBibliography,
+    Component: () => import('./component.astro'),
+    SEOComponent: () => import('./seo.astro'),
+    BibliographyComponent: () => import('./bibliography.astro'),
 };

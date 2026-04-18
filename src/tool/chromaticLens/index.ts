@@ -1,7 +1,4 @@
 import type { AudiovisualToolEntry, ToolLocaleContent, ToolDefinition } from '../../types';
-import ChromaticLens from './component.astro';
-import ChromaticLensSEO from './seo.astro';
-import ChromaticLensBibliography from './bibliography.astro';
 
 export interface ChromaticLensUI {
     dropTitle: string;
@@ -41,11 +38,10 @@ export const chromaticLens: AudiovisualToolEntry<ChromaticLensUI> = {
     },
 };
 
-export { ChromaticLens, ChromaticLensSEO, ChromaticLensBibliography };
 
 export const CHROMATIC_LENS_TOOL: ToolDefinition = {
     entry: chromaticLens as unknown as AudiovisualToolEntry,
-    Component: ChromaticLens,
-    SEOComponent: ChromaticLensSEO,
-    BibliographyComponent: ChromaticLensBibliography,
+    Component: () => import('./component.astro'),
+    SEOComponent: () => import('./seo.astro'),
+    BibliographyComponent: () => import('./bibliography.astro'),
 };

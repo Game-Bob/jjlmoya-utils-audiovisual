@@ -1,7 +1,4 @@
 import type { AudiovisualToolEntry, ToolLocaleContent, ToolDefinition } from '../../types';
-import TvDistance from './component.astro';
-import TvDistanceSEO from './seo.astro';
-import TvDistanceBibliography from './bibliography.astro';
 
 export interface TvDistanceUI {
     specTitle: string;
@@ -47,11 +44,10 @@ export const tvDistance: AudiovisualToolEntry<TvDistanceUI> = {
     },
 };
 
-export { TvDistance, TvDistanceSEO, TvDistanceBibliography };
 
 export const TV_DISTANCE_TOOL: ToolDefinition = {
     entry: tvDistance as unknown as AudiovisualToolEntry,
-    Component: TvDistance,
-    SEOComponent: TvDistanceSEO,
-    BibliographyComponent: TvDistanceBibliography,
+    Component: () => import('./component.astro'),
+    SEOComponent: () => import('./seo.astro'),
+    BibliographyComponent: () => import('./bibliography.astro'),
 };

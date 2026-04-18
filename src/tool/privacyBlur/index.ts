@@ -1,7 +1,4 @@
 import type { AudiovisualToolEntry, ToolLocaleContent, ToolDefinition } from '../../types';
-import PrivacyBlur from './component.astro';
-import PrivacyBlurSEO from './seo.astro';
-import PrivacyBlurBibliography from './bibliography.astro';
 
 export interface PrivacyBlurUI {
     toolPixel: string;
@@ -47,11 +44,10 @@ export const privacyBlur: AudiovisualToolEntry<PrivacyBlurUI> = {
     },
 };
 
-export { PrivacyBlur, PrivacyBlurSEO, PrivacyBlurBibliography };
 
 export const PRIVACY_BLUR_TOOL: ToolDefinition = {
     entry: privacyBlur as unknown as AudiovisualToolEntry,
-    Component: PrivacyBlur,
-    SEOComponent: PrivacyBlurSEO,
-    BibliographyComponent: PrivacyBlurBibliography,
+    Component: () => import('./component.astro'),
+    SEOComponent: () => import('./seo.astro'),
+    BibliographyComponent: () => import('./bibliography.astro'),
 };

@@ -1,7 +1,4 @@
 import type { AudiovisualToolEntry, ToolLocaleContent, ToolDefinition } from '../../types';
-import ImageCompressor from './component.astro';
-import ImageCompressorSEO from './seo.astro';
-import ImageCompressorBibliography from './bibliography.astro';
 
 export interface ImageCompressorUI {
     dropTitle: string;
@@ -58,11 +55,10 @@ export const imageCompressor: AudiovisualToolEntry<ImageCompressorUI> = {
     },
 };
 
-export { ImageCompressor, ImageCompressorSEO, ImageCompressorBibliography };
 
 export const IMAGE_COMPRESSOR_TOOL: ToolDefinition = {
     entry: imageCompressor as unknown as AudiovisualToolEntry,
-    Component: ImageCompressor,
-    SEOComponent: ImageCompressorSEO,
-    BibliographyComponent: ImageCompressorBibliography,
+    Component: () => import('./component.astro'),
+    SEOComponent: () => import('./seo.astro'),
+    BibliographyComponent: () => import('./bibliography.astro'),
 };

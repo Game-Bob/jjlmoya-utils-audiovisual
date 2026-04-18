@@ -1,7 +1,4 @@
 import type { AudiovisualToolEntry, ToolLocaleContent, ToolDefinition } from '../../types';
-import VideoFrameExtractor from './component.astro';
-import VideoFrameExtractorSEO from './seo.astro';
-import VideoFrameExtractorBibliography from './bibliography.astro';
 
 export interface VideoFrameExtractorUI {
     uploadTitle: string;
@@ -51,11 +48,10 @@ export const videoFrameExtractor: AudiovisualToolEntry<VideoFrameExtractorUI> = 
     },
 };
 
-export { VideoFrameExtractor, VideoFrameExtractorSEO, VideoFrameExtractorBibliography };
 
 export const VIDEO_FRAME_EXTRACTOR_TOOL: ToolDefinition = {
     entry: videoFrameExtractor as unknown as AudiovisualToolEntry,
-    Component: VideoFrameExtractor,
-    SEOComponent: VideoFrameExtractorSEO,
-    BibliographyComponent: VideoFrameExtractorBibliography,
+    Component: () => import('./component.astro'),
+    SEOComponent: () => import('./seo.astro'),
+    BibliographyComponent: () => import('./bibliography.astro'),
 };

@@ -1,7 +1,4 @@
 import type { AudiovisualToolEntry, ToolLocaleContent, ToolDefinition } from '../../types';
-import TimelapseCalculator from './component.astro';
-import TimelapseSEO from './seo.astro';
-import TimelapseBibliography from './bibliography.astro';
 
 export interface TimelapseUI {
     title: string;
@@ -50,11 +47,10 @@ export const timelapseCalculator: AudiovisualToolEntry<TimelapseUI> = {
     },
 };
 
-export { TimelapseCalculator, TimelapseSEO, TimelapseBibliography };
 
 export const TIMELAPSE_CALCULATOR_TOOL: ToolDefinition = {
     entry: timelapseCalculator as unknown as AudiovisualToolEntry,
-    Component: TimelapseCalculator,
-    SEOComponent: TimelapseSEO,
-    BibliographyComponent: TimelapseBibliography,
+    Component: () => import('./component.astro'),
+    SEOComponent: () => import('./seo.astro'),
+    BibliographyComponent: () => import('./bibliography.astro'),
 };

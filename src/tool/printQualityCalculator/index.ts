@@ -1,7 +1,4 @@
 import type { AudiovisualToolEntry, ToolLocaleContent, ToolDefinition } from '../../types';
-import PrintQualityCalculator from './component.astro';
-import PrintQualityCalculatorSEO from './seo.astro';
-import PrintQualityCalculatorBibliography from './bibliography.astro';
 
 export interface PrintQualityCalculatorUI {
     dropTitle: string;
@@ -68,11 +65,10 @@ export const printQualityCalculator: AudiovisualToolEntry<PrintQualityCalculator
     },
 };
 
-export { PrintQualityCalculator, PrintQualityCalculatorSEO, PrintQualityCalculatorBibliography };
 
 export const PRINT_QUALITY_CALCULATOR_TOOL: ToolDefinition = {
     entry: printQualityCalculator as unknown as AudiovisualToolEntry,
-    Component: PrintQualityCalculator,
-    SEOComponent: PrintQualityCalculatorSEO,
-    BibliographyComponent: PrintQualityCalculatorBibliography,
+    Component: () => import('./component.astro'),
+    SEOComponent: () => import('./seo.astro'),
+    BibliographyComponent: () => import('./bibliography.astro'),
 };

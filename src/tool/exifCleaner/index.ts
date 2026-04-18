@@ -1,7 +1,4 @@
 import type { AudiovisualToolEntry, ToolLocaleContent, ToolDefinition } from '../../types';
-import ExifCleaner from './component.astro';
-import ExifCleanerSEO from './seo.astro';
-import ExifCleanerBibliography from './bibliography.astro';
 
 export interface ExifCleanerUI {
     dropTitle: string;
@@ -55,11 +52,10 @@ export const exifCleaner: AudiovisualToolEntry<ExifCleanerUI> = {
     },
 };
 
-export { ExifCleaner, ExifCleanerSEO, ExifCleanerBibliography };
 
 export const EXIF_CLEANER_TOOL: ToolDefinition = {
     entry: exifCleaner as unknown as AudiovisualToolEntry,
-    Component: ExifCleaner,
-    SEOComponent: ExifCleanerSEO,
-    BibliographyComponent: ExifCleanerBibliography,
+    Component: () => import('./component.astro'),
+    SEOComponent: () => import('./seo.astro'),
+    BibliographyComponent: () => import('./bibliography.astro'),
 };
