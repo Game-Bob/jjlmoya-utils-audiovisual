@@ -43,3 +43,4 @@ export const audiovisualCategory: AudiovisualCategoryEntry = {
   },
 };
 
+export const toolsCategory = audiovisualCategory;

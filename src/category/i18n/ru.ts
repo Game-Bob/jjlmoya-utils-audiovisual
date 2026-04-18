@@ -1,7 +1,7 @@
 import type { CategoryLocaleContent } from '../../types';
 
 export const content: CategoryLocaleContent = {
-  slug: 'audiovisual-photography',
+  slug: 'audiovizualnye-i-foto-instrumenty',
   title: 'Аудиовизуальные и фото инструменты',
   description: 'Профессиональные инструменты и калькуляторы для кинематографистов, фотографов и создателей цифрового аудиовизуального контента.',
   seo: [

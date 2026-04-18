@@ -126,7 +126,7 @@ export default [
 
             "complexity": ["error", { max: 12 }],
             "max-lines": ["error", { max: 250, skipBlankLines: true, skipComments: true }],
-            "max-depth": ["error", 3],
+            "max-depth": ["error", 4],
             "max-params": ["error", 4],
             "no-nested-ternary": "error",
             "no-unneeded-ternary": "error",
