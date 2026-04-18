@@ -17,7 +17,7 @@ export const content: CategoryLocaleContent = {
     },
     {
       type: 'title',
-      text: 'Toolbox Professionale per la Produzione Audiovisiva',
+      text: 'Cassetta degli Attrezzi Professionale per la Produzione Audiovisiva',
       level: 2,
     },
     {
@@ -28,7 +28,7 @@ export const content: CategoryLocaleContent = {
       type: 'stats',
       items: [
         {
-          value: '12+',
+          value: '10+',
           label: 'Strumenti specializzati',
           icon: 'mdi:cog'
         },

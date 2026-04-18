@@ -17,7 +17,7 @@ export const content: CategoryLocaleContent = {
     },
     {
       type: 'title',
-      text: 'Professionele Toolbox voor Audiovisuele Productie',
+      text: 'Professionele Gereedschapskist voor Audiovisuele Productie',
       level: 2,
     },
     {
@@ -28,7 +28,7 @@ export const content: CategoryLocaleContent = {
       type: 'stats',
       items: [
         {
-          value: '12+',
+          value: '10+',
           label: 'Specialistische tools',
           icon: 'mdi:cog'
         },

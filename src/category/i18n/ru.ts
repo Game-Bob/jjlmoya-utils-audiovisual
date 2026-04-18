@@ -28,7 +28,7 @@ export const content: CategoryLocaleContent = {
       type: 'stats',
       items: [
         {
-          value: '12+',
+          value: '10+',
           label: 'Специализированных инструментов',
           icon: 'mdi:cog'
         },

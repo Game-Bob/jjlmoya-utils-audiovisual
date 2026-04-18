@@ -28,7 +28,7 @@ export const content: CategoryLocaleContent = {
       type: 'stats',
       items: [
         {
-          value: '12+',
+          value: '10+',
           label: 'Uzmanlaşmış araçlar',
           icon: 'mdi:cog'
         },

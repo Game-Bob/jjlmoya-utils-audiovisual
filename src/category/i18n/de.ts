@@ -2,22 +2,22 @@ import type { CategoryLocaleContent } from '../../types';
 
 export const content: CategoryLocaleContent = {
   slug: 'audiovisuell-fotografie',
-  title: 'Audiovisuelle und Fotografie Tools',
+  title: 'Audiovisuelle und Fotografie Werkzeuge',
   description: 'Professionelle Tools und Rechner für Filmemacher, Fotografen und Ersteller digitaler audiovisueller Inhalte.',
   seo: [
     {
       type: 'summary',
-      title: 'Professionelle audiovisuelle Tools',
+      title: 'Professionelle audiovisuelle Werkzeuge',
       items: [
         'Intelligente Rechner für Timelapses, Effekte und Komposition.',
-        'Privacy-Tools zum Bereinigen von EXIF-Metadaten.',
+        'Datenschutz-Tools zum Bereinigen von EXIF-Metadaten.',
         'Untertitelsynchronisierung und Timing-Bearbeitung.',
         'Auflösungsanalyse, Druckqualität und optimaler Betrachtungsabstand.'
       ],
     },
     {
       type: 'title',
-      text: 'Professionelle Toolbox für die audiovisuelle Produktion',
+      text: 'Professioneller Werkzeugkasten für die audiovisuelle Produktion',
       level: 2,
     },
     {
@@ -28,7 +28,7 @@ export const content: CategoryLocaleContent = {
       type: 'stats',
       items: [
         {
-          value: '12+',
+          value: '10+',
           label: 'Spezialisierte Tools',
           icon: 'mdi:cog'
         },
