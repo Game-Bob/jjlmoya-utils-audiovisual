@@ -1,3 +1,4 @@
+import { exifCleaner } from './entry';
 export * from './entry';
 export const EXIF_CLEANER_TOOL: ToolDefinition = {
     entry: exifCleaner as unknown as AudiovisualToolEntry,

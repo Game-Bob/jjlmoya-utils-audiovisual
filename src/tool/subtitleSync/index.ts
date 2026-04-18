@@ -1,3 +1,4 @@
+import { subtitleSync } from './entry';
 export * from './entry';
 export const SUBTITLE_SYNC_TOOL: ToolDefinition = {
     entry: subtitleSync as unknown as AudiovisualToolEntry,

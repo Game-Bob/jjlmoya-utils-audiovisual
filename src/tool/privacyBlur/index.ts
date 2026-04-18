@@ -1,3 +1,4 @@
+import { privacyBlur } from './entry';
 export * from './entry';
 export const PRIVACY_BLUR_TOOL: ToolDefinition = {
     entry: privacyBlur as unknown as AudiovisualToolEntry,

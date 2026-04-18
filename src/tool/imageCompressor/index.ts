@@ -1,3 +1,4 @@
+import { imageCompressor } from './entry';
 export * from './entry';
 export const IMAGE_COMPRESSOR_TOOL: ToolDefinition = {
     entry: imageCompressor as unknown as AudiovisualToolEntry,
