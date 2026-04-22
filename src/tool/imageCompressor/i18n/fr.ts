@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { ImageCompressorUI, ImageCompressorLocaleContent } from '../index';
 
@@ -63,17 +64,6 @@ const howTo: ImageCompressorLocaleContent['howTo'] = [
     {
         name: "Télécharger le résultat",
         text: "Appuyez sur le bouton de téléchargement pour obtenir votre image optimisée prête à l'emploi.",
-    },
-];
-
-const bibliography: ImageCompressorLocaleContent['bibliography'] = [
-    {
-        name: "WebP: An Image Format for the Web",
-        url: "https://developers.google.com/speed/webp",
-    },
-    {
-        name: "L'importance de l'optimisation des images pour le SEO",
-        url: "https://developers.google.com/search/docs/appearance/google-images",
     },
 ];
 
@@ -233,8 +223,7 @@ export const content: ImageCompressorLocaleContent = {
     seo,
     faqTitle: "Frequently Asked Questions",
     faq,
-    bibliography,
-    bibliographyTitle: "References",
+    bibliography: "References",
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],
 };

@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { TimelapseUI, TimelapseLocaleContent } from '../index';
 
@@ -59,25 +60,6 @@ const howTo: TimelapseLocaleContent['howTo'] = [
     {
         name: "저장 공간 확인",
         text: "계산기가 전체 세션에 필요한 예상 용량(GB)을 알려줍니다. 시작 전 SD 카드의 여유 공간을 확인하세요.",
-    },
-];
-
-const bibliography: TimelapseLocaleContent['bibliography'] = [
-    {
-        name: "Timescapes Forum - Digital Timelapse Acquisition & Processing",
-        url: "https://timescapes.org/phpBB3/viewforum.php?f=4",
-    },
-    {
-        name: "Magic Lantern - Auto ETTR & Bulb Ramping Algorithms",
-        url: "https://wiki.magiclantern.fm/ettr",
-    },
-    {
-        name: "LRTimelapse - Visual Deflicker & Holy Grail Workflow",
-        url: "https://lrtimelapse.com/tutorial/advanced/",
-    },
-    {
-        name: "PhotoPills - Advanced Timelapse Calculator & NPF Rule",
-        url: "https://www.photopills.com/calculators/timelapse",
     },
 ];
 
@@ -162,8 +144,7 @@ export const content: TimelapseLocaleContent = {
     seo,
     faq,
     faqTitle: '타임랩스 제작에 관한 자주 묻는 질문',
-    bibliography,
-    bibliographyTitle: '타임랩스 이론 및 관련 리소스',
+    bibliography: '타임랩스 이론 및 관련 리소스',
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],
 };

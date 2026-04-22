@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { CollageMakerUI, CollageMakerLocaleContent } from '../index';
 
@@ -21,8 +22,7 @@ const ui: CollageMakerUI = {
     errorMin: "Sie benötigen mindestens 2 Bilder",
     errorMax: "Maximal 9 Bilder erlaubt",
     errorLoad: "Fehler beim Laden der Bilder",
-    faqTitle: "Häufig gestellte Fragen",
-    bibliographyTitle: "Referenzen"
+    faqTitle: "Häufig gestellte Fragen": "Referenzen"
 };
 
 const faq: CollageMakerLocaleContent['faq'] = [
@@ -52,13 +52,6 @@ const howTo: CollageMakerLocaleContent['howTo'] = [
     {
         name: "Herunterladen und teilen",
         text: "Drücken Sie die Erstellen Taste und laden Sie Ihre finale Komposition sofort herunter.",
-    },
-];
-
-const bibliography: CollageMakerLocaleContent['bibliography'] = [
-    {
-        name: "Fotografische Komposition: Die Kunst der Collage",
-        url: "https://en.wikipedia.org/wiki/Collage",
     },
 ];
 
@@ -225,8 +218,7 @@ export const content: CollageMakerLocaleContent = {
     ui,
     seo,
     faqTitle: "Häufig gestellte Fragen",
-    faq,
-    bibliographyTitle: "Referenzen",
+    faq: "Referenzen",
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

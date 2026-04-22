@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { TvDistanceUI, TvDistanceLocaleContent } from '../index';
 
@@ -52,17 +53,6 @@ const howTo: TvDistanceLocaleContent['howTo'] = [
     {
         name: "ソファの位置を調整",
         text: "映画的な没入感を最大限に引き出すため、座席を「最適視聴距離」の範囲内に配置します。",
-    },
-];
-
-const bibliography: TvDistanceLocaleContent['bibliography'] = [
-    {
-        name: "THX - HDTV Set Up Guide",
-        url: "https://www.thx.com/questions/what-is-the-best-viewing-distance-for-my-tv/",
-    },
-    {
-        name: "SMPTE - Standards Documentation",
-        url: "https://www.smpte.org/",
     },
 ];
 
@@ -216,8 +206,7 @@ export const content: TvDistanceLocaleContent = {
     seo,
     faq,
     faqTitle: 'テレビ視聴距離に関するよくある質問',
-    bibliography,
-    bibliographyTitle: 'テレビ設置に関するプロフェッショナル規格',
+    bibliography: 'テレビ設置に関するプロフェッショナル規格',
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],
 };

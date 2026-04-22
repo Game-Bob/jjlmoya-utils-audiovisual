@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { CollageMakerUI, CollageMakerLocaleContent } from '../index';
 
@@ -21,8 +22,7 @@ const ui: CollageMakerUI = {
     errorMin: "Anda butuh setidaknya 2 gambar",
     errorMax: "Maksimal 9 gambar diizinkan",
     errorLoad: "Kesalahan memuat gambar",
-    faqTitle: "Pertanyaan yang Sering Diajukan",
-    bibliographyTitle: "Referensi"
+    faqTitle: "Pertanyaan yang Sering Diajukan": "Referensi"
 };
 
 const faq: CollageMakerLocaleContent['faq'] = [
@@ -52,13 +52,6 @@ const howTo: CollageMakerLocaleContent['howTo'] = [
     {
         name: "Unduh dan bagikan",
         text: "Tekan tombol buat dan unduh komposisi akhir Anda secara instan.",
-    },
-];
-
-const bibliography: CollageMakerLocaleContent['bibliography'] = [
-    {
-        name: "Komposisi Fotografi: Seni Kolase",
-        url: "https://id.wikipedia.org/wiki/Kolase",
     },
 ];
 
@@ -225,8 +218,7 @@ export const content: CollageMakerLocaleContent = {
     ui,
     seo,
     faqTitle: "Pertanyaan yang Sering Diajukan",
-    faq,
-    bibliographyTitle: "Referensi",
+    faq: "Referensi",
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

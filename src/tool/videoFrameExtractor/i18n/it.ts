@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { VideoFrameExtractorUI, VideoFrameExtractorLocaleContent } from '../index';
 
@@ -52,13 +53,6 @@ const howTo: VideoFrameExtractorLocaleContent['howTo'] = [
     {
         name: "Scarica in alta qualità",
         text: "Scarica le singole catture o l'intera sessione nel formato WebP ottimizzato.",
-    },
-];
-
-const bibliography: VideoFrameExtractorLocaleContent['bibliography'] = [
-    {
-        name: "Capturing frames with HTML5 Video API",
-        url: "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video",
     },
 ];
 
@@ -228,8 +222,7 @@ export const content: VideoFrameExtractorLocaleContent = {
     seo,
     faq,
     faqTitle: 'Domande Frequenti sull\'Estrazione Fotogrammi Video',
-    bibliography,
-    bibliographyTitle: 'Standard Tecnici per la Cattura Video',
+    bibliography: 'Standard Tecnici per la Cattura Video',
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],
 };

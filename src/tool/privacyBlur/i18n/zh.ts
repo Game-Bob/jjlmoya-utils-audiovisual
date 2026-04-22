@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { PrivacyBlurUI, PrivacyBlurLocaleContent } from '../index';
 
@@ -19,8 +20,7 @@ const ui: PrivacyBlurUI = {
     autoDetectFaces: "自动检测",
     loadingModels: "正在加载模型...",
     noFacesDetected: "未自动检测到脸部。",
-    faqTitle: "常见问题",
-    bibliographyTitle: "参考资料"
+    faqTitle: "常见问题": "参考资料"
 };
 
 const faq: PrivacyBlurLocaleContent['faq'] = [
@@ -50,13 +50,6 @@ const howTo: PrivacyBlurLocaleContent['howTo'] = [
     {
         name: "保存结果",
         text: "在确保原始数据无法访问的情况下，下载处理后的图像。",
-    },
-];
-
-const bibliography: PrivacyBlurLocaleContent['bibliography'] = [
-    {
-        name: "隐私设计 (PbD) - AGPD",
-        url: "https://www.aepd.es/es/guias-y-herramientas/guias/guia-de-privacidad-desde-el-diseno",
     },
 ];
 
@@ -230,8 +223,7 @@ export const content: PrivacyBlurLocaleContent = {
     ui,
     seo,
     faqTitle: "常见问题",
-    faq,
-    bibliographyTitle: "参考资料",
+    faq: "参考资料",
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

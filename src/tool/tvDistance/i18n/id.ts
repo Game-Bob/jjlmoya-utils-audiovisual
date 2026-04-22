@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { TvDistanceUI, TvDistanceLocaleContent } from '../index';
 
@@ -52,17 +53,6 @@ const howTo: TvDistanceLocaleContent['howTo'] = [
     {
         name: "Atur sofa Anda",
         text: "Tempatkan tempat duduk Anda dalam rentang 'Jarak Optimal' untuk memaksimalkan kepuasan sinematik.",
-    },
-];
-
-const bibliography: TvDistanceLocaleContent['bibliography'] = [
-    {
-        name: "THX - HDTV Set Up Guide",
-        url: "https://www.thx.com/questions/what-is-the-best-viewing-distance-for-my-tv/",
-    },
-    {
-        name: "SMPTE - Standards Documentation",
-        url: "https://www.smpte.org/",
     },
 ];
 
@@ -216,8 +206,7 @@ export const content: TvDistanceLocaleContent = {
     seo,
     faq,
     faqTitle: 'Pertanyaan yang Sering Diajukan tentang Jarak Menonton TV',
-    bibliography,
-    bibliographyTitle: 'Standar Profesional untuk Pengaturan Televisi',
+    bibliography: 'Standar Profesional untuk Pengaturan Televisi',
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],
 };

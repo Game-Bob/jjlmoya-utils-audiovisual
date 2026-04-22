@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { PrintQualityCalculatorUI, PrintQualityCalculatorLocaleContent } from '../index';
 
@@ -40,8 +41,7 @@ const ui: PrintQualityCalculatorUI = {
     supportedText: "Да (Покрывает)",
     notSupportedPrefix: "Нет (",
     invalidImageError: "Пожалуйста, выберите корректное изображение",
-    faqTitle: "Часто задаваемые вопросы",
-    bibliographyTitle: "Ссылки"
+    faqTitle: "Часто задаваемые вопросы": "Ссылки"
 };
 
 const faq: PrintQualityCalculatorLocaleContent['faq'] = [
@@ -75,17 +75,6 @@ const howTo: PrintQualityCalculatorLocaleContent['howTo'] = [
     {
         name: "Подтвердите качество",
         text: "Перед отправкой на печать убедитесь, что индикатор показывает «Отличное качество».",
-    },
-];
-
-const bibliography: PrintQualityCalculatorLocaleContent['bibliography'] = [
-    {
-        name: "Международные форматы бумаги (ISO 216)",
-        url: "https://www.iso.org/standard/36631.html",
-    },
-    {
-        name: "Руководство по разрешению изображений - Adobe",
-        url: "https://www.adobe.com/ru/creativecloud/photography/discover/image-resolution.html",
     },
 ];
 
@@ -253,8 +242,7 @@ export const content: PrintQualityCalculatorLocaleContent = {
     ui,
     seo,
     faqTitle: "Часто задаваемые вопросы",
-    faq,
-    bibliographyTitle: "Ссылки",
+    faq: "Ссылки",
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

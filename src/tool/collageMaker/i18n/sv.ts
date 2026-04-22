@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { CollageMakerUI, CollageMakerLocaleContent } from '../index';
 
@@ -21,8 +22,7 @@ const ui: CollageMakerUI = {
     errorMin: "Du behöver minst 2 bilder",
     errorMax: "Maximalt 9 bilder tillåtna",
     errorLoad: "Fel vid laddning av bilder",
-    faqTitle: "Vanliga frågor",
-    bibliographyTitle: "Referenser"
+    faqTitle: "Vanliga frågor": "Referenser"
 };
 
 const faq: CollageMakerLocaleContent['faq'] = [
@@ -52,13 +52,6 @@ const howTo: CollageMakerLocaleContent['howTo'] = [
     {
         name: "Ladda ner och dela",
         text: "Tryck på skapa knappen och ladda omedelbart ner din färdiga komposition.",
-    },
-];
-
-const bibliography: CollageMakerLocaleContent['bibliography'] = [
-    {
-        name: "Fotografisk komposition: Konsten att skapa collage",
-        url: "https://sv.wikipedia.org/wiki/Collage",
     },
 ];
 
@@ -225,8 +218,7 @@ export const content: CollageMakerLocaleContent = {
     ui,
     seo,
     faqTitle: "Vanliga frågor",
-    faq,
-    bibliographyTitle: "Referenser",
+    faq: "Referenser",
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

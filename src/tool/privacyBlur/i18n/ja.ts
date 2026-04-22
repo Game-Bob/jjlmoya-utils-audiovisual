@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { PrivacyBlurUI, PrivacyBlurLocaleContent } from '../index';
 
@@ -19,8 +20,7 @@ const ui: PrivacyBlurUI = {
     autoDetectFaces: "自動検出",
     loadingModels: "モデルを読み込み中...",
     noFacesDetected: "顔は自動検出されませんでした。",
-    faqTitle: "よくある質問",
-    bibliographyTitle: "リファレンス"
+    faqTitle: "よくある質問": "リファレンス"
 };
 
 const faq: PrivacyBlurLocaleContent['faq'] = [
@@ -50,13 +50,6 @@ const howTo: PrivacyBlurLocaleContent['howTo'] = [
     {
         name: "結果を保存",
         text: "元のデータが復元不可能な状態になった画像をダウンロードします。安心して共有できます。",
-    },
-];
-
-const bibliography: PrivacyBlurLocaleContent['bibliography'] = [
-    {
-        name: "Privacy by Design (PbD) - AGPD",
-        url: "https://www.aepd.es/es/guias-y-herramientas/guias/guia-de-privacidad-desde-el-diseno",
     },
 ];
 
@@ -230,8 +223,7 @@ export const content: PrivacyBlurLocaleContent = {
     ui,
     seo,
     faqTitle: "よくある質問",
-    faq,
-    bibliographyTitle: "リファレンス",
+    faq: "リファレンス",
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

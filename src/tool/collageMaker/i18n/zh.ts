@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { CollageMakerUI, CollageMakerLocaleContent } from '../index';
 
@@ -21,8 +22,7 @@ const ui: CollageMakerUI = {
     errorMin: "您至少需要 2 张图像",
     errorMax: "最多允许 9 张图像",
     errorLoad: "加载图像时出错",
-    faqTitle: "常见问题",
-    bibliographyTitle: "参考资料"
+    faqTitle: "常见问题": "参考资料"
 };
 
 const faq: CollageMakerLocaleContent['faq'] = [
@@ -52,13 +52,6 @@ const howTo: CollageMakerLocaleContent['howTo'] = [
     {
         name: "下载并分享",
         text: "点击创建按钮并立即下载您的最终作品。",
-    },
-];
-
-const bibliography: CollageMakerLocaleContent['bibliography'] = [
-    {
-        name: "摄影构图：拼贴的艺术",
-        url: "https://zh.wikipedia.org/wiki/%E5%89%AA%E8%B4%B4%E7%94%BB",
     },
 ];
 
@@ -225,8 +218,7 @@ export const content: CollageMakerLocaleContent = {
     ui,
     seo,
     faqTitle: "常见问题",
-    faq,
-    bibliographyTitle: "参考资料",
+    faq: "参考资料",
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { ChromaticLensUI, ChromaticLensLocaleContent } from '../index';
 
@@ -14,8 +15,7 @@ const ui: ChromaticLensUI = {
     copiedLabel: "Kopyalandı!",
     colorCountLabel: "Renk sayısı",
     changeImage: "Görüntüyü değiştir",
-    faqTitle: "Renk çıkarma hakkında sıkça sorulan sorular",
-    bibliographyTitle: "Kaynaklar ve teknik belgeler"
+    faqTitle: "Renk çıkarma hakkında sıkça sorulan sorular": "Kaynaklar ve teknik belgeler"
 };
 
 const faq: ChromaticLensLocaleContent['faq'] = [
@@ -49,17 +49,6 @@ const howTo: ChromaticLensLocaleContent['howTo'] = [
     {
         name: "Kopyala ve kullan",
         text: "Tonları kaydetmek ve tasarım projenize uygulamak için üzerlerine tıklayın.",
-    },
-];
-
-const bibliography: ChromaticLensLocaleContent['bibliography'] = [
-    {
-        name: "Median Cut Algorithm - Wikipedia",
-        url: "https://en.wikipedia.org/wiki/Median_cut",
-    },
-    {
-        name: "Tasarımcılar İçin Renk Teorisi",
-        url: "https://www.smashingmagazine.com/2010/01/color-theory-for-designers-part-1-the-meaning-of-color/",
     },
 ];
 
@@ -238,8 +227,7 @@ export const content: ChromaticLensLocaleContent = {
     ui,
     seo,
     faqTitle: "Sıkça Sorulan Sorular",
-    faq,
-    bibliographyTitle: "Referanslar",
+    faq: "Referanslar",
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

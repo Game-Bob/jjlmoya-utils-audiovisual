@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { PrintQualityCalculatorUI, PrintQualityCalculatorLocaleContent } from '../index';
 
@@ -40,8 +41,7 @@ const ui: PrintQualityCalculatorUI = {
     supportedText: "可能 (カバー範囲内)",
     notSupportedPrefix: "不可 (",
     invalidImageError: "有効な画像を選択してください",
-    faqTitle: "よくある質問",
-    bibliographyTitle: "リファレンス"
+    faqTitle: "よくある質問": "リファレンス"
 };
 
 const faq: PrintQualityCalculatorLocaleContent['faq'] = [
@@ -75,17 +75,6 @@ const howTo: PrintQualityCalculatorLocaleContent['howTo'] = [
     {
         name: "品質を確定",
         text: "印刷に出す前に、インジケーターが「最高品質」を示していることを確認してください。",
-    },
-];
-
-const bibliography: PrintQualityCalculatorLocaleContent['bibliography'] = [
-    {
-        name: "国際標準紙サイズ (ISO 216)",
-        url: "https://www.iso.org/standard/36631.html",
-    },
-    {
-        name: "画像解像度ガイド - Adobe",
-        url: "https://www.adobe.com/jp/creativecloud/photography/discover/image-resolution.html",
     },
 ];
 
@@ -253,8 +242,7 @@ export const content: PrintQualityCalculatorLocaleContent = {
     ui,
     seo,
     faqTitle: "よくある質問",
-    faq,
-    bibliographyTitle: "リファレンス",
+    faq: "リファレンス",
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

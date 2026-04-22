@@ -46,3 +46,5 @@ export const timelapseCalculator: AudiovisualToolEntry<TimelapseUI> = {
         zh: async () => (await import('./i18n/zh')).content as unknown as TimelapseLocaleContent,
     },
 };
+
+export { bibliography } from './bibliography';

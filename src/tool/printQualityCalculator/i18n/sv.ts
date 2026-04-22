@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { PrintQualityCalculatorUI, PrintQualityCalculatorLocaleContent } from '../index';
 
@@ -40,8 +41,7 @@ const ui: PrintQualityCalculatorUI = {
     supportedText: "Ja (Täcks)",
     notSupportedPrefix: "Nej (",
     invalidImageError: "Välj en giltig bild",
-    faqTitle: "Vanliga Frågor",
-    bibliographyTitle: "Referenser"
+    faqTitle: "Vanliga Frågor": "Referenser"
 };
 
 const faq: PrintQualityCalculatorLocaleContent['faq'] = [
@@ -75,17 +75,6 @@ const howTo: PrintQualityCalculatorLocaleContent['howTo'] = [
     {
         name: "Bekräfta kvalitet",
         text: "Se till att indikatorn markerar 'Utmärkt Kvalitet' innan du skickar till tryck.",
-    },
-];
-
-const bibliography: PrintQualityCalculatorLocaleContent['bibliography'] = [
-    {
-        name: "Internationella pappersstorlekar (ISO 216)",
-        url: "https://www.iso.org/standard/36631.html",
-    },
-    {
-        name: "Guide för bildupplösning - Adobe",
-        url: "https://www.adobe.com/se/creativecloud/photography/discover/image-resolution.html",
     },
 ];
 
@@ -253,8 +242,7 @@ export const content: PrintQualityCalculatorLocaleContent = {
     ui,
     seo,
     faqTitle: "Vanliga Frågor",
-    faq,
-    bibliographyTitle: "Referenser",
+    faq: "Referenser",
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

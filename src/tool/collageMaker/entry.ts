@@ -46,3 +46,5 @@ export const collageMaker: AudiovisualToolEntry<CollageMakerUI> = {
         zh: async () => (await import('./i18n/zh')).content as unknown as CollageMakerLocaleContent,
     },
 };
+
+export { bibliography } from './bibliography';

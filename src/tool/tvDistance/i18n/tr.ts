@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { TvDistanceUI, TvDistanceLocaleContent } from '../index';
 
@@ -52,17 +53,6 @@ const howTo: TvDistanceLocaleContent['howTo'] = [
     {
         name: "Kanepenizi ayarlayın",
         text: "Sinematik sürükleyiciliği en üst düzeye çıkarmak için koltuğunuzu 'İdeal Mesafe' aralığına yerleştirin.",
-    },
-];
-
-const bibliography: TvDistanceLocaleContent['bibliography'] = [
-    {
-        name: "THX - HDTV Set Up Guide",
-        url: "https://www.thx.com/questions/what-is-the-best-viewing-distance-for-my-tv/",
-    },
-    {
-        name: "SMPTE - Standards Documentation",
-        url: "https://www.smpte.org/",
     },
 ];
 
@@ -216,8 +206,7 @@ export const content: TvDistanceLocaleContent = {
     seo,
     faq,
     faqTitle: 'TV İzleme Mesafesi Hakkında Sıkça Sorulan Sorular',
-    bibliography,
-    bibliographyTitle: 'Televizyon Kurulumu İçin Profesyonel Standartlar',
+    bibliography: 'Televizyon Kurulumu İçin Profesyonel Standartlar',
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],
 };

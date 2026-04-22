@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { ChromaticLensUI, ChromaticLensLocaleContent } from '../index';
 
@@ -14,8 +15,7 @@ const ui: ChromaticLensUI = {
     copiedLabel: "Kopiert!",
     colorCountLabel: "Anzahl der Farben",
     changeImage: "Bild ändern",
-    faqTitle: "Häufig gestellte Fragen zur Farbetraktion",
-    bibliographyTitle: "Ressourcen und technische Dokumentation"
+    faqTitle: "Häufig gestellte Fragen zur Farbetraktion": "Ressourcen und technische Dokumentation"
 };
 
 const faq: ChromaticLensLocaleContent['faq'] = [
@@ -49,17 +49,6 @@ const howTo: ChromaticLensLocaleContent['howTo'] = [
     {
         name: "Kopieren und verwenden",
         text: "Klicken Sie auf die Töne, um sie zu speichern und in Ihrem Designprojekt anzuwenden.",
-    },
-];
-
-const bibliography: ChromaticLensLocaleContent['bibliography'] = [
-    {
-        name: "Median Cut Algorithm - Wikipedia",
-        url: "https://en.wikipedia.org/wiki/Median_cut",
-    },
-    {
-        name: "Farblehre für Designer",
-        url: "https://www.smashingmagazine.com/2010/01/color-theory-for-designers-part-1-the-meaning-of-color/",
     },
 ];
 
@@ -238,8 +227,7 @@ export const content: ChromaticLensLocaleContent = {
     ui,
     seo,
     faqTitle: "Häufig gestellte Fragen",
-    faq,
-    bibliographyTitle: "Referenzen",
+    faq: "Referenzen",
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

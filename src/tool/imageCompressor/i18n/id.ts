@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { ImageCompressorUI, ImageCompressorLocaleContent } from '../index';
 
@@ -30,8 +31,7 @@ const ui: ImageCompressorUI = {
     closeBtn: "Tutup",
     totalSavingsLabel: "Total penghematan",
     noSavings: "Tidak ada penghematan bersih",
-    faqTitle: "Pertanyaan yang Sering Diajukan",
-    bibliographyTitle: "Referensi"
+    faqTitle: "Pertanyaan yang Sering Diajukan": "Referensi"
 };
 
 const faq: ImageCompressorLocaleContent['faq'] = [
@@ -65,17 +65,6 @@ const howTo: ImageCompressorLocaleContent['howTo'] = [
     {
         name: "Unduh hasilnya",
         text: "Tekan tombol unduh untuk mendapatkan gambar yang dioptimalkan yang siap digunakan.",
-    },
-];
-
-const bibliography: ImageCompressorLocaleContent['bibliography'] = [
-    {
-        name: "WebP: Format Gambar untuk Web",
-        url: "https://developers.google.com/speed/webp",
-    },
-    {
-        name: "Pentingnya optimalisasi gambar untuk SEO",
-        url: "https://developers.google.com/search/docs/appearance/google-images",
     },
 ];
 
@@ -234,8 +223,7 @@ export const content: ImageCompressorLocaleContent = {
     ui,
     seo,
     faqTitle: "Pertanyaan yang Sering Diajukan",
-    faq,
-    bibliographyTitle: "Referensi",
+    faq: "Referensi",
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

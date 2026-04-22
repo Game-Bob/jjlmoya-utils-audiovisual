@@ -43,3 +43,5 @@ export const privacyBlur: AudiovisualToolEntry<PrivacyBlurUI> = {
         zh: async () => (await import('./i18n/zh')).content as unknown as PrivacyBlurLocaleContent,
     },
 };
+
+export { bibliography } from './bibliography';

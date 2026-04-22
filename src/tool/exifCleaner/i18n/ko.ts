@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { ExifCleanerUI, ExifCleanerLocaleContent } from '../index';
 
@@ -25,8 +26,7 @@ const ui: ExifCleanerUI = {
     noMetadataFound: "읽을 수 있는 EXIF 메타데이터를 찾을 수 없습니다.",
     alreadyCleanInfo: "이미지가 이미 깨끗할 수 있습니다.",
     previewLabel: "미리보기",
-    faqTitle: "사진 개인정보 보호에 관한 자주 묻는 질문",
-    bibliographyTitle: "리소스 및 기술 EXIF 문서",
+    faqTitle: "사진 개인정보 보호에 관한 자주 묻는 질문": "리소스 및 기술 EXIF 문서",
 };
 
 const faq: ExifCleanerLocaleContent['faq'] = [
@@ -64,17 +64,6 @@ const howTo: ExifCleanerLocaleContent['howTo'] = [
     {
         name: "안전한 사진 다운로드",
         text: "익명화되어 소셜 미디어에 안전하게 공유할 수 있게 된 새로운 버전의 이미지를 저장하세요.",
-    },
-];
-
-const bibliography: ExifCleanerLocaleContent['bibliography'] = [
-    {
-        name: "EXIF - 위키백과",
-        url: "https://ko.wikipedia.org/wiki/EXIF",
-    },
-    {
-        name: "W3C - 이미지 내 메타데이터",
-        url: "https://www.w3.org/community/image-metadata/",
     },
 ];
 
@@ -269,8 +258,7 @@ export const content: ExifCleanerLocaleContent = {
     ui,
     seo,
     faqTitle: "자주 묻는 질문",
-    faq,
-    bibliographyTitle: "참고 문헌",
+    faq: "참고 문헌",
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

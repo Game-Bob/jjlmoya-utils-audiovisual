@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { ExifCleanerUI, ExifCleanerLocaleContent } from '../index';
 
@@ -25,8 +26,7 @@ const ui: ExifCleanerUI = {
     noMetadataFound: "未找到可读的 EXIF 元数据。",
     alreadyCleanInfo: "图像可能已经很干净了。",
     previewLabel: "预览",
-    faqTitle: "关于照片隐私的常见问题",
-    bibliographyTitle: "资源和 EXIF 技术文档",
+    faqTitle: "关于照片隐私的常见问题": "资源和 EXIF 技术文档",
 };
 
 const faq: ExifCleanerLocaleContent['faq'] = [
@@ -64,17 +64,6 @@ const howTo: ExifCleanerLocaleContent['howTo'] = [
     {
         name: "下载安全照片",
         text: "保存新版本的图像，现在已匿名化，可以安全地在社交媒体上分享。",
-    },
-];
-
-const bibliography: ExifCleanerLocaleContent['bibliography'] = [
-    {
-        name: "可交换图像文件格式 (EXIF) - 维基百科",
-        url: "https://zh.wikipedia.org/wiki/EXIF",
-    },
-    {
-        name: "W3C - 图像中的元数据",
-        url: "https://www.w3.org/community/image-metadata/",
     },
 ];
 
@@ -269,8 +258,7 @@ export const content: ExifCleanerLocaleContent = {
     ui,
     seo,
     faqTitle: "常见问题",
-    faq,
-    bibliographyTitle: "参考资料",
+    faq: "参考资料",
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

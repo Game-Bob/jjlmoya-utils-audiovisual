@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { PrivacyBlurUI, PrivacyBlurLocaleContent } from '../index';
 
@@ -19,8 +20,7 @@ const ui: PrivacyBlurUI = {
     autoDetectFaces: "자동 감지",
     loadingModels: "모델 로드 중...",
     noFacesDetected: "자동으로 감지된 얼굴이 없습니다.",
-    faqTitle: "자주 묻는 질문",
-    bibliographyTitle: "참고 문헌"
+    faqTitle: "자주 묻는 질문": "참고 문헌"
 };
 
 const faq: PrivacyBlurLocaleContent['faq'] = [
@@ -50,13 +50,6 @@ const howTo: PrivacyBlurLocaleContent['howTo'] = [
     {
         name: "결과 저장",
         text: "원본 데이터를 복구할 수 없는 상태로 처리된 이미지를 다운로드하세요.",
-    },
-];
-
-const bibliography: PrivacyBlurLocaleContent['bibliography'] = [
-    {
-        name: "프라이버시 설계(Privacy by Design, PbD) - AGPD",
-        url: "https://www.aepd.es/es/guias-y-herramientas/guias/guia-de-privacidad-desde-el-diseno",
     },
 ];
 
@@ -230,8 +223,7 @@ export const content: PrivacyBlurLocaleContent = {
     ui,
     seo,
     faqTitle: "자주 묻는 질문",
-    faq,
-    bibliographyTitle: "참고 문헌",
+    faq: "참고 문헌",
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

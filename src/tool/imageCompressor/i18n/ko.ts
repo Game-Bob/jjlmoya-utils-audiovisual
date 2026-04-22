@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { ImageCompressorUI, ImageCompressorLocaleContent } from '../index';
 
@@ -30,8 +31,7 @@ const ui: ImageCompressorUI = {
     closeBtn: "닫기",
     totalSavingsLabel: "총 절감량",
     noSavings: "순 절감액 없음",
-    faqTitle: "자주 묻는 질문",
-    bibliographyTitle: "참고 문헌"
+    faqTitle: "자주 묻는 질문": "참고 문헌"
 };
 
 const faq: ImageCompressorLocaleContent['faq'] = [
@@ -65,17 +65,6 @@ const howTo: ImageCompressorLocaleContent['howTo'] = [
     {
         name: "결과 다운로드",
         text: "다운로드 버튼을 눌러 바로 사용할 수 있는 최적화된 이미지를 받으세요.",
-    },
-];
-
-const bibliography: ImageCompressorLocaleContent['bibliography'] = [
-    {
-        name: "WebP: 웹을 위한 이미지 형식",
-        url: "https://developers.google.com/speed/webp",
-    },
-    {
-        name: "SEO를 위한 이미지 최적화의 중요성",
-        url: "https://developers.google.com/search/docs/appearance/google-images",
     },
 ];
 
@@ -234,8 +223,7 @@ export const content: ImageCompressorLocaleContent = {
     ui,
     seo,
     faqTitle: "자주 묻는 질문",
-    faq,
-    bibliographyTitle: "참고 문헌",
+    faq: "참고 문헌",
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

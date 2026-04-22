@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { ChromaticLensUI, ChromaticLensLocaleContent } from '../index';
 
@@ -14,8 +15,7 @@ const ui: ChromaticLensUI = {
     copiedLabel: "복사 완료!",
     colorCountLabel: "색상 수",
     changeImage: "이미지 변경",
-    faqTitle: "색상 추출에 관한 자주 묻는 질문",
-    bibliographyTitle: "리소스 및 기술 문서"
+    faqTitle: "색상 추출에 관한 자주 묻는 질문": "리소스 및 기술 문서"
 };
 
 const faq: ChromaticLensLocaleContent['faq'] = [
@@ -49,17 +49,6 @@ const howTo: ChromaticLensLocaleContent['howTo'] = [
     {
         name: "복사 및 사용",
         text: "톤을 클릭하여 저장하고 디자인 프로젝트에 적용하세요.",
-    },
-];
-
-const bibliography: ChromaticLensLocaleContent['bibliography'] = [
-    {
-        name: "메디안 컷 알고리즘 - 위키백과",
-        url: "https://ko.wikipedia.org/wiki/%EB%A9%94%EB%94%94%EC%95%88_%EC%BB%B7_%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98",
-    },
-    {
-        name: "디자이너를 위한 색채 이론",
-        url: "https://www.smashingmagazine.com/2010/01/color-theory-for-designers-part-1-the-meaning-of-color/",
     },
 ];
 
@@ -238,8 +227,7 @@ export const content: ChromaticLensLocaleContent = {
     ui,
     seo,
     faqTitle: "자주 묻는 질문",
-    faq,
-    bibliographyTitle: "참고 문헌",
+    faq: "참고 문헌",
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

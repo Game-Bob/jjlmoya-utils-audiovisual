@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { TimelapseUI, TimelapseLocaleContent } from '../index';
 
@@ -59,25 +60,6 @@ const howTo: TimelapseLocaleContent['howTo'] = [
     {
         name: "ストレージ容量を確認",
         text: "撮影に必要な概算容量が表示されます。開始前にSDカードに十分な空きがあるか確認してください。",
-    },
-];
-
-const bibliography: TimelapseLocaleContent['bibliography'] = [
-    {
-        name: "Timescapes Forum - Digital Timelapse Acquisition & Processing",
-        url: "https://timescapes.org/phpBB3/viewforum.php?f=4",
-    },
-    {
-        name: "Magic Lantern - Auto ETTR & Bulb Ramping Algorithms",
-        url: "https://wiki.magiclantern.fm/ettr",
-    },
-    {
-        name: "LRTimelapse - Visual Deflicker & Holy Grail Workflow",
-        url: "https://lrtimelapse.com/tutorial/advanced/",
-    },
-    {
-        name: "PhotoPills - Advanced Timelapse Calculator & NPF Rule",
-        url: "https://www.photopills.com/calculators/timelapse",
     },
 ];
 
@@ -162,8 +144,7 @@ export const content: TimelapseLocaleContent = {
     seo,
     faq,
     faqTitle: 'タイムラプス製作に関するよくある質問',
-    bibliography,
-    bibliographyTitle: 'タイムラプスの理論とリソース',
+    bibliography: 'タイムラプスの理論とリソース',
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],
 };

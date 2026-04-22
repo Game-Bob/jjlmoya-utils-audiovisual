@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { PrintQualityCalculatorUI, PrintQualityCalculatorLocaleContent } from '../index';
 
@@ -40,8 +41,7 @@ const ui: PrintQualityCalculatorUI = {
     supportedText: "Evet (Karşılıyor)",
     notSupportedPrefix: "Hayır (",
     invalidImageError: "Lütfen geçerli bir görsel seçin",
-    faqTitle: "Sıkça Sorulan Sorular",
-    bibliographyTitle: "Referanslar"
+    faqTitle: "Sıkça Sorulan Sorular": "Referanslar"
 };
 
 const faq: PrintQualityCalculatorLocaleContent['faq'] = [
@@ -75,17 +75,6 @@ const howTo: PrintQualityCalculatorLocaleContent['howTo'] = [
     {
         name: "Kaliteyi onaylayın",
         text: "Baskıya göndermeden önce göstergenin \"Mükemmel Kalite\"de olduğundan emin olun.",
-    },
-];
-
-const bibliography: PrintQualityCalculatorLocaleContent['bibliography'] = [
-    {
-        name: "Uluslararası Kağıt Boyutları (ISO 216)",
-        url: "https://www.iso.org/standard/36631.html",
-    },
-    {
-        name: "Görsel çözünürlük kılavuzu - Adobe",
-        url: "https://www.adobe.com/tr/creativecloud/photography/discover/image-resolution.html",
     },
 ];
 
@@ -253,8 +242,7 @@ export const content: PrintQualityCalculatorLocaleContent = {
     ui,
     seo,
     faqTitle: "Sıkça Sorulan Sorular",
-    faq,
-    bibliographyTitle: "Referanslar",
+    faq: "Referanslar",
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { SubtitleSyncUI, SubtitleSyncLocaleContent } from '../index';
 
@@ -56,17 +57,6 @@ const howTo: SubtitleSyncLocaleContent['howTo'] = [
     {
         name: "파일 다운로드",
         text: "미리보기에서 시간이 맞는지 확인하고 다운로드를 클릭하여 새 SRT 파일을 받으세요.",
-    },
-];
-
-const bibliography: SubtitleSyncLocaleContent['bibliography'] = [
-    {
-        name: "SubRip (SRT) 형식 사양",
-        url: "https://matroska.org/technical/subtitles.html#srt-subtitles",
-    },
-    {
-        name: "MDN Web Docs - FileReader API",
-        url: "https://developer.mozilla.org/ko/docs/Web/API/FileReader",
     },
 ];
 
@@ -234,8 +224,7 @@ export const content: SubtitleSyncLocaleContent = {
     seo,
     faq,
     faqTitle: '자막 동기화에 관한 자주 묻는 질문',
-    bibliography,
-    bibliographyTitle: '자막 형식 관련 기술 리소스',
+    bibliography: '자막 형식 관련 기술 리소스',
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],
 };

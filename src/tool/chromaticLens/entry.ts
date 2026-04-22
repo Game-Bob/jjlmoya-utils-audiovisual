@@ -37,3 +37,5 @@ export const chromaticLens: AudiovisualToolEntry<ChromaticLensUI> = {
         zh: async () => (await import('./i18n/zh')).content as unknown as ChromaticLensLocaleContent,
     },
 };
+
+export { bibliography } from './bibliography';

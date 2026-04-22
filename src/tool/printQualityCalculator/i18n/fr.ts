@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { PrintQualityCalculatorUI, PrintQualityCalculatorLocaleContent } from '../index';
 
@@ -73,17 +74,6 @@ const howTo: PrintQualityCalculatorLocaleContent['howTo'] = [
     {
         name: "Confirmez la qualité",
         text: "Assurez vous que l'indicateur marque 'Qualité Excellente' avant d'envoyer à l'impression.",
-    },
-];
-
-const bibliography: PrintQualityCalculatorLocaleContent['bibliography'] = [
-    {
-        name: "International Paper Sizes (ISO 216)",
-        url: "https://www.iso.org/standard/36631.html",
-    },
-    {
-        name: "Guide de résolution d'image - Adobe",
-        url: "https://www.adobe.com/fr/creativecloud/photography/discover/image-resolution.html",
     },
 ];
 
@@ -252,8 +242,7 @@ export const content: PrintQualityCalculatorLocaleContent = {
     seo,
     faqTitle: "Frequently Asked Questions",
     faq,
-    bibliography,
-    bibliographyTitle: "References",
+    bibliography: "References",
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],
 };

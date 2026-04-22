@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { ExifCleanerUI, ExifCleanerLocaleContent } from '../index';
 
@@ -25,8 +26,7 @@ const ui: ExifCleanerUI = {
     noMetadataFound: "Okunabilir EXIF meta verisi bulunamadı.",
     alreadyCleanInfo: "Görsel zaten temiz olabilir.",
     previewLabel: "Önizleme",
-    faqTitle: "Fotoğraf gizliliği hakkında sıkça sorulan sorular",
-    bibliographyTitle: "Kaynaklar ve teknik EXIF dokümantasyonu",
+    faqTitle: "Fotoğraf gizliliği hakkında sıkça sorulan sorular": "Kaynaklar ve teknik EXIF dokümantasyonu",
 };
 
 const faq: ExifCleanerLocaleContent['faq'] = [
@@ -64,17 +64,6 @@ const howTo: ExifCleanerLocaleContent['howTo'] = [
     {
         name: "Güvenli fotoğrafları indirin",
         text: "Görsellerinizin artık anonimleştirilmiş ve sosyal medyada güvenle paylaşılmaya hazır olan yeni sürümlerini kaydedin.",
-    },
-];
-
-const bibliography: ExifCleanerLocaleContent['bibliography'] = [
-    {
-        name: "Exchangeable image file format (EXIF) - Wikipedia",
-        url: "https://tr.wikipedia.org/wiki/Exif",
-    },
-    {
-        name: "W3C - Görsellerdeki Meta Veriler",
-        url: "https://www.w3.org/community/image-metadata/",
     },
 ];
 
@@ -269,8 +258,7 @@ export const content: ExifCleanerLocaleContent = {
     ui,
     seo,
     faqTitle: "Sıkça Sorulan Sorular",
-    faq,
-    bibliographyTitle: "Referanslar",
+    faq: "Referanslar",
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

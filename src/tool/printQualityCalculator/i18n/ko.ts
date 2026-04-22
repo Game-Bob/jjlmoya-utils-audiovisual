@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { PrintQualityCalculatorUI, PrintQualityCalculatorLocaleContent } from '../index';
 
@@ -40,8 +41,7 @@ const ui: PrintQualityCalculatorUI = {
     supportedText: "예 (충족)",
     notSupportedPrefix: "아니요 (",
     invalidImageError: "유효한 이미지를 선택하세요",
-    faqTitle: "자주 묻는 질문",
-    bibliographyTitle: "참고 문헌"
+    faqTitle: "자주 묻는 질문": "참고 문헌"
 };
 
 const faq: PrintQualityCalculatorLocaleContent['faq'] = [
@@ -75,17 +75,6 @@ const howTo: PrintQualityCalculatorLocaleContent['howTo'] = [
     {
         name: "품질 확인",
         text: "인쇄를 맡기기 전에 표시기에 '최상급 품질'이 뜨는지 확인하세요.",
-    },
-];
-
-const bibliography: PrintQualityCalculatorLocaleContent['bibliography'] = [
-    {
-        name: "국제 종이 크기 (ISO 216)",
-        url: "https://www.iso.org/standard/36631.html",
-    },
-    {
-        name: "이미지 해상도 가이드 - Adobe",
-        url: "https://www.adobe.com/kr/creativecloud/photography/discover/image-resolution.html",
     },
 ];
 
@@ -253,8 +242,7 @@ export const content: PrintQualityCalculatorLocaleContent = {
     ui,
     seo,
     faqTitle: "자주 묻는 질문",
-    faq,
-    bibliographyTitle: "참고 문헌",
+    faq: "참고 문헌",
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

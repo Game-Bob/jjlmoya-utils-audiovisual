@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { CollageMakerUI, CollageMakerLocaleContent } from '../index';
 
@@ -21,8 +22,7 @@ const ui: CollageMakerUI = {
     errorMin: "Potrzebujesz co najmniej 2 obrazów",
     errorMax: "Dozwolone maksymalnie 9 obrazów",
     errorLoad: "Błąd podczas ładowania obrazów",
-    faqTitle: "Często Zadawane Pytania",
-    bibliographyTitle: "Referencje"
+    faqTitle: "Często Zadawane Pytania": "Referencje"
 };
 
 const faq: CollageMakerLocaleContent['faq'] = [
@@ -52,13 +52,6 @@ const howTo: CollageMakerLocaleContent['howTo'] = [
     {
         name: "Pobierz i udostępnij",
         text: "Naciśnij przycisk tworzenia i natychmiast pobierz swoją końcową kompozycję.",
-    },
-];
-
-const bibliography: CollageMakerLocaleContent['bibliography'] = [
-    {
-        name: "Kompozycja fotograficzna: Sztuka kolażu",
-        url: "https://pl.wikipedia.org/wiki/Kola%C5%BC",
     },
 ];
 
@@ -225,8 +218,7 @@ export const content: CollageMakerLocaleContent = {
     ui,
     seo,
     faqTitle: "Często Zadawane Pytania",
-    faq,
-    bibliographyTitle: "Referencje",
+    faq: "Referencje",
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

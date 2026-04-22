@@ -54,3 +54,5 @@ export const imageCompressor: AudiovisualToolEntry<ImageCompressorUI> = {
         zh: async () => (await import('./i18n/zh')).content as unknown as ImageCompressorLocaleContent,
     },
 };
+
+export { bibliography } from './bibliography';

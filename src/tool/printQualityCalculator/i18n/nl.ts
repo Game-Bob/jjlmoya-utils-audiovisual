@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { PrintQualityCalculatorUI, PrintQualityCalculatorLocaleContent } from '../index';
 
@@ -40,8 +41,7 @@ const ui: PrintQualityCalculatorUI = {
     supportedText: "Ja (Gedekt)",
     notSupportedPrefix: "Nee (",
     invalidImageError: "Selecteer een geldige afbeelding",
-    faqTitle: "Veelgestelde Vragen",
-    bibliographyTitle: "Referenties"
+    faqTitle: "Veelgestelde Vragen": "Referenties"
 };
 
 const faq: PrintQualityCalculatorLocaleContent['faq'] = [
@@ -75,17 +75,6 @@ const howTo: PrintQualityCalculatorLocaleContent['howTo'] = [
     {
         name: "Bevestig kwaliteit",
         text: "Zorg ervoor dat de indicator 'Uitstekende Kwaliteit' aangeeft voordat je naar de drukker gaat.",
-    },
-];
-
-const bibliography: PrintQualityCalculatorLocaleContent['bibliography'] = [
-    {
-        name: "Internationale Papierformaten (ISO 216)",
-        url: "https://www.iso.org/standard/36631.html",
-    },
-    {
-        name: "Afbeeldingsresolutie gids - Adobe",
-        url: "https://www.adobe.com/nl/creativecloud/photography/discover/image-resolution.html",
     },
 ];
 
@@ -253,8 +242,7 @@ export const content: PrintQualityCalculatorLocaleContent = {
     ui,
     seo,
     faqTitle: "Veelgestelde Vragen",
-    faq,
-    bibliographyTitle: "Referenties",
+    faq: "Referenties",
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { CollageMakerUI, CollageMakerLocaleContent } from '../index';
 
@@ -21,8 +22,7 @@ const ui: CollageMakerUI = {
     errorMin: "En az 2 görsele ihtiyacınız var",
     errorMax: "Maksimum 9 görsele izin verilir",
     errorLoad: "Görseller yüklenirken hata oluştu",
-    faqTitle: "Sıkça Sorulan Sorular",
-    bibliographyTitle: "Referanslar"
+    faqTitle: "Sıkça Sorulan Sorular": "Referanslar"
 };
 
 const faq: CollageMakerLocaleContent['faq'] = [
@@ -52,13 +52,6 @@ const howTo: CollageMakerLocaleContent['howTo'] = [
     {
         name: "İndirin ve paylaşın",
         text: "Oluştur düğmesine basın ve nihai kompozisyonunuzu anında indirin.",
-    },
-];
-
-const bibliography: CollageMakerLocaleContent['bibliography'] = [
-    {
-        name: "Fotoğrafik Kompozisyon: Kolaj Sanatı",
-        url: "https://tr.wikipedia.org/wiki/Kolaj",
     },
 ];
 
@@ -225,8 +218,7 @@ export const content: CollageMakerLocaleContent = {
     ui,
     seo,
     faqTitle: "Sıkça Sorulan Sorular",
-    faq,
-    bibliographyTitle: "Referanslar",
+    faq: "Referanslar",
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

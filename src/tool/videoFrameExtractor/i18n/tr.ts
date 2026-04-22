@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { VideoFrameExtractorUI, VideoFrameExtractorLocaleContent } from '../index';
 
@@ -52,13 +53,6 @@ const howTo: VideoFrameExtractorLocaleContent['howTo'] = [
     {
         name: "Yüksek kalitede indirin",
         text: "Kareleri tek tek veya tüm oturumu optimize edilmiş WebP formatında indirin.",
-    },
-];
-
-const bibliography: VideoFrameExtractorLocaleContent['bibliography'] = [
-    {
-        name: "Capturing frames with HTML5 Video API",
-        url: "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video",
     },
 ];
 
@@ -228,8 +222,7 @@ export const content: VideoFrameExtractorLocaleContent = {
     seo,
     faq,
     faqTitle: 'Video Kare Çıkarma Hakkında Sıkça Sorulan Sorular',
-    bibliography,
-    bibliographyTitle: 'Video Yakalama İçine Teknik Standartlar',
+    bibliography: 'Video Yakalama İçine Teknik Standartlar',
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],
 };

@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { TimelapseUI, TimelapseLocaleContent } from '../index';
 
@@ -59,25 +60,6 @@ const howTo: TimelapseLocaleContent['howTo'] = [
     {
         name: "Verifique o espaço de armazenamento",
         text: "A calculadora dir lhe á quantos Gigabytes a sessão ocupará. Certifique se de que o seu cartão SD tem espaço suficiente.",
-    },
-];
-
-const bibliography: TimelapseLocaleContent['bibliography'] = [
-    {
-        name: "Timescapes Forum - Digital Timelapse Acquisition & Processing",
-        url: "https://timescapes.org/phpBB3/viewforum.php?f=4",
-    },
-    {
-        name: "Magic Lantern - Auto ETTR & Bulb Ramping Algorithms",
-        url: "https://wiki.magiclantern.fm/ettr",
-    },
-    {
-        name: "LRTimelapse - Visual Deflicker & Holy Grail Workflow",
-        url: "https://lrtimelapse.com/tutorial/advanced/",
-    },
-    {
-        name: "PhotoPills - Advanced Timelapse Calculator & NPF Rule",
-        url: "https://www.photopills.com/calculators/timelapse",
     },
 ];
 
@@ -162,8 +144,7 @@ export const content: TimelapseLocaleContent = {
     seo,
     faq,
     faqTitle: 'Perguntas Frequentes sobre Produção de Timelapse',
-    bibliography,
-    bibliographyTitle: 'Teoria e Recursos para Timelapse',
+    bibliography: 'Teoria e Recursos para Timelapse',
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],
 };

@@ -43,3 +43,5 @@ export const tvDistance: AudiovisualToolEntry<TvDistanceUI> = {
         zh: async () => (await import('./i18n/zh')).content as unknown as TvDistanceLocaleContent,
     },
 };
+
+export { bibliography } from './bibliography';

@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { VideoFrameExtractorUI, VideoFrameExtractorLocaleContent } from '../index';
 
@@ -52,13 +53,6 @@ const howTo: VideoFrameExtractorLocaleContent['howTo'] = [
     {
         name: "Pobierz w wysokiej jakości",
         text: "Pobierz pojedyncze zrzuty lub całą sesję w zoptymalizowanym formacie WebP.",
-    },
-];
-
-const bibliography: VideoFrameExtractorLocaleContent['bibliography'] = [
-    {
-        name: "Capturing frames with HTML5 Video API",
-        url: "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video",
     },
 ];
 
@@ -228,8 +222,7 @@ export const content: VideoFrameExtractorLocaleContent = {
     seo,
     faq,
     faqTitle: 'Często zadawane pytania o ekstrakcję klatek',
-    bibliography,
-    bibliographyTitle: 'Standardy techniczne przechwytywania wideo',
+    bibliography: 'Standardy techniczne przechwytywania wideo',
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],
 };

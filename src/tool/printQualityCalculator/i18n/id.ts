@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { PrintQualityCalculatorUI, PrintQualityCalculatorLocaleContent } from '../index';
 
@@ -40,8 +41,7 @@ const ui: PrintQualityCalculatorUI = {
     supportedText: "Ya (Tercover)",
     notSupportedPrefix: "Tidak (",
     invalidImageError: "Silakan pilih gambar yang valid",
-    faqTitle: "Pertanyaan yang Sering Diajukan",
-    bibliographyTitle: "Referensi"
+    faqTitle: "Pertanyaan yang Sering Diajukan": "Referensi"
 };
 
 const faq: PrintQualityCalculatorLocaleContent['faq'] = [
@@ -75,17 +75,6 @@ const howTo: PrintQualityCalculatorLocaleContent['howTo'] = [
     {
         name: "Konfirmasi kualitas",
         text: "Pastikan indikator menunjukkan 'Kualitas Luar Biasa' sebelum mengirim untuk dicetak.",
-    },
-];
-
-const bibliography: PrintQualityCalculatorLocaleContent['bibliography'] = [
-    {
-        name: "Ukuran Kertas Internasional (ISO 216)",
-        url: "https://www.iso.org/standard/36631.html",
-    },
-    {
-        name: "Panduan resolusi gambar - Adobe",
-        url: "https://www.adobe.com/id/creativecloud/photography/discover/image-resolution.html",
     },
 ];
 
@@ -253,8 +242,7 @@ export const content: PrintQualityCalculatorLocaleContent = {
     ui,
     seo,
     faqTitle: "Pertanyaan yang Sering Diajukan",
-    faq,
-    bibliographyTitle: "Referensi",
+    faq: "Referensi",
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

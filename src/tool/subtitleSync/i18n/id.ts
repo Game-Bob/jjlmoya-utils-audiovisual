@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { SubtitleSyncUI, SubtitleSyncLocaleContent } from '../index';
 
@@ -56,17 +57,6 @@ const howTo: SubtitleSyncLocaleContent['howTo'] = [
     {
         name: "Unduh filenya",
         text: "Verifikasi di pratinjau bahwa waktunya sudah benar dan klik unduh untuk mendapatkan SRT baru Anda.",
-    },
-];
-
-const bibliography: SubtitleSyncLocaleContent['bibliography'] = [
-    {
-        name: "Spesifikasi format SubRip (SRT)",
-        url: "https://matroska.org/technical/subtitles.html#srt-subtitles",
-    },
-    {
-        name: "MDN Web Docs - FileReader API",
-        url: "https://developer.mozilla.org/en-US/docs/Web/API/FileReader",
     },
 ];
 
@@ -234,8 +224,7 @@ export const content: SubtitleSyncLocaleContent = {
     seo,
     faq,
     faqTitle: 'Pertanyaan yang Sering Diajukan tentang Sinkronisasi Subtitle',
-    bibliography,
-    bibliographyTitle: 'Sumber Daya Teknis tentang Format Subtitle',
+    bibliography: 'Sumber Daya Teknis tentang Format Subtitle',
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],
 };

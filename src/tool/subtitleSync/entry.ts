@@ -43,3 +43,5 @@ export const subtitleSync: AudiovisualToolEntry<SubtitleSyncUI> = {
         zh: async () => (await import('./i18n/zh')).content as unknown as SubtitleSyncLocaleContent,
     },
 };
+
+export { bibliography } from './bibliography';

@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { ExifCleanerUI, ExifCleanerLocaleContent } from '../index';
 
@@ -25,8 +26,7 @@ const ui: ExifCleanerUI = {
     noMetadataFound: "Keine lesbaren EXIF-Metadaten gefunden.",
     alreadyCleanInfo: "Das Bild ist möglicherweise bereits bereinigt.",
     previewLabel: "Vorschau",
-    faqTitle: "Häufig gestellte Fragen zum Foto Datenschutz",
-    bibliographyTitle: "Ressourcen und technische EXIF Dokumentation",
+    faqTitle: "Häufig gestellte Fragen zum Foto Datenschutz": "Ressourcen und technische EXIF Dokumentation",
 };
 
 const faq: ExifCleanerLocaleContent['faq'] = [
@@ -64,17 +64,6 @@ const howTo: ExifCleanerLocaleContent['howTo'] = [
     {
         name: "Sichere Fotos herunterladen",
         text: "Speichern Sie die neuen Versionen Ihrer Bilder, die nun anonymisiert und bereit sind, sicher in sozialen Medien geteilt zu werden.",
-    },
-];
-
-const bibliography: ExifCleanerLocaleContent['bibliography'] = [
-    {
-        name: "Exchangeable Image File Format (EXIF) - Wikipedia",
-        url: "https://de.wikipedia.org/wiki/Exchangeable_Image_File_Format",
-    },
-    {
-        name: "W3C - Metadaten in Bildern",
-        url: "https://www.w3.org/community/image-metadata/",
     },
 ];
 
@@ -269,8 +258,7 @@ export const content: ExifCleanerLocaleContent = {
     ui,
     seo,
     faqTitle: "Häufig gestellte Fragen",
-    faq,
-    bibliographyTitle: "Referenzen",
+    faq: "Referenzen",
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

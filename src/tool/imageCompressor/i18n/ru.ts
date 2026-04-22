@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { ImageCompressorUI, ImageCompressorLocaleContent } from '../index';
 
@@ -30,8 +31,7 @@ const ui: ImageCompressorUI = {
     closeBtn: "Закрыть",
     totalSavingsLabel: "Общая экономия",
     noSavings: "Нет чистой экономии",
-    faqTitle: "Часто задаваемые вопросы",
-    bibliographyTitle: "Ссылки"
+    faqTitle: "Часто задаваемые вопросы": "Ссылки"
 };
 
 const faq: ImageCompressorLocaleContent['faq'] = [
@@ -65,17 +65,6 @@ const howTo: ImageCompressorLocaleContent['howTo'] = [
     {
         name: "Скачайте результат",
         text: "Нажмите кнопку скачивания, чтобы получить оптимизированное изображение, готовое к использованию.",
-    },
-];
-
-const bibliography: ImageCompressorLocaleContent['bibliography'] = [
-    {
-        name: "WebP: формат изображений для веба",
-        url: "https://developers.google.com/speed/webp",
-    },
-    {
-        name: "Важность оптимизации изображений для SEO",
-        url: "https://developers.google.com/search/docs/appearance/google-images",
     },
 ];
 
@@ -234,8 +223,7 @@ export const content: ImageCompressorLocaleContent = {
     ui,
     seo,
     faqTitle: "Часто задаваемые вопросы",
-    faq,
-    bibliographyTitle: "Ссылки",
+    faq: "Ссылки",
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

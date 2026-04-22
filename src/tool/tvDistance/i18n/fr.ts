@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { TvDistanceUI, TvDistanceLocaleContent } from '../index';
 
@@ -52,17 +53,6 @@ const howTo: TvDistanceLocaleContent['howTo'] = [
     {
         name: "Ajustez votre canapé",
         text: "Placez votre siège dans la plage de 'Distance optimale' pour maximiser l'immersion cinématographique.",
-    },
-];
-
-const bibliography: TvDistanceLocaleContent['bibliography'] = [
-    {
-        name: "THX - HDTV Set Up Guide",
-        url: "https://www.thx.com/questions/what-is-the-best-viewing-distance-for-my-tv/",
-    },
-    {
-        name: "SMPTE - Documentation des normes",
-        url: "https://www.smpte.org/",
     },
 ];
 
@@ -216,8 +206,7 @@ export const content: TvDistanceLocaleContent = {
     seo,
     faq,
     faqTitle: 'Foire Aux Questions sur la Distance de Visionnage TV',
-    bibliography,
-    bibliographyTitle: 'Normes Professionnelles pour la Configuration de Téléviseur',
+    bibliography: 'Normes Professionnelles pour la Configuration de Téléviseur',
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],
 };

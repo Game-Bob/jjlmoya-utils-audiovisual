@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { ImageCompressorUI, ImageCompressorLocaleContent } from '../index';
 
@@ -30,8 +31,7 @@ const ui: ImageCompressorUI = {
     closeBtn: "关闭",
     totalSavingsLabel: "总节省",
     noSavings: "无净节省",
-    faqTitle: "常见问题",
-    bibliographyTitle: "参考资料"
+    faqTitle: "常见问题": "参考资料"
 };
 
 const faq: ImageCompressorLocaleContent['faq'] = [
@@ -65,17 +65,6 @@ const howTo: ImageCompressorLocaleContent['howTo'] = [
     {
         name: "下载结果",
         text: "点击下载按钮，获取已准备好使用的优化图像。",
-    },
-];
-
-const bibliography: ImageCompressorLocaleContent['bibliography'] = [
-    {
-        name: "WebP：一种用于网络的图像格式",
-        url: "https://developers.google.com/speed/webp",
-    },
-    {
-        name: "图像优化对 SEO 的重要性",
-        url: "https://developers.google.com/search/docs/appearance/google-images",
     },
 ];
 
@@ -236,8 +225,7 @@ export const content: ImageCompressorLocaleContent = {
     ui,
     seo,
     faqTitle: "常见问题",
-    faq,
-    bibliographyTitle: "参考资料",
+    faq: "参考资料",
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

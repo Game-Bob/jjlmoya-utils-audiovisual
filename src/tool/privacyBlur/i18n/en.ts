@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { PrivacyBlurUI, PrivacyBlurLocaleContent } from '../index';
 
@@ -19,8 +20,7 @@ const ui: PrivacyBlurUI = {
     autoDetectFaces: "Auto Detect",
     loadingModels: "Loading models...",
     noFacesDetected: "No faces automatically detected.",
-    faqTitle: "Frequently Asked Questions",
-    bibliographyTitle: "References"
+    faqTitle: "Frequently Asked Questions": "References"
 };
 
 const faq: PrivacyBlurLocaleContent['faq'] = [
@@ -50,13 +50,6 @@ const howTo: PrivacyBlurLocaleContent['howTo'] = [
     {
         name: "Save the result",
         text: "Download the processed image with the security that the original data is inaccessible.",
-    },
-];
-
-const bibliography: PrivacyBlurLocaleContent['bibliography'] = [
-    {
-        name: "Privacy by Design (PbD) - AGPD",
-        url: "https://www.aepd.es/es/guias-y-herramientas/guias/guia-de-privacidad-desde-el-diseno",
     },
 ];
 
@@ -230,8 +223,7 @@ export const content: PrivacyBlurLocaleContent = {
     ui,
     seo,
     faqTitle: "Frequently Asked Questions",
-    faq,
-    bibliographyTitle: "References",
+    faq: "References",
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

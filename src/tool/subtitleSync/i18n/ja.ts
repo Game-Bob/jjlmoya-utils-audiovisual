@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { SubtitleSyncUI, SubtitleSyncLocaleContent } from '../index';
 
@@ -56,17 +57,6 @@ const howTo: SubtitleSyncLocaleContent['howTo'] = [
     {
         name: "ファイルをダウンロード",
         text: "プレビューで時間が正しいことを確認し、ダウンロードをクリックして新しいSRTファイルを取得します。",
-    },
-];
-
-const bibliography: SubtitleSyncLocaleContent['bibliography'] = [
-    {
-        name: "SubRip (SRT) 形式の仕様について",
-        url: "https://matroska.org/technical/subtitles.html#srt-subtitles",
-    },
-    {
-        name: "MDN Web Docs - FileReader API",
-        url: "https://developer.mozilla.org/ja/docs/Web/API/FileReader",
     },
 ];
 
@@ -234,8 +224,7 @@ export const content: SubtitleSyncLocaleContent = {
     seo,
     faq,
     faqTitle: '字幕同期に関するよくある質問',
-    bibliography,
-    bibliographyTitle: '字幕形式に関する技術リソース',
+    bibliography: '字幕形式に関する技術リソース',
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],
 };

@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { ImageCompressorUI, ImageCompressorLocaleContent } from '../index';
 
@@ -30,8 +31,7 @@ const ui: ImageCompressorUI = {
     closeBtn: "Kapat",
     totalSavingsLabel: "Toplam tasarruf",
     noSavings: "Net tasarruf yok",
-    faqTitle: "Sıkça Sorulan Sorular",
-    bibliographyTitle: "Referanslar"
+    faqTitle: "Sıkça Sorulan Sorular": "Referanslar"
 };
 
 const faq: ImageCompressorLocaleContent['faq'] = [
@@ -65,17 +65,6 @@ const howTo: ImageCompressorLocaleContent['howTo'] = [
     {
         name: "Sonucu indirin",
         text: "Optimize edilmiş görselinizi kullanıma hazır bir şekilde almak için indir düğmesine basın.",
-    },
-];
-
-const bibliography: ImageCompressorLocaleContent['bibliography'] = [
-    {
-        name: "WebP: Web için Görsel Formatı",
-        url: "https://developers.google.com/speed/webp",
-    },
-    {
-        name: "SEO için görsel optimizasyonunun önemi",
-        url: "https://developers.google.com/search/docs/appearance/google-images",
     },
 ];
 
@@ -234,8 +223,7 @@ export const content: ImageCompressorLocaleContent = {
     ui,
     seo,
     faqTitle: "Sıkça Sorulan Sorular",
-    faq,
-    bibliographyTitle: "Referanslar",
+    faq: "Referanslar",
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

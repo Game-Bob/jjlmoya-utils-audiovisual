@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { ExifCleanerUI, ExifCleanerLocaleContent } from '../index';
 
@@ -25,8 +26,7 @@ const ui: ExifCleanerUI = {
     noMetadataFound: "No se encontraron metadatos EXIF legibles.",
     alreadyCleanInfo: "Es posible que la imagen ya esté limpia.",
     previewLabel: "Vista Previa",
-    faqTitle: "Preguntas frecuentes sobre privacidad en fotos",
-    bibliographyTitle: "Recursos y documentación técnica EXIF",
+    faqTitle: "Preguntas frecuentes sobre privacidad en fotos": "Recursos y documentación técnica EXIF",
 };
 
 const faq: ExifCleanerLocaleContent['faq'] = [
@@ -64,17 +64,6 @@ const howTo: ExifCleanerLocaleContent['howTo'] = [
     {
         name: "Descargar fotos seguras",
         text: "Guarda las nuevas versiones de tus imágenes ya anonimizadas y listas para compartir en redes sociales de forma segura.",
-    },
-];
-
-const bibliography: ExifCleanerLocaleContent['bibliography'] = [
-    {
-        name: "Exchangeable image file format (EXIF) - Wikipedia",
-        url: "https://es.wikipedia.org/wiki/Exchangeable_image_file_format",
-    },
-    {
-        name: "W3C - Metadata in Images",
-        url: "https://www.w3.org/community/image-metadata/",
     },
 ];
 
@@ -270,8 +259,6 @@ export const content: ExifCleanerLocaleContent = {
     seo,
     faq,
     faqTitle: ui.faqTitle,
-    bibliography,
-    bibliographyTitle: ui.bibliographyTitle,
-    howTo,
+    bibliography: ui.howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],
 };

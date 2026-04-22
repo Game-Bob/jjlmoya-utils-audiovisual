@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { VideoFrameExtractorUI, VideoFrameExtractorLocaleContent } from '../index';
 
@@ -52,13 +53,6 @@ const howTo: VideoFrameExtractorLocaleContent['howTo'] = [
     {
         name: "고화질 다운로드",
         text: "개별 이미지 또는 전체 세션을 최적화된 WebP 형식으로 다운로드합니다.",
-    },
-];
-
-const bibliography: VideoFrameExtractorLocaleContent['bibliography'] = [
-    {
-        name: "Capturing frames with HTML5 Video API",
-        url: "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video",
     },
 ];
 
@@ -228,8 +222,7 @@ export const content: VideoFrameExtractorLocaleContent = {
     seo,
     faq,
     faqTitle: '비디오 프레임 추출에 관한 자주 묻는 질문',
-    bibliography,
-    bibliographyTitle: '비디오 캡처 기술 표준',
+    bibliography: '비디오 캡처 기술 표준',
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],
 };

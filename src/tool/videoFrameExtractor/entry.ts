@@ -47,3 +47,5 @@ export const videoFrameExtractor: AudiovisualToolEntry<VideoFrameExtractorUI> = 
         zh: async () => (await import('./i18n/zh')).content as unknown as VideoFrameExtractorLocaleContent,
     },
 };
+
+export { bibliography } from './bibliography';

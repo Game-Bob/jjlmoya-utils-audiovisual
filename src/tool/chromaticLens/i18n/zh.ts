@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { ChromaticLensUI, ChromaticLensLocaleContent } from '../index';
 
@@ -14,8 +15,7 @@ const ui: ChromaticLensUI = {
     copiedLabel: "已复制！",
     colorCountLabel: "色彩数量",
     changeImage: "更改图像",
-    faqTitle: "关于色彩提取的常见问题",
-    bibliographyTitle: "资源与技术文档"
+    faqTitle: "关于色彩提取的常见问题": "资源与技术文档"
 };
 
 const faq: ChromaticLensLocaleContent['faq'] = [
@@ -49,17 +49,6 @@ const howTo: ChromaticLensLocaleContent['howTo'] = [
     {
         name: "复制并使用",
         text: "点击色调以保存它们并将其应用到您的设计项目中。",
-    },
-];
-
-const bibliography: ChromaticLensLocaleContent['bibliography'] = [
-    {
-        name: "中位切分算法 - 维基百科",
-        url: "https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%80%BC%E5%88%87%E5%88%86%E7%AE%97%E6%B3%95",
-    },
-    {
-        name: "设计师色彩理论",
-        url: "https://www.smashingmagazine.com/2010/01/color-theory-for-designers-part-1-the-meaning-of-color/",
     },
 ];
 
@@ -238,8 +227,7 @@ export const content: ChromaticLensLocaleContent = {
     ui,
     seo,
     faqTitle: "常见问题",
-    faq,
-    bibliographyTitle: "参考资料",
+    faq: "参考资料",
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

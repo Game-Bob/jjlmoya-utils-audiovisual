@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { ImageCompressorUI, ImageCompressorLocaleContent } from '../index';
 
@@ -30,8 +31,7 @@ const ui: ImageCompressorUI = {
     closeBtn: "閉じる",
     totalSavingsLabel: "合計削減量",
     noSavings: "削減なし",
-    faqTitle: "よくある質問",
-    bibliographyTitle: "リファレンス"
+    faqTitle: "よくある質問": "リファレンス"
 };
 
 const faq: ImageCompressorLocaleContent['faq'] = [
@@ -65,17 +65,6 @@ const howTo: ImageCompressorLocaleContent['howTo'] = [
     {
         name: "結果をダウンロード",
         text: "ダウンロードボタンを押して、最適化された画像を取得し、すぐに使用できるようにします。",
-    },
-];
-
-const bibliography: ImageCompressorLocaleContent['bibliography'] = [
-    {
-        name: "WebP: ウェブ用の画像形式",
-        url: "https://developers.google.com/speed/webp",
-    },
-    {
-        name: "SEOにおける画像最適化の重要性",
-        url: "https://developers.google.com/search/docs/appearance/google-images",
     },
 ];
 
@@ -234,8 +223,7 @@ export const content: ImageCompressorLocaleContent = {
     ui,
     seo,
     faqTitle: "よくある質問",
-    faq,
-    bibliographyTitle: "リファレンス",
+    faq: "リファレンス",
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

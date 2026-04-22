@@ -64,3 +64,5 @@ export const printQualityCalculator: AudiovisualToolEntry<PrintQualityCalculator
         zh: async () => (await import('./i18n/zh')).content as unknown as PrintQualityCalculatorLocaleContent,
     },
 };
+
+export { bibliography } from './bibliography';

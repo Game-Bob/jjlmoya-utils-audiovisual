@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { ExifCleanerUI, ExifCleanerLocaleContent } from '../index';
 
@@ -25,8 +26,7 @@ const ui: ExifCleanerUI = {
     noMetadataFound: "Inga läsbara EXIF-metadata hittades.",
     alreadyCleanInfo: "Bilden kan redan vara ren.",
     previewLabel: "Förhandsvisning",
-    faqTitle: "Vanliga frågor om bildintegritet",
-    bibliographyTitle: "Resurser och teknisk EXIF dokumentation",
+    faqTitle: "Vanliga frågor om bildintegritet": "Resurser och teknisk EXIF dokumentation",
 };
 
 const faq: ExifCleanerLocaleContent['faq'] = [
@@ -64,17 +64,6 @@ const howTo: ExifCleanerLocaleContent['howTo'] = [
     {
         name: "Ladda ner säkra foton",
         text: "Spara de nya versionerna av dina bilder, nu anonymiserade och redo att delas säkert på sociala medier.",
-    },
-];
-
-const bibliography: ExifCleanerLocaleContent['bibliography'] = [
-    {
-        name: "Exchangeable image file format (EXIF) - Wikipedia",
-        url: "https://sv.wikipedia.org/wiki/Exif",
-    },
-    {
-        name: "W3C - Metadata i bilder",
-        url: "https://www.w3.org/community/image-metadata/",
     },
 ];
 
@@ -269,8 +258,7 @@ export const content: ExifCleanerLocaleContent = {
     ui,
     seo,
     faqTitle: "Vanliga frågor",
-    faq,
-    bibliographyTitle: "Referenser",
+    faq: "Referenser",
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { SubtitleSyncUI, SubtitleSyncLocaleContent } from '../index';
 
@@ -56,17 +57,6 @@ const howTo: SubtitleSyncLocaleContent['howTo'] = [
     {
         name: "Scarica il file",
         text: "Verifica nell'anteprima che i tempi siano corretti e clicca su scarica per ottenere il tuo nuovo SRT.",
-    },
-];
-
-const bibliography: SubtitleSyncLocaleContent['bibliography'] = [
-    {
-        name: "Specifica del formato SubRip (SRT)",
-        url: "https://matroska.org/technical/subtitles.html#srt-subtitles",
-    },
-    {
-        name: "MDN Web Docs - FileReader API",
-        url: "https://developer.mozilla.org/en-US/docs/Web/API/FileReader",
     },
 ];
 
@@ -234,8 +224,7 @@ export const content: SubtitleSyncLocaleContent = {
     seo,
     faq,
     faqTitle: 'Domande Frequenti sulla Sincronizzazione dei Sottotitoli',
-    bibliography,
-    bibliographyTitle: 'Risorse Tecniche sui Formati dei Sottotitoli',
+    bibliography: 'Risorse Tecniche sui Formati dei Sottotitoli',
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],
 };

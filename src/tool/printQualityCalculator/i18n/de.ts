@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { PrintQualityCalculatorUI, PrintQualityCalculatorLocaleContent } from '../index';
 
@@ -40,8 +41,7 @@ const ui: PrintQualityCalculatorUI = {
     supportedText: "Ja (Abgedeckt)",
     notSupportedPrefix: "Nein (",
     invalidImageError: "Bitte wählen Sie ein gültiges Bild aus",
-    faqTitle: "Häufig gestellte Fragen",
-    bibliographyTitle: "Referenzen"
+    faqTitle: "Häufig gestellte Fragen": "Referenzen"
 };
 
 const faq: PrintQualityCalculatorLocaleContent['faq'] = [
@@ -75,17 +75,6 @@ const howTo: PrintQualityCalculatorLocaleContent['howTo'] = [
     {
         name: "Qualität bestätigen",
         text: "Stellen Sie sicher, dass die Anzeige „Hervorragende Qualität“ anzeigt, bevor Sie den Druck in Auftrag geben.",
-    },
-];
-
-const bibliography: PrintQualityCalculatorLocaleContent['bibliography'] = [
-    {
-        name: "Internationale Papierformate (ISO 216)",
-        url: "https://www.iso.org/standard/36631.html",
-    },
-    {
-        name: "Leitfaden zur Bildauflösung - Adobe",
-        url: "https://www.adobe.com/de/creativecloud/photography/discover/image-resolution.html",
     },
 ];
 
@@ -253,8 +242,7 @@ export const content: PrintQualityCalculatorLocaleContent = {
     ui,
     seo,
     faqTitle: "Häufig gestellte Fragen",
-    faq,
-    bibliographyTitle: "Referenzen",
+    faq: "Referenzen",
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

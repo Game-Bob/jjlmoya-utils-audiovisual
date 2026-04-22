@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { ChromaticLensUI, ChromaticLensLocaleContent } from '../index';
 
@@ -14,8 +15,7 @@ const ui: ChromaticLensUI = {
     copiedLabel: "Tersalin!",
     colorCountLabel: "Jumlah warna",
     changeImage: "Ganti gambar",
-    faqTitle: "Pertanyaan umum tentang ekstraksi warna",
-    bibliographyTitle: "Sumber daya dan dokumentasi teknis"
+    faqTitle: "Pertanyaan umum tentang ekstraksi warna": "Sumber daya dan dokumentasi teknis"
 };
 
 const faq: ChromaticLensLocaleContent['faq'] = [
@@ -49,17 +49,6 @@ const howTo: ChromaticLensLocaleContent['howTo'] = [
     {
         name: "Salin dan gunakan",
         text: "Klik pada nada warna untuk menyimpannya dan menerapkannya pada proyek desain Anda.",
-    },
-];
-
-const bibliography: ChromaticLensLocaleContent['bibliography'] = [
-    {
-        name: "Median Cut Algorithm - Wikipedia",
-        url: "https://en.wikipedia.org/wiki/Median_cut",
-    },
-    {
-        name: "Teori Warna untuk Desainer",
-        url: "https://www.smashingmagazine.com/2010/01/color-theory-for-designers-part-1-the-meaning-of-color/",
     },
 ];
 
@@ -238,8 +227,7 @@ export const content: ChromaticLensLocaleContent = {
     ui,
     seo,
     faqTitle: "Pertanyaan yang Sering Diajukan",
-    faq,
-    bibliographyTitle: "Referensi",
+    faq: "Referensi",
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

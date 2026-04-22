@@ -51,3 +51,5 @@ export const exifCleaner: AudiovisualToolEntry<ExifCleanerUI> = {
         zh: async () => (await import('./i18n/zh')).content as unknown as ExifCleanerLocaleContent,
     },
 };
+
+export { bibliography } from './bibliography';

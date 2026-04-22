@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { ExifCleanerUI, ExifCleanerLocaleContent } from '../index';
 
@@ -25,8 +26,7 @@ const ui: ExifCleanerUI = {
     noMetadataFound: "Tidak ditemukan metadata EXIF yang terbaca.",
     alreadyCleanInfo: "Gambar mungkin sudah bersih.",
     previewLabel: "Pratinjau",
-    faqTitle: "Pertanyaan yang sering diajukan tentang privasi foto",
-    bibliographyTitle: "Sumber daya dan dokumentasi teknis EXIF",
+    faqTitle: "Pertanyaan yang sering diajukan tentang privasi foto": "Sumber daya dan dokumentasi teknis EXIF",
 };
 
 const faq: ExifCleanerLocaleContent['faq'] = [
@@ -64,17 +64,6 @@ const howTo: ExifCleanerLocaleContent['howTo'] = [
     {
         name: "Unduh foto yang aman",
         text: "Simpan versi baru gambar Anda, sekarang sudah dianonimkan dan siap dibagikan dengan aman di media sosial.",
-    },
-];
-
-const bibliography: ExifCleanerLocaleContent['bibliography'] = [
-    {
-        name: "Exchangeable image file format (EXIF) - Wikipedia",
-        url: "https://id.wikipedia.org/wiki/Exchangeable_image_file_format",
-    },
-    {
-        name: "W3C - Metadata dalam Gambar",
-        url: "https://www.w3.org/community/image-metadata/",
     },
 ];
 
@@ -269,8 +258,7 @@ export const content: ExifCleanerLocaleContent = {
     ui,
     seo,
     faqTitle: "Pertanyaan yang Sering Diajukan",
-    faq,
-    bibliographyTitle: "Referensi",
+    faq: "Referensi",
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

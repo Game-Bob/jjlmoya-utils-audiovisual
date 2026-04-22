@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { PrivacyBlurUI, PrivacyBlurLocaleContent } from '../index';
 
@@ -48,13 +49,6 @@ const howTo: PrivacyBlurLocaleContent['howTo'] = [
     {
         name: "Guarda el resultado",
         text: "Descarga la imagen procesada con la seguridad de que los datos originales son inaccesibles.",
-    },
-];
-
-const bibliography: PrivacyBlurLocaleContent['bibliography'] = [
-    {
-        name: "Privacidad por Diseño (PbD) - AGPD",
-        url: "https://www.aepd.es/es/guias-y-herramientas/guias/guia-de-privacidad-desde-el-diseno",
     },
 ];
 
@@ -229,8 +223,7 @@ export const content: PrivacyBlurLocaleContent = {
     seo,
     faq,
     faqTitle: 'Preguntas frecuentes sobre desenfoque de fotos',
-    bibliography,
-    bibliographyTitle: 'Recursos técnicos sobre privacidad visual',
+    bibliography: 'Recursos técnicos sobre privacidad visual',
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],
 };

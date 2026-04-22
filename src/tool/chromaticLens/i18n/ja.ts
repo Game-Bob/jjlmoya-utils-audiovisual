@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { ChromaticLensUI, ChromaticLensLocaleContent } from '../index';
 
@@ -14,8 +15,7 @@ const ui: ChromaticLensUI = {
     copiedLabel: "コピーしました！",
     colorCountLabel: "色の数",
     changeImage: "画像を変更",
-    faqTitle: "カラー抽出に関するよくある質問",
-    bibliographyTitle: "リソースと技術ドキュメント"
+    faqTitle: "カラー抽出に関するよくある質問": "リソースと技術ドキュメント"
 };
 
 const faq: ChromaticLensLocaleContent['faq'] = [
@@ -49,17 +49,6 @@ const howTo: ChromaticLensLocaleContent['howTo'] = [
     {
         name: "コピーして活用",
         text: "トーンをクリックして保存し、デザインプロジェクトに適用します。",
-    },
-];
-
-const bibliography: ChromaticLensLocaleContent['bibliography'] = [
-    {
-        name: "メディアンカット・アルゴリズム - Wikipedia",
-        url: "https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E3%83%B3%E3%82%AB%E3%83%83%E3%83%88",
-    },
-    {
-        name: "デザイナーのための色彩理論",
-        url: "https://www.smashingmagazine.com/2010/01/color-theory-for-designers-part-1-the-meaning-of-color/",
     },
 ];
 
@@ -238,8 +227,7 @@ export const content: ChromaticLensLocaleContent = {
     ui,
     seo,
     faqTitle: "よくある質問",
-    faq,
-    bibliographyTitle: "リファレンス",
+    faq: "リファレンス",
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

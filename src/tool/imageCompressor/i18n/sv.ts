@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { ImageCompressorUI, ImageCompressorLocaleContent } from '../index';
 
@@ -30,8 +31,7 @@ const ui: ImageCompressorUI = {
     closeBtn: "Stäng",
     totalSavingsLabel: "Total besparing",
     noSavings: "Ingen nettobesparing",
-    faqTitle: "Vanliga Frågor",
-    bibliographyTitle: "Referenser"
+    faqTitle: "Vanliga Frågor": "Referenser"
 };
 
 const faq: ImageCompressorLocaleContent['faq'] = [
@@ -65,17 +65,6 @@ const howTo: ImageCompressorLocaleContent['howTo'] = [
     {
         name: "Ladda ner resultatet",
         text: "Tryck på nedladdningsknappen för att få din optimerade bild redo att användas.",
-    },
-];
-
-const bibliography: ImageCompressorLocaleContent['bibliography'] = [
-    {
-        name: "WebP: Ett bildformat för webben",
-        url: "https://developers.google.com/speed/webp",
-    },
-    {
-        name: "Betydelsen av bildoptimering för SEO",
-        url: "https://developers.google.com/search/docs/appearance/google-images",
     },
 ];
 
@@ -234,8 +223,7 @@ export const content: ImageCompressorLocaleContent = {
     ui,
     seo,
     faqTitle: "Vanliga Frågor",
-    faq,
-    bibliographyTitle: "Referenser",
+    faq: "Referenser",
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

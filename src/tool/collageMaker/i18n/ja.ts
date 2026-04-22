@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { CollageMakerUI, CollageMakerLocaleContent } from '../index';
 
@@ -21,8 +22,7 @@ const ui: CollageMakerUI = {
     errorMin: "少なくとも2枚の画像が必要です",
     errorMax: "最大9枚まで許可されています",
     errorLoad: "画像の読み込み中にエラーが発生しました",
-    faqTitle: "よくある質問",
-    bibliographyTitle: "リファレンス"
+    faqTitle: "よくある質問": "リファレンス"
 };
 
 const faq: CollageMakerLocaleContent['faq'] = [
@@ -52,13 +52,6 @@ const howTo: CollageMakerLocaleContent['howTo'] = [
     {
         name: "ダウンロードして共有",
         text: "作成ボタンを押し、完成した作品を即座にダウンロードします。",
-    },
-];
-
-const bibliography: CollageMakerLocaleContent['bibliography'] = [
-    {
-        name: "写真の構図：コラージュの芸術",
-        url: "https://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%A9%E3%83%BC%E3%82%B8%E3%83%A5",
     },
 ];
 
@@ -225,8 +218,7 @@ export const content: CollageMakerLocaleContent = {
     ui,
     seo,
     faqTitle: "よくある質問",
-    faq,
-    bibliographyTitle: "リファレンス",
+    faq: "リファレンス",
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

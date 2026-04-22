@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { CollageMakerUI, CollageMakerLocaleContent } from '../index';
 
@@ -50,13 +51,6 @@ const howTo: CollageMakerLocaleContent['howTo'] = [
     {
         name: "Téléchargez et partagez",
         text: "Appuyez sur le bouton de création et téléchargez instantanément votre composition finale.",
-    },
-];
-
-const bibliography: CollageMakerLocaleContent['bibliography'] = [
-    {
-        name: "Composition Photographique : L'Art du Collage",
-        url: "https://fr.wikipedia.org/wiki/Collage",
     },
 ];
 
@@ -224,8 +218,7 @@ export const content: CollageMakerLocaleContent = {
     seo,
     faqTitle: "Frequently Asked Questions",
     faq,
-    bibliography,
-    bibliographyTitle: "References",
+    bibliography: "References",
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],
 };

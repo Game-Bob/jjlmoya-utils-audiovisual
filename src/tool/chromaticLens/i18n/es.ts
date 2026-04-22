@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { ChromaticLensUI, ChromaticLensLocaleContent } from '../index';
 
@@ -47,17 +48,6 @@ const howTo: ChromaticLensLocaleContent['howTo'] = [
     {
         name: "Copia y utiliza",
         text: "Haz clic en los tonos para guardarlos y aplicarlos a tu proyecto de diseño.",
-    },
-];
-
-const bibliography: ChromaticLensLocaleContent['bibliography'] = [
-    {
-        name: "Median Cut Algorithm - Wikipedia",
-        url: "https://en.wikipedia.org/wiki/Median_cut",
-    },
-    {
-        name: "Color Theory for Designers",
-        url: "https://www.smashingmagazine.com/2010/01/color-theory-for-designers-part-1-the-meaning-of-color/",
     },
 ];
 
@@ -237,8 +227,7 @@ export const content: ChromaticLensLocaleContent = {
     seo,
     faq,
     faqTitle: 'Preguntas frecuentes sobre paletas de color',
-    bibliography,
-    bibliographyTitle: 'Recursos técnicos sobre teoría del color',
+    bibliography: 'Recursos técnicos sobre teoría del color',
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],
 };
