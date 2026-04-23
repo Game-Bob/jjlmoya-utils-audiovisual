@@ -31,7 +31,6 @@ const ui: ImageCompressorUI = {
     closeBtn: "닫기",
     totalSavingsLabel: "총 절감량",
     noSavings: "순 절감액 없음",
-    faqTitle: "자주 묻는 질문": "참고 문헌"
 };
 
 const faq: ImageCompressorLocaleContent['faq'] = [
@@ -222,8 +221,7 @@ export const content: ImageCompressorLocaleContent = {
     description,
     ui,
     seo,
-    faqTitle: "자주 묻는 질문",
-    faq: "참고 문헌",
+    faq,
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

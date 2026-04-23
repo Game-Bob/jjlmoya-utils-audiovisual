@@ -15,7 +15,6 @@ const ui: ChromaticLensUI = {
     copiedLabel: "已复制！",
     colorCountLabel: "色彩数量",
     changeImage: "更改图像",
-    faqTitle: "关于色彩提取的常见问题": "资源与技术文档"
 };
 
 const faq: ChromaticLensLocaleContent['faq'] = [
@@ -226,8 +225,7 @@ export const content: ChromaticLensLocaleContent = {
     description,
     ui,
     seo,
-    faqTitle: "常见问题",
-    faq: "参考资料",
+    faq,
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

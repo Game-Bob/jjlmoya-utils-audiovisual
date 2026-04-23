@@ -205,8 +205,7 @@ export const content: TvDistanceLocaleContent = {
     ui,
     seo,
     faq,
-    faqTitle: 'Pertanyaan yang Sering Diajukan tentang Jarak Menonton TV',
-    bibliography: 'Standar Profesional untuk Pengaturan Televisi',
+    bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],
 };

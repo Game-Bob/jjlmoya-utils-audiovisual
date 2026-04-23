@@ -205,8 +205,7 @@ export const content: TvDistanceLocaleContent = {
     ui,
     seo,
     faq,
-    faqTitle: 'Często zadawane pytania o odległość od TV',
-    bibliography: 'Profesjonalne standardy ustawienia telewizora',
+    bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],
 };

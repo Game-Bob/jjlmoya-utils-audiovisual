@@ -22,7 +22,6 @@ const ui: CollageMakerUI = {
     errorMin: "En az 2 görsele ihtiyacınız var",
     errorMax: "Maksimum 9 görsele izin verilir",
     errorLoad: "Görseller yüklenirken hata oluştu",
-    faqTitle: "Sıkça Sorulan Sorular": "Referanslar"
 };
 
 const faq: CollageMakerLocaleContent['faq'] = [
@@ -217,8 +216,7 @@ export const content: CollageMakerLocaleContent = {
     description,
     ui,
     seo,
-    faqTitle: "Sıkça Sorulan Sorular",
-    faq: "Referanslar",
+    faq,
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

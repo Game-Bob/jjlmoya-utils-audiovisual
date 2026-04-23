@@ -221,8 +221,7 @@ export const content: VideoFrameExtractorLocaleContent = {
     ui,
     seo,
     faq,
-    faqTitle: 'ビデオフレーム抽出に関するよくある質問',
-    bibliography: 'ビデオキャプチャの技術仕様',
+    bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],
 };

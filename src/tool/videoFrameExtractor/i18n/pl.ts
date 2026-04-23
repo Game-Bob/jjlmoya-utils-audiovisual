@@ -221,8 +221,7 @@ export const content: VideoFrameExtractorLocaleContent = {
     ui,
     seo,
     faq,
-    faqTitle: 'Często zadawane pytania o ekstrakcję klatek',
-    bibliography: 'Standardy techniczne przechwytywania wideo',
+    bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],
 };

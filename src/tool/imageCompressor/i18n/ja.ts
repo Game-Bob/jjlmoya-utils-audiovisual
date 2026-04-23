@@ -31,7 +31,6 @@ const ui: ImageCompressorUI = {
     closeBtn: "閉じる",
     totalSavingsLabel: "合計削減量",
     noSavings: "削減なし",
-    faqTitle: "よくある質問": "リファレンス"
 };
 
 const faq: ImageCompressorLocaleContent['faq'] = [
@@ -222,8 +221,7 @@ export const content: ImageCompressorLocaleContent = {
     description,
     ui,
     seo,
-    faqTitle: "よくある質問",
-    faq: "リファレンス",
+    faq,
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

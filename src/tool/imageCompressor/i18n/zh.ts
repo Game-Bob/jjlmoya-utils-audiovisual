@@ -31,7 +31,6 @@ const ui: ImageCompressorUI = {
     closeBtn: "关闭",
     totalSavingsLabel: "总节省",
     noSavings: "无净节省",
-    faqTitle: "常见问题": "参考资料"
 };
 
 const faq: ImageCompressorLocaleContent['faq'] = [
@@ -224,8 +223,7 @@ export const content: ImageCompressorLocaleContent = {
     description,
     ui,
     seo,
-    faqTitle: "常见问题",
-    faq: "参考资料",
+    faq,
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

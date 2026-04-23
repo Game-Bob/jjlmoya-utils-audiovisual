@@ -26,7 +26,6 @@ const ui: ExifCleanerUI = {
     noMetadataFound: "未找到可读的 EXIF 元数据。",
     alreadyCleanInfo: "图像可能已经很干净了。",
     previewLabel: "预览",
-    faqTitle: "关于照片隐私的常见问题": "资源和 EXIF 技术文档",
 };
 
 const faq: ExifCleanerLocaleContent['faq'] = [
@@ -257,8 +256,7 @@ export const content: ExifCleanerLocaleContent = {
     description,
     ui,
     seo,
-    faqTitle: "常见问题",
-    faq: "参考资料",
+    faq,
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

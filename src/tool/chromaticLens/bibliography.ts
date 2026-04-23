@@ -1,6 +1,6 @@
 import type { BibliographyEntry } from '../../types';
 
-export const bibliography: BibliographyEntry[] = ['bibliography'] = [
+export const bibliography: BibliographyEntry[] = [
     {
         name: "Median Cut Algorithm - Wikipedia",
         url: "https://en.wikipedia.org/wiki/Median_cut",

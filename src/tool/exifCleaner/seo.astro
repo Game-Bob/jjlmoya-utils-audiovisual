@@ -8,11 +8,8 @@ interface Props {
 }
 
 const { locale = 'es' } = Astro.props;
-const localeContentLoader = (exifCleaner.i18n as any)[locale];
-const content = localeContentLoader ? await localeContentLoader() : null;
+const content = await exifCleaner.i18n[locale]?.();
 if (!content) return null;
-
-const seoSections = content.seo;
 ---
 
-<SEORenderer content={{ locale, sections: seoSections }} />
+{content.seo?.length > 0 && <SEORenderer content={{ locale, sections: content.seo }} />}

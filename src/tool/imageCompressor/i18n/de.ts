@@ -31,7 +31,6 @@ const ui: ImageCompressorUI = {
     closeBtn: "Schließen",
     totalSavingsLabel: "Gesamtersparnis",
     noSavings: "Keine Nettoersparnis",
-    faqTitle: "Häufig gestellte Fragen": "Referenzen"
 };
 
 const faq: ImageCompressorLocaleContent['faq'] = [
@@ -222,8 +221,7 @@ export const content: ImageCompressorLocaleContent = {
     description,
     ui,
     seo,
-    faqTitle: "Häufig gestellte Fragen",
-    faq: "Referenzen",
+    faq,
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

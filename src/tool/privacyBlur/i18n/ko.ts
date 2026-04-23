@@ -20,7 +20,6 @@ const ui: PrivacyBlurUI = {
     autoDetectFaces: "자동 감지",
     loadingModels: "모델 로드 중...",
     noFacesDetected: "자동으로 감지된 얼굴이 없습니다.",
-    faqTitle: "자주 묻는 질문": "참고 문헌"
 };
 
 const faq: PrivacyBlurLocaleContent['faq'] = [
@@ -222,8 +221,7 @@ export const content: PrivacyBlurLocaleContent = {
     description,
     ui,
     seo,
-    faqTitle: "자주 묻는 질문",
-    faq: "참고 문헌",
+    faq,
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

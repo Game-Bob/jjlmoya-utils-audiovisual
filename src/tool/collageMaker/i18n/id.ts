@@ -22,7 +22,6 @@ const ui: CollageMakerUI = {
     errorMin: "Anda butuh setidaknya 2 gambar",
     errorMax: "Maksimal 9 gambar diizinkan",
     errorLoad: "Kesalahan memuat gambar",
-    faqTitle: "Pertanyaan yang Sering Diajukan": "Referensi"
 };
 
 const faq: CollageMakerLocaleContent['faq'] = [
@@ -217,8 +216,7 @@ export const content: CollageMakerLocaleContent = {
     description,
     ui,
     seo,
-    faqTitle: "Pertanyaan yang Sering Diajukan",
-    faq: "Referensi",
+    faq,
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

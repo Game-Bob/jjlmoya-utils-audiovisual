@@ -1,6 +1,6 @@
 import type { BibliographyEntry } from '../../types';
 
-export const bibliography: BibliographyEntry[] = ['bibliography'] = [
+export const bibliography: BibliographyEntry[] = [
     {
         name: "THX - HDTV Set Up Guide",
         url: "https://www.thx.com/questions/what-is-the-best-viewing-distance-for-my-tv/",

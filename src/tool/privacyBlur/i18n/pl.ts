@@ -20,7 +20,6 @@ const ui: PrivacyBlurUI = {
     autoDetectFaces: "Auto Wykrywanie",
     loadingModels: "Ładowanie modeli...",
     noFacesDetected: "Nie wykryto twarzy automatycznie.",
-    faqTitle: "Często Zadawane Pytania": "Referencje"
 };
 
 const faq: PrivacyBlurLocaleContent['faq'] = [
@@ -222,8 +221,7 @@ export const content: PrivacyBlurLocaleContent = {
     description,
     ui,
     seo,
-    faqTitle: "Często Zadawane Pytania",
-    faq: "Referencje",
+    faq,
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

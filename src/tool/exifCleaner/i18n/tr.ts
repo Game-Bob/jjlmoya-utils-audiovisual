@@ -26,7 +26,6 @@ const ui: ExifCleanerUI = {
     noMetadataFound: "Okunabilir EXIF meta verisi bulunamadı.",
     alreadyCleanInfo: "Görsel zaten temiz olabilir.",
     previewLabel: "Önizleme",
-    faqTitle: "Fotoğraf gizliliği hakkında sıkça sorulan sorular": "Kaynaklar ve teknik EXIF dokümantasyonu",
 };
 
 const faq: ExifCleanerLocaleContent['faq'] = [
@@ -257,8 +256,7 @@ export const content: ExifCleanerLocaleContent = {
     description,
     ui,
     seo,
-    faqTitle: "Sıkça Sorulan Sorular",
-    faq: "Referanslar",
+    faq,
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

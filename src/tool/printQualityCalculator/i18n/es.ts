@@ -241,8 +241,7 @@ export const content: PrintQualityCalculatorLocaleContent = {
     ui,
     seo,
     faq,
-    faqTitle: 'Preguntas frecuentes sobre resolución de impresión',
-    bibliography: 'Recursos técnicos sobre impresión digital',
+    bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],
 };

@@ -223,8 +223,7 @@ export const content: SubtitleSyncLocaleContent = {
     ui,
     seo,
     faq,
-    faqTitle: '자막 동기화에 관한 자주 묻는 질문',
-    bibliography: '자막 형식 관련 기술 리소스',
+    bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],
 };

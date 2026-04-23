@@ -223,8 +223,7 @@ export const content: SubtitleSyncLocaleContent = {
     ui,
     seo,
     faq,
-    faqTitle: 'Frequently Asked Questions about Subtitle Synchronization',
-    bibliography: 'Technical Resources on Subtitle Formats',
+    bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],
 };

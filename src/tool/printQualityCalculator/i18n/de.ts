@@ -41,7 +41,6 @@ const ui: PrintQualityCalculatorUI = {
     supportedText: "Ja (Abgedeckt)",
     notSupportedPrefix: "Nein (",
     invalidImageError: "Bitte wählen Sie ein gültiges Bild aus",
-    faqTitle: "Häufig gestellte Fragen": "Referenzen"
 };
 
 const faq: PrintQualityCalculatorLocaleContent['faq'] = [
@@ -241,8 +240,7 @@ export const content: PrintQualityCalculatorLocaleContent = {
     description,
     ui,
     seo,
-    faqTitle: "Häufig gestellte Fragen",
-    faq: "Referenzen",
+    faq,
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

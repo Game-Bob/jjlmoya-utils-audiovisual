@@ -41,7 +41,6 @@ const ui: PrintQualityCalculatorUI = {
     supportedText: "是 (覆盖)",
     notSupportedPrefix: "否 (",
     invalidImageError: "请选择一个有效的图像",
-    faqTitle: "常见问题": "参考资料"
 };
 
 const faq: PrintQualityCalculatorLocaleContent['faq'] = [
@@ -241,8 +240,7 @@ export const content: PrintQualityCalculatorLocaleContent = {
     description,
     ui,
     seo,
-    faqTitle: "常见问题",
-    faq: "参考资料",
+    faq,
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

@@ -41,7 +41,6 @@ const ui: PrintQualityCalculatorUI = {
     supportedText: "Ya (Tercover)",
     notSupportedPrefix: "Tidak (",
     invalidImageError: "Silakan pilih gambar yang valid",
-    faqTitle: "Pertanyaan yang Sering Diajukan": "Referensi"
 };
 
 const faq: PrintQualityCalculatorLocaleContent['faq'] = [
@@ -241,8 +240,7 @@ export const content: PrintQualityCalculatorLocaleContent = {
     description,
     ui,
     seo,
-    faqTitle: "Pertanyaan yang Sering Diajukan",
-    faq: "Referensi",
+    faq,
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

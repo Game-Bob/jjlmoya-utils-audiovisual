@@ -41,7 +41,6 @@ const ui: PrintQualityCalculatorUI = {
     supportedText: "Evet (Karşılıyor)",
     notSupportedPrefix: "Hayır (",
     invalidImageError: "Lütfen geçerli bir görsel seçin",
-    faqTitle: "Sıkça Sorulan Sorular": "Referanslar"
 };
 
 const faq: PrintQualityCalculatorLocaleContent['faq'] = [
@@ -241,8 +240,7 @@ export const content: PrintQualityCalculatorLocaleContent = {
     description,
     ui,
     seo,
-    faqTitle: "Sıkça Sorulan Sorular",
-    faq: "Referanslar",
+    faq,
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

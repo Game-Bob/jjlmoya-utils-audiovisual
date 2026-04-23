@@ -1,6 +1,6 @@
 import type { BibliographyEntry } from '../../types';
 
-export const bibliography: BibliographyEntry[] = ['bibliography'] = [
+export const bibliography: BibliographyEntry[] = [
     {
         name: "Internationale Papierformate (ISO 216)",
         url: "https://www.iso.org/standard/36631.html",

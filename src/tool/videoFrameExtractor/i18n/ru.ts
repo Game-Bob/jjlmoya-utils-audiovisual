@@ -221,8 +221,7 @@ export const content: VideoFrameExtractorLocaleContent = {
     ui,
     seo,
     faq,
-    faqTitle: 'Частые вопросы об извлечении кадров',
-    bibliography: 'Технические стандарты захвата видео',
+    bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],
 };

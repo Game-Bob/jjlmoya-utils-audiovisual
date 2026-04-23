@@ -26,7 +26,6 @@ const ui: ExifCleanerUI = {
     noMetadataFound: "읽을 수 있는 EXIF 메타데이터를 찾을 수 없습니다.",
     alreadyCleanInfo: "이미지가 이미 깨끗할 수 있습니다.",
     previewLabel: "미리보기",
-    faqTitle: "사진 개인정보 보호에 관한 자주 묻는 질문": "리소스 및 기술 EXIF 문서",
 };
 
 const faq: ExifCleanerLocaleContent['faq'] = [
@@ -257,8 +256,7 @@ export const content: ExifCleanerLocaleContent = {
     description,
     ui,
     seo,
-    faqTitle: "자주 묻는 질문",
-    faq: "참고 문헌",
+    faq,
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

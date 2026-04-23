@@ -20,7 +20,6 @@ const ui: PrivacyBlurUI = {
     autoDetectFaces: "自動検出",
     loadingModels: "モデルを読み込み中...",
     noFacesDetected: "顔は自動検出されませんでした。",
-    faqTitle: "よくある質問": "リファレンス"
 };
 
 const faq: PrivacyBlurLocaleContent['faq'] = [
@@ -222,8 +221,7 @@ export const content: PrivacyBlurLocaleContent = {
     description,
     ui,
     seo,
-    faqTitle: "よくある質問",
-    faq: "リファレンス",
+    faq,
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

@@ -26,7 +26,6 @@ const ui: ExifCleanerUI = {
     noMetadataFound: "Inga läsbara EXIF-metadata hittades.",
     alreadyCleanInfo: "Bilden kan redan vara ren.",
     previewLabel: "Förhandsvisning",
-    faqTitle: "Vanliga frågor om bildintegritet": "Resurser och teknisk EXIF dokumentation",
 };
 
 const faq: ExifCleanerLocaleContent['faq'] = [
@@ -257,8 +256,7 @@ export const content: ExifCleanerLocaleContent = {
     description,
     ui,
     seo,
-    faqTitle: "Vanliga frågor",
-    faq: "Referenser",
+    faq,
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

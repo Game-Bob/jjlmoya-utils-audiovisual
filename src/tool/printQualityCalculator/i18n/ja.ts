@@ -41,7 +41,6 @@ const ui: PrintQualityCalculatorUI = {
     supportedText: "可能 (カバー範囲内)",
     notSupportedPrefix: "不可 (",
     invalidImageError: "有効な画像を選択してください",
-    faqTitle: "よくある質問": "リファレンス"
 };
 
 const faq: PrintQualityCalculatorLocaleContent['faq'] = [
@@ -241,8 +240,7 @@ export const content: PrintQualityCalculatorLocaleContent = {
     description,
     ui,
     seo,
-    faqTitle: "よくある質問",
-    faq: "リファレンス",
+    faq,
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

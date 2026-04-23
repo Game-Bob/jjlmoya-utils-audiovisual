@@ -41,7 +41,6 @@ const ui: PrintQualityCalculatorUI = {
     supportedText: "Да (Покрывает)",
     notSupportedPrefix: "Нет (",
     invalidImageError: "Пожалуйста, выберите корректное изображение",
-    faqTitle: "Часто задаваемые вопросы": "Ссылки"
 };
 
 const faq: PrintQualityCalculatorLocaleContent['faq'] = [
@@ -241,8 +240,7 @@ export const content: PrintQualityCalculatorLocaleContent = {
     description,
     ui,
     seo,
-    faqTitle: "Часто задаваемые вопросы",
-    faq: "Ссылки",
+    faq,
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

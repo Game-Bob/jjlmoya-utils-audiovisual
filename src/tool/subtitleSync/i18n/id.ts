@@ -223,8 +223,7 @@ export const content: SubtitleSyncLocaleContent = {
     ui,
     seo,
     faq,
-    faqTitle: 'Pertanyaan yang Sering Diajukan tentang Sinkronisasi Subtitle',
-    bibliography: 'Sumber Daya Teknis tentang Format Subtitle',
+    bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],
 };

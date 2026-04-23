@@ -143,8 +143,7 @@ export const content: TimelapseLocaleContent = {
     ui,
     seo,
     faq,
-    faqTitle: 'Häufig gestellte Fragen zur Zeitraffer Produktion',
-    bibliography: 'Zeitraffer Theorie und Ressourcen',
+    bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],
 };

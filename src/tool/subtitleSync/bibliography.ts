@@ -1,6 +1,6 @@
 import type { BibliographyEntry } from '../../types';
 
-export const bibliography: BibliographyEntry[] = ['bibliography'] = [
+export const bibliography: BibliographyEntry[] = [
     {
         name: "SubRip (SRT) Format-Spezifikation",
         url: "https://matroska.org/technical/subtitles.html#srt-subtitles",

@@ -221,8 +221,7 @@ export const content: VideoFrameExtractorLocaleContent = {
     ui,
     seo,
     faq,
-    faqTitle: 'Video Kare Çıkarma Hakkında Sıkça Sorulan Sorular',
-    bibliography: 'Video Yakalama İçine Teknik Standartlar',
+    bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],
 };

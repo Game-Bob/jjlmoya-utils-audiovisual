@@ -221,8 +221,7 @@ export const content: VideoFrameExtractorLocaleContent = {
     ui,
     seo,
     faq,
-    faqTitle: '비디오 프레임 추출에 관한 자주 묻는 질문',
-    bibliography: '비디오 캡처 기술 표준',
+    bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],
 };

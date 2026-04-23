@@ -143,8 +143,7 @@ export const content: TimelapseLocaleContent = {
     ui,
     seo,
     faq,
-    faqTitle: 'Perguntas Frequentes sobre Produção de Timelapse',
-    bibliography: 'Teoria e Recursos para Timelapse',
+    bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],
 };

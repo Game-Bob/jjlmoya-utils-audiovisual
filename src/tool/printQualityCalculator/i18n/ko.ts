@@ -41,7 +41,6 @@ const ui: PrintQualityCalculatorUI = {
     supportedText: "예 (충족)",
     notSupportedPrefix: "아니요 (",
     invalidImageError: "유효한 이미지를 선택하세요",
-    faqTitle: "자주 묻는 질문": "참고 문헌"
 };
 
 const faq: PrintQualityCalculatorLocaleContent['faq'] = [
@@ -241,8 +240,7 @@ export const content: PrintQualityCalculatorLocaleContent = {
     description,
     ui,
     seo,
-    faqTitle: "자주 묻는 질문",
-    faq: "참고 문헌",
+    faq,
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

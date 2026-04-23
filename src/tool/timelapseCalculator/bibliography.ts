@@ -1,6 +1,6 @@
 import type { BibliographyEntry } from '../../types';
 
-export const bibliography: BibliographyEntry[] = ['bibliography'] = [
+export const bibliography: BibliographyEntry[] = [
     {
         name: "Timescapes Forum - Digital Timelapse Acquisition & Processing",
         url: "https://timescapes.org/phpBB3/viewforum.php?f=4",

@@ -15,7 +15,6 @@ const ui: ChromaticLensUI = {
     copiedLabel: "Kopyalandı!",
     colorCountLabel: "Renk sayısı",
     changeImage: "Görüntüyü değiştir",
-    faqTitle: "Renk çıkarma hakkında sıkça sorulan sorular": "Kaynaklar ve teknik belgeler"
 };
 
 const faq: ChromaticLensLocaleContent['faq'] = [
@@ -226,8 +225,7 @@ export const content: ChromaticLensLocaleContent = {
     description,
     ui,
     seo,
-    faqTitle: "Sıkça Sorulan Sorular",
-    faq: "Referanslar",
+    faq,
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

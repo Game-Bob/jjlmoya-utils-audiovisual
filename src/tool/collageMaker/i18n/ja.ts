@@ -22,7 +22,6 @@ const ui: CollageMakerUI = {
     errorMin: "少なくとも2枚の画像が必要です",
     errorMax: "最大9枚まで許可されています",
     errorLoad: "画像の読み込み中にエラーが発生しました",
-    faqTitle: "よくある質問": "リファレンス"
 };
 
 const faq: CollageMakerLocaleContent['faq'] = [
@@ -217,8 +216,7 @@ export const content: CollageMakerLocaleContent = {
     description,
     ui,
     seo,
-    faqTitle: "よくある質問",
-    faq: "リファレンス",
+    faq,
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

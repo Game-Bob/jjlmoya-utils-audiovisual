@@ -26,7 +26,6 @@ const ui: ExifCleanerUI = {
     noMetadataFound: "Nie znaleziono czytelnych metadanych EXIF.",
     alreadyCleanInfo: "Zdjęcie może być już czyste.",
     previewLabel: "Podgląd",
-    faqTitle: "Często zadawane pytania o prywatność zdjęć": "Zasoby i dokumentacja techniczna EXIF",
 };
 
 const faq: ExifCleanerLocaleContent['faq'] = [
@@ -257,8 +256,7 @@ export const content: ExifCleanerLocaleContent = {
     description,
     ui,
     seo,
-    faqTitle: "Często Zadawane Pytania",
-    faq: "Referencje",
+    faq,
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

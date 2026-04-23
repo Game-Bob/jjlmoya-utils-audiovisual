@@ -223,8 +223,7 @@ export const content: SubtitleSyncLocaleContent = {
     ui,
     seo,
     faq,
-    faqTitle: 'Altyazı Senkronizasyonu Hakkında Sıkça Sorulan Sorular',
-    bibliography: 'Altyazı Formatları Hakkında Teknik Kaynaklar',
+    bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],
 };

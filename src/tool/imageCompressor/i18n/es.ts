@@ -222,8 +222,7 @@ export const content: ImageCompressorLocaleContent = {
     ui,
     seo,
     faq,
-    faqTitle: 'Preguntas frecuentes sobre compresión web',
-    bibliography: 'Recursos técnicos sobre formatos de imagen',
+    bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],
 };

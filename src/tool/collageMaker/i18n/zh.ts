@@ -22,7 +22,6 @@ const ui: CollageMakerUI = {
     errorMin: "您至少需要 2 张图像",
     errorMax: "最多允许 9 张图像",
     errorLoad: "加载图像时出错",
-    faqTitle: "常见问题": "参考资料"
 };
 
 const faq: CollageMakerLocaleContent['faq'] = [
@@ -217,8 +216,7 @@ export const content: CollageMakerLocaleContent = {
     description,
     ui,
     seo,
-    faqTitle: "常见问题",
-    faq: "参考资料",
+    faq,
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

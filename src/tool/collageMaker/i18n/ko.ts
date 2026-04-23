@@ -22,7 +22,6 @@ const ui: CollageMakerUI = {
     errorMin: "최소 2개의 이미지가 필요합니다",
     errorMax: "최대 9개까지만 허용됩니다",
     errorLoad: "이미지를 로드하는 중 오류가 발생했습니다",
-    faqTitle: "자주 묻는 질문": "참고 문헌"
 };
 
 const faq: CollageMakerLocaleContent['faq'] = [
@@ -217,8 +216,7 @@ export const content: CollageMakerLocaleContent = {
     description,
     ui,
     seo,
-    faqTitle: "자주 묻는 질문",
-    faq: "참고 문헌",
+    faq,
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

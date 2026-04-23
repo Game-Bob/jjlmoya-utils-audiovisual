@@ -15,7 +15,6 @@ const ui: ChromaticLensUI = {
     copiedLabel: "Skopiowano!",
     colorCountLabel: "Liczba kolorów",
     changeImage: "Zmień obraz",
-    faqTitle: "Często zadawane pytania dotyczące ekstrakcji kolorów": "Zasoby i dokumentacja techniczna"
 };
 
 const faq: ChromaticLensLocaleContent['faq'] = [
@@ -226,8 +225,7 @@ export const content: ChromaticLensLocaleContent = {
     description,
     ui,
     seo,
-    faqTitle: "Często Zadawane Pytania",
-    faq: "Referencje",
+    faq,
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

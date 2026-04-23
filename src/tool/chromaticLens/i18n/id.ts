@@ -15,7 +15,6 @@ const ui: ChromaticLensUI = {
     copiedLabel: "Tersalin!",
     colorCountLabel: "Jumlah warna",
     changeImage: "Ganti gambar",
-    faqTitle: "Pertanyaan umum tentang ekstraksi warna": "Sumber daya dan dokumentasi teknis"
 };
 
 const faq: ChromaticLensLocaleContent['faq'] = [
@@ -226,8 +225,7 @@ export const content: ChromaticLensLocaleContent = {
     description,
     ui,
     seo,
-    faqTitle: "Pertanyaan yang Sering Diajukan",
-    faq: "Referensi",
+    faq,
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

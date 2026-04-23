@@ -22,7 +22,6 @@ const ui: CollageMakerUI = {
     errorMin: "Potrzebujesz co najmniej 2 obrazów",
     errorMax: "Dozwolone maksymalnie 9 obrazów",
     errorLoad: "Błąd podczas ładowania obrazów",
-    faqTitle: "Często Zadawane Pytania": "Referencje"
 };
 
 const faq: CollageMakerLocaleContent['faq'] = [
@@ -217,8 +216,7 @@ export const content: CollageMakerLocaleContent = {
     description,
     ui,
     seo,
-    faqTitle: "Często Zadawane Pytania",
-    faq: "Referencje",
+    faq,
     bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],

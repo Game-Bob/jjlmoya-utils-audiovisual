@@ -205,8 +205,7 @@ export const content: TvDistanceLocaleContent = {
     ui,
     seo,
     faq,
-    faqTitle: 'Häufig gestellte Fragen zum TV Sitzabstand',
-    bibliography: 'Profi Standards für die Fernseher Einrichtung',
+    bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],
 };

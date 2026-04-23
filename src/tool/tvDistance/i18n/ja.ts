@@ -205,8 +205,7 @@ export const content: TvDistanceLocaleContent = {
     ui,
     seo,
     faq,
-    faqTitle: 'テレビ視聴距離に関するよくある質問',
-    bibliography: 'テレビ設置に関するプロフェッショナル規格',
+    bibliography,
     howTo,
     schemas: [faqSchema as any, howToSchema as any, appSchema],
 };
