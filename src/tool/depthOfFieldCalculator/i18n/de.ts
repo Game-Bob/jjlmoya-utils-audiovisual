@@ -92,7 +92,7 @@ const seo: DepthOfFieldLocaleContent['seo'] = [
 
     { type: 'title', text: 'DoF im Kino: Brennweite vs. Sensor', level: 3 },
     { type: 'paragraph', html: 'Cinematographen, die auf Super 35 drehen, nutzen oft längere Brennweiten für den typischen "Cinematic Look". Die Kombination aus lichtstarkem Objektiv und 85mm+ Brennweite ist der Klassiker.' },
-    { type: 'diagnostic', variant: 'success', title: 'Die Fokus-Verteilungsregel', icon: 'mdi:lightbulb-outline', badge: 'Profi-Technik', html: 'Bei einem Motiv in 3m Entfernung mit 50mm bei f/2.8: Der Bereich hinter dem Motiv ist immer größer als der davor – etwa im <strong>Verhältnis 2:1</strong>.' },
+    { type: 'diagnostic', variant: 'success', title: 'Die Fokus Verteilungsregel', icon: 'mdi:lightbulb-outline', badge: 'Profi Technik', html: 'Bei einem Motiv in 3m Entfernung mit 50mm bei f/2.8: Der Bereich hinter dem Motiv ist immer größer als der davor – etwa im <strong>Verhältnis 2:1</strong>.' },
 ];
 
 const faqSchema: WithContext<FAQPage> = {

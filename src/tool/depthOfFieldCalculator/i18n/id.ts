@@ -3,7 +3,7 @@ import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dt
 import type { DepthOfFieldUI, DepthOfFieldLocaleContent } from '../index';
 
 const slug = 'kalkulator-kedalaman-bidang';
-const title = 'Kalkulator Kedalaman Bidang: DoF Real-time untuk Semua Kamera';
+const title = 'Kalkulator Kedalaman Bidang: DoF Realtime untuk Semua Kamera';
 const description = 'Hitung kedalaman bidang, jarak hiperfokal, dan batas fokus secara real-time. Mendukung semua ukuran sensor dengan presisi apertur 1/3 stop.';
 
 const ui: DepthOfFieldUI = {
