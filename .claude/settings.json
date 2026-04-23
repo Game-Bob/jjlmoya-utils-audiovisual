@@ -1,7 +1,12 @@
 {
   "permissions": {
     "allow": [
-      "Bash(git restore *)"
+      "Bash(git restore *)",
+      "Bash(sed -i '64 a\\\\\\\\' component.astro)",
+      "Bash(sed -i '85 a\\\\\\\\' component.astro)",
+      "Bash(sed -i '110 a\\\\\\\\' component.astro)",
+      "Read(//d/code/**)",
+      "Bash(xargs -I {} basename {})"
     ]
   }
 }

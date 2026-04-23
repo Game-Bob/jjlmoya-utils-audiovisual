@@ -13,6 +13,7 @@ export * from './tool/imageCompressor';
 export * from './tool/collageMaker';
 export * from './tool/videoFrameExtractor';
 export * from './tool/privacyBlur';
+export * from './tool/depthOfFieldCalculator';
 
 export type {
   KnownLocale,

@@ -1,0 +1,340 @@
+---
+import { Icon } from 'astro-icon/components';
+import type { DepthOfFieldUI } from './index';
+import { SENSOR_PRESETS, QUICK_SENSOR_KEYS } from './logic';
+
+interface Props {
+  ui: DepthOfFieldUI;
+}
+
+const { ui } = Astro.props;
+
+const quickSensors = SENSOR_PRESETS.filter(s => QUICK_SENSOR_KEYS.includes(s.key));
+const moreSensors  = SENSOR_PRESETS.filter(s => !QUICK_SENSOR_KEYS.includes(s.key));
+---
+
+<div class="dof-root">
+  <div class="dof-grid">
+
+    <div class="dof-inputs-panel">
+      <h3 class="dof-panel-title">
+        <Icon name="mdi:tune-vertical" class="dof-panel-icon" />
+        {ui.paramsTitle}
+      </h3>
+
+      <div class="dof-field-group">
+        <label class="dof-group-label">{ui.sensorLabel}</label>
+        <div class="dof-sensor-buttons">
+          {quickSensors.map(s => (
+            <button
+              class={`dof-sensor-btn${s.key === 'ff' ? ' dof-sensor-btn-active' : ''}`}
+              data-sensor={s.key}
+              data-coc={s.coc}
+            >
+              {s.shortLabel}
+            </button>
+          ))}
+        </div>
+        <div class="dof-sensor-row">
+          <div class="dof-select-wrapper">
+            <select id="dof-sensor-more" class="dof-select">
+              <option value="">{ui.moreLabel}</option>
+              {moreSensors.map(s => (
+                <option value={s.key} data-coc={s.coc}>{s.label}</option>
+              ))}
+            </select>
+            <Icon name="mdi:chevron-down" class="dof-select-arrow" />
+          </div>
+        </div>
+      </div>
+
+      <div class="dof-field-group">
+        <div class="dof-slider-header">
+          <label class="dof-group-label" for="dof-aperture-slider">{ui.apertureLabel}</label>
+          <span id="dof-aperture-display" class="dof-slider-value">f/2.8</span>
+        </div>
+        <input
+          type="range"
+          id="dof-aperture-slider"
+          class="dof-slider"
+          min="0"
+          max="27"
+          value="9"
+          step="1"
+          style="--pct: 33%"
+        />
+      </div>
+
+      <div class="dof-field-group">
+        <div class="dof-slider-header">
+          <label class="dof-group-label" for="dof-focal-slider">{ui.focalLabel}</label>
+          <span id="dof-focal-display" class="dof-slider-value">50 mm</span>
+        </div>
+        <input
+          type="range"
+          id="dof-focal-slider"
+          class="dof-slider"
+          min="0"
+          max="99"
+          value="39"
+          step="1"
+
+          style="--pct: 39%"
+        />
+      </div>
+
+      <div class="dof-field-group">
+        <div class="dof-distance-header">
+          <label class="dof-group-label" for="dof-subject-slider">{ui.distanceLabel}</label>
+          <div class="dof-unit-toggle" role="group">
+            <button id="dof-unit-m"  class="dof-unit-btn dof-unit-btn-active">{ui.metersLabel}</button>
+            <button id="dof-unit-ft" class="dof-unit-btn">{ui.feetLabel}</button>
+          </div>
+        </div>
+        <div class="dof-slider-header" style="margin-top: 0.25rem;">
+          <span></span>
+          <span id="dof-subject-display" class="dof-slider-value">3.00 m</span>
+        </div>
+        <input
+          type="range"
+          id="dof-subject-slider"
+          class="dof-slider"
+          min="0"
+          max="99"
+          value="30"
+          step="1"
+
+          style="--pct: 30%"
+        />
+      </div>
+    </div>
+
+    <div class="dof-results-panel">
+      <h3 class="dof-results-title">
+        <Icon name="mdi:image-filter-center-focus" class="dof-results-icon" />
+        {ui.resultsTitle}
+      </h3>
+
+      <div class="dof-primary">
+        <p class="dof-primary-label">{ui.totalDofLabel}</p>
+        <p id="dof-total" class="dof-primary-value">—</p>
+      </div>
+
+      <div id="dof-error" class="dof-error">{ui.errorBelowFocal}</div>
+
+      <div class="dof-bar-wrapper">
+        <svg id="dof-bar-svg" class="dof-bar-svg" viewBox="0 0 1000 80">
+          <defs>
+            <linearGradient id="dof-inf-grad" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+              <stop offset="0%" stop-color="#818cf8" stop-opacity="0.85"/>
+              <stop offset="100%" stop-color="#818cf8" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <rect x="0" y="28" width="1000" height="24" rx="12" fill="rgba(255,255,255,0.1)"/>
+          <rect id="dof-svg-zone" x="300" y="22" width="400" height="36" rx="8" fill="rgba(165,180,252,0.65)"/>
+          <rect id="dof-svg-infinite" x="300" y="22" width="700" height="36" rx="8" fill="url(#dof-inf-grad)" display="none"/>
+          <line x1="500" y1="8" x2="500" y2="72" stroke="rgba(255,255,255,0.7)" stroke-width="2" stroke-dasharray="5,3"/>
+          <circle cx="500" cy="40" r="7" fill="white" stroke="rgba(165,180,252,0.6)" stroke-width="2"/>
+          <text id="dof-svg-near-txt" x="300" y="76" text-anchor="middle" fill="rgba(255,255,255,0.55)" font-size="10" font-family="system-ui,sans-serif">Near</text>
+          <text id="dof-svg-far-txt" x="700" y="76" text-anchor="middle" fill="rgba(255,255,255,0.55)" font-size="10" font-family="system-ui,sans-serif">Far</text>
+          <text x="500" y="7" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="8" font-family="system-ui,sans-serif">Subject</text>
+        </svg>
+      </div>
+
+      <div class="dof-stats-grid">
+        <div class="dof-stat">
+          <p class="dof-stat-label">{ui.nearLimitLabel}</p>
+          <p id="dof-near" class="dof-stat-value">—</p>
+        </div>
+        <div class="dof-stat">
+          <p class="dof-stat-label">{ui.farLimitLabel}</p>
+          <p id="dof-far" class="dof-stat-value">—</p>
+        </div>
+        <div class="dof-stat">
+          <p class="dof-stat-label">{ui.hyperfocalLabel}</p>
+          <p id="dof-hyperfocal" class="dof-stat-value">—</p>
+        </div>
+      </div>
+
+      <div class="dof-details">
+        <button id="dof-details-toggle" class="dof-details-toggle">
+          <Icon name="mdi:chevron-down" id="dof-details-icon" class="dof-details-icon" />
+          {ui.showDetailsLabel}
+        </button>
+        <div id="dof-details-content" class="dof-details-content">
+          {ui.cocLabel}: <span id="dof-coc-value" class="dof-coc-value">0.030</span> {ui.cocUnit}
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  import {
+    calculateDoF, formatDistance,
+    SENSOR_PRESETS, QUICK_SENSOR_KEYS,
+    F_STOPS,
+    sliderToFocal, sliderToSubject,
+  } from './logic';
+
+  const SVG_W = 1000;
+  const SLIDER_STEPS = 100;
+  const LS_SENSOR = 'dof-sensor';
+  const LS_UNIT   = 'dof-unit';
+
+  let activeSensorKey = localStorage.getItem(LS_SENSOR) ?? 'ff';
+  let useFeet = localStorage.getItem(LS_UNIT) === 'ft';
+
+  function getSensorCoc(key: string): number {
+    return SENSOR_PRESETS.find(s => s.key === key)?.coc ?? 0.030;
+  }
+
+  const sensorBtns      = document.querySelectorAll<HTMLButtonElement>('.dof-sensor-btn');
+  const sensorMore      = document.getElementById('dof-sensor-more') as HTMLSelectElement;
+  const apertureSlider  = document.getElementById('dof-aperture-slider') as HTMLInputElement;
+  const apertureDisplay = document.getElementById('dof-aperture-display')!;
+  const focalSlider     = document.getElementById('dof-focal-slider')    as HTMLInputElement;
+  const focalDisplay    = document.getElementById('dof-focal-display')!;
+  const subjectSlider   = document.getElementById('dof-subject-slider')  as HTMLInputElement;
+  const subjectDisplay  = document.getElementById('dof-subject-display')!;
+  const unitM           = document.getElementById('dof-unit-m')          as HTMLButtonElement;
+  const unitFt          = document.getElementById('dof-unit-ft')         as HTMLButtonElement;
+  const totalEl         = document.getElementById('dof-total')!;
+  const nearEl          = document.getElementById('dof-near')!;
+  const farEl           = document.getElementById('dof-far')!;
+  const hyperfocalEl    = document.getElementById('dof-hyperfocal')!;
+  const errorEl         = document.getElementById('dof-error')!;
+  const svgZone         = document.getElementById('dof-svg-zone')!;
+  const svgInfinite     = document.getElementById('dof-svg-infinite')!;
+  const svgNearTxt      = document.getElementById('dof-svg-near-txt')!;
+  const svgFarTxt       = document.getElementById('dof-svg-far-txt')!;
+  const detailsToggle   = document.getElementById('dof-details-toggle')!;
+  const detailsContent  = document.getElementById('dof-details-content')!;
+  const detailsIcon     = document.getElementById('dof-details-icon')!;
+  const cocValueEl      = document.getElementById('dof-coc-value')!;
+
+  function setSliderFill(el: HTMLInputElement) {
+    const pct = ((+el.value - +el.min) / (+el.max - +el.min)) * 100;
+    el.style.setProperty('--pct', `${pct}%`);
+  }
+
+  function activateSensor(key: string) {
+    activeSensorKey = key;
+    localStorage.setItem(LS_SENSOR, key);
+
+    sensorBtns.forEach(btn => {
+      btn.classList.toggle('dof-sensor-btn-active', btn.dataset.sensor === key);
+    });
+
+    const isQuick = QUICK_SENSOR_KEYS.includes(key);
+    if (!isQuick) {
+      sensorMore.value = key;
+    } else {
+      sensorMore.value = '';
+    }
+
+    const coc = getSensorCoc(key);
+    cocValueEl.textContent = coc.toFixed(3);
+    recalculate();
+  }
+
+  function setUnit(feet: boolean) {
+    useFeet = feet;
+    localStorage.setItem(LS_UNIT, feet ? 'ft' : 'm');
+    unitM.classList.toggle('dof-unit-btn-active', !feet);
+    unitFt.classList.toggle('dof-unit-btn-active', feet);
+    recalculate();
+  }
+
+  function updateFocusBar(subject: number, nearLimit: number, farLimit: number, isInfinite: boolean) {
+    const frontDoF = subject - nearLimit;
+    const backDoF  = isInfinite ? subject * 2 : farLimit - subject;
+    const halfRange = Math.max(frontDoF * 4, backDoF * 2, subject * 0.3, 0.5);
+
+    const nearX = Math.max(0,    (0.5 - frontDoF / (2 * halfRange)) * SVG_W);
+    const farX  = isInfinite ? SVG_W : Math.min(SVG_W, (0.5 + backDoF / (2 * halfRange)) * SVG_W);
+
+    if (isInfinite) {
+      svgZone.setAttribute('display', 'none');
+      svgInfinite.setAttribute('display', 'block');
+      svgInfinite.setAttribute('x', String(nearX));
+      svgInfinite.setAttribute('width', String(SVG_W - nearX));
+      svgFarTxt.textContent = '∞';
+      svgFarTxt.setAttribute('x', String(SVG_W - 20));
+    } else {
+      svgZone.setAttribute('display', 'block');
+      svgInfinite.setAttribute('display', 'none');
+      svgZone.setAttribute('x', String(nearX));
+      svgZone.setAttribute('width', String(farX - nearX));
+      const farLabel = formatDistance(farLimit, useFeet);
+      svgFarTxt.textContent = farLabel;
+      svgFarTxt.setAttribute('x', String(Math.min(farX, SVG_W - farLabel.length * 4)));
+    }
+
+    const nearLabel = formatDistance(nearLimit, useFeet);
+    svgNearTxt.textContent = nearLabel;
+    svgNearTxt.setAttribute('x', String(Math.max(nearX, nearLabel.length * 4)));
+  }
+
+  function recalculate() {
+    const apertureIdx = +apertureSlider.value;
+    const aperture    = F_STOPS[apertureIdx] ?? 2.8;
+    const focalMm     = sliderToFocal(+focalSlider.value, SLIDER_STEPS);
+    const subjectM    = sliderToSubject(+subjectSlider.value, SLIDER_STEPS);
+    const coc         = getSensorCoc(activeSensorKey);
+
+    apertureDisplay.textContent = `f/${aperture}`;
+    focalDisplay.textContent    = `${focalMm} mm`;
+    subjectDisplay.textContent  = formatDistance(subjectM, useFeet);
+
+    setSliderFill(apertureSlider);
+    setSliderFill(focalSlider);
+    setSliderFill(subjectSlider);
+
+    const r = calculateDoF(subjectM, focalMm, aperture, coc);
+
+    if (r.hasError) {
+      errorEl.style.display = 'block';
+      totalEl.textContent   = '—';
+      nearEl.textContent    = '—';
+      farEl.textContent     = '—';
+      hyperfocalEl.textContent = '—';
+      svgZone.setAttribute('display', 'none');
+      svgInfinite.setAttribute('display', 'none');
+      return;
+    }
+
+    errorEl.style.display = 'none';
+    totalEl.textContent   = r.isInfinite ? '∞' : formatDistance(r.totalDoF, useFeet);
+    nearEl.textContent    = formatDistance(r.nearLimit, useFeet);
+    farEl.textContent     = r.isInfinite ? '∞' : formatDistance(r.farLimit, useFeet);
+    hyperfocalEl.textContent = formatDistance(r.hyperfocal, useFeet);
+
+    updateFocusBar(subjectM, r.nearLimit, r.farLimit, r.isInfinite);
+  }
+
+  detailsToggle.addEventListener('click', () => {
+    const isOpen = detailsContent.classList.toggle('dof-details-content-visible');
+    detailsIcon.classList.toggle('dof-details-icon-open', isOpen);
+  });
+
+  sensorBtns.forEach(btn => {
+    btn.addEventListener('click', () => activateSensor(btn.dataset.sensor!));
+  });
+
+  sensorMore.addEventListener('change', () => {
+    if (sensorMore.value) activateSensor(sensorMore.value);
+  });
+
+  unitM.addEventListener('click',  () => setUnit(false));
+  unitFt.addEventListener('click', () => setUnit(true));
+
+  [apertureSlider, focalSlider, subjectSlider].forEach(el => {
+    el.addEventListener('input',  recalculate);
+    el.addEventListener('change', recalculate);
+  });
+
+  if (useFeet) setUnit(true);
+  activateSensor(activeSensorKey);
+</script>
