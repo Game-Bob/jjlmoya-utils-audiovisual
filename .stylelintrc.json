@@ -15,7 +15,8 @@
                 "declaration-block-no-redundant-longhand-properties": null,
                 "rule-empty-line-before": null,
                 "import-notation": null,
-                "block-no-empty": null
+                "block-no-empty": null,
+                "custom-property-empty-line-before": null
             }
         }
     ],

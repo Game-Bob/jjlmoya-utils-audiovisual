@@ -6,7 +6,8 @@
       "Bash(sed -i '85 a\\\\\\\\' component.astro)",
       "Bash(sed -i '110 a\\\\\\\\' component.astro)",
       "Read(//d/code/**)",
-      "Bash(xargs -I {} basename {})"
+      "Bash(xargs -I {} basename {})",
+      "Bash(bash /tmp/add-export-tests.sh)"
     ]
   }
 }
