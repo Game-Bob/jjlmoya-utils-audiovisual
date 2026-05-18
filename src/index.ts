@@ -14,6 +14,7 @@ export * from './tool/collageMaker';
 export * from './tool/videoFrameExtractor';
 export * from './tool/privacyBlur';
 export * from './tool/depthOfFieldCalculator';
+export * from './tool/videoMerger';
 
 export type {
   KnownLocale,

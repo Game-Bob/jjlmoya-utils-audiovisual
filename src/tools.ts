@@ -11,6 +11,7 @@ import { IMAGE_COMPRESSOR_TOOL } from './tool/imageCompressor';
 import { COLLAGE_MAKER_TOOL } from './tool/collageMaker';
 import { VIDEO_FRAME_EXTRACTOR_TOOL } from './tool/videoFrameExtractor';
 import { DEPTH_OF_FIELD_CALCULATOR_TOOL } from './tool/depthOfFieldCalculator';
+import { VIDEO_MERGER_TOOL } from './tool/videoMerger';
 
 export const ALL_TOOLS: ToolDefinition[] = [
   TIMELAPSE_CALCULATOR_TOOL,
@@ -24,6 +25,7 @@ export const ALL_TOOLS: ToolDefinition[] = [
   COLLAGE_MAKER_TOOL,
   VIDEO_FRAME_EXTRACTOR_TOOL,
   DEPTH_OF_FIELD_CALCULATOR_TOOL,
+  VIDEO_MERGER_TOOL,
 ];
 
 

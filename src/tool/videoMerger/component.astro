@@ -1,0 +1,400 @@
+---
+import type { VideoMergerUI } from './index';
+import './online-video-merger.css';
+
+interface Props {
+  ui: VideoMergerUI;
+}
+
+const { ui } = Astro.props;
+---
+
+<div class="vm-root" id="vm-root" data-ui={JSON.stringify(ui)}>
+  <div class="vm-premium-card">
+
+    <div id="vm-upload-box" class="vm-uploader-box">
+      <input type="file" id="vm-file-input" accept="video/*" multiple class="vm-hidden" />
+      <div class="vm-uploader-icon">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M17 10.5V7a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-3.5l4 4v-11zM14 13h-3v3H9v-3H6v-2h3V8h2v3h3z"/>
+        </svg>
+      </div>
+      <div class="vm-uploader-text">
+        <h3>{ui.uploadTitle}</h3>
+        <p>{ui.uploadFormats}</p>
+      </div>
+      <span class="vm-privacy-note">{ui.privacyNote}</span>
+    </div>
+
+    <div id="vm-workspace" class="vm-hidden">
+      
+      <div class="vm-list-section">
+        <div class="vm-list-header">
+          <h4>{ui.listTitle}</h4>
+          <button id="vm-add-more" class="vm-btn-main vm-btn-secondary vm-btn-sm" style="flex:none; width:auto; padding: 0.4rem 0.875rem;">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+            <span>{ui.addMoreBtn}</span>
+          </button>
+        </div>
+        
+        <div id="vm-list-container" class="vm-list-container">
+          <div class="vm-empty-state">{ui.emptyList}</div>
+        </div>
+      </div>
+
+      <div class="vm-controls-glass">
+        <h4 class="vm-options-title">{ui.optionsTitle}</h4>
+        
+        <div class="vm-options-grid">
+          <div class="vm-select-group">
+            <label>{ui.optionResolution}</label>
+            <select id="vm-res-select">
+              <option value="1920x1080">1920x1080 (Full HD 16:9)</option>
+              <option value="1280x720">1280x720 (HD 16:9)</option>
+              <option value="3840x2160">3840x2160 (4K UHD 16:9)</option>
+              <option value="640x360">640x360 (nHD 16:9)</option>
+              <option value="1080x1920">1080x1920 (Vertical 9:16)</option>
+            </select>
+          </div>
+          
+          <div class="vm-select-group">
+            <label>{ui.optionFps}</label>
+            <select id="vm-fps-select">
+              <option value="30">30 FPS</option>
+              <option value="24">24 FPS</option>
+              <option value="60">60 FPS</option>
+            </select>
+          </div>
+        </div>
+        
+        <p class="vm-quality-note">{ui.optionsQualityNote}</p>
+        
+        <div id="vm-resolution-warning" class="vm-warning-box vm-hidden">
+          <svg viewBox="0 0 24 24" fill="currentColor" style="width: 1.25rem; height: 1.25rem; flex-shrink: 0;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+          <span id="vm-resolution-warning-text"></span>
+        </div>
+      </div>
+
+      <div id="vm-progress-wrapper" class="vm-progress-wrapper vm-hidden" style="margin-top: 1.25rem;">
+        <div class="vm-progress-header">
+          <span id="vm-status-label">{ui.mergingStatus}</span>
+          <span id="vm-progress-percent">0%</span>
+        </div>
+        <div class="vm-progress-bar">
+          <div id="vm-progress-fill" class="vm-progress-fill"></div>
+        </div>
+      </div>
+
+      <div class="vm-actions-row" style="margin-top: 1.5rem;">
+        <button id="vm-merge-btn" class="vm-btn-main vm-btn-primary">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+          <span id="vm-merge-text">{ui.mergeBtn}</span>
+        </button>
+        
+        <a id="vm-download-btn" href="" download="merged_video.webm" class="vm-btn-main vm-btn-primary vm-hidden" style="background-color: var(--vm-success); box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3);">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7z"/></svg>
+          <span>{ui.downloadBtn}</span>
+        </a>
+
+        <button id="vm-reset-btn" class="vm-btn-main vm-btn-secondary" style="flex:none; width:auto;">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.65 6.35A7.96 7.96 0 0 0 12 4a8 8 0 0 0-8 8 8 8 0 0 0 8 8c3.73 0 6.84-2.55 7.73-6h-2.08A5.99 5.99 0 0 1 12 18a6 6 0 0 1-6-6 6 6 0 0 1 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4z"/></svg>
+          <span>{ui.resetBtn}</span>
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<script>
+  import { VideoMergerEngine, getVideoMetadata, formatTime } from './logic';
+  import type { VideoItem } from './logic';
+
+  function init() {
+    const root = document.getElementById('vm-root');
+    if (!root) return;
+
+    const fileInput = root.querySelector('#vm-file-input') as HTMLInputElement;
+    const uploadBox = root.querySelector('#vm-upload-box') as HTMLElement;
+    const workspace = root.querySelector('#vm-workspace') as HTMLElement;
+    const addMoreBtn = root.querySelector('#vm-add-more') as HTMLElement;
+    const listContainer = root.querySelector('#vm-list-container') as HTMLElement;
+    
+    const resSelect = root.querySelector('#vm-res-select') as HTMLSelectElement;
+    const fpsSelect = root.querySelector('#vm-fps-select') as HTMLSelectElement;
+    
+    const progressWrapper = root.querySelector('#vm-progress-wrapper') as HTMLElement;
+    const statusLabel = root.querySelector('#vm-status-label') as HTMLElement;
+    const progressPercent = root.querySelector('#vm-progress-percent') as HTMLElement;
+    const progressBar = root.querySelector('.vm-progress-bar') as HTMLElement;
+    
+    const mergeBtn = root.querySelector('#vm-merge-btn') as HTMLButtonElement;
+    const downloadBtn = root.querySelector('#vm-download-btn') as HTMLAnchorElement;
+    const resetBtn = root.querySelector('#vm-reset-btn') as HTMLButtonElement;
+    const resolutionWarning = root.querySelector('#vm-resolution-warning') as HTMLElement;
+    const resolutionWarningText = root.querySelector('#vm-resolution-warning-text') as HTMLElement;
+
+    let items: VideoItem[] = [];
+    const engine = new VideoMergerEngine();
+
+    function checkResolutions() {
+      const resParts = resSelect.value.split('x');
+      const width = parseInt(resParts[0] || '1920');
+      const height = parseInt(resParts[1] || '1080');
+
+      let hasMismatch = false;
+      for (const item of items) {
+        if (item.width !== width || item.height !== height) {
+          hasMismatch = true;
+          break;
+        }
+      }
+
+      if (hasMismatch) {
+        resolutionWarning.classList.remove('vm-hidden');
+        resolutionWarningText.textContent = root!.dataset.ui ? JSON.parse(root!.dataset.ui).resolutionWarning : 'Advertencia: Resoluciones distintas';
+      } else {
+        resolutionWarning.classList.add('vm-hidden');
+      }
+    }
+
+    resSelect.onchange = () => {
+      checkResolutions();
+    };
+
+    function renderList() {
+      listContainer.innerHTML = '';
+      if (items.length === 0) {
+        workspace.classList.add('vm-hidden');
+        uploadBox.classList.remove('vm-hidden');
+        return;
+      }
+
+      mergeBtn.disabled = items.length < 2;
+      checkResolutions();
+
+      items.forEach((item, index) => {
+        const card = document.createElement('div');
+        card.className = 'vm-item-card';
+        card.innerHTML = `
+          <span class="vm-item-index">${index + 1}</span>
+          <div class="vm-item-details">
+            <h5 class="vm-item-name">${item.name}</h5>
+            <div class="vm-item-meta">
+              <span>${formatTime(item.duration)}</span>
+              <span>${item.width} × ${item.height}</span>
+            </div>
+          </div>
+          <div class="vm-item-controls">
+            <button class="vm-btn-icon vm-move-up" ${index === 0 ? 'disabled' : ''}>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
+            </button>
+            <button class="vm-btn-icon vm-move-down" ${index === items.length - 1 ? 'disabled' : ''}>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+            </button>
+            <button class="vm-btn-icon vm-danger vm-delete">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg>
+            </button>
+          </div>
+        `;
+
+        const moveUp = card.querySelector('.vm-move-up') as HTMLElement;
+        const moveDown = card.querySelector('.vm-move-down') as HTMLElement;
+        const delBtn = card.querySelector('.vm-delete') as HTMLElement;
+
+        moveUp.onclick = () => {
+          if (index > 0) {
+            const temp = items[index];
+            const prev = items[index - 1];
+            if (temp && prev) {
+              items[index] = prev;
+              items[index - 1] = temp;
+              renderList();
+            }
+          }
+        };
+
+        moveDown.onclick = () => {
+          if (index < items.length - 1) {
+            const temp = items[index];
+            const next = items[index + 1];
+            if (temp && next) {
+              items[index] = next;
+              items[index + 1] = temp;
+              renderList();
+            }
+          }
+        };
+
+        delBtn.onclick = () => {
+          URL.revokeObjectURL(item.url);
+          items.splice(index, 1);
+          renderList();
+        };
+
+        listContainer.appendChild(card);
+      });
+    }
+
+    async function handleFiles(files: FileList) {
+      uploadBox.classList.add('vm-hidden');
+      workspace.classList.remove('vm-hidden');
+
+      for (let i = 0; i < files.length; i++) {
+        const file = files[i];
+        if (!file) continue;
+        try {
+          const meta = await getVideoMetadata(file);
+          items.push({
+            id: Math.random().toString(36).substring(2, 9),
+            file,
+            url: URL.createObjectURL(file),
+            name: file.name,
+            duration: meta.duration,
+            width: meta.width,
+            height: meta.height
+          });
+
+          if (items.length === 1) {
+            const value = `${meta.width}x${meta.height}`;
+            const exists = Array.from(resSelect.options).some(opt => opt.value === value);
+            if (!exists) {
+              const opt = document.createElement('option');
+              opt.value = value;
+              opt.textContent = `${meta.width}×${meta.height} (Original)`;
+              resSelect.appendChild(opt);
+            }
+            resSelect.value = value;
+          }
+        } catch (e) {
+          console.error(e);
+        }
+      }
+      renderList();
+    }
+
+    uploadBox.onclick = () => fileInput.click();
+    fileInput.onchange = () => {
+      if (fileInput.files) {
+        handleFiles(fileInput.files);
+        fileInput.value = '';
+      }
+    };
+
+    addMoreBtn.onclick = () => fileInput.click();
+
+    root.ondragover = (e) => { e.preventDefault(); uploadBox.classList.add('vm-dragover'); };
+    root.ondragleave = () => uploadBox.classList.remove('vm-dragover');
+    root.ondrop = (e) => {
+      e.preventDefault();
+      uploadBox.classList.remove('vm-dragover');
+      if (e.dataTransfer?.files) handleFiles(e.dataTransfer.files);
+    };
+
+    mergeBtn.onclick = async () => {
+      if (items.length < 2) return;
+
+      const resParts = resSelect.value.split('x');
+      const width = parseInt(resParts[0] || '1920');
+      const height = parseInt(resParts[1] || '1080');
+      const fps = parseInt(fpsSelect.value);
+
+      mergeBtn.disabled = true;
+      resetBtn.disabled = true;
+      addMoreBtn.classList.add('vm-hidden');
+      
+      const controlButtons = listContainer.querySelectorAll('.vm-btn-icon') as NodeListOf<HTMLButtonElement>;
+      controlButtons.forEach(btn => btn.disabled = true);
+
+      progressWrapper.classList.remove('vm-hidden');
+      downloadBtn.classList.add('vm-hidden');
+
+      engine.setItems(items);
+
+      progressBar.innerHTML = '';
+      const numVideos = items.length;
+      const segmentFills: HTMLElement[] = [];
+      for (let k = 0; k < numVideos; k++) {
+        const segment = document.createElement('div');
+        segment.className = 'vm-progress-segment';
+        const fill = document.createElement('div');
+        fill.className = 'vm-progress-segment-fill';
+        segment.appendChild(fill);
+        progressBar.appendChild(segment);
+        segmentFills.push(fill);
+      }
+
+      try {
+        const blob = await engine.merge({ width, height, fps }, (progress, name, index) => {
+          const globalProgress = Math.floor(((index * 100) + progress) / numVideos);
+          progressPercent.textContent = `${globalProgress}%`;
+          
+          for (let k = 0; k < numVideos; k++) {
+            const fill = segmentFills[k];
+            if (fill) {
+              if (k < index) {
+                fill.style.width = '100%';
+              } else if (k === index) {
+                fill.style.width = `${progress}%`;
+              } else {
+                fill.style.width = '0%';
+              }
+            }
+          }
+
+          statusLabel.textContent = `${root.dataset.ui ? JSON.parse(root.dataset.ui).mergingStatus : 'Uniendo...'} (${name})`;
+        });
+
+        const resultUrl = URL.createObjectURL(blob);
+        
+        progressPercent.textContent = '100%';
+        for (let k = 0; k < numVideos; k++) {
+          const fill = segmentFills[k];
+          if (fill) fill.style.width = '100%';
+        }
+        
+        downloadBtn.href = resultUrl;
+        downloadBtn.classList.remove('vm-hidden');
+        mergeBtn.classList.add('vm-hidden');
+      } catch (err) {
+        console.error(err);
+      } finally {
+        resetBtn.disabled = false;
+      }
+    };
+
+    resetBtn.onclick = () => {
+      items.forEach(item => URL.revokeObjectURL(item.url));
+      items = [];
+      
+      const downloadUrl = downloadBtn.href;
+      if (downloadUrl) URL.revokeObjectURL(downloadUrl);
+
+      progressWrapper.classList.add('vm-hidden');
+      progressPercent.textContent = '0%';
+      progressBar.innerHTML = '<div id="vm-progress-fill" class="vm-progress-fill"></div>';
+
+      mergeBtn.disabled = false;
+      mergeBtn.classList.remove('vm-hidden');
+      downloadBtn.classList.add('vm-hidden');
+      addMoreBtn.classList.remove('vm-hidden');
+
+      resSelect.value = '1920x1080';
+      const defaultValues = ['1920x1080', '1280x720', '3840x2160', '640x360', '1080x1920'];
+      for (let i = resSelect.options.length - 1; i >= 0; i--) {
+        const val = resSelect.options[i]?.value;
+        if (val && !defaultValues.includes(val)) {
+          resSelect.remove(i);
+        }
+      }
+      resolutionWarning.classList.add('vm-hidden');
+      
+      fileInput.value = '';
+      renderList();
+    };
+  }
+
+  init();
+  document.addEventListener('astro:page-load', init);
+</script>
