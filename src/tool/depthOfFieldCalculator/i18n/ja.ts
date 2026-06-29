@@ -10,7 +10,7 @@ const ui: DepthOfFieldUI = {
     title: '被写界深度計算機',
     paramsTitle: '設定パラメータ',
     sensorLabel: 'カメラセンサー',
-    moreLabel: 'その他のセンサー…',
+    moreLabel: 'その他のセンサー...',
     apertureLabel: '絞り値 (Aperture)',
     focalLabel: '焦点距離 (Focal Length)',
     distanceLabel: '被写体距離',

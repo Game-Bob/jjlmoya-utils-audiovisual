@@ -8,7 +8,7 @@ const description = 'Erstellen Sie in Sekundenschnelle kostenlos Fotocollagen. W
 
 const ui: CollageMakerUI = {
     dropTitle: "Bilder hierher ziehen",
-    dropSub: "oder {link} – min. 2, max. 9",
+    dropSub: "oder {link} - min. 2, max. 9",
     dropLink: "Dateien auswählen",
     imgsLoaded: "Geladene Bilder",
     layoutLabel: "Layout",
@@ -80,7 +80,7 @@ const seo: CollageMakerLocaleContent['seo'] = [
         '<strong>Gleichgewicht:</strong> Visuelle Verteilung des Gewichts (helle vs. dunkle Bilder, große vs. kleine).',
         '<strong>Visueller Fluss:</strong> Das Auge sollte die Komposition natürlich durchqueren, ohne tote Winkel.',
         '<strong>Kontrast:</strong> Variationen in Farbe, Größe und Form, die Aufmerksamkeit erregen.',
-        '<strong>Einheit:</strong> Thematische Kohärenz – Bilder müssen gemeinsam dieselbe Geschichte erzählen.'
+        '<strong>Einheit:</strong> Thematische Kohärenz - Bilder müssen gemeinsam dieselbe Geschichte erzählen.'
     ], icon: 'mdi:check' },
 
     { type: 'card', title: 'Intelligente und adaptive Designs', html: 'Unser System berechnet automatisch die optimale Platzverteilung basierend auf der Anzahl der Fotos. 2 Bilder = symmetrisches Raster; 5 Bilder = ausgewogene asymmetrische Verteilung. Jedes Raster ist darauf ausgelegt, die visuelle Wirkung zu maximieren.' },
@@ -88,7 +88,7 @@ const seo: CollageMakerLocaleContent['seo'] = [
     { type: 'comparative', items: [
         {
             title: 'Für soziale Netzwerke',
-            description: 'Instagram, TikTok, Facebook – quadratische Formate',
+            description: 'Instagram, TikTok, Facebook - quadratische Formate',
             icon: 'mdi:share-all',
             points: [
                 '1200px ist perfekt für den Instagram-Feed',
@@ -129,7 +129,7 @@ const seo: CollageMakerLocaleContent['seo'] = [
 
     { type: 'proscons', items: [
         {
-            pro: 'Professionelle vordefinierte Designs – keine Kenntnisse in Komposition erforderlich',
+            pro: 'Professionelle vordefinierte Designs - keine Kenntnisse in Komposition erforderlich',
             con: 'Optionen auf vordefinierte Raster beschränkt'
         },
         {
@@ -137,7 +137,7 @@ const seo: CollageMakerLocaleContent['seo'] = [
             con: 'Nicht so anpassbar wie Photoshop'
         },
         {
-            pro: '100% lokale Verarbeitung – Privatsphäre, Schnelligkeit, keine Limits',
+            pro: '100% lokale Verarbeitung - Privatsphäre, Schnelligkeit, keine Limits',
             con: 'Erfordert einen modernen Browser'
         },
         {
@@ -171,7 +171,7 @@ const seo: CollageMakerLocaleContent['seo'] = [
         }
     ] },
 
-    { type: 'message', title: 'Sofortige visuelle Erzählung', ariaLabel: 'Informationen über Komposition und Collagen', html: 'Jede Collage erzählt eine Geschichte. Unser automatischer Designer sorgt dafür, dass Ihre visuellen Geschichten ausgewogen und professionell wirken und bereit für die Welt sind – ohne auf einen Grafiker warten zu müssen.' },
+    { type: 'message', title: 'Sofortige visuelle Erzählung', ariaLabel: 'Informationen über Komposition und Collagen', html: 'Jede Collage erzählt eine Geschichte. Unser automatischer Designer sorgt dafür, dass Ihre visuellen Geschichten ausgewogen und professionell wirken und bereit für die Welt sind - ohne auf einen Grafiker warten zu müssen.' },
 
     { type: 'title', text: 'Erstellen, teilen, inspirieren', level: 3 },
     { type: 'paragraph', html: 'Eine gut gemachte Collage macht den Unterschied zwischen einem vergesslichen Post und einem, an den sich Ihre Follower erinnern und den sie teilen. Nutzen Sie intelligente Komposition für Ihre visuellen Geschichten, um Wirkung zu erzielen.' }

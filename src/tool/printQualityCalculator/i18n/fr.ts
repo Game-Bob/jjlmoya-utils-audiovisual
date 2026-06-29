@@ -85,7 +85,7 @@ const seo: PrintQualityCalculatorLocaleContent['seo'] = [
             'Convertissez les pixels en centimètres et pouces avec précision',
             'Calculez la taille maximale selon le DPI souhaité',
             'Compatibilité avec les formats standards (A4, A3, etc.)',
-            'Guide de 4 niveaux de qualité : Excellente à Non Adapté'
+            'Guide de 4 niveaux de qualité: Excellente à Non Adapté'
         ]
     },
     { type: 'title', text: 'Guide Ultime de la Qualité d\'Impression et du DPI', level: 2 },
@@ -97,12 +97,12 @@ const seo: PrintQualityCalculatorLocaleContent['seo'] = [
         { value: 'ISO 216', label: 'Formats Supportés', icon: 'mdi:file-document' }
     ], columns: 3 },
 
-    { type: 'title', text: 'Comprendre le DPI : Pixels vs Points', level: 3 },
+    { type: 'title', text: 'Comprendre le DPI: Pixels vs Points', level: 3 },
     { type: 'paragraph', html: 'La confusion courante est de penser que le DPI et les pixels sont identiques. Ce n\'est pas le cas. Les pixels sont DANS votre fichier numérique. Le DPI est la façon dont l\'imprimante les convertit en encre sur le papier.' },
     { type: 'list', items: [
         '<strong>DPI (Dots Per Inch) :</strong> Combien de points d\'encre l\'imprimante place dans un pouce linéaire (2,54 cm).',
         '<strong>Pixels :</strong> Petits carrés de données dans votre fichier numérique. Une photo de 3000x2000 pixels possède une information constante, quel que soit le DPI.',
-        '<strong>La Formule :</strong> Taille d\'impression (pouces) = Pixels / DPI. Exemple : 3000 pixels / 300 DPI = 10 pouces (25,4 cm)'
+        '<strong>La Formule :</strong> Taille d\'impression (pouces) = Pixels / DPI. Exemple: 3000 pixels / 300 DPI = 10 pouces (25,4 cm)'
     ], icon: 'mdi:check' },
 
     { type: 'title', text: 'Niveaux de Qualité DPI Expliqués', level: 3 },
@@ -153,33 +153,33 @@ const seo: PrintQualityCalculatorLocaleContent['seo'] = [
     { type: 'title', text: 'Préparation des Fichiers pour l\'Impression Professionnelle', level: 3 },
     { type: 'proscons', items: [
         {
-            pro: 'CMJN vs RVB : Les imprimantes utilisent de l\'encre (CMJN), les écrans de la lumière (RVB). Convertissez pour éviter les mauvaises surprises.',
+            pro: 'CMJN vs RVB: Les imprimantes utilisent de l\'encre (CMJN), les écrans de la lumière (RVB). Convertissez pour éviter les mauvaises surprises.',
             con: 'Les couleurs peuvent changer lors de la conversion - prévisualisez d\'abord'
         },
         {
-            pro: 'Fond Perdu (Bleed) : Ajoutez 3 mm de chaque côté si l\'image doit atteindre le bord du papier',
+            pro: 'Fond Perdu (Bleed): Ajoutez 3 mm de chaque côté si l\'image doit atteindre le bord du papier',
             con: 'Sans fond perdu, les bords coupés peuvent rester blancs'
         },
         {
-            pro: 'L\'Upscaling NE FONCTIONNE PAS : Augmenter les pixels dans Photoshop ajoute de fausses informations (lissage)',
+            pro: 'L\'Upscaling NE FONCTIONNE PAS: Augmenter les pixels dans Photoshop ajoute de fausses informations (lissage)',
             con: 'Si vous devez imprimer en grand, il vous faut la photo originale haute résolution'
         },
         {
-            pro: 'Formats : TIFF sans compression ou JPEG haute qualité ; vectoriel (AI, EPS) pour les logos',
+            pro: 'Formats: TIFF sans compression ou JPEG haute qualité ; vectoriel (AI, EPS) pour les logos',
             con: 'Le PNG ne supporte pas nativement le CMJN dans la plupart des imprimeries'
         }
     ], proTitle: 'Recommandations', conTitle: 'Contre-indications' },
 
-    { type: 'diagnostic', variant: 'warning', title: 'Erreur Commune : Le Mythe de l\'Upscaling', icon: 'mdi:alert', badge: 'Critique', html: '<strong>N\'augmentez PAS le DPI dans Photoshop sans changer les pixels.</strong> Passer de 72 DPI à 300 DPI réduit simplement la taille physique car le nombre de pixels reste le même. Si vous "ajoutez des pixels" par interpolation, l\'image sera floue. Il faut des pixels RÉELS dès l\'origine.' },
+    { type: 'diagnostic', variant: 'warning', title: 'Erreur Commune: Le Mythe de l\'Upscaling', icon: 'mdi:alert', badge: 'Critique', html: '<strong>N\'augmentez PAS le DPI dans Photoshop sans changer les pixels.</strong> Passer de 72 DPI à 300 DPI réduit simplement la taille physique car le nombre de pixels reste le même. Si vous "ajoutez des pixels" par interpolation, l\'image sera floue. Il faut des pixels RÉELS dès l\'origine.' },
 
     { type: 'glossary', items: [
         {
             term: 'DPI (Dots Per Inch)',
-            definition: 'Mesure de résolution en impression : combien de points d\'encre par pouce linéaire (2,54 cm). 300 DPI = 90 000 points par pouce carré.'
+            definition: 'Mesure de résolution en impression: combien de points d\'encre par pouce linéaire (2,54 cm). 300 DPI = 90 000 points par pouce carré.'
         },
         {
             term: 'CMJN',
-            definition: 'Espace colorimétrique d\'impression : Cyan, Magenta, Jaune, Noir (CMYK en anglais). Basé sur l\'encre soustractive.'
+            definition: 'Espace colorimétrique d\'impression: Cyan, Magenta, Jaune, Noir (CMYK en anglais). Basé sur l\'encre soustractive.'
         },
         {
             term: 'Fond Perdu (Bleed)',
@@ -197,7 +197,7 @@ const seo: PrintQualityCalculatorLocaleContent['seo'] = [
 
     { type: 'message', title: 'Précision Technique pour des Résultats Professionnels', ariaLabel: 'Informations sur les calculs d\'impression', html: 'Notre calculatrice convertit les pixels en centimètres en tenant compte des normes internationales (ISO 216 pour le papier). C\'est l\'outil idéal pour valider vos fichiers avant l\'impression.' },
 
-    { type: 'title', text: 'Conclusion : Imprimez Sans Mauvaises Surprises', level: 3 },
+    { type: 'title', text: 'Conclusion: Imprimez Sans Mauvaises Surprises', level: 3 },
     { type: 'paragraph', html: 'La différence entre une impression magnifique et décevante réside dans la relation entre pixels et DPI. Utilisez cet outil pour valider vos fichiers AVANT de passer à l\'imprimerie.' }
 ];
 

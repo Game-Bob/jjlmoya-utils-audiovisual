@@ -10,7 +10,7 @@ const ui: DepthOfFieldUI = {
     title: 'Kalkulator Kedalaman Bidang',
     paramsTitle: 'Parameter',
     sensorLabel: 'Sensor Kamera',
-    moreLabel: 'Sensor lainnya…',
+    moreLabel: 'Sensor lainnya...',
     apertureLabel: 'Apertur',
     focalLabel: 'Panjang Fokus',
     distanceLabel: 'Jarak Objek',
@@ -92,7 +92,7 @@ const seo: DepthOfFieldLocaleContent['seo'] = [
 
     { type: 'title', text: 'DoF dalam Sinema: Panjang Fokus vs Sensor', level: 3 },
     { type: 'paragraph', html: 'Sinematografer yang menggunakan Super 35 sering menggunakan panjang fokus yang lebih panjang untuk mengompresi perspektif, yang juga mempersempit DoF dan menciptakan "tampilan sinematik".' },
-    { type: 'diagnostic', variant: 'success', title: 'Aturan Distribusi Fokus', icon: 'mdi:lightbulb-outline', badge: 'Teknik Pro', html: 'Untuk subjek pada 3 meter dengan lensa 50mm di f/2.8 : zona tajam di belakang subjek selalu lebih besar daripada di depan — kira-kira dengan <strong>rasio 2:1</strong>.' },
+    { type: 'diagnostic', variant: 'success', title: 'Aturan Distribusi Fokus', icon: 'mdi:lightbulb-outline', badge: 'Teknik Pro', html: 'Untuk subjek pada 3 meter dengan lensa 50mm di f/2.8: zona tajam di belakang subjek selalu lebih besar daripada di depan - kira-kira dengan <strong>rasio 2:1</strong>.' },
 ];
 
 const faqSchema: WithContext<FAQPage> = {

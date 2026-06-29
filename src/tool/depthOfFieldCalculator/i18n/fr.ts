@@ -3,14 +3,14 @@ import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dt
 import type { DepthOfFieldUI, DepthOfFieldLocaleContent } from '../index';
 
 const slug = 'calculateur-profondeur-de-champ';
-const title = 'Calculateur de Profondeur de Champ : DoF en Temps Réel';
+const title = 'Calculateur de Profondeur de Champ: DoF en Temps Réel';
 const description = 'Calculez la profondeur de champ, la distance hyperfocale et les limites de mise au point en temps réel. Compatible avec tous les capteurs.';
 
 const ui: DepthOfFieldUI = {
     title: 'Profondeur de Champ',
     paramsTitle: 'Paramètres',
     sensorLabel: 'Capteur de l\'Appareil',
-    moreLabel: 'Plus de capteurs…',
+    moreLabel: 'Plus de capteurs...',
     apertureLabel: 'Ouverture',
     focalLabel: 'Distance Focale',
     distanceLabel: 'Distance du Sujet',
@@ -78,9 +78,9 @@ const seo: DepthOfFieldLocaleContent['seo'] = [
         ['Distance du Sujet', '1m → 10m', 'Sujet plus loin = DoF plus grande'],
     ]},
 
-    { type: 'title', text: 'La Distance Hyperfocale : Netteté Maximale', level: 3 },
+    { type: 'title', text: 'La Distance Hyperfocale: Netteté Maximale', level: 3 },
     { type: 'paragraph', html: 'En réglant la mise au point sur la <strong>distance hyperfocale</strong>, tout ce qui se trouve entre la moitié de cette distance et l\'infini sera net. Idéal pour les paysages.' },
-    { type: 'tip', title: 'Conseil pratique', html: 'Pour la photo de rue, réglez votre mise au point sur l\'hyperfocale. Avec un 35mm sur APS-C à f/8, l\'hyperfocale est à environ <strong>4 mètres</strong> : tout sera net de 2m à l\'infini.' },
+    { type: 'tip', title: 'Conseil pratique', html: 'Pour la photo de rue, réglez votre mise au point sur l\'hyperfocale. Avec un 35mm sur APS-C à f/8, l\'hyperfocale est à environ <strong>4 mètres</strong>: tout sera net de 2m à l\'infini.' },
 
     { type: 'title', text: 'Taille du Capteur et Cercle de Confusion', level: 3 },
     { type: 'paragraph', html: 'Le <strong>cercle de confusion (CoC)</strong> définit la netteté acceptable. Un capteur Plein Format a un CoC de 0,030 mm, contre ~0,006 mm pour un smartphone. Un CoC plus petit signifie des critères de netteté plus stricts.' },
@@ -90,9 +90,9 @@ const seo: DepthOfFieldLocaleContent['seo'] = [
         { label: 'Smartphone', value: '0,006 mm', icon: 'mdi:cellphone' },
     ]},
 
-    { type: 'title', text: 'DoF au Cinéma : Focale vs Capteur', level: 3 },
+    { type: 'title', text: 'DoF au Cinéma: Focale vs Capteur', level: 3 },
     { type: 'paragraph', html: 'Le tournage en Super 35 utilise souvent des focales plus longues pour compresser la perspective, créant ainsi le "look cinéma". Un objectif lumineux à 85mm est le choix classique pour le portrait.' },
-    { type: 'diagnostic', variant: 'success', title: 'La Règle de Distribution de la Netteté', icon: 'mdi:lightbulb-outline', badge: 'Technique Pro', html: 'Pour un sujet à 3m avec un 50mm à f/2.8 : la zone nette s\'étend vers l\'arrière environ <strong>deux fois plus</strong> que vers l\'avant (ratio 2:1).' },
+    { type: 'diagnostic', variant: 'success', title: 'La Règle de Distribution de la Netteté', icon: 'mdi:lightbulb-outline', badge: 'Technique Pro', html: 'Pour un sujet à 3m avec un 50mm à f/2.8: la zone nette s\'étend vers l\'arrière environ <strong>deux fois plus</strong> que vers l\'avant (ratio 2:1).' },
 ];
 
 const faqSchema: WithContext<FAQPage> = {

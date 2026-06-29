@@ -52,7 +52,7 @@ const howTo: TvDistanceLocaleContent['howTo'] = [
     },
     {
         name: "调整沙发位置",
-        text: "将您的座位放置在“最佳观看距离”范围内，以实现最大的电影沉浸感。",
+        text: "将您的座位放置在\"最佳观看距离\"范围内，以实现最大的电影沉浸感。",
     },
 ];
 
@@ -113,9 +113,9 @@ const seo: TvDistanceLocaleContent['seo'] = [
 
     { type: 'paragraph', html: '如您所见，更高分辨率允许您坐得更近而不会察觉到像素结构。4K 电视在 1.2 米处即可获得极佳体验，而 1080p 则需要至少 2 米。' },
 
-    { type: 'card', title: '人类视觉敏锐度极限', html: '人眼的辨别能力（视觉敏锐度）是有极限的。超过一定距离，即使屏幕是 8K，您也无法区分更多细节。我们的计算让您准确处于“最佳区域”，在不浪费眼力的情况下 100% 发挥像素性能。' },
+    { type: 'card', title: '人类视觉敏锐度极限', html: '人眼的辨别能力（视觉敏锐度）是有极限的。超过一定距离，即使屏幕是 8K，您也无法区分更多细节。我们的计算让您准确处于\"最佳区域\"，在不浪费眼力的情况下 100% 发挥像素性能。' },
 
-    { type: 'diagnostic', variant: 'info', title: '视觉疲劳与距离', icon: 'mdi:information', badge: '视觉健康', html: '距离太近会导致疲劳，因为眼睛需要不断适应极端的角度。距离太远会导致为了看清细节而产生肌肉紧张。我们的计算器为您找到“黄金平衡点”（THX 标准下的 40°视角）。' },
+    { type: 'diagnostic', variant: 'info', title: '视觉疲劳与距离', icon: 'mdi:information', badge: '视觉健康', html: '距离太近会导致疲劳，因为眼睛需要不断适应极端的角度。距离太远会导致为了看清细节而产生肌肉紧张。我们的计算器为您找到\"黄金平衡点\"（THX 标准下的 40°视角）。' },
 
     { type: 'proscons', items: [
         {
@@ -162,7 +162,7 @@ const seo: TvDistanceLocaleContent['seo'] = [
     { type: 'message', title: '专业视听空间优化', ariaLabel: '关于电视设置标准的信息', html: '专业电影院花费巨资确保距离、角度和照明完美。我们的计算器将这些同样的原则带到您的家中。这不是奢侈品：这是对视觉舒适度的投资。' },
 
     { type: 'title', text: '打造专业级的家庭影院', level: 3 },
-    { type: 'paragraph', html: '距离与屏幕尺寸和分辨率“同样重要”。遵循这些标准，将您的客厅转变成真正的私人影厅。' }
+    { type: 'paragraph', html: '距离与屏幕尺寸和分辨率\"同样重要\"。遵循这些标准，将您的客厅转变成真正的私人影厅。' }
 ];
 
 const faqSchema: WithContext<FAQPage> = {

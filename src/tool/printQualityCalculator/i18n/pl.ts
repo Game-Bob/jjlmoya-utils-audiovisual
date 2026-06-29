@@ -54,7 +54,7 @@ const faq: PrintQualityCalculatorLocaleContent['faq'] = [
     },
     {
         question: "Czy mogę zwiększyć DPI mojego obrazu bez utraty jakości?",
-        answer: "Nie. Zwiększenie DPI bez zmiany liczby pikseli po prostu zmniejsza rozmiar wydruku. Jeśli „wymyślisz” piksele za pomocą oprogramowania (upscaling), obraz może wyglądać na rozmyty.",
+        answer: "Nie. Zwiększenie DPI bez zmiany liczby pikseli po prostu zmniejsza rozmiar wydruku. Jeśli \"wymyślisz\" piksele za pomocą oprogramowania (upscaling), obraz może wyglądać na rozmyty.",
     },
 ];
 
@@ -73,7 +73,7 @@ const howTo: PrintQualityCalculatorLocaleContent['howTo'] = [
     },
     {
         name: "Potwierdź jakość",
-        text: "Upewnij się, że wskaźnik pokazuje „Doskonała Jakość” przed wysłaniem do druku.",
+        text: "Upewnij się, że wskaźnik pokazuje \"Doskonała Jakość\" przed wysłaniem do druku.",
     },
 ];
 
@@ -170,7 +170,7 @@ const seo: PrintQualityCalculatorLocaleContent['seo'] = [
         }
     ], proTitle: 'Rekomendacje', conTitle: 'Przeciwwskazania' },
 
-    { type: 'diagnostic', variant: 'warning', title: 'Częsty Błąd: Mit Upscalingu', icon: 'mdi:alert', badge: 'Krytyczne', html: '<strong>NIE zwiększaj DPI w Photoshopie bez zmiany liczby pikseli.</strong> Zwiększenie z 72 DPI do 300 DPI po prostu zmniejsza fizyczny rozmiar wydruku. Jeśli „dodasz piksele” poprzez interpolację (upscaling), obraz będzie wyglądał na wygładzony lub rozmyty. Potrzebujesz PRAWDZIWYCH pikseli ze źródła.' },
+    { type: 'diagnostic', variant: 'warning', title: 'Częsty Błąd: Mit Upscalingu', icon: 'mdi:alert', badge: 'Krytyczne', html: '<strong>NIE zwiększaj DPI w Photoshopie bez zmiany liczby pikseli.</strong> Zwiększenie z 72 DPI do 300 DPI po prostu zmniejsza fizyczny rozmiar wydruku. Jeśli \"dodasz piksele\" poprzez interpolację (upscaling), obraz będzie wyglądał na wygładzony lub rozmyty. Potrzebujesz PRAWDZIWYCH pikseli ze źródła.' },
 
     { type: 'glossary', items: [
         {
@@ -187,7 +187,7 @@ const seo: PrintQualityCalculatorLocaleContent['seo'] = [
         },
         {
             term: 'Rozdzielczość Natywna',
-            definition: 'PRAWDZIWE piksele uchwycone przez aparat, bez manipulacji. Zwiększenie DPI bez zmiany liczby pikseli nie generuje „rozdzielczości natywnej”.'
+            definition: 'PRAWDZIWE piksele uchwycone przez aparat, bez manipulacji. Zwiększenie DPI bez zmiany liczby pikseli nie generuje \"rozdzielczości natywnej\".'
         },
         {
             term: 'Interpolacja (Upscaling)',

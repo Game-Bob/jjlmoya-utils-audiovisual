@@ -54,7 +54,7 @@ const faq: PrintQualityCalculatorLocaleContent['faq'] = [
     },
     {
         question: "我可以在不损失质量的情况下增加图像的 DPI 吗？",
-        answer: "不可以。在不改变像素的情况下增加 DPI 只会减小打印尺寸。如果您尝试使用软件“发明”像素（插值放大），图像可能会看起来很模。糊",
+        answer: "不可以。在不改变像素的情况下增加 DPI 只会减小打印尺寸。如果您尝试使用软件\"发明\"像素（插值放大），图像可能会看起来很模。糊",
     },
 ];
 
@@ -73,7 +73,7 @@ const howTo: PrintQualityCalculatorLocaleContent['howTo'] = [
     },
     {
         name: "确认质量",
-        text: "在发送打印之前，请确保指示器标记为“极佳质量”。",
+        text: "在发送打印之前，请确保指示器标记为\"极佳质量\"。",
     },
 ];
 
@@ -170,7 +170,7 @@ const seo: PrintQualityCalculatorLocaleContent['seo'] = [
         }
     ], proTitle: '建议', conTitle: '禁忌' },
 
-    { type: 'diagnostic', variant: 'warning', title: '常见错误：插值放大的迷思', icon: 'mdi:alert', badge: '关键', html: '<strong>请勿在不改变像素的情况下增加 Photoshop 中的 DPI。</strong> 将 72 DPI 增加到 300 DPI 只是单纯减小了物理打印尺寸。如果您通过插值（upscaling）“添加像素”，图像看起来会变平滑或模糊。您需要来自源文件的真实像素。' },
+    { type: 'diagnostic', variant: 'warning', title: '常见错误：插值放大的迷思', icon: 'mdi:alert', badge: '关键', html: '<strong>请勿在不改变像素的情况下增加 Photoshop 中的 DPI。</strong> 将 72 DPI 增加到 300 DPI 只是单纯减小了物理打印尺寸。如果您通过插值（upscaling）\"添加像素\"，图像看起来会变平滑或模糊。您需要来自源文件的真实像素。' },
 
     { type: 'glossary', items: [
         {
@@ -187,7 +187,7 @@ const seo: PrintQualityCalculatorLocaleContent['seo'] = [
         },
         {
             term: '原生分辨率',
-            definition: '由相机捕捉的、未经处理的真实像素。在不改变像素的情况下增加 DPI 并不产生“原生分辨率”。'
+            definition: '由相机捕捉的、未经处理的真实像素。在不改变像素的情况下增加 DPI 并不产生\"原生分辨率\"。'
         },
         {
             term: '插值 (Upscaling)',

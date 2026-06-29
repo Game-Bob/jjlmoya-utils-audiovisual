@@ -20,7 +20,7 @@ const ui: ChromaticLensUI = {
 const faq: ChromaticLensLocaleContent['faq'] = [
     {
         question: "色彩提取是如何工作的？",
-        answer: "我们使用“中位切分”（Median Cut）算法。该算法根据图像像素在 RGB 色彩空间中的接近程度进行分组，从而找到最具代表性的色调。",
+        answer: "我们使用\"中位切分\"（Median Cut）算法。该算法根据图像像素在 RGB 色彩空间中的接近程度进行分组，从而找到最具代表性的色调。",
     },
     {
         question: "我可以将颜色复制到我的设计编辑器吗？",
@@ -74,7 +74,7 @@ const seo: ChromaticLensLocaleContent['seo'] = [
     { type: 'title', text: '中位切分算法详解', level: 3 },
     { type: 'paragraph', html: '智能调色盘提取并非简单的随机采样。它使用中位切分（Median Cut）算法，这是一种确保忠实呈现的递归切分技术：' },
     { type: 'list', items: [
-        '<strong>递归细分：</strong> 图像的 RGB “色彩立方体”被递归地细分为更小的方块。',
+        '<strong>递归细分：</strong> 图像的 RGB \"色彩立方体\"被递归地细分为更小的方块。',
         '<strong>体积平衡：</strong> 每个分区都力求将色彩空间中体积相似的像素归为一类。',
         '<strong>加权平均：</strong> 每个方块最终产生的颜色是其包含的所有像素的平均值。',
         '<strong>忠实呈现：</strong> 主导色彩反映了图像真实的视觉氛围，而不仅仅是简单的样本。'

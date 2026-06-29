@@ -10,7 +10,7 @@ const ui: DepthOfFieldUI = {
     title: 'Głębia Ostrości',
     paramsTitle: 'Parametry',
     sensorLabel: 'Matryca Aparatu',
-    moreLabel: 'Więcej matryc…',
+    moreLabel: 'Więcej matryc...',
     apertureLabel: 'Przysłona',
     focalLabel: 'Ogniskowa',
     distanceLabel: 'Odległość od Obiektu',
@@ -92,7 +92,7 @@ const seo: DepthOfFieldLocaleContent['seo'] = [
 
     { type: 'title', text: 'DoF w kinie: Ogniskowa vs Matryca', level: 3 },
     { type: 'paragraph', html: 'Filmowanie w formacie Super 35 często wykorzystuje dłuższe ogniskowe dla uzyskania "filmowego wyglądu". Jasny obiektyw 85mm to klasyk w portrecie.' },
-    { type: 'diagnostic', variant: 'success', title: 'Zasada dystrybucji ostrości', icon: 'mdi:lightbulb-outline', badge: 'Technika Pro', html: 'Dla obiektu w odległości 3m przy 50mm i f/2.8: strefa ostrości za obiektem jest zawsze większa niż przed nim – około w <strong>stosunku 2:1</strong>.' },
+    { type: 'diagnostic', variant: 'success', title: 'Zasada dystrybucji ostrości', icon: 'mdi:lightbulb-outline', badge: 'Technika Pro', html: 'Dla obiektu w odległości 3m przy 50mm i f/2.8: strefa ostrości za obiektem jest zawsze większa niż przed nim - około w <strong>stosunku 2:1</strong>.' },
 ];
 
 const faqSchema: WithContext<FAQPage> = {

@@ -106,7 +106,7 @@ export const content: CategoryLocaleContent = {
       type: 'proscons',
       items: [
         {
-          pro: '100% browserbasierte Verarbeitung – Ihre Daten werden niemals auf Server hochgeladen',
+          pro: '100% browserbasierte Verarbeitung - Ihre Daten werden niemals auf Server hochgeladen',
           con: 'Erfordert einen modernen Browser mit JavaScript-Unterstützung'
         },
         {

@@ -62,7 +62,7 @@ const seo: ChromaticLensLocaleContent['seo'] = [
             'Traitement 100 % local - idéal pour les créatifs'
         ]
     },
-    { type: 'title', text: 'Extraction de Palettes de Couleurs : Science et Design', level: 2 },
+    { type: 'title', text: 'Extraction de Palettes de Couleurs: Science et Design', level: 2 },
     { type: 'paragraph', html: 'Vous êtes-vous déjà demandé pourquoi une photographie de film semble si harmonieuse ? Ce n\'est pas un hasard ; c\'est la théorie des couleurs en action. Lentille Chromatique vous permet d\'extraire cette harmonie directement du pixel, en la transformant en codes HEX utilisables dans vos projets de design.' },
 
     { type: 'stats', items: [
@@ -180,10 +180,10 @@ const seo: ChromaticLensLocaleContent['seo'] = [
         }
     ] },
 
-    { type: 'message', title: 'Analyse Chromatique Professionnelle', ariaLabel: 'Informations techniques sur l\'analyse des couleurs', html: 'Lentille Chromatique transforme l\'analyse visuelle manuelle en précision algorithmique. Elle ne se contente pas d\'extraire des couleurs : elle capture l\'essence émotionnelle et visuelle de toute image, la plaçant directement dans votre presse-papiers sous forme de codes HEX prêts à l\'emploi. Confidentialité totale, analyses illimitées.' },
+    { type: 'message', title: 'Analyse Chromatique Professionnelle', ariaLabel: 'Informations techniques sur l\'analyse des couleurs', html: 'Lentille Chromatique transforme l\'analyse visuelle manuelle en précision algorithmique. Elle ne se contente pas d\'extraire des couleurs: elle capture l\'essence émotionnelle et visuelle de toute image, la plaçant directement dans votre presse-papiers sous forme de codes HEX prêts à l\'emploi. Confidentialité totale, analyses illimitées.' },
 
     { type: 'title', text: 'Concevez Depuis l\'Inspiration Visuelle', level: 3 },
-    { type: 'paragraph', html: 'La meilleure palette de couleurs est celle qui capture l\'intention visuelle de votre référence. Lentille Chromatique automatise ce qui était auparavant un processus manuel : observer, analyser, noter. Désormais, faites simplement glisser une image et obtenez des codes HEX professionnels en quelques secondes.' }
+    { type: 'paragraph', html: 'La meilleure palette de couleurs est celle qui capture l\'intention visuelle de votre référence. Lentille Chromatique automatise ce qui était auparavant un processus manuel: observer, analyser, noter. Désormais, faites simplement glisser une image et obtenez des codes HEX professionnels en quelques secondes.' }
 ];
 
 const faqSchema: WithContext<FAQPage> = {

@@ -10,7 +10,7 @@ const ui: DepthOfFieldUI = {
     title: '景深计算器',
     paramsTitle: '设定参数',
     sensorLabel: '相机传感器',
-    moreLabel: '更多传感器…',
+    moreLabel: '更多传感器...',
     apertureLabel: '光圈值',
     focalLabel: '焦距',
     distanceLabel: '拍摄距离',
@@ -83,7 +83,7 @@ const seo: DepthOfFieldLocaleContent['seo'] = [
     { type: 'tip', title: '实践建议', html: '对于街头摄影，将焦点设为超焦距。在 APS-C 上使用 35mm 镜头并设置 f/8 时，超焦距约为 <strong>4 米</strong>：从 2 米到无穷远的一切都将保持清晰。' },
 
     { type: 'title', text: '传感器尺寸与弥散圆', level: 3 },
-    { type: 'paragraph', html: '<strong>弥散圆 (CoC)</strong> 是定义“清晰度”的阈值。全画幅传感器的 CoC 为 0.030mm，而智能手机约为 0.006mm。CoC 值越小意味着清晰度要求越严格。' },
+    { type: 'paragraph', html: '<strong>弥散圆 (CoC)</strong> 是定义\"清晰度\"的阈值。全画幅传感器的 CoC 为 0.030mm，而智能手机约为 0.006mm。CoC 值越小意味着清晰度要求越严格。' },
     { type: 'stats', columns: 3, items: [
         { label: '全画幅', value: '0.030 mm', icon: 'mdi:camera' },
         { label: 'APS-C', value: '0.019 mm', icon: 'mdi:camera-outline' },
@@ -91,7 +91,7 @@ const seo: DepthOfFieldLocaleContent['seo'] = [
     ]},
 
     { type: 'title', text: '电影中的景深：焦距 vs. 传感器', level: 3 },
-    { type: 'paragraph', html: '在 Super 35（接近 APS-C）上拍摄的电影人经常使用较长焦距来压缩透视，这也会收窄景深，营造出“电影感”。大光圈 85mm 是经典人像选择。' },
+    { type: 'paragraph', html: '在 Super 35（接近 APS-C）上拍摄的电影人经常使用较长焦距来压缩透视，这也会收窄景深，营造出\"电影感\"。大光圈 85mm 是经典人像选择。' },
     { type: 'diagnostic', variant: 'success', title: '焦点分布规律', icon: 'mdi:lightbulb-outline', badge: '专家技法', html: '对于 3 米处的主体，使用 50mm f/2.8 全画幅拍摄：主体后的清晰区域总是比主体前大，比例约为 <strong>2:1</strong>。' },
 ];
 

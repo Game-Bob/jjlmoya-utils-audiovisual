@@ -10,7 +10,7 @@ const ui: DepthOfFieldUI = {
     title: 'Scherptediepte Calculator',
     paramsTitle: 'Parameters',
     sensorLabel: 'Camerasensor',
-    moreLabel: 'Meer sensoren…',
+    moreLabel: 'Meer sensoren...',
     apertureLabel: 'Diafragma',
     focalLabel: 'Brandpuntsafstand',
     distanceLabel: 'Afstand tot onderwerp',
@@ -92,7 +92,7 @@ const seo: DepthOfFieldLocaleContent['seo'] = [
 
     { type: 'title', text: 'DoF in film: Brandpuntsafstand vs. Sensor', level: 3 },
     { type: 'paragraph', html: 'Filmen op Super 35 gebruikt vaak langere brandpuntsafstanden voor de "cinematic look". Een lichtsterke 85mm lens bij portretopnames is een klassieke keuze.' },
-    { type: 'diagnostic', variant: 'success', title: 'De focusverdelingsregel', icon: 'mdi:lightbulb-outline', badge: 'Pro-techniek', html: 'Voor een onderwerp op 3m met 50mm bij f/2.8: het scherptegebied achter het onderwerp is altijd groter dan ervoor – ongeveer in een <strong>verhouding van 2:1</strong>.' },
+    { type: 'diagnostic', variant: 'success', title: 'De focusverdelingsregel', icon: 'mdi:lightbulb-outline', badge: 'Pro-techniek', html: 'Voor een onderwerp op 3m met 50mm bij f/2.8: het scherptegebied achter het onderwerp is altijd groter dan ervoor - ongeveer in een <strong>verhouding van 2:1</strong>.' },
 ];
 
 const faqSchema: WithContext<FAQPage> = {

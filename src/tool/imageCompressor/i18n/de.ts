@@ -55,7 +55,7 @@ const howTo: ImageCompressorLocaleContent['howTo'] = [
     },
     {
         name: "Qualität anpassen",
-        text: "Verwenden Sie den Schieberegler, um das perfekte Gleichgewicht zwischen Dateigröße und visueller Qualität zu finden (empfohlen: 75–85 %).",
+        text: "Verwenden Sie den Schieberegler, um das perfekte Gleichgewicht zwischen Dateigröße und visueller Qualität zu finden (empfohlen: 75-85 %).",
     },
     {
         name: "Größe ändern (optional)",
@@ -73,13 +73,13 @@ const seo: ImageCompressorLocaleContent['seo'] = [
         title: 'Professionelle Web Bildoptimierung',
         items: [
             'Intelligente JPG-, PNG- und WebP-Komprimierung',
-            'Gewicht um 50–80 % reduzieren bei Beibehaltung der visuellen Qualität',
-            '100 % lokale Verarbeitung – Privatsphäre garantiert',
+            'Gewicht um 50-80 % reduzieren bei Beibehaltung der visuellen Qualität',
+            '100 % lokale Verarbeitung - Privatsphäre garantiert',
             'Core Web Vitals und SEO-Positionierung verbessern'
         ]
     },
     { type: 'title', text: 'Bildoptimierung: Web Geschwindigkeit und Core Web Vitals', level: 2 },
-    { type: 'paragraph', html: 'In der Ära der digitalen Unmittelbarkeit verliert eine langsame Website Nutzer. Nicht optimierte Bilder machen 60–70 % des Gesamtgewichts einer Webseite aus. Sie zu optimieren ist der erste Schritt, um Ihre Google-Metriken (LCP, CLS) und Ihre Positionierung in den Suchergebnissen zu verbessern.' },
+    { type: 'paragraph', html: 'In der Ära der digitalen Unmittelbarkeit verliert eine langsame Website Nutzer. Nicht optimierte Bilder machen 60-70 % des Gesamtgewichts einer Webseite aus. Sie zu optimieren ist der erste Schritt, um Ihre Google-Metriken (LCP, CLS) und Ihre Positionierung in den Suchergebnissen zu verbessern.' },
 
     { type: 'stats', items: [
         { value: '50-80%', label: 'Typische Gewichtsreduktion', icon: 'mdi:trending-down' },
@@ -89,22 +89,22 @@ const seo: ImageCompressorLocaleContent['seo'] = [
 
     { type: 'title', text: 'Erklärung der Komprimierungsformate', level: 3 },
     { type: 'table', headers: ['Format', 'Komprimierung', 'Anwendungsfälle', 'Kompatibilität'], rows: [
-        ['JPEG', 'Verlustbehaftet 50–90 %', 'Kamerafotos, redaktionelle Inhalte', 'Universal (100 %)'],
-        ['PNG', 'Verlustfrei 30–50 %', 'Grafiken, Logos, Transparenzen', 'Universal (100 %)'],
-        ['WebP', 'Verlustbehaftet/Verlustfrei 25–35 % mehr', 'Modernes Web, soziale Netzwerke', '95 % moderne Browser'],
+        ['JPEG', 'Verlustbehaftet 50-90 %', 'Kamerafotos, redaktionelle Inhalte', 'Universal (100 %)'],
+        ['PNG', 'Verlustfrei 30-50 %', 'Grafiken, Logos, Transparenzen', 'Universal (100 %)'],
+        ['WebP', 'Verlustbehaftet/Verlustfrei 25-35 % mehr', 'Modernes Web, soziale Netzwerke', '95 % moderne Browser'],
         ['AVIF', 'Verlustbehaftet/Verlustfrei 20 % Verbesserung', 'Next-Generation-Web', 'Nur neue Browser']
     ] },
 
-    { type: 'card', title: 'Warum WebP die Zukunft ist', html: 'Google hat WebP speziell für das Web entwickelt. Es bietet eine überlegene Komprimierung gegenüber JPEG und PNG bei gleichbleibender oder verbesserter visueller Qualität. Es ist 25–35 % kleiner als äquivalente JPEGs. Moderne Browser unterstützen es zu 95 %.' },
+    { type: 'card', title: 'Warum WebP die Zukunft ist', html: 'Google hat WebP speziell für das Web entwickelt. Es bietet eine überlegene Komprimierung gegenüber JPEG und PNG bei gleichbleibender oder verbesserter visueller Qualität. Es ist 25-35 % kleiner als äquivalente JPEGs. Moderne Browser unterstützen es zu 95 %.' },
 
     { type: 'title', text: 'Verlustbehaftete vs. verlustfreie Komprimierung', level: 3 },
     { type: 'comparative', items: [
         {
             title: 'Verlustbehaftete Komprimierung',
-            description: 'JPG, WebP – Entfernt unmerkliche visuelle Informationen',
+            description: 'JPG, WebP - Entfernt unmerkliche visuelle Informationen',
             icon: 'mdi:compress',
             points: [
-                'Reduziert 70–90 % des ursprünglichen Gewichts',
+                'Reduziert 70-90 % des ursprünglichen Gewichts',
                 'Für das menschliche Auge unmerklich, wenn die Qualität >75 % bleibt',
                 'Ideal für realistische Fotografie',
                 'Nicht empfohlen für Logos oder scharfen Text'
@@ -113,10 +113,10 @@ const seo: ImageCompressorLocaleContent['seo'] = [
         },
         {
             title: 'Verlustfreie Komprimierung',
-            description: 'PNG, WebP verlustfrei – Behält 100 % der visuellen Daten bei',
+            description: 'PNG, WebP verlustfrei - Behält 100 % der visuellen Daten bei',
             icon: 'mdi:shield',
             points: [
-                'Reduziert 20–50 % des Gewichts',
+                'Reduziert 20-50 % des Gewichts',
                 'Perfekte Qualität, keine Verschlechterung',
                 'Ideal für Grafiken, Logos, Transparenzen',
                 'Schwerere Dateien als bei verlustbehafteter Komprimierung'
@@ -138,7 +138,7 @@ const seo: ImageCompressorLocaleContent['seo'] = [
             con: 'Erfordert Browser mit Canvas-API-Unterstützung (universell verfügbar)'
         },
         {
-            pro: 'WebP ist 25–35 % kleiner als JPEG bei gleicher Qualität',
+            pro: 'WebP ist 25-35 % kleiner als JPEG bei gleicher Qualität',
             con: 'Alte Versionen von Safari und IE unterstützen WebP nicht (Fallback verfügbar)'
         },
         {
@@ -147,7 +147,7 @@ const seo: ImageCompressorLocaleContent['seo'] = [
         },
         {
             pro: 'Optionales Resizing: Reduziert Auflösung zusätzlich zur Komprimierung',
-            con: 'Resizing führt zu Informationsverlust – besser die Auflösung an der Quelle optimieren'
+            con: 'Resizing führt zu Informationsverlust - besser die Auflösung an der Quelle optimieren'
         }
     ], proTitle: 'Vorteile', conTitle: 'Einschränkungen' },
 
@@ -156,7 +156,7 @@ const seo: ImageCompressorLocaleContent['seo'] = [
     { type: 'glossary', items: [
         {
             term: 'Verlustbehaftete Komprimierung',
-            definition: 'Entfernt visuelle Daten, die das menschliche Auge als „Rauschen“ wahrnimmt. Ideal für Fotografie. JPEG, verlustbehaftetes WebP, HEIC sind verlustbehaftet.'
+            definition: 'Entfernt visuelle Daten, die das menschliche Auge als \"Rauschen\" wahrnimmt. Ideal für Fotografie. JPEG, verlustbehaftetes WebP, HEIC sind verlustbehaftet.'
         },
         {
             term: 'Verlustfreie Komprimierung',
@@ -168,7 +168,7 @@ const seo: ImageCompressorLocaleContent['seo'] = [
         },
         {
             term: 'WebP',
-            definition: 'Von Google entwickeltes Format. 25–35 % kleiner als JPEG. Wird von 95 % der modernen Browser unterstützt (alle außer IE).'
+            definition: 'Von Google entwickeltes Format. 25-35 % kleiner als JPEG. Wird von 95 % der modernen Browser unterstützt (alle außer IE).'
         },
         {
             term: 'Komprimierungsartefakte',

@@ -10,7 +10,7 @@ const ui: DepthOfFieldUI = {
     title: 'Alan Derinliği Hesaplama',
     paramsTitle: 'Parametreler',
     sensorLabel: 'Kamera Sensörü',
-    moreLabel: 'Daha fazla sensör…',
+    moreLabel: 'Daha fazla sensör...',
     apertureLabel: 'Diyafram',
     focalLabel: 'Odak Uzaklığı',
     distanceLabel: 'Obje Mesafesi',

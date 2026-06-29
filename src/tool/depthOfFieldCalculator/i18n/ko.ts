@@ -10,7 +10,7 @@ const ui: DepthOfFieldUI = {
     title: '피사체 깊이 계산기',
     paramsTitle: '설정 파라미터',
     sensorLabel: '카메라 센서',
-    moreLabel: '기타 센서…',
+    moreLabel: '기타 센서...',
     apertureLabel: '조리개값 (Aperture)',
     focalLabel: '초점 거리 (Focal Length)',
     distanceLabel: '피사체 거리',

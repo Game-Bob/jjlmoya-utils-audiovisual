@@ -3,7 +3,7 @@ import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dt
 import type { VideoMergerUI, VideoMergerLocaleContent } from '../index';
 
 const slug = 'fusionner-videos-en-ligne';
-const title = 'Fusionner des vidéos en ligne : Joignez plusieurs vidéos gratuitement et rapidement';
+const title = 'Fusionner des vidéos en ligne: Joignez plusieurs vidéos gratuitement et rapidement';
 const description = 'Fusionnez et concaténez plusieurs vidéos en une seule, gratuitement, en ligne et localement. Sans filigrane, sans téléchargement, 100% privé dans votre navigateur.';
 
 const ui: VideoMergerUI = {
@@ -23,7 +23,7 @@ const ui: VideoMergerUI = {
     optionsQualityNote: "La résolution finale sera ajustée en conservant le format d'origine avec des bandes noires (letterbox) si les vidéos ont des dimensions différentes.",
     faqTitle: "Foire aux questions sur la fusion de vidéos",
     bibliographyTitle: "Bibliographie & Références",
-    resolutionWarning: "Attention : Certaines vidéos ont des résolutions différentes et seront automatiquement adaptées."
+    resolutionWarning: "Attention: Certaines vidéos ont des résolutions différentes et seront automatiquement adaptées."
 };
 
 const faq: VideoMergerLocaleContent['faq'] = [
@@ -71,7 +71,7 @@ const seo: VideoMergerLocaleContent['seo'] = [
             'Pistes audio combinées de manière parfaitement séquentielle'
         ]
     },
-    { type: 'title', text: 'Fusionner des vidéos en ligne gratuitement : Simplicité et confidentialité sans limites', level: 2 },
+    { type: 'title', text: 'Fusionner des vidéos en ligne gratuitement: Simplicité et confidentialité sans limites', level: 2 },
     { type: 'paragraph', html: 'Vous vous demandez <strong>comment fusionner deux vidéos en une seule</strong> sans complications ? Vous n\'avez plus besoin de télécharger des logiciels lourds ou des applications payantes. Notre outil pour <strong>fusionner des vidéos en ligne gratuitement</strong> vous permet de concaténer et de joindre tous les clips dont vous avez besoin en quelques secondes. En fonctionnant 100% localement, vous n\'avez pas besoin de télécharger vos fichiers sur un serveur, ce qui garantit une confidentialité absolue et vous permet de <strong>fusionner des vidéos lourdes</strong> sans temps d\'attente de téléchargement.' },
     
     { type: 'title', text: 'Joindre des vidéos sans filigrane', level: 3 },
@@ -142,15 +142,15 @@ const seo: VideoMergerLocaleContent['seo'] = [
 
     { type: 'proscons', items: [
         {
-            pro: 'Confidentialité garantie : Sécurité maximale car aucun fichier ne quitte votre appareil',
+            pro: 'Confidentialité garantie: Sécurité maximale car aucun fichier ne quitte votre appareil',
             con: 'La vitesse de fusion de vidéos lourdes dépend de la RAM et du processeur de votre ordinateur local'
         },
         {
-            pro: 'Résultats professionnels : 100% gratuit, sans inscription et sans filigrane',
+            pro: 'Résultats professionnels: 100% gratuit, sans inscription et sans filigrane',
             con: 'Lors de la fusion de vidéos aux dimensions disparates (vertical vs horizontal), des marges noires seront appliquées'
         },
         {
-            pro: 'Polyvalence : Exportation rapide avec encodage efficace optimisé pour le web et les réseaux sociaux',
+            pro: 'Polyvalence: Exportation rapide avec encodage efficace optimisé pour le web et les réseaux sociaux',
             con: 'Ne permet pas d\'ajouter des transitions complexes (fondus 3D) ou des effets visuels cinématographiques'
         }
     ], title: 'Avantages et considérations' },

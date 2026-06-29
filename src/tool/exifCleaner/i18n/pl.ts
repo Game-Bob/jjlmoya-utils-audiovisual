@@ -39,11 +39,11 @@ const faq: ExifCleanerLocaleContent['faq'] = [
     },
     {
         question: "Jakie konkretnie dane usuwa to narzędzie?",
-        answer: "Usuwa wszystkie tagi EXIF (GPS, marka aparatu, numer seryjny), IPTC (prawa autorskie, autor) oraz XMP (historia edycji). Twoje zdjęcie staje się „czyste”, zachowując jedynie wizualne piksele.",
+        answer: "Usuwa wszystkie tagi EXIF (GPS, marka aparatu, numer seryjny), IPTC (prawa autorskie, autor) oraz XMP (historia edycji). Twoje zdjęcie staje się \"czyste\", zachowując jedynie wizualne piksele.",
     },
     {
         question: "Czy zdjęcie traci na jakości podczas usuwania metadanych?",
-        answer: "Nie. Usuwamy jedynie techniczny „nagłówek” danych pliku. Dane obrazu (piksele) pozostają identyczne, więc jakość wizualna nie zmienia się w ogóle.",
+        answer: "Nie. Usuwamy jedynie techniczny \"nagłówek\" danych pliku. Dane obrazu (piksele) pozostają identyczne, więc jakość wizualna nie zmienia się w ogóle.",
     },
 ];
 
@@ -54,7 +54,7 @@ const howTo: ExifCleanerLocaleContent['howTo'] = [
     },
     {
         name: "Przeanalizuj bieżące dane",
-        text: "Narzędzie pokaże Ci, jakie wrażliwe informacje wykryło (np. „Wykryto współrzędne GPS”).",
+        text: "Narzędzie pokaże Ci, jakie wrażliwe informacje wykryło (np. \"Wykryto współrzędne GPS\").",
     },
     {
         name: "Przetwórz i oczyść",
@@ -73,12 +73,12 @@ const seo: ExifCleanerLocaleContent['seo'] = [
         items: [
             'Natychmiast usuwaj współrzędne GPS i lokalizację ze swoich zdjęć',
             'Usuwaj model aparatu, numer seryjny i informacje techniczne',
-            'Przetwarzanie w 100% oparte na przeglądarce – Twoje zdjęcia nigdy nie opuszczają urządzenia',
-            'Zachowuje jakość wizualną – usuwane są tylko ukryte dane'
+            'Przetwarzanie w 100% oparte na przeglądarce - Twoje zdjęcia nigdy nie opuszczają urządzenia',
+            'Zachowuje jakość wizualną - usuwane są tylko ukryte dane'
         ]
     },
     { type: 'title', text: 'Kompletny przewodnik po prywatności i metadanych EXIF w fotografii cyfrowej', level: 2 },
-    { type: 'paragraph', html: 'Czy kiedykolwiek zastanawiałeś się, jak wiele danych osobowych udostępniasz, przesyłając zdjęcie do mediów społecznościowych? Metadane EXIF są jak <strong>niewidzialny odcisk palca</strong>, który może ujawnić wszystko – od dokładnej lokalizacji Twojego domu po cenę Twojego sprzętu fotograficznego. Ten przewodnik wyjaśnia, jak skutecznie chronić swoją prywatność.' },
+    { type: 'paragraph', html: 'Czy kiedykolwiek zastanawiałeś się, jak wiele danych osobowych udostępniasz, przesyłając zdjęcie do mediów społecznościowych? Metadane EXIF są jak <strong>niewidzialny odcisk palca</strong>, który może ujawnić wszystko - od dokładnej lokalizacji Twojego domu po cenę Twojego sprzętu fotograficznego. Ten przewodnik wyjaśnia, jak skutecznie chronić swoją prywatność.' },
 
     { type: 'stats', items: [
         { value: '100%', label: 'Prywatność - Przetwarzanie Lokalne', icon: 'mdi:shield-check' },

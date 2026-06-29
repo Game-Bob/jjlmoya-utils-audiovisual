@@ -74,7 +74,7 @@ const seo: ChromaticLensLocaleContent['seo'] = [
     { type: 'title', text: 'Wyjaśnienie Algorytmu Median Cut', level: 3 },
     { type: 'paragraph', html: 'Inteligentna ekstrakcja palety nie jest prostym losowym próbkowaniem pikseli. Wykorzystuje algorytm Median Cut, technikę rekurencyjnego partycjonowania, która zapewnia wierne odwzorowanie:' },
     { type: 'list', items: [
-        '<strong>Podział Rekurencyjny:</strong> „Kostka kolorów” RGB obrazu jest rekurencyjnie dzielona na mniejsze pudełka.',
+        '<strong>Podział Rekurencyjny:</strong> \"Kostka kolorów\" RGB obrazu jest rekurencyjnie dzielona na mniejsze pudełka.',
         '<strong>Równowaga Objętości:</strong> Każda partycja dąży do pogrupowania pikseli z tej samej przestrzeni barw o podobnych objętościach.',
         '<strong>Średnia Ważona:</strong> Wynikowy kolor każdego pudełka jest średnią wszystkich pikseli, które zawiera.',
         '<strong>Wierne Odwzorowanie:</strong> Dominujące kolory odzwierciedlają rzeczywistą atmosferę wizualną obrazu, a nie prostą próbkę.'

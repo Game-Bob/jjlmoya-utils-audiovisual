@@ -10,7 +10,7 @@ const ui: DepthOfFieldUI = {
     title: 'Profundidad de Campo',
     paramsTitle: 'Parámetros',
     sensorLabel: 'Sensor de la Cámara',
-    moreLabel: 'Más sensores…',
+    moreLabel: 'Más sensores...',
     apertureLabel: 'Apertura',
     focalLabel: 'Distancia Focal',
     distanceLabel: 'Distancia al Sujeto',
@@ -91,7 +91,7 @@ const seo: DepthOfFieldLocaleContent['seo'] = [
     ]},
 
     { type: 'title', text: 'La Profundidad de Campo en el Cine: Focal vs. Sensor', level: 3 },
-    { type: 'paragraph', html: 'Los cineastas que ruedan en Super 35 (cercano al APS-C) suelen usar distancias focales más largas para comprimir la perspectiva, lo que también reduce la profundidad de campo y crea el característico "look cinematográfico". La combinación de un objetivo luminoso (f/1.4–f/2.8) y una focal de más de 85mm a distancias de retrato es la receta clásica.' },
+    { type: 'paragraph', html: 'Los cineastas que ruedan en Super 35 (cercano al APS-C) suelen usar distancias focales más largas para comprimir la perspectiva, lo que también reduce la profundidad de campo y crea el característico "look cinematográfico". La combinación de un objetivo luminoso (f/1.4-f/2.8) y una focal de más de 85mm a distancias de retrato es la receta clásica.' },
     { type: 'diagnostic', variant: 'success', title: 'La Regla de Distribución del Enfoque', icon: 'mdi:lightbulb-outline', badge: 'Técnica Pro', html: 'Para un sujeto a 3 metros con un 50mm a f/2.8 en Full Frame: límite cercano ≈ 2,73m, límite lejano ≈ 3,33m, DoF total ≈ 60cm. La zona trasera siempre es mayor que la delantera, aproximadamente en una <strong>proporción 2:1</strong> para la mayoría de distancias reales.' },
 ];
 

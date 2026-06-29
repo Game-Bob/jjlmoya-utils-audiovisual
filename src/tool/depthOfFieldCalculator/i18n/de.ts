@@ -10,7 +10,7 @@ const ui: DepthOfFieldUI = {
     title: 'Schärfentiefe Rechner',
     paramsTitle: 'Parameter',
     sensorLabel: 'Kamerasensor',
-    moreLabel: 'Weitere Sensoren…',
+    moreLabel: 'Weitere Sensoren...',
     apertureLabel: 'Blende',
     focalLabel: 'Brennweite',
     distanceLabel: 'Motivabstand',
@@ -80,7 +80,7 @@ const seo: DepthOfFieldLocaleContent['seo'] = [
 
     { type: 'title', text: 'Die hyperfokale Distanz: Maximale Schärfe', level: 3 },
     { type: 'paragraph', html: 'Wenn Sie auf die <strong>hyperfokale Distanz</strong> fokussieren, erscheint alles von der halben Distanz bis Unendlich scharf. Ideal für die Landschaftsfotografie.' },
-    { type: 'tip', title: 'Praxistipp', html: 'Stellen Sie in der Straßenfotografie den Fokus auf die Hyperfokaldistanz ein. Mit einem 35mm-Objektiv an APS-C bei f/8 liegt diese bei ca. <strong>4 Metern</strong> – alles von 2m bis Unendlich wird scharf.' },
+    { type: 'tip', title: 'Praxistipp', html: 'Stellen Sie in der Straßenfotografie den Fokus auf die Hyperfokaldistanz ein. Mit einem 35mm-Objektiv an APS-C bei f/8 liegt diese bei ca. <strong>4 Metern</strong> - alles von 2m bis Unendlich wird scharf.' },
 
     { type: 'title', text: 'Sensorgröße und Zerstreuungskreis', level: 3 },
     { type: 'paragraph', html: 'Der <strong>Zerstreuungskreis (CoC)</strong> definiert die akzeptable Schärfe. Ein Vollformatsensor hat einen CoC von 0,030 mm; ein Smartphonesensor ca. 0,006 mm. Kleinere CoC-Werte bedeuten strengere Schärfekriterien.' },
@@ -92,7 +92,7 @@ const seo: DepthOfFieldLocaleContent['seo'] = [
 
     { type: 'title', text: 'DoF im Kino: Brennweite vs. Sensor', level: 3 },
     { type: 'paragraph', html: 'Cinematographen, die auf Super 35 drehen, nutzen oft längere Brennweiten für den typischen "Cinematic Look". Die Kombination aus lichtstarkem Objektiv und 85mm+ Brennweite ist der Klassiker.' },
-    { type: 'diagnostic', variant: 'success', title: 'Die Fokus Verteilungsregel', icon: 'mdi:lightbulb-outline', badge: 'Profi Technik', html: 'Bei einem Motiv in 3m Entfernung mit 50mm bei f/2.8: Der Bereich hinter dem Motiv ist immer größer als der davor – etwa im <strong>Verhältnis 2:1</strong>.' },
+    { type: 'diagnostic', variant: 'success', title: 'Die Fokus Verteilungsregel', icon: 'mdi:lightbulb-outline', badge: 'Profi Technik', html: 'Bei einem Motiv in 3m Entfernung mit 50mm bei f/2.8: Der Bereich hinter dem Motiv ist immer größer als der davor - etwa im <strong>Verhältnis 2:1</strong>.' },
 ];
 
 const faqSchema: WithContext<FAQPage> = {

@@ -54,7 +54,7 @@ const faq: PrintQualityCalculatorLocaleContent['faq'] = [
     },
     {
         question: "Kann ich die DPI meines Bildes erhöhen, ohne an Qualität zu verlieren?",
-        answer: "Nein. Erhöhen Sie die DPI, ohne die Pixel zu ändern, verringert sich einfach die Druckgröße. Wenn Sie Pixel mit Software „erfinden“ (Upscaling), kann das Bild unscharf wirken.",
+        answer: "Nein. Erhöhen Sie die DPI, ohne die Pixel zu ändern, verringert sich einfach die Druckgröße. Wenn Sie Pixel mit Software \"erfinden\" (Upscaling), kann das Bild unscharf wirken.",
     },
 ];
 
@@ -73,7 +73,7 @@ const howTo: PrintQualityCalculatorLocaleContent['howTo'] = [
     },
     {
         name: "Qualität bestätigen",
-        text: "Stellen Sie sicher, dass die Anzeige „Hervorragende Qualität“ anzeigt, bevor Sie den Druck in Auftrag geben.",
+        text: "Stellen Sie sicher, dass die Anzeige \"Hervorragende Qualität\" anzeigt, bevor Sie den Druck in Auftrag geben.",
     },
 ];
 
@@ -154,7 +154,7 @@ const seo: PrintQualityCalculatorLocaleContent['seo'] = [
     { type: 'proscons', items: [
         {
             pro: 'CMYK vs. RGB: Drucker verwenden Tinte (CMYK), Bildschirme Licht (RGB). Konvertieren Sie, um Farbüberraschungen zu vermeiden.',
-            con: 'Farben können sich beim Konvertieren ändern – erst Vorschau prüfen'
+            con: 'Farben können sich beim Konvertieren ändern - erst Vorschau prüfen'
         },
         {
             pro: 'Beschnitt: Fügen Sie 3 mm extra pro Seite hinzu, wenn das Bild bis zum Papierrand reichen soll',
@@ -170,7 +170,7 @@ const seo: PrintQualityCalculatorLocaleContent['seo'] = [
         }
     ], proTitle: 'Empfehlungen', conTitle: 'Gegenanzeigen' },
 
-    { type: 'diagnostic', variant: 'warning', title: 'Häufiger Fehler: Der Upscaling Mythos', icon: 'mdi:alert', badge: 'Kritisch', html: '<strong>Erhöhen Sie DPI in Photoshop NICHT ohne die Pixel zu ändern.</strong> Eine Erhöhung von 72 DPI auf 300 DPI verringert einfach die physische Druckgröße. Wenn Sie Pixel durch Interpolation (Upscaling) „hinzufügen“, wirkt das Bild geglättet oder unscharf. Sie benötigen REAL-Pixel von der Quelle.' },
+    { type: 'diagnostic', variant: 'warning', title: 'Häufiger Fehler: Der Upscaling Mythos', icon: 'mdi:alert', badge: 'Kritisch', html: '<strong>Erhöhen Sie DPI in Photoshop NICHT ohne die Pixel zu ändern.</strong> Eine Erhöhung von 72 DPI auf 300 DPI verringert einfach die physische Druckgröße. Wenn Sie Pixel durch Interpolation (Upscaling) \"hinzufügen\", wirkt das Bild geglättet oder unscharf. Sie benötigen REAL-Pixel von der Quelle.' },
 
     { type: 'glossary', items: [
         {
@@ -187,7 +187,7 @@ const seo: PrintQualityCalculatorLocaleContent['seo'] = [
         },
         {
             term: 'Native Auflösung',
-            definition: 'ECHTE, von der Kamera erfasste Pixel ohne Manipulation. DPI-Erhöhung ohne Pixeländerung erzeugt keine „native Auflösung“.'
+            definition: 'ECHTE, von der Kamera erfasste Pixel ohne Manipulation. DPI-Erhöhung ohne Pixeländerung erzeugt keine \"native Auflösung\".'
         },
         {
             term: 'Interpolation (Upscaling)',

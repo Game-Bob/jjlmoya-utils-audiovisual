@@ -67,7 +67,7 @@ const seo: TvDistanceLocaleContent['seo'] = [
             'Évitez la fatigue oculaire et maximisez l\'immersion'
         ]
     },
-    { type: 'title', text: 'Science de l\'Immersion : Distance TV Optimale', level: 2 },
+    { type: 'title', text: 'Science de l\'Immersion: Distance TV Optimale', level: 2 },
     { type: 'paragraph', html: 'Il ne s\'agit pas seulement de confort, mais de physiologie visuelle humaine. L\'œil a une limite d\'acuité de résolution ; si vous êtes trop loin d\'un écran 4K, vous gaspillez des pixels que votre vision ne peut exploiter.' },
 
     { type: 'stats', items: [
@@ -76,7 +76,7 @@ const seo: TvDistanceLocaleContent['seo'] = [
         { value: 'Zéro', label: 'Fatigue Visuelle', icon: 'mdi:heart-pulse' }
     ], columns: 3 },
 
-    { type: 'title', text: 'Deux Normes Professionnelles : THX vs SMPTE', level: 3 },
+    { type: 'title', text: 'Deux Normes Professionnelles: THX vs SMPTE', level: 3 },
     { type: 'paragraph', html: 'Il existe deux autorités principales dans l\'industrie audiovisuelle qui définissent comment optimiser votre expérience :' },
     { type: 'comparative', items: [
         {

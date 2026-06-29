@@ -67,7 +67,7 @@ const seo: VideoFrameExtractorLocaleContent['seo'] = [
             'Extraction par lots automatique à intervalles personnalisés'
         ]
     },
-    { type: 'title', text: 'Extraction d\'Images : Figer le Temps en Vidéo', level: 2 },
+    { type: 'title', text: 'Extraction d\'Images: Figer le Temps en Vidéo', level: 2 },
     { type: 'paragraph', html: 'Une image vaut parfois mille mots. Mais trouver l\'image parfaite peut être frustrant. Notre outil utilise la puissance locale de votre navigateur pour extraire des images de précision sans logiciel professionnel.' },
 
     { type: 'stats', items: [
@@ -129,15 +129,15 @@ const seo: VideoFrameExtractorLocaleContent['seo'] = [
         ['Matroska', 'MKV', 'Navigateurs modernes', 'Conteneur flexible, qualité variable']
     ] },
 
-    { type: 'card', title: 'Précision à l\'Image Près', html: 'Se déplacer d\'une seule image en avant ou en arrière (±1 image) est vital pour capturer l\'instant parfait : un saut, un sourire, un geste. Notre outil vous donne un contrôle millimétrique.' },
+    { type: 'card', title: 'Précision à l\'Image Près', html: 'Se déplacer d\'une seule image en avant ou en arrière (±1 image) est vital pour capturer l\'instant parfait: un saut, un sourire, un geste. Notre outil vous donne un contrôle millimétrique.' },
 
     { type: 'proscons', items: [
         {
-            pro: 'Confidentialité totale : la vidéo est traitée à 100 % localement',
+            pro: 'Confidentialité totale: la vidéo est traitée à 100 % localement',
             con: 'Limité par la mémoire RAM disponible (~500 Mo recommandés)'
         },
         {
-            pro: 'Résolution native préservée : SD, HD, 4K sans re-compression',
+            pro: 'Résolution native préservée: SD, HD, 4K sans re-compression',
             con: 'Nécessite un navigateur supportant HTML5 Video'
         },
         {
@@ -159,11 +159,11 @@ const seo: VideoFrameExtractorLocaleContent['seo'] = [
         },
         {
             term: 'FPS (Images par seconde)',
-            definition: 'Vitesse de défilement : 24 fps (cinéma), 30 fps (vidéo web), 60 fps (fluide).'
+            definition: 'Vitesse de défilement: 24 fps (cinéma), 30 fps (vidéo web), 60 fps (fluide).'
         },
         {
             term: 'Codec Vidéo',
-            definition: 'Algorithme de compression : H.264 (MP4), VP9 (WebM). Détermine la taille et la qualité.'
+            definition: 'Algorithme de compression: H.264 (MP4), VP9 (WebM). Détermine la taille et la qualité.'
         },
         {
             term: 'Bitrate',
@@ -171,11 +171,11 @@ const seo: VideoFrameExtractorLocaleContent['seo'] = [
         },
         {
             term: 'Résolution Vidéo',
-            definition: 'Dimensions en pixels : 720p (1280x720), 1080p (1920x1080), 4K (3840x2160).'
+            definition: 'Dimensions en pixels: 720p (1280x720), 1080p (1920x1080), 4K (3840x2160).'
         }
     ] },
 
-    { type: 'message', title: 'Extraction Professionnelle d\'Images', ariaLabel: 'Informations techniques', html: 'L\'image parfaite est à portée de clic : importez, naviguez, capturez. Confidentialité totale, résolution native, téléchargement instantané.' },
+    { type: 'message', title: 'Extraction Professionnelle d\'Images', ariaLabel: 'Informations techniques', html: 'L\'image parfaite est à portée de clic: importez, naviguez, capturez. Confidentialité totale, résolution native, téléchargement instantané.' },
 
     { type: 'title', text: 'Figer des Moments Vidéo', level: 3 },
     { type: 'paragraph', html: 'Chaque vidéo contient des centaines d\'images. Beaucoup sont des pépites. Utilisez cet outil pour extraire ces moments parfaits.' }

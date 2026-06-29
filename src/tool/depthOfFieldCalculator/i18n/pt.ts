@@ -10,7 +10,7 @@ const ui: DepthOfFieldUI = {
     title: 'Profundidade de Campo',
     paramsTitle: 'Parâmetros',
     sensorLabel: 'Sensor da Câmara',
-    moreLabel: 'Mais sensores…',
+    moreLabel: 'Mais sensores...',
     apertureLabel: 'Abertura',
     focalLabel: 'Distância Focal',
     distanceLabel: 'Distância do Sujeito',
@@ -92,7 +92,7 @@ const seo: DepthOfFieldLocaleContent['seo'] = [
 
     { type: 'title', text: 'DoF no Cinema: Focal vs. Sensor', level: 3 },
     { type: 'paragraph', html: 'Filmar em Super 35 exige frequentemente focais mais longas para comprimir a perspetiva, criando o "look cinematográfico". Um 85mm luminoso é a escolha clássica para retrato.' },
-    { type: 'diagnostic', variant: 'success', title: 'A Regra de Distribuição do Foco', icon: 'mdi:lightbulb-outline', badge: 'Técnica Pro', html: 'Para um sujeito a 3m com uma 50mm a f/2.8 : a zona nítida atrás do sujeito é sempre maior do que à frente – aprox. na <strong>proporção 2:1</strong>.' },
+    { type: 'diagnostic', variant: 'success', title: 'A Regra de Distribuição do Foco', icon: 'mdi:lightbulb-outline', badge: 'Técnica Pro', html: 'Para um sujeito a 3m com uma 50mm a f/2.8: a zona nítida atrás do sujeito é sempre maior do que à frente - aprox. na <strong>proporção 2:1</strong>.' },
 ];
 
 const faqSchema: WithContext<FAQPage> = {

@@ -55,15 +55,15 @@ const howTo: PrivacyBlurLocaleContent['howTo'] = [
 const seo: PrivacyBlurLocaleContent['seo'] = [
     {
         type: 'summary',
-        title: 'Éditeur de Confidentialité : Pixéliser, Flouter et Masquer',
+        title: 'Éditeur de Confidentialité: Pixéliser, Flouter et Masquer',
         items: [
-            'Trois outils d\'édition : Pixeliser, Flouter, Masquage Solide',
+            'Trois outils d\'édition: Pixeliser, Flouter, Masquage Solide',
             'Détection automatique des visages par IA (TinyFaceDetector)',
             'Traitement 100 % local - vos photos ne quittent jamais le navigateur',
             'Sans filigrane, sans limites, complètement gratuit'
         ]
     },
-    { type: 'title', text: 'Confidentialité Numérique : Comment Protéger vos Données Visuelles', level: 2 },
+    { type: 'title', text: 'Confidentialité Numérique: Comment Protéger vos Données Visuelles', level: 2 },
     { type: 'paragraph', html: 'À l\'ère des réseaux sociaux, partager des photos sans contrôle peut exposer des données personnelles sensibles. Notre outil permet de masquer les informations critiques (visages, plaques d\'immatriculation, noms, adresses) avant de les mettre en ligne, garantissant que votre vie privée reste sous votre contrôle total.' },
 
     { type: 'stats', items: [
@@ -82,7 +82,7 @@ const seo: PrivacyBlurLocaleContent['seo'] = [
                 'Obfuscation irréversible maximale',
                 'Plus sûr contre la reconnaissance faciale',
                 'Visible, il est clair que quelque chose a été masqué',
-                'Idéal : visages sur photos publiques'
+                'Idéal: visages sur photos publiques'
             ]
         },
         {
@@ -93,7 +93,7 @@ const seo: PrivacyBlurLocaleContent['seo'] = [
                 'Aspect visuel plus élégant',
                 'Conserve une certaine cohérence des tons',
                 'Mathématiquement réversible (théoriquement)',
-                'Idéal : informations moins sensibles'
+                'Idéal: informations moins sensibles'
             ],
             highlight: true
         },
@@ -105,7 +105,7 @@ const seo: PrivacyBlurLocaleContent['seo'] = [
                 'Visible, masquage évident',
                 'Sécurité juridique/confidentialité maximale',
                 'Modifie la composition visuelle',
-                'Idéal : documents, données sensibles'
+                'Idéal: documents, données sensibles'
             ]
         }
     ], columns: 3 },
@@ -115,7 +115,7 @@ const seo: PrivacyBlurLocaleContent['seo'] = [
     { type: 'list', items: [
         '<strong>100 % Local :</strong> Le modèle d\'IA s\'exécute sur votre GPU/CPU, pas sur des serveurs distants.',
         '<strong>Sans Internet :</strong> Après le téléchargement initial, il fonctionne complètement hors ligne.',
-        '<strong>Confidentialité Garantie :</strong> Personne ne voit les visages : ni Google, ni OpenAI, ni nous.',
+        '<strong>Confidentialité Garantie :</strong> Personne ne voit les visages: ni Google, ni OpenAI, ni nous.',
         '<strong>Un Clic Automatique :</strong> Détecte les visages et vous permet de choisir de les masquer en un clic.'
     ], icon: 'mdi:check' },
 
@@ -134,7 +134,7 @@ const seo: PrivacyBlurLocaleContent['seo'] = [
 
     { type: 'proscons', items: [
         {
-            pro: 'Confidentialité totale : traitement 100 % local, ni serveurs, ni stockage',
+            pro: 'Confidentialité totale: traitement 100 % local, ni serveurs, ni stockage',
             con: 'Nécessite un navigateur moderne supportant Canvas et WebGL'
         },
         {
@@ -151,7 +151,7 @@ const seo: PrivacyBlurLocaleContent['seo'] = [
         }
     ], proTitle: 'Avantages', conTitle: 'Limitations' },
 
-    { type: 'diagnostic', variant: 'warning', title: 'Avertissement : Flouter n\'est pas 100 % Sûr', icon: 'mdi:alert', badge: 'Sécurité', html: 'Le flou gaussien est mathématiquement réversible via des algorithmes sophistiqués. Si l\'information est CRITIQUE (documents légaux, identité), utilisez <strong>Pixeliser ou Masquage Solide</strong>. Le flou est esthétiquement meilleur mais moins sûr.' },
+    { type: 'diagnostic', variant: 'warning', title: 'Avertissement: Flouter n\'est pas 100 % Sûr', icon: 'mdi:alert', badge: 'Sécurité', html: 'Le flou gaussien est mathématiquement réversible via des algorithmes sophistiqués. Si l\'information est CRITIQUE (documents légaux, identité), utilisez <strong>Pixeliser ou Masquage Solide</strong>. Le flou est esthétiquement meilleur mais moins sûr.' },
 
     { type: 'glossary', items: [
         {

@@ -10,126 +10,134 @@ const { ui } = Astro.props;
 ---
 
 <div class="pq-wrapper" id="pq-root" data-ui={JSON.stringify(ui)}>
-    <div
-        id="drop-zone"
-        class="pq-drop-zone pq-group"
-    >
-        <input type="file" id="file-input" class="pq-hidden" accept="image/webp, image/jpeg, image/png, image/tiff" />
+    <div class="pq-tool-card">
+        <div
+            id="drop-zone"
+            class="pq-drop-zone pq-group"
+        >
+            <input type="file" id="file-input" class="pq-hidden" accept="image/webp, image/jpeg, image/png, image/tiff" />
 
-        <div class="pq-drop-inner">
-            <div class="pq-upload-icon-wrap pq-group-icon">
-                <Icon name="mdi:cloud-upload" style="width:2.5rem;height:2.5rem" />
+            <div class="pq-drop-inner">
+                <div class="pq-upload-icon-wrap pq-group-icon">
+                    <Icon name="mdi:cloud-upload" style="width:2.5rem;height:2.5rem" />
+                </div>
+                <div>
+                    <h3 class="pq-drop-title">{ui.dropTitle}</h3>
+                    <p class="pq-drop-sub">{ui.dropSubtitle}</p>
+                </div>
             </div>
-            <div>
-                <h3 class="pq-drop-title">{ui.dropTitle}</h3>
-                <p class="pq-drop-sub">{ui.dropSubtitle}</p>
-            </div>
+
+            <div class="pq-drop-overlay"></div>
         </div>
 
-        <div class="pq-drop-overlay"></div>
-    </div>
-
-    <div id="results-area" class="pq-results pq-hidden">
-        <div class="pq-file-card">
-            <div class="pq-file-left">
-                <div class="pq-preview-wrap">
-                    <img id="preview-img" class="pq-preview-img" src="#" alt="Preview" />
-                </div>
-                <div class="pq-file-info">
-                    <h3 id="file-name" class="pq-file-name">nombre_archivo.jpg</h3>
-                    <div class="pq-file-meta">
-                        <span class="pq-meta-item">
-                            <Icon name="mdi:arrow-expand" style="width:1rem;height:1rem" />
-                            <span id="pixel-dims">0 x 0 px</span>
-                        </span>
-                        <span class="pq-meta-item">
-                            <Icon name="mdi:harddisk" style="width:1rem;height:1rem" />
-                            <span id="file-size">0 MB</span>
-                        </span>
-                        <span class="pq-meta-item">
-                            <Icon name="mdi:image-filter-hdr" style="width:1rem;height:1rem" />
-                            <span id="megapixels">0 MP</span>
-                        </span>
+        <div id="results-area" class="pq-results pq-hidden">
+            <div class="pq-file-card">
+                <div class="pq-file-left">
+                    <div class="pq-preview-wrap" id="preview-wrap">
+                        <img id="preview-img" class="pq-preview-img" src="#" alt="Preview" />
+                    </div>
+                    <div class="pq-file-info">
+                        <div class="pq-file-header">
+                            <p id="file-name" class="pq-file-name">nombre_archivo.jpg</p>
+                            <button type="button" id="replace-image-btn" class="pq-replace-btn">
+                                <Icon name="mdi:image-refresh" style="width:1rem;height:1rem" />
+                                <span>{ui.dropTitle}</span>
+                            </button>
+                        </div>
+                        <div class="pq-file-meta">
+                            <span class="pq-meta-item">
+                                <Icon name="mdi:arrow-expand" style="width:1rem;height:1rem" />
+                                <span id="pixel-dims">0 x 0 px</span>
+                            </span>
+                            <span class="pq-meta-item">
+                                <Icon name="mdi:harddisk" style="width:1rem;height:1rem" />
+                                <span id="file-size">0 MB</span>
+                            </span>
+                            <span class="pq-meta-item">
+                                <Icon name="mdi:image-filter-hdr" style="width:1rem;height:1rem" />
+                                <span id="megapixels">0 MP</span>
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="pq-main-grid">
-            <div class="pq-config-panel">
-                <label class="pq-config-label">{ui.dpiDensityLabel}</label>
+            <div class="pq-main-grid">
+                <div class="pq-config-panel">
+                    <label class="pq-config-label">{ui.dpiDensityLabel}</label>
 
-                <input
-                    type="range"
-                    id="dpi-slider"
-                    min="72"
-                    max="600"
-                    value="300"
-                    step="1"
-                    class="pq-slider"
-                />
-
-                <div class="pq-dpi-row">
                     <input
-                        type="number"
-                        id="dpi-input"
+                        type="range"
+                        id="dpi-slider"
+                        min="72"
+                        max="600"
                         value="300"
-                        class="pq-dpi-number"
+                        step="1"
+                        class="pq-slider"
                     />
-                    <span class="pq-dpi-label">{ui.dpiPointsLabel}</span>
+
+                    <div class="pq-dpi-row">
+                        <input
+                            type="number"
+                            id="dpi-input"
+                            value="300"
+                            class="pq-dpi-number"
+                        />
+                        <span class="pq-dpi-label">{ui.dpiPointsLabel}</span>
+                    </div>
+
+                    <div class="pq-presets">
+                        <button class="pq-preset-btn" data-val="72">{ui.dpiScreenLabel} (72)</button>
+                        <button class="pq-preset-btn" data-val="150">{ui.dpiNewspaperLabel} (150)</button>
+                        <button class="pq-preset-btn pq-preset-active" data-val="300">{ui.dpiPrintLabel} (300)</button>
+                        <button class="pq-preset-btn" data-val="600">{ui.dpiFineArtLabel} (600)</button>
+                    </div>
                 </div>
 
-                <div class="pq-presets">
-                    <button class="pq-preset-btn" data-val="72">{ui.dpiScreenLabel} (72)</button>
-                    <button class="pq-preset-btn" data-val="150">{ui.dpiNewspaperLabel} (150)</button>
-                    <button class="pq-preset-btn pq-preset-active" data-val="300">{ui.dpiPrintLabel} (300)</button>
-                    <button class="pq-preset-btn" data-val="600">{ui.dpiFineArtLabel} (600)</button>
+                <div class="pq-output-panel">
+                    <div class="pq-output-gradient">
+                        <div class="pq-output-blur-bg"></div>
+                        <h3 class="pq-output-subtitle">{ui.maxPrintTitle}</h3>
+
+                        <div class="pq-output-size">
+                            <span id="print-cm-w">0</span>
+                            <span class="pq-size-sep">x</span>
+                            <span id="print-cm-h">0</span>
+                            <span class="pq-size-unit">cm</span>
+                        </div>
+
+                        <div class="pq-output-inches">
+                            <span id="print-in-w">0</span>" x <span id="print-in-h">0</span>"
+                        </div>
+
+                        <div class="pq-quality-section">
+                            <span id="quality-badge" class="pq-quality-badge">
+                                <Icon name="mdi:check-decagram" style="width:1rem;height:1rem" />
+                                <span id="quality-text">{ui.qualityExcellent}</span>
+                            </span>
+                            <p id="quality-desc" class="pq-quality-desc">{ui.qualityExcellentDesc}</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="pq-output-panel">
-                <div class="pq-output-gradient">
-                    <div class="pq-output-blur-bg"></div>
-                    <h3 class="pq-output-subtitle">{ui.maxPrintTitle}</h3>
-
-                    <div class="pq-output-size">
-                        <span id="print-cm-w">0</span>
-                        <span class="pq-size-sep">x</span>
-                        <span id="print-cm-h">0</span>
-                        <span class="pq-size-unit">cm</span>
-                    </div>
-
-                    <div class="pq-output-inches">
-                        <span id="print-in-w">0</span>" x <span id="print-in-h">0</span>"
-                    </div>
-
-                    <div class="pq-quality-section">
-                        <span id="quality-badge" class="pq-quality-badge">
-                            <Icon name="mdi:check-decagram" style="width:1rem;height:1rem" />
-                            <span id="quality-text">{ui.qualityExcellent}</span>
-                        </span>
-                        <p id="quality-desc" class="pq-quality-desc">{ui.qualityExcellentDesc}</p>
-                    </div>
+            <div class="pq-formats-card">
+                <h4 class="pq-formats-title">
+                    <Icon name="mdi:ruler-square" style="width:1.2rem;height:1.2rem;color:#6366f1" />
+                    {ui.standardFormatsTitle}
+                </h4>
+                <div class="pq-formats-scroll">
+                    <table class="pq-formats-table">
+                        <thead>
+                            <tr>
+                                <th>{ui.formatColumn}</th>
+                                <th>{ui.measureColumn} (cm)</th>
+                                <th>{ui.supportColumn}</th>
+                            </tr>
+                        </thead>
+                        <tbody id="formats-table-body"></tbody>
+                    </table>
                 </div>
-            </div>
-        </div>
-
-        <div class="pq-formats-card">
-            <h4 class="pq-formats-title">
-                <Icon name="mdi:ruler-square" style="width:1.2rem;height:1.2rem;color:#6366f1" />
-                {ui.standardFormatsTitle}
-            </h4>
-            <div class="pq-formats-scroll">
-                <table class="pq-formats-table">
-                    <thead>
-                        <tr>
-                            <th>{ui.formatColumn}</th>
-                            <th>{ui.measureColumn} (cm)</th>
-                            <th>{ui.supportColumn}</th>
-                        </tr>
-                    </thead>
-                    <tbody id="formats-table-body"></tbody>
-                </table>
             </div>
         </div>
     </div>
@@ -150,10 +158,6 @@ const { ui } = Astro.props;
     ];
 
     function initPQCalc() {
-        console.log('DEBUG: initPQCalc called');
-        console.log('DEBUG: ui object:', ui);
-        console.log('DEBUG: ui.formatPostal:', ui.formatPostal);
-
         function getFormatName(format) {
             const keyMap = {
                 postal: 'formatPostal',
@@ -165,9 +169,7 @@ const { ui } = Astro.props;
                 plane: 'formatPlane'
             };
             const uiKey = keyMap[format.key];
-            const result = format.label + ' (' + (ui[uiKey] || format.key) + ')';
-            console.log('DEBUG: getFormatName for', format.key, '=', result, '(uiKey:', uiKey, ', ui[uiKey]:', ui[uiKey], ')');
-            return result;
+            return format.label + ' (' + (ui[uiKey] || format.key) + ')';
         }
 
         const dropZone = document.getElementById("drop-zone");
@@ -176,6 +178,8 @@ const { ui } = Astro.props;
         if (!dropZone || !fileInput || !resultsArea) return;
 
         const previewImg = document.getElementById("preview-img");
+        const previewWrap = document.getElementById("preview-wrap");
+        const replaceImageBtn = document.getElementById("replace-image-btn");
         const fileNameEl = document.getElementById("file-name");
         const pixelDimsEl = document.getElementById("pixel-dims");
         const fileSizeEl = document.getElementById("file-size");
@@ -212,6 +216,11 @@ const { ui } = Astro.props;
         });
 
         dropZone.addEventListener("click", function() { fileInput.click(); });
+        if (replaceImageBtn) {
+            replaceImageBtn.addEventListener("click", function() {
+                fileInput.click();
+            });
+        }
 
         fileInput.addEventListener("change", function() {
             if (fileInput.files && fileInput.files.length > 0) processFile(fileInput.files[0]);
@@ -251,6 +260,7 @@ const { ui } = Astro.props;
             resultsArea.classList.remove("pq-hidden");
             dropZone.classList.add("pq-hidden");
             if (previewImg) previewImg.src = src;
+            if (previewWrap) previewWrap.classList.toggle("pq-hidden", !src);
             if (fileNameEl) fileNameEl.textContent = file.name;
             if (pixelDimsEl) pixelDimsEl.textContent = currentWidth + " x " + currentHeight + " px";
             if (fileSizeEl) fileSizeEl.textContent = (file.size / (1024 * 1024)).toFixed(2) + " MB";
@@ -311,13 +321,11 @@ const { ui } = Astro.props;
         }
 
         function updateFormatsTable(cmW, cmH) {
-            console.log('DEBUG: updateFormatsTable called, ui.supportedText:', ui.supportedText);
             if (!formatsTableBody) return;
             formatsTableBody.innerHTML = "";
             const imgMin = Math.min(cmW, cmH);
             const imgMax = Math.max(cmW, cmH);
             PAPER_FORMATS.forEach(function(paper) {
-                console.log('DEBUG: Processing paper format:', paper.key);
                 const paperMin = Math.min(paper.w, paper.h);
                 const paperMax = Math.max(paper.w, paper.h);
                 const covers = imgMin >= paperMin - 0.1 && imgMax >= paperMax - 0.1;

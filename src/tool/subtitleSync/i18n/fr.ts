@@ -11,7 +11,7 @@ const ui: SubtitleSyncUI = {
     dropSubtitle: "ou cliquez pour parcourir",
     adjustTitle: "Ajuster le temps",
     offsetLabel: "Décalage (secondes)",
-    offsetHelp: "Utilisez des valeurs négatives pour avancer (ex : -1.5) et positives pour retarder.",
+    offsetHelp: "Utilisez des valeurs négatives pour avancer (ex: -1.5) et positives pour retarder.",
     linesStat: "Lignes",
     firstStat: "Premier sous-titre",
     lastStat: "Dernier sous-titre",
@@ -25,7 +25,7 @@ const ui: SubtitleSyncUI = {
 const faq: SubtitleSyncLocaleContent['faq'] = [
     {
         question: "Comment synchroniser mes sous-titres si l'audio est en avance ?",
-        answer: "Si l'audio apparaît avant le texte, vous devez retarder les sous-titres. Entrez une valeur positive dans la calculatrice (ex : 2.0 pour les retarder de 2 secondes).",
+        answer: "Si l'audio apparaît avant le texte, vous devez retarder les sous-titres. Entrez une valeur positive dans la calculatrice (ex: 2.0 pour les retarder de 2 secondes).",
     },
     {
         question: "Quels formats de fichiers cet outil accepte-t-il ?",
@@ -72,7 +72,7 @@ const seo: SubtitleSyncLocaleContent['seo'] = [
         ]
     },
     { type: 'title', text: 'Synchronisation Parfaite de Sous titres SRT', level: 2 },
-    { type: 'paragraph', html: 'Il n\'y a rien de plus frustrant que de voir des dialogues qui ne correspondent pas aux voix. Le décalage des sous-titres survient souvent à cause de différences entre les versions vidéo : variations de fréquence d\'images, coupures publicitaires, intros de production ou changements de compression. Avec cet outil, vous réglez le problème en quelques secondes.' },
+    { type: 'paragraph', html: 'Il n\'y a rien de plus frustrant que de voir des dialogues qui ne correspondent pas aux voix. Le décalage des sous-titres survient souvent à cause de différences entre les versions vidéo: variations de fréquence d\'images, coupures publicitaires, intros de production ou changements de compression. Avec cet outil, vous réglez le problème en quelques secondes.' },
 
     { type: 'stats', items: [
         { value: '100 %', label: 'Traitement Local', icon: 'mdi:shield' },
@@ -80,11 +80,11 @@ const seo: SubtitleSyncLocaleContent['seo'] = [
         { value: 'Illimité', label: 'Sans Limite de Fichier', icon: 'mdi:file-document' }
     ], columns: 3 },
 
-    { type: 'title', text: 'Avancer vs Retarder : Guide Pratique', level: 3 },
+    { type: 'title', text: 'Avancer vs Retarder: Guide Pratique', level: 3 },
     { type: 'paragraph', html: 'La première étape consiste à identifier correctement le type de décalage. Voici la logique :' },
     { type: 'list', items: [
-        '<strong>Retarder (Valeur Positive) :</strong> Quand le texte apparaît AVANT le son. Les sous-titres sont en avance. Exemple : +2.0 secondes.',
-        '<strong>Avancer (Valeur Négative) :</strong> Quand le texte apparaît APRÈS le son. Les sous-titres sont en retard. Exemple : -2.0 secondes.',
+        '<strong>Retarder (Valeur Positive) :</strong> Quand le texte apparaît AVANT le son. Les sous-titres sont en avance. Exemple: +2.0 secondes.',
+        '<strong>Avancer (Valeur Négative) :</strong> Quand le texte apparaît APRÈS le son. Les sous-titres sont en retard. Exemple: -2.0 secondes.',
         '<strong>Testez et Ajustez :</strong> Commencez par de petits incréments (0,5 s) et utilisez l\'aperçu pour valider.'
     ], icon: 'mdi:arrow-right' },
 
@@ -157,7 +157,7 @@ const seo: SubtitleSyncLocaleContent['seo'] = [
     { type: 'glossary', items: [
         {
             term: 'SRT (SubRip)',
-            definition: 'Format de sous-titres le plus universel : fichier texte avec numéros de séquence, temps et texte.'
+            definition: 'Format de sous-titres le plus universel: fichier texte avec numéros de séquence, temps et texte.'
         },
         {
             term: 'Offset (Décalage)',
@@ -177,9 +177,9 @@ const seo: SubtitleSyncLocaleContent['seo'] = [
         }
     ] },
 
-    { type: 'message', title: 'Édition Professionnelle avec Contrôle Total', ariaLabel: 'Informations techniques sur la synchronisation', html: 'Notre approche est simple mais puissante : un décalage unique, appliqué instantanément, traité à 100 % dans votre navigateur. Pas de cloud, pas de stockage, pas de suivi. Simplement importez, ajustez, téléchargez. Un contrôle total sur votre contenu.' },
+    { type: 'message', title: 'Édition Professionnelle avec Contrôle Total', ariaLabel: 'Informations techniques sur la synchronisation', html: 'Notre approche est simple mais puissante: un décalage unique, appliqué instantanément, traité à 100 % dans votre navigateur. Pas de cloud, pas de stockage, pas de suivi. Simplement importez, ajustez, téléchargez. Un contrôle total sur votre contenu.' },
 
-    { type: 'title', text: 'Conclusion : Le Cinéma Sans Interruptions', level: 3 },
+    { type: 'title', text: 'Conclusion: Le Cinéma Sans Interruptions', level: 3 },
     { type: 'paragraph', html: 'Une synchronisation parfaite des sous-titres est fondamentale pour une expérience audiovisuelle de qualité. Avec cet outil, vous transformez une expérience frustrante en une soirée cinéma parfaite.' }
 ];
 

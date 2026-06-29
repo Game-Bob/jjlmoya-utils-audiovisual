@@ -158,7 +158,7 @@ const seo: ImageCompressorLocaleContent['seo'] = [
     { type: 'glossary', items: [
         {
             term: '有损压缩',
-            definition: '删除人眼视为“噪声”的视觉数据。摄影的理想选择。JPEG、有损 WebP、HEIC 均属于有损压缩。'
+            definition: '删除人眼视为\"噪声\"的视觉数据。摄影的理想选择。JPEG、有损 WebP、HEIC 均属于有损压缩。'
         },
         {
             term: '无损压缩',

@@ -80,7 +80,7 @@ const seo: CollageMakerLocaleContent['seo'] = [
         '<strong>Balans:</strong> Visuell fördelning av vikt (ljusa vs mörka bilder, stora vs små).',
         '<strong>Visuellt flöde:</strong> Ögat bör röra sig naturligt genom kompositionen utan döda punkter.',
         '<strong>Kontrast:</strong> Variationer i färg, storlek och form som fångar uppmärksamheten.',
-        '<strong>Enhet:</strong> Tematisk koherens – bilderna måste \"tala tillsammans\" om samma berättelse.'
+        '<strong>Enhet:</strong> Tematisk koherens - bilderna måste \"tala tillsammans\" om samma berättelse.'
     ], icon: 'mdi:check' },
 
     { type: 'card', title: 'Smarta och adaptiva designer', html: 'Vårt system beräknar automatiskt den optimala rumsfördelningen baserat på antalet foton. 2 bilder = symmetriskt rutnät; 5 bilder = balanserad asymmetrisk fördelning. Varje rutnät är utformat för att maximera den visuella effekten.' },
@@ -129,7 +129,7 @@ const seo: CollageMakerLocaleContent['seo'] = [
 
     { type: 'proscons', items: [
         {
-            pro: 'Professionella fördefinierade designer – inga förkunskaper i komposition krävs',
+            pro: 'Professionella fördefinierade designer - inga förkunskaper i komposition krävs',
             con: 'Alternativen är begränsade till förutbestämda rutnät'
         },
         {
@@ -137,7 +137,7 @@ const seo: CollageMakerLocaleContent['seo'] = [
             con: 'Inte lika anpassningsbart som Photoshop'
         },
         {
-            pro: '100% lokal bearbetning – integritet, snabbhet, inga gränser',
+            pro: '100% lokal bearbetning - integritet, snabbhet, inga gränser',
             con: 'Kräver en modern webbläsare'
         },
         {

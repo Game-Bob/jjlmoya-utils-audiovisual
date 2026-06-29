@@ -80,7 +80,7 @@ const seo: CollageMakerLocaleContent['seo'] = [
         '<strong>平衡：</strong> 视觉重量的分布（明亮与阴暗图像、大图与小图）。',
         '<strong>视觉流：</strong> 视线应自然地穿过构图，没有死角。',
         '<strong>对比：</strong> 颜色、大小和形状的变化，以吸引注意力。',
-        '<strong>统一：</strong> 主题连贯性——图像必须“共同讲述”同一个故事。'
+        '<strong>统一：</strong> 主题连贯性，图像必须\"共同讲述\"同一个故事。'
     ], icon: 'mdi:check' },
 
     { type: 'card', title: '智能自适应设计', html: '我们的系统根据照片数量自动计算最佳空间分布。2 张图像 = 对称网格；5 张图像 = 平衡的非对称分布。每个网格都旨在最大化视觉冲击力。' },

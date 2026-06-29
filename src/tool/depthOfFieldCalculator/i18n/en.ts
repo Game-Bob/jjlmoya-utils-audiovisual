@@ -10,7 +10,7 @@ const ui: DepthOfFieldUI = {
     title: 'Depth of Field Calculator',
     paramsTitle: 'Parameters',
     sensorLabel: 'Camera Sensor',
-    moreLabel: 'More sensors…',
+    moreLabel: 'More sensors...',
     apertureLabel: 'Aperture',
     focalLabel: 'Focal Length',
     distanceLabel: 'Subject Distance',
@@ -40,7 +40,7 @@ const faq: DepthOfFieldLocaleContent['faq'] = [
     },
     {
         question: 'Why does a larger aperture (smaller f-number) reduce DoF?',
-        answer: 'A wider aperture collects light over a larger area of the lens, which increases the size of the circle of confusion for out-of-focus points. This narrows the zone of acceptable sharpness — the depth of field.',
+        answer: 'A wider aperture collects light over a larger area of the lens, which increases the size of the circle of confusion for out-of-focus points. This narrows the zone of acceptable sharpness - the depth of field.',
     },
     {
         question: 'How does sensor size affect depth of field?',
@@ -55,11 +55,11 @@ const howTo: DepthOfFieldLocaleContent['howTo'] = [
     },
     {
         name: 'Set aperture and focal length',
-        text: 'Drag the aperture slider to choose an f-stop in 1/3-stop increments. Drag the focal length slider — it uses a logarithmic scale so wide-angle changes are more granular.',
+        text: 'Drag the aperture slider to choose an f-stop in 1/3-stop increments. Drag the focal length slider - it uses a logarithmic scale so wide-angle changes are more granular.',
     },
     {
         name: 'Set the subject distance',
-        text: 'Drag the subject distance slider to the distance between your camera and the main subject. Toggle between metres and feet as needed — your last choice is remembered.',
+        text: 'Drag the subject distance slider to the distance between your camera and the main subject. Toggle between metres and feet as needed - your last choice is remembered.',
     },
     {
         name: 'Read the results',
@@ -80,7 +80,7 @@ const seo: DepthOfFieldLocaleContent['seo'] = [
 
     { type: 'title', text: 'The Hyperfocal Distance: Maximum Sharpness', level: 3 },
     { type: 'paragraph', html: 'When you focus at the <strong>hyperfocal distance</strong>, everything from half that distance to infinity appears acceptably sharp. Landscape photographers use this technique to ensure both a foreground rock and distant mountains are in focus simultaneously.' },
-    { type: 'tip', title: 'Practical tip', html: 'For street photography, set your focus to the hyperfocal distance and shoot without looking through the viewfinder. With a 35mm lens on APS-C at f/8, the hyperfocal distance is roughly <strong>4 metres</strong> — everything from 2m to infinity will be sharp.' },
+    { type: 'tip', title: 'Practical tip', html: 'For street photography, set your focus to the hyperfocal distance and shoot without looking through the viewfinder. With a 35mm lens on APS-C at f/8, the hyperfocal distance is roughly <strong>4 metres</strong> - everything from 2m to infinity will be sharp.' },
 
     { type: 'title', text: 'Sensor Size and the Circle of Confusion', level: 3 },
     { type: 'paragraph', html: 'The <strong>circle of confusion (CoC)</strong> is the threshold that defines "acceptable sharpness" for a given sensor format. A Full Frame sensor has a CoC of 0.030mm; a smartphone sensor uses ~0.006mm. Smaller CoC values mean stricter sharpness criteria and, consequently, shallower perceived depth of field.' },
@@ -91,8 +91,8 @@ const seo: DepthOfFieldLocaleContent['seo'] = [
     ]},
 
     { type: 'title', text: 'DoF in Cinema: Focal Length vs. Sensor', level: 3 },
-    { type: 'paragraph', html: 'Cinematographers shooting on Super 35 (close to APS-C) frequently use longer focal lengths to compress perspective, which also narrows DoF and creates the characteristic "cinematic look". The combination of a fast prime (f/1.4–f/2.8) and a 85mm+ focal length at portrait distances is the classic recipe.' },
-    { type: 'diagnostic', variant: 'success', title: 'The Focus Distribution Rule', icon: 'mdi:lightbulb-outline', badge: 'Pro Technique', html: 'For a subject at 3 metres with a 50mm lens at f/2.8 on Full Frame: near limit ≈ 2.73m, far limit ≈ 3.33m, total DoF ≈ 60cm. The back zone is always larger than the front zone — roughly <strong>2:1 ratio</strong> for most real-world distances.' },
+    { type: 'paragraph', html: 'Cinematographers shooting on Super 35 (close to APS-C) frequently use longer focal lengths to compress perspective, which also narrows DoF and creates the characteristic "cinematic look". The combination of a fast prime (f/1.4-f/2.8) and a 85mm+ focal length at portrait distances is the classic recipe.' },
+    { type: 'diagnostic', variant: 'success', title: 'The Focus Distribution Rule', icon: 'mdi:lightbulb-outline', badge: 'Pro Technique', html: 'For a subject at 3 metres with a 50mm lens at f/2.8 on Full Frame: near limit ≈ 2.73m, far limit ≈ 3.33m, total DoF ≈ 60cm. The back zone is always larger than the front zone - roughly <strong>2:1 ratio</strong> for most real-world distances.' },
 ];
 
 const faqSchema: WithContext<FAQPage> = {

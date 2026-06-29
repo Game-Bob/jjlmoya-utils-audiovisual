@@ -4,7 +4,7 @@ import type { PrivacyBlurUI, PrivacyBlurLocaleContent } from '../index';
 
 const slug = 'online-privatsphaere-editor-gesichter-verpixeln-unscharf-machen';
 const title = 'Online Privatsphäre Editor: Gesichter in Fotos verpixeln und verbergen';
-const description = 'Schützen Sie Ihre Identität, indem Sie sensible Bereiche Ihrer Fotos zensieren. Verpixeln Sie Gesichter, machen Sie Dokumente unscharf oder decken Sie vertrauliche Informationen zu – 100 % lokal.';
+const description = 'Schützen Sie Ihre Identität, indem Sie sensible Bereiche Ihrer Fotos zensieren. Verpixeln Sie Gesichter, machen Sie Dokumente unscharf oder decken Sie vertrauliche Informationen zu - 100 % lokal.';
 
 const ui: PrivacyBlurUI = {
     toolPixel: "Verpixeln",
@@ -59,7 +59,7 @@ const seo: PrivacyBlurLocaleContent['seo'] = [
         items: [
             'Drei Bearbeitungswerkzeuge: Verpixeln, Unschärfe, Solide Füllung',
             'Automatische Gesichtserkennung mit KI (TinyFaceDetector)',
-            '100 % lokale Verarbeitung – Ihre Fotos verlassen nie den Browser',
+            '100 % lokale Verarbeitung - Ihre Fotos verlassen nie den Browser',
             'Keine Wasserzeichen, keine Limits, völlig kostenlos'
         ]
     },
@@ -87,7 +87,7 @@ const seo: PrivacyBlurLocaleContent['seo'] = [
         },
         {
             title: 'Unschärfe (Blur)',
-            description: 'Gaußscher Weichzeichner – natürlicheres Aussehen',
+            description: 'Gaußscher Weichzeichner - natürlicheres Aussehen',
             icon: 'mdi:blur-off',
             points: [
                 'Eleganteres visuelles Erscheinungsbild',
@@ -99,7 +99,7 @@ const seo: PrivacyBlurLocaleContent['seo'] = [
         },
         {
             title: 'Solide Füllung',
-            description: 'Undurchsichtiger Farbblock – maximale Privatsphäre',
+            description: 'Undurchsichtiger Farbblock - maximale Privatsphäre',
             icon: 'mdi:rectangle',
             points: [
                 'Deutliches, offensichtliches Verbergen',
@@ -139,7 +139,7 @@ const seo: PrivacyBlurLocaleContent['seo'] = [
         },
         {
             pro: 'Automatische Gesichtserkennung spart Zeit bei der manuellen Arbeit',
-            con: 'KI ist nicht perfekt – Profilansichten oder Teilgesichter werden evtl. nicht erkannt'
+            con: 'KI ist nicht perfekt - Profilansichten oder Teilgesichter werden evtl. nicht erkannt'
         },
         {
             pro: 'Drei Methoden erlauben Wahl zwischen Sicherheit und Ästhetik',

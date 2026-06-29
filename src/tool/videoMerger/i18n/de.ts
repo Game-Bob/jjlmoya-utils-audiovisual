@@ -75,7 +75,7 @@ const seo: VideoMergerLocaleContent['seo'] = [
     { type: 'paragraph', html: 'Fragen Sie sich, <strong>wie man zwei Videos zu einem zusammenfügt</strong>, ohne Komplikationen? Sie müssen keine schweren Programme oder kostenpflichtige Anwendungen mehr herunterladen. Unser Tool zum <strong>kostenlosen Online-Zusammenfügen von Videos</strong> ermöglicht es Ihnen, in Sekundenschnelle alle benötigten Clips zu verbinden. Da es zu 100% lokal funktioniert, müssen Sie Ihre Dateien auf keinen Server hochladen, was absolute Privatsphäre garantiert und es Ihnen ermöglicht, <strong>große Videos ohne Wartezeiten beim Hochladen zusammenzufügen</strong>.' },
     
     { type: 'title', text: 'Videos ohne Wasserzeichen verbinden', level: 3 },
-    { type: 'paragraph', html: 'Einer der größten Nachteile anderer Anwendungen ist, dass sie Ihre Inhalte ruinieren. Mit uns können Sie <strong>Videos online ohne Wasserzeichen verbinden</strong>. Die heruntergeladene Datei wird genau Ihre Kreation sein – sauber, professionell und bereit zum Teilen auf YouTube, Instagram, TikTok oder für den persönlichen Gebrauch.' },
+    { type: 'paragraph', html: 'Einer der größten Nachteile anderer Anwendungen ist, dass sie Ihre Inhalte ruinieren. Mit uns können Sie <strong>Videos online ohne Wasserzeichen verbinden</strong>. Die heruntergeladene Datei wird genau Ihre Kreation sein - sauber, professionell und bereit zum Teilen auf YouTube, Instagram, TikTok oder für den persönlichen Gebrauch.' },
 
     { type: 'stats', items: [
         { value: '100%', label: 'Privat und Lokal', icon: 'mdi:shield-check' },

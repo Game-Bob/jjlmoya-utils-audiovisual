@@ -55,7 +55,7 @@ const howTo: ImageCompressorLocaleContent['howTo'] = [
     },
     {
         name: "Ajuster la qualité",
-        text: "Utilisez le curseur pour trouver l'équilibre parfait entre la taille du fichier et la qualité visuelle (recommandé : 75-85 %).",
+        text: "Utilisez le curseur pour trouver l'équilibre parfait entre la taille du fichier et la qualité visuelle (recommandé: 75-85 %).",
     },
     {
         name: "Redimensionner (optionnel)",
@@ -78,7 +78,7 @@ const seo: ImageCompressorLocaleContent['seo'] = [
             'Améliorez les Core Web Vitals et le positionnement SEO'
         ]
     },
-    { type: 'title', text: 'Optimisation des Images : Vitesse Web et Core Web Vitals', level: 2 },
+    { type: 'title', text: 'Optimisation des Images: Vitesse Web et Core Web Vitals', level: 2 },
     { type: 'paragraph', html: 'À l\'ère de l\'immédiateté numérique, un site lent perd des utilisateurs. Les images non optimisées représentent 60 à 70 % du poids total d\'une page web. Les optimiser est la première étape pour améliorer vos métriques Google (LCP, CLS) et votre positionnement dans les résultats de recherche.' },
 
     { type: 'stats', items: [
@@ -134,7 +134,7 @@ const seo: ImageCompressorLocaleContent['seo'] = [
 
     { type: 'proscons', items: [
         {
-            pro: 'Confidentialité totale : traitement 100 % local, sans serveurs cloud',
+            pro: 'Confidentialité totale: traitement 100 % local, sans serveurs cloud',
             con: 'Nécessite un navigateur supportant l\'API Canvas (c\'est universel)'
         },
         {
@@ -146,12 +146,12 @@ const seo: ImageCompressorLocaleContent['seo'] = [
             con: 'Les images très volumineuses (>50 Mo) peuvent nécessiter un délai'
         },
         {
-            pro: 'Redimensionnement optionnel : réduit la résolution en plus de la compression',
+            pro: 'Redimensionnement optionnel: réduit la résolution en plus de la compression',
             con: 'Le redimensionnement entraîne une perte d\'information - mieux vaut optimiser à la source'
         }
     ], proTitle: 'Avantages', conTitle: 'Limitations' },
 
-    { type: 'diagnostic', variant: 'warning', title: 'Attention : Une Compression Excessive Dégrade', icon: 'mdi:alert', badge: 'Qualité', html: 'Maintenez une qualité > 75 % pour la photographie et > 85 % pour le contenu éditorial. En dessous, les artefacts de compression (taches, bandes) deviennent visibles. Une image de belle apparence en vignette peut être hideuse en grand.' },
+    { type: 'diagnostic', variant: 'warning', title: 'Attention: Une Compression Excessive Dégrade', icon: 'mdi:alert', badge: 'Qualité', html: 'Maintenez une qualité > 75 % pour la photographie et > 85 % pour le contenu éditorial. En dessous, les artefacts de compression (taches, bandes) deviennent visibles. Une image de belle apparence en vignette peut être hideuse en grand.' },
 
     { type: 'glossary', items: [
         {
@@ -164,7 +164,7 @@ const seo: ImageCompressorLocaleContent['seo'] = [
         },
         {
             term: 'Core Web Vitals (Google)',
-            definition: 'Indicateurs d\'expérience utilisateur : LCP (vitesse de chargement), FID (latence d\'interaction), CLS (stabilité visuelle). Affectent le SEO.'
+            definition: 'Indicateurs d\'expérience utilisateur: LCP (vitesse de chargement), FID (latence d\'interaction), CLS (stabilité visuelle). Affectent le SEO.'
         },
         {
             term: 'WebP',
@@ -172,11 +172,11 @@ const seo: ImageCompressorLocaleContent['seo'] = [
         },
         {
             term: 'Artefacts de Compression',
-            definition: 'Défauts visuels causés par une compression excessive : taches, bandes de couleur, bords flous.'
+            definition: 'Défauts visuels causés par une compression excessive: taches, bandes de couleur, bords flous.'
         }
     ] },
 
-    { type: 'message', title: 'Optimisation Web Professionnelle', ariaLabel: 'Informations sur l\'optimisation d\'images pour le SEO', html: 'Ce n\'est pas de la vanité technique : compresser les images est un investissement direct dans l\'expérience utilisateur et le classement Google. Chaque kilo-octet compte sur mobile. Notre outil transforme ce qui nécessitait auparavant un logiciel professionnel ($$$) en un processus gratuit en 3 clics.' },
+    { type: 'message', title: 'Optimisation Web Professionnelle', ariaLabel: 'Informations sur l\'optimisation d\'images pour le SEO', html: 'Ce n\'est pas de la vanité technique: compresser les images est un investissement direct dans l\'expérience utilisateur et le classement Google. Chaque kilo-octet compte sur mobile. Notre outil transforme ce qui nécessitait auparavant un logiciel professionnel ($$$) en un processus gratuit en 3 clics.' },
 
     { type: 'title', text: 'Prêt pour le Web Moderne', level: 3 },
     { type: 'paragraph', html: 'Utilisez la compression intelligente et le format WebP pour que votre présence en ligne soit rapide, responsive et compétitive dans les recherches.' }

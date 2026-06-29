@@ -67,7 +67,7 @@ const seo: SubtitleSyncLocaleContent['seo'] = [
         items: [
             'Sofortige Korrektur von Ton-Untertitel-Versätzen',
             'Unterstützt Standard-SRT-Dateien (SubRip)',
-            '100 % lokale Verarbeitung – maximale Privatsphäre',
+            '100 % lokale Verarbeitung - maximale Privatsphäre',
             'Keine Installation, kein Abonnement, völlig kostenlos'
         ]
     },

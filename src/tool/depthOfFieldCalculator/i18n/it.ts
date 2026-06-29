@@ -10,7 +10,7 @@ const ui: DepthOfFieldUI = {
     title: 'Profondità di Campo',
     paramsTitle: 'Parametri',
     sensorLabel: 'Sensore Fotocamera',
-    moreLabel: 'Altri sensori…',
+    moreLabel: 'Altri sensori...',
     apertureLabel: 'Apertura',
     focalLabel: 'Lunghezza Focale',
     distanceLabel: 'Distanza Soggetto',
@@ -92,7 +92,7 @@ const seo: DepthOfFieldLocaleContent['seo'] = [
 
     { type: 'title', text: 'DoF nel cinema: Focale vs Sensore', level: 3 },
     { type: 'paragraph', html: 'Riprendere in Super 35 (simile ad APS-C) spesso richiede focali più lunghe per comprimere la prospettiva, creando il classico "look cinematografico". Un 85mm luminoso è ideale per i ritratti.' },
-    { type: 'diagnostic', variant: 'success', title: 'La regola di distribuzione del fuoco', icon: 'mdi:lightbulb-outline', badge: 'Tecnica Pro', html: 'Per un soggetto a 3m con un 50mm a f/2.8 : la zona nitida dietro il soggetto è sempre maggiore di quella davanti, con un <strong>rapporto di circa 2:1</strong>.' },
+    { type: 'diagnostic', variant: 'success', title: 'La regola di distribuzione del fuoco', icon: 'mdi:lightbulb-outline', badge: 'Tecnica Pro', html: 'Per un soggetto a 3m con un 50mm a f/2.8: la zona nitida dietro il soggetto è sempre maggiore di quella davanti, con un <strong>rapporto di circa 2:1</strong>.' },
 ];
 
 const faqSchema: WithContext<FAQPage> = {

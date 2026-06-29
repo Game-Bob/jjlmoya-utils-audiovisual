@@ -155,7 +155,7 @@ export const content: CategoryLocaleContent = {
         },
         {
           term: 'FPS (Images par seconde)',
-          definition: 'Nombre d\'images lues chaque seconde. Valeurs communes : 24 fps (cinéma), 25 fps (PAL), 30 fps (NTSC), 60 fps (vidéo fluide).'
+          definition: 'Nombre d\'images lues chaque seconde. Valeurs communes: 24 fps (cinéma), 25 fps (PAL), 30 fps (NTSC), 60 fps (vidéo fluide).'
         },
         {
           term: 'DPI (Points par pouce)',

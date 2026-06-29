@@ -57,9 +57,9 @@ const seo: ChromaticLensLocaleContent['seo'] = [
         title: 'Intelligente Extraktion von Farbpaletten',
         items: [
             'Professioneller Median-Cut-Algorithmus zur Farbanalyse',
-            'Extraktion von 3–12 dominanten Farben aus jedem Bild',
+            'Extraktion von 3-12 dominanten Farben aus jedem Bild',
             'HEX-Codes direkt in die Zwischenablage kopierbar',
-            '100% lokale Verarbeitung – ideal für Kreative'
+            '100% lokale Verarbeitung - ideal für Kreative'
         ]
     },
     { type: 'title', text: 'Farbetraktion: Wissenschaft und Design', level: 2 },
@@ -138,15 +138,15 @@ const seo: ChromaticLensLocaleContent['seo'] = [
 
     { type: 'proscons', items: [
         {
-            pro: 'Mathematische Präzision bei der Extraktion – keine ungefähre visuelle Auswahl',
+            pro: 'Mathematische Präzision bei der Extraktion - keine ungefähre visuelle Auswahl',
             con: 'Kaum sichtbare Farben können enthalten sein, wenn sie viele Pixel haben'
         },
         {
-            pro: 'Sofortiges Kopieren in die Zwischenablage – perfekte Integration in den Workflow',
+            pro: 'Sofortiges Kopieren in die Zwischenablage - perfekte Integration in den Workflow',
             con: 'Benötigt einen modernen Browser, der mit der Canvas-API kompatibel ist'
         },
         {
-            pro: 'Vollständige Privatsphäre – 100% lokale Analyse ohne Datenübermittlung',
+            pro: 'Vollständige Privatsphäre - 100% lokale Analyse ohne Datenübermittlung',
             con: 'Kein Verlauf früherer Analysen gespeichert'
         },
         {
@@ -164,7 +164,7 @@ const seo: ChromaticLensLocaleContent['seo'] = [
         },
         {
             term: 'RGB-Farbraum',
-            definition: 'Farbmodell basierend auf Rot, Grün und Blau. Jede Farbe wird als Kombination dieser drei Werte (0–255) dargestellt. Standard für Bildschirme und Web.'
+            definition: 'Farbmodell basierend auf Rot, Grün und Blau. Jede Farbe wird als Kombination dieser drei Werte (0-255) dargestellt. Standard für Bildschirme und Web.'
         },
         {
           term: 'HEX-Code',

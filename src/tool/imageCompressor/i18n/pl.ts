@@ -156,7 +156,7 @@ const seo: ImageCompressorLocaleContent['seo'] = [
     { type: 'glossary', items: [
         {
             term: 'Kompresja Stratna (Lossy)',
-            definition: 'Usuwa dane wizualne, które ludzkie oko postrzega jako „szum”. Idealna dla fotografii. JPEG, stratny WebP, HEIC są kompresjami stratnymi.'
+            definition: 'Usuwa dane wizualne, które ludzkie oko postrzega jako \"szum\". Idealna dla fotografii. JPEG, stratny WebP, HEIC są kompresjami stratnymi.'
         },
         {
             term: 'Kompresja Bezstratna (Lossless)',

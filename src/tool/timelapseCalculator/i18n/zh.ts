@@ -35,7 +35,7 @@ const faq: TimelapseLocaleContent['faq'] = [
         answer: "标准视频通常为每秒 24 或 30 帧 (fps)。对于一部 24fps 的一分钟视频，您恰好需要 1440 张照片（60 秒 * 24 张/秒）。",
     },
     {
-        question: "什么是“闪烁”(Flicker) 以及如何避免？",
+        question: "什么是\"闪烁\"(Flicker) 以及如何避免？",
         answer: "这是由于照片之间微小的曝光差异导致的令人不快的闪烁感。要避免它，请始终使用手动模式 (M)、固定白平衡，并优先使用带有手动光圈环的镜头。",
     },
     {
@@ -80,18 +80,18 @@ const seo: TimelapseLocaleContent['seo'] = [
     { type: 'tip', title: '天文拍摄注記', html: '拍摄间隔通常受限于捕捉光线所需的曝光时间（500 法则） + 1 或 2 秒的存储写入缓冲时间。' },
 
     { type: 'title', text: '180° 快门法则（动态模糊）', level: 3 },
-    { type: 'paragraph', html: '延时摄影中一个常见的错误是视频看起来“顿挫”或有频闪感。为了获得流畅的电影感，您需要 <strong>动态模糊 (Motion Blur)</strong>。' },
+    { type: 'paragraph', html: '延时摄影中一个常见的错误是视频看起来\"顿挫\"或有频闪感。为了获得流畅的电影感，您需要 <strong>动态模糊 (Motion Blur)</strong>。' },
     { type: 'card', title: '核心法则', icon: 'mdi:information', html: '您的快门速度应该是拍摄间隔的一半。<br /><br /> <em>例如：</em>如果您每隔 <strong>4 秒</strong> 拍摄一次，您的曝光时间应为 <strong>2 秒</strong>。' },
 
     { type: 'title', text: '闪烁 (Flicker) 与手动光圈', level: 3 },
-    { type: 'paragraph', html: '“闪烁”是由于每次拍摄之间光圈叶片收缩的微小差异导致的图像亮度抖动。' },
+    { type: 'paragraph', html: '\"闪烁\"是由于每次拍摄之间光圈叶片收缩的微小差异导致的图像亮度抖动。' },
     { type: 'list', items: [
         '<strong>镜头微松法 (Lens Twist):</strong> 在单反相机上稍微拧松镜头以断开电子触点，使光圈机械固定。',
         '<strong>全手动设置:</strong> ISO、白平衡和对焦必须固定。切勿使用自动模式。',
         '<strong>通过 RAW 拍摄:</strong> 这对于在后期修正曝光和色彩而又不破坏画质至关重要。'
     ]},
 
-    { type: 'diagnostic', variant: 'success', title: '进阶技术：日夜转换 (The "Holy Grail")', icon: 'mdi:crown', badge: '专家技法', html: '“圣杯拍摄”是指昼夜之间（或反之）的平滑过渡。这是难度最高的技术挑战之一。' },
+    { type: 'diagnostic', variant: 'success', title: '进阶技术：日夜转换 (The "Holy Grail")', icon: 'mdi:crown', badge: '专家技法', html: '\"圣杯拍摄\"是指昼夜之间（或反之）的平滑过渡。这是难度最高的技术挑战之一。' },
     
     { type: 'stats', columns: 3, items: [
         { label: 'Bulb Ramping', value: '渐变曝光', icon: 'mdi:brightness-6' },

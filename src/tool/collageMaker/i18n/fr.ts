@@ -65,7 +65,7 @@ const seo: CollageMakerLocaleContent['seo'] = [
             'Traitement instantané sans limites d\'utilisation'
         ]
     },
-    { type: 'title', text: 'Conception de Collages : Des Compositions qui Racontent des Histoires', level: 2 },
+    { type: 'title', text: 'Conception de Collages: Des Compositions qui Racontent des Histoires', level: 2 },
     { type: 'paragraph', html: 'Un collage est plus qu\'un mélange de photos ; c\'est un récit visuel qui communique une émotion et un contexte. Notre outil permet de créer des compositions géométriques professionnelles pour Instagram, Facebook, Pinterest ou des projets personnels sans avoir besoin de Photoshop ou de logiciels coûteux.' },
 
     { type: 'stats', items: [
@@ -74,7 +74,7 @@ const seo: CollageMakerLocaleContent['seo'] = [
         { value: 'Instantané', label: 'Génération', icon: 'mdi:lightning-bolt' }
     ], columns: 3 },
 
-    { type: 'title', text: 'Composition Visuelle : Principes de Design', level: 3 },
+    { type: 'title', text: 'Composition Visuelle: Principes de Design', level: 3 },
     { type: 'paragraph', html: 'La composition est l\'art d\'organiser les éléments visuels de manière à guider l\'œil du spectateur et à communiquer une intention. Un bon collage équilibre :' },
     { type: 'list', items: [
         '<strong>Équilibre :</strong> Distribution visuelle du poids (images claires vs sombres, grandes vs petites).',
@@ -119,7 +119,7 @@ const seo: CollageMakerLocaleContent['seo'] = [
         }
     ], columns: 3 },
 
-    { type: 'title', text: 'Personnalisation : Bordures et Couleurs', level: 3 },
+    { type: 'title', text: 'Personnalisation: Bordures et Couleurs', level: 3 },
     { type: 'table', headers: ['Élément', 'Effet Visuel', 'Recommandation'], rows: [
         ['Bordure Blanche', 'Propre, minimaliste, moderne', 'Réseaux sociaux, portfolios numériques'],
         ['Bordure Noire', 'Dramatique, professionnel, artistique', 'Photographie d\'art, mode, luxe'],
@@ -155,7 +155,7 @@ const seo: CollageMakerLocaleContent['seo'] = [
         },
         {
             term: 'Règle des Tiers',
-            definition: 'Principe de composition : divise l\'image en 9 zones égales (3x3). Positionnez les sujets sur les lignes d\'intersection pour un impact maximal.'
+            definition: 'Principe de composition: divise l\'image en 9 zones égales (3x3). Positionnez les sujets sur les lignes d\'intersection pour un impact maximal.'
         },
         {
             term: 'Grille Symétrique',

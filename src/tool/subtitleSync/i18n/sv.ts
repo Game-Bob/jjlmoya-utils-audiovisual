@@ -67,7 +67,7 @@ const seo: SubtitleSyncLocaleContent['seo'] = [
         items: [
             'Omedelbar korrigering av osynk mellan ljud och undertext',
             'Stöd för SRT-standardfiler (SubRip)',
-            '100 % lokal bearbetning – maximal integritet',
+            '100 % lokal bearbetning - maximal integritet',
             'Ingen installation, inget abonnemang, helt gratis'
         ]
     },
@@ -137,15 +137,15 @@ const seo: SubtitleSyncLocaleContent['seo'] = [
 
     { type: 'proscons', items: [
         {
-            pro: 'Extrem hastighet – bearbetar stora filer på millisekunder',
+            pro: 'Extrem hastighet - bearbetar stora filer på millisekunder',
             con: 'Justerar endast fast förskjutning, inte progressiva'
         },
         {
-            pro: 'Total integritet – innehållet lämnar aldrig webbläsaren',
+            pro: 'Total integritet - innehållet lämnar aldrig webbläsaren',
             con: 'Kräver modern webbläsare med JavaScript aktiverat'
         },
         {
-            pro: 'Universellt format – fungerar med alla standard SRT',
+            pro: 'Universellt format - fungerar med alla standard SRT',
             con: 'Stöder inte andra format (ASS, VTT, SCC, etc.)'
         },
         {

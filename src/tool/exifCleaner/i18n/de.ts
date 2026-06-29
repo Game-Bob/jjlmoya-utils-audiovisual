@@ -73,15 +73,15 @@ const seo: ExifCleanerLocaleContent['seo'] = [
         items: [
             'GPS-Koordinaten und Standort sofort aus Ihren Fotos entfernen',
             'Kameramodell, Seriennummer und technische Informationen löschen',
-            '%100 % browserbasierte Verarbeitung – Ihre Bilder verlassen niemals Ihr Gerät',
-            'Behält die visuelle Qualität bei – nur versteckte Daten werden entfernt'
+            '%100 % browserbasierte Verarbeitung - Ihre Bilder verlassen niemals Ihr Gerät',
+            'Behält die visuelle Qualität bei - nur versteckte Daten werden entfernt'
         ]
     },
     { type: 'title', text: 'Vollständiger Leitfaden zum Datenschutz und zu EXIF Metadaten in der digitalen Fotografie', level: 2 },
     { type: 'paragraph', html: 'Haben Sie sich jemals gefragt, wie viele persönliche Informationen Sie teilen, wenn Sie ein Foto in soziale Medien hochladen? EXIF-Metadaten sind wie ein <strong>unsichtbarer Fingerabdruck</strong>, der alles verraten kann, von Ihrem genauen Wohnort bis hin zum Preis Ihrer Fotoausrüstung. Dieser Leitfaden erklärt, wie Sie Ihre Privatsphäre effektiv schützen.' },
 
     { type: 'stats', items: [
-        { value: '100 %', label: 'Privatsphäre – Lokale Verarbeitung', icon: 'mdi:shield-check' },
+        { value: '100 %', label: 'Privatsphäre - Lokale Verarbeitung', icon: 'mdi:shield-check' },
         { value: '0 %', label: 'Auf Servern gespeicherte Daten', icon: 'mdi:database' },
         { value: 'Sofort', label: 'Metadaten-Entfernung', icon: 'mdi:lightning-bolt' }
     ], columns: 3 },
@@ -163,26 +163,26 @@ const seo: ExifCleanerLocaleContent['seo'] = [
 
     { type: 'proscons', items: [
         {
-            pro: 'Absoluter Datenschutz – 100 % browserbasierte Verarbeitung',
+            pro: 'Absoluter Datenschutz - 100 % browserbasierte Verarbeitung',
             con: 'Erfordert einen modernen Browser mit JavaScript-Unterstützung'
         },
         {
-            pro: 'Sofort – Reinigung eines Fotos dauert weniger als 1 Sekunde',
+            pro: 'Sofort - Reinigung eines Fotos dauert weniger als 1 Sekunde',
             con: 'Verarbeitung großer Fotos kann auf älteren Geräten langsam sein'
         },
         {
-            pro: 'Null Qualitätsverlust – entfernt nur technische Daten, keine Pixel',
+            pro: 'Null Qualitätsverlust - entfernt nur technische Daten, keine Pixel',
             con: 'Bearbeitet das Bild nicht (Zuschnitte, Rotationen usw.)'
         },
         {
-            pro: 'Völlig kostenlos ohne Limits – unbegrenzt Fotos verarbeiten',
+            pro: 'Völlig kostenlos ohne Limits - unbegrenzt Fotos verarbeiten',
             con: 'Kein Premium-Support oder Cloud-Speicher'
         }
     ], proTitle: 'Hauptvorteile', conTitle: 'Einschränkungen' },
 
     { type: 'tip', title: 'Tipp zur digitalen Sicherheit', html: '<strong>Reinigen Sie Ihre Fotos BEVOR sie</strong> in sozialen Netzwerken gepostet werden. Selbst wenn Sie einen Post löschen, könnten Metadaten bereits von Suchmaschinen oder Archiven indexiert worden sein. Vorsorge ist besser als Nachsorge. Machen Sie es sich zur Gewohnheit: <br><br><em>Foto → EXIF reinigen → Posten</em>' },
 
-    { type: 'diagnostic', variant: 'warning', title: 'Reale Risiken bei fehlender Reinigung', icon: 'mdi:alert-circle', badge: 'Kritische Sicherheit', html: '<strong>Dokumentierte Fälle:</strong><br>- Eltern posten Fotos von Kindern – Täter verfolgten GPS<br>- Reisende Fotografen – Häuser wurden während ihrer Abwesenheit ausgeraubt<br>- Influencer – Wohnorte wurden von obsessiven Fans identifiziert<br><br>Das ist keine Paranoia: Es ist grundlegende digitale Hygiene im Jahr 2026.' },
+    { type: 'diagnostic', variant: 'warning', title: 'Reale Risiken bei fehlender Reinigung', icon: 'mdi:alert-circle', badge: 'Kritische Sicherheit', html: '<strong>Dokumentierte Fälle:</strong><br>- Eltern posten Fotos von Kindern - Täter verfolgten GPS<br>- Reisende Fotografen - Häuser wurden während ihrer Abwesenheit ausgeraubt<br>- Influencer - Wohnorte wurden von obsessiven Fans identifiziert<br><br>Das ist keine Paranoia: Es ist grundlegende digitale Hygiene im Jahr 2026.' },
 
     { type: 'glossary', items: [
         {

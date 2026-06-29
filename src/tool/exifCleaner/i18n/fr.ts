@@ -4,7 +4,7 @@ import type { ExifCleanerUI, ExifCleanerLocaleContent } from '../index';
 
 const slug = 'nettoyeur-metadonnees-exif-supprimer-gps-confidentialite-photo';
 const title = 'Nettoyeur de Métadonnées EXIF: Supprimez le GPS et les Données Cachées';
-const description = 'Outil en ligne gratuit pour effacer les métadonnées EXIF, les coordonnées GPS et les caractéristiques de l\'appareil de vos images avant de les partager. 100 % confidentiel : fonctionne sans téléversement.';
+const description = 'Outil en ligne gratuit pour effacer les métadonnées EXIF, les coordonnées GPS et les caractéristiques de l\'appareil de vos images avant de les partager. 100 % confidentiel: fonctionne sans téléversement.';
 
 const ui: ExifCleanerUI = {
     dropTitle: "Faites glisser votre image ici",
@@ -97,7 +97,7 @@ const seo: ExifCleanerLocaleContent['seo'] = [
         '<strong>Données de Copyright :</strong> Photographe, droits d\'auteur et notes personnelles.'
     ] },
 
-    { type: 'title', text: 'Risques de Sécurité Réels : Cas d\'Utilisation', level: 3 },
+    { type: 'title', text: 'Risques de Sécurité Réels: Cas d\'Utilisation', level: 3 },
     { type: 'comparative', items: [
         {
             title: 'Photographes Professionnels',
@@ -111,7 +111,7 @@ const seo: ExifCleanerLocaleContent['seo'] = [
         },
         {
             title: 'Parents et Influenceurs',
-            description: 'Danger extrême : localisation des enfants en temps réel',
+            description: 'Danger extrême: localisation des enfants en temps réel',
             icon: 'mdi:alert',
             points: [
                 'Les prédateurs suivent les emplacements via l\'OSINT',
@@ -180,14 +180,14 @@ const seo: ExifCleanerLocaleContent['seo'] = [
         }
     ], proTitle: 'Avantages Clés', conTitle: 'Limitations' },
 
-    { type: 'tip', title: 'Conseil de Sécurité Numérique', html: '<strong>Nettoyez vos photos AVANT de les publier</strong> sur n\'importe quel réseau social. Même si vous supprimez une publication, les métadonnées ont pu être indexées par des moteurs de recherche ou des archives. Mieux vaut prévenir que guérir. Prenez l\'habitude : <br><br><em>Photo → Nettoyer EXIF → Publier</em>' },
+    { type: 'tip', title: 'Conseil de Sécurité Numérique', html: '<strong>Nettoyez vos photos AVANT de les publier</strong> sur n\'importe quel réseau social. Même si vous supprimez une publication, les métadonnées ont pu être indexées par des moteurs de recherche ou des archives. Mieux vaut prévenir que guérir. Prenez l\'habitude: <br><br><em>Photo → Nettoyer EXIF → Publier</em>' },
 
-    { type: 'diagnostic', variant: 'warning', title: 'Risques Réels sans Nettoyage', icon: 'mdi:alert-circle', badge: 'Sécurité Critique', html: '<strong>Cas documentés :</strong><br>- Parents publiant des photos d\'enfants - les prédateurs ont suivi le GPS<br>- Photographes voyageurs - maisons cambriolées pendant leur absence<br>- Influenceurs - lieux de résidence identifiés par des fans obsessifs<br><br>Ce n\'est pas de la paranoïa : c\'est une hygiène numérique de base en 2026.' },
+    { type: 'diagnostic', variant: 'warning', title: 'Risques Réels sans Nettoyage', icon: 'mdi:alert-circle', badge: 'Sécurité Critique', html: '<strong>Cas documentés :</strong><br>- Parents publiant des photos d\'enfants - les prédateurs ont suivi le GPS<br>- Photographes voyageurs - maisons cambriolées pendant leur absence<br>- Influenceurs - lieux de résidence identifiés par des fans obsessifs<br><br>Ce n\'est pas de la paranoïa: c\'est une hygiène numérique de base en 2026.' },
 
     { type: 'glossary', items: [
         {
             term: 'EXIF',
-            definition: 'Exchangeable Image File Format. Norme qui stocke des métadonnées techniques dans les fichiers image : GPS, données d\'appareil, réglages d\'exposition. Présent dans environ 90 % des photos numériques sans intention de l\'utilisateur.'
+            definition: 'Exchangeable Image File Format. Norme qui stocke des métadonnées techniques dans les fichiers image: GPS, données d\'appareil, réglages d\'exposition. Présent dans environ 90 % des photos numériques sans intention de l\'utilisateur.'
         },
         {
             term: 'Coordonnées GPS',
@@ -195,7 +195,7 @@ const seo: ExifCleanerLocaleContent['seo'] = [
         },
         {
             term: 'IPTC',
-            definition: 'International Press Telecommunications Council. Métadonnées de publication lisibles : copyright, auteur, mots-clés, description. Norme en photographie professionnelle.'
+            definition: 'International Press Telecommunications Council. Métadonnées de publication lisibles: copyright, auteur, mots-clés, description. Norme en photographie professionnelle.'
         },
         {
             term: 'XMP',
@@ -207,14 +207,14 @@ const seo: ExifCleanerLocaleContent['seo'] = [
         },
         {
             term: 'Anonymisation Numérique',
-            definition: 'Processus de suppression ou d\'offuscation des informations identifiables : localisation, appareil, modèles de comportement. Essentiel pour la vie privée en ligne.'
+            definition: 'Processus de suppression ou d\'offuscation des informations identifiables: localisation, appareil, modèles de comportement. Essentiel pour la vie privée en ligne.'
         }
     ] },
 
-    { type: 'message', title: 'Votre Vie Privée est votre Responsabilité', ariaLabel: 'Informations sur la confidentialité et les droits des données', html: 'Nous ne stockons, ne traitons ni ne partageons vos images. <strong>Vous avez le contrôle total.</strong> Toutes les opérations se déroulent exclusivement dans votre navigateur. Lorsque vous fermez cet onglet, aucune trace de votre activité ne subsiste. Voici comment protéger votre vie privée sur internet : des outils qui respectent vos données.' },
+    { type: 'message', title: 'Votre Vie Privée est votre Responsabilité', ariaLabel: 'Informations sur la confidentialité et les droits des données', html: 'Nous ne stockons, ne traitons ni ne partageons vos images. <strong>Vous avez le contrôle total.</strong> Toutes les opérations se déroulent exclusivement dans votre navigateur. Lorsque vous fermez cet onglet, aucune trace de votre activité ne subsiste. Voici comment protéger votre vie privée sur internet: des outils qui respectent vos données.' },
 
-    { type: 'title', text: 'Conclusion : Partagez sans Traces', level: 3 },
-    { type: 'paragraph', html: 'Protéger votre identité numérique commence par de petits détails. Nettoyer vos photos avant de les publier est une <strong>habitude d\'hygiène numérique essentielle</strong> en 2026. Cela ne protège pas seulement votre position : cela protège votre famille, vos biens et votre vie privée professionnelle. Une photo apparemment innocente peut en dire plus sur vous que vous ne l\'auriez jamais imaginé.' }
+    { type: 'title', text: 'Conclusion: Partagez sans Traces', level: 3 },
+    { type: 'paragraph', html: 'Protéger votre identité numérique commence par de petits détails. Nettoyer vos photos avant de les publier est une <strong>habitude d\'hygiène numérique essentielle</strong> en 2026. Cela ne protège pas seulement votre position: cela protège votre famille, vos biens et votre vie privée professionnelle. Une photo apparemment innocente peut en dire plus sur vous que vous ne l\'auriez jamais imaginé.' }
 ];
 
 const faqSchema: WithContext<FAQPage> = {

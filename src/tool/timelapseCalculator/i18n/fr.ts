@@ -3,7 +3,7 @@ import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dt
 import type { TimelapseUI, TimelapseLocaleContent } from '../index';
 
 const slug = 'calculatrice-timelapse-hyperlapse-intervalles-parfaits';
-const title = 'Calculatrice de Timelapse et Hyperlapse : Intervalles Parfaits';
+const title = 'Calculatrice de Timelapse et Hyperlapse: Intervalles Parfaits';
 const description = 'Calculez l\'intervalle exact entre les photos, la durée totale et le stockage pour vos timelapses. Outil essentiel pour les photographes.';
 
 const ui: TimelapseUI = {
@@ -47,11 +47,11 @@ const faq: TimelapseLocaleContent['faq'] = [
 const howTo: TimelapseLocaleContent['howTo'] = [
     {
         name: "Définir la durée de la vidéo finale",
-        text: "Indiquez combien de secondes ou de minutes vous souhaitez que la vidéo résultante dure (ex : 10 secondes pour Instagram).",
+        text: "Indiquez combien de secondes ou de minutes vous souhaitez que la vidéo résultante dure (ex: 10 secondes pour Instagram).",
     },
     {
         name: "Sélectionner les FPS de sortie",
-        text: "Choisissez la fluidité de la vidéo : 24 (cinéma), 30 (web) ou 60 (ralenti fluide).",
+        text: "Choisissez la fluidité de la vidéo: 24 (cinéma), 30 (web) ou 60 (ralenti fluide).",
     },
     {
         name: "Ajuster l'intervalle de capture",
@@ -65,7 +65,7 @@ const howTo: TimelapseLocaleContent['howTo'] = [
 
 const seo: TimelapseLocaleContent['seo'] = [
     { type: 'title', text: 'Guide Ultime des Intervalles Timelapse et Hyperlapse', level: 2 },
-    { type: 'paragraph', html: 'La différence entre une vidéo accélérée amateur et un <strong>timelapse cinématographique</strong> réside mathématiquement dans un seul facteur : <strong>l\'intervalle</strong>. Cette calculatrice élimine les devinettes, vous permettant de planifier avec précision la capture de levers de soleil, du trafic urbain ou de la Voie lactée.' },
+    { type: 'paragraph', html: 'La différence entre une vidéo accélérée amateur et un <strong>timelapse cinématographique</strong> réside mathématiquement dans un seul facteur: <strong>l\'intervalle</strong>. Cette calculatrice élimine les devinettes, vous permettant de planifier avec précision la capture de levers de soleil, du trafic urbain ou de la Voie lactée.' },
     
     { type: 'title', text: 'Tableau des Intervalles Recommandés (Aide mémoire)', level: 3 },
     { type: 'paragraph', html: 'Utilisez ce tableau de référence rapide pour régler votre intervallomètre en fonction du sujet.' },
@@ -91,7 +91,7 @@ const seo: TimelapseLocaleContent['seo'] = [
         '<strong>Photographiez en RAW :</strong> Essentiel pour corriger l\'exposition en post-production sans détruire l\'image.'
     ]},
 
-    { type: 'diagnostic', variant: 'success', title: 'Technique Avancée : Le "Saint Graal"', icon: 'mdi:crown', badge: 'Technique Pro', html: 'On appelle "Saint Graal" la transition fluide du jour à la nuit (ou vice-versa). C\'est le défi technique le plus difficile car la lumière change radicalement.' },
+    { type: 'diagnostic', variant: 'success', title: 'Technique Avancée: Le "Saint Graal"', icon: 'mdi:crown', badge: 'Technique Pro', html: 'On appelle "Saint Graal" la transition fluide du jour à la nuit (ou vice-versa). C\'est le défi technique le plus difficile car la lumière change radicalement.' },
     
     { type: 'stats', columns: 3, items: [
         { label: 'Bulb Ramping', value: 'Exposition Graduelle', icon: 'mdi:brightness-6' },
@@ -99,7 +99,7 @@ const seo: TimelapseLocaleContent['seo'] = [
         { label: 'Stratégie', value: 'Intervalle Nocturne', icon: 'mdi:weather-night' }
     ]},
 
-    { type: 'title', text: 'Conclusion : Le Zen de la Mécanique Simple', level: 3 },
+    { type: 'title', text: 'Conclusion: Le Zen de la Mécanique Simple', level: 3 },
     { type: 'paragraph', html: 'Maîtriser votre timelapse commence par comprendre les mathématiques de votre intervallomètre. Ne laissez pas un intervalle mal choisi gâcher votre session.' }
 ];
 

@@ -10,7 +10,7 @@ const ui: DepthOfFieldUI = {
     title: 'Skärpedjupskalkylator',
     paramsTitle: 'Parametrar',
     sensorLabel: 'Kamerasensor',
-    moreLabel: 'Fler sensorer…',
+    moreLabel: 'Fler sensorer...',
     apertureLabel: 'Bländare',
     focalLabel: 'Brännvidd',
     distanceLabel: 'Motivavstånd',
@@ -92,7 +92,7 @@ const seo: DepthOfFieldLocaleContent['seo'] = [
 
     { type: 'title', text: 'DoF i film: Brännvidd vs Sensor', level: 3 },
     { type: 'paragraph', html: 'Filmning i Super 35 använder ofta längre brännvidd för att komprimera perspektivet och skapa en "filmisk look". Ett ljusstarkt 85mm-objektiv är klassiskt för porträtt.' },
-    { type: 'diagnostic', variant: 'success', title: 'Regeln för fokusfördelning', icon: 'mdi:lightbulb-outline', badge: 'Pro-teknik', html: 'För ett motiv på 3m med 50mm vid f/2.8: det skarpa området bakom motivet är alltid större än framför – ungefär i <strong>förhållandet 2:1</strong>.' },
+    { type: 'diagnostic', variant: 'success', title: 'Regeln för fokusfördelning', icon: 'mdi:lightbulb-outline', badge: 'Pro-teknik', html: 'För ett motiv på 3m med 50mm vid f/2.8: det skarpa området bakom motivet är alltid större än framför - ungefär i <strong>förhållandet 2:1</strong>.' },
 ];
 
 const faqSchema: WithContext<FAQPage> = {

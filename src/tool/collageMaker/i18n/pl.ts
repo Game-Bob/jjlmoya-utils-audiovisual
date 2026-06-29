@@ -80,7 +80,7 @@ const seo: CollageMakerLocaleContent['seo'] = [
         '<strong>Równowagę:</strong> Wizualne rozłożenie ciężaru (jasne vs ciemne obrazy, duże vs małe).',
         '<strong>Przepływ Wizualny:</strong> Wzrok powinien naturalnie poruszać się po kompozycji, bez martwych punktów.',
         '<strong>Kontrast:</strong> Zmiany koloru, rozmiaru i kształtu, które przyciągają uwagę.',
-        '<strong>Jedność:</strong> Spójność tematyczna – obrazy muszą „mówić razem” o tej samej historii.'
+        '<strong>Jedność:</strong> Spójność tematyczna - obrazy muszą \"mówić razem\" o tej samej historii.'
     ], icon: 'mdi:check' },
 
     { type: 'card', title: 'Inteligentne i adaptacyjne projekty', html: 'Nasz system automatycznie oblicza optymalny rozkład przestrzeni na podstawie liczby zdjęć. 2 zdjęcia = siatka symetryczna; 5 zdjęć = zrównoważony rozkład asymetryczny. Każda siatka jest zaprojektowana tak, aby zmaksymalizować wpływ wizualny.' },
@@ -88,7 +88,7 @@ const seo: CollageMakerLocaleContent['seo'] = [
     { type: 'comparative', items: [
         {
             title: 'Dla mediów społecznościowych',
-            description: 'Instagram, TikTok, Facebook – formaty kwadratowe',
+            description: 'Instagram, TikTok, Facebook - formaty kwadratowe',
             icon: 'mdi:share-all',
             points: [
                 '1200px to idealna rozdzielczość dla feedu na Instagramie',
@@ -129,7 +129,7 @@ const seo: CollageMakerLocaleContent['seo'] = [
 
     { type: 'proscons', items: [
         {
-            pro: 'Profesjonalne predefiniowane projekty – nie wymaga wiedzy o kompozycji',
+            pro: 'Profesjonalne predefiniowane projekty - nie wymaga wiedzy o kompozycji',
             con: 'Opcje ograniczone do ustalonych siatek'
         },
         {
@@ -137,7 +137,7 @@ const seo: CollageMakerLocaleContent['seo'] = [
             con: 'Mniejsza swoboda niż w Photoshopie'
         },
         {
-            pro: '100% lokalne przetwarzanie – prywatność, szybkość, brak limitów',
+            pro: '100% lokalne przetwarzanie - prywatność, szybkość, brak limitów',
             con: 'Wymaga nowoczesnej przeglądarki'
         },
         {
@@ -171,7 +171,7 @@ const seo: CollageMakerLocaleContent['seo'] = [
         }
     ] },
 
-    { type: 'message', title: 'Natychmiastowa Narracja Wizualna', ariaLabel: 'Informacje o kompozycji i kolażach', html: 'Każdy kolaż opowiada historię. Nasz automatyczny projektant dba o to, aby Twoje wizualne historie były zrównoważone, profesjonalne i gotowe na świat – bez konieczności czekania na pracę grafika.' },
+    { type: 'message', title: 'Natychmiastowa Narracja Wizualna', ariaLabel: 'Informacje o kompozycji i kolażach', html: 'Każdy kolaż opowiada historię. Nasz automatyczny projektant dba o to, aby Twoje wizualne historie były zrównoważone, profesjonalne i gotowe na świat - bez konieczności czekania na pracę grafika.' },
 
     { type: 'title', text: 'Twórz, Udostępniaj, Inspiruj', level: 3 },
     { type: 'paragraph', html: 'Dobrze zrobiony kolaż to różnica między postem, o którym szybko się zapomina, a takim, który obserwujący zapamiętają i udostępnią. Wykorzystaj inteligentną kompozycję w swoich wizualnych historiach, aby wywrzeć wrażenie.' }
