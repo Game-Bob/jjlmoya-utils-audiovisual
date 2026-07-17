@@ -39,7 +39,7 @@ const { ui } = Astro.props;
         <svg viewBox="0 0 24 24" class="pb-icon" aria-hidden="true" fill="currentColor">
           <path d="M3 6h18v2H3zm3-4v4M12 4v4M21 6h-3M9 11v4M15 11v4M3 12h6m6 0h6M3 18h18v2H3zm3-4v4m6-4v4m6-4v4"/>
         </svg>
-        <input type="range" id="pb-intensity" min="1" max="50" value="10" class="pb-slider" />
+        <input type="range" id="pb-intensity" min="1" max="50" value="10" class="pb-slider" aria-label="Intensity" />
       </div>
       <button id="pb-auto-face" class="pb-auto-btn">
         <svg viewBox="0 0 24 24" class="pb-icon" aria-hidden="true" fill="currentColor">
@@ -65,7 +65,7 @@ const { ui } = Astro.props;
   </div>
 
   <div id="pb-workspace" class="pb-workspace">
-    <input type="file" id="pb-file-input" accept="image/*" class="pb-hidden" />
+    <input type="file" id="pb-file-input" accept="image/*" class="pb-hidden" aria-label={ui.dropTitle} />
 
     <div id="pb-empty" class="pb-empty">
       <div class="pb-upload-icon">

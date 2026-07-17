@@ -25,7 +25,7 @@ const { ui } = Astro.props;
 
           <div class="tvd-field">
             <div class="tvd-field-row">
-              <span class="tvd-label">{ui.diagonalLabel}</span>
+              <label class="tvd-label" for="tvd-diagonal">{ui.diagonalLabel}</label>
               <span id="tvd-diagonal-display" class="tvd-diagonal-val">55"</span>
             </div>
             <input type="range" id="tvd-diagonal" min="32" max="100" value="55" class="tvd-slider" />

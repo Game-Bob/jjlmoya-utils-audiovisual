@@ -15,7 +15,7 @@ const { ui } = Astro.props;
             id="drop-zone"
             class="pq-drop-zone pq-group"
         >
-            <input type="file" id="file-input" class="pq-hidden" accept="image/webp, image/jpeg, image/png, image/tiff" />
+            <input type="file" id="file-input" class="pq-hidden" accept="image/webp, image/jpeg, image/png, image/tiff" aria-label={ui.dropTitle} />
 
             <div class="pq-drop-inner">
                 <div class="pq-upload-icon-wrap pq-group-icon">
@@ -64,7 +64,7 @@ const { ui } = Astro.props;
 
             <div class="pq-main-grid">
                 <div class="pq-config-panel">
-                    <label class="pq-config-label">{ui.dpiDensityLabel}</label>
+                    <label class="pq-config-label" for="dpi-slider">{ui.dpiDensityLabel}</label>
 
                     <input
                         type="range"
@@ -83,7 +83,7 @@ const { ui } = Astro.props;
                             value="300"
                             class="pq-dpi-number"
                         />
-                        <span class="pq-dpi-label">{ui.dpiPointsLabel}</span>
+                        <label class="pq-dpi-label" for="dpi-input">{ui.dpiPointsLabel}</label>
                     </div>
 
                     <div class="pq-presets">

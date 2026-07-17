@@ -12,7 +12,7 @@ const { ui } = Astro.props;
   <div class="ss-card">
 
     <div id="ss-drop" class="ss-drop">
-      <input type="file" id="ss-file" accept=".srt,.vtt" class="ss-hidden" />
+      <input type="file" id="ss-file" accept=".srt,.vtt" class="ss-hidden" aria-label={ui.dropTitle} />
       <div class="ss-drop-icon">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
           <path d="M17 6h-1V3H8v3H7c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-5 2c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm5 12H7V8h10v12zm-1-8h-2v4h2v-4zm-4 0H8v4h2v-4z"/>
@@ -24,7 +24,7 @@ const { ui } = Astro.props;
 
     <div id="ss-controls" class="ss-controls ss-hidden">
       <div class="ss-control-group">
-        <span class="ss-control-label">{ui.offsetLabel}</span>
+        <label class="ss-control-label" for="ss-offset">{ui.offsetLabel}</label>
         <div class="ss-offset-wrap">
           <button id="ss-dec" class="ss-offset-btn">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">

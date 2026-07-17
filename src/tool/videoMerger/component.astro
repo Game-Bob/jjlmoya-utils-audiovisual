@@ -13,7 +13,7 @@ const { ui } = Astro.props;
   <div class="vm-premium-card">
 
     <div id="vm-upload-box" class="vm-uploader-box">
-      <input type="file" id="vm-file-input" accept="video/*" multiple class="vm-hidden" />
+      <input type="file" id="vm-file-input" accept="video/*" multiple class="vm-hidden" aria-label={ui.uploadTitle} />
       <div class="vm-uploader-icon">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
           <path d="M17 10.5V7a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-3.5l4 4v-11zM14 13h-3v3H9v-3H6v-2h3V8h2v3h3z"/>
@@ -47,7 +47,7 @@ const { ui } = Astro.props;
         
         <div class="vm-options-grid">
           <div class="vm-select-group">
-            <label>{ui.optionResolution}</label>
+            <label for="vm-res-select">{ui.optionResolution}</label>
             <select id="vm-res-select">
               <option value="1920x1080">1920x1080 (Full HD 16:9)</option>
               <option value="1280x720">1280x720 (HD 16:9)</option>
@@ -58,7 +58,7 @@ const { ui } = Astro.props;
           </div>
           
           <div class="vm-select-group">
-            <label>{ui.optionFps}</label>
+            <label for="vm-fps-select">{ui.optionFps}</label>
             <select id="vm-fps-select">
               <option value="30">30 FPS</option>
               <option value="24">24 FPS</option>

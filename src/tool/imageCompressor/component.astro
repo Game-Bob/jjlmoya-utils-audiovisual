@@ -89,12 +89,14 @@ const { ui } = Astro.props;
     <div class="ic-inline-editor" style="display:none">
       <div class="ic-editor-controls">
         <div class="ic-editor-group">
-          <label>{ui.qualityLabel}: <span class="ic-local-q-val">80</span>%</label>
-          <input type="range" class="ic-local-quality" min="10" max="100" value="80" />
+          <label>{ui.qualityLabel}: <span class="ic-local-q-val">80</span>%
+            <input type="range" class="ic-local-quality" min="10" max="100" value="80" />
+          </label>
         </div>
         <div class="ic-editor-group">
-          <label>{ui.maxWidthLabel}:</label>
-          <input type="number" class="ic-local-width" placeholder="Original" />
+          <label>{ui.maxWidthLabel}:
+            <input type="number" class="ic-local-width" placeholder="Original" />
+          </label>
         </div>
       </div>
       <button class="ic-editor-close">{ui.closeBtn}</button>

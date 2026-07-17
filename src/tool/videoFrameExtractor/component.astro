@@ -12,7 +12,7 @@ const { ui } = Astro.props;
   <div class="vfe-premium-card">
 
     <div id="vfe-upload-box" class="vfe-uploader-box">
-      <input type="file" id="vfe-file-input" accept="video/*" class="vfe-hidden" />
+      <input type="file" id="vfe-file-input" accept="video/*" class="vfe-hidden" aria-label={ui.uploadTitle} />
       <div class="vfe-uploader-icon">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
           <path d="M17 10.5V7a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-3.5l4 4v-11zM14 13h-3v3H9v-3H6v-2h3V8h2v3h3z"/>
@@ -35,7 +35,7 @@ const { ui } = Astro.props;
           <span id="vfe-current-time">00:00.000</span>
           <span id="vfe-duration">00:00.000</span>
         </div>
-        <input type="range" id="vfe-scrubber" class="vfe-scrubber" min="0" step="0.001" value="0" />
+        <input type="range" id="vfe-scrubber" class="vfe-scrubber" min="0" step="0.001" value="0" aria-label="Timeline" />
 
         <div class="vfe-actions-row">
           <button id="vfe-prev" class="vfe-btn-main vfe-btn-control" title={ui.prevFrame}>
@@ -70,7 +70,7 @@ const { ui } = Astro.props;
           </div>
           <div class="vfe-batch-controls">
             <div class="vfe-batch-input-group">
-              <label>{ui.batchEvery}</label>
+              <label for="vfe-batch-interval">{ui.batchEvery}</label>
               <input type="number" id="vfe-batch-interval" value="1" min="0.1" step="0.1" />
               <label>s</label>
             </div>

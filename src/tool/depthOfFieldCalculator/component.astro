@@ -37,7 +37,7 @@ const moreSensors  = SENSOR_PRESETS.filter(s => !QUICK_SENSOR_KEYS.includes(s.ke
         </div>
         <div class="dof-sensor-row">
           <div class="dof-select-wrapper">
-            <select id="dof-sensor-more" class="dof-select">
+            <select id="dof-sensor-more" class="dof-select" aria-label={ui.sensorLabel}>
               <option value="">{ui.moreLabel}</option>
               {moreSensors.map(s => (
                 <option value={s.key} data-coc={s.coc}>{s.label}</option>
