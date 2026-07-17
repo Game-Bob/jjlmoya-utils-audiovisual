@@ -1,16 +1,16 @@
 import type { AudiovisualCategoryEntry, AudiovisualToolEntry } from '../types';
-import { timelapseCalculator } from '../tool/timelapseCalculator/index';
-import { exifCleaner } from '../tool/exifCleaner/index';
-import { subtitleSync } from '../tool/subtitleSync/index';
-import { privacyBlur } from '../tool/privacyBlur/index';
-import { chromaticLens } from '../tool/chromaticLens/index';
-import { printQualityCalculator } from '../tool/printQualityCalculator/index';
-import { tvDistance } from '../tool/tvDistance/index';
-import { imageCompressor } from '../tool/imageCompressor/index';
-import { collageMaker } from '../tool/collageMaker/index';
-import { videoFrameExtractor } from '../tool/videoFrameExtractor/index';
-import { depthOfFieldCalculator } from '../tool/depthOfFieldCalculator/index';
-import { videoMerger } from '../tool/videoMerger/index';
+import { timelapseCalculator } from '../tool/timelapseCalculator/entry';
+import { exifCleaner } from '../tool/exifCleaner/entry';
+import { subtitleSync } from '../tool/subtitleSync/entry';
+import { privacyBlur } from '../tool/privacyBlur/entry';
+import { chromaticLens } from '../tool/chromaticLens/entry';
+import { printQualityCalculator } from '../tool/printQualityCalculator/entry';
+import { tvDistance } from '../tool/tvDistance/entry';
+import { imageCompressor } from '../tool/imageCompressor/entry';
+import { collageMaker } from '../tool/collageMaker/entry';
+import { videoFrameExtractor } from '../tool/videoFrameExtractor/entry';
+import { depthOfFieldCalculator } from '../tool/depthOfFieldCalculator/entry';
+import { videoMerger } from '../tool/videoMerger/entry';
 
 export const audiovisualCategory: AudiovisualCategoryEntry = {
   icon: 'mdi:camera-iris',
