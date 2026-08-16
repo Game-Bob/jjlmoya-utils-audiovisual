@@ -12,22 +12,34 @@ function countItems(arr: unknown[] | undefined): number {
   return arr?.length ?? 0;
 }
 
-async function verifyLocaleParity(entry: typeof ALL_ENTRIES[number], loc: KnownLocale, expected: ExpectedCounts): Promise<void> {
+async function verifyLocaleParity(
+  entry: typeof ALL_ENTRIES[number],
+  loc: KnownLocale,
+  expected: ExpectedCounts,
+): Promise<void> {
   const locContent = await entry.i18n[loc]?.();
   expect(locContent, `Locale ${loc} missing content`).toBeDefined();
-  
+
   const locSeoCount = countItems(locContent?.seo);
   const locFaqCount = countItems(locContent?.faq);
   const locHowToCount = countItems(locContent?.howTo);
 
-  expect(locSeoCount, `Locale ${loc} SEO sections count (${locSeoCount}) must match EN (${expected.seo})`).toBe(expected.seo);
-  expect(locFaqCount, `Locale ${loc} FAQ items count (${locFaqCount}) must match EN (${expected.faq})`).toBe(expected.faq);
-  expect(locHowToCount, `Locale ${loc} HowTo steps count (${locHowToCount}) must match EN (${expected.howTo})`).toBe(expected.howTo);
+  expect(
+    locSeoCount,
+    `Locale ${loc} SEO sections count (${locSeoCount}) must match EN (${expected.seo})`,
+  ).toBe(expected.seo);
+  expect(
+    locFaqCount,
+    `Locale ${loc} FAQ items count (${locFaqCount}) must match EN (${expected.faq})`,
+  ).toBe(expected.faq);
+  expect(
+    locHowToCount,
+    `Locale ${loc} HowTo steps count (${locHowToCount}) must match EN (${expected.howTo})`,
+  ).toBe(expected.howTo);
 }
 
 describe('SEO & i18n Structural Parity Suite', () => {
-  const targetEntries = ALL_ENTRIES.filter(e => e.id === 'audio-delay-distance-calculator');
-  targetEntries.forEach((entry) => {
+  ALL_ENTRIES.forEach((entry) => {
     describe(`Tool: ${entry.id}`, () => {
       it('all 15 locales should have identical SEO section counts and types as English', async () => {
         const enContent = await entry.i18n.en?.();
