@@ -1,0 +1,18 @@
+---
+import { Bibliography as SharedBibliography } from '@jjlmoya/utils-shared';
+import { audioDelayDistanceCalculator } from './entry';
+import type { KnownLocale, ToolLocaleContent } from '../../types';
+import type { AudioDelayUI } from './ui';
+
+interface Props {
+  locale?: KnownLocale;
+}
+
+const { locale = 'en' } = Astro.props;
+const content = await audioDelayDistanceCalculator.i18n[locale]?.();
+if (!content || !content.bibliography || content.bibliography.length === 0) return null;
+
+const { bibliography, bibliographyTitle = 'Bibliography' } = content as unknown as ToolLocaleContent<AudioDelayUI> & { bibliographyTitle?: string };
+---
+
+<SharedBibliography title={bibliographyTitle} links={bibliography} />

@@ -12,6 +12,7 @@ import { COLLAGE_MAKER_TOOL } from './tool/collageMaker';
 import { VIDEO_FRAME_EXTRACTOR_TOOL } from './tool/videoFrameExtractor';
 import { DEPTH_OF_FIELD_CALCULATOR_TOOL } from './tool/depthOfFieldCalculator';
 import { VIDEO_MERGER_TOOL } from './tool/videoMerger';
+import { AUDIO_DELAY_DISTANCE_CALCULATOR_TOOL } from './tool/audioDelayDistanceCalculator';
 
 export const ALL_TOOLS: ToolDefinition[] = [
   TIMELAPSE_CALCULATOR_TOOL,
@@ -26,6 +27,7 @@ export const ALL_TOOLS: ToolDefinition[] = [
   VIDEO_FRAME_EXTRACTOR_TOOL,
   DEPTH_OF_FIELD_CALCULATOR_TOOL,
   VIDEO_MERGER_TOOL,
+  AUDIO_DELAY_DISTANCE_CALCULATOR_TOOL,
 ];
 
 

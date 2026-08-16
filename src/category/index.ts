@@ -11,6 +11,7 @@ import { collageMaker } from '../tool/collageMaker/entry';
 import { videoFrameExtractor } from '../tool/videoFrameExtractor/entry';
 import { depthOfFieldCalculator } from '../tool/depthOfFieldCalculator/entry';
 import { videoMerger } from '../tool/videoMerger/entry';
+import { audioDelayDistanceCalculator } from '../tool/audioDelayDistanceCalculator/entry';
 
 export const audiovisualCategory: AudiovisualCategoryEntry = {
   icon: 'mdi:camera-iris',
@@ -27,6 +28,7 @@ export const audiovisualCategory: AudiovisualCategoryEntry = {
     videoFrameExtractor as AudiovisualToolEntry,
     depthOfFieldCalculator as AudiovisualToolEntry,
     videoMerger as AudiovisualToolEntry,
+    audioDelayDistanceCalculator as AudiovisualToolEntry,
   ],
   i18n: {
     es: async () => (await import('./i18n/es')).content,

@@ -1,0 +1,191 @@
+---
+import type { AudioDelayUI } from './ui';
+import './audio-delay-distance-calculator.css';
+
+interface Props {
+  ui: AudioDelayUI;
+}
+
+const { ui } = Astro.props;
+---
+
+<div class="audio-delay-distance-calculator-card" data-i18n={JSON.stringify(ui)}>
+  <div class="audio-delay-distance-calculator-header">
+    <div class="audio-delay-distance-calculator-brand-title">
+      <span class="audio-delay-distance-calculator-badge-tag">ACOUSTIC PA ALIGNMENT</span>
+    </div>
+    <div class="audio-delay-distance-calculator-unit-master">
+      <button type="button" id="audio-delay-unit-metric" class="audio-delay-distance-calculator-master-btn audio-delay-distance-calculator-btn-active" data-system="metric">{ui.unitMetric}</button>
+      <button type="button" id="audio-delay-unit-imperial" class="audio-delay-distance-calculator-master-btn" data-system="imperial">{ui.unitImperial}</button>
+    </div>
+  </div>
+
+  <div class="audio-delay-distance-calculator-layout">
+    <div class="audio-delay-distance-calculator-section">
+      <div class="audio-delay-distance-calculator-control-card">
+        <div class="audio-delay-distance-calculator-field">
+          <div class="audio-delay-distance-calculator-label-row">
+            <label for="audio-delay-distance" class="audio-delay-distance-calculator-label">{ui.distanceLabel}</label>
+            <span id="audio-delay-distance-display" class="audio-delay-distance-calculator-val-badge">25 m</span>
+          </div>
+          <div class="audio-delay-distance-calculator-slider-wrap">
+            <input type="range" id="audio-delay-distance-slider" class="audio-delay-distance-calculator-slider" aria-label={ui.distanceLabel} value="25" min="0" max="150" step="0.5" />
+            <input type="number" id="audio-delay-distance" class="audio-delay-distance-calculator-num-input" aria-label={ui.distanceLabel} value="25" min="0" max="500" step="0.5" />
+          </div>
+        </div>
+
+        <div class="audio-delay-distance-calculator-field">
+          <div class="audio-delay-distance-calculator-label-row">
+            <label for="audio-delay-temperature" class="audio-delay-distance-calculator-label">{ui.temperatureLabel}</label>
+            <span id="audio-delay-temp-display" class="audio-delay-distance-calculator-val-badge">20 °C</span>
+          </div>
+          <div class="audio-delay-distance-calculator-slider-wrap">
+            <input type="range" id="audio-delay-temperature-slider" class="audio-delay-distance-calculator-slider" aria-label={ui.temperatureLabel} value="20" min="-10" max="45" step="1" />
+            <input type="number" id="audio-delay-temperature" class="audio-delay-distance-calculator-num-input" aria-label={ui.temperatureLabel} value="20" min="-40" max="60" step="1" />
+          </div>
+        </div>
+
+        <div class="audio-delay-distance-calculator-field">
+          <div class="audio-delay-distance-calculator-label-row">
+            <label for="audio-delay-humidity" class="audio-delay-distance-calculator-label">{ui.humidityLabel}</label>
+            <span id="audio-delay-humidity-val" class="audio-delay-distance-calculator-val-badge">50%</span>
+          </div>
+          <input type="range" id="audio-delay-humidity" class="audio-delay-distance-calculator-slider" aria-label={ui.humidityLabel} value="50" min="0" max="100" step="5" />
+        </div>
+
+        <div class="audio-delay-distance-calculator-field">
+          <label class="audio-delay-distance-calculator-label">{ui.sampleRateLabel}</label>
+          <div class="audio-delay-distance-calculator-custom-select">
+            <div class="audio-delay-distance-calculator-custom-select-trigger" tabindex="0" role="combobox" aria-expanded="false" aria-haspopup="listbox" aria-label={ui.sampleRateLabel}>
+              <span class="audio-delay-distance-calculator-select-value">48 kHz (48,000 Hz)</span>
+              <svg class="audio-delay-distance-calculator-chevron" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"></path></svg>
+            </div>
+            <div class="audio-delay-distance-calculator-custom-select-menu" role="listbox">
+              <div class="audio-delay-distance-calculator-custom-select-option" role="option" aria-selected="false" data-value="44100">44.1 kHz (44,100 Hz)</div>
+              <div class="audio-delay-distance-calculator-custom-select-option audio-delay-distance-calculator-selected" role="option" aria-selected="true" data-value="48000">48 kHz (48,000 Hz)</div>
+              <div class="audio-delay-distance-calculator-custom-select-option" role="option" aria-selected="false" data-value="96000">96 kHz (96,000 Hz)</div>
+              <div class="audio-delay-distance-calculator-custom-select-option" role="option" aria-selected="false" data-value="192000">192 kHz (192,000 Hz)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="audio-delay-distance-calculator-presets-box">
+        <div class="audio-delay-distance-calculator-presets-title">{ui.presetsTitle}</div>
+        <div class="audio-delay-distance-calculator-presets-grid">
+          <button type="button" class="audio-delay-distance-calculator-preset-chip" data-dist="40" data-temp="35">
+            <span class="audio-delay-distance-calculator-preset-name">{ui.presetSummerFestival}</span>
+          </button>
+          <button type="button" class="audio-delay-distance-calculator-preset-chip" data-dist="25" data-temp="20">
+            <span class="audio-delay-distance-calculator-preset-name">{ui.presetIndoorConcert}</span>
+          </button>
+          <button type="button" class="audio-delay-distance-calculator-preset-chip" data-dist="15" data-temp="22">
+            <span class="audio-delay-distance-calculator-preset-name">{ui.presetTheater}</span>
+          </button>
+          <button type="button" class="audio-delay-distance-calculator-preset-chip" data-dist="50" data-temp="5">
+            <span class="audio-delay-distance-calculator-preset-name">{ui.presetWinterOutdoor}</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="audio-delay-distance-calculator-section">
+      <div class="audio-delay-distance-calculator-stage-card">
+        <svg id="audio-delay-stage-svg" class="audio-delay-distance-calculator-svg" viewBox="0 0 600 260">
+          <defs>
+            <radialGradient id="ad-glow-bg" cx="50%" cy="50%" r="70%">
+              <stop offset="0%" stop-color="var(--n-stage-radial-start)" stop-opacity="0.9" />
+              <stop offset="100%" stop-color="var(--n-stage-radial-end)" stop-opacity="1" />
+            </radialGradient>
+            <linearGradient id="ad-beam" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="var(--n-brand)" stop-opacity="0.5" />
+              <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.1" />
+            </linearGradient>
+            <filter id="ad-glow" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="3" result="blur" />
+              <feComposite in="SourceGraphic" in2="blur" operator="over" />
+            </filter>
+          </defs>
+
+          <rect x="0" y="0" width="600" height="260" rx="14" fill="url(#ad-glow-bg)" stroke="var(--n-border)" stroke-width="1" />
+
+          <line x1="60" y1="30" x2="60" y2="210" stroke="var(--n-stage-stroke)" stroke-dasharray="2 4" />
+          <line x1="200" y1="30" x2="200" y2="210" stroke="var(--n-stage-stroke)" stroke-dasharray="2 4" />
+          <line x1="340" y1="30" x2="340" y2="210" stroke="var(--n-stage-stroke)" stroke-dasharray="2 4" />
+          <line x1="500" y1="30" x2="500" y2="210" stroke="var(--n-stage-stroke)" stroke-dasharray="2 4" />
+
+          <g transform="translate(60, 110)">
+            <rect x="-18" y="-55" width="36" height="110" rx="8" fill="#0284c7" stroke="var(--n-brand)" stroke-width="2" filter="url(#ad-glow)" />
+            <circle cx="0" cy="-30" r="10" fill="var(--n-bg)" stroke="var(--n-brand)" stroke-width="2" />
+            <circle cx="0" cy="15" r="14" fill="var(--n-bg)" stroke="var(--n-brand)" stroke-width="2" />
+            <text x="0" y="72" fill="var(--n-muted)" font-size="11" font-weight="700" text-anchor="middle">{ui.mainSpeakerLabel}</text>
+          </g>
+
+          <polygon points="60,95 520,60 520,160 60,125" fill="url(#ad-beam)" />
+          <line x1="78" y1="110" x2="500" y2="110" stroke="var(--n-brand)" stroke-dasharray="6 4" stroke-width="2" opacity="0.6" />
+
+          <circle class="audio-delay-distance-calculator-wave-1" cx="60" cy="110" r="90" fill="none" stroke="var(--n-brand)" stroke-width="3" opacity="0.8" />
+          <circle class="audio-delay-distance-calculator-wave-2" cx="60" cy="110" r="170" fill="none" stroke="#8b5cf6" stroke-width="2.5" opacity="0.6" />
+          <circle class="audio-delay-distance-calculator-wave-3" cx="60" cy="110" r="250" fill="none" stroke="var(--n-brand)" stroke-width="2" opacity="0.3" />
+
+          <rect class="audio-delay-distance-calculator-haas-band" x="150" y="35" width="130" height="150" rx="10" fill="#f59e0b" fill-opacity="0.08" stroke="#f59e0b" stroke-dasharray="4 4" stroke-width="1.5" />
+          <text x="215" y="28" fill="#d97706" font-size="10" font-weight="700" text-anchor="middle">{ui.haasZoneLegend}</text>
+
+          <g class="audio-delay-distance-calculator-delay-spk" transform="translate(260, 0)">
+            <line x1="0" y1="35" x2="0" y2="185" stroke="#f59e0b" stroke-width="2" stroke-dasharray="2 2" />
+            <rect x="-12" y="70" width="24" height="75" rx="6" fill="var(--n-card-bg)" stroke="#f59e0b" stroke-width="2.5" filter="url(#ad-glow)" />
+            <circle cx="0" cy="92" r="7" fill="#f59e0b" />
+            <circle cx="0" cy="122" r="10" fill="#f59e0b" />
+            <text x="0" y="200" fill="#d97706" font-size="11" font-weight="700" text-anchor="middle">{ui.delaySpeakerLabel}</text>
+          </g>
+
+          <g transform="translate(500, 110)">
+            <circle cx="0" cy="0" r="24" fill="var(--n-bg)" stroke="#16a34a" stroke-width="3" filter="url(#ad-glow)" />
+            <circle cx="0" cy="0" r="8" fill="#16a34a" />
+            <text x="0" y="44" fill="#16a34a" font-size="11" font-weight="700" text-anchor="middle">{ui.audienceLabel}</text>
+          </g>
+        </svg>
+      </div>
+
+      <div class="audio-delay-distance-calculator-results-grid">
+        <div class="audio-delay-distance-calculator-stat-card">
+          <span class="audio-delay-distance-calculator-stat-label">{ui.resultDelayMs}</span>
+          <span id="audio-delay-val-ms" class="audio-delay-distance-calculator-stat-value">-- ms</span>
+        </div>
+
+        <div class="audio-delay-distance-calculator-stat-card">
+          <span class="audio-delay-distance-calculator-stat-label">{ui.resultSamples}</span>
+          <span id="audio-delay-val-samples" class="audio-delay-distance-calculator-stat-value">--</span>
+        </div>
+
+        <div class="audio-delay-distance-calculator-stat-card">
+          <span class="audio-delay-distance-calculator-stat-label">{ui.resultSpeed}</span>
+          <span id="audio-delay-val-speed" class="audio-delay-distance-calculator-stat-value">-- m/s</span>
+        </div>
+
+        <div class="audio-delay-distance-calculator-stat-card">
+          <span class="audio-delay-distance-calculator-stat-label">{ui.resultSplLoss}</span>
+          <span id="audio-delay-val-spl" class="audio-delay-distance-calculator-stat-value">-- dB</span>
+        </div>
+      </div>
+
+      <div class="audio-delay-distance-calculator-status-box">
+        <div class="audio-delay-distance-calculator-status-head">
+          <span id="audio-delay-status-badge" class="audio-delay-distance-calculator-badge">Direct Wavefront Sync</span>
+        </div>
+        <p id="audio-delay-advice-text" class="audio-delay-distance-calculator-advice">Signals are acoustically synchronous within 5ms. Minimal delay processing required.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  import { AudioDelayController } from './controller';
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const card = document.querySelector<HTMLElement>('.audio-delay-distance-calculator-card');
+    if (card) {
+      new AudioDelayController(card);
+    }
+  });
+</script>
