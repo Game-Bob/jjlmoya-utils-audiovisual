@@ -171,9 +171,9 @@ const { ui } = Astro.props;
 
       <div class="audio-delay-distance-calculator-status-box">
         <div class="audio-delay-distance-calculator-status-head">
-          <span id="audio-delay-status-badge" class="audio-delay-distance-calculator-badge">Direct Wavefront Sync</span>
+          <span id="audio-delay-status-badge" class="audio-delay-distance-calculator-badge">{ui.statusDirectZone}</span>
         </div>
-        <p id="audio-delay-advice-text" class="audio-delay-distance-calculator-advice">Signals are acoustically synchronous within 5ms. Minimal delay processing required.</p>
+        <p id="audio-delay-advice-text" class="audio-delay-distance-calculator-advice">{ui.advicePhaseAligned}</p>
       </div>
     </div>
   </div>
