@@ -151,8 +151,6 @@ const seo: ImageCompressorLocaleContent['seo'] = [
         }
     ], proTitle: '优势', conTitle: '局限性' },
 
-    { type: 'tip', title: '数字安全提示', html: '在任何社交网络发帖<strong>之前先清理</strong>您的照片。即使您删除了帖子，元数据也可能已被搜索引擎或存档编入索引。预防胜于治疗。养成习惯：<br><br><em>照片 → 清除 EXIF/压缩 → 发布</em>' },
-
     { type: 'diagnostic', variant: 'warning', title: '注意：过度压缩会导致降级', icon: 'mdi:alert', badge: '质量', html: '摄影保持质量 >75%，编辑内容保持质量 >85%。在此之下，压缩伪影（斑点、色带）会变得明显。而在缩略图中看起来不错的图像在大图中可能看起来很糟。' },
 
     { type: 'glossary', items: [
