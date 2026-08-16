@@ -110,6 +110,45 @@ const seo: ToolLocaleContent<AudioDelayUI>['seo'] = [
     html: 'Wenn zwei räumlich getrennte Lautsprecher dasselbe Audiosignal ohne präzise Laufzeitanpassung abgeben, überlagern sich die Wellenfronten mit Phasenunterschieden. Dies führt zu Kammfiltereffekten und Klangverfärbungen.',
   },
   {
+    type: 'list',
+    items: [
+      '<strong>Laufzeitanpassung:</strong> Verzögert sekundäre Lautsprecher zur Anpassung an die Haupt PA.',
+      '<strong>Kammfiltervermeidung:</strong> Eliminiert Phasenauslöschungen im gesamten hörbaren Frequenzbereich.',
+      '<strong>Haas Ortung:</strong> Erhält die Wahrnehmung der akustischen Quelle auf der Hauptbühne.',
+      '<strong>Sample Genauigkeit:</strong> Liefert exakte digitale Sample Werte für Ausgangsmatrizen.',
+    ],
+    icon: 'mdi:check-circle',
+  },
+  {
+    type: 'comparative',
+    items: [
+      {
+        title: 'Direkte PA Ausrichtung',
+        description: 'Physische Verzögerung entspricht der Schalldistanz',
+        icon: 'mdi:target',
+        points: ['Perfekte Phasenkohärenz', 'Ideal für Nearfills', 'Null Kammfilterung'],
+      },
+      {
+        title: 'Haas Offset Ausrichtung',
+        description: 'Physische Verzögerung plus 5 bis 15ms Vorrangsoffset',
+        icon: 'mdi:music-clef-treble',
+        points: ['Natürliche Bühnenortung', 'Verbesserte Sprachverständlichkeit', 'Ideal für Delay Towers'],
+        highlight: true,
+      },
+    ],
+    columns: 2,
+  },
+  {
+    type: 'table',
+    headers: ['Beschallungsszenario', 'Abstand (m)', 'Temp (°C)', 'Verzögerung (ms)', 'Samples (48kHz)'],
+    rows: [
+      ['Theater Rang Infill', '15 m', '22 °C', '43.5 ms', '2.090 Samples'],
+      ['Hallenkonzert', '25 m', '20 °C', '72.8 ms', '3.494 Samples'],
+      ['Festival Hauptbühne', '40 m', '35 °C', '113.6 ms', '5.453 Samples'],
+      ['Winter Open Air', '50 m', '5 °C', '149.5 ms', '7.176 Samples'],
+    ],
+  },
+  {
     type: 'proscons',
     items: [
       {
@@ -123,6 +162,23 @@ const seo: ToolLocaleContent<AudioDelayUI>['seo'] = [
     ],
     proTitle: 'Vorteile',
     conTitle: 'Einschränkungen',
+  },
+  {
+    type: 'glossary',
+    items: [
+      {
+        term: 'Haas Effekt',
+        definition: 'Psychoakustisches Phänomen bei dem das Gehör den Schall dem zuerst eintreffenden Signal zuordnet.',
+      },
+      {
+        term: 'Kammfilterung',
+        definition: 'Frequenzgangverzerrung durch Überlagerung eines Signals mit einer verzögerten Version.',
+      },
+      {
+        term: 'Abtastrate',
+        definition: 'Anzahl der pro Sekunde verarbeiteten Audiosamples eines Digitalmischpults.',
+      },
+    ],
   },
 ];
 
