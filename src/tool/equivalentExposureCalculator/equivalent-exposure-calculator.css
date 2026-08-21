@@ -21,7 +21,6 @@
   max-width: 1080px;
   margin: 0 auto;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  font-family: inherit;
 }
 
 .theme-dark .equivalent-exposure-calculator-card {
@@ -276,30 +275,30 @@
 
 .ev-dark {
   background-color: #312e81;
-  color: #ffffff;
+  color: #fff;
   border: 1px solid #4338ca;
 }
 
 .ev-low {
   background-color: #1e1b4b;
-  color: #ffffff;
+  color: #fff;
   border: 1px solid #3730a3;
 }
 
 .ev-medium {
   background-color: #064e3b;
-  color: #ffffff;
+  color: #fff;
   border: 1px solid #047857;
 }
 
 .ev-high {
   background-color: #075985;
-  color: #ffffff;
+  color: #fff;
   border: 1px solid #0284c7;
 }
 
 .ev-sunny {
   background-color: #78350f;
-  color: #ffffff;
+  color: #fff;
   border: 1px solid #b45309;
 }
