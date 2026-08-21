@@ -24,7 +24,10 @@ export { videoMerger } from './tool/videoMerger/entry';
 export type { VideoMergerUI, VideoMergerLocaleContent } from './tool/videoMerger/entry';
 export { audioDelayDistanceCalculator } from './tool/audioDelayDistanceCalculator/entry';
 export type { AudioDelayUI, AudioDelayLocaleContent } from './tool/audioDelayDistanceCalculator/entry';
+export { equivalentExposureCalculator } from './tool/equivalentExposureCalculator/entry';
+export type { EquivalentExposureUI, EquivalentExposureLocaleContent } from './tool/equivalentExposureCalculator/entry';
 export { audiovisualCategory, toolsCategory } from './category';
+
 import { chromaticLens } from './tool/chromaticLens/entry';
 import { collageMaker } from './tool/collageMaker/entry';
 import { exifCleaner } from './tool/exifCleaner/entry';
@@ -38,4 +41,21 @@ import { videoFrameExtractor } from './tool/videoFrameExtractor/entry';
 import { depthOfFieldCalculator } from './tool/depthOfFieldCalculator/entry';
 import { videoMerger } from './tool/videoMerger/entry';
 import { audioDelayDistanceCalculator } from './tool/audioDelayDistanceCalculator/entry';
-export const ALL_ENTRIES = [chromaticLens, collageMaker, exifCleaner, imageCompressor, printQualityCalculator, privacyBlur, subtitleSync, timelapseCalculator, tvDistance, videoFrameExtractor, depthOfFieldCalculator, videoMerger, audioDelayDistanceCalculator];
+import { equivalentExposureCalculator } from './tool/equivalentExposureCalculator/entry';
+
+export const ALL_ENTRIES = [
+  chromaticLens,
+  collageMaker,
+  exifCleaner,
+  imageCompressor,
+  printQualityCalculator,
+  privacyBlur,
+  subtitleSync,
+  timelapseCalculator,
+  tvDistance,
+  videoFrameExtractor,
+  depthOfFieldCalculator,
+  videoMerger,
+  audioDelayDistanceCalculator,
+  equivalentExposureCalculator,
+];

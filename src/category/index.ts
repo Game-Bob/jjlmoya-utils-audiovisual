@@ -12,6 +12,7 @@ import { videoFrameExtractor } from '../tool/videoFrameExtractor/entry';
 import { depthOfFieldCalculator } from '../tool/depthOfFieldCalculator/entry';
 import { videoMerger } from '../tool/videoMerger/entry';
 import { audioDelayDistanceCalculator } from '../tool/audioDelayDistanceCalculator/entry';
+import { equivalentExposureCalculator } from '../tool/equivalentExposureCalculator/entry';
 
 export const audiovisualCategory: AudiovisualCategoryEntry = {
   icon: 'mdi:camera-iris',
@@ -29,6 +30,7 @@ export const audiovisualCategory: AudiovisualCategoryEntry = {
     depthOfFieldCalculator as AudiovisualToolEntry,
     videoMerger as AudiovisualToolEntry,
     audioDelayDistanceCalculator as AudiovisualToolEntry,
+    equivalentExposureCalculator as AudiovisualToolEntry,
   ],
   i18n: {
     es: async () => (await import('./i18n/es')).content,

@@ -1,0 +1,175 @@
+---
+import type { EquivalentExposureUI } from './ui';
+import {
+  ISO_VALUES_THIRD,
+  APERTURE_VALUES_THIRD,
+  SHUTTER_VALUES_THIRD,
+  formatShutter,
+} from './logic';
+import './equivalent-exposure-calculator.css';
+
+interface Props {
+  ui: EquivalentExposureUI;
+}
+
+const { ui } = Astro.props;
+---
+
+<div class="equivalent-exposure-calculator-card" id="equivalent-exposure-calculator-root">
+  <div class="equivalent-exposure-calculator-presets-box">
+    <div class="equivalent-exposure-calculator-presets-title">{ui.presetsTitle}</div>
+    <div class="equivalent-exposure-calculator-presets-grid">
+      <button type="button" class="equivalent-exposure-calculator-preset-chip equivalent-exposure-calculator-preset-active" data-iso="100" data-aperture="16" data-shutter="0.008">
+        <span class="equivalent-exposure-calculator-preset-name">{ui.presetSunny16}</span>
+      </button>
+      <button type="button" class="equivalent-exposure-calculator-preset-chip" data-iso="200" data-aperture="5.6" data-shutter="0.002">
+        <span class="equivalent-exposure-calculator-preset-name">{ui.presetOvercast}</span>
+      </button>
+      <button type="button" class="equivalent-exposure-calculator-preset-chip" data-iso="800" data-aperture="2.8" data-shutter="0.016666666666666666">
+        <span class="equivalent-exposure-calculator-preset-name">{ui.presetIndoor}</span>
+      </button>
+      <button type="button" class="equivalent-exposure-calculator-preset-chip" data-iso="3200" data-aperture="1.8" data-shutter="0.03333333333333333">
+        <span class="equivalent-exposure-calculator-preset-name">{ui.presetNight}</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="equivalent-exposure-calculator-layout" style="margin-top: 20px;">
+    <div class="equivalent-exposure-calculator-section">
+      <div class="equivalent-exposure-calculator-control-card">
+        <div class="equivalent-exposure-calculator-panel-title">{ui.baseSettingsTitle}</div>
+        
+        <div class="equivalent-exposure-calculator-field">
+          <label class="equivalent-exposure-calculator-label">{ui.isoLabel}</label>
+          <div class="equivalent-exposure-calculator-custom-select" id="custom-select-base-iso" data-value="100">
+            <div class="equivalent-exposure-calculator-custom-select-trigger" tabindex="0" role="combobox" aria-expanded="false" aria-label={ui.isoLabel}>
+              <span class="equivalent-exposure-calculator-select-value">ISO 100</span>
+              <svg class="equivalent-exposure-calculator-chevron" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"></path></svg>
+            </div>
+            <div class="equivalent-exposure-calculator-custom-select-menu" role="listbox">
+              {ISO_VALUES_THIRD.map((val) => (
+                <div class={`equivalent-exposure-calculator-custom-select-option ${val === 100 ? 'equivalent-exposure-calculator-selected' : ''}`} role="option" aria-selected={val === 100} data-value={val}>ISO {val}</div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div class="equivalent-exposure-calculator-field">
+          <label class="equivalent-exposure-calculator-label">{ui.apertureLabel}</label>
+          <div class="equivalent-exposure-calculator-custom-select" id="custom-select-base-aperture" data-value="16">
+            <div class="equivalent-exposure-calculator-custom-select-trigger" tabindex="0" role="combobox" aria-expanded="false" aria-label={ui.apertureLabel}>
+              <span class="equivalent-exposure-calculator-select-value">f/16</span>
+              <svg class="equivalent-exposure-calculator-chevron" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"></path></svg>
+            </div>
+            <div class="equivalent-exposure-calculator-custom-select-menu" role="listbox">
+              {APERTURE_VALUES_THIRD.map((val) => (
+                <div class={`equivalent-exposure-calculator-custom-select-option ${val === 16 ? 'equivalent-exposure-calculator-selected' : ''}`} role="option" aria-selected={val === 16} data-value={val}>f/{val}</div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div class="equivalent-exposure-calculator-field">
+          <label class="equivalent-exposure-calculator-label">{ui.shutterLabel}</label>
+          <div class="equivalent-exposure-calculator-custom-select" id="custom-select-base-shutter" data-value="0.008">
+            <div class="equivalent-exposure-calculator-custom-select-trigger" tabindex="0" role="combobox" aria-expanded="false" aria-label={ui.shutterLabel}>
+              <span class="equivalent-exposure-calculator-select-value">1/125s</span>
+              <svg class="equivalent-exposure-calculator-chevron" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"></path></svg>
+            </div>
+            <div class="equivalent-exposure-calculator-custom-select-menu" role="listbox">
+              {SHUTTER_VALUES_THIRD.map((val) => (
+                <div class={`equivalent-exposure-calculator-custom-select-option ${val === 1 / 125 ? 'equivalent-exposure-calculator-selected' : ''}`} role="option" aria-selected={val === 1 / 125} data-value={val}>{formatShutter(val)}</div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 12px;">
+          <span class="equivalent-exposure-calculator-stat-label">{ui.targetEvLabel}:</span>
+          <strong id="base-ev-value" class="equivalent-exposure-calculator-stat-value" style="margin-left: 8px;">EV 15</strong>
+          <div style="margin-top: 6px;">
+            <span id="base-ev-badge" class="equivalent-exposure-calculator-badge ev-sunny">Sunny 16</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="equivalent-exposure-calculator-section">
+      <div class="equivalent-exposure-calculator-control-card">
+        <div class="equivalent-exposure-calculator-panel-title">{ui.targetSettingsTitle}</div>
+        
+        <div class="equivalent-exposure-calculator-field">
+          <label class="equivalent-exposure-calculator-label">{ui.lockModeLabel}</label>
+          <div class="equivalent-exposure-calculator-custom-select" id="custom-select-lock-mode" data-value="iso">
+            <div class="equivalent-exposure-calculator-custom-select-trigger" tabindex="0" role="combobox" aria-expanded="false" aria-label={ui.lockModeLabel}>
+              <span class="equivalent-exposure-calculator-select-value">{ui.lockIsoOption}</span>
+              <svg class="equivalent-exposure-calculator-chevron" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"></path></svg>
+            </div>
+            <div class="equivalent-exposure-calculator-custom-select-menu" role="listbox">
+              <div class="equivalent-exposure-calculator-custom-select-option equivalent-exposure-calculator-selected" role="option" aria-selected="true" data-value="iso">{ui.lockIsoOption}</div>
+              <div class="equivalent-exposure-calculator-custom-select-option" role="option" aria-selected="false" data-value="aperture">{ui.lockApertureOption}</div>
+              <div class="equivalent-exposure-calculator-custom-select-option" role="option" aria-selected="false" data-value="shutter">{ui.lockShutterOption}</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="equivalent-exposure-calculator-field">
+          <label class="equivalent-exposure-calculator-label">{ui.isoLabel}</label>
+          <div class="equivalent-exposure-calculator-custom-select equivalent-exposure-calculator-disabled" id="custom-select-target-iso" data-value="100">
+            <div class="equivalent-exposure-calculator-custom-select-trigger" tabindex="0" role="combobox" aria-expanded="false" aria-label={ui.isoLabel}>
+              <span class="equivalent-exposure-calculator-select-value">ISO 100</span>
+              <svg class="equivalent-exposure-calculator-chevron" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"></path></svg>
+            </div>
+            <div class="equivalent-exposure-calculator-custom-select-menu" role="listbox">
+              {ISO_VALUES_THIRD.map((val) => (
+                <div class={`equivalent-exposure-calculator-custom-select-option ${val === 100 ? 'equivalent-exposure-calculator-selected' : ''}`} role="option" aria-selected={val === 100} data-value={val}>ISO {val}</div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div class="equivalent-exposure-calculator-field">
+          <label class="equivalent-exposure-calculator-label">{ui.apertureLabel}</label>
+          <div class="equivalent-exposure-calculator-custom-select" id="custom-select-target-aperture" data-value="4">
+            <div class="equivalent-exposure-calculator-custom-select-trigger" tabindex="0" role="combobox" aria-expanded="false" aria-label={ui.apertureLabel}>
+              <span class="equivalent-exposure-calculator-select-value">f/4</span>
+              <svg class="equivalent-exposure-calculator-chevron" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"></path></svg>
+            </div>
+            <div class="equivalent-exposure-calculator-custom-select-menu" role="listbox">
+              {APERTURE_VALUES_THIRD.map((val) => (
+                <div class={`equivalent-exposure-calculator-custom-select-option ${val === 4 ? 'equivalent-exposure-calculator-selected' : ''}`} role="option" aria-selected={val === 4} data-value={val}>f/{val}</div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div class="equivalent-exposure-calculator-field">
+          <label class="equivalent-exposure-calculator-label">{ui.shutterLabel}</label>
+          <div class="equivalent-exposure-calculator-custom-select" id="custom-select-target-shutter" data-value="0.002">
+            <div class="equivalent-exposure-calculator-custom-select-trigger" tabindex="0" role="combobox" aria-expanded="false" aria-label={ui.shutterLabel}>
+              <span class="equivalent-exposure-calculator-select-value">1/500s</span>
+              <svg class="equivalent-exposure-calculator-chevron" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"></path></svg>
+            </div>
+            <div class="equivalent-exposure-calculator-custom-select-menu" role="listbox">
+              {SHUTTER_VALUES_THIRD.map((val) => (
+                <div class={`equivalent-exposure-calculator-custom-select-option ${val === 1 / 500 ? 'equivalent-exposure-calculator-selected' : ''}`} role="option" aria-selected={val === 1 / 500} data-value={val}>{formatShutter(val)}</div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="equivalent-exposure-calculator-stage-card" style="margin-top: 24px;">
+    <div id="svg-container" style="width: 100%; display: flex; flex-direction: column; align-items: center;"></div>
+  </div>
+</div>
+
+<script>
+  import { initEquivalentExposureController } from './controller';
+  const root = document.getElementById('equivalent-exposure-calculator-root');
+  if (root) {
+    initEquivalentExposureController(root);
+  }
+</script>

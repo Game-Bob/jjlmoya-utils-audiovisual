@@ -1,0 +1,18 @@
+---
+import { Bibliography as SharedBibliography } from '@jjlmoya/utils-shared';
+import { equivalentExposureCalculator } from './entry';
+import type { KnownLocale, ToolLocaleContent } from '../../types';
+import type { EquivalentExposureUI } from './ui';
+
+interface Props {
+  locale?: KnownLocale;
+}
+
+const { locale = 'en' } = Astro.props;
+const content = await equivalentExposureCalculator.i18n[locale]?.();
+if (!content || !content.bibliography || content.bibliography.length === 0) return null;
+
+const { bibliography } = content as unknown as ToolLocaleContent<EquivalentExposureUI>;
+---
+
+<SharedBibliography links={bibliography} />
