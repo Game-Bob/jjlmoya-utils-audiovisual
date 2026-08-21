@@ -160,7 +160,7 @@ export function initEquivalentExposureController(root: HTMLElement): void {
       baseIso,
       baseAperture,
       baseShutter,
-      lockMode: lockMode as any,
+      lockMode: lockMode as 'iso' | 'aperture' | 'shutter',
       targetIso: currentIso,
       targetAperture: currentAp,
       targetShutter: currentSh,
