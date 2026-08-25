@@ -70,16 +70,16 @@ const seo: ToolLocaleContent<EquivalentExposureUI>['seo'] = [
     type: 'summary',
     title: 'Pozlama Karşılıklılığı Özellikleri',
     items: [
-    "ISO, Diyafram ve Enstantane arasında tam 1/3 EV durak hesaplaması",
-    "SVG formatında etkileşimli Pozlama Üçgeni vektör görselleştirici",
-    "Alan derinliği, hareket bulanıklığı ve gürültü için canlı geri bildirim",
-    "Güneşli 16, Bulutlu ve Gece için tek tıkla hızlı ön ayarlar"
-],
+      "ISO, Diyafram ve Enstantane arasında tam 1/3 EV durak hesaplaması",
+      "SVG formatında etkileşimli Pozlama Üçgeni vektör görselleştirici",
+      "Alan derinliği, hareket bulanıklığı ve gürültü için canlı geri bildirim",
+      "Güneşli 16, Bulutlu ve Gece için tek tıkla hızlı ön ayarlar"
+    ],
   },
   { type: 'title', text: 'Pozlama Üçgenini Anlamak', level: 2 },
   {
     type: 'paragraph',
-    html: 'Fotoğrafçılıkta pozlama diyafram, enstantane ve ISO tarafından yönetilir. Bir değişkendeki değişiklik karşılıklı telafi gerektirir.',
+    html: 'Fotoğrafçılıkta pozlama diyafram açıklığı, enstantane hızı ve sensör ISO hassasiyeti arasındaki sürekli etkileşim tarafından yönetilir. Bu üç değişkenden birinde yapılan herhangi bir değişiklik, sensöre ulaşan toplam ışık miktarını korumak için diğer değişkenlerde karşılıklı bir telafi gerektirir.',
   },
   {
     type: 'stats',
@@ -94,55 +94,55 @@ const seo: ToolLocaleContent<EquivalentExposureUI>['seo'] = [
   {
     type: 'table',
     headers: [
-    "Yaratıcı Hedef",
-    "Diyafram Ayarı",
-    "Enstantane Ayarı",
-    "ISO Ayarı",
-    "Görsel Sonuç"
-],
+      "Yaratıcı Hedef",
+      "Diyafram Ayarı",
+      "Enstantane Ayarı",
+      "ISO Ayarı",
+      "Görsel Sonuç"
+    ],
     rows: [
-    [
+      [
         "Hareketi Dondur",
         "Aç (f/2.8)",
         "Hızlandır (1/1000s)",
         "Sabit Tut",
         "Daha az alan derinliği"
-    ],
-    [
+      ],
+      [
         "Manzara Netliği",
         "Kapat (f/11)",
         "Yavaşlat (1/30s)",
         "Sabit Tut",
         "Tripod gerekli"
-    ],
-    [
+      ],
+      [
         "Elde Düşük Işık",
         "Maksimum Aç (f/1.4)",
         "Elde tutma sınırı (1/60s)",
         "Artır (ISO 3200)",
         "Daha fazla gürültü"
-    ],
-    [
+      ],
+      [
         "Stüdyo Kalitesi",
         "Optimal (f/8)",
         "Flaş Senkron (1/200s)",
         "Temel ISO 100",
         "Maksimum dinamik aralık"
-    ]
-],
+      ]
+    ],
   },
   { type: 'title', text: 'Eşdeğer Ayarların Yaratıcı Etkisi', level: 3 },
   {
     type: 'paragraph',
-    html: 'Eşdeğer pozlamalar aynı parlaklığı sağlasa da görsel karakter farklıdır:',
+    html: 'Eşdeğer pozlama ayarları sensör üzerinde tam olarak aynı toplam ışık miktarını ve parlaklığı sağlasa da, nihai fotoğrafın görsel karakteri ve estetik görünümü seçilen parametrelere bağlı olarak önemli ölçüde farklılık gösterir:',
   },
   {
     type: 'list',
     items: [
-    "<strong>Diyafram:</strong> Alan derinliğini ve arka plan bulanıklığını kontrol eder.",
-    "<strong>Enstantane Hızı:</strong> Hareketin netliğini kontrol eder.",
-    "<strong>ISO Hassasiyeti:</strong> Gürültü pahasına sensör sinyalini artırır."
-],
+      "<strong>Diyafram:</strong> Alan derinliğini ve arka plan bulanıklığını kontrol eder. Geniş diyafram açıklıkları yumuşak ve estetik bir bokeh efekti oluşturur.",
+      "<strong>Enstantane Hızı:</strong> Sensörün ışık alma süresini kontrol ederek hızlı hareketleri dondurmanızı veya hareket bulanıklığı kaydetmenizi sağlar.",
+      "<strong>ISO Hassasiyeti:</strong> Düşük ışık koşullarında sensör sinyalini güçlendirir ancak dijital gürültü miktarını artırma riski taşır."
+    ],
     icon: 'mdi:check-circle',
   },
   {
@@ -156,7 +156,7 @@ const seo: ToolLocaleContent<EquivalentExposureUI>['seo'] = [
           "f/1.4 ila f/2.8 Diyafram",
           "Hızlı enstantane",
           "Yumuşak bokeh"
-],
+        ],
       },
       {
         title: 'Derin Manzara Ayarı',
@@ -166,7 +166,7 @@ const seo: ToolLocaleContent<EquivalentExposureUI>['seo'] = [
           "Tatlı nokta f/8 ila f/11",
           "Tripod üzerinde yavaş enstantane",
           "Maksimum optik çözünürlük"
-],
+        ],
         highlight: true,
       },
     ],
@@ -184,25 +184,23 @@ const seo: ToolLocaleContent<EquivalentExposureUI>['seo'] = [
         con: 'Manuel kırpma faktörü ayarı gerektirir',
       },
     ],
-    proTitle: 'Teknik Güçler',
-    conTitle: 'Fiziksel Sınırlar',
   },
   {
     type: 'glossary',
     items: [
-    {
+      {
         "term": "Pozlama Değeri (EV)",
         "definition": "Diyafram ve enstantaneyi birleştiren logaritmik ölçek."
-    },
-    {
+      },
+      {
         "term": "Karşılıklılık Yasası",
         "definition": "Pozlamanın ışık yoğunluğu ve sürenin çarpımı olduğu ilke."
-    },
-    {
+      },
+      {
         "term": "Pozlama Durağı (Stop)",
         "definition": "Işık miktarının iki katına çıkmasını veya yarıya inmesini ifade eden bağıl birim."
-    }
-],
+      }
+    ],
   },
 ];
 

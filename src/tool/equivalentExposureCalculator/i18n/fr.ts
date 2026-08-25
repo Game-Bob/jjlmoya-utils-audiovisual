@@ -70,16 +70,16 @@ const seo: ToolLocaleContent<EquivalentExposureUI>['seo'] = [
     type: 'summary',
     title: 'Caractéristiques de Réciprocité d\'Exposition',
     items: [
-    "Calcul exact au 1/3 d'IL entre ISO, Ouverture et Vitesse",
-    "Visualiseur vectoriel interactif du Triangle d'Exposition en SVG",
-    "Indicateurs de profondeur de champ, de flou de bougé et de bruit",
-    "Préréglages en un clic pour Soleil 16, Nuageux et Nuit"
-],
+      "Calcul exact au 1/3 d'IL entre ISO, Ouverture et Vitesse",
+      "Visualiseur vectoriel interactif du Triangle d'Exposition en SVG",
+      "Indicateurs de profondeur de champ, de flou de bougé et de bruit",
+      "Préréglages en un clic pour Soleil 16, Nuageux et Nuit"
+    ],
   },
   { type: 'title', text: 'Comprendre le Triangle d\'Exposition', level: 2 },
   {
     type: 'paragraph',
-    html: 'L\'exposition est régie par l\'ouverture, la vitesse d\'obturation et l\'ISO. Toute modification d\'un paramètre exige un ajustement réciproque.',
+    html: 'L\'exposition en photographie est régie par l\'interaction continue entre l\'ouverture du diaph, la vitesse d\'obturation et la sensibilité ISO du capteur. Toute modification apportée à l\'une de ces variables exige une compensation réciproque sur les autres afin de maintenir la quantité totale de lumière captée par la surface sensible.',
   },
   {
     type: 'stats',
@@ -94,55 +94,55 @@ const seo: ToolLocaleContent<EquivalentExposureUI>['seo'] = [
   {
     type: 'table',
     headers: [
-    "Objectif Créatif",
-    "Réglage d'Ouverture",
-    "Réglage de Vitesse",
-    "Réglage ISO",
-    "Conséquence Visuelle"
-],
+      "Objectif Créatif",
+      "Réglage d'Ouverture",
+      "Réglage de Vitesse",
+      "Réglage ISO",
+      "Conséquence Visuelle"
+    ],
     rows: [
-    [
+      [
         "Figer l'Action",
         "Ouvrir (f/2.8)",
         "Plus rapide (1/1000s)",
         "Garder constant",
         "Faible profondeur de champ"
-    ],
-    [
+      ],
+      [
         "Netteté Paysage",
         "Fermer (f/11)",
         "Plus lente (1/30s)",
         "Garder constant",
         "Trépied requis"
-    ],
-    [
+      ],
+      [
         "Basse Lumière à la Main",
         "Ouvrir au max (f/1.4)",
         "Limite à la main (1/60s)",
         "Augmenter (ISO 3200)",
         "Bruit numérique accru"
-    ],
-    [
+      ],
+      [
         "Qualité Studio Maximale",
         "Ouverture optimale (f/8)",
         "Synchro Flash (1/200s)",
         "ISO 100 de base",
         "Plage dynamique maximale"
-    ]
-],
+      ]
+    ],
   },
   { type: 'title', text: 'Impact Créatif des Réglages Équivalents', level: 3 },
   {
     type: 'paragraph',
-    html: 'Bien que les expositions équivalentes produisent la même luminosité, le rendu visuel diffère :',
+    html: 'Bien que les réglages d\'exposition équivalents fournissent exactement la même luminosité globale sur le capteur, le rendu artistique et l\'aspect visuel de la photo changent considérablement selon les choix d\'ouverture, de vitesse d\'obturation et de sensibilité ISO :',
   },
   {
     type: 'list',
     items: [
-    "<strong>Ouverture :</strong> Contrôle la profondeur de champ et le flou d'arrière-plan.",
-    "<strong>Vitesse d'obturation :</strong> Contrôle la netteté des sujets en mouvement.",
-    "<strong>ISO :</strong> Amplifie le signal du capteur au prix du bruit numérique."
-],
+      "<strong>Ouverture :</strong> Contrôle la profondeur de champ et le flou d'arrière-plan.",
+      "<strong>Vitesse d'obturation :</strong> Contrôle la netteté des sujets en mouvement.",
+      "<strong>ISO :</strong> Amplifie le signal du capteur au prix du bruit numérique."
+    ],
     icon: 'mdi:check-circle',
   },
   {
@@ -156,7 +156,7 @@ const seo: ToolLocaleContent<EquivalentExposureUI>['seo'] = [
           "Ouverture f/1.4 à f/2.8",
           "Vitesse rapide",
           "Bokeh doux"
-],
+        ],
       },
       {
         title: 'Réglage Paysage Profond',
@@ -166,7 +166,7 @@ const seo: ToolLocaleContent<EquivalentExposureUI>['seo'] = [
           "Plage idéale f/8 à f/11",
           "Vitesse lente sur trépied",
           "Résolution optique maximale"
-],
+        ],
         highlight: true,
       },
     ],
@@ -184,25 +184,23 @@ const seo: ToolLocaleContent<EquivalentExposureUI>['seo'] = [
         con: 'Nécessite d\'ajuster le facteur de cadrage manuellement',
       },
     ],
-    proTitle: 'Forces Techniques',
-    conTitle: 'Limites Physiques',
   },
   {
     type: 'glossary',
     items: [
-    {
+      {
         "term": "Valeur d'Exposition (EV)",
         "definition": "Échelle logarithmique combinant ouverture et vitesse."
-    },
-    {
+      },
+      {
         "term": "Loi de Réciprocité",
         "definition": "Principe selon lequel l'exposition est le produit de l'intensité par le temps."
-    },
-    {
+      },
+      {
         "term": "Valeur d'IL (Stop)",
         "definition": "Unité relative correspondant au doublement ou à la réduction de moitié de la lumière."
-    }
-],
+      }
+    ],
   },
 ];
 

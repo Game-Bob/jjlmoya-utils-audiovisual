@@ -70,16 +70,16 @@ const seo: ToolLocaleContent<EquivalentExposureUI>['seo'] = [
     type: 'summary',
     title: 'Fitur Timbal Balik Eksposur',
     items: [
-    "Perhitungan tepat 1/3 EV stop untuk ISO, Aperture, dan Kecepatan Rana",
-    "Visualisator vektor Segitiga Eksposur SVG interaktif",
-    "Umpan balik langsung untuk Kedalaman Bidang, Buram Gerak, dan Noise",
-    "Preset cepat satu klik untuk Sunny 16, Mendung, dan Malam"
-],
+      "Perhitungan tepat 1/3 EV stop untuk ISO, Aperture, dan Kecepatan Rana",
+      "Visualisator vektor Segitiga Eksposur SVG interaktif",
+      "Umpan balik langsung untuk Kedalaman Bidang, Buram Gerak, dan Noise",
+      "Preset cepat satu klik untuk Sunny 16, Mendung, dan Malam"
+    ],
   },
   { type: 'title', text: 'Memahami Segitiga Eksposur', level: 2 },
   {
     type: 'paragraph',
-    html: 'Eksposur ditentukan oleh aperture, kecepatan rana, dan ISO. Setiap perubahan membutuhkan penyesuaian timbal balik.',
+    html: 'Eksposur dalam fotografi diatur oleh interaksi berkelanjutan antara aperture diafragma, kecepatan rana, dan sensitivitas ISO sensor. Setiap perubahan pada salah satu variabel memerlukan penyesuaian timbal balik pada variabel lain untuk mempertahankan total energi cahaya yang sama pada sensor.',
   },
   {
     type: 'stats',
@@ -94,55 +94,55 @@ const seo: ToolLocaleContent<EquivalentExposureUI>['seo'] = [
   {
     type: 'table',
     headers: [
-    "Tujuan Kreatif",
-    "Penyesuaian Aperture",
-    "Penyesuaian Rana",
-    "Penyesuaian ISO",
-    "Konsekuensi Visual"
-],
+      "Tujuan Kreatif",
+      "Penyesuaian Aperture",
+      "Penyesuaian Rana",
+      "Penyesuaian ISO",
+      "Konsekuensi Visual"
+    ],
     rows: [
-    [
+      [
         "Bekukan Gerakan",
         "Buka (f/2.8)",
         "Lebih cepat (1/1000s)",
         "Tetap konstan",
         "Kedalaman bidang lebih dangkal"
-    ],
-    [
+      ],
+      [
         "Ketajaman Lanskap",
         "Tutup (f/11)",
         "Lebih lambat (1/30s)",
         "Tetap konstan",
         "Memerlukan tripod"
-    ],
-    [
+      ],
+      [
         "Cahaya Redup Genggam",
         "Buka maks (f/1.4)",
         "Batas genggam (1/60s)",
         "Tingkatkan (ISO 3200)",
         "Noise sensor lebih tinggi"
-    ],
-    [
+      ],
+      [
         "Kualitas Studio Maksimal",
         "Optimal (f/8)",
         "Sinkron Kilat (1/200s)",
         "ISO 100 dasar",
         "Rentang dinamis maksimal"
-    ]
-],
+      ]
+    ],
   },
   { type: 'title', text: 'Dampak Kreatif Pengaturan Ekivalen', level: 3 },
   {
     type: 'paragraph',
-    html: 'Meskipun eksposur ekivalen menghasilkan kecerahan yang sama, karakter visualnya berbeda:',
+    html: 'Meskipun pengaturan eksposur ekivalen menghasilkan tingkat kecerahan keseluruhan yang sama pada sensor, karakter estetika dan tampilan visual foto akan berbeda secara signifikan bergantung pada pilihan aperture, kecepatan rana, dan ISO:',
   },
   {
     type: 'list',
     items: [
-    "<strong>Aperture:</strong> Mengontrol kedalaman bidang dan kekaburan latar belakang.",
-    "<strong>Kecepatan Rana:</strong> Mengontrol pembekuan atau buram gerakan.",
-    "<strong>ISO:</strong> Memperkuat sinyal sensor dengan mengorbankan timbulnya noise."
-],
+      "<strong>Aperture:</strong> Mengontrol kedalaman bidang dan kekaburan latar belakang. Aperture besar menghasilkan bokeh yang lembut.",
+      "<strong>Kecepatan Rana:</strong> Mengontrol waktu pembukaan sensor untuk membekukan gerakan cepat atau merekam jejak gerakan.",
+      "<strong>ISO:</strong> Memperkuat sinyal sensor untuk pengambilan gambar dalam kondisi pencahayaan redup dengan risiko timbulnya noise."
+    ],
     icon: 'mdi:check-circle',
   },
   {
@@ -156,7 +156,7 @@ const seo: ToolLocaleContent<EquivalentExposureUI>['seo'] = [
           "Aperture f/1.4 hingga f/2.8",
           "Kecepatan rana cepat",
           "Bokeh lembut"
-],
+        ],
       },
       {
         title: 'Pengaturan Lanskap Dalam',
@@ -166,7 +166,7 @@ const seo: ToolLocaleContent<EquivalentExposureUI>['seo'] = [
           "Titik ideal f/8 hingga f/11",
           "Kecepatan lambat pada tripod",
           "Resolusi optik maksimal"
-],
+        ],
         highlight: true,
       },
     ],
@@ -184,25 +184,23 @@ const seo: ToolLocaleContent<EquivalentExposureUI>['seo'] = [
         con: 'Memerlukan penyesuaian faktor pangkas manual',
       },
     ],
-    proTitle: 'Keunggulan Teknis',
-    conTitle: 'Batasan Fisik',
   },
   {
     type: 'glossary',
     items: [
-    {
+      {
         "term": "Nilai Eksposur (EV)",
         "definition": "Skala logaritma yang menggabungkan aperture dan kecepatan rana."
-    },
-    {
+      },
+      {
         "term": "Hukum Timbal Balik",
         "definition": "Prinsip proporsionalitas eksposur dari intensitas dan waktu."
-    },
-    {
+      },
+      {
         "term": "Stop Eksposur",
         "definition": "Satuan relatif yang setara dengan menggandakan atau membagi dua cahaya."
-    }
-],
+      }
+    ],
   },
 ];
 

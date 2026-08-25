@@ -70,16 +70,16 @@ const seo: ToolLocaleContent<EquivalentExposureUI>['seo'] = [
     type: 'summary',
     title: 'Recursos de Reciprocidade de Exposição',
     items: [
-    "Cálculo exato de 1/3 de EV entre ISO, Abertura e Velocidade",
-    "Visualizador vetorial dinâmico do Triângulo de Exposição em SVG",
-    "Feedback sobre profundidade de campo, movimento e ruído",
-    "Predefinições rápidas para Sol 16, Nublado e Noite"
-],
+      "Cálculo exato de 1/3 de EV entre ISO, Abertura e Velocidade",
+      "Visualizador vetorial dinâmico do Triângulo de Exposição em SVG",
+      "Feedback sobre profundidade de campo, movimento e ruído",
+      "Predefinições rápidas para Sol 16, Nublado e Noite"
+    ],
   },
   { type: 'title', text: 'Compreendendo o Triângulo de Exposição', level: 2 },
   {
     type: 'paragraph',
-    html: 'A exposição em fotografia é governada pela abertura, velocidade e ISO. Qualquer alteração exige compensação recíproca.',
+    html: 'A exposição em fotografia é governada pela interação contínua entre a abertura do diafragma, a velocidade do obturador e a sensibilidade ISO do sensor. Qualquer alteração feita em uma dessas variáveis exige uma compensação recíproca nas outras para manter a quantidade total de luz captada.',
   },
   {
     type: 'stats',
@@ -94,55 +94,55 @@ const seo: ToolLocaleContent<EquivalentExposureUI>['seo'] = [
   {
     type: 'table',
     headers: [
-    "Objetivo Criativo",
-    "Ajuste de Abertura",
-    "Ajuste de Obturador",
-    "Ajuste de ISO",
-    "Consequência Visual"
-],
+      "Objetivo Criativo",
+      "Ajuste de Abertura",
+      "Ajuste de Obturador",
+      "Ajuste de ISO",
+      "Consequência Visual"
+    ],
     rows: [
-    [
+      [
         "Congelar Ação",
         "Abrir (f/2.8)",
         "Mais rápida (1/1000s)",
         "Manter constante",
         "Menor profundidade de campo"
-    ],
-    [
+      ],
+      [
         "Nitidez em Paisagem",
         "Fechar (f/11)",
         "Mais lenta (1/30s)",
         "Manter constante",
         "Exige tripé ou apoio"
-    ],
-    [
+      ],
+      [
         "Pouca Luz à Mão",
         "Abrir ao máximo (f/1.4)",
         "Limite de pulso (1/60s)",
         "Aumentar (ISO 3200)",
         "Maior ruído digital"
-    ],
-    [
+      ],
+      [
         "Qualidade Estúdio",
         "Abertura ótima (f/8)",
         "Sincro Flash (1/200s)",
         "ISO 100 base",
         "Máxima faixa dinâmica"
-    ]
-],
+      ]
+    ],
   },
   { type: 'title', text: 'Impacto Criativo dos Ajustes Equivalentes', level: 3 },
   {
     type: 'paragraph',
-    html: 'Embora exposições equivalentes gerem o mesmo brilho, o resultado visual difere:',
+    html: 'Embora configurações de exposição equivalentes gerem exatamente o mesmo brilho geral no sensor, a estética e o aspecto visual da imagem final diferem significativamente com base nas escolhas de abertura, velocidade e ISO:',
   },
   {
     type: 'list',
     items: [
-    "<strong>Abertura:</strong> Controla a profundidade de campo e o desfoque do fundo.",
-    "<strong>Velocidade:</strong> Controla o tempo de exposição e o congelamento de movimento.",
-    "<strong>ISO:</strong> Amplifica o sinal do sensor ao custo de ruído digital."
-],
+      "<strong>Abertura:</strong> Controla a profundidade de campo e o desfoque do fundo. Aberturas grandes criam um efeito bokeh suave.",
+      "<strong>Velocidade:</strong> Controla o tempo de exposição e o congelamento ou registro do movimento dos elementos na cena.",
+      "<strong>ISO:</strong> Amplifica o sinal elétrico do sensor em baixa luz ao custo de um aumento no ruído digital."
+    ],
     icon: 'mdi:check-circle',
   },
   {
@@ -156,7 +156,7 @@ const seo: ToolLocaleContent<EquivalentExposureUI>['seo'] = [
           "Abertura f/1.4 a f/2.8",
           "Velocidade rápida",
           "Bokeh suave"
-],
+        ],
       },
       {
         title: 'Configuração Paisagem Profunda',
@@ -166,7 +166,7 @@ const seo: ToolLocaleContent<EquivalentExposureUI>['seo'] = [
           "Ponto ideal f/8 a f/11",
           "Velocidade lenta no tripé",
           "Máxima resolução"
-],
+        ],
         highlight: true,
       },
     ],
@@ -184,25 +184,23 @@ const seo: ToolLocaleContent<EquivalentExposureUI>['seo'] = [
         con: 'Exige ajuste manual do fator de corte',
       },
     ],
-    proTitle: 'Pontos Fortes',
-    conTitle: 'Limites Físicos',
   },
   {
     type: 'glossary',
     items: [
-    {
+      {
         "term": "Valor de Exposição (EV)",
         "definition": "Escala logarítmica que combina abertura e velocidade."
-    },
-    {
+      },
+      {
         "term": "Lei da Reciprocidade",
         "definition": "Princípio de proporcionalidade entre luz e tempo."
-    },
-    {
+      },
+      {
         "term": "Stop de Luz",
         "definition": "Unidade relativa equivalente a dobrar ou reduzir à metade a luz."
-    }
-],
+      }
+    ],
   },
 ];
 

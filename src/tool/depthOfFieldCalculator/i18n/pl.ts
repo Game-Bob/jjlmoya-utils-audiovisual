@@ -1,61 +1,59 @@
 import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
-import type { DepthOfFieldUI, DepthOfFieldLocaleContent } from '../index';
+import type { DepthOfFieldUI } from '../ui';
+import type { ToolLocaleContent, FAQItem, HowToStep } from '../../../types';
+
+export type DepthOfFieldLocaleContent = ToolLocaleContent<DepthOfFieldUI>;
 
 const slug = 'kalkulator-glebi-ostrosci';
-const title = 'Kalkulator Głębi Ostrości: DoF w czasie rzeczywistym';
-const description = 'Oblicz głębię ostrości, odległość hiperfokalną i limity ostrości w czasie rzeczywistym. Obsługuje wszystkie rozmiary matryc z precyzją 1/3 stopnia.';
+const title = 'Kalkulator Głębi Ostrości Rozkład i Hiperfokalna';
+const description = 'Oblicz dokładnie głębię ostrości (DoF), odległość hiperfokalną oraz bliską i dalszą granicę ostrości dla dowolnego aparatu i obiektywu.';
 
 const ui: DepthOfFieldUI = {
-    title: 'Głębia Ostrości',
-    paramsTitle: 'Parametry',
-    sensorLabel: 'Matryca Aparatu',
-    moreLabel: 'Więcej matryc...',
-    apertureLabel: 'Przysłona',
-    focalLabel: 'Ogniskowa',
-    distanceLabel: 'Odległość od Obiektu',
-    metersLabel: 'm',
-    feetLabel: 'ft',
-    resultsTitle: 'Wyniki',
-    totalDofLabel: 'Całkowita Głębia Ostrości',
-    infiniteLabel: 'Nieskończoność',
-    nearLimitLabel: 'Bliższa Granica',
-    farLimitLabel: 'Dalsza Granica',
-    hyperfocalLabel: 'Hiperfokalna',
-    cocLabel: 'Krążek Rozproszenia',
-    cocUnit: 'mm',
-    showDetailsLabel: 'Pokaż szczegóły techniczne',
-    hideDetailsLabel: 'Ukryj szczegóły techniczne',
-    errorBelowFocal: 'Odległość od obiektu musi być większa niż ogniskowa.',
+    title: 'Kalkulator Głębi Ostrości',
+    subtitle: 'Obliczanie akceptowalnego zakresu ostrości, odległości hiperfokalnej oraz stref ostrości przed i za obiektem.',
+    sensorTitle: 'Aparat i Matryca',
+    sensorLabel: 'Rozmiar Matrycy / Aparat',
+    customCocLabel: 'Własny Krążek Rozproszenia (CoC mm)',
+    lensTitle: 'Parametry Obiektywu',
+    focalLengthLabel: 'Ogniskowa (mm)',
+    apertureLabel: 'Przysłona (f-stop)',
+    distanceTitle: 'Odległość od Obiektu',
+    subjectDistanceLabel: 'Odległość',
+    presetsTitle: 'Szybkie Ustawienia',
+    presetPortrait: 'Portret (85mm f/1.8)',
+    presetLandscape: 'Krajobraz (24mm f/8)',
+    presetStreet: 'Fotografia Uliczna (35mm f/5.6)',
+    presetMacro: 'Makro (100mm f/2.8)',
 };
 
-const faq: DepthOfFieldLocaleContent['faq'] = [
+const faq: FAQItem[] = [
     {
-        question: 'Co to jest głębia ostrości?',
-        answer: 'Głębia ostrości (DoF) to zakres odległości w scenie, który na zdjęciu wydaje się akceptowalnie ostry. Zależy od przysłony, ogniskowej, odległości od obiektu i rozmiaru matrycy.',
+        question: 'Czym jest głębia ostrości (DoF)?',
+        answer: 'Głębia ostrości to zakres odległości w przestrzeni obiektu, w którym elementy obrazu wydają się ostre i akceptowalnie wyraźne.',
     },
     {
         question: 'Co to jest odległość hiperfokalna?',
-        answer: 'Odległość hiperfokalna to najmniejsza odległość ostrzenia, przy której obiekty w nieskończoności są nadal akceptowalnie ostre. Ustawienie ostrości na tę odległość maksymalizuje głębię ostrości.',
+        answer: 'Odległość hiperfokalna to punkt ostrości, przy którym głębia ostrości rozciąga się od połowy tej odległości aż do nieskończoności.',
     },
     {
-        question: 'Dlaczego większa przysłona zmniejsza głębię ostrości?',
-        answer: 'Szerszy otwór przysłony zbiera światło z większego obszaru soczewki, co zwiększa krążek rozproszenia dla punktów poza płaszczyzną ostrości, zawężając strefę akceptowalnej ostrości.',
+        question: 'Dlaczego rozmiar matrycy wpływa na głębię ostrości?',
+        answer: 'Mniejsze matryce wymagają większego powiększenia obrazu, co zmniejsza dopuszczalny krążek rozproszenia i zmienia głębię ostrości przy tej samej ogniskowej.',
     },
     {
-        question: 'Jak rozmiar matrycy wpływa na głębię ostrości?',
-        answer: 'Większe matryce mają wyższy próg krążka rozproszenia. Jednak przy ekwiwalentnych kątach widzenia większe matryce dają mniejszą głębię, ponieważ wymagają dłuższych ogniskowych.',
+        question: 'Jak przysłona wpływa na dyfrakcję?',
+        answer: 'Bardzo małe otwory przysłony (np. f/16, f/22) powodują ugięcie fal świetlnych, co obniża ogólną ostrość obrazu mimo większej głębi.',
     },
 ];
 
-const howTo: DepthOfFieldLocaleContent['howTo'] = [
+const howTo: HowToStep[] = [
     {
-        name: 'Wybierz matrycę aparatu',
-        text: 'Wybierz format matrycy odpowiadający Twojemu aparatowi. Ustala to wartość krążka rozproszenia (CoC) używaną do obliczeń.',
+        name: 'Wybierz rozmiar matrycy',
+        text: 'Wybierz aparat lub format matrycy z listy, aby automatycznie ustawić odpowiedni krążek rozproszenia.',
     },
     {
-        name: 'Ustaw przysłonę i ogniskową',
-        text: 'Wybierz przysłonę w krokach co 1/3 stopnia. Suwak ogniskowej ma skalę logarytmiczną dla większej precyzji w szerokim kącie.',
+        name: 'Wprowadź ogniskową i przysłonę',
+        text: 'Podaj ogniskową obiektywu w milimetrach oraz wybraną wartość przysłony. Użyj suwaków do szybkiej regulacji.',
     },
     {
         name: 'Ustaw odległość od obiektu',
@@ -69,21 +67,21 @@ const howTo: DepthOfFieldLocaleContent['howTo'] = [
 
 const seo: DepthOfFieldLocaleContent['seo'] = [
     { type: 'title', text: 'Zrozumienie głębi ostrości w fotografii i filmie', level: 2 },
-    { type: 'paragraph', html: 'Głębia ostrości to jedno z najpotężniejszych narzędzi kreatywnych. <strong>Mała głębia ostrości</strong> izoluje temat, podczas gdy <strong>duża głębia</strong> utrzymuje ostrość całego krajobrazu. Ten kalkulator daje Ci pełną kontrolę.' },
+    { type: 'paragraph', html: 'Głębia ostrości to jedno z najpotężniejszych narzędzi kreatywnych w rękach fotografa oraz operatora kamery. <strong>Mała głębia ostrości</strong> skutecznie izoluje temat od tła, tworząc piękny rozmyty efekt bokeh, podczas gdy <strong>duża głębia ostrości</strong> utrzymuje idealną ostrość wszystkich planów w fotografii krajobrazowej i architekturze. Ten kalkulator zapewnia precyzyjne obliczenia optyczne dla każdego formatu.' },
 
     { type: 'title', text: 'Trzy zmienne kontrolujące DoF', level: 3 },
     { type: 'table', headers: ['Zmienna', 'Wzrost →', 'Efekt na DoF'], rows: [
-        ['Przysłona', 'f/1.4 → f/16', 'Większa przysłona = mniejsza głębia'],
-        ['Ogniskowa', '24mm → 200mm', 'Dłuższa ogniskowa = mniejsza głębia przy tej samej odległości'],
-        ['Odległość', '1m → 10m', 'Dalszy obiekt = większa głębia'],
+        ['Przysłona', 'f/1.4 → f/16', 'Większa przysłona (mniejsza liczba f) = mniejsza głębia ostrości'],
+        ['Ogniskowa', '24mm → 200mm', 'Dłuższa ogniskowa = mniejsza głębia ostrości przy tej samej odległości'],
+        ['Odległość', '1m → 10m', 'Dalszy obiekt od aparatu = większa głębia ostrości'],
     ]},
 
     { type: 'title', text: 'Odległość hiperfokalna: Maksymalna ostrość', level: 3 },
-    { type: 'paragraph', html: 'Ustawiając ostrość na <strong>odległość hiperfokalną</strong>, wszystko od połowy tej odległości do nieskończoności będzie ostre. Kluczowe w fotografii krajobrazowej.' },
-    { type: 'tip', title: 'Porada praktyczna', html: 'W fotografii ulicznej ustaw ostrość na hiperfokalną. Przy 35mm na APS-C i f/8 wynosi ona ok. <strong>4 metrów</strong>: wszystko od 2m do nieskończoności będzie ostre.' },
+    { type: 'paragraph', html: 'Ustawiając ostrość dokładnie na <strong>odległość hiperfokalną</strong>, cała przestrzeń od połowy tej odległości aż po nieskończoność pozostanie w strefie akceptowalnej ostrości. Jest to kluczowa technika w fotografii krajobrazowej i ulicznej, pozwalająca maksymalizować ostrość całego kadru bez konieczności przymykania przysłony do granic dyfrakcji.' },
+    { type: 'tip', title: 'Porada praktyczna w terenie', html: 'W fotografii ulicznej warto ustawić ostrość na odległość hiperfokalną. Przy ogniskowej 35mm na aparacie z matrycą APS-C przy przysłonie f/8 wynosi ona około <strong>4 metrów</strong>: oznacza to, że wszystko w zakresie od 2 metrów aż po nieskończoność będzie akceptowalnie ostre na zdjęciu.' },
 
     { type: 'title', text: 'Rozmiar matrycy i krążek rozproszenia', level: 3 },
-    { type: 'paragraph', html: '<strong>Krążek rozproszenia (CoC)</strong> definiuje akceptowalną ostrość. Matryca Full Frame ma CoC 0,030 mm; smartfon ok. 0,006 mm. Mniejszy CoC oznacza ostrzejsze kryteria.' },
+    { type: 'paragraph', html: '<strong>Krążek rozproszenia (Circle of Confusion - CoC)</strong> definiuje graniczną wielkość plamki światła na matrycy, która na gotowym zdjęciu wydaje się jeszcze punktem. Matryca Full Frame posiada normatywny CoC o wartości 0,030 mm, podczas gdy matryca smartfona około 0,006 mm. Mniejszy CoC wymaga znacznie ostrzejszych kryteriów optycznych.' },
     { type: 'stats', columns: 3, items: [
         { label: 'Full Frame', value: '0,030 mm', icon: 'mdi:camera' },
         { label: 'APS-C', value: '0,019 mm', icon: 'mdi:camera-outline' },
@@ -91,8 +89,8 @@ const seo: DepthOfFieldLocaleContent['seo'] = [
     ]},
 
     { type: 'title', text: 'DoF w kinie: Ogniskowa vs Matryca', level: 3 },
-    { type: 'paragraph', html: 'Filmowanie w formacie Super 35 często wykorzystuje dłuższe ogniskowe dla uzyskania "filmowego wyglądu". Jasny obiektyw 85mm to klasyk w portrecie.' },
-    { type: 'diagnostic', variant: 'success', title: 'Zasada dystrybucji ostrości', icon: 'mdi:lightbulb-outline', badge: 'Technika Pro', html: 'Dla obiektu w odległości 3m przy 50mm i f/2.8: strefa ostrości za obiektem jest zawsze większa niż przed nim - około w <strong>stosunku 2:1</strong>.' },
+    { type: 'paragraph', html: 'Filmowanie w formacie Super 35 lub Full Frame często wykorzystuje dłuższe ogniskowe obiektywów dla uzyskania pożądanego, plastycznego wyglądu kinowego. Jasny obiektyw portretowy 85mm z przysłoną f/1.8 to klasyczne narzędzie do budowania głębi planów w kadrze.' },
+    { type: 'diagnostic', variant: 'success', title: 'Zasada dystrybucji ostrości', icon: 'mdi:lightbulb-outline', badge: 'Technika Pro', html: 'Dla obiektu znajdującego się w odległości 3m przy ogniskowej 50mm i przysłonie f/2.8: strefa akceptowalnej ostrości za obiektem jest zawsze większa niż przed nim - zazwyczaj w przybliżonym <strong>stosunku 2:1</strong> przy umiarkowanych odległościach.' },
 ];
 
 const faqSchema: WithContext<FAQPage> = {

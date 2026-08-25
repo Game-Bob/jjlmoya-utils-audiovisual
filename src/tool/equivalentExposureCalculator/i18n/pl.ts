@@ -70,16 +70,16 @@ const seo: ToolLocaleContent<EquivalentExposureUI>['seo'] = [
     type: 'summary',
     title: 'Funkcje Wzajemności Ekspozycji',
     items: [
-    "Dokładne obliczenia co 1/3 EV dla ISO, Przysłony i Czasu",
-    "Interaktywny wizualizator Trójkąta Ekspozycji w SVG",
-    "Informacja zwrotna o głębi ostrości, rozmyciu i szumach",
-    "Szybkie ustawienia dla Słoneczne 16, Zachmurzenia i Nocy"
-],
+      "Dokładne obliczenia co 1/3 EV dla ISO, Przysłony i Czasu",
+      "Interaktywny wizualizator Trójkąta Ekspozycji w SVG",
+      "Informacja zwrotna o głębi ostrości, rozmyciu i szumach",
+      "Szybkie ustawienia dla Słoneczne 16, Zachmurzenia i Nocy"
+    ],
   },
   { type: 'title', text: 'Zrozumieć Trójkąt Ekspozycji', level: 2 },
   {
     type: 'paragraph',
-    html: 'Ekspozycja zależy od przysłony, czasu naświetlania i ISO. Każda zmiana wymaga kompensacji wzajemnej.',
+    html: 'Ekspozycja w fotografii jest kształtowana przez ciągłą zależność pomiędzy otworem przysłony obiektywu, czasem naświetlania migawki oraz czułością ISO matrycy. Każda zmiana wprowadzona w jednym z tych parametrów wymaga odpowiedniego przeliczenia i kompensacji wzajemnej na pozostałych wartościach.',
   },
   {
     type: 'stats',
@@ -94,55 +94,55 @@ const seo: ToolLocaleContent<EquivalentExposureUI>['seo'] = [
   {
     type: 'table',
     headers: [
-    "Cel Twórczy",
-    "Korekta Przysłony",
-    "Korekta Czasu",
-    "Korekta ISO",
-    "Konsekwencja Wizualna"
-],
+      "Cel Twórczy",
+      "Korekta Przysłony",
+      "Korekta Czasu",
+      "Korekta ISO",
+      "Konsekwencja Wizualna"
+    ],
     rows: [
-    [
+      [
         "Zamrożenie Ruchu",
         "Otwórz (f/2.8)",
         "Szybciej (1/1000s)",
         "Zachowaj stałe",
         "Mniejsza głębia ostrości"
-    ],
-    [
+      ],
+      [
         "Ostrość Krajobrazu",
         "Zamknij (f/11)",
         "Wolniej (1/30s)",
         "Zachowaj stałe",
         "Wymagany statyw"
-    ],
-    [
+      ],
+      [
         "Słabe Światło z Ręki",
         "Maks. otwarcie (f/1.4)",
         "Limit z ręki (1/60s)",
         "Zwiększ (ISO 3200)",
         "Większy szum matrycy"
-    ],
-    [
+      ],
+      [
         "Jakość Studyjna",
         "Optymalna (f/8)",
         "Synchro z Błyskiem (1/200s)",
         "Baza ISO 100",
         "Maksymalna dynamika"
-    ]
-],
+      ]
+    ],
   },
   { type: 'title', text: 'Twórczy Wpływ Ustawień Ekwiwalentnych', level: 3 },
   {
     type: 'paragraph',
-    html: 'Choć ekwiwalentne ekspozycje dają tę samą jasność, wygląd obrazu się różni:',
+    html: 'Chociaż ekwiwalentne ustawienia ekspozycji dostarczają dokładnie tę samą całkowitą ilość światła na matrycę aparatu, ostateczny charakter wizualny oraz plastyka zdjęcia różnią się znacząco w zależności od wybranych parametrów:',
   },
   {
     type: 'list',
     items: [
-    "<strong>Przysłona:</strong> Kontroluje głębię ostrości i rozmycie tła.",
-    "<strong>Czas naświetlania:</strong> Kontroluje zamrożenie lub rozmycie ruchu.",
-    "<strong>ISO:</strong> Wzmacnia sygnał matrycy kosztem szumu."
-],
+      "<strong>Przysłona:</strong> Kontroluje głębię ostrości oraz stopień rozmycia tła. Duże otwory przysłony tworzą miękki bokeh.",
+      "<strong>Czas naświetlania:</strong> Kontroluje zamrożenie szybkiego ruchu w kadrze lub rejestrację efektownego rozmycia dynamiki.",
+      "<strong>ISO:</strong> Wzmacnia sygnał elektryczny matrycy przy słabym oświetleniu kosztem pojawienia się cyfrowego szumu."
+    ],
     icon: 'mdi:check-circle',
   },
   {
@@ -156,7 +156,7 @@ const seo: ToolLocaleContent<EquivalentExposureUI>['seo'] = [
           "Przysłona f/1.4 do f/2.8",
           "Szybki czas",
           "Miękkie bokeh"
-],
+        ],
       },
       {
         title: 'Ustawienie Głębokiego Krajobrazu',
@@ -166,7 +166,7 @@ const seo: ToolLocaleContent<EquivalentExposureUI>['seo'] = [
           "Optimum f/8 do f/11",
           "Długi czas na statywie",
           "Maksymalna rozdzielczość"
-],
+        ],
         highlight: true,
       },
     ],
@@ -184,25 +184,23 @@ const seo: ToolLocaleContent<EquivalentExposureUI>['seo'] = [
         con: 'Wymaga ręcznej korekty współczynnika kadru',
       },
     ],
-    proTitle: 'Zalety Techniczne',
-    conTitle: 'Ograniczenia Fizyczne',
   },
   {
     type: 'glossary',
     items: [
-    {
+      {
         "term": "Wartość Ekspozycji (EV)",
         "definition": "Skala logarytmiczna łącząca przysłonę i czas."
-    },
-    {
+      },
+      {
         "term": "Prawo Wzajemności",
         "definition": "Zasada proporcjonalności ekspozycji do natężenia i czasu."
-    },
-    {
+      },
+      {
         "term": "Stopień Ekspozycji (Stop)",
         "definition": "Względna jednostka oznaczająca podwojenie lub zmniejszenie o połowę światła."
-    }
-],
+      }
+    ],
   },
 ];
 

@@ -14,6 +14,7 @@ import { DEPTH_OF_FIELD_CALCULATOR_TOOL } from './tool/depthOfFieldCalculator';
 import { VIDEO_MERGER_TOOL } from './tool/videoMerger';
 import { AUDIO_DELAY_DISTANCE_CALCULATOR_TOOL } from './tool/audioDelayDistanceCalculator';
 import { EQUIVALENT_EXPOSURE_CALCULATOR_TOOL } from './tool/equivalentExposureCalculator';
+import { ADAMS_ZONE_SYSTEM_TOOL } from './tool/adamsZoneSystem';
 
 export const ALL_TOOLS: ToolDefinition[] = [
   TIMELAPSE_CALCULATOR_TOOL,
@@ -30,4 +31,5 @@ export const ALL_TOOLS: ToolDefinition[] = [
   VIDEO_MERGER_TOOL,
   AUDIO_DELAY_DISTANCE_CALCULATOR_TOOL,
   EQUIVALENT_EXPOSURE_CALCULATOR_TOOL,
+  ADAMS_ZONE_SYSTEM_TOOL,
 ];

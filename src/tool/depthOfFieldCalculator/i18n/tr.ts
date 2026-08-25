@@ -69,21 +69,21 @@ const howTo: DepthOfFieldLocaleContent['howTo'] = [
 
 const seo: DepthOfFieldLocaleContent['seo'] = [
     { type: 'title', text: 'Fotoğraf ve Sinemada Alan Derinliğini Anlamak', level: 2 },
-    { type: 'paragraph', html: 'Alan derinliği, fotoğrafçılar ve sinemacılar için en güçlü yaratıcı araçlardan biridir. <strong>Sığ alan derinliği</strong> konuyu arka plandan ayırırken, <strong>geniş alan derinliği</strong> manzarayı net tutar.' },
+    { type: 'paragraph', html: 'Alan derinliği (DoF), fotoğrafçılar ve yönetmenler için en güçlü ve esnek yaratıcı araçlardan biridir. <strong>Sığ alan derinliği</strong> konuyu arka plandan başarıyla ayırıp yumuşak bir bokeh oluştururken, <strong>geniş alan derinliği</strong> tüm manzarayı veya mimariyi baştan sona net tutar. Bu hesaplayıcı tüm sensörler için hassas optik hesaplamalar sunar.' },
 
     { type: 'title', text: 'Alan Derinliğini Kontrol Eden Üç Değişken', level: 3 },
     { type: 'table', headers: ['Değişken', 'Artış →', 'DoF Üzerindeki Etkisi'], rows: [
-        ['Diyafram', 'f/1.4 → f/16', 'Daha geniş diyafram = daha sığ DoF'],
+        ['Diyafram', 'f/1.4 → f/16', 'Daha geniş diyafram (küçük f-değeri) = daha sığ DoF'],
         ['Odak Uzaklığı', '24mm → 200mm', 'Daha uzun odak = aynı mesafede daha sığ DoF'],
         ['Obje Mesafesi', '1m → 10m', 'Daha uzak obje = daha geniş DoF'],
     ]},
 
     { type: 'title', text: 'Hiperfokal Mesafe: Maksimum Netlik', level: 3 },
-    { type: 'paragraph', html: '<strong>Hiperfokal mesafeye</strong> odaklandığınızda, bu mesafenin yarısından sonsuza kadar her şey net görünür. Manzara fotoğrafçıları bu tekniği sıkça kullanır.' },
+    { type: 'paragraph', html: '<strong>Hiperfokal mesafeye</strong> odaklandığınızda, bu mesafenin yarısından sonsuza kadar her şey net görünür. Manzara fotoğrafçıları tüm alanın net kalmasını sağlamak için bu tekniği kullanır.' },
     { type: 'tip', title: 'Pratik ipucu', html: 'Sokak fotoğrafçılığı için odağınızı hiperfokal mesafeye ayarlayın. APS-C sensörde 35mm lens ve f/8 ile hiperfokal yaklaşık <strong>4 metredir</strong>: 2 metreden sonsuza her şey net olacaktır.' },
 
     { type: 'title', text: 'Sensör Boyutu ve Bulanıklık Halkası', level: 3 },
-    { type: 'paragraph', html: '<strong>Bulanıklık halkası (CoC)</strong>, kabul edilebilir netliğin sınırıdır. Full Frame sensörde CoC 0.030mm iken akıllı telefonda ~0.006mm\'dir. Daha küçük CoC, daha katı netlik kriteri demektir.' },
+    { type: 'paragraph', html: '<strong>Bulanıklık halkası (Circle of Confusion - CoC)</strong>, kabul edilebilir netliğin sınırını ifade eder. Full Frame sensörde CoC 0.030mm iken akıllı telefonda ~0.006mm\'dir. Daha küçük CoC, daha katı netlik kriteri demektir.' },
     { type: 'stats', columns: 3, items: [
         { label: 'Full Frame', value: '0.030 mm', icon: 'mdi:camera' },
         { label: 'APS-C', value: '0.019 mm', icon: 'mdi:camera-outline' },
@@ -91,7 +91,7 @@ const seo: DepthOfFieldLocaleContent['seo'] = [
     ]},
 
     { type: 'title', text: 'Sinemada DoF: Odak Uzaklığı vs Sensör', level: 3 },
-    { type: 'paragraph', html: 'Super 35 formatında çekim yapan sinemacılar, "sinematik görünüm" oluşturmak için genellikle perspektifi sıkıştıran uzun odak uzaklıklarını tercih ederler.' },
+    { type: 'paragraph', html: 'Super 35 formatında çekim yapan sinemacılar, perspektifi sıkıştıran ve özgün bir "sinematik görünüm" oluşturan uzun odak uzaklıklarını tercih ederler.' },
     { type: 'diagnostic', variant: 'success', title: 'Odak Dağılım Kuralı', icon: 'mdi:lightbulb-outline', badge: 'Profil Teknik', html: '3 metredeki bir obje için 50mm ve f/2.8 ile: Net alan objenin arkasında, önüne göre her zaman daha fazladır; oran yaklaşık <strong>2:1</strong>\'dir.' },
 ];
 

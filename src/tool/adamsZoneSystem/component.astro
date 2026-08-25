@@ -1,0 +1,157 @@
+---
+import { getZone, ZONES } from './logic';
+import type { AdamsZoneSystemUI } from './ui';
+
+interface Props {
+  ui: AdamsZoneSystemUI;
+}
+
+const { ui } = Astro.props;
+---
+
+<section class="azs-tool" data-azs-root>
+  <div class="azs-onboarding">
+    <p class="azs-eyebrow">{ui.orientationTitle}</p>
+    <p class="azs-meter-note">{ui.meterBaselineLabel}</p>
+  </div>
+
+  <div class="azs-zone-selector">
+    <div class="azs-selector-head">
+      <div>
+        <p class="azs-label">{ui.targetPlacementLabel}</p>
+        <strong class="azs-selector-value" data-azs-target-name>Zone III Textured shadow</strong>
+      </div>
+    </div>
+    <div class="azs-zone-strip" data-azs-zone-strip aria-label={ui.zoneStripLabel}>
+      {ZONES.map((zone) => (
+        <button
+          type="button"
+          class={`azs-zone-chip azs-zone-${zone.index}`}
+          data-azs-zone={zone.index}
+          aria-pressed={zone.index === 3}
+        >
+          <span class="azs-zone-roman">{ui.zonePrefix} {zone.roman}</span>
+          <span class="azs-zone-name">{zone.name}</span>
+        </button>
+      ))}
+    </div>
+  </div>
+
+  <div class="azs-layout">
+    <aside class="azs-controls" aria-label="Zone System controls">
+      <div class="azs-control-block">
+        <div class="azs-label-row">
+          <span class="azs-label">{ui.measuredToneLabel}</span>
+          <span class="azs-value" data-azs-measured-name>Zone III Textured shadow</span>
+        </div>
+        <div class="azs-measured-grid">
+          {ZONES.map((zone) => (
+            <button
+              type="button"
+              class={`azs-measured-chip azs-zone-${zone.index}`}
+              data-azs-measured-zone={zone.index}
+              aria-pressed={zone.index === 3}
+              aria-label={`${ui.zonePrefix} ${zone.roman} ${zone.name}`}
+            >
+              <span>{zone.roman}</span>
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div class="azs-control-block">
+        <div class="azs-label-row">
+          <span class="azs-label">{ui.developmentLabel}</span>
+        </div>
+        <div class="azs-development-row">
+          <button type="button" class="azs-development-chip is-active" data-azs-development="normal">{ui.normalDevelopment}</button>
+          <button type="button" class="azs-development-chip" data-azs-development="minus">{ui.minusDevelopment}</button>
+          <button type="button" class="azs-development-chip" data-azs-development="plus">{ui.plusDevelopment}</button>
+        </div>
+      </div>
+
+      <div class="azs-control-block azs-presets">
+        <div class="azs-label-row">
+          <span class="azs-label">{ui.presetsLabel}</span>
+        </div>
+        <div class="azs-preset-list">
+          <button type="button" data-azs-preset="3-3-normal" class="azs-preset is-active">{ui.presetShadow}</button>
+          <button type="button" data-azs-preset="5-6-normal" class="azs-preset">{ui.presetSkin}</button>
+          <button type="button" data-azs-preset="5-7-minus" class="azs-preset">{ui.presetSnow}</button>
+          <button type="button" data-azs-preset="2-3-plus" class="azs-preset">{ui.presetNight}</button>
+        </div>
+        <button type="button" class="azs-reset" data-azs-reset>{ui.resetLabel}</button>
+      </div>
+    </aside>
+
+    <div class="azs-gallery">
+      <div class="azs-target-card azs-zone-3" data-azs-target-card>
+        <div class="azs-target-card-top">
+          <div>
+            <p class="azs-card-kicker">{ui.placementResultLabel}</p>
+            <h2 data-azs-target-name>Zone III Textured shadow</h2>
+          </div>
+          <span class="azs-badge" data-azs-badge>{ui.openShadows}</span>
+        </div>
+        <p class="azs-target-description" data-azs-target-description>{getZone(3).description}</p>
+        <div class="azs-result-grid">
+          <div class="azs-result-cell azs-result-cell-primary">
+            <span>{ui.exposureShiftLabel}</span>
+            <strong data-azs-exposure-shift>-2 stops</strong>
+          </div>
+          <div class="azs-result-cell">
+            <span>{ui.tonalDistanceLabel}</span>
+            <strong data-azs-tonal-distance>0 stops</strong>
+          </div>
+          <div class="azs-result-cell">
+            <span>{ui.luminanceLabel}</span>
+            <strong data-azs-luminance>4.5%</strong>
+          </div>
+          <div class="azs-result-cell">
+            <span>{ui.stopsFromMiddleLabel}</span>
+            <strong data-azs-middle-distance>-2 stops</strong>
+          </div>
+        </div>
+        <div class="azs-advice">
+          <p data-azs-summary>{ui.decreaseExposure}</p>
+          <p><span>{ui.developmentAdviceLabel}</span> <strong data-azs-technique>{ui.normalAdvice}</strong></p>
+        </div>
+      </div>
+
+      <div class="azs-scene" aria-label={ui.zoneStripLabel}>
+        <div class="azs-scene-header">
+          <span>{ui.selectedToneLabel}</span>
+          <span>{ui.targetPlacementLabel}</span>
+        </div>
+        <div class="azs-ladder-wrap">
+          <div class="azs-ladder" data-azs-exposure-ladder>
+            {ZONES.map((zone) => (
+              <span class={`azs-ladder-cell azs-zone-${zone.index} ${zone.index === 3 ? 'is-measured is-target' : ''}`}>{zone.roman}</span>
+            ))}
+          </div>
+          <span class="azs-marker azs-marker-measured" data-azs-measured-marker style="left: 33.333%"></span>
+          <span class="azs-marker azs-marker-target" data-azs-target-marker style="left: 33.333%"></span>
+        </div>
+        <div class="azs-scene-axis">
+          <span>0</span>
+          <span>V</span>
+          <span>IX</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script is:inline type="application/json" id="azs-ui-data" set:html={JSON.stringify({ ui })} />
+
+<script>
+  import { mountAdamsZoneSystem } from './controller';
+  import type { AdamsZoneSystemUI } from './ui';
+
+  const root = document.querySelector<HTMLElement>('[data-azs-root]');
+  const data = document.querySelector<HTMLScriptElement>('#azs-ui-data');
+  if (root && data) {
+    const payload = JSON.parse(data.textContent ?? '{}') as { ui: AdamsZoneSystemUI };
+    mountAdamsZoneSystem(root, payload.ui);
+  }
+</script>

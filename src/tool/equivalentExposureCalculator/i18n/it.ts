@@ -70,16 +70,16 @@ const seo: ToolLocaleContent<EquivalentExposureUI>['seo'] = [
     type: 'summary',
     title: 'Caratteristiche di Reciprocità di Esposizione',
     items: [
-    "Calcolo esatto a 1/3 di EV tra ISO, Apertura e Tempo di posa",
-    "Visualizzatore vettoriale del Triangolo di Esposizione in SVG",
-    "Feedback su profondità di campo, mosso e rumore digitale",
-    "Preset rapidi per Sole 16, Nuvoloso e Notte"
-],
+      "Calcolo esatto a 1/3 di EV tra ISO, Apertura e Tempo di posa",
+      "Visualizzatore vettoriale del Triangolo di Esposizione in SVG",
+      "Feedback su profondità di campo, mosso e rumore digitale",
+      "Preset rapidi per Sole 16, Nuvoloso e Notte"
+    ],
   },
   { type: 'title', text: 'Comprendere il Triangolo di Esposizione', level: 2 },
   {
     type: 'paragraph',
-    html: 'L\'esposizione è regolata da apertura, tempo di posa e ISO. Qualsiasi modifica richiede un riadattamento reciproco.',
+    html: 'L\'esposizione in fotografia è regolata dall\'interazione continua tra l\'apertura del diaframma, il tempo di posa e la sensibilità ISO del sensore. Qualsiasi modifica apportata a uno di questi tre parametri richiede un riadattamento reciproco degli altri per mantenere la stessa quantità di luce finale.',
   },
   {
     type: 'stats',
@@ -94,55 +94,55 @@ const seo: ToolLocaleContent<EquivalentExposureUI>['seo'] = [
   {
     type: 'table',
     headers: [
-    "Obiettivo Creativo",
-    "Regolazione Apertura",
-    "Regolazione Tempo",
-    "Regolazione ISO",
-    "Conseguenza Visiva"
-],
+      "Obiettivo Creativo",
+      "Regolazione Apertura",
+      "Regolazione Tempo",
+      "Regolazione ISO",
+      "Conseguenza Visiva"
+    ],
     rows: [
-    [
+      [
         "Congelare Azione",
         "Apri (f/2.8)",
         "Più rapido (1/1000s)",
         "Mantieni costante",
         "Minore profondità di campo"
-    ],
-    [
+      ],
+      [
         "Nitidezza Paesaggio",
         "Chiudi (f/11)",
         "Più lento (1/30s)",
         "Mantieni costante",
         "Cavalletto necessario"
-    ],
-    [
+      ],
+      [
         "Poca Luce a Mano",
         "Apri al massimo (f/1.4)",
         "Limite a mano (1/60s)",
         "Aumenta (ISO 3200)",
         "Maggiore rumore digitale"
-    ],
-    [
+      ],
+      [
         "Massima Qualità Studio",
         "Apertura ottimale (f/8)",
         "Sincro Flash (1/200s)",
         "ISO 100 base",
         "Massima gamma dinamica"
-    ]
-],
+      ]
+    ],
   },
   { type: 'title', text: 'Impatto Creativo delle Impostazioni Equivalenti', level: 3 },
   {
     type: 'paragraph',
-    html: 'Sebbene le esposizioni equivalenti producano la stessa luminosità, la resa visiva differisce:',
+    html: 'Sebbene le esposizioni equivalenti producano esattamente la stessa luminosità complessiva sul sensore, la resa visiva e il carattere estetico dell\'immagine differiscono notevolmente in base alle scelte di apertura, tempo e ISO:',
   },
   {
     type: 'list',
     items: [
-    "<strong>Apertura:</strong> Controlla la profondità di campo e la sfocatura dello sfondo.",
-    "<strong>Tempo di posa:</strong> Controlla il congelamento o la sfocatura del movimento.",
-    "<strong>ISO:</strong> Amplifica il segnale del sensore a scapito del rumore digitale."
-],
+      "<strong>Apertura:</strong> Controlla la profondità di campo e la sfocatura dello sfondo. Grandi aperture creano un morbido effetto bokeh.",
+      "<strong>Tempo di posa:</strong> Controlla il congelamento dell'azione o la sfocatura del movimento nella scena.",
+      "<strong>ISO:</strong> Amplifica il segnale del sensore consentendo scatti con poca luce a scapito di un maggiore rumore digitale."
+    ],
     icon: 'mdi:check-circle',
   },
   {
@@ -156,7 +156,7 @@ const seo: ToolLocaleContent<EquivalentExposureUI>['seo'] = [
           "Apertura f/1.4 a f/2.8",
           "Tempo rapido",
           "Bokeh morbido"
-],
+        ],
       },
       {
         title: 'Impostazione Paesaggio Profondo',
@@ -166,7 +166,7 @@ const seo: ToolLocaleContent<EquivalentExposureUI>['seo'] = [
           "Sweet spot f/8 a f/11",
           "Tempo lento su cavalletto",
           "Massima risoluzione"
-],
+        ],
         highlight: true,
       },
     ],
@@ -184,25 +184,23 @@ const seo: ToolLocaleContent<EquivalentExposureUI>['seo'] = [
         con: 'Richiede la regolazione manuale del fattore di crop',
       },
     ],
-    proTitle: 'Punti di Forza',
-    conTitle: 'Limiti Fisici',
   },
   {
     type: 'glossary',
     items: [
-    {
+      {
         "term": "Valore di Esposizione (EV)",
         "definition": "Scala logaritmica che combina apertura e tempo."
-    },
-    {
+      },
+      {
         "term": "Legge di Reciprocità",
         "definition": "Principio per cui esposizione è prodotto di intensità e tempo."
-    },
-    {
+      },
+      {
         "term": "Stop di Luce",
         "definition": "Unità relativa equivalente al raddoppio o al dimezzamento della luce."
-    }
-],
+      }
+    ],
   },
 ];
 

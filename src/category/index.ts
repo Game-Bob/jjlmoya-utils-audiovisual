@@ -13,6 +13,7 @@ import { depthOfFieldCalculator } from '../tool/depthOfFieldCalculator/entry';
 import { videoMerger } from '../tool/videoMerger/entry';
 import { audioDelayDistanceCalculator } from '../tool/audioDelayDistanceCalculator/entry';
 import { equivalentExposureCalculator } from '../tool/equivalentExposureCalculator/entry';
+import { adamsZoneSystem } from '../tool/adamsZoneSystem/entry';
 
 export const audiovisualCategory: AudiovisualCategoryEntry = {
   icon: 'mdi:camera-iris',
@@ -31,6 +32,7 @@ export const audiovisualCategory: AudiovisualCategoryEntry = {
     videoMerger as AudiovisualToolEntry,
     audioDelayDistanceCalculator as AudiovisualToolEntry,
     equivalentExposureCalculator as AudiovisualToolEntry,
+    adamsZoneSystem as AudiovisualToolEntry,
   ],
   i18n: {
     es: async () => (await import('./i18n/es')).content,

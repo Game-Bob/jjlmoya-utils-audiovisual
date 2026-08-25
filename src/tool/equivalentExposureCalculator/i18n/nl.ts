@@ -70,16 +70,16 @@ const seo: ToolLocaleContent<EquivalentExposureUI>['seo'] = [
     type: 'summary',
     title: 'Kenmerken van Belichtingswederkerigheid',
     items: [
-    "Exacte 1/3 EV stapberekening over ISO, Diafragma en Sluitertijd",
-    "Interactieve Belichtingsdriehoek SVG vectorvisualisator",
-    "Feedback over scherptediepte, bewegingsonscherpte en ruis",
-    "Snelle voorinstellingen voor Zonnig 16, Bewolkt en Nacht"
-],
+      "Exacte 1/3 EV stapberekening over ISO, Diafragma en Sluitertijd",
+      "Interactieve Belichtingsdriehoek SVG vectorvisualisator",
+      "Feedback over scherptediepte, bewegingsonscherpte en ruis",
+      "Snelle voorinstellingen voor Zonnig 16, Bewolkt en Nacht"
+    ],
   },
   { type: 'title', text: 'De Belichtingsdriehoek Begrijpen', level: 2 },
   {
     type: 'paragraph',
-    html: 'Belichting wordt bepaald door diafragma, sluitertijd en ISO. Elke verandering vereist een wederkerige aanpassing.',
+    html: 'De belichting in de fotografie wordt gevormd door de voortdurende wisselwerking tussen het diafragma, de sluitertijd en de ISO-gevoeligheid van de sensor. Elke aanpassing van een van deze drie variabelen vereist een wederkerige compensatie van de andere parameters om dezelfde totale hoeveelheid licht te behouden.',
   },
   {
     type: 'stats',
@@ -94,55 +94,55 @@ const seo: ToolLocaleContent<EquivalentExposureUI>['seo'] = [
   {
     type: 'table',
     headers: [
-    "Creatief Doel",
-    "Diafragma Aanpassing",
-    "Sluitertijd Aanpassing",
-    "ISO Aanpassing",
-    "Visueel Gevolg"
-],
+      "Creatief Doel",
+      "Diafragma Aanpassing",
+      "Sluitertijd Aanpassing",
+      "ISO Aanpassing",
+      "Visueel Gevolg"
+    ],
     rows: [
-    [
+      [
         "Actie Bevriezen",
         "Openen (f/2.8)",
         "Sneller (1/1000s)",
         "Constant houden",
         "Kleinere scherptediepte"
-    ],
-    [
+      ],
+      [
         "Landschapsscherpte",
         "Sluiten (f/11)",
         "Langzamer (1/30s)",
         "Constant houden",
         "Statief vereist"
-    ],
-    [
+      ],
+      [
         "Wenig Licht Uit de Hand",
         "Max openen (f/1.4)",
         "Handgrens houden (1/60s)",
         "Verhogen (ISO 3200)",
         "Meer ruis"
-    ],
-    [
+      ],
+      [
         "Maximale Studiokwaliteit",
         "Optimaal (f/8)",
         "Flitssynchronisatie (1/200s)",
         "ISO 100 basis",
         "Max dynamisch bereik"
-    ]
-],
+      ]
+    ],
   },
   { type: 'title', text: 'Creatieve Impact van Equivalente Instellingen', level: 3 },
   {
     type: 'paragraph',
-    html: 'Hoewel equivalente belichtingen dezelfde helderheid geven, verschilt het beeldeffect:',
+    html: 'Hoewel equivalente belichtingsinstellingen exact dezelfde totale hoeveelheid licht en helderheid op de beeldsensor opleveren, verschilt de uiteindelijke visuele uitstraling en het artistieke karakter van de foto aanzienlijk afhankelijk van de gemaakte keuzes:',
   },
   {
     type: 'list',
     items: [
-    "<strong>Diafragma:</strong> Bepaalt de scherptediepte en achtergrondonscherpte.",
-    "<strong>Sluitertijd:</strong> Bepaalt de bewegingsweergave.",
-    "<strong>ISO:</strong> Versterkt het sensorsignaal ten koste van ruis."
-],
+      "<strong>Diafragma:</strong> Bepaalt de scherptediepte en achtergrondonscherpte. Grote openingen creëren een prachtige zachte bokeh.",
+      "<strong>Sluitertijd:</strong> Bepaalt het bevriezen van snelle bewegingen of het weergeven van bewegingsonscherpte in de foto.",
+      "<strong>ISO:</strong> Versterkt het signaal van de sensor bij weinig licht ten koste van een toename in digitale ruis."
+    ],
     icon: 'mdi:check-circle',
   },
   {
@@ -156,7 +156,7 @@ const seo: ToolLocaleContent<EquivalentExposureUI>['seo'] = [
           "f/1.4 tot f/2.8 Diafragma",
           "Snelle sluitertijd",
           "Zachte bokeh"
-],
+        ],
       },
       {
         title: 'Instelling Diep Landschap',
@@ -166,7 +166,7 @@ const seo: ToolLocaleContent<EquivalentExposureUI>['seo'] = [
           "Optimaal f/8 tot f/11",
           "Langzame sluitertijd op statief",
           "Maximale resolutie"
-],
+        ],
         highlight: true,
       },
     ],
@@ -184,25 +184,23 @@ const seo: ToolLocaleContent<EquivalentExposureUI>['seo'] = [
         con: 'Handmatige correctie van de cropfactor vereist',
       },
     ],
-    proTitle: 'Technische Sterktes',
-    conTitle: 'Fysieke Grenzen',
   },
   {
     type: 'glossary',
     items: [
-    {
+      {
         "term": "Belichtingswaarde (EV)",
         "definition": "Logarithmische schaal die diafragma en sluitertijd combineert."
-    },
-    {
+      },
+      {
         "term": "Wederkerigheidswet",
         "definition": "Principe van evenredigheid tussen lichtintensiteit en tijd."
-    },
-    {
+      },
+      {
         "term": "Belichtingsstap (Stop)",
         "definition": "Relatieve eenheid voor het verdubbelen of halveren van het licht."
-    }
-],
+      }
+    ],
   },
 ];
 

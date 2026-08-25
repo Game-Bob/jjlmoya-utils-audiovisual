@@ -70,16 +70,16 @@ const seo: ToolLocaleContent<EquivalentExposureUI>['seo'] = [
     type: 'summary',
     title: 'Funktionen der Belichtungsreziprozität',
     items: [
-    "Exakte 1/3 EV Stufenberechnung über ISO, Blende und Verschlusszeit",
-    "Interaktives Belichtungsdreieck als SVG Vektorgrafik",
-    "Rückmeldung zu Schärfentiefe, Bewegungsgrenzen und Sensorrauschen",
-    "Ein Klick Voreinstellungen für Sonne 16, Bewölkung und Nacht"
-],
+      "Exakte 1/3 EV Stufenberechnung über ISO, Blende und Verschlusszeit",
+      "Interaktives Belichtungsdreieck als SVG Vektorgrafik",
+      "Rückmeldung zu Schärfentiefe, Bewegungsgrenzen und Sensorrauschen",
+      "Ein Klick Voreinstellungen für Sonne 16, Bewölkung und Nacht"
+    ],
   },
   { type: 'title', text: 'Das Belichtungsdreieck verstehen', level: 2 },
   {
     type: 'paragraph',
-    html: 'Die Belichtung wird durch Blende, Verschlusszeit und ISO bestimmt. Jede Änderung eines Parameters erfordert eine reziproke Anpassung der anderen Faktoren.',
+    html: 'Die Belichtung in der Fotografie wird durch das Zusammenspiel von Blende, Verschlusszeit und ISO-Empfindlichkeit bestimmt. Jede Änderung eines einzelnen Parameters erfordert eine genaue reziproke Kompensation der anderen Faktoren, um eine identische Gesamtbelichtung des Sensors zu gewährleisten.',
   },
   {
     type: 'stats',
@@ -94,55 +94,55 @@ const seo: ToolLocaleContent<EquivalentExposureUI>['seo'] = [
   {
     type: 'table',
     headers: [
-    "Kreatives Ziel",
-    "Blendenanpassung",
-    "Verschlussanpassung",
-    "ISO Anpassung",
-    "Visuelle Konsequenz"
-],
+      "Kreatives Ziel",
+      "Blendenanpassung",
+      "Verschlussanpassung",
+      "ISO Anpassung",
+      "Visuelle Konsequenz"
+    ],
     rows: [
-    [
+      [
         "Bewegung einfrieren",
         "Öffnen (f/2.8)",
         "Kürzer (1/1000s)",
         "Konstant halten",
         "Geringere Schärfentiefe"
-    ],
-    [
+      ],
+      [
         "Landschaftsschärfe",
         "Schließen (f/11)",
         "Länger (1/30s)",
         "Konstant halten",
         "Stativ erforderlich"
-    ],
-    [
+      ],
+      [
         "Wenig Licht freihand",
         "Maximal öffnen (f/1.4)",
         "Handgrenze halten (1/60s)",
         "Erhöhen (ISO 3200)",
         "Höheres Sensorrauschen"
-    ],
-    [
+      ],
+      [
         "Höchste Studioqualität",
         "Optimale Schärfe (f/8)",
         "Blitz Synchro (1/200s)",
         "Basis ISO 100",
         "Maximaler Dynamikumfang"
-    ]
-],
+      ]
+    ],
   },
   { type: 'title', text: 'Kreative Auswirkungen äquivalenter Einstellungen', level: 3 },
   {
     type: 'paragraph',
-    html: 'Obwohl äquivalente Belichtungen die gleiche Helligkeit liefern, unterscheidet sich der Bildcharakter deutlich:',
+    html: 'Obwohl äquivalente Belichtungseinstellungen exakt die gleiche Lichtmenge auf den Sensor treffen lassen, unterscheidet sich der kreative Bildcharakter und der visuelle Eindruck der Aufnahme deutlich:',
   },
   {
     type: 'list',
     items: [
-    "<strong>Blende:</strong> Steuert Schärfentiefe und Hintergrundunschärfe. Große Öffnungen erzeugen Bokeh.",
-    "<strong>Verschlusszeit:</strong> Steuert die Bewegungsdarstellung von Einfrieren bis Bewegungsunschärfe.",
-    "<strong>ISO Empfindlichkeit:</strong> Verstärkt das Sensorsignal. Hohe Werte ermöglichen Aufnahmen bei Dunkelheit."
-],
+      "<strong>Blende:</strong> Steuert Schärfentiefe und Hintergrundunschärfe. Große Öffnungen erzeugen ein weiches Bokeh.",
+      "<strong>Verschlusszeit:</strong> Steuert die Bewegungsdarstellung von Scharfschalten bis Bewegungsunschärfe.",
+      "<strong>ISO Empfindlichkeit:</strong> Verstärkt das Sensorsignal. Hohe Werte ermöglichen Aufnahmen bei Dunkelheit."
+    ],
     icon: 'mdi:check-circle',
   },
   {
@@ -156,7 +156,7 @@ const seo: ToolLocaleContent<EquivalentExposureUI>['seo'] = [
           "f/1.4 bis f/2.8 Blende",
           "Kurze Verschlusszeit",
           "Weiches Bokeh"
-],
+        ],
       },
       {
         title: 'Maximale Landschaftsschärfe',
@@ -166,7 +166,7 @@ const seo: ToolLocaleContent<EquivalentExposureUI>['seo'] = [
           "f/8 bis f/11 Optimum",
           "Längere Belichtung auf Stativ",
           "Höchste Auflösung"
-],
+        ],
         highlight: true,
       },
     ],
@@ -184,25 +184,23 @@ const seo: ToolLocaleContent<EquivalentExposureUI>['seo'] = [
         con: 'Erfordert manuelle Korrektur des Formatfaktors',
       },
     ],
-    proTitle: 'Technische Stärken',
-    conTitle: 'Physikalische Grenzen',
   },
   {
     type: 'glossary',
     items: [
-    {
+      {
         "term": "Lichtwert (EV)",
         "definition": "Logarithmische Skala zur Kombination von Blende und Verschlusszeit."
-    },
-    {
+      },
+      {
         "term": "Reziprozitätsgesetz",
         "definition": "Prinzip der proportionalen Belichtung aus Intensität und Dauer."
-    },
-    {
+      },
+      {
         "term": "Belichtungsstufe (Stop)",
         "definition": "Relative Einheit entsprechend einer Verdopplung oder Halbierung der Lichtmenge."
-    }
-],
+      }
+    ],
   },
 ];
 

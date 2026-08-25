@@ -69,21 +69,21 @@ const howTo: DepthOfFieldLocaleContent['howTo'] = [
 
 const seo: DepthOfFieldLocaleContent['seo'] = [
     { type: 'title', text: 'Förstå skärpedjup inom fotografi och film', level: 2 },
-    { type: 'paragraph', html: 'Skärpedjup är ett av de mest kraftfulla kreativa verktygen. Ett <strong>kort skärpedjup</strong> isolerar motivet, medan ett <strong>långt skärpedjup</strong> håller hela landskapet skarpt. Denna kalkylator ger dig full kontroll.' },
+    { type: 'paragraph', html: 'Skärpedjup (DoF) är ett av de mest kraftfulla och mångsidiga kreativa verktygen i fotografering och filmproduktion. Ett <strong>kort skärpedjup</strong> isolerar motivet från bakgrunden och skapar en vacker bokeh, medan ett <strong>långt skärpedjup</strong> håller hela landskapet eller arkitekturen skarp från förgrund till bakgrund. Vår kalkylator ger dig exakta optiska beräkningar.' },
 
     { type: 'title', text: 'De tre variablerna för skärpedjup', level: 3 },
     { type: 'table', headers: ['Variabel', 'Ökning →', 'Effekt på DoF'], rows: [
-        ['Bländare', 'f/1.4 → f/16', 'Större bländare = kortare skärpedjup'],
-        ['Brännvidd', '24mm → 200mm', 'Längre brännvidd = kortare skärpedjup vid samma avstånd'],
-        ['Avstånd', '1m → 10m', 'Längre avstånd = längre skärpedjup'],
+        ['Bländare', 'f/1.4 → f/16', 'Större bländare (mindre f-tal) = kortare skärpedjup'],
+        ['Brännvidd', '24mm → 200mm', 'Längre brännvidd = kortare skärpedjup vid samma motivavstånd'],
+        ['Avstånd', '1m → 10m', 'Längre motivavstånd = längre skärpedjup i scenen'],
     ]},
 
     { type: 'title', text: 'Hyperfokalavstånd: Maximal skärpa', level: 3 },
-    { type: 'paragraph', html: 'När du fokuserar på <strong>hyperfokalavståndet</strong> blir allt från halva avståndet till oändligheten skarpt. Idealiskt för landskapsfotografering.' },
+    { type: 'paragraph', html: 'När du fokuserar på <strong>hyperfokalavståndet</strong> blir allt från halva avståndet ända till oändligheten skarpt. Detta är en oumbärlig teknik för landskaps- och arkitekturfotografering.' },
     { type: 'tip', title: 'Praktiskt tips', html: 'För gatufotografering, ställ in fokus på hyperfokalavståndet. Med ett 35mm-objektiv på APS-C vid f/8 är det ca <strong>4 meter</strong>: allt från 2m till oändligheten blir skarpt.' },
 
     { type: 'title', text: 'Sensorstorlek och oskärpecirkel', level: 3 },
-    { type: 'paragraph', html: '<strong>Oskärpecirkeln (CoC)</strong> definierar acceptabel skärpa. En fullformatssensor har en CoC på 0,030 mm; en smartphone ca 0,006 mm. Mindre CoC innebär strängare skärpekrav.' },
+    { type: 'paragraph', html: '<strong>Oskärpecirkeln (Circle of Confusion - CoC)</strong> definierar den gräns där en ljuspunkt på sensorn fortfarande upplevs som skarp. En fullformatssensor har en CoC på 0,030 mm; en smartphone ca 0,006 mm. Mindre CoC ställer strängare optiska krav.' },
     { type: 'stats', columns: 3, items: [
         { label: 'Fullformat', value: '0,030 mm', icon: 'mdi:camera' },
         { label: 'APS-C', value: '0,019 mm', icon: 'mdi:camera-outline' },
@@ -91,7 +91,7 @@ const seo: DepthOfFieldLocaleContent['seo'] = [
     ]},
 
     { type: 'title', text: 'DoF i film: Brännvidd vs Sensor', level: 3 },
-    { type: 'paragraph', html: 'Filmning i Super 35 använder ofta längre brännvidd för att komprimera perspektivet och skapa en "filmisk look". Ett ljusstarkt 85mm-objektiv är klassiskt för porträtt.' },
+    { type: 'paragraph', html: 'Filmning i Super 35 eller Fullformat använder ofta längre brännvidd för att komprimera perspektivet och skapa en genuin filmisk estetik.' },
     { type: 'diagnostic', variant: 'success', title: 'Regeln för fokusfördelning', icon: 'mdi:lightbulb-outline', badge: 'Pro-teknik', html: 'För ett motiv på 3m med 50mm vid f/2.8: det skarpa området bakom motivet är alltid större än framför - ungefär i <strong>förhållandet 2:1</strong>.' },
 ];
 

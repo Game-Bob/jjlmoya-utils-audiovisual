@@ -70,16 +70,16 @@ const seo: ToolLocaleContent<EquivalentExposureUI>['seo'] = [
     type: 'summary',
     title: '曝光互法则计算特点',
     items: [
-    "ISO、光圈和快门速度之间精确的1/3 EV档位计算",
-    "交互式曝光三要素SVG矢量可视化图表",
-    "景深、动态模糊和传感器噪点的实时反馈",
-    "阳光16、阴天和夜景的一键快速预设"
-],
+      "ISO、光圈和快门速度之间精确的1/3 EV档位计算",
+      "交互式曝光三要素SVG矢量可视化图表",
+      "景深、动态模糊和传感器噪点的实时反馈",
+      "阳光16、阴天和夜景的一键快速预设"
+    ],
   },
   { type: 'title', text: '理解曝光三要素', level: 2 },
   {
     type: 'paragraph',
-    html: '摄影曝光由光圈、快门速度和ISO决定。改变其中任何一个参数都需要进行互法则调整。',
+    html: '摄影中的曝光是由镜头的光圈通光孔径大小、快门开启的时间长度以及感光元件的ISO感光度三者共同决定的。改变其中任何一个参数，都必须在其他参数上进行相应的倒易律互法则补偿，以维持传感器接收到的总进光量不变。',
   },
   {
     type: 'stats',
@@ -94,55 +94,55 @@ const seo: ToolLocaleContent<EquivalentExposureUI>['seo'] = [
   {
     type: 'table',
     headers: [
-    "创作意图",
-    "光圈调整",
-    "快门调整",
-    "ISO调整",
-    "视觉效果"
-],
+      "创作意图",
+      "光圈调整",
+      "快门调整",
+      "ISO调整",
+      "视觉效果"
+    ],
     rows: [
-    [
+      [
         "凝固动作",
         "开大 (f/2.8)",
         "加快 (1/1000s)",
         "保持不变",
         "景深变浅"
-    ],
-    [
+      ],
+      [
         "风光清晰度",
         "缩小 (f/11)",
         "减慢 (1/30s)",
         "保持不变",
         "需要三脚架"
-    ],
-    [
+      ],
+      [
         "弱光手持拍摄",
         "开到最大 (f/1.4)",
         "保持手持极限 (1/60s)",
         "提高 (ISO 3200)",
         "噪点增加"
-    ],
-    [
+      ],
+      [
         "影棚最高画质",
         "最佳光圈 (f/8)",
         "闪光同步 (1/200s)",
         "基准 ISO 100",
         "最大动态范围"
-    ]
-],
+      ]
+    ],
   },
   { type: 'title', text: '等效设置的创作影响', level: 3 },
   {
     type: 'paragraph',
-    html: '尽管等效曝光产生相同的亮度，但画面的艺术表现截然不同：',
+    html: '虽然采用等效曝光设置能够在图像感光元件(传感器)上获得完全相同的总体画面亮度，但是画面的艺术表现形式、被摄体运动轨迹以及背景虚化效果会根据具体设置产生显著差异：',
   },
   {
     type: 'list',
     items: [
-    "<strong>光圈：</strong> 控制景深和背景虚化程度。",
-    "<strong>快门速度：</strong> 控制动态定格或模糊效果。",
-    "<strong>ISO感光度：</strong> 以噪点为代价放大传感器信号。"
-],
+      "<strong>光圈：</strong> 控制景深范围和背景虚化效果。大光圈产生柔和焦外。",
+      "<strong>快门速度：</strong> 控制曝光时间长度，实现凝固动态或记录运动轨迹。",
+      "<strong>ISO感光度：</strong> 以噪点为代价放大传感器信号，提升弱光表现。"
+    ],
     icon: 'mdi:check-circle',
   },
   {
@@ -156,7 +156,7 @@ const seo: ToolLocaleContent<EquivalentExposureUI>['seo'] = [
           "f/1.4 至 f/2.8 大光圈",
           "高速快门",
           "柔和虚化"
-],
+        ],
       },
       {
         title: '大景深风光预设',
@@ -166,7 +166,7 @@ const seo: ToolLocaleContent<EquivalentExposureUI>['seo'] = [
           "最佳画质 f/8 至 f/11",
           "三脚架慢速快门",
           "最高解像力"
-],
+        ],
         highlight: true,
       },
     ],
@@ -184,25 +184,23 @@ const seo: ToolLocaleContent<EquivalentExposureUI>['seo'] = [
         con: '需要手动计算传感器裁切系数',
       },
     ],
-    proTitle: '技术优势',
-    conTitle: '物理局限',
   },
   {
     type: 'glossary',
     items: [
-    {
+      {
         "term": "曝光值 (EV)",
         "definition": "结合光圈与快门速度的对数标度。"
-    },
-    {
+      },
+      {
         "term": "倒易律 (互法则)",
         "definition": "曝光量等于光照强度与照射时间乘积的法则。"
-    },
-    {
+      },
+      {
         "term": "曝光档位 (Stop)",
         "definition": "代表光量翻倍或减半的相对单位。"
-    }
-],
+      }
+    ],
   },
 ];
 

@@ -70,16 +70,16 @@ const seo: ToolLocaleContent<EquivalentExposureUI>['seo'] = [
     type: 'summary',
     title: 'Funktioner för Exponeringsreciprocitet',
     items: [
-    "Exakt beräkning i 1/3 EV steg över ISO, Bländare och Slutartid",
-    "Interaktiv exponeringstriangel som SVG vektorgrafik",
-    "Realtidsfeedback för skärpedjup, rörelseoskärpa och brus",
-    "Snabbval med ett klick för Sunny 16, Molnigt och Natt"
-],
+      "Exakt beräkning i 1/3 EV steg över ISO, Bländare och Slutartid",
+      "Interaktiv exponeringstriangel som SVG vektorgrafik",
+      "Realtidsfeedback för skärpedjup, rörelseoskärpa och brus",
+      "Snabbval med ett klick för Sunny 16, Molnigt och Natt"
+    ],
   },
   { type: 'title', text: 'Att Förstå Exponeringstriangeln', level: 2 },
   {
     type: 'paragraph',
-    html: 'Exponering styrs av bländare, slutartid och ISO. Varje ändring av en variabel kräver en reciproc kompensation.',
+    html: 'Exponering inom fotografi styrs av den kontinuerliga och reciproka samverkan mellan linsens bländaröppning, slutartiden och kamerasensorns ISO-känslighet. Varje ändring av en enskild variabel kräver en motsvarande reciproc kompensation av de övriga för att bibehålla samma totala mängd uppfångat ljus på kamerasensorn.',
   },
   {
     type: 'stats',
@@ -94,55 +94,55 @@ const seo: ToolLocaleContent<EquivalentExposureUI>['seo'] = [
   {
     type: 'table',
     headers: [
-    "Kreativt Mål",
-    "Bländarjustering",
-    "Slutarjustering",
-    "ISO justering",
-    "Visuell Konsekvens"
-],
+      "Kreativt Mål",
+      "Bländarjustering",
+      "Slutarjustering",
+      "ISO justering",
+      "Visuell Konsekvens"
+    ],
     rows: [
-    [
+      [
         "Frysa Rörelse",
         "Öppna (f/2.8)",
         "Snabbare (1/1000s)",
         "Behåll konstant",
         "Mindre skärpedjup"
-    ],
-    [
+      ],
+      [
         "Landskapsskärpa",
         "Stäng (f/11)",
         "Långsammare (1/30s)",
         "Behåll konstant",
         "Stativ krävs"
-    ],
-    [
+      ],
+      [
         "Svagt Ljus Handhållen",
         "Max öppning (f/1.4)",
         "Handhållen gräns (1/60s)",
         "Öka (ISO 3200)",
         "Mer sensorbrus"
-    ],
-    [
+      ],
+      [
         "Maximal Studiokvalitet",
         "Optimal (f/8)",
         "Blixtsynk (1/200s)",
         "Bas ISO 100",
         "Maximalt dynamiskt omfång"
-    ]
-],
+      ]
+    ],
   },
   { type: 'title', text: 'Kreativ Effekt av Ekvivalenta Inställningar', level: 3 },
   {
     type: 'paragraph',
-    html: 'Även om ekvivalenta exponeringar ger samma ljusstyrka skiljer sig bildkaraktären:',
+    html: 'Även om ekvivalenta exponeringsinställningar ger exakt samma totala bildljusstyrka och exponering på bildsensorn skiljer sig det slutliga visuella uttrycket och bildkaraktären avsevärt beroende på dina val:',
   },
   {
     type: 'list',
     items: [
-    "<strong>Bländare:</strong> Styr skärpedjup och bakgrundsoskärpa.",
-    "<strong>Slutartid:</strong> Styr rörelseåtergivningen.",
-    "<strong>ISO känslighet:</strong> Förstärker sensorsignalen på bekostnad av brus."
-],
+      "<strong>Bländare:</strong> Styr skärpedjup och bakgrundsoskärpa. Stora bländaröppningar skapar en vacker och mjuk bokeh.",
+      "<strong>Slutartid:</strong> Styr rörelseåtergivningen i bilden och gör det möjligt att frysa snabba rörelser eller skapa rörelseoskärpa.",
+      "<strong>ISO känslighet:</strong> Förstärker sensorsignalen i svagt ljus men ökar samtidigt mängden digitalt sensorbrus."
+    ],
     icon: 'mdi:check-circle',
   },
   {
@@ -156,7 +156,7 @@ const seo: ToolLocaleContent<EquivalentExposureUI>['seo'] = [
           "f/1.4 till f/2.8 Bländare",
           "Snabb slutartid",
           "Mjuk bokeh"
-],
+        ],
       },
       {
         title: 'Inställning Djupt Landskap',
@@ -166,7 +166,7 @@ const seo: ToolLocaleContent<EquivalentExposureUI>['seo'] = [
           "Optimal f/8 till f/11",
           "Långsam slutare på stativ",
           "Maximal upplösning"
-],
+        ],
         highlight: true,
       },
     ],
@@ -184,25 +184,23 @@ const seo: ToolLocaleContent<EquivalentExposureUI>['seo'] = [
         con: 'Kräver manuell justering av beskärningsfaktorn',
       },
     ],
-    proTitle: 'Tekniska Styrkor',
-    conTitle: 'Fysiska Gränser',
   },
   {
     type: 'glossary',
     items: [
-    {
+      {
         "term": "Exponeringsvärde (EV)",
         "definition": "Logaritmisk skala som kombinerar bländare och slutartid."
-    },
-    {
+      },
+      {
         "term": "Reciprocitetslagen",
         "definition": "Principen om proportionalitet mellan ljusintensitet och tid."
-    },
-    {
+      },
+      {
         "term": "Exponeringssteg (Stop)",
         "definition": "Relativ enhet för fördubbling eller halvering av ljusmängden."
-    }
-],
+      }
+    ],
   },
 ];
 

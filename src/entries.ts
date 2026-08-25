@@ -26,6 +26,8 @@ export { audioDelayDistanceCalculator } from './tool/audioDelayDistanceCalculato
 export type { AudioDelayUI, AudioDelayLocaleContent } from './tool/audioDelayDistanceCalculator/entry';
 export { equivalentExposureCalculator } from './tool/equivalentExposureCalculator/entry';
 export type { EquivalentExposureUI, EquivalentExposureLocaleContent } from './tool/equivalentExposureCalculator/entry';
+export { adamsZoneSystem } from './tool/adamsZoneSystem/entry';
+export type { AdamsZoneSystemUI, AdamsZoneSystemLocaleContent } from './tool/adamsZoneSystem/entry';
 export { audiovisualCategory, toolsCategory } from './category';
 
 import { chromaticLens } from './tool/chromaticLens/entry';
@@ -42,6 +44,7 @@ import { depthOfFieldCalculator } from './tool/depthOfFieldCalculator/entry';
 import { videoMerger } from './tool/videoMerger/entry';
 import { audioDelayDistanceCalculator } from './tool/audioDelayDistanceCalculator/entry';
 import { equivalentExposureCalculator } from './tool/equivalentExposureCalculator/entry';
+import { adamsZoneSystem } from './tool/adamsZoneSystem/entry';
 
 export const ALL_ENTRIES = [
   chromaticLens,
@@ -58,4 +61,5 @@ export const ALL_ENTRIES = [
   videoMerger,
   audioDelayDistanceCalculator,
   equivalentExposureCalculator,
+  adamsZoneSystem,
 ];

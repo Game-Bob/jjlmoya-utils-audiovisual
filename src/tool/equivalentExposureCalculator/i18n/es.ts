@@ -70,16 +70,16 @@ const seo: ToolLocaleContent<EquivalentExposureUI>['seo'] = [
     type: 'summary',
     title: 'Características de Reciprocidad de Exposición',
     items: [
-    "Cálculo exacto de tercios de EV entre ISO, Apertura y Velocidad",
-    "Visualizador vectorial dinámico del Triángulo de Exposición en SVG",
-    "Retroalimentación sobre profundidad de campo, movimiento y ruido",
-    "Ajustes rápidos de 1 clic para Soleado 16, Nublado y Noche"
-],
+      "Cálculo exacto de tercios de EV entre ISO, Apertura y Velocidad",
+      "Visualizador vectorial dinámico del Triángulo de Exposición en SVG",
+      "Retroalimentación sobre profundidad de campo, movimiento y ruido",
+      "Ajustes rápidos de 1 clic para Soleado 16, Nublado y Noche"
+    ],
   },
   { type: 'title', text: 'Comprendiendo el Triángulo de Exposición', level: 2 },
   {
     type: 'paragraph',
-    html: 'La exposición en fotografía se rige por la apertura, la velocidad de obturación y el ISO. Cualquier cambio en una variable exige una compensación recíproca.',
+    html: 'La exposición en fotografía se rige por la interacción continua entre la apertura del diafragma, la velocidad de obturación y la sensibilidad ISO del sensor. Cualquier modificación introducida en una de estas tres variables exige una compensación recíproca en las demás para conservar la misma energía luminosa y mantener la exposición uniforme.',
   },
   {
     type: 'stats',
@@ -94,55 +94,55 @@ const seo: ToolLocaleContent<EquivalentExposureUI>['seo'] = [
   {
     type: 'table',
     headers: [
-    "Objetivo Creativo",
-    "Ajuste de Apertura",
-    "Ajuste de Obturación",
-    "Ajuste de ISO",
-    "Consecuencia Visual"
-],
+      "Objetivo Creativo",
+      "Ajuste de Apertura",
+      "Ajuste de Obturación",
+      "Ajuste de ISO",
+      "Consecuencia Visual"
+    ],
     rows: [
-    [
+      [
         "Congelar Acción",
         "Abrir (f/2.8)",
         "Más rápida (1/1000s)",
         "Mantener constante",
         "Menor profundidad de campo"
-    ],
-    [
+      ],
+      [
         "Nitidez en Paisaje",
         "Cerrar (f/11)",
         "Más lenta (1/30s)",
         "Mantener constante",
         "Requiere trípode o apoyo"
-    ],
-    [
+      ],
+      [
         "Poca Luz a Mano",
         "Abrir al máximo (f/1.4)",
         "Límite de pulso (1/60s)",
         "Aumentar (ISO 3200)",
         "Mayor grano y ruido"
-    ],
-    [
+      ],
+      [
         "Máxima Calidad Estudio",
         "Apertura óptima (f/8)",
         "Sincro Flash (1/200s)",
         "ISO Base 100",
         "Máximo rango dinámico"
-    ]
-],
+      ]
+    ],
   },
   { type: 'title', text: 'Impacto Creativo de los Ajustes Equivalentes', level: 3 },
   {
     type: 'paragraph',
-    html: 'Aunque las exposiciones equivalentes producen la misma luminosidad, el aspecto creativo difiere:',
+    html: 'Aunque las configuraciones de exposición equivalente producen exactamente la misma luminosidad global en el fotograma, la estética creativa de la imagen cambia drásticamente según la combinación seleccionada:',
   },
   {
     type: 'list',
     items: [
-    "<strong>Apertura:</strong> Controla el diafragma y la profundidad de campo.",
-    "<strong>Velocidad:</strong> Controla el tiempo de exposición y la congelación del movimiento.",
-    "<strong>ISO:</strong> Amplifica la señal del sensor facilitando disparar con poca luz."
-],
+      "<strong>Apertura:</strong> Controla el diafragma y la profundidad de campo. Aperturas grandes (f/1.4 - f/2.8) producen un fondo desenfocado con bokeh estético.",
+      "<strong>Velocidad de obturación:</strong> Controla el tiempo de exposición del sensor y permite elegir entre congelar el movimiento rápido o registrar estelas de movimiento.",
+      "<strong>Sensibilidad ISO:</strong> Amplifica electrónicamente la señal del sensor facilitando disparar en condiciones de poca luz a costa de aumentar el ruido."
+    ],
     icon: 'mdi:check-circle',
   },
   {
@@ -156,7 +156,7 @@ const seo: ToolLocaleContent<EquivalentExposureUI>['seo'] = [
           "Apertura f/1.4 a f/2.8",
           "Obturación rápida",
           "Bokeh suave"
-],
+        ],
       },
       {
         title: 'Ajuste de Paisaje Profundo',
@@ -166,7 +166,7 @@ const seo: ToolLocaleContent<EquivalentExposureUI>['seo'] = [
           "Punto dulce f/8 a f/11",
           "Obturación lenta con trípode",
           "Máxima resolución"
-],
+        ],
         highlight: true,
       },
     ],
@@ -184,25 +184,23 @@ const seo: ToolLocaleContent<EquivalentExposureUI>['seo'] = [
         con: 'Requiere ajustar el factor de recorte manualmente',
       },
     ],
-    proTitle: 'Fortalezas Técnicas',
-    conTitle: 'Límites Físicos',
   },
   {
     type: 'glossary',
     items: [
-    {
+      {
         "term": "Valor de Exposición (EV)",
         "definition": "Escala logarítmica que combina apertura y velocidad."
-    },
-    {
+      },
+      {
         "term": "Ley de Reciprocidad",
         "definition": "Principio de proporcionalidad entre intensidad de luz y tiempo."
-    },
-    {
+      },
+      {
         "term": "Paso de Luz (Stop)",
         "definition": "Unidad relativa equivalente a duplicar o reducir a la mitad la luz."
-    }
-],
+      }
+    ],
   },
 ];
 
