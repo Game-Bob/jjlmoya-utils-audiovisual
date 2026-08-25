@@ -1,0 +1,92 @@
+---
+import type { FilmReciprocityFailureCalculatorUI } from './ui';
+
+interface Props {
+  ui: FilmReciprocityFailureCalculatorUI;
+}
+
+const { ui } = Astro.props as Props;
+---
+
+<div class="film-reciprocity-tool" data-film-reciprocity-tool>
+  <div class="film-tool-frame">
+    <header class="film-tool-header">
+      <div>
+        <span class="film-tool-kicker">{ui.studyLabel}</span>
+        <h2>{ui.studyTitle}</h2>
+        <p>{ui.studyText}</p>
+      </div>
+    </header>
+
+    <div class="film-tool-workbench">
+      <section class="film-tool-controls" aria-labelledby="film-controls-title">
+        <div class="film-tool-section-heading">
+          <div>
+            <h3 id="film-controls-title">{ui.filmLabel}</h3>
+            <p>{ui.filmHint}</p>
+          </div>
+        </div>
+        <div class="film-stock-grid" role="listbox" aria-label={ui.filmMenuLabel} data-film-options></div>
+
+        <div class="film-tool-section-heading film-time-heading">
+          <div>
+            <h3>{ui.measuredTimeLabel}</h3>
+            <p>{ui.measuredTimeHint}</p>
+          </div>
+        </div>
+        <div class="film-time-control">
+          <input class="film-time-range" type="range" min="1" max="300" step="1" data-metered-range aria-label={ui.measuredTimeLabel} />
+          <label class="film-time-value">
+            <input type="number" min="0.1" max="3600" step="0.1" inputmode="decimal" data-metered-input aria-label={ui.measuredTimeLabel} />
+            <span>{ui.secondsUnit}</span>
+          </label>
+        </div>
+
+        <div class="film-presets">
+          <span class="film-presets-label">{ui.presetsLabel}</span>
+          <div class="film-preset-row">
+            <button type="button" data-preset="1">{ui.presetShort}<small>1 s</small></button>
+            <button type="button" data-preset="10">{ui.presetNight}<small>10 s</small></button>
+            <button type="button" data-preset="60">{ui.presetDeepNight}<small>60 s</small></button>
+          </div>
+        </div>
+      </section>
+
+      <section class="film-tool-result" aria-labelledby="film-result-title">
+        <div class="film-result-topline">
+          <span class="film-tool-kicker">{ui.resultLabel}</span>
+          <span class="film-state-badge" data-state-badge></span>
+        </div>
+        <div class="film-result-hero">
+          <span class="film-result-label">{ui.correctedTimeLabel}</span>
+          <strong data-corrected-time>20 s</strong>
+          <span class="film-result-note" data-result-note></span>
+        </div>
+        <div class="film-result-stats">
+          <div><span>{ui.addedTimeLabel}</span><strong data-added-time></strong></div>
+          <div><span>{ui.correctionStopsLabel}</span><strong data-correction-stops></strong></div>
+          <div><span>{ui.correctionFactorLabel}</span><strong data-factor></strong></div>
+        </div>
+        <svg class="film-exposure-scene" viewBox="0 0 720 220" role="img" data-exposure-scene></svg>
+        <div class="film-scene-legend">
+          <span><i class="film-legend-dot film-legend-meter"></i><span data-meter-time>10 s</span></span>
+          <span><i class="film-legend-dot film-legend-film"></i><span data-film-time>20 s</span></span>
+        </div>
+      </section>
+    </div>
+
+    <footer class="film-tool-footer">
+      <div><strong>{ui.formulaLabel}</strong><span>{ui.formulaText}</span></div>
+      <div><strong>{ui.sourceLabel}</strong><span>{ui.manufacturerNote}</span></div>
+      <button type="button" data-reset>{ui.resetLabel}</button>
+    </footer>
+  </div>
+</div>
+
+<script is:inline type="application/json" data-film-reciprocity-ui set:html={JSON.stringify(ui)}></script>
+<script>
+  import { mountFilmReciprocityTool } from './controller';
+  const root = document.querySelector('[data-film-reciprocity-tool]');
+  const data = document.querySelector('[data-film-reciprocity-ui]');
+  if (root && data) mountFilmReciprocityTool(root, JSON.parse(data.textContent || '{}'));
+</script>

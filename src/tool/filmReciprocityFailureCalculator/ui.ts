@@ -1,0 +1,36 @@
+export interface FilmReciprocityFailureCalculatorUI {
+  faqTitle: string;
+  bibliographyTitle: string;
+  studyLabel: string;
+  studyTitle: string;
+  studyText: string;
+  filmLabel: string;
+  filmHint: string;
+  measuredTimeLabel: string;
+  measuredTimeHint: string;
+  secondsUnit: string;
+  filmMenuLabel: string;
+  presetsLabel: string;
+  presetShort: string;
+  presetNight: string;
+  presetDeepNight: string;
+  resultLabel: string;
+  correctedTimeLabel: string;
+  addedTimeLabel: string;
+  correctionStopsLabel: string;
+  correctionFactorLabel: string;
+  noCorrection: string;
+  correctionNeeded: string;
+  longExposure: string;
+  meterTimeLabel: string;
+  filmTimeLabel: string;
+  exposurePathLabel: string;
+  exposurePathText: string;
+  formulaLabel: string;
+  formulaText: string;
+  manufacturerNote: string;
+  resetLabel: string;
+  invalidTime: string;
+  sourceLabel: string;
+  [key: string]: string;
+}

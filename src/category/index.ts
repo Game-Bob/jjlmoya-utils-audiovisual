@@ -15,6 +15,7 @@ import { audioDelayDistanceCalculator } from '../tool/audioDelayDistanceCalculat
 import { equivalentExposureCalculator } from '../tool/equivalentExposureCalculator/entry';
 import { adamsZoneSystem } from '../tool/adamsZoneSystem/entry';
 import { filmDevelopmentTemperature } from '../tool/filmDevelopmentTemperature/entry';
+import { filmReciprocityFailureCalculator } from '../tool/filmReciprocityFailureCalculator/entry';
 
 export const audiovisualCategory: AudiovisualCategoryEntry = {
   icon: 'mdi:camera-iris',
@@ -35,6 +36,7 @@ export const audiovisualCategory: AudiovisualCategoryEntry = {
     equivalentExposureCalculator as AudiovisualToolEntry,
     adamsZoneSystem as AudiovisualToolEntry,
     filmDevelopmentTemperature as AudiovisualToolEntry,
+    filmReciprocityFailureCalculator as AudiovisualToolEntry,
   ],
   i18n: {
     es: async () => (await import('./i18n/es')).content,
