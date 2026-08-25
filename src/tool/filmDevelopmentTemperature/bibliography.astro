@@ -1,12 +1,15 @@
 ---
-import type { BibliographyEntry } from '../../types';
+import { filmDevelopmentTemperature } from './entry';
+import type { KnownLocale } from '../../types';
 
 interface Props {
-  links: BibliographyEntry[];
-  title?: string;
+  locale?: KnownLocale;
 }
 
-const { links, title = 'References' } = Astro.props;
+const { locale = 'en' } = Astro.props;
+const content = await filmDevelopmentTemperature.i18n[locale]?.();
+const links = content?.bibliography ?? [];
+const title = content?.ui.bibliographyTitle ?? 'References';
 ---
 
 <section class="film-dev-bibliography" aria-labelledby="film-dev-bibliography-title">

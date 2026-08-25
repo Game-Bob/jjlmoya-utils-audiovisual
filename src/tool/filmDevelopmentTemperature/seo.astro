@@ -1,13 +1,14 @@
 ---
 import { SEORenderer } from '@jjlmoya/utils-shared';
-import type { SEOSection } from '../../types';
+import { filmDevelopmentTemperature } from './entry';
+import type { KnownLocale } from '../../types';
 
 interface Props {
-  locale: string;
-  sections: SEOSection[];
+  locale?: KnownLocale;
 }
 
-const { locale, sections } = Astro.props;
+const { locale = 'en' } = Astro.props;
+const content = await filmDevelopmentTemperature.i18n[locale]?.();
 ---
 
-<SEORenderer content={{ locale, sections }} />
+{content && <SEORenderer content={{ locale, sections: content.seo }} />}
