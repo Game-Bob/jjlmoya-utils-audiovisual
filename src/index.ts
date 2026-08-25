@@ -15,6 +15,7 @@ export * from './tool/videoFrameExtractor';
 export * from './tool/privacyBlur';
 export * from './tool/depthOfFieldCalculator';
 export * from './tool/videoMerger';
+export * from './tool/filmDevelopmentTemperature';
 
 export type {
   KnownLocale,
@@ -31,4 +32,3 @@ export type {
 } from './types';
 
 export { ALL_ENTRIES, ALL_TOOLS } from './tools';
-

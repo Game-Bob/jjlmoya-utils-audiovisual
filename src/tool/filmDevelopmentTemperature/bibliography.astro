@@ -1,0 +1,17 @@
+---
+import type { BibliographyEntry } from '../../types';
+
+interface Props {
+  links: BibliographyEntry[];
+  title?: string;
+}
+
+const { links, title = 'References' } = Astro.props;
+---
+
+<section class="film-dev-bibliography" aria-labelledby="film-dev-bibliography-title">
+  <h2 id="film-dev-bibliography-title">{title}</h2>
+  <ul>
+    {links.map((link) => <li><a href={link.url} rel="noreferrer">{link.name}</a></li>)}
+  </ul>
+</section>

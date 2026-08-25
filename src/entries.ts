@@ -28,6 +28,8 @@ export { equivalentExposureCalculator } from './tool/equivalentExposureCalculato
 export type { EquivalentExposureUI, EquivalentExposureLocaleContent } from './tool/equivalentExposureCalculator/entry';
 export { adamsZoneSystem } from './tool/adamsZoneSystem/entry';
 export type { AdamsZoneSystemUI, AdamsZoneSystemLocaleContent } from './tool/adamsZoneSystem/entry';
+export { filmDevelopmentTemperature } from './tool/filmDevelopmentTemperature/entry';
+export type { FilmDevelopmentTemperatureUI, FilmDevelopmentTemperatureLocaleContent } from './tool/filmDevelopmentTemperature/entry';
 export { audiovisualCategory, toolsCategory } from './category';
 
 import { chromaticLens } from './tool/chromaticLens/entry';
@@ -45,6 +47,7 @@ import { videoMerger } from './tool/videoMerger/entry';
 import { audioDelayDistanceCalculator } from './tool/audioDelayDistanceCalculator/entry';
 import { equivalentExposureCalculator } from './tool/equivalentExposureCalculator/entry';
 import { adamsZoneSystem } from './tool/adamsZoneSystem/entry';
+import { filmDevelopmentTemperature } from './tool/filmDevelopmentTemperature/entry';
 
 export const ALL_ENTRIES = [
   chromaticLens,
@@ -62,4 +65,5 @@ export const ALL_ENTRIES = [
   audioDelayDistanceCalculator,
   equivalentExposureCalculator,
   adamsZoneSystem,
+  filmDevelopmentTemperature,
 ];

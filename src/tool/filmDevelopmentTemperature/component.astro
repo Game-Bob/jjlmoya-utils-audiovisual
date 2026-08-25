@@ -1,0 +1,95 @@
+---
+import { calculateDevelopment, DEVELOPMENT_ENTRIES } from './logic';
+import { formatMinutes, renderTemperatureRows } from './dom-views';
+import type { FilmDevelopmentTemperatureUI } from './ui';
+
+interface Props {
+  ui: FilmDevelopmentTemperatureUI;
+}
+
+const { ui } = Astro.props;
+const initialResult = calculateDevelopment({ entryId: DEVELOPMENT_ENTRIES[0].id, temperatureC: 20 });
+const initialFilms = [...new Set(DEVELOPMENT_ENTRIES.map((entry) => entry.film))];
+const initialDevelopers = [...new Set(DEVELOPMENT_ENTRIES.filter((entry) => entry.film === initialResult.entry.film).map((entry) => entry.developer))];
+const initialDilutions = [...new Set(DEVELOPMENT_ENTRIES.filter((entry) => entry.id === initialResult.entry.id).map((entry) => entry.dilution))];
+---
+
+<div class="film-development-temperature-tool" data-film-development-temperature>
+  <div class="film-dev-intro">
+    <div class="film-dev-kicker"><span class="kicker-dot"></span> {ui.chooseDocumentedCombination}</div>
+    <p data-temperature-help>{ui.temperatureHelp}</p>
+  </div>
+  <div class="film-dev-stage" data-darkroom-stage data-temperature-state="steady" style="--n-temp-progress: 50%; --n-time-progress: 45%;">
+    <div class="film-dev-stage-header">
+      <div>
+        <span class="stage-label">{ui.currentReadingLabel}</span>
+        <strong class="stage-source" data-source>{initialResult.entry.film} · {initialResult.entry.developer} {initialResult.entry.dilution}</strong>
+      </div>
+      <span class="temperature-badge status-steady" data-temperature-badge>{ui.statusSteady}</span>
+    </div>
+    <div class="film-dev-scene" aria-hidden="true">
+      <div class="safelight"></div>
+      <div class="film-reel reel-left"><span></span><span></span><span></span></div>
+      <div class="film-strip"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+      <div class="chemical-tray"><div class="chemical-level"></div><div class="chemical-ripple ripple-one"></div><div class="chemical-ripple ripple-two"></div></div>
+      <div class="film-reel reel-right"><span></span><span></span><span></span></div>
+      <div class="temperature-needle"><span></span></div>
+      <div class="time-orbit"><span></span></div>
+    </div>
+    <div class="film-dev-readout">
+      <div>
+        <span class="readout-label">{ui.adjustedTimeLabel}</span>
+        <strong class="readout-time" data-current-time>{formatMinutes(initialResult.adjustedMinutes, ui)}</strong>
+      </div>
+      <div class="readout-meta"><span data-base-time-label>{ui.baseTimeLabel}</span><strong data-base-time>{formatMinutes(initialResult.entry.baseMinutes, ui)}</strong></div>
+      <div class="readout-meta"><span>{ui.eiLabel}</span><strong data-ei>{initialResult.entry.ei}</strong></div>
+    </div>
+    <p class="result-note" data-warning>{ui.guideNotice}</p>
+  </div>
+  <div class="film-dev-controls" aria-label={ui.chooseDocumentedCombination}>
+    <div class="control-row">
+      <div class="film-dev-select" data-select="film" data-value={initialResult.entry.film}>
+        <span class="field-label">{ui.filmLabel}</span>
+        <button type="button" class="select-trigger" data-select-trigger="film" aria-expanded="false" aria-haspopup="listbox"><span data-select-label="film">{initialResult.entry.film}</span><span class="select-chevron"></span></button>
+        <div class="select-menu" data-select-menu="film" role="listbox" hidden>
+          {initialFilms.map((film) => <button type="button" role="option" data-value={film} aria-selected={film === initialResult.entry.film} class="film-dev-option">{film}</button>)}
+        </div>
+      </div>
+      <div class="film-dev-select" data-select="developer" data-value={initialResult.entry.developer}>
+        <span class="field-label">{ui.developerLabel}</span>
+        <button type="button" class="select-trigger" data-select-trigger="developer" aria-expanded="false" aria-haspopup="listbox"><span data-select-label="developer">{initialResult.entry.developer}</span><span class="select-chevron"></span></button>
+        <div class="select-menu" data-select-menu="developer" role="listbox" hidden>
+          {initialDevelopers.map((developer) => <button type="button" role="option" data-value={developer} aria-selected={developer === initialResult.entry.developer} class="film-dev-option">{developer}</button>)}
+        </div>
+      </div>
+      <div class="film-dev-select" data-select="dilution" data-value={initialResult.entry.dilution}>
+        <span class="field-label">{ui.dilutionLabel}</span>
+        <button type="button" class="select-trigger" data-select-trigger="dilution" aria-expanded="false" aria-haspopup="listbox"><span data-select-label="dilution">{initialResult.entry.dilution}</span><span class="select-chevron"></span></button>
+        <div class="select-menu" data-select-menu="dilution" role="listbox" hidden>
+          {initialDilutions.map((dilution) => <button type="button" role="option" data-value={dilution} aria-selected={dilution === initialResult.entry.dilution} class="film-dev-option">{dilution}</button>)}
+        </div>
+      </div>
+    </div>
+    <div class="temperature-control">
+      <div class="temperature-control-head"><label for="film-dev-temperature-input" class="field-label">{ui.temperatureLabel}</label><div class="temperature-settings"><output for="film-dev-temperature-input" data-temperature-output>20 °C</output><div class="unit-switch" role="group" aria-label={ui.unitSwitchLabel}><button type="button" data-unit="metric" aria-pressed="true">{ui.metricLabel}</button><button type="button" data-unit="imperial" aria-pressed="false">{ui.imperialLabel}</button></div></div></div>
+      <div class="temperature-input-line"><input id="film-dev-temperature-input" data-temperature-input type="number" min="15" max="25" step="0.5" value="20" inputmode="decimal" /><input data-temperature-range type="range" min="15" max="25" step="0.5" value="20" aria-label={ui.temperatureLabel} /></div>
+      <p data-temperature-help>{ui.temperatureHelp}</p>
+    </div>
+    <button type="button" class="reset-button" data-reset>{ui.resetLabel}</button>
+  </div>
+  <div class="film-dev-reference">
+    <div class="reference-heading"><div><span class="stage-label">{ui.temperatureGuideLabel}</span><p>{ui.temperatureGuideHelp}</p></div><span class="reference-line"></span></div>
+    <div class="reference-table-wrap"><table><thead><tr><th scope="col" data-temperature-heading>{ui.tableTemperature}</th><th scope="col">{ui.tableTime}</th><th scope="col" data-difference-heading>{ui.tableDifference}</th></tr></thead><tbody data-temperature-rows set:html={renderTemperatureRows(initialResult, ui)}></tbody></table></div>
+  </div>
+  <script is:inline type="application/json" data-film-development-temperature-ui set:html={JSON.stringify(ui)}></script>
+</div>
+
+<script>
+  import { mountFilmDevelopmentTemperature } from './controller';
+  const roots = document.querySelectorAll<HTMLElement>('[data-film-development-temperature]');
+  roots.forEach((root) => {
+    const data = root.querySelector<HTMLScriptElement>('[data-film-development-temperature-ui]');
+    if (!data?.textContent) return;
+    mountFilmDevelopmentTemperature(root, JSON.parse(data.textContent));
+  });
+</script>

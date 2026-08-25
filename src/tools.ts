@@ -15,6 +15,7 @@ import { VIDEO_MERGER_TOOL } from './tool/videoMerger';
 import { AUDIO_DELAY_DISTANCE_CALCULATOR_TOOL } from './tool/audioDelayDistanceCalculator';
 import { EQUIVALENT_EXPOSURE_CALCULATOR_TOOL } from './tool/equivalentExposureCalculator';
 import { ADAMS_ZONE_SYSTEM_TOOL } from './tool/adamsZoneSystem';
+import { FILM_DEVELOPMENT_TEMPERATURE_TOOL } from './tool/filmDevelopmentTemperature';
 
 export const ALL_TOOLS: ToolDefinition[] = [
   TIMELAPSE_CALCULATOR_TOOL,
@@ -32,4 +33,5 @@ export const ALL_TOOLS: ToolDefinition[] = [
   AUDIO_DELAY_DISTANCE_CALCULATOR_TOOL,
   EQUIVALENT_EXPOSURE_CALCULATOR_TOOL,
   ADAMS_ZONE_SYSTEM_TOOL,
+  FILM_DEVELOPMENT_TEMPERATURE_TOOL,
 ];

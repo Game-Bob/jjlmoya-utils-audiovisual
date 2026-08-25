@@ -1,0 +1,36 @@
+export interface FilmDevelopmentTemperatureUI {
+  faqTitle: string;
+  bibliographyTitle: string;
+  chooseDocumentedCombination: string;
+  filmLabel: string;
+  developerLabel: string;
+  dilutionLabel: string;
+  temperatureLabel: string;
+  temperatureHelp: string;
+  unitSwitchLabel: string;
+  metricLabel: string;
+  imperialLabel: string;
+  currentReadingLabel: string;
+  baseTimeLabel: string;
+  adjustedTimeLabel: string;
+  temperatureGuideLabel: string;
+  temperatureGuideHelp: string;
+  sourceLabel: string;
+  eiLabel: string;
+  statusCool: string;
+  statusSteady: string;
+  statusWarm: string;
+  warningShortTime: string;
+  warningOutOfRange: string;
+  guideNotice: string;
+  resetLabel: string;
+  minutesLabel: string;
+  secondsLabel: string;
+  currentBadge: string;
+  belowFiveMinutes: string;
+  tableTemperature: string;
+  tableTime: string;
+  tableDifference: string;
+  currentRow: string;
+  [key: string]: string;
+}
