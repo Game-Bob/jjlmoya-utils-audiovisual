@@ -1,20 +1,6 @@
 ---
-import { filmDevelopmentTemperature } from './entry';
-import type { KnownLocale } from '../../types';
-
-interface Props {
-  locale?: KnownLocale;
-}
-
-const { locale = 'en' } = Astro.props;
-const content = await filmDevelopmentTemperature.i18n[locale]?.();
-const links = content?.bibliography ?? [];
-const title = content?.ui.bibliographyTitle ?? 'References';
+import { Bibliography as SharedBibliography } from '@jjlmoya/utils-shared';
+import { bibliography } from './bibliography';
 ---
 
-<section class="film-dev-bibliography" aria-labelledby="film-dev-bibliography-title">
-  <h2 id="film-dev-bibliography-title">{title}</h2>
-  <ul>
-    {links.map((link) => <li><a href={link.url} rel="noreferrer">{link.name}</a></li>)}
-  </ul>
-</section>
+<SharedBibliography links={bibliography} />
