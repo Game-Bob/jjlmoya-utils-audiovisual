@@ -18,6 +18,8 @@ export * from './tool/videoMerger';
 export * from './tool/filmDevelopmentTemperature';
 export { reverbDecayTimeCalculator } from './tool/reverbDecayTimeCalculator';
 export type { ReverbDecayUI, ReverbDecayLocaleContent } from './tool/reverbDecayTimeCalculator';
+export { videoExportPlanner } from './tool/videoExportPlanner';
+export type { VideoExportPlannerUI, VideoExportPlannerLocaleContent } from './tool/videoExportPlanner';
 
 export type {
   KnownLocale,

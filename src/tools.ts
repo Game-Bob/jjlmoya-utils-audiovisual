@@ -18,6 +18,7 @@ import { ADAMS_ZONE_SYSTEM_TOOL } from './tool/adamsZoneSystem';
 import { FILM_DEVELOPMENT_TEMPERATURE_TOOL } from './tool/filmDevelopmentTemperature';
 import { FILM_RECIPROCITY_FAILURE_CALCULATOR_TOOL } from './tool/filmReciprocityFailureCalculator';
 import { REVERB_DECAY_TIME_CALCULATOR_TOOL } from './tool/reverbDecayTimeCalculator';
+import { VIDEO_EXPORT_PLANNER_TOOL } from './tool/videoExportPlanner';
 
 export const ALL_TOOLS: ToolDefinition[] = [
   TIMELAPSE_CALCULATOR_TOOL,
@@ -38,4 +39,5 @@ export const ALL_TOOLS: ToolDefinition[] = [
   FILM_DEVELOPMENT_TEMPERATURE_TOOL,
   FILM_RECIPROCITY_FAILURE_CALCULATOR_TOOL,
   REVERB_DECAY_TIME_CALCULATOR_TOOL,
+  VIDEO_EXPORT_PLANNER_TOOL,
 ];

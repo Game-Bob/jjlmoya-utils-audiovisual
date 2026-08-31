@@ -1,0 +1,90 @@
+---
+import type { VideoExportPlannerUI } from './ui';
+import { calculateExport, DEFAULT_INPUTS } from './logic';
+import { formatFileSize, formatNumber } from './dom-views';
+
+interface Props { ui: VideoExportPlannerUI; locale?: string; }
+const { ui, locale = 'en' } = Astro.props;
+const initial = calculateExport(DEFAULT_INPUTS);
+const config = JSON.stringify({ ui, defaults: DEFAULT_INPUTS });
+const resolutionOptions = [
+  { value: '480', label: ui.resolution480 }, { value: '720', label: ui.resolution720 },
+  { value: '1080', label: ui.resolution1080 }, { value: '1440', label: ui.resolution1440 },
+  { value: '2160', label: ui.resolution2160 },
+];
+const frameRateOptions = [24, 25, 30, 50, 60];
+const codecOptions = [
+  { value: 'h264', label: ui.codecH264 }, { value: 'h265', label: ui.codecH265 }, { value: 'av1', label: ui.codecAv1 },
+];
+---
+
+<div class="video-export-planner" data-video-export-planner data-locale={locale}>
+  <script is:inline type="application/json" data-video-export-config set:html={config} />
+  <div class="planner-shell">
+    <section class="planner-controls" aria-labelledby="export-settings-title">
+      <p class="workflow-hint">{ui.workflowHint}</p>
+      <div class="preset-block">
+        <div class="section-label">{ui.presetLabel}</div>
+        <div class="preset-row" role="group" aria-label={ui.presetLabel}>
+          <button type="button" class="preset-button" data-preset="youtube" aria-pressed="true">{ui.presetYoutube}</button>
+          <button type="button" class="preset-button" data-preset="social" aria-pressed="false">{ui.presetSocial}</button>
+          <button type="button" class="preset-button" data-preset="master" aria-pressed="false">{ui.presetMaster}</button>
+        </div>
+      </div>
+      <div class="settings-heading"><h2 id="export-settings-title">{ui.sourceSettingsTitle}</h2><span class="settings-mark" aria-hidden="true">01</span></div>
+      <div class="field-grid">
+        <div class="field field-wide">
+          <span class="field-label">{ui.resolutionLabel}</span>
+          <div class="custom-select" data-custom-select>
+            <button type="button" class="select-trigger" data-select-trigger aria-haspopup="listbox" aria-expanded="false"><span data-select-label="resolution">{ui.resolution1080}</span><span class="select-chevron" aria-hidden="true"></span></button>
+            <div class="select-menu" data-select-menu hidden role="listbox" aria-label={ui.resolutionLabel}>
+              {resolutionOptions.map((option) => <button type="button" class="select-option" data-select-option="resolution" data-value={option.value} role="option" aria-selected={option.value === '1080'}>{option.label}</button>)}
+            </div>
+            <input type="hidden" data-select-input="resolution" value="1080" />
+          </div>
+        </div>
+        <div class="field">
+          <span class="field-label">{ui.frameRateLabel}</span>
+          <div class="custom-select" data-custom-select>
+            <button type="button" class="select-trigger" data-select-trigger aria-haspopup="listbox" aria-expanded="false"><span data-select-label="frameRate">30 fps</span><span class="select-chevron" aria-hidden="true"></span></button>
+            <div class="select-menu" data-select-menu hidden role="listbox" aria-label={ui.frameRateLabel}>
+              {frameRateOptions.map((rate) => <button type="button" class="select-option" data-select-option="frameRate" data-value={rate} role="option" aria-selected={rate === 30}>{rate} fps</button>)}
+            </div>
+            <input type="hidden" data-select-input="frameRate" value="30" />
+          </div>
+        </div>
+        <div class="field">
+          <span class="field-label">{ui.codecLabel}</span>
+          <div class="custom-select" data-custom-select>
+            <button type="button" class="select-trigger" data-select-trigger aria-haspopup="listbox" aria-expanded="false"><span data-select-label="codec">{ui.codecH264}</span><span class="select-chevron" aria-hidden="true"></span></button>
+            <div class="select-menu" data-select-menu hidden role="listbox" aria-label={ui.codecLabel}>
+              {codecOptions.map((option) => <button type="button" class="select-option" data-select-option="codec" data-value={option.value} role="option" aria-selected={option.value === 'h264'}>{option.label}</button>)}
+            </div>
+            <input type="hidden" data-select-input="codec" value="h264" />
+          </div>
+        </div>
+        <label class="field"><span class="field-label">{ui.durationLabel}</span><span class="numeric-input"><input type="number" min="0" max="1440" step="0.5" data-input="durationMinutes" value={DEFAULT_INPUTS.durationMinutes} /><span>{ui.minutesUnit}</span></span></label>
+        <label class="field"><span class="field-label">{ui.videoBitrateLabel}</span><span class="numeric-input"><input type="number" min="0" max="1000" step="0.1" data-input="videoBitrateMbps" value={DEFAULT_INPUTS.videoBitrateMbps} /><span>Mbps</span></span></label>
+        <label class="field"><span class="field-label">{ui.audioBitrateLabel}</span><span class="numeric-input"><input type="number" min="0" max="2000" step="1" data-input="audioBitrateKbps" value={DEFAULT_INPUTS.audioBitrateKbps} /><span>kbps</span></span></label>
+        <label class="field field-wide"><span class="field-label">{ui.overheadLabel}</span><span class="numeric-input"><input type="number" min="0" max="50" step="0.5" data-input="overheadPercent" value={DEFAULT_INPUTS.overheadPercent} /><span>%</span></span></label>
+      </div>
+    </section>
+
+    <section class="planner-result" aria-labelledby="selected-output-title">
+      <div class="result-topline"><span class="result-kicker" id="selected-output-title">{ui.selectedOutputTitle}</span><span class="status-badge" data-output="status">{ui.statusReady}</span></div>
+      <div class="hero-result"><div><span class="metric-label">{ui.estimatedFileSizeLabel}</span><strong data-output="fileSize">{formatFileSize(initial.fileSizeBytes)}</strong></div><div class="rate-result"><span class="metric-label">{ui.totalDataRateLabel}</span><strong data-output="dataRate">{formatNumber(initial.totalDataRateMbps, 2)} Mbps</strong></div></div>
+      <figure class="data-reel">
+        <svg data-output="scene" viewBox="0 0 400 210" role="img" aria-label={ui.dataReelLabel}><path d="M34 52h332M34 161h332" stroke="var(--n-track)" stroke-width="2" /><rect x="34" y="66" width="292" height="76" rx="7" fill="var(--n-video)" /><rect x="326" y="66" width="14" height="76" rx="7" fill="var(--n-audio)" /><rect x="340" y="66" width="26" height="76" rx="7" fill="var(--n-overhead)" /></svg>
+        <figcaption><span class="legend-item"><i class="legend-swatch video"></i>{ui.videoDataLabel}</span><span class="legend-item"><i class="legend-swatch audio"></i>{ui.audioDataLabel}</span><span class="legend-item"><i class="legend-swatch overhead"></i>{ui.containerOverheadLabel}</span></figcaption>
+      </figure>
+      <div class="breakdown" aria-label={ui.selectedOutputTitle}><div><span>{ui.videoDataLabel}</span><strong data-output="videoBytes">{formatFileSize(initial.videoBytes)}</strong></div><div><span>{ui.audioDataLabel}</span><strong data-output="audioBytes">{formatFileSize(initial.audioBytes)}</strong></div><div><span>{ui.containerOverheadLabel}</span><strong data-output="overheadBytes">{formatFileSize(initial.overheadBytes)}</strong></div></div>
+      <p class="warning-note" data-output="warning" hidden></p>
+      <div class="comparison-block"><div class="comparison-heading"><h2>{ui.comparisonTitle}</h2><span class="settings-mark" aria-hidden="true">02</span></div><table><thead><tr><th>{ui.codecColumn}</th><th>{ui.suggestedVideoColumn}</th><th>{ui.estimatedSizeColumn}</th></tr></thead><tbody data-output="comparison"></tbody></table><p class="planning-note">{ui.planningNote}</p></div>
+    </section>
+  </div>
+</div>
+
+<script>
+  import { initVideoExportPlanner } from './controller';
+  initVideoExportPlanner();
+</script>
