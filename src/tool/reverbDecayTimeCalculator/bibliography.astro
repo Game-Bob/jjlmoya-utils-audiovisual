@@ -1,0 +1,12 @@
+---
+import { Bibliography as SharedBibliography } from '@jjlmoya/utils-shared';
+import { reverbDecayTimeCalculator } from './entry';
+import type { KnownLocale } from '../../types';
+
+interface Props { locale?: KnownLocale; }
+const { locale = 'en' } = Astro.props;
+const content = await reverbDecayTimeCalculator.i18n[locale]?.();
+if (!content || content.bibliography.length === 0) return null;
+---
+
+<SharedBibliography title="Bibliography" links={content.bibliography} />

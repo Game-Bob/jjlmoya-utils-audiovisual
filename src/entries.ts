@@ -51,6 +51,7 @@ import { equivalentExposureCalculator } from './tool/equivalentExposureCalculato
 import { adamsZoneSystem } from './tool/adamsZoneSystem/entry';
 import { filmDevelopmentTemperature } from './tool/filmDevelopmentTemperature/entry';
 import { filmReciprocityFailureCalculator } from './tool/filmReciprocityFailureCalculator/entry';
+import { reverbDecayTimeCalculator } from './tool/reverbDecayTimeCalculator/entry';
 
 export const ALL_ENTRIES = [
   chromaticLens,
@@ -70,4 +71,5 @@ export const ALL_ENTRIES = [
   adamsZoneSystem,
   filmDevelopmentTemperature,
   filmReciprocityFailureCalculator,
+  reverbDecayTimeCalculator,
 ];

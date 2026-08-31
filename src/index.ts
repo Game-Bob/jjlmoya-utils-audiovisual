@@ -16,6 +16,8 @@ export * from './tool/privacyBlur';
 export * from './tool/depthOfFieldCalculator';
 export * from './tool/videoMerger';
 export * from './tool/filmDevelopmentTemperature';
+export { reverbDecayTimeCalculator } from './tool/reverbDecayTimeCalculator';
+export type { ReverbDecayUI, ReverbDecayLocaleContent } from './tool/reverbDecayTimeCalculator';
 
 export type {
   KnownLocale,

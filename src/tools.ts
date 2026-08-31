@@ -17,6 +17,7 @@ import { EQUIVALENT_EXPOSURE_CALCULATOR_TOOL } from './tool/equivalentExposureCa
 import { ADAMS_ZONE_SYSTEM_TOOL } from './tool/adamsZoneSystem';
 import { FILM_DEVELOPMENT_TEMPERATURE_TOOL } from './tool/filmDevelopmentTemperature';
 import { FILM_RECIPROCITY_FAILURE_CALCULATOR_TOOL } from './tool/filmReciprocityFailureCalculator';
+import { REVERB_DECAY_TIME_CALCULATOR_TOOL } from './tool/reverbDecayTimeCalculator';
 
 export const ALL_TOOLS: ToolDefinition[] = [
   TIMELAPSE_CALCULATOR_TOOL,
@@ -36,4 +37,5 @@ export const ALL_TOOLS: ToolDefinition[] = [
   ADAMS_ZONE_SYSTEM_TOOL,
   FILM_DEVELOPMENT_TEMPERATURE_TOOL,
   FILM_RECIPROCITY_FAILURE_CALCULATOR_TOOL,
+  REVERB_DECAY_TIME_CALCULATOR_TOOL,
 ];
