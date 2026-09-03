@@ -1,0 +1,1206 @@
+{
+  "version": 1,
+  "generatedAt": "2026-09-03T21:44:19.888Z",
+  "pages": {
+    "https://www.gamebob.dev/de/werkzeuge/kategorien/audiovisuell-fotografie/ansel-adams-zonensystem-visualisierer-belichtungszonen/": {
+      "hash": "1842592e3080776294bff5bb4010623c52e1e5b7f1edb8fbb2fecc6c87b9f3b6",
+      "route": "/de/werkzeuge/kategorien/audiovisuell-fotografie/ansel-adams-zonensystem-visualisierer-belichtungszonen/"
+    },
+    "https://www.gamebob.dev/de/werkzeuge/kategorien/audiovisuell-fotografie/audio-delay-abstand-temperatur-rechner/": {
+      "hash": "bd40e2b5e4840bf86034ab701e3b8f99a986f2871b8a5bab60ff97eb9a9d8911",
+      "route": "/de/werkzeuge/kategorien/audiovisuell-fotografie/audio-delay-abstand-temperatur-rechner/"
+    },
+    "https://www.gamebob.dev/de/werkzeuge/kategorien/audiovisuell-fotografie/chromatic-lens-farbpaletten-extraktion-online/": {
+      "hash": "b34317ff2747c5e6c9c8d49d951a6b6d921d34851bfeab22f479e2a77166da1d",
+      "route": "/de/werkzeuge/kategorien/audiovisuell-fotografie/chromatic-lens-farbpaletten-extraktion-online/"
+    },
+    "https://www.gamebob.dev/de/werkzeuge/kategorien/audiovisuell-fotografie/druckqualitaetsrechner-pixel-zu-cm-dpi/": {
+      "hash": "abcf06f11d2dfbe0af5fa9726db841f961645e6f1a54a96c38707c893d18f790",
+      "route": "/de/werkzeuge/kategorien/audiovisuell-fotografie/druckqualitaetsrechner-pixel-zu-cm-dpi/"
+    },
+    "https://www.gamebob.dev/de/werkzeuge/kategorien/audiovisuell-fotografie/entwicklungszeit-rechner-film-temperatur-kompensation/": {
+      "hash": "9e582ade5d0ddc2f0f6e76ced62c0fd981ce714c5078a3860ef5d338d9108520",
+      "route": "/de/werkzeuge/kategorien/audiovisuell-fotografie/entwicklungszeit-rechner-film-temperatur-kompensation/"
+    },
+    "https://www.gamebob.dev/de/werkzeuge/kategorien/audiovisuell-fotografie/exif-metadaten-reinigungsgeraet-gps-foto-datenschutz-entfernen/": {
+      "hash": "ab1861b5bfdd4defd4405baabbbb2a98847a5d46f69f89b46aa4c5996fb09ca8",
+      "route": "/de/werkzeuge/kategorien/audiovisuell-fotografie/exif-metadaten-reinigungsgeraet-gps-foto-datenschutz-entfernen/"
+    },
+    "https://www.gamebob.dev/de/werkzeuge/kategorien/audiovisuell-fotografie/": {
+      "hash": "89d8489261cff0f759993bc09903f5b1aa3a2d5d2972cb1e4c796178e76feebc",
+      "route": "/de/werkzeuge/kategorien/audiovisuell-fotografie/"
+    },
+    "https://www.gamebob.dev/de/werkzeuge/kategorien/audiovisuell-fotografie/kostenloser-online-foto-collage-maker-professionelle-kompositionen/": {
+      "hash": "a2a25d7cad4b41cfd82bef464d251d742fef235c0b90afb02711ac65ae15160b",
+      "route": "/de/werkzeuge/kategorien/audiovisuell-fotografie/kostenloser-online-foto-collage-maker-professionelle-kompositionen/"
+    },
+    "https://www.gamebob.dev/de/werkzeuge/kategorien/audiovisuell-fotografie/online-bildkomprimierer-dateigroesse-ohne-qualitaetsverlust-reduzieren/": {
+      "hash": "0d9e8139caa29cb4519ff6d056751931bf614dae460d9f4b4667a7b1e78c0a00",
+      "route": "/de/werkzeuge/kategorien/audiovisuell-fotografie/online-bildkomprimierer-dateigroesse-ohne-qualitaetsverlust-reduzieren/"
+    },
+    "https://www.gamebob.dev/de/werkzeuge/kategorien/audiovisuell-fotografie/online-privatsphaere-editor-gesichter-verpixeln-unscharf-machen/": {
+      "hash": "5b902617c180a091c6de856c87a1d9fb7a9365bd9f089dcddbc41a9e3d7a0090",
+      "route": "/de/werkzeuge/kategorien/audiovisuell-fotografie/online-privatsphaere-editor-gesichter-verpixeln-unscharf-machen/"
+    },
+    "https://www.gamebob.dev/de/werkzeuge/kategorien/audiovisuell-fotografie/online-video-frame-extraktor-hd-stills-erfassen/": {
+      "hash": "723629d45a803a9c5346eaca139ff2754694753ae923babccbf6d8f15d6d096b",
+      "route": "/de/werkzeuge/kategorien/audiovisuell-fotografie/online-video-frame-extraktor-hd-stills-erfassen/"
+    },
+    "https://www.gamebob.dev/de/werkzeuge/kategorien/audiovisuell-fotografie/rechner-aquivalente-belichtung/": {
+      "hash": "a97c392412bbaf5e65e2d9b5fdd22af2202fde4573e3b6807451a71383417389",
+      "route": "/de/werkzeuge/kategorien/audiovisuell-fotografie/rechner-aquivalente-belichtung/"
+    },
+    "https://www.gamebob.dev/de/werkzeuge/kategorien/audiovisuell-fotografie/reverb-nachhallzeit-sabine-rechner/": {
+      "hash": "998cf25967135c399b7273dc4b7c7994522b9534f5df75cbd7aebf3e7b2aae0b",
+      "route": "/de/werkzeuge/kategorien/audiovisuell-fotografie/reverb-nachhallzeit-sabine-rechner/"
+    },
+    "https://www.gamebob.dev/de/werkzeuge/kategorien/audiovisuell-fotografie/scharfentiefe-rechner/": {
+      "hash": "45d27b3aa01a149190609a9ecf592bd745ca1ddd1abadcf6730aa418efc0d40a",
+      "route": "/de/werkzeuge/kategorien/audiovisuell-fotografie/scharfentiefe-rechner/"
+    },
+    "https://www.gamebob.dev/de/werkzeuge/kategorien/audiovisuell-fotografie/schwarzweissfilm-reziprozitaetsfehler-rechner/": {
+      "hash": "43b6aa1ca805f1965af92e5327606b31ff1294b49348028b233781e93ae52b53",
+      "route": "/de/werkzeuge/kategorien/audiovisuell-fotografie/schwarzweissfilm-reziprozitaetsfehler-rechner/"
+    },
+    "https://www.gamebob.dev/de/werkzeuge/kategorien/audiovisuell-fotografie/srt-untertitel-online-synchronisieren-timing-anpassen-kostenlos/": {
+      "hash": "2b00fa95fedaec2dfbd3c1d4099c5b28c84b5a501202d699e1c4cc48efa7c141",
+      "route": "/de/werkzeuge/kategorien/audiovisuell-fotografie/srt-untertitel-online-synchronisieren-timing-anpassen-kostenlos/"
+    },
+    "https://www.gamebob.dev/de/werkzeuge/kategorien/audiovisuell-fotografie/timelapse-hyperlapse-rechner-perfekte-intervalle/": {
+      "hash": "e6615e027346433dd00ce8bfbacd3bc517b05559f3324352a80f2fb2bfcf9c2e",
+      "route": "/de/werkzeuge/kategorien/audiovisuell-fotografie/timelapse-hyperlapse-rechner-perfekte-intervalle/"
+    },
+    "https://www.gamebob.dev/de/werkzeuge/kategorien/audiovisuell-fotografie/tv-sitzabstand-rechner-thx-4k-optimaler-bildschirm/": {
+      "hash": "551c791b2e2e82ea478986c969d73fa1544402f3a26c9cd158290047155fa497",
+      "route": "/de/werkzeuge/kategorien/audiovisuell-fotografie/tv-sitzabstand-rechner-thx-4k-optimaler-bildschirm/"
+    },
+    "https://www.gamebob.dev/de/werkzeuge/kategorien/audiovisuell-fotografie/video-export-bitrate-dateigroesse-planer/": {
+      "hash": "5156b69985b8081f10a902f6cf131aeee0cc1d2a9bd481c6e3e55905dfe3aef8",
+      "route": "/de/werkzeuge/kategorien/audiovisuell-fotografie/video-export-bitrate-dateigroesse-planer/"
+    },
+    "https://www.gamebob.dev/de/werkzeuge/kategorien/audiovisuell-fotografie/videos-zusammenfuegen-online/": {
+      "hash": "a9467de271816002d364b9c9a67c56b6f917393efd3529cb0fc96e7163b95c23",
+      "route": "/de/werkzeuge/kategorien/audiovisuell-fotografie/videos-zusammenfuegen-online/"
+    },
+    "https://www.gamebob.dev/en/utilities/categories/audiovisual-photography/ansel-adams-zone-system-visualizer-exposure-zones/": {
+      "hash": "0a3c296ba5f0f16f4efbc862f1673bc7a9f06a03421879a198a4423f0c741bd6",
+      "route": "/en/utilities/categories/audiovisual-photography/ansel-adams-zone-system-visualizer-exposure-zones/"
+    },
+    "https://www.gamebob.dev/en/utilities/categories/audiovisual-photography/audio-delay-distance-calculator/": {
+      "hash": "5178784e96076ea9e7715c2af3f46dc3dcc01800845920aa41febde6b382a602",
+      "route": "/en/utilities/categories/audiovisual-photography/audio-delay-distance-calculator/"
+    },
+    "https://www.gamebob.dev/en/utilities/categories/audiovisual-photography/chromatic-lens-color-palette-extraction-online/": {
+      "hash": "f0627e458cfa6bc04479d6c2620a648cd18ba9a3a9a7294cfa63b74db418f875",
+      "route": "/en/utilities/categories/audiovisual-photography/chromatic-lens-color-palette-extraction-online/"
+    },
+    "https://www.gamebob.dev/en/utilities/categories/audiovisual-photography/depth-of-field-calculator/": {
+      "hash": "bcae24c10d569350adb0be62836ec93ec7a2549f23dc2eae55ddeb6e1682ed77",
+      "route": "/en/utilities/categories/audiovisual-photography/depth-of-field-calculator/"
+    },
+    "https://www.gamebob.dev/en/utilities/categories/audiovisual-photography/equivalent-exposure-calculator/": {
+      "hash": "10f8ee2c7b675f78b412c3065f8ed9bc8ac7cc848a750cd74acb866d78e8e33e",
+      "route": "/en/utilities/categories/audiovisual-photography/equivalent-exposure-calculator/"
+    },
+    "https://www.gamebob.dev/en/utilities/categories/audiovisual-photography/exif-metadata-cleaner-remove-gps-photo-privacy/": {
+      "hash": "b052def0b8e95e3eb36437b4e19d2b22b2ef916c27877a8994b831f958d73f77",
+      "route": "/en/utilities/categories/audiovisual-photography/exif-metadata-cleaner-remove-gps-photo-privacy/"
+    },
+    "https://www.gamebob.dev/en/utilities/categories/audiovisual-photography/film-development-time-temperature-compensation-calculator/": {
+      "hash": "66b07af044c37bad5f9031b0f796a5f3ab52285b0ac3e7676e0cff62635298bf",
+      "route": "/en/utilities/categories/audiovisual-photography/film-development-time-temperature-compensation-calculator/"
+    },
+    "https://www.gamebob.dev/en/utilities/categories/audiovisual-photography/film-reciprocity-failure-calculator/": {
+      "hash": "447618fee2b0b330fdc0b433761caf47685c8207ded066985179d98e9b9bf308",
+      "route": "/en/utilities/categories/audiovisual-photography/film-reciprocity-failure-calculator/"
+    },
+    "https://www.gamebob.dev/en/utilities/categories/audiovisual-photography/free-online-photo-collage-maker-professional-compositions/": {
+      "hash": "a596a8903e8ceb426c0a6a80a22a9182dd387f5f4c7e2606d7860bd6f43afc37",
+      "route": "/en/utilities/categories/audiovisual-photography/free-online-photo-collage-maker-professional-compositions/"
+    },
+    "https://www.gamebob.dev/en/utilities/categories/audiovisual-photography/": {
+      "hash": "d5a91fcc78eaf5364c18a0ca3a4bc22476363fb1a039f486b02b168b6e3d8d4b",
+      "route": "/en/utilities/categories/audiovisual-photography/"
+    },
+    "https://www.gamebob.dev/en/utilities/categories/audiovisual-photography/merge-videos-online/": {
+      "hash": "31db53648f8fb202fcdf2dc06f89543023c750e1b80043c72e10a8fe24223cef",
+      "route": "/en/utilities/categories/audiovisual-photography/merge-videos-online/"
+    },
+    "https://www.gamebob.dev/en/utilities/categories/audiovisual-photography/online-image-compressor-reduce-file-size-no-quality-loss/": {
+      "hash": "e660a2760808baac24294dd411901a254a41cf35aa3a12fa88adbea8779a8c56",
+      "route": "/en/utilities/categories/audiovisual-photography/online-image-compressor-reduce-file-size-no-quality-loss/"
+    },
+    "https://www.gamebob.dev/en/utilities/categories/audiovisual-photography/online-privacy-editor-pixelate-blur-faces-photos/": {
+      "hash": "3c0eb0636df63b4db2c9e835db604a7bd2caac4a8064e0adc772d00342adb70d",
+      "route": "/en/utilities/categories/audiovisual-photography/online-privacy-editor-pixelate-blur-faces-photos/"
+    },
+    "https://www.gamebob.dev/en/utilities/categories/audiovisual-photography/online-video-frame-extractor-capture-hd-stills/": {
+      "hash": "55bd140f644fc33a5594adcb7914757eebb7484639207a4b2d10e41c2cdac7ac",
+      "route": "/en/utilities/categories/audiovisual-photography/online-video-frame-extractor-capture-hd-stills/"
+    },
+    "https://www.gamebob.dev/en/utilities/categories/audiovisual-photography/print-quality-calculator-pixels-to-cm-dpi/": {
+      "hash": "bc5cf3d819f5cf48a60c659a1e59b7d1f57466416c70a33c110269c9645c2780",
+      "route": "/en/utilities/categories/audiovisual-photography/print-quality-calculator-pixels-to-cm-dpi/"
+    },
+    "https://www.gamebob.dev/en/utilities/categories/audiovisual-photography/reverb-decay-time-calculator/": {
+      "hash": "c2292ada5cd7568e1b70f0f404eedd2753cf81935131b60a3b59e8bdf112cdd3",
+      "route": "/en/utilities/categories/audiovisual-photography/reverb-decay-time-calculator/"
+    },
+    "https://www.gamebob.dev/en/utilities/categories/audiovisual-photography/synchronize-srt-subtitles-online-adjust-timing-free/": {
+      "hash": "c01348d52161b8042723cce0ed4b7246c0baeca6925c762cdf36a9ba8ca4127e",
+      "route": "/en/utilities/categories/audiovisual-photography/synchronize-srt-subtitles-online-adjust-timing-free/"
+    },
+    "https://www.gamebob.dev/en/utilities/categories/audiovisual-photography/timelapse-hyperlapse-calculator-perfect-intervals/": {
+      "hash": "a244c12f289eb27eb5e1d4f7f3415491da8edcc96ef2ed1644bd4b8eddb0d7b3",
+      "route": "/en/utilities/categories/audiovisual-photography/timelapse-hyperlapse-calculator-perfect-intervals/"
+    },
+    "https://www.gamebob.dev/en/utilities/categories/audiovisual-photography/tv-viewing-distance-calculator-thx-4k-optimal-screen/": {
+      "hash": "028eda386af732d607f4e291269122c52aefb1dc6d825c503389fe1adf05538e",
+      "route": "/en/utilities/categories/audiovisual-photography/tv-viewing-distance-calculator-thx-4k-optimal-screen/"
+    },
+    "https://www.gamebob.dev/en/utilities/categories/audiovisual-photography/video-export-bitrate-file-size-planner/": {
+      "hash": "5afd1b52b9120a3219fa5b59172fe2afb5c843e693211698d1561b4e428b93b1",
+      "route": "/en/utilities/categories/audiovisual-photography/video-export-bitrate-file-size-planner/"
+    },
+    "https://www.gamebob.dev/fr/utilitaires/categories/audiovisuels-photographie/calculateur-delai-audio-distance-temperature/": {
+      "hash": "b4133fda7a61aee3ba4dc41d1a4da06709af8fe429f77397d11092004cb8d56a",
+      "route": "/fr/utilitaires/categories/audiovisuels-photographie/calculateur-delai-audio-distance-temperature/"
+    },
+    "https://www.gamebob.dev/fr/utilitaires/categories/audiovisuels-photographie/calculateur-echec-reciprocite-film-argentique/": {
+      "hash": "aba270751b800b461d833d4b3f6234289675905cebd63d208321f023df2b56c6",
+      "route": "/fr/utilitaires/categories/audiovisuels-photographie/calculateur-echec-reciprocite-film-argentique/"
+    },
+    "https://www.gamebob.dev/fr/utilitaires/categories/audiovisuels-photographie/calculateur-exposition-equivalente/": {
+      "hash": "1ff42563f415dd2a6a6fa645f51e7524f74c21b58b874440d3b393d516e0b27e",
+      "route": "/fr/utilitaires/categories/audiovisuels-photographie/calculateur-exposition-equivalente/"
+    },
+    "https://www.gamebob.dev/fr/utilitaires/categories/audiovisuels-photographie/calculateur-profondeur-de-champ/": {
+      "hash": "a80b110456cc7d815846d9d6e7cf32ef79879b5d1f8505a05ab9c1b0050dd8b0",
+      "route": "/fr/utilitaires/categories/audiovisuels-photographie/calculateur-profondeur-de-champ/"
+    },
+    "https://www.gamebob.dev/fr/utilitaires/categories/audiovisuels-photographie/calculateur-temps-developpement-film-temperature/": {
+      "hash": "7ffdf90d38b691b84a6474010f8949692f1d90daf0bbd0f2234a7e24d7fa498a",
+      "route": "/fr/utilitaires/categories/audiovisuels-photographie/calculateur-temps-developpement-film-temperature/"
+    },
+    "https://www.gamebob.dev/fr/utilitaires/categories/audiovisuels-photographie/calculateur-temps-reverberation-rt60/": {
+      "hash": "ff100c91a9bd1349ce60412d795613bdda5c407ae56693f3aa220bf94f11ab5c",
+      "route": "/fr/utilitaires/categories/audiovisuels-photographie/calculateur-temps-reverberation-rt60/"
+    },
+    "https://www.gamebob.dev/fr/utilitaires/categories/audiovisuels-photographie/calculatrice-distance-tv-ecran-optimal-thx-4k/": {
+      "hash": "c0a659f3b0619ac3ce50dbf41eaba1e6af24bd638f73b51fc2467e32fc922267",
+      "route": "/fr/utilitaires/categories/audiovisuels-photographie/calculatrice-distance-tv-ecran-optimal-thx-4k/"
+    },
+    "https://www.gamebob.dev/fr/utilitaires/categories/audiovisuels-photographie/calculatrice-qualite-impression-pixels-cm-dpi/": {
+      "hash": "222588e8a9eda195a91895ec8998704c89a090cbeccca1370ecc343bf65fb786",
+      "route": "/fr/utilitaires/categories/audiovisuels-photographie/calculatrice-qualite-impression-pixels-cm-dpi/"
+    },
+    "https://www.gamebob.dev/fr/utilitaires/categories/audiovisuels-photographie/calculatrice-timelapse-hyperlapse-intervalles-parfaits/": {
+      "hash": "7691d9e64db6cfd70017cbede510caa2b262d9852fc1ebc4e0ff66c7b3e12a29",
+      "route": "/fr/utilitaires/categories/audiovisuels-photographie/calculatrice-timelapse-hyperlapse-intervalles-parfaits/"
+    },
+    "https://www.gamebob.dev/fr/utilitaires/categories/audiovisuels-photographie/compresseur-images-en-ligne-reduire-taille-sans-perte-qualite/": {
+      "hash": "bdbedfd2381cf9dd1e24cbe79ac576c78dfd88d1b3879c3d6135d63c97a78390",
+      "route": "/fr/utilitaires/categories/audiovisuels-photographie/compresseur-images-en-ligne-reduire-taille-sans-perte-qualite/"
+    },
+    "https://www.gamebob.dev/fr/utilitaires/categories/audiovisuels-photographie/createur-collage-photos-gratuit-compositions-professionnelles/": {
+      "hash": "a7efacec08124bf4af01a91fee4a3e6043b6c746e7c1642bf74a6a03d353b29d",
+      "route": "/fr/utilitaires/categories/audiovisuels-photographie/createur-collage-photos-gratuit-compositions-professionnelles/"
+    },
+    "https://www.gamebob.dev/fr/utilitaires/categories/audiovisuels-photographie/editeur-confidentialite-en-ligne-pixeliser-flouter-visages/": {
+      "hash": "be8e901be2662c74a36dc002e1cd0125d9f8af499f00d4c8c4f689d6e1c56a56",
+      "route": "/fr/utilitaires/categories/audiovisuels-photographie/editeur-confidentialite-en-ligne-pixeliser-flouter-visages/"
+    },
+    "https://www.gamebob.dev/fr/utilitaires/categories/audiovisuels-photographie/extracteur-frames-video-en-ligne-capturer-images-hd/": {
+      "hash": "d9dfde6bb40448881bd181bab3c4e3120f80735dccec6b149d8e076e1a7f7df1",
+      "route": "/fr/utilitaires/categories/audiovisuels-photographie/extracteur-frames-video-en-ligne-capturer-images-hd/"
+    },
+    "https://www.gamebob.dev/fr/utilitaires/categories/audiovisuels-photographie/fusionner-videos-en-ligne/": {
+      "hash": "a966469dead28ec58337fd5e9c1e403778bf54f2ec424eb20b14fb2e84dd8e63",
+      "route": "/fr/utilitaires/categories/audiovisuels-photographie/fusionner-videos-en-ligne/"
+    },
+    "https://www.gamebob.dev/fr/utilitaires/categories/audiovisuels-photographie/": {
+      "hash": "96bec0c8d5564d865dbecce3d8c9b5c6d8741b0e049178cf365b00798dbc9f5b",
+      "route": "/fr/utilitaires/categories/audiovisuels-photographie/"
+    },
+    "https://www.gamebob.dev/fr/utilitaires/categories/audiovisuels-photographie/lentille-chromatique-extraction-palette-couleurs-ligne/": {
+      "hash": "b770ca9464de5845199ee88c695b8433c45aac9a4bf9fea6261c573ee05c2552",
+      "route": "/fr/utilitaires/categories/audiovisuels-photographie/lentille-chromatique-extraction-palette-couleurs-ligne/"
+    },
+    "https://www.gamebob.dev/fr/utilitaires/categories/audiovisuels-photographie/nettoyeur-metadonnees-exif-supprimer-gps-confidentialite-photo/": {
+      "hash": "ab9ef64f62fa3371433d2667b93f50fb8df1f72dd130bd6b7980eb10e20a377c",
+      "route": "/fr/utilitaires/categories/audiovisuels-photographie/nettoyeur-metadonnees-exif-supprimer-gps-confidentialite-photo/"
+    },
+    "https://www.gamebob.dev/fr/utilitaires/categories/audiovisuels-photographie/planificateur-debit-taille-fichier-export-video/": {
+      "hash": "5c048b7d28c51749be598ad8261b0a98fc7b6c03c3e3c81cd162f00fd72e1b88",
+      "route": "/fr/utilitaires/categories/audiovisuels-photographie/planificateur-debit-taille-fichier-export-video/"
+    },
+    "https://www.gamebob.dev/fr/utilitaires/categories/audiovisuels-photographie/synchroniser-sous-titres-srt-en-ligne-ajuster-temps-gratuit/": {
+      "hash": "231c3d4203b8527a64fd92dc762d782b5494cac9990680cfbc59e8f32d0d4f4e",
+      "route": "/fr/utilitaires/categories/audiovisuels-photographie/synchroniser-sous-titres-srt-en-ligne-ajuster-temps-gratuit/"
+    },
+    "https://www.gamebob.dev/fr/utilitaires/categories/audiovisuels-photographie/visualiseur-systeme-des-zones-ansel-adams-zones-exposition/": {
+      "hash": "46556d9e4be0ef2568b8cf628605e7c852bed3c1e36cc161bc7e3217c6541fb2",
+      "route": "/fr/utilitaires/categories/audiovisuels-photographie/visualiseur-systeme-des-zones-ansel-adams-zones-exposition/"
+    },
+    "https://www.gamebob.dev/id/utilitas/kategori/audiovisual-dan-fotografi/chromatic-lens-ekstraksi-palet-warna-online/": {
+      "hash": "57a5863a8fe0bdd508457fa5eb140997edac8d0f1bf5685d97f2b61b36f204de",
+      "route": "/id/utilitas/kategori/audiovisual-dan-fotografi/chromatic-lens-ekstraksi-palet-warna-online/"
+    },
+    "https://www.gamebob.dev/id/utilitas/kategori/audiovisual-dan-fotografi/editor-privasi-online-pikselkan-kaburkan-wajah-foto/": {
+      "hash": "334a754f5d30824fffae9f134a3e558cedef436eaa6baf162af19402d3bd74b9",
+      "route": "/id/utilitas/kategori/audiovisual-dan-fotografi/editor-privasi-online-pikselkan-kaburkan-wajah-foto/"
+    },
+    "https://www.gamebob.dev/id/utilitas/kategori/audiovisual-dan-fotografi/ekstrak-frame-video-online-tangkap-gambar-hd/": {
+      "hash": "df81cb8e6250d1502fb6d18378ae3d15b3930a880bb0a4dde2f7172da1cce1bd",
+      "route": "/id/utilitas/kategori/audiovisual-dan-fotografi/ekstrak-frame-video-online-tangkap-gambar-hd/"
+    },
+    "https://www.gamebob.dev/id/utilitas/kategori/audiovisual-dan-fotografi/gabung-video-online/": {
+      "hash": "16f3368c20ced6362c531d41cda32c0ff0d9f3269c1b7faf47e83bfd5efeff8f",
+      "route": "/id/utilitas/kategori/audiovisual-dan-fotografi/gabung-video-online/"
+    },
+    "https://www.gamebob.dev/id/utilitas/kategori/audiovisual-dan-fotografi/": {
+      "hash": "4df765f3692bd922a16180afdcc88969f85f37e1b3105ee83cec2a9b008baa87",
+      "route": "/id/utilitas/kategori/audiovisual-dan-fotografi/"
+    },
+    "https://www.gamebob.dev/id/utilitas/kategori/audiovisual-dan-fotografi/kalkulator-delay-audio-jarak-suhu/": {
+      "hash": "69e29464b85fbddebdf193d2767b2972b887ca45937ebdbf0024e3e9e2e4cace",
+      "route": "/id/utilitas/kategori/audiovisual-dan-fotografi/kalkulator-delay-audio-jarak-suhu/"
+    },
+    "https://www.gamebob.dev/id/utilitas/kategori/audiovisual-dan-fotografi/kalkulator-eksposur-ekivalen/": {
+      "hash": "d4167cb44795b2eb7824e2c6881f37510a331b0b1fb411123905d189f4772fd7",
+      "route": "/id/utilitas/kategori/audiovisual-dan-fotografi/kalkulator-eksposur-ekivalen/"
+    },
+    "https://www.gamebob.dev/id/utilitas/kategori/audiovisual-dan-fotografi/kalkulator-jarak-nonton-tv-thx-4k-layar-optimal/": {
+      "hash": "d286996274bc79000c9be4ada361b29b7a2e2bd14bf6fd86ed64d528ca28805c",
+      "route": "/id/utilitas/kategori/audiovisual-dan-fotografi/kalkulator-jarak-nonton-tv-thx-4k-layar-optimal/"
+    },
+    "https://www.gamebob.dev/id/utilitas/kategori/audiovisual-dan-fotografi/kalkulator-kedalaman-bidang/": {
+      "hash": "2b97250e63dd6080678579cb0846805db407cf1b2eb69210020cf0864bd7f04d",
+      "route": "/id/utilitas/kategori/audiovisual-dan-fotografi/kalkulator-kedalaman-bidang/"
+    },
+    "https://www.gamebob.dev/id/utilitas/kategori/audiovisual-dan-fotografi/kalkulator-kegagalan-resiprositas-film-fotografi/": {
+      "hash": "29dd4f9a86f1b5728e0dc77e6674b5522e4eecc504d1f6e350885d8496ba24c6",
+      "route": "/id/utilitas/kategori/audiovisual-dan-fotografi/kalkulator-kegagalan-resiprositas-film-fotografi/"
+    },
+    "https://www.gamebob.dev/id/utilitas/kategori/audiovisual-dan-fotografi/kalkulator-kualitas-cetak-piksel-ke-cm-dpi/": {
+      "hash": "b7b2a0f3086b77c58ce2abaa177845d90e0cb4e74433ed363b722a462b1509a1",
+      "route": "/id/utilitas/kategori/audiovisual-dan-fotografi/kalkulator-kualitas-cetak-piksel-ke-cm-dpi/"
+    },
+    "https://www.gamebob.dev/id/utilitas/kategori/audiovisual-dan-fotografi/kalkulator-timelapse-hyperlapse-interval-sempurna/": {
+      "hash": "07b48daf25398f083eb4ddcee51f67b11ff549c6dcf3cee9d2d479f3d889bba5",
+      "route": "/id/utilitas/kategori/audiovisual-dan-fotografi/kalkulator-timelapse-hyperlapse-interval-sempurna/"
+    },
+    "https://www.gamebob.dev/id/utilitas/kategori/audiovisual-dan-fotografi/kalkulator-waktu-cuci-film-kompensasi-suhu/": {
+      "hash": "39014765c8ec6c18834645f3a1b0b997faf6f0bc786ff22df6649663b7ff0f70",
+      "route": "/id/utilitas/kategori/audiovisual-dan-fotografi/kalkulator-waktu-cuci-film-kompensasi-suhu/"
+    },
+    "https://www.gamebob.dev/id/utilitas/kategori/audiovisual-dan-fotografi/kalkulator-waktu-peluruhan-reverb-rt60/": {
+      "hash": "ae4a25e137d3646ba15b527f53860f299a439dfd0b608eb533044103affe464e",
+      "route": "/id/utilitas/kategori/audiovisual-dan-fotografi/kalkulator-waktu-peluruhan-reverb-rt60/"
+    },
+    "https://www.gamebob.dev/id/utilitas/kategori/audiovisual-dan-fotografi/kompresor-gambar-online-kurangi-ukuran-file-tanpa-kehilangan-kualitas/": {
+      "hash": "1d46ad70707c303d17254301c253a98bb5e944c885bb4115178f052feb09bfbe",
+      "route": "/id/utilitas/kategori/audiovisual-dan-fotografi/kompresor-gambar-online-kurangi-ukuran-file-tanpa-kehilangan-kualitas/"
+    },
+    "https://www.gamebob.dev/id/utilitas/kategori/audiovisual-dan-fotografi/pembersih-metadata-exif-hapus-gps-privasi-foto/": {
+      "hash": "cff95289e06151f50dba6bbab56ac5ae9cb0678529763a439c7368b611ad6438",
+      "route": "/id/utilitas/kategori/audiovisual-dan-fotografi/pembersih-metadata-exif-hapus-gps-privasi-foto/"
+    },
+    "https://www.gamebob.dev/id/utilitas/kategori/audiovisual-dan-fotografi/pembuat-kolase-foto-online-gratis-komposisi-profesional/": {
+      "hash": "f5cbdd5dfcab7d91c8da5913f2bc417c1a817329fe20652215b53ded08eec67b",
+      "route": "/id/utilitas/kategori/audiovisual-dan-fotografi/pembuat-kolase-foto-online-gratis-komposisi-profesional/"
+    },
+    "https://www.gamebob.dev/id/utilitas/kategori/audiovisual-dan-fotografi/perencana-bitrate-ukuran-file-ekspor-video/": {
+      "hash": "078a1dbbe247d1c1b676169af7be11a2d74292ccf15387a92304c40a4fdb9519",
+      "route": "/id/utilitas/kategori/audiovisual-dan-fotografi/perencana-bitrate-ukuran-file-ekspor-video/"
+    },
+    "https://www.gamebob.dev/id/utilitas/kategori/audiovisual-dan-fotografi/sinkronisasi-subtitle-srt-online-atur-timing-gratis/": {
+      "hash": "57809123648a311f10d60d168658ea8cc0a531b84b2007f7ca3f2e7ec2b136b4",
+      "route": "/id/utilitas/kategori/audiovisual-dan-fotografi/sinkronisasi-subtitle-srt-online-atur-timing-gratis/"
+    },
+    "https://www.gamebob.dev/id/utilitas/kategori/audiovisual-dan-fotografi/visualisator-sistem-zona-ansel-adams-zona-pencahayaan/": {
+      "hash": "0c88684f7c8c9fe523209e8b0df224f24999948e585be776ef66acae3d32fcdd",
+      "route": "/id/utilitas/kategori/audiovisual-dan-fotografi/visualisator-sistem-zona-ansel-adams-zona-pencahayaan/"
+    },
+    "https://www.gamebob.dev/it/utilita/categorie/audiovisivo-fotografia/calcolatore-difetto-reciprocita-pellicola-fotografica/": {
+      "hash": "7fda44db8a042dea9477e104bba87627202c43a1caef58c89817d9569c24422c",
+      "route": "/it/utilita/categorie/audiovisivo-fotografia/calcolatore-difetto-reciprocita-pellicola-fotografica/"
+    },
+    "https://www.gamebob.dev/it/utilita/categorie/audiovisivo-fotografia/calcolatore-distanza-visione-tv-thx-4k-schermo-ottimale/": {
+      "hash": "7e4836b5ba6f92e4c703da75de31ad2b1375372b63369fe54229d3c708e705bc",
+      "route": "/it/utilita/categorie/audiovisivo-fotografia/calcolatore-distanza-visione-tv-thx-4k-schermo-ottimale/"
+    },
+    "https://www.gamebob.dev/it/utilita/categorie/audiovisivo-fotografia/calcolatore-esposizione-equivalente/": {
+      "hash": "1b99db4c32f7d764894ea1e93dc439f8f570d916d250d54297b05db0b6efa1fa",
+      "route": "/it/utilita/categorie/audiovisivo-fotografia/calcolatore-esposizione-equivalente/"
+    },
+    "https://www.gamebob.dev/it/utilita/categorie/audiovisivo-fotografia/calcolatore-profondita-di-campo/": {
+      "hash": "25d2d5d3c41b3b1c249760d3240d4b50b257d7e8cf380815c1fc9acdc49e6bc2",
+      "route": "/it/utilita/categorie/audiovisivo-fotografia/calcolatore-profondita-di-campo/"
+    },
+    "https://www.gamebob.dev/it/utilita/categorie/audiovisivo-fotografia/calcolatore-qualita-stampa-pixel-cm-dpi/": {
+      "hash": "64bb81ecb0ab1ca332d1875488a68aabfc25c8113f8bbd4916e1e3d3970b3a23",
+      "route": "/it/utilita/categorie/audiovisivo-fotografia/calcolatore-qualita-stampa-pixel-cm-dpi/"
+    },
+    "https://www.gamebob.dev/it/utilita/categorie/audiovisivo-fotografia/calcolatore-ritardo-audio-distanza-temperatura/": {
+      "hash": "6ea15f0a9567a717adbae03a1df39db45f89dfb5a2d6db5b0e3e96e4b89468ce",
+      "route": "/it/utilita/categorie/audiovisivo-fotografia/calcolatore-ritardo-audio-distanza-temperatura/"
+    },
+    "https://www.gamebob.dev/it/utilita/categorie/audiovisivo-fotografia/calcolatore-tempo-decay-riverbero-rt60/": {
+      "hash": "312efe16799cc720223632a03493a0c670b9a52a5d2e17d4540ab092a8ddbfdf",
+      "route": "/it/utilita/categorie/audiovisivo-fotografia/calcolatore-tempo-decay-riverbero-rt60/"
+    },
+    "https://www.gamebob.dev/it/utilita/categorie/audiovisivo-fotografia/calcolatore-tempo-sviluppo-pellicola-temperatura/": {
+      "hash": "be3e2ddc27b3df7cc7f9fed0b03e1204b45230e9990c19d580328637d079cafb",
+      "route": "/it/utilita/categorie/audiovisivo-fotografia/calcolatore-tempo-sviluppo-pellicola-temperatura/"
+    },
+    "https://www.gamebob.dev/it/utilita/categorie/audiovisivo-fotografia/calcolatore-timelapse-hyperlapse-intervalli-perfetti/": {
+      "hash": "45782441fbd63cff67d4ffd1c41ec70bd9562946f0e98c2da9414ae5d9028433",
+      "route": "/it/utilita/categorie/audiovisivo-fotografia/calcolatore-timelapse-hyperlapse-intervalli-perfetti/"
+    },
+    "https://www.gamebob.dev/it/utilita/categorie/audiovisivo-fotografia/chromatic-lens-estrazione-tavolozza-colori-online/": {
+      "hash": "18c506a30ae87f77ebf21a4cda7c9cc271719072a00ef0aa0fd3e81121dce9d5",
+      "route": "/it/utilita/categorie/audiovisivo-fotografia/chromatic-lens-estrazione-tavolozza-colori-online/"
+    },
+    "https://www.gamebob.dev/it/utilita/categorie/audiovisivo-fotografia/compressore-immagini-online-riduci-dimensioni-senza-perdita-qualita/": {
+      "hash": "1ec4daf4471892d451a79b4f22334d02eda7763f8a1bec9d3362b04598adaebd",
+      "route": "/it/utilita/categorie/audiovisivo-fotografia/compressore-immagini-online-riduci-dimensioni-senza-perdita-qualita/"
+    },
+    "https://www.gamebob.dev/it/utilita/categorie/audiovisivo-fotografia/crea-collage-foto-online-gratis-composizioni-professionali/": {
+      "hash": "eabb11f5c616716d79c2f499c7208805dc08e12731ce24f733f83b2de0c928c8",
+      "route": "/it/utilita/categorie/audiovisivo-fotografia/crea-collage-foto-online-gratis-composizioni-professionali/"
+    },
+    "https://www.gamebob.dev/it/utilita/categorie/audiovisivo-fotografia/editor-privacy-online-pixellare-sfocare-volti-foto/": {
+      "hash": "ca90f3aa969f5e587a037032dbb4015da9987b06ed9d69364febe1494b606507",
+      "route": "/it/utilita/categorie/audiovisivo-fotografia/editor-privacy-online-pixellare-sfocare-volti-foto/"
+    },
+    "https://www.gamebob.dev/it/utilita/categorie/audiovisivo-fotografia/estrattore-fotogrammi-video-online-cattura-stills-hd/": {
+      "hash": "311550cde51535dc434db397cd63efe69b4e38cac2fc73131d313eb5bfad91c1",
+      "route": "/it/utilita/categorie/audiovisivo-fotografia/estrattore-fotogrammi-video-online-cattura-stills-hd/"
+    },
+    "https://www.gamebob.dev/it/utilita/categorie/audiovisivo-fotografia/": {
+      "hash": "2c449d627850dc5052d08f4351132b9517da1d2a6e69afce1acfa06e17f7c8a9",
+      "route": "/it/utilita/categorie/audiovisivo-fotografia/"
+    },
+    "https://www.gamebob.dev/it/utilita/categorie/audiovisivo-fotografia/pianificatore-bitrate-dimensione-file-esportazione-video/": {
+      "hash": "42a3372782bd1c9a914b79ddc571a2d023dfc0c2b0aebb55419e12ea0aa2eff0",
+      "route": "/it/utilita/categorie/audiovisivo-fotografia/pianificatore-bitrate-dimensione-file-esportazione-video/"
+    },
+    "https://www.gamebob.dev/it/utilita/categorie/audiovisivo-fotografia/pulizia-metadati-exif-rimuovi-gps-privacy-foto/": {
+      "hash": "35befdb5d8274d58c73ae843bd2d4d64d16603c1f1d374dc2fd17f1b0f57c2d4",
+      "route": "/it/utilita/categorie/audiovisivo-fotografia/pulizia-metadati-exif-rimuovi-gps-privacy-foto/"
+    },
+    "https://www.gamebob.dev/it/utilita/categorie/audiovisivo-fotografia/sincronizzare-sottotitoli-srt-online-regolare-timing-gratis/": {
+      "hash": "3f298808ea82d8f25dcc3c905b0cba5cf52db643b47ef760d72fa54729edd589",
+      "route": "/it/utilita/categorie/audiovisivo-fotografia/sincronizzare-sottotitoli-srt-online-regolare-timing-gratis/"
+    },
+    "https://www.gamebob.dev/it/utilita/categorie/audiovisivo-fotografia/unire-video-online/": {
+      "hash": "13a8656658e886439c5bbd78fad2b7694284043f43dacf59abc2555f05d89e21",
+      "route": "/it/utilita/categorie/audiovisivo-fotografia/unire-video-online/"
+    },
+    "https://www.gamebob.dev/it/utilita/categorie/audiovisivo-fotografia/visualizzatore-sistema-zone-ansel-adams-zone-esposizione/": {
+      "hash": "a1c2543a8902b912b7f0003d1dd3ddf3919c2b2478196ccacf1d54b3397200bd",
+      "route": "/it/utilita/categorie/audiovisivo-fotografia/visualizzatore-sistema-zone-ansel-adams-zone-esposizione/"
+    },
+    "https://www.gamebob.dev/ja/utilities/categories/audiovisual-photography/ansel-adams-zone-system-visualizer-exposure-zones/": {
+      "hash": "8db60660fff24feb0d6f49071b78e8101a2f5a63f17fc759730c315d87545c50",
+      "route": "/ja/utilities/categories/audiovisual-photography/ansel-adams-zone-system-visualizer-exposure-zones/"
+    },
+    "https://www.gamebob.dev/ja/utilities/categories/audiovisual-photography/audio-delay-distance-calculator/": {
+      "hash": "af43f521994ea1a1c138bfe7c26c16b317e64431b5db72e7b3aa3ac04abc3888",
+      "route": "/ja/utilities/categories/audiovisual-photography/audio-delay-distance-calculator/"
+    },
+    "https://www.gamebob.dev/ja/utilities/categories/audiovisual-photography/chromatic-lens-color-palette-extraction-online/": {
+      "hash": "7dff990681df995566240cbf19f6d468fe8519a5c86d2d496589c580e864c43d",
+      "route": "/ja/utilities/categories/audiovisual-photography/chromatic-lens-color-palette-extraction-online/"
+    },
+    "https://www.gamebob.dev/ja/utilities/categories/audiovisual-photography/depth-of-field-calculator/": {
+      "hash": "f8351ac96aaf591276b03bc9895150f4d770129c3cc925b24d1541cf87c325e5",
+      "route": "/ja/utilities/categories/audiovisual-photography/depth-of-field-calculator/"
+    },
+    "https://www.gamebob.dev/ja/utilities/categories/audiovisual-photography/equivalent-exposure-calculator/": {
+      "hash": "7402e1dca03c3e32c066b8ae8b5529b2e7605c598bc08049184324d24fb65b41",
+      "route": "/ja/utilities/categories/audiovisual-photography/equivalent-exposure-calculator/"
+    },
+    "https://www.gamebob.dev/ja/utilities/categories/audiovisual-photography/exif-metadata-cleaner-remove-gps-photo-privacy/": {
+      "hash": "e1fda2ad9e3851a2833924db3fd2777c460217326d61fc874b735b436c35bcc0",
+      "route": "/ja/utilities/categories/audiovisual-photography/exif-metadata-cleaner-remove-gps-photo-privacy/"
+    },
+    "https://www.gamebob.dev/ja/utilities/categories/audiovisual-photography/film-development-time-temperature-compensation-calculator/": {
+      "hash": "2a1f0943661786f1161952d709b009b66f6505d77bfa007bb5fff383adcc0620",
+      "route": "/ja/utilities/categories/audiovisual-photography/film-development-time-temperature-compensation-calculator/"
+    },
+    "https://www.gamebob.dev/ja/utilities/categories/audiovisual-photography/film-reciprocity-failure-calculator/": {
+      "hash": "3a7e7c16f920dffbda1da0b50f659bfc2db6db0633f53b572b24506703534840",
+      "route": "/ja/utilities/categories/audiovisual-photography/film-reciprocity-failure-calculator/"
+    },
+    "https://www.gamebob.dev/ja/utilities/categories/audiovisual-photography/free-online-photo-collage-maker-professional-compositions/": {
+      "hash": "2c8160bf049e131ad9b5dbd027058362cc909c2aa388cf4fc2d4210ffd6b46a4",
+      "route": "/ja/utilities/categories/audiovisual-photography/free-online-photo-collage-maker-professional-compositions/"
+    },
+    "https://www.gamebob.dev/ja/utilities/categories/audiovisual-photography/": {
+      "hash": "5b389b988700d8f07aa218a00f9b27e0627a9cb0784c99f07dcda9bcf28d5b03",
+      "route": "/ja/utilities/categories/audiovisual-photography/"
+    },
+    "https://www.gamebob.dev/ja/utilities/categories/audiovisual-photography/merge-videos-online/": {
+      "hash": "89fdd8cd048f31946dc2b868ac55112488d225fe25c48366a9a897095db93972",
+      "route": "/ja/utilities/categories/audiovisual-photography/merge-videos-online/"
+    },
+    "https://www.gamebob.dev/ja/utilities/categories/audiovisual-photography/online-image-compressor-reduce-file-size-no-quality-loss/": {
+      "hash": "8b8c14e97ce578e23c39a4ca3409395f9d7140db98ae6b5a0fd213fdabf032cb",
+      "route": "/ja/utilities/categories/audiovisual-photography/online-image-compressor-reduce-file-size-no-quality-loss/"
+    },
+    "https://www.gamebob.dev/ja/utilities/categories/audiovisual-photography/online-privacy-editor-pixelate-blur-faces-photos/": {
+      "hash": "457c03e26e00f2f61fcf3aebf86cd3552c45f0d00028dcba456982a6b94be83e",
+      "route": "/ja/utilities/categories/audiovisual-photography/online-privacy-editor-pixelate-blur-faces-photos/"
+    },
+    "https://www.gamebob.dev/ja/utilities/categories/audiovisual-photography/online-video-frame-extractor-capture-hd-stills/": {
+      "hash": "0b8215462e91bb68c973d24c280fb29e5738e04ee9b2471e902aaa2597c870ce",
+      "route": "/ja/utilities/categories/audiovisual-photography/online-video-frame-extractor-capture-hd-stills/"
+    },
+    "https://www.gamebob.dev/ja/utilities/categories/audiovisual-photography/print-quality-calculator-pixels-to-cm-dpi/": {
+      "hash": "fbe37f31f9cc76259ff2c7737c7880f91251efae5b5951d87093ab7a5e805784",
+      "route": "/ja/utilities/categories/audiovisual-photography/print-quality-calculator-pixels-to-cm-dpi/"
+    },
+    "https://www.gamebob.dev/ja/utilities/categories/audiovisual-photography/reverb-decay-time-calculator/": {
+      "hash": "c34ba33e3d027fbc8f2fb82731e92d0face6c69a871998202ccc94b6486e09a3",
+      "route": "/ja/utilities/categories/audiovisual-photography/reverb-decay-time-calculator/"
+    },
+    "https://www.gamebob.dev/ja/utilities/categories/audiovisual-photography/synchronize-srt-subtitles-online-adjust-timing-free/": {
+      "hash": "93ce6a6a2f12ac9d0fef9e0e8a11f434d184057b00fa08c6782cbd812f2982f8",
+      "route": "/ja/utilities/categories/audiovisual-photography/synchronize-srt-subtitles-online-adjust-timing-free/"
+    },
+    "https://www.gamebob.dev/ja/utilities/categories/audiovisual-photography/timelapse-hyperlapse-calculator-perfect-intervals/": {
+      "hash": "02a1b97c3cc59e932003ab371cecabfefcb4fdbf5495423249c13718f43efac2",
+      "route": "/ja/utilities/categories/audiovisual-photography/timelapse-hyperlapse-calculator-perfect-intervals/"
+    },
+    "https://www.gamebob.dev/ja/utilities/categories/audiovisual-photography/tv-viewing-distance-calculator-thx-4k-optimal-screen/": {
+      "hash": "bf4eae91d60b2984b219e835833a1e3a56ce0684d8c39d2f5724c701eeaa846c",
+      "route": "/ja/utilities/categories/audiovisual-photography/tv-viewing-distance-calculator-thx-4k-optimal-screen/"
+    },
+    "https://www.gamebob.dev/ja/utilities/categories/audiovisual-photography/video-export-bitrate-file-size-planner/": {
+      "hash": "0c932f76b59edc372576ee4397bf771e1a49b415ae7661c85054ef62e845629d",
+      "route": "/ja/utilities/categories/audiovisual-photography/video-export-bitrate-file-size-planner/"
+    },
+    "https://www.gamebob.dev/ko/utilities/categories/audiovisual-photography/ansel-adams-zone-system-visualizer-exposure-zones/": {
+      "hash": "ba3b834cf0573e52bcbf047e2b3cde6959be9f5a22c4b568ed57348fc50e29bb",
+      "route": "/ko/utilities/categories/audiovisual-photography/ansel-adams-zone-system-visualizer-exposure-zones/"
+    },
+    "https://www.gamebob.dev/ko/utilities/categories/audiovisual-photography/audio-delay-distance-calculator/": {
+      "hash": "10db63b726b16dbb1d6c0dd7cc1d5e79f0ec8de61a322f8e980998ceaba23392",
+      "route": "/ko/utilities/categories/audiovisual-photography/audio-delay-distance-calculator/"
+    },
+    "https://www.gamebob.dev/ko/utilities/categories/audiovisual-photography/chromatic-lens-color-palette-extraction-online/": {
+      "hash": "6b1ec21de208f4b5b740d060d01482ef9f41a4d4075ff8905aabf04902f2d781",
+      "route": "/ko/utilities/categories/audiovisual-photography/chromatic-lens-color-palette-extraction-online/"
+    },
+    "https://www.gamebob.dev/ko/utilities/categories/audiovisual-photography/depth-of-field-calculator/": {
+      "hash": "33267eb02935fb483c6b5ac8592c6fa49e049f2db4b3b3e7a81fe581e13aa849",
+      "route": "/ko/utilities/categories/audiovisual-photography/depth-of-field-calculator/"
+    },
+    "https://www.gamebob.dev/ko/utilities/categories/audiovisual-photography/equivalent-exposure-calculator/": {
+      "hash": "3627094b8d0731edd35311bd89178f19709fed345af9852d2e651939fd6e8b9e",
+      "route": "/ko/utilities/categories/audiovisual-photography/equivalent-exposure-calculator/"
+    },
+    "https://www.gamebob.dev/ko/utilities/categories/audiovisual-photography/exif-metadata-cleaner-remove-gps-photo-privacy/": {
+      "hash": "894827949d093c87d94c95eb9a622e6e4f06ab282c71aa54d3178ac19446ea8d",
+      "route": "/ko/utilities/categories/audiovisual-photography/exif-metadata-cleaner-remove-gps-photo-privacy/"
+    },
+    "https://www.gamebob.dev/ko/utilities/categories/audiovisual-photography/film-development-time-temperature-compensation-calculator/": {
+      "hash": "b4b7354d7df05c86d90b2cd8297eef09da7518be46d53aa8d4a2c164a75b5dcf",
+      "route": "/ko/utilities/categories/audiovisual-photography/film-development-time-temperature-compensation-calculator/"
+    },
+    "https://www.gamebob.dev/ko/utilities/categories/audiovisual-photography/film-reciprocity-failure-calculator/": {
+      "hash": "0c13739d9629b4a500cac75b385eefb6c7ba2f4afebc9c245ec1535f5806030e",
+      "route": "/ko/utilities/categories/audiovisual-photography/film-reciprocity-failure-calculator/"
+    },
+    "https://www.gamebob.dev/ko/utilities/categories/audiovisual-photography/free-online-photo-collage-maker-professional-compositions/": {
+      "hash": "a633206412872937bf98fee536ea7ab38cbbca16b9775eb7de4e7c9c2eda126a",
+      "route": "/ko/utilities/categories/audiovisual-photography/free-online-photo-collage-maker-professional-compositions/"
+    },
+    "https://www.gamebob.dev/ko/utilities/categories/audiovisual-photography/": {
+      "hash": "843f35a2fb77c4da83c878cde8bcf12244a1b67fc57322d758d785c0319d7ee6",
+      "route": "/ko/utilities/categories/audiovisual-photography/"
+    },
+    "https://www.gamebob.dev/ko/utilities/categories/audiovisual-photography/merge-videos-online/": {
+      "hash": "fe4e5c7bc32ee04715049a7ccb56ff05052e03a914aefe1156f321ea99bc1536",
+      "route": "/ko/utilities/categories/audiovisual-photography/merge-videos-online/"
+    },
+    "https://www.gamebob.dev/ko/utilities/categories/audiovisual-photography/online-image-compressor-reduce-file-size-no-quality-loss/": {
+      "hash": "0bcbf91ebd9072b178cc776d3b7d9aef419f8235471230b3e4d232075a3669ec",
+      "route": "/ko/utilities/categories/audiovisual-photography/online-image-compressor-reduce-file-size-no-quality-loss/"
+    },
+    "https://www.gamebob.dev/ko/utilities/categories/audiovisual-photography/online-privacy-editor-pixelate-blur-faces-photos/": {
+      "hash": "8d3c5a63ba61fb4f474e2019802c749754922991b9944ea4b7caeac7fe11c1d7",
+      "route": "/ko/utilities/categories/audiovisual-photography/online-privacy-editor-pixelate-blur-faces-photos/"
+    },
+    "https://www.gamebob.dev/ko/utilities/categories/audiovisual-photography/online-video-frame-extractor-capture-hd-stills/": {
+      "hash": "397a1992a821c5bd5e22c225bd379a01b248d1b4159b1f82832a692c8dbd304d",
+      "route": "/ko/utilities/categories/audiovisual-photography/online-video-frame-extractor-capture-hd-stills/"
+    },
+    "https://www.gamebob.dev/ko/utilities/categories/audiovisual-photography/print-quality-calculator-pixels-to-cm-dpi/": {
+      "hash": "851160014c984ecbc8d4fde6945161a44a9f27215591569bff81a30fe376fc3a",
+      "route": "/ko/utilities/categories/audiovisual-photography/print-quality-calculator-pixels-to-cm-dpi/"
+    },
+    "https://www.gamebob.dev/ko/utilities/categories/audiovisual-photography/reverb-decay-time-calculator/": {
+      "hash": "965c8506492fc8bc7a062a77af6aba8bde05886dc5ac985ce044fb17424fb431",
+      "route": "/ko/utilities/categories/audiovisual-photography/reverb-decay-time-calculator/"
+    },
+    "https://www.gamebob.dev/ko/utilities/categories/audiovisual-photography/synchronize-srt-subtitles-online-adjust-timing-free/": {
+      "hash": "448bf205d7a59f2325128333b278cc5df55f1bde7ee437d0fe2c91fba152cef1",
+      "route": "/ko/utilities/categories/audiovisual-photography/synchronize-srt-subtitles-online-adjust-timing-free/"
+    },
+    "https://www.gamebob.dev/ko/utilities/categories/audiovisual-photography/timelapse-hyperlapse-calculator-perfect-intervals/": {
+      "hash": "c61bbb544f84a033b934c749949c5e0a223f72e9e9575f1ee8e0b25e5da845e3",
+      "route": "/ko/utilities/categories/audiovisual-photography/timelapse-hyperlapse-calculator-perfect-intervals/"
+    },
+    "https://www.gamebob.dev/ko/utilities/categories/audiovisual-photography/tv-viewing-distance-calculator-thx-4k-optimal-screen/": {
+      "hash": "403551f1b489ac670069384c6992040849acbf82ec3924a97a2d287f226c8e35",
+      "route": "/ko/utilities/categories/audiovisual-photography/tv-viewing-distance-calculator-thx-4k-optimal-screen/"
+    },
+    "https://www.gamebob.dev/ko/utilities/categories/audiovisual-photography/video-export-bitrate-file-size-planner/": {
+      "hash": "e9c2f566835520c8d4d0cce71cbcf2abd4d7e98da8a43efb224cf225c1e8d6b5",
+      "route": "/ko/utilities/categories/audiovisual-photography/video-export-bitrate-file-size-planner/"
+    },
+    "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/audiovisueel-fotografie/ansel-adams-zonesysteem-visualisator-belichtingszones/": {
+      "hash": "cccb3ad59b787f7b62671f3784ab4d2fe8ad417808f3579228463d2402a3d87b",
+      "route": "/nl/hulpmiddelen/categorieen/audiovisueel-fotografie/ansel-adams-zonesysteem-visualisator-belichtingszones/"
+    },
+    "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/audiovisueel-fotografie/audio-delay-afstand-temperatuur-rekenmachine/": {
+      "hash": "1fbb10a5b5e6afcab7cf9e00ba982e9e510e2f288318050a53a300da5730fc7a",
+      "route": "/nl/hulpmiddelen/categorieen/audiovisueel-fotografie/audio-delay-afstand-temperatuur-rekenmachine/"
+    },
+    "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/audiovisueel-fotografie/calculator-equivalent-belichting/": {
+      "hash": "f38e8b940494c6d9093ca7147def0d8a8b62c8d242381feb33168269429f2b21",
+      "route": "/nl/hulpmiddelen/categorieen/audiovisueel-fotografie/calculator-equivalent-belichting/"
+    },
+    "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/audiovisueel-fotografie/chromatic-lens-kleurenpalet-extractie-online/": {
+      "hash": "9e7e9373022795d73f013fd40a7d65720ba1006331be721e15e6b1a6c22613f6",
+      "route": "/nl/hulpmiddelen/categorieen/audiovisueel-fotografie/chromatic-lens-kleurenpalet-extractie-online/"
+    },
+    "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/audiovisueel-fotografie/drukkwaliteit-calculator-pixels-naar-cm-dpi/": {
+      "hash": "68709490a2099bfb72d4b47c7ed38088706a504d59c5cd816640b1d61c57fac8",
+      "route": "/nl/hulpmiddelen/categorieen/audiovisueel-fotografie/drukkwaliteit-calculator-pixels-naar-cm-dpi/"
+    },
+    "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/audiovisueel-fotografie/exif-metadata-cleaner-verwijder-gps-foto-privacy/": {
+      "hash": "1612fc82f2eda716ec8e1baff1ff56f9aee0a397a2dc13828d02d740144c96d0",
+      "route": "/nl/hulpmiddelen/categorieen/audiovisueel-fotografie/exif-metadata-cleaner-verwijder-gps-foto-privacy/"
+    },
+    "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/audiovisueel-fotografie/film-reciprociteitsfout-rekenmachine-fotografie/": {
+      "hash": "c3093abc215ff8c94b2cba0481db51379f1dcf9c7a20843196945f5764217d11",
+      "route": "/nl/hulpmiddelen/categorieen/audiovisueel-fotografie/film-reciprociteitsfout-rekenmachine-fotografie/"
+    },
+    "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/audiovisueel-fotografie/gratis-online-fotocollage-maker-professionele-composities/": {
+      "hash": "a5cddcc92ddba71f23dcd6d97bfab0d6aa16ebe8a036047a481066a94b668e3f",
+      "route": "/nl/hulpmiddelen/categorieen/audiovisueel-fotografie/gratis-online-fotocollage-maker-professionele-composities/"
+    },
+    "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/audiovisueel-fotografie/": {
+      "hash": "e27882cf0b7b0247597e77b58f64cdafabec2526ead67b03a2d5158cda8c21ee",
+      "route": "/nl/hulpmiddelen/categorieen/audiovisueel-fotografie/"
+    },
+    "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/audiovisueel-fotografie/online-image-compressor-reduceer-bestandsgrootte-zonder-kwaliteitsverlies/": {
+      "hash": "1834eddb0dbcde0fd29cc07e72796b7fc278373d8b1d433e937890a439109569",
+      "route": "/nl/hulpmiddelen/categorieen/audiovisueel-fotografie/online-image-compressor-reduceer-bestandsgrootte-zonder-kwaliteitsverlies/"
+    },
+    "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/audiovisueel-fotografie/online-privacyeditor-pixelate-blur-faces-fotos/": {
+      "hash": "12a66e2e2370d3f430de55bf78bfdf49691e6ba03a27886ec86231b8d87e3f05",
+      "route": "/nl/hulpmiddelen/categorieen/audiovisueel-fotografie/online-privacyeditor-pixelate-blur-faces-fotos/"
+    },
+    "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/audiovisueel-fotografie/online-video-frame-extractor-captureer-hd-stills/": {
+      "hash": "26419542e9d056c655dbe0f5616d7cb9270f727a5779e26d481c0865c19f25b0",
+      "route": "/nl/hulpmiddelen/categorieen/audiovisueel-fotografie/online-video-frame-extractor-captureer-hd-stills/"
+    },
+    "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/audiovisueel-fotografie/ontwikkeltijd-calculator-film-temperatuur-compensatie/": {
+      "hash": "9aa13a4d465c36fd4867881ca3ef919381980539a153e97c860cfc401258801b",
+      "route": "/nl/hulpmiddelen/categorieen/audiovisueel-fotografie/ontwikkeltijd-calculator-film-temperatuur-compensatie/"
+    },
+    "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/audiovisueel-fotografie/reverb-uitsterftijdcalculator-rt60/": {
+      "hash": "05fe3306d8d30c858ccc0df673a20c94d898cdfc9587e81bb1cb848432990ad8",
+      "route": "/nl/hulpmiddelen/categorieen/audiovisueel-fotografie/reverb-uitsterftijdcalculator-rt60/"
+    },
+    "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/audiovisueel-fotografie/scherptediepte-calculator/": {
+      "hash": "28b9864266276c89c59eba90ea4f498a3ba38260387a423f4224cbd413adc78b",
+      "route": "/nl/hulpmiddelen/categorieen/audiovisueel-fotografie/scherptediepte-calculator/"
+    },
+    "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/audiovisueel-fotografie/srt-ondertitels-online-synchroniseren-timing-aanpassen-gratis/": {
+      "hash": "8e9f0edea5911a7feefd2cad74c189724ba99fba3825dd0bba8db21ff2ad1007",
+      "route": "/nl/hulpmiddelen/categorieen/audiovisueel-fotografie/srt-ondertitels-online-synchroniseren-timing-aanpassen-gratis/"
+    },
+    "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/audiovisueel-fotografie/timelapse-hyperlapse-calculator-perfecte-intervallen/": {
+      "hash": "fb3e2e14e1ec20002b9f31bbfbbfebac7988351155d13af8351710f9bd96ca6b",
+      "route": "/nl/hulpmiddelen/categorieen/audiovisueel-fotografie/timelapse-hyperlapse-calculator-perfecte-intervallen/"
+    },
+    "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/audiovisueel-fotografie/tv-kijkafstand-calculator-thx-4k-optimaal-scherm/": {
+      "hash": "a5439b0b3dc877628773e65aa222e2f0a5f4501aaefb8abbde628429401949fd",
+      "route": "/nl/hulpmiddelen/categorieen/audiovisueel-fotografie/tv-kijkafstand-calculator-thx-4k-optimaal-scherm/"
+    },
+    "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/audiovisueel-fotografie/video-export-bitrate-bestandsgrootte-planner/": {
+      "hash": "adfc7a5e9b392f94ce8560118e7ca1b4e0468ac50a1a75d01d115c83101fd951",
+      "route": "/nl/hulpmiddelen/categorieen/audiovisueel-fotografie/video-export-bitrate-bestandsgrootte-planner/"
+    },
+    "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/audiovisueel-fotografie/video-samenvoegen-online/": {
+      "hash": "3c96867fc6289bfb3cd296cf94a1233d7c96e69524f22e2f6bc563734ec886f5",
+      "route": "/nl/hulpmiddelen/categorieen/audiovisueel-fotografie/video-samenvoegen-online/"
+    },
+    "https://www.gamebob.dev/pl/narzedzia/kategorie/audiowizualne-fotografia/chromatic-lens-ekstrakcja-palety-kolorow-online/": {
+      "hash": "63dc8bbbdfc9e4492d3bf7b818be5f06ac7830d3e1a2d262404befb02100cc33",
+      "route": "/pl/narzedzia/kategorie/audiowizualne-fotografia/chromatic-lens-ekstrakcja-palety-kolorow-online/"
+    },
+    "https://www.gamebob.dev/pl/narzedzia/kategorie/audiowizualne-fotografia/darmowy-edytor-kolazy-zdjec-online-profesjonalne-kompozycje/": {
+      "hash": "34d9d2b500082fd7193851f695a580a99dd1a1fd8885cd2cb21742715c202bda",
+      "route": "/pl/narzedzia/kategorie/audiowizualne-fotografia/darmowy-edytor-kolazy-zdjec-online-profesjonalne-kompozycje/"
+    },
+    "https://www.gamebob.dev/pl/narzedzia/kategorie/audiowizualne-fotografia/edytor-prywatnosci-online-pikseluj-rozmyj-twarze-zdjecia/": {
+      "hash": "0f5441a3c80bf713f65c925de7c6cdf348f3627831cdd98ba65a17cdea2d75cd",
+      "route": "/pl/narzedzia/kategorie/audiowizualne-fotografia/edytor-prywatnosci-online-pikseluj-rozmyj-twarze-zdjecia/"
+    },
+    "https://www.gamebob.dev/pl/narzedzia/kategorie/audiowizualne-fotografia/ekstrakcja-klatek-wideo-online-przechwytywanie-stills-hd/": {
+      "hash": "3ea4aef4af5c1991ff15de59c0c3b556d3baff6f91499e7911242a51e792a5be",
+      "route": "/pl/narzedzia/kategorie/audiowizualne-fotografia/ekstrakcja-klatek-wideo-online-przechwytywanie-stills-hd/"
+    },
+    "https://www.gamebob.dev/pl/narzedzia/kategorie/audiowizualne-fotografia/": {
+      "hash": "2b4d59c8560b1c4813a613f0bc8f98abbbb0ede5f4ccdf0c071b398ab199f2f2",
+      "route": "/pl/narzedzia/kategorie/audiowizualne-fotografia/"
+    },
+    "https://www.gamebob.dev/pl/narzedzia/kategorie/audiowizualne-fotografia/kalkulator-czasu-wybrzmiewania-poglosu-rt60/": {
+      "hash": "4927e1182f3d529cdbfd30e2c2fb1f651ef0eb8911aa69238a32cbf9679a63b1",
+      "route": "/pl/narzedzia/kategorie/audiowizualne-fotografia/kalkulator-czasu-wybrzmiewania-poglosu-rt60/"
+    },
+    "https://www.gamebob.dev/pl/narzedzia/kategorie/audiowizualne-fotografia/kalkulator-czasu-wywolywania-filmu-temperatura/": {
+      "hash": "09340b8f7e0e24f2719b38e5148f42fd94582ece30ab090253679ab4394aae69",
+      "route": "/pl/narzedzia/kategorie/audiowizualne-fotografia/kalkulator-czasu-wywolywania-filmu-temperatura/"
+    },
+    "https://www.gamebob.dev/pl/narzedzia/kategorie/audiowizualne-fotografia/kalkulator-efektu-schwarzschilda-fotografia-analogowa/": {
+      "hash": "33a5bebaebfa43f4b93ee9b2e17e86e29ce40390993b520d69a18dc28581205e",
+      "route": "/pl/narzedzia/kategorie/audiowizualne-fotografia/kalkulator-efektu-schwarzschilda-fotografia-analogowa/"
+    },
+    "https://www.gamebob.dev/pl/narzedzia/kategorie/audiowizualne-fotografia/kalkulator-ekwiwalentu-ekspozycji/": {
+      "hash": "19e94f3a456da1aeca5e10907be5a4534a52bb5c900e9b58d0c59b977df1fd38",
+      "route": "/pl/narzedzia/kategorie/audiowizualne-fotografia/kalkulator-ekwiwalentu-ekspozycji/"
+    },
+    "https://www.gamebob.dev/pl/narzedzia/kategorie/audiowizualne-fotografia/kalkulator-glebi-ostrosci/": {
+      "hash": "0d1316a28731dbbaff6efdcf3c3bf13d3c1ebf64a4fba150306d6ef9673f4a8a",
+      "route": "/pl/narzedzia/kategorie/audiowizualne-fotografia/kalkulator-glebi-ostrosci/"
+    },
+    "https://www.gamebob.dev/pl/narzedzia/kategorie/audiowizualne-fotografia/kalkulator-jakosci-druku-piksele-na-cm-dpi/": {
+      "hash": "7ec50f48da2ecf8d589ce33aef3f7400d0c4b1b6f8d4fb64582e1496df05a430",
+      "route": "/pl/narzedzia/kategorie/audiowizualne-fotografia/kalkulator-jakosci-druku-piksele-na-cm-dpi/"
+    },
+    "https://www.gamebob.dev/pl/narzedzia/kategorie/audiowizualne-fotografia/kalkulator-odleglosci-od-tv-thx-4k-optymalny-ekran/": {
+      "hash": "9b2e2f2863754188f64824c78de16534aa59d7be1f7b626a3109b985645374b7",
+      "route": "/pl/narzedzia/kategorie/audiowizualne-fotografia/kalkulator-odleglosci-od-tv-thx-4k-optymalny-ekran/"
+    },
+    "https://www.gamebob.dev/pl/narzedzia/kategorie/audiowizualne-fotografia/kalkulator-opoznienia-audio-odleglosc-temperatura/": {
+      "hash": "11d876032777bdd15a40f2ac0765492e5cbb35a09a2446b21946093a7bc41c4b",
+      "route": "/pl/narzedzia/kategorie/audiowizualne-fotografia/kalkulator-opoznienia-audio-odleglosc-temperatura/"
+    },
+    "https://www.gamebob.dev/pl/narzedzia/kategorie/audiowizualne-fotografia/kalkulator-timelapse-hyperlapse-idealne-interwaly/": {
+      "hash": "861f994bc9d865aa050db27ea3ebe804a14a192d5ff2e8b525328be17a551c8f",
+      "route": "/pl/narzedzia/kategorie/audiowizualne-fotografia/kalkulator-timelapse-hyperlapse-idealne-interwaly/"
+    },
+    "https://www.gamebob.dev/pl/narzedzia/kategorie/audiowizualne-fotografia/kompresor-obrazow-online-zmniejsz-rozmiar-pliku-bez-utraty-jakosci/": {
+      "hash": "daa7bc7909fe7a85d25c822a362972406eba5415c1016c0e3c3a97dffa5106a5",
+      "route": "/pl/narzedzia/kategorie/audiowizualne-fotografia/kompresor-obrazow-online-zmniejsz-rozmiar-pliku-bez-utraty-jakosci/"
+    },
+    "https://www.gamebob.dev/pl/narzedzia/kategorie/audiowizualne-fotografia/lacz-filmy-online/": {
+      "hash": "9994080004738b7220795d6f8aa303440f36533cf52820dd3b63f6b0fd0f9a08",
+      "route": "/pl/narzedzia/kategorie/audiowizualne-fotografia/lacz-filmy-online/"
+    },
+    "https://www.gamebob.dev/pl/narzedzia/kategorie/audiowizualne-fotografia/planer-bitrate-rozmiaru-pliku-eksportu-wideo/": {
+      "hash": "7af714147feb668eeba3694fbcb1a7e1f4a812aaf38f9034388b351e9f8b5aae",
+      "route": "/pl/narzedzia/kategorie/audiowizualne-fotografia/planer-bitrate-rozmiaru-pliku-eksportu-wideo/"
+    },
+    "https://www.gamebob.dev/pl/narzedzia/kategorie/audiowizualne-fotografia/synchonizacja-napisow-srt-online-regulacja-czasu-za-darmo/": {
+      "hash": "d79cbebc433f716044452c9f353bb320976ff0f51e216ba1b35815f2951925c9",
+      "route": "/pl/narzedzia/kategorie/audiowizualne-fotografia/synchonizacja-napisow-srt-online-regulacja-czasu-za-darmo/"
+    },
+    "https://www.gamebob.dev/pl/narzedzia/kategorie/audiowizualne-fotografia/usuwanie-metadanych-exif-usun-gps-prywatnosc-zdjec/": {
+      "hash": "aff37efbc82a37ccde31823a6860e63f9d296776243074eef66e78e4bd66a1d4",
+      "route": "/pl/narzedzia/kategorie/audiowizualne-fotografia/usuwanie-metadanych-exif-usun-gps-prywatnosc-zdjec/"
+    },
+    "https://www.gamebob.dev/pl/narzedzia/kategorie/audiowizualne-fotografia/wizualizator-systemu-strefowego-ansela-adamsa-strefy-naswietlania/": {
+      "hash": "9618c0476195591bd29350c036602dfacd1fa9cab345deee4c1bbc45dd20a6f3",
+      "route": "/pl/narzedzia/kategorie/audiowizualne-fotografia/wizualizator-systemu-strefowego-ansela-adamsa-strefy-naswietlania/"
+    },
+    "https://www.gamebob.dev/pt/utilidades/categorias/audiovisual-e-fotografia/calculadora-atraso-audio-distancia-temperatura/": {
+      "hash": "6981ea0191567a67d073036a0d6fcfc14c89c107e43e0efafbdebe74de0cdef4",
+      "route": "/pt/utilidades/categorias/audiovisual-e-fotografia/calculadora-atraso-audio-distancia-temperatura/"
+    },
+    "https://www.gamebob.dev/pt/utilidades/categorias/audiovisual-e-fotografia/calculadora-distancia-tv-thx-4k-ecra-ideal/": {
+      "hash": "4de8df5384d4b1fc55decac1132db0283822d90daa5a540136e7d75c48e08a57",
+      "route": "/pt/utilidades/categorias/audiovisual-e-fotografia/calculadora-distancia-tv-thx-4k-ecra-ideal/"
+    },
+    "https://www.gamebob.dev/pt/utilidades/categorias/audiovisual-e-fotografia/calculadora-exposicao-equivalente/": {
+      "hash": "fe5e15c5f5cd9e843d177ac6ad5c26f0df694e14436286c596674eb5eeaf8cd3",
+      "route": "/pt/utilidades/categorias/audiovisual-e-fotografia/calculadora-exposicao-equivalente/"
+    },
+    "https://www.gamebob.dev/pt/utilidades/categorias/audiovisual-e-fotografia/calculadora-falha-reciprocidade-filme-fotografico/": {
+      "hash": "6bacccc3c3a68abd5b46bfe637ecc59c948dd5691fdc7f3f7e5e3137d2453d60",
+      "route": "/pt/utilidades/categorias/audiovisual-e-fotografia/calculadora-falha-reciprocidade-filme-fotografico/"
+    },
+    "https://www.gamebob.dev/pt/utilidades/categorias/audiovisual-e-fotografia/calculadora-profundidade-de-campo/": {
+      "hash": "6a873178dc40e81fc27a66bfc454ad70f285b36b80573511e44a9b59a163acad",
+      "route": "/pt/utilidades/categorias/audiovisual-e-fotografia/calculadora-profundidade-de-campo/"
+    },
+    "https://www.gamebob.dev/pt/utilidades/categorias/audiovisual-e-fotografia/calculadora-qualidade-impressao-pixeis-para-cm-dpi/": {
+      "hash": "d5e4355d94874312526955c50e137b6b82417cd4877dac5cd42d4699d619bbd9",
+      "route": "/pt/utilidades/categorias/audiovisual-e-fotografia/calculadora-qualidade-impressao-pixeis-para-cm-dpi/"
+    },
+    "https://www.gamebob.dev/pt/utilidades/categorias/audiovisual-e-fotografia/calculadora-tempo-revelacao-filme-temperatura/": {
+      "hash": "58a84588b38743ebb567c6167e7890c4d4295858a5609018c48848a370c95f59",
+      "route": "/pt/utilidades/categorias/audiovisual-e-fotografia/calculadora-tempo-revelacao-filme-temperatura/"
+    },
+    "https://www.gamebob.dev/pt/utilidades/categorias/audiovisual-e-fotografia/calculadora-tempo-reverberacao-rt60/": {
+      "hash": "c4a7716ded3c6f8b418af575432cf4fe952b9cb97d03ace2784af8e0aa2480da",
+      "route": "/pt/utilidades/categorias/audiovisual-e-fotografia/calculadora-tempo-reverberacao-rt60/"
+    },
+    "https://www.gamebob.dev/pt/utilidades/categorias/audiovisual-e-fotografia/calculadora-timelapse-hyperlapse-intervalos-perfeitos/": {
+      "hash": "7af4687cc85f22bd8f44746652678e033110da6d635087fb196aac655ef57850",
+      "route": "/pt/utilidades/categorias/audiovisual-e-fotografia/calculadora-timelapse-hyperlapse-intervalos-perfeitos/"
+    },
+    "https://www.gamebob.dev/pt/utilidades/categorias/audiovisual-e-fotografia/chromatic-lens-extracao-paleta-cores-online/": {
+      "hash": "2a3cf847b5e57ba6377d6992d190706fe19b8d27d13da02e7bcc8e01e102fb16",
+      "route": "/pt/utilidades/categorias/audiovisual-e-fotografia/chromatic-lens-extracao-paleta-cores-online/"
+    },
+    "https://www.gamebob.dev/pt/utilidades/categorias/audiovisual-e-fotografia/compressor-imagens-online-reduzir-tamanho-sem-perder-qualidade/": {
+      "hash": "7905cdf936ab975b56b2227ae2d9822f5eef9b44f0982a17ed10c9a3dabfe844",
+      "route": "/pt/utilidades/categorias/audiovisual-e-fotografia/compressor-imagens-online-reduzir-tamanho-sem-perder-qualidade/"
+    },
+    "https://www.gamebob.dev/pt/utilidades/categorias/audiovisual-e-fotografia/criar-collage-fotos-online-gratis-composicoes-profissionais/": {
+      "hash": "a67c3149f78baf7be57113a68c6222515ee3f96806c6d84f5bff77905ae7ea05",
+      "route": "/pt/utilidades/categorias/audiovisual-e-fotografia/criar-collage-fotos-online-gratis-composicoes-profissionais/"
+    },
+    "https://www.gamebob.dev/pt/utilidades/categorias/audiovisual-e-fotografia/editor-privacidade-online-pixelizar-desfocar-rostos-fotos/": {
+      "hash": "6bea06f7f707c5d16494adbf794bd930045ed883d64d21f33dba9284209c183f",
+      "route": "/pt/utilidades/categorias/audiovisual-e-fotografia/editor-privacidade-online-pixelizar-desfocar-rostos-fotos/"
+    },
+    "https://www.gamebob.dev/pt/utilidades/categorias/audiovisual-e-fotografia/extrator-de-fotogramas-video-online-capturar-stills-hd/": {
+      "hash": "4f01140329b92d327739ab14179e8a2380bd8d614f3ca010c658bd47b8107b82",
+      "route": "/pt/utilidades/categorias/audiovisual-e-fotografia/extrator-de-fotogramas-video-online-capturar-stills-hd/"
+    },
+    "https://www.gamebob.dev/pt/utilidades/categorias/audiovisual-e-fotografia/": {
+      "hash": "793d49f3c07d419a44dda201e2fc1f890c00126187ea927455c45c4834692f13",
+      "route": "/pt/utilidades/categorias/audiovisual-e-fotografia/"
+    },
+    "https://www.gamebob.dev/pt/utilidades/categorias/audiovisual-e-fotografia/juntar-videos-online/": {
+      "hash": "2b1b84599289293576747f6bf9e3973797a5f0710162d85991248a155a648ecc",
+      "route": "/pt/utilidades/categorias/audiovisual-e-fotografia/juntar-videos-online/"
+    },
+    "https://www.gamebob.dev/pt/utilidades/categorias/audiovisual-e-fotografia/limpeza-metadados-exif-remover-gps-privacidade-fotos/": {
+      "hash": "166c782b6fe104918a605b35cbc06f0da9a0a7867f65d6e7b1573f3f2660fb51",
+      "route": "/pt/utilidades/categorias/audiovisual-e-fotografia/limpeza-metadados-exif-remover-gps-privacidade-fotos/"
+    },
+    "https://www.gamebob.dev/pt/utilidades/categorias/audiovisual-e-fotografia/planificador-bitrate-tamanho-ficheiro-exportacao-video/": {
+      "hash": "7b65154d21ad9e50f3cf9dc09490b4bd9058dddfc463d8bc34e40d057ce7df66",
+      "route": "/pt/utilidades/categorias/audiovisual-e-fotografia/planificador-bitrate-tamanho-ficheiro-exportacao-video/"
+    },
+    "https://www.gamebob.dev/pt/utilidades/categorias/audiovisual-e-fotografia/sincronizar-legendas-srt-online-ajustar-tempo-gratis/": {
+      "hash": "3ea190844dd347e701b6cfc20b0f06d8b4dbd9bb884f294fc5f944b9629fc86f",
+      "route": "/pt/utilidades/categorias/audiovisual-e-fotografia/sincronizar-legendas-srt-online-ajustar-tempo-gratis/"
+    },
+    "https://www.gamebob.dev/pt/utilidades/categorias/audiovisual-e-fotografia/visualizador-sistema-de-zonas-ansel-adams-zonas-exposicao/": {
+      "hash": "9995bf69524ca7c0e5cbeea0d045f036cb09e73d541e836b0fd350a8573e3c09",
+      "route": "/pt/utilidades/categorias/audiovisual-e-fotografia/visualizador-sistema-de-zonas-ansel-adams-zonas-exposicao/"
+    },
+    "https://www.gamebob.dev/ru/instrumenty/kategorii/audiovizualnye-i-foto-instrumenty/besplatnyy-onlayn-redaktor-kollazhey-professionalnyye-kompozitsii/": {
+      "hash": "f636e0226bb88b40551f03276179d620f1e29470b1c43e6aab45646fa192c74a",
+      "route": "/ru/instrumenty/kategorii/audiovizualnye-i-foto-instrumenty/besplatnyy-onlayn-redaktor-kollazhey-professionalnyye-kompozitsii/"
+    },
+    "https://www.gamebob.dev/ru/instrumenty/kategorii/audiovizualnye-i-foto-instrumenty/hromatic-linza-cvetovaya-palitra-online/": {
+      "hash": "83b9b005e53616a1c1019614ed99dbf0bbcf3d32a6f8e83ef49eca70ea4c08dd",
+      "route": "/ru/instrumenty/kategorii/audiovizualnye-i-foto-instrumenty/hromatic-linza-cvetovaya-palitra-online/"
+    },
+    "https://www.gamebob.dev/ru/instrumenty/kategorii/audiovizualnye-i-foto-instrumenty/": {
+      "hash": "22289de025e4ab59f4da30d1f9234368bb131177fdab667e0ee86f82d6e33879",
+      "route": "/ru/instrumenty/kategorii/audiovizualnye-i-foto-instrumenty/"
+    },
+    "https://www.gamebob.dev/ru/instrumenty/kategorii/audiovizualnye-i-foto-instrumenty/kalkulyator-effekta-shvarczshilda-fotoplenka/": {
+      "hash": "9bb6eb623dd2423773ea67846d0a769808d9a8eb2c2e4e117b05f13cbe063ee2",
+      "route": "/ru/instrumenty/kategorii/audiovizualnye-i-foto-instrumenty/kalkulyator-effekta-shvarczshilda-fotoplenka/"
+    },
+    "https://www.gamebob.dev/ru/instrumenty/kategorii/audiovizualnye-i-foto-instrumenty/kalkulyator-ekvivalentnoj-ekspoziczii/": {
+      "hash": "5e80c0e8d89d3a47925cd3615c5bf28f198db3851e10b9dea901c157bd467958",
+      "route": "/ru/instrumenty/kategorii/audiovizualnye-i-foto-instrumenty/kalkulyator-ekvivalentnoj-ekspoziczii/"
+    },
+    "https://www.gamebob.dev/ru/instrumenty/kategorii/audiovizualnye-i-foto-instrumenty/kalkulyator-glubiny-rezkosti/": {
+      "hash": "ff84305b81e92c1ba0d9ead260c6deeba861d9149e492f8e7ab7480f66c68f9e",
+      "route": "/ru/instrumenty/kategorii/audiovizualnye-i-foto-instrumenty/kalkulyator-glubiny-rezkosti/"
+    },
+    "https://www.gamebob.dev/ru/instrumenty/kategorii/audiovizualnye-i-foto-instrumenty/kalkulyator-kachestva-pechati-pikseli-v-sm-i-dpi/": {
+      "hash": "70fbdf9edc0e18cc9c35e3a5acbcbe8b188ba204b93681f534ee5f61129e37dc",
+      "route": "/ru/instrumenty/kategorii/audiovizualnye-i-foto-instrumenty/kalkulyator-kachestva-pechati-pikseli-v-sm-i-dpi/"
+    },
+    "https://www.gamebob.dev/ru/instrumenty/kategorii/audiovizualnye-i-foto-instrumenty/kalkulyator-rasstoyaniya-do-televizora-thx-4k-optimalnyj-ekran/": {
+      "hash": "532f297c6bde9feea6eb60d5ac19e064d764fe827ac3732a0ee69f711f7db1a6",
+      "route": "/ru/instrumenty/kategorii/audiovizualnye-i-foto-instrumenty/kalkulyator-rasstoyaniya-do-televizora-thx-4k-optimalnyj-ekran/"
+    },
+    "https://www.gamebob.dev/ru/instrumenty/kategorii/audiovizualnye-i-foto-instrumenty/kalkulyator-timelaps-giperlaps-idealnye-intervaly/": {
+      "hash": "4697beef5d37ea49169cd50ddb6064d6f04e4e4c47c0218870a8e6491107f45f",
+      "route": "/ru/instrumenty/kategorii/audiovizualnye-i-foto-instrumenty/kalkulyator-timelaps-giperlaps-idealnye-intervaly/"
+    },
+    "https://www.gamebob.dev/ru/instrumenty/kategorii/audiovizualnye-i-foto-instrumenty/kalkulyator-vremeni-proyavki-plenki-temperatura/": {
+      "hash": "f0a6b17b290b5f439488b4aea46cde572b2c912fa06cbef7ab0c814b48ad30f0",
+      "route": "/ru/instrumenty/kategorii/audiovizualnye-i-foto-instrumenty/kalkulyator-vremeni-proyavki-plenki-temperatura/"
+    },
+    "https://www.gamebob.dev/ru/instrumenty/kategorii/audiovizualnye-i-foto-instrumenty/kalkulyator-vremeni-zatukhaniya-reverberatsii-rt60/": {
+      "hash": "24b884fe4a99f10a6b874c39bef1fe2772d478cc22786ce8600c099f1c1e4fec",
+      "route": "/ru/instrumenty/kategorii/audiovizualnye-i-foto-instrumenty/kalkulyator-vremeni-zatukhaniya-reverberatsii-rt60/"
+    },
+    "https://www.gamebob.dev/ru/instrumenty/kategorii/audiovizualnye-i-foto-instrumenty/kalkulyator-zaderzhki-audiogromkosti-rasstoyanie-temperatura/": {
+      "hash": "01d719411276def4598288f225c12ad566e8400e7d357a9cb76880bf9fb46bde",
+      "route": "/ru/instrumenty/kategorii/audiovizualnye-i-foto-instrumenty/kalkulyator-zaderzhki-audiogromkosti-rasstoyanie-temperatura/"
+    },
+    "https://www.gamebob.dev/ru/instrumenty/kategorii/audiovizualnye-i-foto-instrumenty/obedinit-video-onlajn/": {
+      "hash": "7168533e5f8a956c3de373a247f183b0f47fe7c85a0330a40a9643e72bae300e",
+      "route": "/ru/instrumenty/kategorii/audiovizualnye-i-foto-instrumenty/obedinit-video-onlajn/"
+    },
+    "https://www.gamebob.dev/ru/instrumenty/kategorii/audiovizualnye-i-foto-instrumenty/ochistka-metadannykh-exif-udalit-gps-privatnost-foto/": {
+      "hash": "117c4d216c8ea69282500d42934e5b3a8587d80ab9452f6a3b5ea6ce8d913233",
+      "route": "/ru/instrumenty/kategorii/audiovizualnye-i-foto-instrumenty/ochistka-metadannykh-exif-udalit-gps-privatnost-foto/"
+    },
+    "https://www.gamebob.dev/ru/instrumenty/kategorii/audiovizualnye-i-foto-instrumenty/onlajn-ekstraktor-kadrov-video-zahvat-stills-hd/": {
+      "hash": "bce54d9070ccb8a96a0d47420cb8e25c3166ff3d79fb672538fc177b0b364055",
+      "route": "/ru/instrumenty/kategorii/audiovizualnye-i-foto-instrumenty/onlajn-ekstraktor-kadrov-video-zahvat-stills-hd/"
+    },
+    "https://www.gamebob.dev/ru/instrumenty/kategorii/audiovizualnye-i-foto-instrumenty/onlayn-kompressor-izobrazheniy-umenshit-razmer-bez-poteri-kachestva/": {
+      "hash": "9d60a98d4172eac0a9268b985fc6c58af16e7617ef8786c6ce280e34b814c50c",
+      "route": "/ru/instrumenty/kategorii/audiovizualnye-i-foto-instrumenty/onlayn-kompressor-izobrazheniy-umenshit-razmer-bez-poteri-kachestva/"
+    },
+    "https://www.gamebob.dev/ru/instrumenty/kategorii/audiovizualnye-i-foto-instrumenty/planirovshchik-bitreyta-i-razmera-fayla-eksporta-video/": {
+      "hash": "c7c47676f5abc76ea6c7efa26e43eb99c3a415498264b21cfd2b5269a3860dab",
+      "route": "/ru/instrumenty/kategorii/audiovizualnye-i-foto-instrumenty/planirovshchik-bitreyta-i-razmera-fayla-eksporta-video/"
+    },
+    "https://www.gamebob.dev/ru/instrumenty/kategorii/audiovizualnye-i-foto-instrumenty/redaktor-konfidencialnosti-online-pikselizaciya-razmytie-lic-foto/": {
+      "hash": "8052f5210dfabe26dbba15ce9fa88cf80065a8e990a3221575a6050e365b38ad",
+      "route": "/ru/instrumenty/kategorii/audiovizualnye-i-foto-instrumenty/redaktor-konfidencialnosti-online-pikselizaciya-razmytie-lic-foto/"
+    },
+    "https://www.gamebob.dev/ru/instrumenty/kategorii/audiovizualnye-i-foto-instrumenty/sinhronizirovat-subtitry-srt-onlajn-ispravit-tajming-besplatno/": {
+      "hash": "8d62776273990452ee56e610cbcbcb5e6930f3f4938e3ca75207cdafe00af2e6",
+      "route": "/ru/instrumenty/kategorii/audiovizualnye-i-foto-instrumenty/sinhronizirovat-subtitry-srt-onlajn-ispravit-tajming-besplatno/"
+    },
+    "https://www.gamebob.dev/ru/instrumenty/kategorii/audiovizualnye-i-foto-instrumenty/vizualizator-zonnoj-sistemy-ansela-adamsa-zony-eksponirovaniya/": {
+      "hash": "1426f12192777f70d134fbd94473bc86cceb127ddcceda853fcaba7f5454a8a0",
+      "route": "/ru/instrumenty/kategorii/audiovizualnye-i-foto-instrumenty/vizualizator-zonnoj-sistemy-ansela-adamsa-zony-eksponirovaniya/"
+    },
+    "https://www.gamebob.dev/sv/verktyg/kategorier/audiovisuellt-fotografi/ansel-adams-zon-system-visualiserare-exponeringszoner/": {
+      "hash": "2b0e2f6613ee7e08f3b80b5450a772934a4004f667925d9c7cf3ae2e269dab45",
+      "route": "/sv/verktyg/kategorier/audiovisuellt-fotografi/ansel-adams-zon-system-visualiserare-exponeringszoner/"
+    },
+    "https://www.gamebob.dev/sv/verktyg/kategorier/audiovisuellt-fotografi/audio-delay-avstand-temperatur-kalkylator/": {
+      "hash": "50a0c4ada2d81d4fb0091b041f1d68ef3ed6dee9b515a571e354ba4b99dbedff",
+      "route": "/sv/verktyg/kategorier/audiovisuellt-fotografi/audio-delay-avstand-temperatur-kalkylator/"
+    },
+    "https://www.gamebob.dev/sv/verktyg/kategorier/audiovisuellt-fotografi/chromatic-lens-extrahera-fargpalett-online/": {
+      "hash": "599dac22539264bfd74013dfa64a3b29dfbcf5c9f460920a0c21a6407ae2c761",
+      "route": "/sv/verktyg/kategorier/audiovisuellt-fotografi/chromatic-lens-extrahera-fargpalett-online/"
+    },
+    "https://www.gamebob.dev/sv/verktyg/kategorier/audiovisuellt-fotografi/ekvivalent-exponering-raknare/": {
+      "hash": "641b15adb1be9b565350b98fe30f1bc78af474847493f3d5856a0f0fcf18ab99",
+      "route": "/sv/verktyg/kategorier/audiovisuellt-fotografi/ekvivalent-exponering-raknare/"
+    },
+    "https://www.gamebob.dev/sv/verktyg/kategorier/audiovisuellt-fotografi/exif-metadata-rensare-ta-bort-gps-foto-privacy/": {
+      "hash": "5d98c379df67602cd224f38622f26b7e942b75c6f01b69b57e74032c8b7b4790",
+      "route": "/sv/verktyg/kategorier/audiovisuellt-fotografi/exif-metadata-rensare-ta-bort-gps-foto-privacy/"
+    },
+    "https://www.gamebob.dev/sv/verktyg/kategorier/audiovisuellt-fotografi/film-reciprocitetsfel-kalkylator-fotografering/": {
+      "hash": "41c15d3987dad55ec50df631510772c29bf7787aa65d38009c113fa8b454b570",
+      "route": "/sv/verktyg/kategorier/audiovisuellt-fotografi/film-reciprocitetsfel-kalkylator-fotografering/"
+    },
+    "https://www.gamebob.dev/sv/verktyg/kategorier/audiovisuellt-fotografi/framkallningstid-raknare-film-temperatur-kompensation/": {
+      "hash": "801b1dc5f1a36a2b9c1459e1ccf19f7fd271bab4446ccf448ade1e603f79e664",
+      "route": "/sv/verktyg/kategorier/audiovisuellt-fotografi/framkallningstid-raknare-film-temperatur-kompensation/"
+    },
+    "https://www.gamebob.dev/sv/verktyg/kategorier/audiovisuellt-fotografi/gratis-fotocollage-maker-online-professionella-kompositioner/": {
+      "hash": "1fb24398b47100e3afe1353bbe845fd3a0aa4cb63eb5a5a570545cca6b83f5ee",
+      "route": "/sv/verktyg/kategorier/audiovisuellt-fotografi/gratis-fotocollage-maker-online-professionella-kompositioner/"
+    },
+    "https://www.gamebob.dev/sv/verktyg/kategorier/audiovisuellt-fotografi/": {
+      "hash": "630836d7eeebd22473cdb5ca227ea196c90554b8daf023866bdfd123bd393ac6",
+      "route": "/sv/verktyg/kategorier/audiovisuellt-fotografi/"
+    },
+    "https://www.gamebob.dev/sv/verktyg/kategorier/audiovisuellt-fotografi/kalkylator-efterklangstid-rt60/": {
+      "hash": "635c96b837d373187a4dc9c20c37df396abec021ba9dc2021a4ef2c9329d520e",
+      "route": "/sv/verktyg/kategorier/audiovisuellt-fotografi/kalkylator-efterklangstid-rt60/"
+    },
+    "https://www.gamebob.dev/sv/verktyg/kategorier/audiovisuellt-fotografi/online-image-compressor-minska-filstorlek-utan-kvalitetsforlust/": {
+      "hash": "e84452f7c14b4a7b54a4e67ce4432a0aaf624cf547ce69f32156bea5d2d494bd",
+      "route": "/sv/verktyg/kategorier/audiovisuellt-fotografi/online-image-compressor-minska-filstorlek-utan-kvalitetsforlust/"
+    },
+    "https://www.gamebob.dev/sv/verktyg/kategorier/audiovisuellt-fotografi/online-privacy-editor-pixla-sudda-ansikten-foton/": {
+      "hash": "185ac6383c95f646206248f3ea98746822130c8c764a102244082e599e9f8e16",
+      "route": "/sv/verktyg/kategorier/audiovisuellt-fotografi/online-privacy-editor-pixla-sudda-ansikten-foton/"
+    },
+    "https://www.gamebob.dev/sv/verktyg/kategorier/audiovisuellt-fotografi/online-video-frame-extraktor-fanga-hd-bilder/": {
+      "hash": "0326b155d947ffe8cd1db19129b03da67f407d1a6213a1f4e3aa0a3478987bb1",
+      "route": "/sv/verktyg/kategorier/audiovisuellt-fotografi/online-video-frame-extraktor-fanga-hd-bilder/"
+    },
+    "https://www.gamebob.dev/sv/verktyg/kategorier/audiovisuellt-fotografi/skarpedjupskalkylator/": {
+      "hash": "ae20bfdc9b7ec788bfc8935779b23ed36e6b038886fd104f82fdc37483c314e3",
+      "route": "/sv/verktyg/kategorier/audiovisuellt-fotografi/skarpedjupskalkylator/"
+    },
+    "https://www.gamebob.dev/sv/verktyg/kategorier/audiovisuellt-fotografi/sla-ihop-videor-online/": {
+      "hash": "000a9d7d94dd00ab3664dacdff09df3715792d7736d2176733e34bd5470d118a",
+      "route": "/sv/verktyg/kategorier/audiovisuellt-fotografi/sla-ihop-videor-online/"
+    },
+    "https://www.gamebob.dev/sv/verktyg/kategorier/audiovisuellt-fotografi/synkronisera-srt-undertexter-online-justera-timing-gratis/": {
+      "hash": "21778e37ed417dd5369aa73448a5c9e5f4f43dea50775dfea9c7b981469e5c0d",
+      "route": "/sv/verktyg/kategorier/audiovisuellt-fotografi/synkronisera-srt-undertexter-online-justera-timing-gratis/"
+    },
+    "https://www.gamebob.dev/sv/verktyg/kategorier/audiovisuellt-fotografi/timelapse-hyperlapse-kalkylator-perfekta-intervall/": {
+      "hash": "9bc24d17384c4eed24c9bdead37743bc5b9426570fbe6ce3b817304a19321752",
+      "route": "/sv/verktyg/kategorier/audiovisuellt-fotografi/timelapse-hyperlapse-kalkylator-perfekta-intervall/"
+    },
+    "https://www.gamebob.dev/sv/verktyg/kategorier/audiovisuellt-fotografi/tv-avstands-kalkylator-thx-4k-optimal-skarm/": {
+      "hash": "0ef5032f9caa8cf88b90ef486003f849c31e8d448414e0b86519cd740eec1b2c",
+      "route": "/sv/verktyg/kategorier/audiovisuellt-fotografi/tv-avstands-kalkylator-thx-4k-optimal-skarm/"
+    },
+    "https://www.gamebob.dev/sv/verktyg/kategorier/audiovisuellt-fotografi/utskriftskvalitet-kalkylator-pixlar-till-cm-dpi/": {
+      "hash": "02be4efef74e12c950b0d0efe7d1c1afe7e7392d51ab0e3778d65bd7ba720a7a",
+      "route": "/sv/verktyg/kategorier/audiovisuellt-fotografi/utskriftskvalitet-kalkylator-pixlar-till-cm-dpi/"
+    },
+    "https://www.gamebob.dev/sv/verktyg/kategorier/audiovisuellt-fotografi/videoexport-bitrate-filstorlek-planerare/": {
+      "hash": "5606b1f85b3af8d37919f45fa7d3e8de0447533bfcd6d59dba89e0cf6745f7c5",
+      "route": "/sv/verktyg/kategorier/audiovisuellt-fotografi/videoexport-bitrate-filstorlek-planerare/"
+    },
+    "https://www.gamebob.dev/tr/araclar/kategoriler/produksiyon-ve-fotografcilik/alan-derinligi-hesaplama/": {
+      "hash": "bfb4f7f779e5ad353ae7b77cf1de203a572a08f90574b07ec9f48637e70e3259",
+      "route": "/tr/araclar/kategoriler/produksiyon-ve-fotografcilik/alan-derinligi-hesaplama/"
+    },
+    "https://www.gamebob.dev/tr/araclar/kategoriler/produksiyon-ve-fotografcilik/ansel-adams-bolge-sistemi-gorsellestirici-pozlama-bolgeleri/": {
+      "hash": "ad9fd1691cc6e5e0653243730fcd2cdd91f0baa69fac818f6692b8ac926ca8be",
+      "route": "/tr/araclar/kategoriler/produksiyon-ve-fotografcilik/ansel-adams-bolge-sistemi-gorsellestirici-pozlama-bolgeleri/"
+    },
+    "https://www.gamebob.dev/tr/araclar/kategoriler/produksiyon-ve-fotografcilik/baski-kalitesi-hesaplama-piksel-cm-dpi-donusturucu/": {
+      "hash": "2773eb5ad7aa4ca5f834b21dc5d750e676f1677667e6817586fc8e5888615e56",
+      "route": "/tr/araclar/kategoriler/produksiyon-ve-fotografcilik/baski-kalitesi-hesaplama-piksel-cm-dpi-donusturucu/"
+    },
+    "https://www.gamebob.dev/tr/araclar/kategoriler/produksiyon-ve-fotografcilik/chromatic-lens-online-renk-paleti-cikarma/": {
+      "hash": "3dfbb166161f143cd29d7c57655d4ae9aa7904a9ef0af7c8674356a266515fbf",
+      "route": "/tr/araclar/kategoriler/produksiyon-ve-fotografcilik/chromatic-lens-online-renk-paleti-cikarma/"
+    },
+    "https://www.gamebob.dev/tr/araclar/kategoriler/produksiyon-ve-fotografcilik/esdeger-pozlama-hesaplayici/": {
+      "hash": "68bb3fbd0eea0c393b212bdd14191d3ea6f334939784e268b7fb392b50815b9b",
+      "route": "/tr/araclar/kategoriler/produksiyon-ve-fotografcilik/esdeger-pozlama-hesaplayici/"
+    },
+    "https://www.gamebob.dev/tr/araclar/kategoriler/produksiyon-ve-fotografcilik/exif-metadata-temizleyici-gps-sil-foto-gizliligi/": {
+      "hash": "7c29635782686a83c0f94075536cab5f621c3f15904fdb0fe708be4db3432a6d",
+      "route": "/tr/araclar/kategoriler/produksiyon-ve-fotografcilik/exif-metadata-temizleyici-gps-sil-foto-gizliligi/"
+    },
+    "https://www.gamebob.dev/tr/araclar/kategoriler/produksiyon-ve-fotografcilik/film-banyo-suresi-hesaplayici-sicaklik-telafisi/": {
+      "hash": "f3255034b420525970135e9a5290e28b17405d1094008eff06312f4f094d6b0a",
+      "route": "/tr/araclar/kategoriler/produksiyon-ve-fotografcilik/film-banyo-suresi-hesaplayici-sicaklik-telafisi/"
+    },
+    "https://www.gamebob.dev/tr/araclar/kategoriler/produksiyon-ve-fotografcilik/film-karsiliklilik-bozulmasi-hesaplayici-fotograf/": {
+      "hash": "142cd6e58d15ea3db4043caeefa69b91b165023b674d87487852e4f1b5eab0c9",
+      "route": "/tr/araclar/kategoriler/produksiyon-ve-fotografcilik/film-karsiliklilik-bozulmasi-hesaplayici-fotograf/"
+    },
+    "https://www.gamebob.dev/tr/araclar/kategoriler/produksiyon-ve-fotografcilik/": {
+      "hash": "3c2aea098ab86834a5089469fcb61025ab9c1c75c8f4945a6bfca5ba0f4d50fe",
+      "route": "/tr/araclar/kategoriler/produksiyon-ve-fotografcilik/"
+    },
+    "https://www.gamebob.dev/tr/araclar/kategoriler/produksiyon-ve-fotografcilik/online-gorsel-kompresor-kalite-kaybi-olmadan-dosya-boyutunu-dusur/": {
+      "hash": "6121f488b4ba3efdf5a8fbc92ef466071b235516dddd290dd398b5a6cfa7f54d",
+      "route": "/tr/araclar/kategoriler/produksiyon-ve-fotografcilik/online-gorsel-kompresor-kalite-kaybi-olmadan-dosya-boyutunu-dusur/"
+    },
+    "https://www.gamebob.dev/tr/araclar/kategoriler/produksiyon-ve-fotografcilik/online-privacy-editor-pikselleme-bulaniklastirma-yuzleri-fotograflar/": {
+      "hash": "855af30c833e5b4c39b13d0987b95480c65eb3c8e09cc005b356382d782aa2f5",
+      "route": "/tr/araclar/kategoriler/produksiyon-ve-fotografcilik/online-privacy-editor-pikselleme-bulaniklastirma-yuzleri-fotograflar/"
+    },
+    "https://www.gamebob.dev/tr/araclar/kategoriler/produksiyon-ve-fotografcilik/online-video-kare-cikarma-hd-resim-yakala/": {
+      "hash": "9cb3e08fe4f2cb928af7beb3c0e145d4d0fe6b829abb1def134db611930e3c10",
+      "route": "/tr/araclar/kategoriler/produksiyon-ve-fotografcilik/online-video-kare-cikarma-hd-resim-yakala/"
+    },
+    "https://www.gamebob.dev/tr/araclar/kategoriler/produksiyon-ve-fotografcilik/reverb-sonum-suresi-hesaplayici-rt60/": {
+      "hash": "e31e42f0ebf574f09693a772ab4340cb0ca76b8602a7a7ae97701ad583ceabe8",
+      "route": "/tr/araclar/kategoriler/produksiyon-ve-fotografcilik/reverb-sonum-suresi-hesaplayici-rt60/"
+    },
+    "https://www.gamebob.dev/tr/araclar/kategoriler/produksiyon-ve-fotografcilik/ses-gecikmesi-mesafe-sicaklik-hesaplayici/": {
+      "hash": "95939c71cd3a4a34a2a28d9866feeceb94afd4badd1e3bbc12e5fd60170ef11b",
+      "route": "/tr/araclar/kategoriler/produksiyon-ve-fotografcilik/ses-gecikmesi-mesafe-sicaklik-hesaplayici/"
+    },
+    "https://www.gamebob.dev/tr/araclar/kategoriler/produksiyon-ve-fotografcilik/srt-altyazi-senkronize-et-online-zamanlamayi-ayarla-ucretsiz/": {
+      "hash": "0ef5844c39558fdd356937e3768a47379049db619726dde785012048acf08649",
+      "route": "/tr/araclar/kategoriler/produksiyon-ve-fotografcilik/srt-altyazi-senkronize-et-online-zamanlamayi-ayarla-ucretsiz/"
+    },
+    "https://www.gamebob.dev/tr/araclar/kategoriler/produksiyon-ve-fotografcilik/timelapse-hyperlapse-hesaplama-mukemmel-araliklar/": {
+      "hash": "f2b7181ec67bdbdeef107418f634041b513cd611539495767ffbed22d10a5662",
+      "route": "/tr/araclar/kategoriler/produksiyon-ve-fotografcilik/timelapse-hyperlapse-hesaplama-mukemmel-araliklar/"
+    },
+    "https://www.gamebob.dev/tr/araclar/kategoriler/produksiyon-ve-fotografcilik/tv-izleme-mesafesi-hesaplama-thx-4k-ideal-ekran/": {
+      "hash": "98e7294cb9c15cbaceb03ef7e7ce4ad042f1fc2694bae3e2691651b55b7c87f2",
+      "route": "/tr/araclar/kategoriler/produksiyon-ve-fotografcilik/tv-izleme-mesafesi-hesaplama-thx-4k-ideal-ekran/"
+    },
+    "https://www.gamebob.dev/tr/araclar/kategoriler/produksiyon-ve-fotografcilik/ucretsiz-online-foto-kolaj-yapici-profesyonel-kompozisyonlar/": {
+      "hash": "129337cbbe9fcaff133f2d40f0be01cfdc0060d1d4c0a6ed527df1f910318da5",
+      "route": "/tr/araclar/kategoriler/produksiyon-ve-fotografcilik/ucretsiz-online-foto-kolaj-yapici-profesyonel-kompozisyonlar/"
+    },
+    "https://www.gamebob.dev/tr/araclar/kategoriler/produksiyon-ve-fotografcilik/video-disa-aktarim-bit-hizi-dosya-boyutu-planlayici/": {
+      "hash": "6818b4cf3f912b994892371de476ece1f94f8822ea0d6b5654b7e2753788b11e",
+      "route": "/tr/araclar/kategoriler/produksiyon-ve-fotografcilik/video-disa-aktarim-bit-hizi-dosya-boyutu-planlayici/"
+    },
+    "https://www.gamebob.dev/tr/araclar/kategoriler/produksiyon-ve-fotografcilik/videolari-birlestir-online/": {
+      "hash": "dffb1fa447dfb7c5432457e52b7bfe2280f22f4a0b54b716f26bd96d21343dbe",
+      "route": "/tr/araclar/kategoriler/produksiyon-ve-fotografcilik/videolari-birlestir-online/"
+    },
+    "https://www.jjlmoya.es/utilidades/calculadora-calidad-impresion/": {
+      "hash": "846b794dc50cd7a321dd12d73122809159b9dc830d6aa96db9e7b356fda7312f",
+      "route": "/utilidades/calculadora-calidad-impresion/"
+    },
+    "https://www.jjlmoya.es/utilidades/calculadora-delay-audio-distancia-temperatura/": {
+      "hash": "c6c2f520946ff8514fd8aea7b85d1a5c934e6014129581dbc225ab1b40a8eca0",
+      "route": "/utilidades/calculadora-delay-audio-distancia-temperatura/"
+    },
+    "https://www.jjlmoya.es/utilidades/calculadora-exposicion-equivalente/": {
+      "hash": "f96ff3c617cda5ad21386f1947d04563c624f8fea66fc9a280aa6124e0b8744a",
+      "route": "/utilidades/calculadora-exposicion-equivalente/"
+    },
+    "https://www.jjlmoya.es/utilidades/calculadora-fallo-reciprocidad-pelicula-fotografica/": {
+      "hash": "7ac5764690f284654215c250d7c87dde0016fdcecd5f7e0ae352c37432933a5d",
+      "route": "/utilidades/calculadora-fallo-reciprocidad-pelicula-fotografica/"
+    },
+    "https://www.jjlmoya.es/utilidades/calculadora-profundidad-de-campo/": {
+      "hash": "a48ba097545029f2d5a3d0530d98658586f0e3ebccc83694b4ddf421ef3267ae",
+      "route": "/utilidades/calculadora-profundidad-de-campo/"
+    },
+    "https://www.jjlmoya.es/utilidades/calculadora-tiempo-revelado-pelicula-temperatura/": {
+      "hash": "77f01a78a1b1100e164da9088884da3a86a0f1c982ea181b6b69f8e1a1941a39",
+      "route": "/utilidades/calculadora-tiempo-revelado-pelicula-temperatura/"
+    },
+    "https://www.jjlmoya.es/utilidades/calculadora-tiempo-reverberacion-rt60/": {
+      "hash": "55bd2f0c4c551995009506a3a5f1229aa06656ea949530f676f0108cb179078f",
+      "route": "/utilidades/calculadora-tiempo-reverberacion-rt60/"
+    },
+    "https://www.jjlmoya.es/utilidades/calculadora-timelapse/": {
+      "hash": "2973506100afec8d504da60940fd9de0bf075be426142d10a94542125f1ea3ba",
+      "route": "/utilidades/calculadora-timelapse/"
+    },
+    "https://www.jjlmoya.es/utilidades/categorias/audiovisual/": {
+      "hash": "d5a83407152a0976fd226997ce3296a5247aacfa528ac45e6fae19063722d492",
+      "route": "/utilidades/categorias/audiovisual/"
+    },
+    "https://www.jjlmoya.es/utilidades/compresor-imagenes/": {
+      "hash": "33999b74c42bab5b04fa8dc2320d77c14104bc41a0902a0c36a6d6efe3159c3a",
+      "route": "/utilidades/compresor-imagenes/"
+    },
+    "https://www.jjlmoya.es/utilidades/creador-collage-fotos/": {
+      "hash": "5bb424b214f4f478c217c0b0b99c0a4bd2dbef4fb36e2a7cb7d52476dfeb266e",
+      "route": "/utilidades/creador-collage-fotos/"
+    },
+    "https://www.jjlmoya.es/utilidades/distancia-tv/": {
+      "hash": "0987a960823c611e9b706fd674e0a1380549071256deef0e041661b0ad9ea409",
+      "route": "/utilidades/distancia-tv/"
+    },
+    "https://www.jjlmoya.es/utilidades/editor-privacidad/": {
+      "hash": "8cd71ac9b0130f58fadf113721b01b0814ba4225f90b7797d67489e47e275fcc",
+      "route": "/utilidades/editor-privacidad/"
+    },
+    "https://www.jjlmoya.es/utilidades/extractor-frames-video/": {
+      "hash": "76cb110d52b2ed5be3fea684f2525173e63b1046da545f8d29d3de495455d2e6",
+      "route": "/utilidades/extractor-frames-video/"
+    },
+    "https://www.jjlmoya.es/utilidades/lente-cromatica/": {
+      "hash": "d0c2b12283e96779eced7acc31207202e14bc9c7c390f66d23d433788e132f76",
+      "route": "/utilidades/lente-cromatica/"
+    },
+    "https://www.jjlmoya.es/utilidades/limpiador-exif/": {
+      "hash": "6ff6908254c64a7286665eeff03febc7392f199dcc0f1e17e0924b0a81cd5166",
+      "route": "/utilidades/limpiador-exif/"
+    },
+    "https://www.jjlmoya.es/utilidades/planificador-bitrate-tamano-archivo-exportacion-video/": {
+      "hash": "640e6705fc3b0b6d7e432e0a0e3cd1bf9afa8ca82923c9e5e5d4362507e61142",
+      "route": "/utilidades/planificador-bitrate-tamano-archivo-exportacion-video/"
+    },
+    "https://www.jjlmoya.es/utilidades/sincronizar-subtitulos/": {
+      "hash": "1119a28f66491858faed45c1179cc60175f4f6874a4380b88b498b9eed1e66e3",
+      "route": "/utilidades/sincronizar-subtitulos/"
+    },
+    "https://www.jjlmoya.es/utilidades/unir-videos-online/": {
+      "hash": "7d02bbcd5e01c604af9ebe56b3b7a4835e4cd02fedb8bedaaca5cf7f1b4f936d",
+      "route": "/utilidades/unir-videos-online/"
+    },
+    "https://www.jjlmoya.es/utilidades/visualizador-sistema-de-zonas-ansel-adams-zonas-de-exposicion/": {
+      "hash": "15bd6295b284a95cfe13062bce4696a37cb7055df219e5c63212c83b06448592",
+      "route": "/utilidades/visualizador-sistema-de-zonas-ansel-adams-zonas-de-exposicion/"
+    },
+    "https://www.gamebob.dev/zh/utilities/categories/audiovisual-photography/ansel-adams-zone-system-visualizer-exposure-zones/": {
+      "hash": "8438dd719388c59224d312ebe98779c1ca80809169279cf8b2f52d5a90650669",
+      "route": "/zh/utilities/categories/audiovisual-photography/ansel-adams-zone-system-visualizer-exposure-zones/"
+    },
+    "https://www.gamebob.dev/zh/utilities/categories/audiovisual-photography/audio-delay-distance-calculator/": {
+      "hash": "0b419742b8b335e58db4f48ce65311a45aacf86fcd253201dc8b595d6fa64e74",
+      "route": "/zh/utilities/categories/audiovisual-photography/audio-delay-distance-calculator/"
+    },
+    "https://www.gamebob.dev/zh/utilities/categories/audiovisual-photography/chromatic-lens-color-palette-extraction-online/": {
+      "hash": "559c00ae9db0920c7b7f765bd777ccb65ce1d4b038b5a694d5bfc31fc9f81d8b",
+      "route": "/zh/utilities/categories/audiovisual-photography/chromatic-lens-color-palette-extraction-online/"
+    },
+    "https://www.gamebob.dev/zh/utilities/categories/audiovisual-photography/depth-of-field-calculator/": {
+      "hash": "b7d35799d7525fcb9c71987037d47b4dca7cf75c517a8c4461e261bbd539c90e",
+      "route": "/zh/utilities/categories/audiovisual-photography/depth-of-field-calculator/"
+    },
+    "https://www.gamebob.dev/zh/utilities/categories/audiovisual-photography/equivalent-exposure-calculator/": {
+      "hash": "38d0da4c4c3e29838277be71388b86968f455076e743524510b53dd073ab0fd1",
+      "route": "/zh/utilities/categories/audiovisual-photography/equivalent-exposure-calculator/"
+    },
+    "https://www.gamebob.dev/zh/utilities/categories/audiovisual-photography/exif-metadata-cleaner-remove-gps-photo-privacy/": {
+      "hash": "798cafbecff016dc2d994d2cf707cadd44d38c94a17c93810733c113cd524ba2",
+      "route": "/zh/utilities/categories/audiovisual-photography/exif-metadata-cleaner-remove-gps-photo-privacy/"
+    },
+    "https://www.gamebob.dev/zh/utilities/categories/audiovisual-photography/film-development-time-temperature-compensation-calculator/": {
+      "hash": "680d75c6000bb0178d6385a76a964cfa65dd9aa93e00dd1f11891833457593f4",
+      "route": "/zh/utilities/categories/audiovisual-photography/film-development-time-temperature-compensation-calculator/"
+    },
+    "https://www.gamebob.dev/zh/utilities/categories/audiovisual-photography/film-reciprocity-failure-calculator/": {
+      "hash": "7408e685e2b4c0e65392618502e8c7f352d7a359c515f0777ec2d5e87b966860",
+      "route": "/zh/utilities/categories/audiovisual-photography/film-reciprocity-failure-calculator/"
+    },
+    "https://www.gamebob.dev/zh/utilities/categories/audiovisual-photography/free-online-photo-collage-maker-professional-compositions/": {
+      "hash": "f46d3225de38beaf92d0e2797fef51ea598367d4473a33e56340ef6530b65580",
+      "route": "/zh/utilities/categories/audiovisual-photography/free-online-photo-collage-maker-professional-compositions/"
+    },
+    "https://www.gamebob.dev/zh/utilities/categories/audiovisual-photography/": {
+      "hash": "ff8119c9f99b861c3faed406a3985172537ba2aec424373857130efd404a5ecb",
+      "route": "/zh/utilities/categories/audiovisual-photography/"
+    },
+    "https://www.gamebob.dev/zh/utilities/categories/audiovisual-photography/merge-videos-online/": {
+      "hash": "dcc8022929b01faef046fd966b1a681636f365a25ec86e68038c1f258eef196e",
+      "route": "/zh/utilities/categories/audiovisual-photography/merge-videos-online/"
+    },
+    "https://www.gamebob.dev/zh/utilities/categories/audiovisual-photography/online-image-compressor-reduce-file-size-no-quality-loss/": {
+      "hash": "dde11acddae4f1229e5b5280c8e45b1a732c9884a4568a240f8c4b18654e7b7f",
+      "route": "/zh/utilities/categories/audiovisual-photography/online-image-compressor-reduce-file-size-no-quality-loss/"
+    },
+    "https://www.gamebob.dev/zh/utilities/categories/audiovisual-photography/online-privacy-editor-pixelate-blur-faces-photos/": {
+      "hash": "e9c350272756d633118be9de29a7eceaac7dfe4031d9722af3defe8f0f850e84",
+      "route": "/zh/utilities/categories/audiovisual-photography/online-privacy-editor-pixelate-blur-faces-photos/"
+    },
+    "https://www.gamebob.dev/zh/utilities/categories/audiovisual-photography/online-video-frame-extractor-capture-hd-stills/": {
+      "hash": "35cf138b5ad891ffb8291eb5dda8d54fb64cff27ec63f7da46b7af8cac93ec8f",
+      "route": "/zh/utilities/categories/audiovisual-photography/online-video-frame-extractor-capture-hd-stills/"
+    },
+    "https://www.gamebob.dev/zh/utilities/categories/audiovisual-photography/print-quality-calculator-pixels-to-cm-dpi/": {
+      "hash": "671ef63623904c2fbcc2d62be0f53cd6b7fc15a1af5b494c37eee414cb9c65d8",
+      "route": "/zh/utilities/categories/audiovisual-photography/print-quality-calculator-pixels-to-cm-dpi/"
+    },
+    "https://www.gamebob.dev/zh/utilities/categories/audiovisual-photography/reverb-decay-time-calculator/": {
+      "hash": "a24546faf380492979deac48ab56b210ff6b3c6be34f07fd4f2bc3eecb92000a",
+      "route": "/zh/utilities/categories/audiovisual-photography/reverb-decay-time-calculator/"
+    },
+    "https://www.gamebob.dev/zh/utilities/categories/audiovisual-photography/synchronize-srt-subtitles-online-adjust-timing-free/": {
+      "hash": "d88ceab95b90dd8da50838a15ea9003a1332ac4d0cdb79da824b1d8f255b8f0b",
+      "route": "/zh/utilities/categories/audiovisual-photography/synchronize-srt-subtitles-online-adjust-timing-free/"
+    },
+    "https://www.gamebob.dev/zh/utilities/categories/audiovisual-photography/timelapse-hyperlapse-calculator-perfect-intervals/": {
+      "hash": "36be2074840f640784c4682282b19ff22401b951d5160e2aca46d0e4a5453d87",
+      "route": "/zh/utilities/categories/audiovisual-photography/timelapse-hyperlapse-calculator-perfect-intervals/"
+    },
+    "https://www.gamebob.dev/zh/utilities/categories/audiovisual-photography/tv-viewing-distance-calculator-thx-4k-optimal-screen/": {
+      "hash": "0b530744ae66abeab76d84fbdefa7bcc80355cc4b63f74ea1256292c10131045",
+      "route": "/zh/utilities/categories/audiovisual-photography/tv-viewing-distance-calculator-thx-4k-optimal-screen/"
+    },
+    "https://www.gamebob.dev/zh/utilities/categories/audiovisual-photography/video-export-bitrate-file-size-planner/": {
+      "hash": "3ce00ceb9cf58b20a6d99286ac1143248de6bdf1fe68c4a6d7f546e1eaf9486b",
+      "route": "/zh/utilities/categories/audiovisual-photography/video-export-bitrate-file-size-planner/"
+    }
+  }
+}
