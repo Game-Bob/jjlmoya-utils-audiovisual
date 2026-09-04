@@ -7,275 +7,139 @@
     "preview_urls": true,
     "routes": [
         {
-            "pattern": "www.jjlmoya.es/utilidades/categorias/audiovisual",
+            "pattern": "www.jjlmoya.es/utilidades/categorias/audiovisual*",
             "zone_name": "jjlmoya.es"
         },
         {
-            "pattern": "www.jjlmoya.es/utilidades/categorias/audiovisual/*",
+            "pattern": "www.jjlmoya.es/utilidades/visualizador-sistema-de-zonas-ansel-adams-zonas-de-exposicion*",
             "zone_name": "jjlmoya.es"
         },
         {
-            "pattern": "www.jjlmoya.es/utilidades/visualizador-sistema-de-zonas-ansel-adams-zonas-de-exposicion",
+            "pattern": "www.jjlmoya.es/utilidades/calculadora-delay-audio-distancia-temperatura*",
             "zone_name": "jjlmoya.es"
         },
         {
-            "pattern": "www.jjlmoya.es/utilidades/visualizador-sistema-de-zonas-ansel-adams-zonas-de-exposicion/*",
+            "pattern": "www.jjlmoya.es/utilidades/lente-cromatica*",
             "zone_name": "jjlmoya.es"
         },
         {
-            "pattern": "www.jjlmoya.es/utilidades/calculadora-delay-audio-distancia-temperatura",
+            "pattern": "www.jjlmoya.es/utilidades/creador-collage-fotos*",
             "zone_name": "jjlmoya.es"
         },
         {
-            "pattern": "www.jjlmoya.es/utilidades/calculadora-delay-audio-distancia-temperatura/*",
+            "pattern": "www.jjlmoya.es/utilidades/calculadora-profundidad-de-campo*",
             "zone_name": "jjlmoya.es"
         },
         {
-            "pattern": "www.jjlmoya.es/utilidades/lente-cromatica",
+            "pattern": "www.jjlmoya.es/utilidades/calculadora-exposicion-equivalente*",
             "zone_name": "jjlmoya.es"
         },
         {
-            "pattern": "www.jjlmoya.es/utilidades/lente-cromatica/*",
+            "pattern": "www.jjlmoya.es/utilidades/limpiador-exif*",
             "zone_name": "jjlmoya.es"
         },
         {
-            "pattern": "www.jjlmoya.es/utilidades/creador-collage-fotos",
+            "pattern": "www.jjlmoya.es/utilidades/calculadora-tiempo-revelado-pelicula-temperatura*",
             "zone_name": "jjlmoya.es"
         },
         {
-            "pattern": "www.jjlmoya.es/utilidades/creador-collage-fotos/*",
+            "pattern": "www.jjlmoya.es/utilidades/calculadora-fallo-reciprocidad-pelicula-fotografica*",
             "zone_name": "jjlmoya.es"
         },
         {
-            "pattern": "www.jjlmoya.es/utilidades/calculadora-profundidad-de-campo",
+            "pattern": "www.jjlmoya.es/utilidades/compresor-imagenes*",
             "zone_name": "jjlmoya.es"
         },
         {
-            "pattern": "www.jjlmoya.es/utilidades/calculadora-profundidad-de-campo/*",
+            "pattern": "www.jjlmoya.es/utilidades/calculadora-calidad-impresion*",
             "zone_name": "jjlmoya.es"
         },
         {
-            "pattern": "www.jjlmoya.es/utilidades/calculadora-exposicion-equivalente",
+            "pattern": "www.jjlmoya.es/utilidades/editor-privacidad*",
             "zone_name": "jjlmoya.es"
         },
         {
-            "pattern": "www.jjlmoya.es/utilidades/calculadora-exposicion-equivalente/*",
+            "pattern": "www.jjlmoya.es/utilidades/calculadora-tiempo-reverberacion-rt60*",
             "zone_name": "jjlmoya.es"
         },
         {
-            "pattern": "www.jjlmoya.es/utilidades/limpiador-exif",
+            "pattern": "www.jjlmoya.es/utilidades/sincronizar-subtitulos*",
             "zone_name": "jjlmoya.es"
         },
         {
-            "pattern": "www.jjlmoya.es/utilidades/limpiador-exif/*",
+            "pattern": "www.jjlmoya.es/utilidades/calculadora-timelapse*",
             "zone_name": "jjlmoya.es"
         },
         {
-            "pattern": "www.jjlmoya.es/utilidades/calculadora-tiempo-revelado-pelicula-temperatura",
+            "pattern": "www.jjlmoya.es/utilidades/distancia-tv*",
             "zone_name": "jjlmoya.es"
         },
         {
-            "pattern": "www.jjlmoya.es/utilidades/calculadora-tiempo-revelado-pelicula-temperatura/*",
+            "pattern": "www.jjlmoya.es/utilidades/planificador-bitrate-tamano-archivo-exportacion-video*",
             "zone_name": "jjlmoya.es"
         },
         {
-            "pattern": "www.jjlmoya.es/utilidades/calculadora-fallo-reciprocidad-pelicula-fotografica",
+            "pattern": "www.jjlmoya.es/utilidades/extractor-frames-video*",
             "zone_name": "jjlmoya.es"
         },
         {
-            "pattern": "www.jjlmoya.es/utilidades/calculadora-fallo-reciprocidad-pelicula-fotografica/*",
+            "pattern": "www.jjlmoya.es/utilidades/unir-videos-online*",
             "zone_name": "jjlmoya.es"
         },
         {
-            "pattern": "www.jjlmoya.es/utilidades/compresor-imagenes",
-            "zone_name": "jjlmoya.es"
-        },
-        {
-            "pattern": "www.jjlmoya.es/utilidades/compresor-imagenes/*",
-            "zone_name": "jjlmoya.es"
-        },
-        {
-            "pattern": "www.jjlmoya.es/utilidades/calculadora-calidad-impresion",
-            "zone_name": "jjlmoya.es"
-        },
-        {
-            "pattern": "www.jjlmoya.es/utilidades/calculadora-calidad-impresion/*",
-            "zone_name": "jjlmoya.es"
-        },
-        {
-            "pattern": "www.jjlmoya.es/utilidades/editor-privacidad",
-            "zone_name": "jjlmoya.es"
-        },
-        {
-            "pattern": "www.jjlmoya.es/utilidades/editor-privacidad/*",
-            "zone_name": "jjlmoya.es"
-        },
-        {
-            "pattern": "www.jjlmoya.es/utilidades/calculadora-tiempo-reverberacion-rt60",
-            "zone_name": "jjlmoya.es"
-        },
-        {
-            "pattern": "www.jjlmoya.es/utilidades/calculadora-tiempo-reverberacion-rt60/*",
-            "zone_name": "jjlmoya.es"
-        },
-        {
-            "pattern": "www.jjlmoya.es/utilidades/sincronizar-subtitulos",
-            "zone_name": "jjlmoya.es"
-        },
-        {
-            "pattern": "www.jjlmoya.es/utilidades/sincronizar-subtitulos/*",
-            "zone_name": "jjlmoya.es"
-        },
-        {
-            "pattern": "www.jjlmoya.es/utilidades/calculadora-timelapse",
-            "zone_name": "jjlmoya.es"
-        },
-        {
-            "pattern": "www.jjlmoya.es/utilidades/calculadora-timelapse/*",
-            "zone_name": "jjlmoya.es"
-        },
-        {
-            "pattern": "www.jjlmoya.es/utilidades/distancia-tv",
-            "zone_name": "jjlmoya.es"
-        },
-        {
-            "pattern": "www.jjlmoya.es/utilidades/distancia-tv/*",
-            "zone_name": "jjlmoya.es"
-        },
-        {
-            "pattern": "www.jjlmoya.es/utilidades/planificador-bitrate-tamano-archivo-exportacion-video",
-            "zone_name": "jjlmoya.es"
-        },
-        {
-            "pattern": "www.jjlmoya.es/utilidades/planificador-bitrate-tamano-archivo-exportacion-video/*",
-            "zone_name": "jjlmoya.es"
-        },
-        {
-            "pattern": "www.jjlmoya.es/utilidades/extractor-frames-video",
-            "zone_name": "jjlmoya.es"
-        },
-        {
-            "pattern": "www.jjlmoya.es/utilidades/extractor-frames-video/*",
-            "zone_name": "jjlmoya.es"
-        },
-        {
-            "pattern": "www.jjlmoya.es/utilidades/unir-videos-online",
-            "zone_name": "jjlmoya.es"
-        },
-        {
-            "pattern": "www.jjlmoya.es/utilidades/unir-videos-online/*",
-            "zone_name": "jjlmoya.es"
-        },
-        {
-            "pattern": "www.gamebob.dev/en/utilities/categories/audiovisual-photography",
+            "pattern": "www.gamebob.dev/en/utilities/categories/audiovisual-photography*",
             "zone_name": "gamebob.dev"
         },
         {
-            "pattern": "www.gamebob.dev/en/utilities/categories/audiovisual-photography/*",
+            "pattern": "www.gamebob.dev/fr/utilitaires/categories/audiovisuels-photographie*",
             "zone_name": "gamebob.dev"
         },
         {
-            "pattern": "www.gamebob.dev/fr/utilitaires/categories/audiovisuels-photographie",
+            "pattern": "www.gamebob.dev/de/werkzeuge/kategorien/audiovisuell-fotografie*",
             "zone_name": "gamebob.dev"
         },
         {
-            "pattern": "www.gamebob.dev/fr/utilitaires/categories/audiovisuels-photographie/*",
+            "pattern": "www.gamebob.dev/it/utilita/categorie/audiovisivo-fotografia*",
             "zone_name": "gamebob.dev"
         },
         {
-            "pattern": "www.gamebob.dev/de/werkzeuge/kategorien/audiovisuell-fotografie",
+            "pattern": "www.gamebob.dev/pt/utilidades/categorias/audiovisual-e-fotografia*",
             "zone_name": "gamebob.dev"
         },
         {
-            "pattern": "www.gamebob.dev/de/werkzeuge/kategorien/audiovisuell-fotografie/*",
+            "pattern": "www.gamebob.dev/nl/hulpmiddelen/categorieen/audiovisueel-fotografie*",
             "zone_name": "gamebob.dev"
         },
         {
-            "pattern": "www.gamebob.dev/it/utilita/categorie/audiovisivo-fotografia",
+            "pattern": "www.gamebob.dev/sv/verktyg/kategorier/audiovisuellt-fotografi*",
             "zone_name": "gamebob.dev"
         },
         {
-            "pattern": "www.gamebob.dev/it/utilita/categorie/audiovisivo-fotografia/*",
+            "pattern": "www.gamebob.dev/pl/narzedzia/kategorie/audiowizualne-fotografia*",
             "zone_name": "gamebob.dev"
         },
         {
-            "pattern": "www.gamebob.dev/pt/utilidades/categorias/audiovisual-e-fotografia",
+            "pattern": "www.gamebob.dev/id/utilitas/kategori/audiovisual-dan-fotografi*",
             "zone_name": "gamebob.dev"
         },
         {
-            "pattern": "www.gamebob.dev/pt/utilidades/categorias/audiovisual-e-fotografia/*",
+            "pattern": "www.gamebob.dev/tr/araclar/kategoriler/produksiyon-ve-fotografcilik*",
             "zone_name": "gamebob.dev"
         },
         {
-            "pattern": "www.gamebob.dev/nl/hulpmiddelen/categorieen/audiovisueel-fotografie",
+            "pattern": "www.gamebob.dev/ru/instrumenty/kategorii/audiovizualnye-i-foto-instrumenty*",
             "zone_name": "gamebob.dev"
         },
         {
-            "pattern": "www.gamebob.dev/nl/hulpmiddelen/categorieen/audiovisueel-fotografie/*",
+            "pattern": "www.gamebob.dev/ja/utilities/categories/audiovisual-photography*",
             "zone_name": "gamebob.dev"
         },
         {
-            "pattern": "www.gamebob.dev/sv/verktyg/kategorier/audiovisuellt-fotografi",
+            "pattern": "www.gamebob.dev/ko/utilities/categories/audiovisual-photography*",
             "zone_name": "gamebob.dev"
         },
         {
-            "pattern": "www.gamebob.dev/sv/verktyg/kategorier/audiovisuellt-fotografi/*",
-            "zone_name": "gamebob.dev"
-        },
-        {
-            "pattern": "www.gamebob.dev/pl/narzedzia/kategorie/audiowizualne-fotografia",
-            "zone_name": "gamebob.dev"
-        },
-        {
-            "pattern": "www.gamebob.dev/pl/narzedzia/kategorie/audiowizualne-fotografia/*",
-            "zone_name": "gamebob.dev"
-        },
-        {
-            "pattern": "www.gamebob.dev/id/utilitas/kategori/audiovisual-dan-fotografi",
-            "zone_name": "gamebob.dev"
-        },
-        {
-            "pattern": "www.gamebob.dev/id/utilitas/kategori/audiovisual-dan-fotografi/*",
-            "zone_name": "gamebob.dev"
-        },
-        {
-            "pattern": "www.gamebob.dev/tr/araclar/kategoriler/produksiyon-ve-fotografcilik",
-            "zone_name": "gamebob.dev"
-        },
-        {
-            "pattern": "www.gamebob.dev/tr/araclar/kategoriler/produksiyon-ve-fotografcilik/*",
-            "zone_name": "gamebob.dev"
-        },
-        {
-            "pattern": "www.gamebob.dev/ru/instrumenty/kategorii/audiovizualnye-i-foto-instrumenty",
-            "zone_name": "gamebob.dev"
-        },
-        {
-            "pattern": "www.gamebob.dev/ru/instrumenty/kategorii/audiovizualnye-i-foto-instrumenty/*",
-            "zone_name": "gamebob.dev"
-        },
-        {
-            "pattern": "www.gamebob.dev/ja/utilities/categories/audiovisual-photography",
-            "zone_name": "gamebob.dev"
-        },
-        {
-            "pattern": "www.gamebob.dev/ja/utilities/categories/audiovisual-photography/*",
-            "zone_name": "gamebob.dev"
-        },
-        {
-            "pattern": "www.gamebob.dev/ko/utilities/categories/audiovisual-photography",
-            "zone_name": "gamebob.dev"
-        },
-        {
-            "pattern": "www.gamebob.dev/ko/utilities/categories/audiovisual-photography/*",
-            "zone_name": "gamebob.dev"
-        },
-        {
-            "pattern": "www.gamebob.dev/zh/utilities/categories/audiovisual-photography",
-            "zone_name": "gamebob.dev"
-        },
-        {
-            "pattern": "www.gamebob.dev/zh/utilities/categories/audiovisual-photography/*",
+            "pattern": "www.gamebob.dev/zh/utilities/categories/audiovisual-photography*",
             "zone_name": "gamebob.dev"
         },
         {
