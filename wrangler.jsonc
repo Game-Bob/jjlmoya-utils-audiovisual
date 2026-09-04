@@ -279,66 +279,6 @@
             "zone_name": "gamebob.dev"
         },
         {
-            "pattern": "www.jjlmoya.es/_utilities/es/audiovisual/sitemap.xml",
-            "zone_name": "jjlmoya.es"
-        },
-        {
-            "pattern": "www.gamebob.dev/_utilities/en/audiovisual/sitemap.xml",
-            "zone_name": "gamebob.dev"
-        },
-        {
-            "pattern": "www.gamebob.dev/_utilities/fr/audiovisual/sitemap.xml",
-            "zone_name": "gamebob.dev"
-        },
-        {
-            "pattern": "www.gamebob.dev/_utilities/de/audiovisual/sitemap.xml",
-            "zone_name": "gamebob.dev"
-        },
-        {
-            "pattern": "www.gamebob.dev/_utilities/it/audiovisual/sitemap.xml",
-            "zone_name": "gamebob.dev"
-        },
-        {
-            "pattern": "www.gamebob.dev/_utilities/pt/audiovisual/sitemap.xml",
-            "zone_name": "gamebob.dev"
-        },
-        {
-            "pattern": "www.gamebob.dev/_utilities/nl/audiovisual/sitemap.xml",
-            "zone_name": "gamebob.dev"
-        },
-        {
-            "pattern": "www.gamebob.dev/_utilities/sv/audiovisual/sitemap.xml",
-            "zone_name": "gamebob.dev"
-        },
-        {
-            "pattern": "www.gamebob.dev/_utilities/pl/audiovisual/sitemap.xml",
-            "zone_name": "gamebob.dev"
-        },
-        {
-            "pattern": "www.gamebob.dev/_utilities/id/audiovisual/sitemap.xml",
-            "zone_name": "gamebob.dev"
-        },
-        {
-            "pattern": "www.gamebob.dev/_utilities/tr/audiovisual/sitemap.xml",
-            "zone_name": "gamebob.dev"
-        },
-        {
-            "pattern": "www.gamebob.dev/_utilities/ru/audiovisual/sitemap.xml",
-            "zone_name": "gamebob.dev"
-        },
-        {
-            "pattern": "www.gamebob.dev/_utilities/ja/audiovisual/sitemap.xml",
-            "zone_name": "gamebob.dev"
-        },
-        {
-            "pattern": "www.gamebob.dev/_utilities/ko/audiovisual/sitemap.xml",
-            "zone_name": "gamebob.dev"
-        },
-        {
-            "pattern": "www.gamebob.dev/_utilities/zh/audiovisual/sitemap.xml",
-            "zone_name": "gamebob.dev"
-        },
-        {
             "pattern": "www.gamebob.dev/_utilities/audiovisual/*",
             "zone_name": "gamebob.dev"
         },
